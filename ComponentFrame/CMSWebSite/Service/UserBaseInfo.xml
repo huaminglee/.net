@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PsDataPacket Id="UserBaseInfoManageSvr" Service="PengeSoft.CMS.BaseDatum.IUserBaseInfoManageSvr, PengeSoft.CMS.BaseDatum" RspType="json"/>

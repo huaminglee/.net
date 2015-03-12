@@ -1,0 +1,141 @@
+
+#LoginFrame
+{
+    border: 1px solid #99BBE8;
+    position: absolute;
+    width: 700px;
+    left: 50%;
+    top: 50%;
+    margin: -200px 0 0 -350px;
+    height: 450px !important;
+    min-height: 450px;
+    background-color: #fff;
+}
+#Header
+{
+    padding:5px;
+	line-height:15px;
+	color:#15428b;
+	font-weight:bold;
+	font-size:12px;
+	background:url('images/panel_title.png') repeat-x;
+	border:1px solid #99BBE8;
+}
+
+#Title
+{
+	padding:5px 0;
+	height:13%;
+}
+
+#MainContent
+{
+	height:70%;
+	position:relative;
+	overflow:hidden;
+	zoom:1;
+}
+
+h1
+{
+	font-size:25pt;
+	color:blue;
+	margin-left:220px;
+}
+
+#Left
+{
+	background: url(Images/u17.png) white no-repeat 0px 0px;
+	width: 200px;
+	float:left;
+	height:100%;
+	min-height:260px;
+	
+}
+#Right
+{
+	
+	height:100%;
+	float:left;
+	text-align:left;
+}
+#Tip
+{
+	margin-top:20px;
+	margin-left:30px;
+	font-size:10.5pt;
+	color:#74748d
+}
+#Login
+{
+	margin-left:30px;
+	width:420px;
+	height:208px!important;
+	display:block;
+	background-color:White;
+	overflow:hidden;
+	zoom:1;
+}
+
+#LoginLeft
+{
+	background: url(Images/u12.png) white no-repeat 0px 0px;
+	height:100%;
+	width:166px;
+	float:left;
+}
+
+#LoginRight
+{
+	float:right;
+	width:250px;
+}
+
+#CopyRight
+{
+    margin-top: 30px;
+    margin-left: 30px;
+    color: #FF0000;
+    font-size: 14pt;
+    bottom: 5px;
+}
+
+#Home
+{
+	background: url(Images/Home.gif) white no-repeat 0px 0px;
+	height:25px;
+	padding-left:25px;
+	padding-top:5px;
+}
+
+.lGroup 
+{ 
+	MARGIN: 12px 0px; 
+	OVERFLOW: hidden; 
+	WIDTH: 100%; 
+	ZOOM: 1;
+	font-size:10.5pt; 
+}
+.lTitle 
+{ 
+	FLOAT: left; 
+	WIDTH: 20%; 
+	LINE-HEIGHT: 20px; 
+	TEXT-ALIGN: right;
+	color:Blue;
+}
+.lContent 
+{ 
+	FLOAT: left; 
+	WIDTH: 78%; 
+	TEXT-ALIGN: center 
+}
+.lContent2 
+{ 
+	FLOAT: left; 
+	WIDTH: 48%; 
+	TEXT-ALIGN: center 
+}
+
+
+

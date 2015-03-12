@@ -1,0 +1,474 @@
+﻿body
+{
+    margin: 0;
+    padding: 0;
+    font-family: Geneva,Arial,Helvetica,sans-serif;
+    font-size: 12px;
+    width: 100%;
+    height:100%;
+   scrollbar-face-color: #59D6FF;
+   scrollbar-highlight-color: #ffffff;
+    scrollbar-shadow-color: #ffffff;
+       scrollbar-3dlight-color: #007BC6;
+        scrollbar-darkshadow-color: #007BC6;
+          scrollbar-arrow-color: #007BC6;
+          scrollbar-track-color: #009ED2;
+    
+}
+
+#PageContainer
+{
+    margin:0px;
+	padding: 0px;
+	width:100%;
+} 
+
+#PageTitle
+{
+	text-align:center;
+	font-weight:bold;
+	font-size:12pt;
+}
+#SearchBar
+{
+    background-color: buttonface;
+    width: 100%;
+}
+
+#SearchBar .textbox
+{
+	width:120px;
+}
+
+#SearchBar .SearchBar_Row
+{
+	height:25px;
+	border:1px solid buttonshadow;
+	width:100%;
+	padding-top:4px;
+	border-bottom:0;
+}
+
+#SearchBar .SearchBar_ColumnFlag
+{
+	width:4%;
+	float:left;
+	text-align:center;
+}
+
+#SearchBar .SearchBar_ColumnTitle
+{
+	width:10%;
+	float:left;
+	text-align:right;
+	line-height:19pt;
+	padding-right:5px;
+}
+
+#SearchBar .SearchBar_ColumnContent
+{
+	width:16%;
+	float:left;
+	text-align:left;
+}
+
+#SearchBar .SearchBar_ColumnButton
+{
+	float:left;
+	padding-left:40px;
+}
+
+#ToolBar
+{
+	height:25px;
+	margin-top:10px;
+}
+
+#ToolBar ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.RegionStyle
+{
+	margin-top:10px;
+}
+
+#ToolBar ul li
+{
+	width:50px;
+	float:left;
+}
+
+#ToolBar ul li a
+{
+	font-size:10pt;
+	color:Black;
+	text-decoration:none;
+}
+
+#ToolBar ul li a:hover
+{
+	color:blue;
+	text-decoration:underline;
+}
+.DataView
+{
+	height:expression(document.documentElement.clientHeight-60);
+	overflow:auto;
+	position: relative;
+}
+div.DataView .dgHead
+{
+	font-size:9pt;
+	font-weight:bold;
+	text-align: center;
+	background-color:buttonface;
+	height:20px;
+	color: black;
+	position:relative;
+	cursor: default; 
+	TOP: expression(this.offsetParent.scrollTop-2); 
+	z-index: 10;
+	width:100%;
+	
+}
+.dgHead a { text-decoration:none; 
+         }
+
+.dgHead a img{border-style:none;}
+.fixcol
+{
+    left: expression(this.offsetParent.scrollLeft);
+    position: relative;
+    border:0;
+}
+
+
+
+.Pager
+{
+	width:100%;
+}
+
+.Pager td
+{
+	font-size:10pt;
+	background-color:#e7e3e7;
+}
+
+a.ImgBtn
+{
+	color:Black;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.ImgBtn:hover
+{
+	color:Red;
+}
+
+a.ImgBtn img
+{
+	border:0
+}
+
+ 
+ .hidden
+{
+   display: none;
+}
+.GridAlterItem
+{
+    
+    background-color: #FFFFFF;
+    font-size: 10pt;
+}
+.GridAlterItem td
+{
+	white-space: nowrap;
+}
+
+.GridItem
+{
+    
+    background-color: #FFFFFF;
+    font-size: 10pt;
+}
+.GridItem td
+{
+	white-space: nowrap;
+}
+.GridHead
+{
+    font-weight: bold;
+    color: #1e5494;
+    background-color: #e4f1fa;
+    height: 35px;
+}
+
+
+.GridHead th
+{
+}
+.GridFooter
+{
+	color: #4A3C8C;
+	background-color: #B5C7DE;
+}
+.GridRowSelect
+{
+	white-space: nowrap;
+	color: #4A3C8C;
+	background-color: #d0d0d0;
+}
+.GridRowSelect td
+{
+	white-space: nowrap;
+}
+.SysTitle
+{
+    font-size: large;
+    font-family: 新細明體;
+    font-weight: bold;
+    font-style: inherit;
+    font-variant: normal;
+    text-transform: capitalize;
+    color: #000000;
+    text-align: center;
+}
+ #SapReport ul
+ {
+height: 20px;
+ }
+.ulstyle .listyleLab
+{           
+width: 85px;
+list-style :none;
+padding-left :10px;
+float :left ;
+height: 26px;
+}
+.ulstyle .listyleText
+{            width: 180px;
+list-style :none;
+padding-left :10px;
+float :left;
+height: 26px;
+}
+.ulstyle .listyleText .spanStyle
+{
+border :1px;
+border-bottom-color :Silver ;
+border-left-style :solid ;
+}
+.clock
+{
+background-position: right center;
+width :174px; 
+background-image: url('Images/datebox_arrow.png'); 
+background-repeat: no-repeat; 
+background-attachment: scroll;
+
+}
+.divStyle
+{
+float: left; 
+height: 50px; 
+width: 60px;  
+}
+.SpeedUlStyle
+{
+background-color: #D9E5FD;
+margin:3px; 
+height :20px;
+}
+.TextWidth
+{
+width: 50px; 
+}
+
+.DivAcc1 a
+{
+    background-image: url('Images/seq.gif');
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #444;
+    display:block;
+    height:24px;
+    line-height:24px;
+   
+}
+ .activetab
+{
+    background-image: url('Images/tab.active.png');
+    width: 74px;
+    height: 25px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    vertical-align :bottom;
+    color: #FF0000;
+}
+.tab
+{
+    background-image: url('Images/tab.png');
+    width: 74px;
+    height: 25px;
+    background-repeat: no-repeat;
+    text-decoration: none;
+    font-size: 12px;
+    text-align: center;
+    vertical-align :bottom;
+
+}
+.GroupExp a
+{
+    background-repeat: no-repeat;
+    padding-left: 15px;
+    text-decoration: none;
+    font-size: 12pt;
+    display: block;
+    height: 20px;
+    line-height: 20px;
+    color: #000000;
+}
+
+.LiAdd a
+{
+    background-image: url('../../Images/TreeView/add.png');
+    background-repeat: no-repeat;
+    padding-left: 30px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    width: 80px;
+    line-height: 30px;
+    background-color: #20B3F8;
+}
+.LiAdd a:hover
+{
+    color: White;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.LiAddequip a
+{
+    background-image: url('../../Images/TreeView/addequip.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    width: 75px;
+    line-height: 30px;
+    background-color: #20B3F8;
+}
+.LiAddequip a:hover
+{
+    color: White;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.LiAddequipfile a
+{
+    background-image: url('../../Images/TreeView/addequipfile.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    width: 75px;
+    line-height: 30px;
+    background-color: #20B3F8;
+}
+.LiAddequipfile a:hover
+{
+    color: White;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.LiAddqc a
+{
+    background-image: url('../../Images/TreeView/addqc.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    width: 60px;
+    line-height: 30px;
+    background-color: #20B3F8;
+}
+.LiAddqc a:hover
+{
+    color: White;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.Lichangeqc a
+{
+    background-image: url('../../Images/TreeView/changeqc.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    width: 60px;
+    line-height: 30px;
+    background-color: #20B3F8;
+}
+.Lichangeqc a:hover
+{
+    color: White;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.Lizuofeiqc a
+{
+    background-image: url('../../Images/TreeView/zuofeiqc.png');
+    background-repeat: no-repeat;
+    padding-left: 40px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    display: block;
+    height: 30px;
+    width: 60px;
+    line-height: 30px;
+    background-color: #20B3F8;
+}
+.Lizuofeiqc a:hover
+{
+    color: White;
+    text-decoration: underline;
+    font-weight: normal;
+}
+.searchli
+ {
+     padding :0 0 0 0;
+   margin  :0 0 0 0;
+                }
+                    
+ ul.searchli li
+ {
+     margin-left :0px;
+                 float: left;
+				list-style: none;
+                }

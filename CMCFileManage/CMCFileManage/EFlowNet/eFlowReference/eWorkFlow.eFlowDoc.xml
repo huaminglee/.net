@@ -1,0 +1,1422 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+eWorkFlow.eFlowDoc
+</name>
+</assembly>
+<members>
+<member name="F:eWorkFlow.eFlowDoc.WebForm2.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm2.LblTitle">
+	<summary>
+LblTitle 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm2.TxtAdvice">
+	<summary>
+TxtAdvice 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm2.BtnAduit">
+	<summary>
+BtnAduit 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm2.Button1">
+	<summary>
+Button1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRMutilElement.DDLElementType">
+	<summary>
+DDLElementType 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRMutilElement.ImgForAdd">
+	<summary>
+ImgForAdd 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRMutilElement.LstMemberList">
+	<summary>
+LstMemberList 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRMutilElement.ImgForDelete">
+	<summary>
+ImgForDelete 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRMutilElement.hiddenList">
+	<summary>
+hiddenList 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRMutilElement.HiddenForDDLSelectValue">
+	<summary>
+HiddenForDDLSelectValue 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRMutilElement.HiddenSelected">
+	<summary>
+HiddenSelected 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowActionImageSrc">
+	<summary>
+ 動作圖片
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowActionText">
+	<summary>
+ 動作名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowActionCommonedName">
+	<summary>
+ 動作Key
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowActionPreAction">
+	<summary>
+ 動作執行前的事件的事件參數
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowActionPostAction">
+	<summary>
+ 動作執行後的事件的事件參數
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowActionScript">
+	<summary>
+ 動作執行前條件
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowRunConditionType">
+	<summary>
+ 動作執行前類型
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowIsAgentSupport">
+	<summary>
+ 是否支持代理人機制
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowRouteFunctionName">
+	<summary>
+ 動作執行前填加的路由搜索信息
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowIsDigiSignSupport">
+	<summary>
+ 是否支持數字簽名
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowIsUploadFileSupport">
+	<summary>
+ 是否允許上傳附件
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowIsMailSupport">
+	<summary>
+ 是否發送附加郵件(根據郵件設置發動郵件)
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowBackToStateIndex">
+	<summary>
+ /動作駁回/通知到的第幾站
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFButton.FlowBackToTemplateState">
+	<summary>
+ 動作駁回/通知到的StateID
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlHRSingleElement.SelectedResult">
+	<summary>
+ 選擇的元素對象
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:eWorkFlow.eFlowDoc.CtlWFActionList.ProcessState">
+	<summary>
+ 流程處理過程各步驟狀態
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._IsSystemManageer">
+	<summary>
+ 是否为流程管理员
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._IsEmailLog">
+	<summary>
+ 是否記錄郵件日誌
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._EmailLogNotes">
+	<summary>
+ 郵件收件資料庫地址
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._FromEmailNotes">
+	<summary>
+ 寄件人地址
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._ResourceInfo">
+	<summary>
+ 當前文件資源信息
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._InRoles">
+	<summary>
+ 驗證當前的使用者是否擁有當前文件
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._IsPreviousUser">
+	<summary>
+ 驗證當前登錄人員是否為上一站簽核人員(判斷是否有取回權限時使用)
+ </summary>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList._IsDisUser">
+	<summary>
+ 判斷當前人員是否為分發人員
+ </summary>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.TemplateID">
+	<summary>
+ 當前流程ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.TemplateStateID">
+	<summary>
+ 當前狀態ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.CurStateName">
+	<summary>
+ 當前狀態名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.CurFlowInfo">
+	<summary>
+ 当前流程信息
+ </summary>
+	<value></value>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.NextFlowInfo">
+	<summary>
+ 下一站流程信息(在PreAction 事件之後才可以獲取到)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.DocUniqueID">
+	<summary>
+ 當前文件的惟一索引
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.CurURL">
+	<summary>
+ 當前的鏈接地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ 當不同站在不同的頁面切換審核時，需要對其重新賦值
+ </remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.IsLimit">
+	<summary>
+ 驗證當前的頁面控制權限是否進行限制,默認為True
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.IsUseFlow">
+	<summary>
+ 是否启动流程审核(默认为True;False不需要走流程审核)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.IsShowProprity">
+	<summary>
+ 是否顯示案件優先級(當優先級為緊急時都會發郵件進行提醒默認為false)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.RouteSettingScript">
+	<summary>
+ 路由設定腳本信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.ResourceInfo">
+	<summary>
+ 當前文件資源信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.EditListBlock">
+	<summary>
+ 可編輯區塊設定(多個區塊以;隔開)
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.NextUserList">
+	<summary>
+ 下步流程人員信息
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.DisUserList">
+	<summary>
+ 为当前站设定分发人员
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.InRoles">
+	<summary>
+ 驗證當前的使用者是否擁有當前文件
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.IsPreviousUser">
+	<summary>
+ 驗證當前登錄人員是否為上一站簽核人員(判斷是否有取回權限時使用)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.TransactPKID">
+	<summary>
+ 取回時使用(記錄上一站簽核人員記錄ID并刪除該記錄)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.InManageRoles">
+	<summary>
+ 判斷當前人員在當前流程中的管理權限
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.IsSystemManager">
+	<summary>
+ 是否為流程管理員 是资源定义中的二级管理员
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.CurProcessState">
+	<summary>
+ 紀錄當前的進行狀態
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.OnlySave">
+	<summary>
+ 只保存而不离开该页面(默认为false)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.AuditAdvice">
+	<summary>
+ 簽核意見(當根據界面選項需要將填寫原因加入簽核履歷時使用)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.IsEmailLog">
+	<summary>
+ 是否記錄郵件日誌
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.EmailLogNotes">
+	<summary>
+ 郵件收件資料庫地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.FromEmailNotes">
+	<summary>
+ 寄件人地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlWFActionList.AbsoluteFlowPath">
+	<summary>
+ 流程選擇人員信息的eFlowNet配置地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="E:eWorkFlow.eFlowDoc.CtlWFActionList.SpecificAction">
+	<summary>
+ 定義特定動作事件，讓用戶根據CommandArgument進行區分不同的動作
+ </summary>
+	<param name="sender"></param>
+	<param name="e"></param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.DeleteDoc">
+	<summary>
+ 刪除文件
+ </summary>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.BuildAuthorityBlockSelf(System.String)">
+	<summary>
+ 建構自定義的權限區塊樣式,說明︰此部分應搭配IsLimit使用，在ActivePage.LoadDocInfo中將IsLimit=False,屏閉系統權限控制.
+ </summary>
+	<param name="UnLockedRolesList">未鎖定的角色集合，用分號;隔開</param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.ShowDivBack">
+	<summary>
+ 打開界面覆蓋層
+ </summary>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.CancelDivBack">
+	<summary>
+ 取消Div蒙版
+ </summary>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.ShowErrorMessageToClient(System.String)">
+	<summary>
+ 顯示異常信息至客戶端
+ </summary>
+	<param name="ScriptStr">信息內容</param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.BuildRouteSetClientFunction(Platform.eWorkFlow.Model.TemplateRouteInfo)">
+	<summary>
+ 解析狀態跳轉條件
+ </summary>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.BuildRouteSettingVerify">
+	<summary>
+ 將設定的路由驗證條件加載至客戶端並綁定到動作按鈕上.
+ </summary>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.RegistClientScript">
+	<summary>
+ 註冊客戶端腳本
+ </summary>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.RegisterSelectNextFlowManScript(System.String,System.String)">
+	<summary>
+ 註冊篩選下步流程人員的客戶端腳本,默認PageLoad下來就顯示,並且立即提交
+ </summary>
+	<param name="btnClientID"></param>
+	<param name="ActionKey"></param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.BuildAuthorityBlock">
+	<summary>
+ 建立權限控制區塊的響應遮罩,讓使用者只能編輯固定的區域
+ </summary>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.DisableSelectElements(System.Web.UI.Control)">
+	<summary>
+ 針對 listbox, dropdownlist 將其disable,防止用戶異常點繫
+ </summary>
+	<param name="Parent"></param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.AddFlowActionButton(Platform.eWorkFlow.Model.ActionDefitionInfo)">
+	<summary>
+ 添加当前状态流程的动作
+ </summary>
+	<param name="ActionInfo"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.CurIsInAuthorize(System.Collections.Generic.List{Platform.eWorkFlow.Model.WFUserInfo})">
+	<summary>
+ 驗證當前的使用者是否擁有當前文件
+ </summary>
+	<param name="AhuthorizeInfo"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.GetNextUser(System.Collections.Generic.List{Platform.eWorkFlow.Model.AuthorizeSetInfo})">
+	<summary>
+ 當動作類型時自動是得到下一站人員(默認是權限設定里的第一筆)
+ </summary>
+	<param name="AuthorizeInfos"></param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.AddQueryString(System.String,System.String,System.String)">
+	<summary>
+ 為當前路徑添加流程實例ID后路徑
+ </summary>
+	<param name="URL"></param>
+	<param name="Key"></param>
+	<param name="Value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.GetSelectUserList(System.String,System.Int32)">
+	<summary>
+ 解析选择人员后回来的下步人员和分发人员
+ </summary>
+	<param name="SelectValue"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.CurTemplateConfig(System.Int32)">
+	<summary>
+ 根据流程ID获取流程配置信息
+ </summary>
+	<param name="TemplateID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.CtlWFActionList.ErrorHandle(System.Exception,System.String,System.String)">
+	<summary>
+ 出錯時通知處理
+ </summary>
+	<param name="ex"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.Login.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.Login.Login1">
+	<summary>
+Login1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm1.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm1.ScriptManager1">
+	<summary>
+ScriptManager1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm1.CtlWFActionList1">
+	<summary>
+CtlWFActionList1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm1.UpdatePanel2">
+	<summary>
+UpdatePanel2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.WebForm1.ctlWFHistory1">
+	<summary>
+ctlWFHistory1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.ctlWFHistory.TemplateID">
+	<summary>
+ 流程ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.ctlWFHistory.DocUniqueID">
+	<summary>
+ 流程實例ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.ctlWFHistory.HighlightStyle">
+	<summary>
+ 當前狀態履歷亮度顯示樣式
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.ctlWFHistory.IsUseFlow">
+	<summary>
+ 是否启动流程审核(默认为True;False不需要走流程审核:可以不用綁定簽核履歷)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.My.MyWebExtension.Computer">
+	<summary>
+ 傳回主機電腦的相關資訊。
+ </summary>
+</member><member name="P:eWorkFlow.eFlowDoc.My.MyWebExtension.User">
+	<summary>
+ 傳回目前 Web 使用者的資訊。
+ </summary>
+</member><member name="P:eWorkFlow.eFlowDoc.My.MyWebExtension.Request">
+	<summary>
+ 傳回 Request 物件。
+ </summary>
+</member><member name="P:eWorkFlow.eFlowDoc.My.MyWebExtension.Response">
+	<summary>
+ 傳回 Response 物件。
+ </summary>
+</member><member name="P:eWorkFlow.eFlowDoc.My.MyWebExtension.Log">
+	<summary>
+ 傳回 Asp 記錄物件。
+ </summary>
+</member><member name="T:eWorkFlow.eFlowDoc.My.MyWebExtension">
+	<summary>
+ 用來定義可用於 Web 專案 My 命名空間中之屬性的模組。
+ </summary>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.CtlHRMutilElement.SelectedResult">
+	<summary>
+ 返回的結果
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.DivBack">
+	<summary>
+DivBack 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidNextStateName">
+	<summary>
+HidNextStateName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidNextStateID">
+	<summary>
+HidNextStateID 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidProcessState">
+	<summary>
+HidProcessState 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidSubmitResult">
+	<summary>
+HidSubmitResult 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidNextUser">
+	<summary>
+HidNextUser 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidFileList">
+	<summary>
+HidFileList 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidTranUserDate">
+	<summary>
+HidTranUserDate 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidDisUser">
+	<summary>
+HidDisUser 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidIsAduit">
+	<summary>
+HidIsAduit 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidGenerationType">
+	<summary>
+HidGenerationType 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidSepInfo">
+	<summary>
+HidSepInfo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidDataMsg">
+	<summary>
+HidDataMsg 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidActionInfo">
+	<summary>
+HidActionInfo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidSignInfo">
+	<summary>
+HidSignInfo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.HidIsEndState">
+	<summary>
+HidIsEndState 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.PlaceHolder1">
+	<summary>
+PlaceHolder1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.lblProprity">
+	<summary>
+lblProprity 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.ChkPrority">
+	<summary>
+ChkPrority 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.LinkManage">
+	<summary>
+LinkManage 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.LinkSave">
+	<summary>
+LinkSave 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.LinkDelete">
+	<summary>
+LinkDelete 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.linkLeave">
+	<summary>
+linkLeave 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.LblTitle">
+	<summary>
+LblTitle 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.TxtAdvice">
+	<summary>
+TxtAdvice 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.BtnAduit">
+	<summary>
+BtnAduit 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFActionList.linkCancel">
+	<summary>
+linkCancel 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc._Default.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory">
+	<summary>
+dgFlowHistory 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.BusinessName">
+	<summary>
+ 紀錄當前的流程業務名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.BusinessID">
+	<summary>
+ 紀錄當前的業務ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.IsSuccessSaved">
+	<summary>
+ 是否保存成功
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.IsSuccessDeleted">
+	<summary>
+ 是否刪除成功
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.NextStateOrder">
+	<summary>
+ 當前站處理后的狀態順序
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.NextStateName">
+	<summary>
+ 當前站處理后的狀態名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.InstanceKeyID">
+	<summary>
+工作流實例PKID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.DocUniqueID">
+	<summary>
+ 工作流實例ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ 当不走流程时DocUniqueID=Guid.Empty
+ </remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.MasterInstanceID">
+	<summary>
+ 文件的主流程實例ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.IsNewDoc">
+	<summary>
+ 是否為新單
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.IsLocked">
+	<summary>
+ 當前文件實例是否被暫停
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.TemplateID">
+	<summary>
+ 流程ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurStateInstanceKeyID">
+	<summary>
+ 紀錄當前的流程實例的狀態實例PKID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurStateID">
+	<summary>
+ 紀錄當前的流程狀態ID
+ </summary>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurStateName">
+	<summary>
+ 紀錄當前的流程狀態名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurStateOrder">
+	<summary>
+ 當前狀態順序(處于第幾個狀態)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.IsFinishFlag">
+	<summary>
+ 當前實例是否結案
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.InstanceStartMan">
+	<summary>
+ 紀錄當前的流程啟動人員信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurRealUrl">
+	<summary>
+ 當前文件實際連接地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurFlowOwnerList">
+	<summary>
+ 当前流程实例该状态的办理人员
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurDistributeOwnerList">
+	<summary>
+ 當前狀態分發人員
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurStateInstance">
+	<summary>
+  '當前實例狀態信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.PreviousStateInstance">
+	<summary>
+上一狀態實例信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.PreviousStateKeyID">
+	<summary>
+ 上一狀態實例主鍵ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.PreviousStateTransact">
+	<summary>
+ 上一站實例簽核人員信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.DocInfoSystem.CurStateTransact">
+	<summary>
+ 當前站實例簽核人員信息(會簽時使用)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:eWorkFlow.eFlowDoc.DocInfoSystem.DocQuerySaveEventHandler">
+	<summary> 
+ 
+ 文件儲存前事件代理 
+ </summary>
+</member><member name="T:eWorkFlow.eFlowDoc.DocInfoSystem.DocPostSaveEventHandler">
+	<summary> 
+ 文件儲存後事件代理 
+ </summary>
+</member><member name="T:eWorkFlow.eFlowDoc.DocInfoSystem.DocBaseEventHandler">
+	<summary> 
+ 基本事件代理 (文件開啟前和開啟后調用事件)
+ </summary>
+</member><member name="T:eWorkFlow.eFlowDoc.DocInfoSystem.DocActionPreEventHandler">
+	<summary> 
+ 處理動作事件前代理 
+ </summary>
+</member><member name="T:eWorkFlow.eFlowDoc.DocInfoSystem.DocActionPostEventHandler">
+	<summary> 
+ 處理動作事件后代理 
+ </summary>
+</member><member name="M:eWorkFlow.eFlowDoc.DocInfoSystem.BatchAuditInfo(Platform.eWorkFlow.Model.Enm_ActionType,System.String,System.String)">
+	<summary>
+ 批量審核時調用的方法
+ </summary>
+	<param name="ActionType">當前執行的動作類型</param>
+	<param name="InstanceID">流程實例ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.DocInfoSystem.SaveWFInstenceInfo(Platform.eWorkFlow.Model.Enm_ActionType,Platform.eWorkFlow.Model.SubmitResult,System.Boolean,Platform.eWorkFlow.Model.WorkflowStartParameter)">
+	<summary>
+  "Change WFInstance 在動作執行時調用的方法用來修改流程實例信息"
+ </summary>
+	<param name="ActionKey">當前執行的動作類型</param>
+	<param name="submitInfo">當前動作需要提交的信息</param>
+	<param name="IsNewDoc">是否為新單</param>
+	<param name="Sp">流程啟動需要的參數</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.DocInfoSystem.ErrorHandle(System.Exception,System.String,System.String)">
+	<summary>
+ 出錯時通知處理
+ </summary>
+	<param name="ex"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.DocInfoSystem.DeleteWFInstance(System.String)">
+	<summary>
+ 刪除流程實例(當List界面執行刪除動作時，如果調用該方法同時會刪除流程實例信息)
+ </summary>
+	<param name="InstanceID">流程實例ID</param>
+	<remarks>
+	</remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.DocInfoSystem.GetOwnerWFInstance(System.String)">
+	<summary>
+ 獲取是我處理的案件流程實例
+ </summary>
+	<param name="TemplateName">流程名稱</param>
+	<returns></returns>
+	<remarks>
+		<permission>
+			<example>
+ Dim mUnFinishInfos As List(Of MatchColorsApplication) = MatchColorsApplication.GetMatchColorsUnFinish()
+             If mUnFinishInfos IsNot Nothing AndAlso mUnFinishInfos.Count &gt; 0 Then
+ Dim OwnerInstance As List(Of WorkFlowInstanceInfo) = DocInfoSystem.GetOwnerWFInstance(TemplateName)
+                 If OwnerInstance IsNot Nothing AndAlso OwnerInstance.Count &gt; 0 Then
+                     For i As Integer = mUnFinishInfos.Count - 1 To 0 Step -1
+ Dim m As MatchColorsApplication = mUnFinishInfos(i)
+                         If Not OwnerInstance.Exists(Function(p) p.InstanceID.ToString = m.DocUniqueID) Then
+                             mUnFinishInfos.RemoveAt(i)
+               End If
+                    Next
+                     mcs = mUnFinishInfos
+                 Else
+                    mcs = Nothing
+                 End If
+             End If
+ </example></permission>
+	</remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.IDocInfo.TemplateName">
+	<summary>流程名稱</summary>
+</member><member name="P:eWorkFlow.eFlowDoc.IDocInfo.TemplateVersion">
+	<summary>
+ 流程版本
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.IDocInfo.IsUseFlow">
+	<summary>
+ 定義是否使用流程簽核(默認為True)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.IDocInfo.BusniessName">
+	<summary>
+ 業務名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.IDocInfo.LoadDocInfo(eWorkFlow.eFlowDoc.DocInfoSystem)">
+	<summary>
+ 文件載入時調用
+ </summary>
+	<param name="CurDocInfo"></param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.IDocInfo.SaveDocInfo(eWorkFlow.eFlowDoc.DocInfoSystem,Platform.eWorkFlow.Model.Enm_ActionType)">
+	<summary>
+ 文件儲存時調用
+ </summary>
+	<param name="CurDocInfo"></param>
+	<param name="CommandName"></param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.IDocInfo.DeleteDocInfo(eWorkFlow.eFlowDoc.DocInfoSystem,Platform.eWorkFlow.Model.Enm_ActionType)">
+	<summary>
+ 文件刪除時調用
+ </summary>
+	<param name="CurDocInfo"></param>
+	<param name="CommandName"></param>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.IDocInfo.LeaveDocInfo">
+	<summary>
+ 文件離開時調用
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.PreActionEventArgs.IsContinue">
+	<summary> 
+ 判定動作是否繼續執行 
+ </summary>
+</member><member name="F:eWorkFlow.eFlowDoc.PreActionEventArgs.CommandInfo">
+	<summary> 
+ 設定當前的執行動作為空,紀錄觸發的條件由流程定義中設定 
+ </summary>
+</member><member name="M:eWorkFlow.eFlowDoc.PreActionEventArgs.#ctor(System.Boolean,System.String)">
+	<summary> 
+ 提交前動作參數類建構函式 
+ </summary>
+	<param name="_IsContinue">動作是否繼續進行</param>
+	<param name="_CommandInfo">執行動作的信息</param>
+</member><member name="T:eWorkFlow.eFlowDoc.PreActionEventArgs">
+	<summary> 
+ 提交前動作參數類 
+ </summary>
+</member><member name="F:eWorkFlow.eFlowDoc.QuerySaveDocEventArgs.IsContinue">
+	<summary> 
+ 標記後續動作是否繼續執行(默認為True) 
+ </summary>
+</member><member name="F:eWorkFlow.eFlowDoc.QuerySaveDocEventArgs.CommandName">
+	<summary> 
+ 標記該動作是由在種動作按鈕下觸發的(默認為Save.Doc) 
+ </summary>
+</member><member name="M:eWorkFlow.eFlowDoc.QuerySaveDocEventArgs.#ctor(System.Boolean,Platform.eWorkFlow.Model.Enm_ActionType)">
+	<summary> 
+ 建耩函數 
+ </summary>
+	<param name="_IsContinue"></param>
+	<param name="_CommandName"></param>
+</member><member name="T:eWorkFlow.eFlowDoc.QuerySaveDocEventArgs">
+	<summary> 
+ 文件儲存前事件參數類 
+ </summary>
+</member><member name="F:eWorkFlow.eFlowDoc.PostSaveDocEventArgs.CommandName">
+	<summary> 
+ 標記該動作是由在種動作按鈕下觸發的(默認為Save.Doc) 
+ </summary>
+</member><member name="M:eWorkFlow.eFlowDoc.PostSaveDocEventArgs.#ctor(Platform.eWorkFlow.Model.Enm_ActionType)">
+	<summary> 
+ 建耩函數 
+ </summary>
+	<param name="_CommandName"></param>
+</member><member name="T:eWorkFlow.eFlowDoc.PostSaveDocEventArgs">
+	<summary> 
+ 文件儲存後事件參數類 
+ </summary>
+</member><member name="F:eWorkFlow.eFlowDoc.BaseEventArgs.DocUniqueID">
+	<summary> 
+ 文件的唯一標識 
+ </summary>
+</member><member name="M:eWorkFlow.eFlowDoc.BaseEventArgs.#ctor(System.String)">
+	<summary> 
+ 建耩函數 
+ </summary>
+	<param name="_DocUniqueID"></param>
+</member><member name="T:eWorkFlow.eFlowDoc.BaseEventArgs">
+	<summary> 
+ 文件打開前和打開后觸發參數
+ </summary>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.TemplateStateID">
+	<summary>
+ 流程狀態ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.TemplateID">
+	<summary>
+ 流程ID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.StateName">
+	<summary>
+ 流程狀態名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.StateOrder">
+	<summary>
+ 流程状态顺序
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.CountersignatureNumber">
+	<summary>
+ 当前状态签核人数
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.TransactSubmitExitType">
+	<summary>
+ 签核退出条件
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.TransactSubmitExitValue">
+	<summary>
+  签核退出值
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.RunTimeActionCategory">
+	<summary>
+ 办理动作类型(0手动;1自动)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.EditAreaList">
+	<summary>
+ 當前狀態編輯區塊
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.TemplateStateType">
+	<summary>
+當前狀態類型 
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.CurTranAuthorizeInfo">
+	<summary>
+ 當前狀態的辦理權限信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.CurManageAuthorizeInfo">
+	<summary>
+ 當前狀態的管理動作信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.CurStateAction">
+	<summary>
+ 當前狀態動作信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.CurStateRoute">
+	<summary>
+ 當前狀態路由信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.CurResourceInfo">
+	<summary>
+ 當前流程資源信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:eWorkFlow.eFlowDoc.FLowInfoSystem.CurTemplateInfo">
+	<summary>
+ 当前状态流程信息
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:eWorkFlow.eFlowDoc.FLowInfoSystem.IniFlowInfo">
+	<summary>
+ 初始化流程信息
+ </summary>
+	<remarks></remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRSingleElement.TxtSelectedMember">
+	<summary>
+TxtSelectedMember 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRSingleElement.ImgAdd">
+	<summary>
+ImgAdd 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRSingleElement.ImgReset">
+	<summary>
+ImgReset 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlHRSingleElement.hiddenElementIDList">
+	<summary>
+hiddenElementIDList 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:eWorkFlow.eFlowDoc.CtlWFButton.ActionText">
+	<summary>
+ActionText 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<VisualState xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ShowCheckBoxes="false">
+  <TopNode>[0-1034]PengeSoft.CMS.BaseDatumTest.QuickentryDaoTest.GetCount</TopNode>
+  <SelectedNode>[0-1076]PengeSoft.CMS.BaseDatumTest.UserBaseInfoManageSvrTest.RighstTest</SelectedNode>
+  <ExcludeCategories>false</ExcludeCategories>
+  <Nodes>
+    <Node UniqueName="[0-1092]E:\ydoa\CommunityFramework\10编码\ComponentFrame\CommonUnitTest\bin\Debug\CommonUnitTest.dll" Expanded="true" />
+    <Node UniqueName="[0-1093]BaseDatumTest" Expanded="true" />
+    <Node UniqueName="[0-1094]PengeSoft" Expanded="true" />
+    <Node UniqueName="[0-1095]PengeSoft.CMS" Expanded="true" />
+    <Node UniqueName="[0-1096]PengeSoft.CMS.BaseDatumTest" Expanded="true" />
+    <Node UniqueName="[0-1008]PengeSoft.CMS.BaseDatumTest.BaseFormDataDaoTest" Expanded="true" />
+    <Node UniqueName="[0-1016]PengeSoft.CMS.BaseDatumTest.LayoutInfoDaoTest" Expanded="true" />
+    <Node UniqueName="[0-1026]PengeSoft.CMS.BaseDatumTest.ModelInfoDaoTest" Expanded="true" />
+    <Node UniqueName="[0-1024]PengeSoft.CMS.BaseDatumTest.ModelInfoServerSvrTest" Expanded="true" />
+    <Node UniqueName="[0-1033]PengeSoft.CMS.BaseDatumTest.QuickentryDaoTest" Expanded="true" />
+    <Node UniqueName="[0-1041]PengeSoft.CMS.BaseDatumTest.QuickUseRecordDaoTest" Expanded="true" />
+    <Node UniqueName="[0-1049]PengeSoft.CMS.BaseDatumTest.SkinInfoDaoTest" Expanded="true" />
+    <Node UniqueName="[0-1061]PengeSoft.CMS.BaseDatumTest.UsedContactsDaoTest" Expanded="true" />
+    <Node UniqueName="[0-1072]PengeSoft.CMS.BaseDatumTest.UserBaseInfoManageSvrTest" Expanded="true" />
+    <Node UniqueName="[0-1097]PengeSoft.WorkFlowTest" Expanded="true" />
+  </Nodes>
+</VisualState>

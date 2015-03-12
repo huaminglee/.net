@@ -1,0 +1,1698 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utils.Silverlight.Auther</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.WorkZoneData.ActRight">
+            <summary>
+            ActRight 操作权限的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRight.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRight.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActRight.RightName">
+            <summary>
+            权限名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActRight.Mask">
+            <summary>
+            掩码 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgeProxy">
+            <summary>
+            UserMge 的 Web 服务代理实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginCreateUser(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            创建用户  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginUpdateUser(System.String,PengeSoft.WorkZoneData.User,System.Int32,System.Object)">
+            <summary>
+            更新用户  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginDeleteUser(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            删除用户  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginSetUserAttrib(System.String,PengeSoft.WorkZoneData.UserAttrib,System.Int32,System.Object)">
+            <summary>
+            设置用户属性  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginGetUserAttrib(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            得到用户属性  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginGetUserDetail(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取用户  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginChangePassword(System.String,System.String,System.String,System.Object)">
+            <summary>
+            修改口令  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginGetUserCount(System.String,System.String,System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            查询用户个数  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserMgeProxy.BeginGetUserList(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.Int32,System.Object)">
+            <summary>
+            查询用户  
+            </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.CreateUserCompleted">
+            <summary> 事件：CreateUser调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.UpdateUserCompleted">
+            <summary> 事件：UpdateUser调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.DeleteUserCompleted">
+            <summary> 事件：DeleteUser调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.SetUserAttribCompleted">
+            <summary> 事件：SetUserAttrib调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.GetUserAttribCompleted">
+            <summary> 事件：GetUserAttrib调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.GetUserDetailCompleted">
+            <summary> 事件：GetUserDetail调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.ChangePasswordCompleted">
+            <summary> 事件：ChangePassword调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.GetUserCountCompleted">
+            <summary> 事件：GetUserCount调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserMgeProxy.GetUserListCompleted">
+            <summary> 事件：GetUserList调用完成之后触发 </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.CreateUserCompletedEventArgs">
+            <summary>
+            创建用户[CreateUser]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.UpdateUserCompletedEventArgs">
+            <summary>
+            更新用户[UpdateUser]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.DeleteUserCompletedEventArgs">
+            <summary>
+            删除用户[DeleteUser]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.SetUserAttribCompletedEventArgs">
+            <summary>
+            设置用户属性[SetUserAttrib]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.GetUserAttribCompletedEventArgs">
+            <summary>
+            得到用户属性[GetUserAttrib]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.GetUserDetailCompletedEventArgs">
+            <summary>
+            取用户[GetUserDetail]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.ChangePasswordCompletedEventArgs">
+            <summary>
+            修改口令[ChangePassword]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.GetUserCountCompletedEventArgs">
+            <summary>
+            查询用户个数[GetUserCount]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserMgePrimitives.GetUserListCompletedEventArgs">
+            <summary>
+            查询用户[GetUserList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgeProxy">
+            <summary>
+            RoleMge 的 Web 服务代理实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginInsert(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            添加新角色  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginInsertRole(System.String,PengeSoft.WorkZoneData.Role,System.Int32,System.Object)">
+            <summary>
+            添加新角色  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginUpdate(System.String,PengeSoft.WorkZoneData.Role,System.Int32,System.Object)">
+            <summary>
+            更新角色  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginDelete(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            删除角色  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginGetDetail(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取角色详细数据  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginGetChildList(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Object)">
+            <summary>
+            取子节点列表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginGetChildCount(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取子节点个数  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginGetRoleListForUser(System.String,System.String,PengeSoft.Data.StringList,System.Int32,System.Object)">
+            <summary>
+            得到用户所有的角色表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RoleMgeProxy.BeginSetRoleListForUser(System.String,System.String,PengeSoft.Data.StringList,System.Int32,System.Object)">
+            <summary>
+            更新用户所有的角色表  
+            </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.InsertCompleted">
+            <summary> 事件：Insert调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.InsertRoleCompleted">
+            <summary> 事件：InsertRole调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.UpdateCompleted">
+            <summary> 事件：Update调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.DeleteCompleted">
+            <summary> 事件：Delete调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.GetDetailCompleted">
+            <summary> 事件：GetDetail调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.GetChildListCompleted">
+            <summary> 事件：GetChildList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.GetChildCountCompleted">
+            <summary> 事件：GetChildCount调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.GetRoleListForUserCompleted">
+            <summary> 事件：GetRoleListForUser调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RoleMgeProxy.SetRoleListForUserCompleted">
+            <summary> 事件：SetRoleListForUser调用完成之后触发 </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.InsertCompletedEventArgs">
+            <summary>
+            添加新角色[Insert]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.InsertRoleCompletedEventArgs">
+            <summary>
+            添加新角色[InsertRole]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.UpdateCompletedEventArgs">
+            <summary>
+            更新角色[Update]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.DeleteCompletedEventArgs">
+            <summary>
+            删除角色[Delete]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.GetDetailCompletedEventArgs">
+            <summary>
+            取角色详细数据[GetDetail]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.GetChildListCompletedEventArgs">
+            <summary>
+            取子节点列表[GetChildList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.GetChildCountCompletedEventArgs">
+            <summary>
+            取子节点个数[GetChildCount]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.GetRoleListForUserCompletedEventArgs">
+            <summary>
+            得到用户所有的角色表[GetRoleListForUser]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RoleMgePrimitives.SetRoleListForUserCompletedEventArgs">
+            <summary>
+            更新用户所有的角色表[SetRoleListForUser]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.User">
+            <summary>
+            User 用户的摘要说明。
+            </summary>
+            <summary>
+            User 用户的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.User.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.User.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.User.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.LoginId">
+            <summary>
+            登录ID(主键) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.FullName">
+            <summary>
+            全称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.Password">
+            <summary>
+            密码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.Status">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.Type">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.Parameter">
+            <summary>
+            参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.Limits">
+            <summary>
+            安全选项 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.User.SecLevel">
+            <summary>
+            安全级别 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherProxy">
+            <summary>
+            UserAuther 的 Web 服务代理实现。
+            </summary>
+            <summary>
+            UserAuther 的 Web 服务代理实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginWebLoginCheck(System.Object)">
+            <summary>
+            Web登记检查，如果已登录返回LoginUser,如果未登录返回null。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginWebLogin(System.String,System.String,System.Object)">
+            <summary>
+            Web登录，返回用户登录标识UTag。  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginWebLogout(System.Object)">
+            <summary>
+            Web退出登录。  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginLogin(System.String,System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            登录，返回UTag  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.Beginlogout(System.String,System.String,System.Object)">
+            <summary>
+            登出  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginGetUserDetail(System.String,System.String,System.Object)">
+            <summary>
+            取用户信息  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginGetUserAttrib(System.String,System.String,System.Object)">
+            <summary>
+            取用户属性  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginSetUserAttrib(System.String,System.String,PengeSoft.WorkZoneData.UserAttrib,System.Object)">
+            <summary>
+            设置用户属性  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginChangePassword(System.String,System.String,System.String,System.String,System.Object)">
+            <summary>
+            用户更改密码  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginCheckRight(System.String,System.String,System.String,System.Object)">
+            <summary>
+            检查权限  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.UserAutherProxy.BeginCheckRightMask(System.String,System.String,System.String,System.Int64,System.Object)">
+            <summary>
+            检查掩码权限  
+            </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.WebLoginCompleted">
+            <summary> 事件：WebLogin调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.WebLoginCheckCompleted">
+            <summary> 事件：WebLoginCheck调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.WebLogoutCompleted">
+            <summary> 事件：WebLogout调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.LoginCompleted">
+            <summary> 事件：Login调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.logoutCompleted">
+            <summary> 事件：logout调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.GetUserDetailCompleted">
+            <summary> 事件：GetUserDetail调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.GetUserAttribCompleted">
+            <summary> 事件：GetUserAttrib调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.SetUserAttribCompleted">
+            <summary> 事件：SetUserAttrib调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.ChangePasswordCompleted">
+            <summary> 事件：ChangePassword调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.CheckRightCompleted">
+            <summary> 事件：CheckRight调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.UserAutherProxy.CheckRightMaskCompleted">
+            <summary> 事件：CheckRightMask调用完成之后触发 </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.WebLoginCheckCompletedEventArgs">
+            <summary>
+            Web登记检查，如果已登录返回LoginUser,如果未登录返回null。[WebLoginCheck]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.WebLoginCompletedEventArgs">
+            <summary>
+            Web登录，返回用户登录标识UTag。[WebLogin]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.WebLogoutCompletedEventArgs">
+            <summary>
+            Web退出登录。[WebLogout]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.Right">
+            <summary>
+            Right 权限的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Right.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Right.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Right.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.RightName">
+            <summary>
+            权限名称(主键) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.ActionID">
+            <summary>
+            操作码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.Attrib">
+            <summary>
+            属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.Parameter">
+            <summary>
+            参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.DisInherited">
+            <summary>
+            中断继承 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.Status">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.MemberRights">
+            <summary>
+            成员权限表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Right.Childs">
+            <summary>
+            下级权限表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgeProxy">
+            <summary>
+            DeptMge 的 Web 服务代理实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginInsert(System.String,System.String,System.String,System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            添加新部门  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginInsertDept(System.String,PengeSoft.WorkZoneData.Dept,System.Int32,System.Object)">
+            <summary>
+            添加新部门  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginUpdate(System.String,PengeSoft.WorkZoneData.Dept,System.Int32,System.Object)">
+            <summary>
+            更新部门  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginDelete(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            删除部门  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginGetDetail(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取部门详细数据  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginGetChildList(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Object)">
+            <summary>
+            取子节点列表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginGetChildCount(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取子节点个数  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginGetDeptForUser(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            得到用户所在的部门  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.DeptMgeProxy.BeginSetDeptForUser(System.String,System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            更新用户所在的部门  
+            </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.InsertCompleted">
+            <summary> 事件：Insert调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.InsertDeptCompleted">
+            <summary> 事件：InsertDept调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.UpdateCompleted">
+            <summary> 事件：Update调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.DeleteCompleted">
+            <summary> 事件：Delete调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.GetDetailCompleted">
+            <summary> 事件：GetDetail调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.GetChildListCompleted">
+            <summary> 事件：GetChildList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.GetChildCountCompleted">
+            <summary> 事件：GetChildCount调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.GetDeptForUserCompleted">
+            <summary> 事件：GetDeptForUser调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.DeptMgeProxy.SetDeptForUserCompleted">
+            <summary> 事件：SetDeptForUser调用完成之后触发 </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.InsertCompletedEventArgs">
+            <summary>
+            添加新部门[Insert]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.InsertDeptCompletedEventArgs">
+            <summary>
+            添加新部门[InsertDept]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.UpdateCompletedEventArgs">
+            <summary>
+            更新部门[Update]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.DeleteCompletedEventArgs">
+            <summary>
+            删除部门[Delete]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.GetDetailCompletedEventArgs">
+            <summary>
+            取部门详细数据[GetDetail]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.GetChildListCompletedEventArgs">
+            <summary>
+            取子节点列表[GetChildList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.GetChildCountCompletedEventArgs">
+            <summary>
+            取子节点个数[GetChildCount]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.GetDeptForUserCompletedEventArgs">
+            <summary>
+            得到用户所在的部门[GetDeptForUser]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.DeptMgePrimitives.SetDeptForUserCompletedEventArgs">
+            <summary>
+            更新用户所在的部门[SetDeptForUser]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.RightList">
+            <summary>
+            RightList 权限列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightList.AddItem(PengeSoft.WorkZoneData.Right)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightList.RemoveItem(PengeSoft.WorkZoneData.Right,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightList.EnditeItem(PengeSoft.WorkZoneData.Right,PengeSoft.WorkZoneData.Right,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.RightList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.Role">
+            <summary>
+            Role 角色的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Role.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Role.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Role.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.RoleName">
+            <summary>
+            角色名称(主键) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.FullName">
+            <summary>
+            全称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.Attrib">
+            <summary>
+            属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.Status">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.Type">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.ParentRoleName">
+            <summary>
+            父角色名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.LoginIds">
+            <summary>
+            成员表(用户登录ID用逗号分隔) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Role.Childs">
+            <summary>
+            下级角色表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgeProxy">
+            <summary>
+            RightMge 的 Web 服务代理实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginInsertRight(System.String,System.String,System.String,System.Int32,System.String,System.Int32,System.Object)">
+            <summary>
+            插入一个新权限  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginUpdateRight(System.String,PengeSoft.WorkZoneData.Right,System.Int32,System.Object)">
+            <summary>
+            更新权限  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginDeleteRight(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            删除权限  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetChildRightList(System.String,System.String,System.Int32,System.Int32,System.Int32,System.Object)">
+            <summary>
+            取下级权限列表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetChildRightCount(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取下级权限个数  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetUserRightList(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            得到用户权限定义表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginSetUserRightList(System.String,System.String,PengeSoft.WorkZoneData.ActRightList,System.Int32,System.Object)">
+            <summary>
+            设置用户权限定义表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetUserAllRightList(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            得到用户权限表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetRoleRightList(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            得到角色权限定义表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginSetRoleRightList(System.String,System.String,PengeSoft.WorkZoneData.ActRightList,System.Int32,System.Object)">
+            <summary>
+            设置角色权限定义表  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetRightDetail(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取权限详细数据  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetUserOfHaveRight(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取拥有权限的所有用户（包含拥有权限的的角色的用户）  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetRoleOfHaveRight(System.String,System.String,System.Int32,System.Object)">
+            <summary>
+            取拥有权限的所有角色  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetUserOfHaveRightMask(System.String,System.String,System.Int64,System.Int32,System.Object)">
+            <summary>
+            取拥有掩码权限的所有用户（包含拥有权限的的角色的用户）  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginGetRoleOfHaverRightMask(System.String,System.String,System.Int64,System.Int32,System.Object)">
+            <summary>
+            取拥有掩码权限的所有角色  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginCheckRight(System.String,System.String,System.String,System.Object)">
+            <summary>
+            检查用户权限  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.RightMgeProxy.BeginCheckRightMask(System.String,System.String,System.String,System.Int64,System.Object)">
+            <summary>
+            按掩码检查权限  
+            </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.InsertRightCompleted">
+            <summary> 事件：InsertRight调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.UpdateRightCompleted">
+            <summary> 事件：UpdateRight调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.DeleteRightCompleted">
+            <summary> 事件：DeleteRight调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetChildRightListCompleted">
+            <summary> 事件：GetChildRightList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetChildRightCountCompleted">
+            <summary> 事件：GetChildRightCount调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetUserRightListCompleted">
+            <summary> 事件：GetUserRightList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.SetUserRightListCompleted">
+            <summary> 事件：SetUserRightList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetUserAllRightListCompleted">
+            <summary> 事件：GetUserAllRightList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetRoleRightListCompleted">
+            <summary> 事件：GetRoleRightList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.SetRoleRightListCompleted">
+            <summary> 事件：SetRoleRightList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetRightDetailCompleted">
+            <summary> 事件：GetRightDetail调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetUserOfHaveRightCompleted">
+            <summary> 事件：GetUserOfHaveRight调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetRoleOfHaveRightCompleted">
+            <summary> 事件：GetRoleOfHaveRight调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetUserOfHaveRightMaskCompleted">
+            <summary> 事件：GetUserOfHaveRightMask调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.GetRoleOfHaverRightMaskCompleted">
+            <summary> 事件：GetRoleOfHaverRightMask调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.CheckRightCompleted">
+            <summary> 事件：CheckRight调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.RightMgeProxy.CheckRightMaskCompleted">
+            <summary> 事件：CheckRightMask调用完成之后触发 </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.InsertRightCompletedEventArgs">
+            <summary>
+            插入一个新权限[InsertRight]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.UpdateRightCompletedEventArgs">
+            <summary>
+            更新权限[UpdateRight]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.DeleteRightCompletedEventArgs">
+            <summary>
+            删除权限[DeleteRight]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetChildRightListCompletedEventArgs">
+            <summary>
+            取下级权限列表[GetChildRightList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetChildRightCountCompletedEventArgs">
+            <summary>
+            取下级权限个数[GetChildRightCount]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetUserRightListCompletedEventArgs">
+            <summary>
+            得到用户权限定义表[GetUserRightList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.SetUserRightListCompletedEventArgs">
+            <summary>
+            设置用户权限定义表[SetUserRightList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetUserAllRightListCompletedEventArgs">
+            <summary>
+            得到用户权限表[GetUserAllRightList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetRoleRightListCompletedEventArgs">
+            <summary>
+            得到角色权限定义表[GetRoleRightList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.SetRoleRightListCompletedEventArgs">
+            <summary>
+            设置角色权限定义表[SetRoleRightList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetRightDetailCompletedEventArgs">
+            <summary>
+            取权限详细数据[GetRightDetail]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetUserOfHaveRightCompletedEventArgs">
+            <summary>
+            取拥有权限的所有用户（包含拥有权限的的角色的用户）[GetUserOfHaveRight]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetRoleOfHaveRightCompletedEventArgs">
+            <summary>
+            取拥有权限的所有角色[GetRoleOfHaveRight]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetUserOfHaveRightMaskCompletedEventArgs">
+            <summary>
+            取拥有掩码权限的所有用户（包含拥有权限的的角色的用户）[GetUserOfHaveRightMask]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.GetRoleOfHaverRightMaskCompletedEventArgs">
+            <summary>
+            取拥有掩码权限的所有角色[GetRoleOfHaverRightMask]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.CheckRightCompletedEventArgs">
+            <summary>
+            检查用户权限[CheckRight]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.RightMgePrimitives.CheckRightMaskCompletedEventArgs">
+            <summary>
+            按掩码检查权限[CheckRightMask]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.LoginUserMgeProxy">
+            <summary>
+            LoginUserMge 的 Web 服务代理实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.LoginUserMgeProxy.BeginInsert(System.String,System.String,System.String,System.String,System.String,System.Double,System.Int32,System.Object)">
+            <summary>
+            增加一条登录用户记录  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.LoginUserMgeProxy.BeginUpdate(System.String,PengeSoft.WorkZoneData.LoginUser,System.Object)">
+            <summary>
+            更新记录  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.LoginUserMgeProxy.BeginDelete(System.String,System.String,System.Object)">
+            <summary>
+            删除记录  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.LoginUserMgeProxy.BeginGetDetail(System.String,System.String,System.Object)">
+            <summary>
+            取详细信息  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.LoginUserMgeProxy.BeginGetList(System.String,System.String,System.String,System.Int32,System.Int32,System.Object)">
+            <summary>
+            查询登录用户记录  
+            </summary>
+        </member>
+        <member name="M:PengeSoft.ServiceEx.LoginUserMgeProxy.BeginGetCount(System.String,System.String,System.String,System.Object)">
+            <summary>
+            查询登录用户记录数  
+            </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.LoginUserMgeProxy.InsertCompleted">
+            <summary> 事件：Insert调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.LoginUserMgeProxy.UpdateCompleted">
+            <summary> 事件：Update调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.LoginUserMgeProxy.DeleteCompleted">
+            <summary> 事件：Delete调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.LoginUserMgeProxy.GetDetailCompleted">
+            <summary> 事件：GetDetail调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.LoginUserMgeProxy.GetListCompleted">
+            <summary> 事件：GetList调用完成之后触发 </summary>
+        </member>
+        <member name="E:PengeSoft.ServiceEx.LoginUserMgeProxy.GetCountCompleted">
+            <summary> 事件：GetCount调用完成之后触发 </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.LoginUserMgePrimitives.InsertCompletedEventArgs">
+            <summary>
+            增加一条登录用户记录[Insert]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.LoginUserMgePrimitives.UpdateCompletedEventArgs">
+            <summary>
+            更新记录[Update]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.LoginUserMgePrimitives.DeleteCompletedEventArgs">
+            <summary>
+            删除记录[Delete]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.LoginUserMgePrimitives.GetDetailCompletedEventArgs">
+            <summary>
+            取详细信息[GetDetail]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.LoginUserMgePrimitives.GetListCompletedEventArgs">
+            <summary>
+            查询登录用户记录[GetList]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.LoginUserMgePrimitives.GetCountCompletedEventArgs">
+            <summary>
+            查询登录用户记录数[GetCount]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.LoginUser">
+            <summary>
+            LoginUser 登录用户的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUser.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUser.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.UTag">
+            <summary>
+            登记标识(主键) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.LoginId">
+            <summary>
+            登录ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.UIP">
+            <summary>
+            用户IP 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.UHostName">
+            <summary>
+            用户主机名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.PublicKey">
+            <summary>
+            公钥 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.LoginTime">
+            <summary>
+            登录时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.ExpTime">
+            <summary>
+            过期时间（以） 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUser.Status">
+            <summary>
+            状态(取值范围DataShow) 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ActRightList">
+            <summary>
+            ActRightList 操作权限列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightList.AddItem(PengeSoft.WorkZoneData.ActRight)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightList.RemoveItem(PengeSoft.WorkZoneData.ActRight,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightList.EnditeItem(PengeSoft.WorkZoneData.ActRight,PengeSoft.WorkZoneData.ActRight,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.ActRightList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserAttribList">
+            <summary>
+            UserAttribList 用户属性列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttribList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttribList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttribList.AddItem(PengeSoft.WorkZoneData.UserAttrib)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttribList.RemoveItem(PengeSoft.WorkZoneData.UserAttrib,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttribList.EnditeItem(PengeSoft.WorkZoneData.UserAttrib,PengeSoft.WorkZoneData.UserAttrib,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttribList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.UserAttribList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.LoginUserList">
+            <summary>
+            LoginUserList 登录用户列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserList.AddItem(PengeSoft.WorkZoneData.LoginUser)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserList.RemoveItem(PengeSoft.WorkZoneData.LoginUser,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserList.EnditeItem(PengeSoft.WorkZoneData.LoginUser,PengeSoft.WorkZoneData.LoginUser,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.LoginUserList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.RoleList">
+            <summary>
+            RoleList 角色列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RoleList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RoleList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RoleList.AddItem(PengeSoft.WorkZoneData.Role)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RoleList.RemoveItem(PengeSoft.WorkZoneData.Role,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RoleList.EnditeItem(PengeSoft.WorkZoneData.Role,PengeSoft.WorkZoneData.Role,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RoleList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.RoleList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.RightDefineList">
+            <summary>
+            RightDefineList 权限定义列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefineList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefineList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefineList.AddItem(PengeSoft.WorkZoneData.RightDefine)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefineList.RemoveItem(PengeSoft.WorkZoneData.RightDefine,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefineList.EnditeItem(PengeSoft.WorkZoneData.RightDefine,PengeSoft.WorkZoneData.RightDefine,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefineList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.RightDefineList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.RightDefine">
+            <summary>
+            RightDefine 权限定义的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefine.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefine.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightDefine.Name">
+            <summary>
+            用户登录ID或角色名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightDefine.Mask">
+            <summary>
+            掩码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightDefine.UserOrRole">
+            <summary>
+            用户或角色,True表示用户,False表示角色 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.DeptList">
+            <summary>
+            DeptList 部门列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DeptList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DeptList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DeptList.AddItem(PengeSoft.WorkZoneData.Dept)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DeptList.RemoveItem(PengeSoft.WorkZoneData.Dept,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DeptList.EnditeItem(PengeSoft.WorkZoneData.Dept,PengeSoft.WorkZoneData.Dept,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DeptList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.DeptList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.Dept">
+            <summary>
+            Dept 部门的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Dept.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Dept.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Dept.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.DeptName">
+            <summary>
+            部门名称(主键) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.FullName">
+            <summary>
+            全称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.ParentDeptName">
+            <summary>
+            父部门名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.Attrib">
+            <summary>
+            属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.Status">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.Type">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.LoginIds">
+            <summary>
+            成员表(用户登录ID用逗号分隔) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Dept.Childs">
+            <summary>
+            下级部门表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserAttrib">
+            <summary>
+            UserAttrib 用户属性的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttrib.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserAttrib.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Addres">
+            <summary>
+            地址 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.LoginId">
+            <summary>
+            用户登录ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Chief">
+            <summary>
+            负责人 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Contact">
+            <summary>
+            联系人 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Dept">
+            <summary>
+            部门 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.EMail">
+            <summary>
+            EMail 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.ExtParm">
+            <summary>
+            扩展属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Fax">
+            <summary>
+            传真 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.IDCard">
+            <summary>
+            身份证 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.IMCode">
+            <summary>
+            IM地址(QQ,MSN,Skype等) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Memo">
+            <summary>
+            备注 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Mob1">
+            <summary>
+            手机1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Mob2">
+            <summary>
+            手机2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.NickName">
+            <summary>
+            昵称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Tags">
+            <summary>
+            标记位 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Tel1">
+            <summary>
+            电话1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Tel2">
+            <summary>
+            电话2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Unit">
+            <summary>
+            单位 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.WebURL">
+            <summary>
+            网址 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserAttrib.Zip">
+            <summary>
+            邮编 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.LoginCompletedEventArgs">
+            <summary>
+            登录，返回UTag[Login]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.logoutCompletedEventArgs">
+            <summary>
+            登出[logout]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.GetUserDetailCompletedEventArgs">
+            <summary>
+            取用户信息[GetUserDetail]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.GetUserAttribCompletedEventArgs">
+            <summary>
+            取用户属性[GetUserAttrib]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.SetUserAttribCompletedEventArgs">
+            <summary>
+            设置用户属性[SetUserAttrib]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.ChangePasswordCompletedEventArgs">
+            <summary>
+            用户更改密码[ChangePassword]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.CheckRightCompletedEventArgs">
+            <summary>
+            检查权限[CheckRight]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.ServiceEx.UserAutherPrimitives.CheckRightMaskCompletedEventArgs">
+            <summary>
+            检查掩码权限[CheckRightMask]调用后的事件参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserList">
+            <summary>
+            UserList 用户列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserList.AddItem(PengeSoft.WorkZoneData.User)">
+            <summary>
+            添加一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserList.RemoveItem(PengeSoft.WorkZoneData.User,System.Int32)">
+            <summary>
+            移除一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserList.EnditeItem(PengeSoft.WorkZoneData.User,PengeSoft.WorkZoneData.User,System.Int32)">
+            <summary>
+            编辑一项值，引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserList.OnCollectionChanged(System.Collections.Specialized.NotifyCollectionChangedAction,System.Object,System.Int32)">
+            <summary>
+            引发INotifyCollectionChanged.CollectionChanged事件
+            </summary>
+        </member>
+        <member name="E:PengeSoft.WorkZoneData.UserList.CollectionChanged">
+            <summary>
+            通知列表源发生改变
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_CHGPWD">
+            <summary>
+            用户下次登录必须更改密码
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_DISCHGPWD">
+            <summary>
+            用户不能更改密码
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_NOEXPIRE">
+            <summary>
+            密码永不过期
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_DISACCOUNT">
+            <summary>
+            账户已停用
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_MULTLOGIN">
+            <summary>
+            多机登录
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_LISTHIDE">
+            <summary>
+            对列表隐藏
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_SECRET">
+            <summary>
+            属性保密
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.EUserStatus.UST_AUTOLOGOUT">
+            <summary>
+            异地上线自动登出
+            </summary>
+        </member>
+    </members>
+</doc>

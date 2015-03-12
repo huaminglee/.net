@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.Web.UI.Controls</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.Web.UI.Controls.PsDatePicker">
+            <summary>
+            带客户端验证的日期选择器
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.Controls.PsDropDownTextBox">
+            <summary>
+            带下拉列表的文本框控件
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.Controls.PsDropDownTextBox.UseDropDownList">
+            <summary>
+            获取或设置一个值。指示是否使用下拉列表。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.Controls.PsDropDownTextBox.SelectedItemWay">
+            <summary>
+            获取或设置一个值。指示选中下拉列表中的项时，在文本框中填充值的方式。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.Controls.PsDropDownTextBox.OnClientBlur">
+            <summary>
+            获取或设置在文本框失去焦点后执行的客户端脚本
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.Controls.EPsSelectedItemWay">
+            <summary>
+            选择项模式
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.Controls.PsDropDownTextClientEventArgs">
+            <summary>
+            PsDropDownText控件客户端事件参数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.Controls.PsDropDownTextClientEventArgs.ItemCollection">
+            <summary>
+            在事件发生时，需要往DropDown视图中填充的数据项
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.Controls.PsDropDownTextClientEventArgs.EventArgument">
+            <summary>
+            在事件发生时，由客户端传回的事件参数
+            </summary>
+        </member>
+    </members>
+</doc>

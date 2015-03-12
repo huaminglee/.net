@@ -1,0 +1,225 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.WorkFlow.Draw</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowSymbol">
+            <summary>
+            流程图符号
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowSymbol.GetTaskParFormSymbol">
+            <summary>
+            虚函数，根据图符属性设TaskData的属性
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowSymbol.SetSymbolbyTaskPar">
+            <summary>
+            虚函数，用TaskData的属性设图符属性
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowSymbol.GetNextTasks(PengeSoft.Data.ObjList)">
+            <summary>
+            取后续结点名称表
+            </summary>
+            <param name="taskLinks">任务连接表</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowSymbol.GetNextTasks">
+            <summary>
+            取后续结点名称表
+            </summary>
+            <returns>节点名称字串，用‘，’分隔</returns>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowStart">
+            <summary>
+            流程开始节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowEnd">
+            <summary>
+            流程结束节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowTask">
+            <summary>
+            流程任务节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowEdgeTask">
+            <summary>
+            流程边界任务节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowMergeTask">
+            <summary>
+            流程会签任务节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowJoin">
+            <summary>
+            流程汇聚节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowBranch">
+            <summary>
+            流程分拆节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowSub">
+            <summary>
+            流程子流程节点
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Diagram.FlowModel">
+            <summary>
+            流程图处理函数组
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.Diagram.FlowModel.TaskBounderKey">
+            <summary>
+            GetModelRange 中的有任务的边框存贮的键
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateSymbol(PengeSoft.WorkFlow.TaskInstance)">
+            <summary>
+            根据任务创建模型符号
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateOrthogonalLineLink(System.Drawing.PointF[])">
+            <summary>
+            创建 OrthogonalLine 连接
+            </summary>
+            <param name="pts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateArcLink(System.Drawing.PointF[])">
+            <summary>
+            创建 Arc 连接
+            </summary>
+            <param name="pts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreatePolylineLink(System.Drawing.PointF[])">
+            <summary>
+            创建 Polyline 接连
+            </summary>
+            <param name="pts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateDirectedLineLink(System.Drawing.PointF[])">
+            <summary>
+            创建直线连接
+            </summary>
+            <param name="pts"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateLink(Syncfusion.Windows.Forms.Diagram.Model,Syncfusion.Windows.Forms.Diagram.Symbol,Syncfusion.Windows.Forms.Diagram.Symbol,PengeSoft.WorkFlow.TaskLink)">
+            <summary>
+            根据 TaskLink 类型创建接连
+            </summary>
+            <param name="model"></param>
+            <param name="fromnode"></param>
+            <param name="tonode"></param>
+            <param name="link"></param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateLink1(Syncfusion.Windows.Forms.Diagram.Model,Syncfusion.Windows.Forms.Diagram.Symbol,Syncfusion.Windows.Forms.Diagram.Symbol,PengeSoft.WorkFlow.TaskLink,System.Drawing.Color)">
+            <summary>
+            根据 TaskLink 类型创建接连(与CreateLink等效，直接操作模型，不会产生Undo记录)
+            </summary>
+            <param name="model"></param>
+            <param name="fromnode"></param>
+            <param name="tonode"></param>
+            <param name="link"></param>
+            <param name="linkcolor"></param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateLink(Syncfusion.Windows.Forms.Diagram.Model,Syncfusion.Windows.Forms.Diagram.Symbol,Syncfusion.Windows.Forms.Diagram.Symbol,PengeSoft.WorkFlow.TaskLink,System.Drawing.Color)">
+            <summary>
+            根据 TaskLink 类型创建接连
+            </summary>
+            <param name="model"></param>
+            <param name="fromnode"></param>
+            <param name="tonode"></param>
+            <param name="link"></param>
+            <param name="linkcolor"></param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.InitialModel(Syncfusion.Windows.Forms.Diagram.Model,PengeSoft.WorkFlow.WorkInstance)">
+            <summary>
+            初始化模型图
+            </summary>
+            <param name="model"></param>
+            <param name="workFlow"></param>
+            <returns>如果模型中有无效联接，返回出错信息</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.AddSymbolsToModel(Syncfusion.Windows.Forms.Diagram.Model,Syncfusion.Windows.Forms.Diagram.NodeCollection,System.Drawing.PointF[])">
+            <summary>
+            将符号组加到模型图中去
+            </summary>
+            <param name="model"></param>
+            <param name="nodes"></param>
+            <param name="locations"></param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.GetModelData(Syncfusion.Windows.Forms.Diagram.Model,PengeSoft.WorkFlow.WorkInstance)">
+            <summary>
+            从模型图中取 WorkInstance 对象任务数据
+            </summary>
+            <param name="model"></param>
+            <param name="workFlow"></param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateModel(PengeSoft.WorkFlow.WorkInstance)">
+            <summary>
+            根据工作对象创建模型
+            </summary>
+            <param name="workFlow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateBitmap(Syncfusion.Windows.Forms.Diagram.Model)">
+            <summary>
+            创建模型位图
+            </summary>
+            <param name="model"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateBitmap(Syncfusion.Windows.Forms.Diagram.Model,System.Single,System.Single,System.Collections.Generic.Dictionary{System.String,System.Drawing.RectangleF})">
+            <summary>
+            创建模型位图, 并返回所有任务的位置
+            </summary>
+            <param name="model"></param>
+            <param name="symRange">任务的名称、位置表</param>
+            <param name="sx"></param>
+            <param name="sy"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateBitmap(PengeSoft.WorkFlow.WorkInstance)">
+            <summary>
+            创建工作的位图
+            </summary>
+            <param name="workFlow"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.CreateBitmap(PengeSoft.WorkFlow.WorkInstance,System.Single,System.Single,System.Collections.Generic.Dictionary{System.String,System.Drawing.RectangleF})">
+            <summary>
+            创建工作的位图, 并返回所有任务的位置
+            </summary>
+            <param name="workFlow"></param>
+            <param name="symRange">任务的名称、位置表</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.GetModelRange(Syncfusion.Windows.Forms.Diagram.Model,System.Single,System.Single,System.Collections.Generic.Dictionary{System.String,System.Drawing.RectangleF})">
+            <summary>
+            从模型中取出任务位置
+            </summary>
+            <param name="model"></param>
+            <param name="symRange"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.Diagram.FlowModel.RefreshModelStatus(Syncfusion.Windows.Forms.Diagram.Model)">
+            <summary>
+            刷新模型的任务状态显示, 模型的任务状态显示依据其 TaskData 的 Status
+            </summary>
+            <param name="model"></param>
+        </member>
+    </members>
+</doc>

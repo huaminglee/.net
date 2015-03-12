@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="gb2312"?>
+<PsDataPacket>
+  <FDataList ItemType="PengeSoft.WorkFlow.TaskInstance, PengeSoft.WorkFlow">
+    <TaskInstance0>
+      <Name>开始</Name>
+      <NextTasks ItemType="PengeSoft.WorkFlow.TaskLink, PengeSoft.WorkFlow">
+        <TaskLink NodeName="新建公文" />
+      </NextTasks>
+      <Memo>开始</Memo>
+      <MainParaIn />
+      <MainParaOut />
+      <LocationX>218</LocationX>
+      <LocationY>48</LocationY>
+      <MsgSubList>
+        <FDataList />
+      </MsgSubList>
+    </TaskInstance0>
+    <TaskInstance1>
+      <Name>结束</Name>
+      <NodeType>1</NodeType>
+      <Memo>结束</Memo>
+      <MainParaIn />
+      <MainParaOut />
+      <LocationX>189.999984741211</LocationX>
+      <LocationY>599.999938964844</LocationY>
+      <MsgSubList>
+        <FDataList />
+      </MsgSubList>
+    </TaskInstance1>
+    <TaskInstance2>
+      <Name>新建公文</Name>
+      <NodeType>2</NodeType>
+      <NextTasks ItemType="PengeSoft.WorkFlow.TaskLink, PengeSoft.WorkFlow">
+        <TaskLink NodeName="领导批示" />
+      </NextTasks>
+      <Memo>新建公文</Memo>
+      <MainParaIn />
+      <MainParaOut />
+      <LocationX>129.999984741211</LocationX>
+      <LocationY>99.9999923706055</LocationY>
+      <MsgSubList>
+        <FDataList />
+      </MsgSubList>
+    </TaskInstance2>
+    <TaskInstance3>
+      <Name>领导批示</Name>
+      <NodeType>2</NodeType>
+      <NextTasks ItemType="PengeSoft.WorkFlow.TaskLink, PengeSoft.WorkFlow">
+        <TaskLink NodeName="派件" LineType="2" />
+        <TaskLink NodeName="签阅" />
+      </NextTasks>
+      <Memo>领导批示</Memo>
+      <MainParaIn />
+      <MainParaOut />
+      <LocationX>289.999969482422</LocationX>
+      <LocationY>199.999984741211</LocationY>
+      <MsgSubList>
+        <FDataList />
+      </MsgSubList>
+    </TaskInstance3>
+    <TaskInstance4>
+      <Name>派件</Name>
+      <NodeType>2</NodeType>
+      <NextTasks ItemType="PengeSoft.WorkFlow.TaskLink, PengeSoft.WorkFlow">
+        <TaskLink NodeName="签阅" />
+      </NextTasks>
+      <Memo>派件</Memo>
+      <MainParaIn />
+      <MainParaOut />
+      <LocationX>99.9999923706055</LocationX>
+      <LocationY>279.999969482422</LocationY>
+      <MsgSubList>
+        <FDataList />
+      </MsgSubList>
+    </TaskInstance4>
+    <TaskInstance5>
+      <Name>签阅</Name>
+      <NodeType>2</NodeType>
+      <NextTasks ItemType="PengeSoft.WorkFlow.TaskLink, PengeSoft.WorkFlow">
+        <TaskLink NodeName="归档" />
+      </NextTasks>
+      <Memo>签阅</Memo>
+      <MainParaIn />
+      <MainParaOut />
+      <LocationX>309.999969482422</LocationX>
+      <LocationY>379.999969482422</LocationY>
+      <MsgSubList>
+        <FDataList />
+      </MsgSubList>
+    </TaskInstance5>
+    <TaskInstance6>
+      <Name>归档</Name>
+      <NodeType>2</NodeType>
+      <NextTasks ItemType="PengeSoft.WorkFlow.TaskLink, PengeSoft.WorkFlow">
+        <TaskLink NodeName="结束" />
+      </NextTasks>
+      <Memo>归档</Memo>
+      <MainParaIn />
+      <MainParaOut />
+      <LocationX>129.999984741211</LocationX>
+      <LocationY>449.999969482422</LocationY>
+      <MsgSubList>
+        <FDataList />
+      </MsgSubList>
+    </TaskInstance6>
+  </FDataList>
+  <TemplateID>51d24fc9-87a4-4ec2-9f81-d9215bd98b2c</TemplateID>
+  <MsgSubList>
+    <FDataList />
+  </MsgSubList>
+  <RightGroup>
+    <FDataList />
+  </RightGroup>
+</PsDataPacket>

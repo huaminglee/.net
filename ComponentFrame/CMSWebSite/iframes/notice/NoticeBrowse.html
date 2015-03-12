@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>公告浏览</title>
+    <!-- 移动设备优先 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 最新 Bootstrap 核心 CSS 文件 -->
+    <link href="/css/html5_layout.css" rel="stylesheet" />
+    <link href="/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/html5_layout.css" rel="stylesheet" />
+    <link href="/easyui/1.3.6/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <link href="/easyui/1.3.6/themes/icon.css" rel="stylesheet" />
+    <link href="/css/mycss/common.css" rel="stylesheet" />
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/common.js"></script>
+     <script src="/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script src="/js/jquery.gridster.min.js"></script>
+    <!--ie8对html5的支持补丁-->
+    <script src="/js/html5shiv.min.js"></script>
+    <!--ie6-8对响应式布局的支持-->
+    <script src="/js/respond.min.js"></script>
+
+    <script src="/js/BaseService.js"></script>
+    <script src="/js/NoticeService.js"></script>
+    <script src="/js/myjs/notice.js"></script>
+</head>
+<body>
+    <section class="container" style="height:100%">
+        <div class="container-fluid">
+                <fieldset>
+                    <legend><small class="text-primary">系统公告</small></legend>
+                    <h4 id="tilte" style="height:60px;text-align:center"></h4>
+                    <div style="text-align:center;font-size:small">
+                        <span id="author" style="margin-right:50px"></span>
+                        <span id="createtime" style="margin-left:50px"></span>
+                    </div>
+                    <div>
+                        <hr style="width:80%;border-top:1px solid #bdbdbd;border-bottom:none"/>
+                        <div id="content" style="width:80%;height:100%;margin-left:10%"></div>
+                    </div>
+                 </fieldset>
+            </div>
+    </section>
+    <script>
+        var guid = getQueryString("Guid");
+
+        $(function () {
+            GetNoticeDetail(guid);
+        });
+        
+    </script>
+</body>
+</html>

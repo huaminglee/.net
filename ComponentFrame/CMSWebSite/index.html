@@ -1,0 +1,127 @@
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
+<head runat="server">
+    <title>鹏业门户系统-主页</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <!--设置移动设备的支持-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/mycss/layim.css" type="text/css" rel="stylesheet"/>
+    <link href="/myskin/myskin1.css" rel="stylesheet" />
+    <link href="/css/mycss/common.css" rel="stylesheet" />
+    <link href="/css/jquery.gridster.css" rel="stylesheet" />
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/jquery-2.1.1.min.js"></script>
+    <script src="/js/json2.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script src="/js/jquery.gridster.min.js"></script>
+    
+    <script src="/Script/layer/layer.min.js"></script>
+    <script src="/Script/layer/extend/layer.ext.js"></script>
+    <!--ie8对html5的支持补丁-->
+    <script src="/js/html5shiv.min.js"></script>
+    <!--ie6-8对响应式布局的支持-->
+    <script src="/js/respond.min.js"></script>
+    <script src="/js/UrlJump.js"></script>
+    <script src="/js/MD5.js"></script>
+    <script src="/js/BaseService.js"></script>
+    <script src="/js/UserBaseInfoService.js"></script>
+    <script src="/js/LayoutInfoService.js"></script>
+    <script src="/js/SkinInfoService.js"></script>
+    <script src="/js/index.js" charset="gb2312"></script>
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="gridster" style="width: 98%; margin: 0 auto; float: left;">
+            <ul style="margin-left: -1.2%;">
+            </ul>
+        </div>
+    </div>
+    <!--密码修改弹出层-->
+    <div class="modal fade" id="updatePassword" tabindex="-1" role="dialog" aria-labelledby="updatePasswordLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                    </button>
+                    <h4 class="modal-title" id="updatePasswordLabel">修改密码</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="form-group">
+                        <label for="oldPassword">旧密码</label>
+                        <input type="password" class="form-control" id="oldPassword" placeholder="旧密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="newPassword">新密码</label>
+                        <input type="password" class="form-control" id="newPassword" placeholder="新密码">
+                    </div>
+                    <div class="form-group">
+                        <label for="rePassword">确认密码</label>
+                        <input type="password" class="form-control" id="rePassword" placeholder="确认新密码">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="savePass()" id="saveBtn">确认修改</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--皮肤管理弹出层-->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span><span class="sr-only">关闭</span>
+                    </button>
+                    <h4 class="modal-title" id="myModalLabel">更换皮肤</h4>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div id="skinContainer" class="col-md-7">
+                            <div style="background-color: burlywood; cursor: pointer; float: left; width: 150px; height: 100px;">
+                                <img src="/mySkinImg/myskin1.gif" style="width: 100%; height: 100%; clear: both;" />
+                            </div>
+                            <div style="background-color: cadetblue; width: 150px; height: 100px; cursor: pointer; float: left;">
+                                <img src="/mySkinImg/myskin2.gif" style="width: 100%; height: 100%;" />
+                            </div>
+                            <div style="background-color: #aa2222; width: 150px; height: 100px; cursor: pointer; float: left;">
+                                <img src="/mySkinImg/myskin3.gif" style="width: 100%; height: 100%;" />
+                            </div>
+                        </div>
+                        <div class="col-md-5">
+                            <div class="text-center">皮肤效果预览</div>
+                            <div id="skinEffectContainer" style="margin: 0 auto; width: 80%; height: 180px; background-color: cornflowerblue">
+                                <img src="/mySkinImg/myskin1.gif" style="width: 100%; height: 100%;" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" class="btn btn-primary" onclick="saveSkin()" data-dismiss="modal">保存选择</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- layim所需 Start -->
+    <!--<script src="/Script/layer/layer.min.js"></script>
+    <script src="/js/myjs/layim.js"></script>
+    <!--  layim所需 End -->
+    <script>
+        var index = window.location.pathname.indexOf("UserdefLayout");
+        var pagename;
+        if (index > -1) {
+            pagename = window.location.pathname.substring(index, window.location.pathname.length)
+        }
+        else {
+            pagename = "index.html";
+        }
+        setpagename(pagename);
+    </script>
+</body>
+</html>

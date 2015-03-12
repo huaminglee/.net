@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<table>
+	<!--基料形態-->
+	<DDLBOMForm text="粉碎料" value="1"></DDLBOMForm>
+	<DDLBOMForm text="本色粒子料" value="2"></DDLBOMForm>
+	<DDLBOMForm text="非本色粒子料" value="3"></DDLBOMForm>
+	<DDLBOMForm text="粉料" value="4"></DDLBOMForm>
+	<DDLBOMForm text="粒子料+粉碎料" value="5"></DDLBOMForm>
+	<DDLBOMForm text="粒子料+粉料" value="6"></DDLBOMForm>
+	
+	
+	
+	
+
+</table>

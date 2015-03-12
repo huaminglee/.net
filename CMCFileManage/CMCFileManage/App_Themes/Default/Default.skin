@@ -1,0 +1,10 @@
+﻿
+<asp:GridView  runat="server"    BorderColor="White">
+<HeaderStyle  CssClass="GridHead"  />
+     <AlternatingRowStyle  CssClass="GridAlterItem"  />
+     <RowStyle  CssClass="GridItem"  />
+     <HeaderStyle  CssClass="GridHead"  />
+</asp:GridView>
+<asp:Image runat="server" CssClass="ImgBtn"/>
+
+

@@ -1,0 +1,174 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.log4net</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.Logging.Impl.Log4NetLogger">
+            <summary>
+            <see cref="T:PengeSoft.Logging.ILog"/>的Log4net实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.#ctor(log4net.ILog)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Info(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Info(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Debug(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Debug(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Warn(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Warn(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Trace(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Trace(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Fatal(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Fatal(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Error(System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+            <param name="e"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.Error(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="message"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.LevelWrite(PengeSoft.Logging.LogLevel,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="level"></param>
+            <param name="message"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.LevelWrite(PengeSoft.Logging.LogLevel,System.Object,System.Exception)">
+            <summary>
+            
+            </summary>
+            <param name="level"></param>
+            <param name="message"></param>
+            <param name="exception"></param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLogger.IsLevelEnabled(PengeSoft.Logging.LogLevel)">
+            <summary>
+            
+            </summary>
+            <param name="level"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.Logging.Impl.Log4NetLogger.IsInfoEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Logging.Impl.Log4NetLogger.IsWarnEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Logging.Impl.Log4NetLogger.IsErrorEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Logging.Impl.Log4NetLogger.IsFatalEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Logging.Impl.Log4NetLogger.IsDebugEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Logging.Impl.Log4NetLogger.IsTraceEnabled">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Logging.Impl.Log4NetLoggerFA">
+            <summary>
+            <see cref="T:PengeSoft.Logging.ILoggerFactoryAdapter"/>的Log4net实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLoggerFA.#ctor(System.Collections.Specialized.NameValueCollection)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="properties">属性表</param>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLoggerFA.GetLogger(System.String)">
+            <summary>
+            取得日志服务对实例，并赋与给定名称。
+            </summary>
+            <param name="name">日志名称</param>
+            <returns>日志服务对象实例</returns>
+        </member>
+        <member name="M:PengeSoft.Logging.Impl.Log4NetLoggerFA.GetLogger(System.Type)">
+            <summary>
+            根据日志服务对象类型取得实例。日志名称由对象类型决定。
+            </summary>
+            <param name="type">日志服务对象类型</param>
+            <returns>日志服务对象实例</returns>
+        </member>
+    </members>
+</doc>

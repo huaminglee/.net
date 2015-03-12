@@ -1,0 +1,349 @@
+body
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	font-size: 9pt;
+	padding-bottom: 0px;
+	margin: 0px;
+	overflow: auto;
+	color: black;
+	padding-top: 5px;
+	background-color: white;
+}
+
+A.CommandButton:link
+{
+	cursor: hand;
+	color: #000000;
+	text-decoration: none;
+}
+ a:hover,a:active,a:focus
+{
+    border: 1px solid #7eabcd;
+    font-weight :bold ;
+     color:Green ;
+}
+A.CommandButton:visited
+{
+	text-decoration: underline;
+	color: #003366;
+	cursor: hand;
+}
+
+A.CommandButton:active
+{
+	text-decoration: underline;
+	color: #003366;
+	cursor: hand;
+}
+
+A.CommandButton:hover
+{
+	text-decoration: underline;
+	color: #ff0000;
+	cursor: hand;
+}
+
+/**//*************************************
+TR  Style	
+*************************************/
+.TrStyle
+{
+	height: 30px;
+}
+
+
+/**//*****************************************************
+FileUpload Style
+*****************************************************/
+.FileUpload
+{
+	font-size: 9pt;
+	width: 400px;
+	color: black;
+}
+
+.TableTitle
+{
+	border-top-width: 0px;
+	border-left-width: 0px;
+	font-size: 10pt;
+	border-bottom-width: 0px;
+	height: 20px;
+	background-color: #e8e5e1;
+}
+/**//*************************************
+Label&Text Style
+*************************************/
+.TitleText
+{
+	font-weight: bold;
+	font-size: 15pt;
+	color: #000000;
+	font-family: 標楷體;
+}
+.ContentText
+{
+	font-size: 10pt;
+	color: #000000;
+	line-height: 20pt;
+	font-family: 標楷體;
+}
+.SubTitleText
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #000000;
+	line-height: 20pt;
+	font-family: 細明體;
+}
+.FootText
+{
+	font-weight: normal;
+	font-size: 9pt;
+	color: #3d3d3d;
+}
+.ErrorMessage
+{
+	font-size: 9pt;
+	color: red;
+}
+
+/**//*************************************
+Display Style	
+*************************************/
+.DisplayNone
+{
+	display: none;
+}
+.DisplayBlock
+{
+	display: block;
+}
+.DisplayInline
+{
+	display: inline;
+}
+
+/**//*************************************
+Disabled Style	
+*************************************/
+.ObjectDisabled
+{
+	color: #bfbfbf;
+}
+IMG.Disabled
+{
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=50);
+}
+INPUT.Disabled
+{
+	background-color: buttonface;
+}
+SELECT.Disabled
+{
+	background-color: buttonface;
+}
+/**//*************************************
+HR Style	
+*************************************/
+HR
+{
+	color: black;
+	height: 1px;
+}
+
+/**//*****************************************************
+TextBox Style
+*****************************************************/
+.EditBox
+{
+	background: #ffffff;
+	border: 1px solid #B7B7B7;
+	color: #003366;
+	cursor: text;
+	font-size: 9pt;
+	height: 18px;
+	padding: 1px;
+}
+.LoginTextBox
+{
+	border-right: #b7b7b7 1px solid;
+	padding-right: 1px;
+	border-top: #b7b7b7 1px solid;
+	padding-left: 1px;
+	font-size: 9pt;
+	background: #ffffff;
+	padding-bottom: 1px;
+	border-left: #b7b7b7 1px solid;
+	width: 95px;
+	cursor: text;
+	color: #003366;
+	padding-top: 1px;
+	border-bottom: #b7b7b7 1px solid;
+}
+.MultiLineTextBox
+{
+	border-right: #b7b7b7 1px solid;
+	padding-right: 1px;
+	border-top: #b7b7b7 1px solid;
+	padding-left: 1px;
+	font-size: 9pt;
+	background: #f8f8f8;
+	padding-bottom: 1px;
+	border-left: #b7b7b7 1px solid;
+	width: 400px;
+	cursor: text;
+	color: #000000;
+	padding-top: 1px;
+	border-bottom: #b7b7b7 1px solid;
+	height: 250px;
+}
+.LineStyleTextBox
+{
+	border-right: #ffffff 0px solid;
+	border-top: #ffffff 0px solid;
+	font-size: 9pt;
+	border-left: #ffffff 0px solid;
+	border-bottom: #c0c0c0 1px solid;
+	background-color: #ffffff;
+}
+.NoneBorderTextBox
+{
+	text-align: center;
+	width: 99%;
+	height: 99%;
+	border-top-style: none;
+	border-right-style: none;
+	border-left-style: none;
+	background-color: #f6f6f6;
+	border-bottom-style: none;
+}
+.ClarityTextBox
+{
+	border-right: cornflowerblue 1px solid;
+	border-top: cornflowerblue 1px solid;
+	font-size: 9pt;
+	border-left: cornflowerblue 1px solid;
+	border-bottom: cornflowerblue 1px solid;
+}
+.OtherTextBox
+{
+	border-right: #cc9966 1px solid;
+	border-top: #cc9966 1px solid;
+	font-size: 9pt;
+	border-left: #cc9966 1px solid;
+	border-bottom: #cc9966 1px solid;
+	background-color: #e8e8e8;
+}
+
+/**//*****************************************************
+Botton Style
+*****************************************************/
+.ButtonCss
+{
+	border-right: #93bee2 1px solid;
+	border-top: #93bee2 1px solid;
+	font-size: 9pt;
+	border-left: #93bee2 1px solid;
+	width: 60px;
+	cursor: hand;
+	color: #006699;
+	border-bottom: #93bee2 1px solid;
+	background-color: #e8f4ff;
+}
+.CommandButton
+{
+	border-right: #babad2 1px solid;
+	border-top: #babad2 1px solid;
+	padding-left: 0px;
+	font-size: 9pt;
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#FAFFFF, endColorstr=#C4E0F7);
+	padding-bottom: 0px;
+	margin: 0px;
+	border-left: #babad2 1px solid;
+	cursor: hand;
+	color: #000000;
+	padding-top: 0px;
+	border-bottom: #babad2 1px solid;
+	background-color: #c4d5e5;
+	text-decoration: none;
+}
+
+.NoWrap
+{
+	white-space: nowrap;
+}
+
+
+.Pager
+{
+	font-weight: bold;
+	font-size: 8.5pt;
+	width: 100%;
+	color: aqua;
+	font-family: Tahoma, Arial, Helvetica;
+	background-color: #999999;
+	text-decoration: none;
+}
+.Fix_GridStyle
+{
+
+	font-size: 8.5pt;
+	behavior: url(Styles/ScrollTable.htc);
+	color: #003333;
+	font-family: Tahoma, Arial, Helvetica;
+	text-decoration: none;
+}
+.TdTitle
+{
+	font-weight: bold;
+	font-size: 10pt;
+	background-image: url(../../images/xm_blkTitlebg.gif);
+	margin: 1px;
+	font-family: 新細明體;
+	height: 30px;
+}
+
+.CSIItem
+{
+	background-color: #ccff99;
+}
+.SkinObject
+{
+	font-size: 9pt;
+	color: #000000;
+	font-family: Tahoma, Arial, Helvetica;
+	text-decoration: none;
+}
+.itemlink
+{
+    font-size :14px;
+    font-family :inherit;
+    font-style:inherit ;
+    font-weight :inherit ;
+    color :#000000;
+    text-decoration :none;
+}
+.PageHead
+{
+    font-weight: normal;
+    color: #339933;
+    font-family: 標楷體;
+    font-size: 20px;
+}
+.CSIRed
+{
+    font-weight: normal;
+    font-size: 13px;
+    color: #339933;
+    font-family: "新宋体" ,arial;
+    text-decoration: none;
+}
+.NormalRedBig
+{
+ font-family: "新宋体",arial; TEXT-DECORATION: none;
+    font-size: 15px;
+    font-weight: bold;
+	color:red;
+}

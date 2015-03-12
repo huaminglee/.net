@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.IndexQuery</name>
+    </assembly>
+    <members>
+        <member name="M:Lucene.Net.Analysis.KTDictSeg.KTDictSegAnalyzer.#ctor(System.Boolean)">
+            <summary>
+            Return original string.
+            Does not use only segment
+            </summary>
+            <param name="originalResult"></param>
+        </member>
+        <member name="P:Lucene.Net.Analysis.KTDictSeg.KTDictSegAnalyzer.Duration">
+            <summary>
+            统计分词占用时间
+            </summary>
+        </member>
+        <member name="T:PengeSoft.IndexQuery.WordResult">
+            <summary>
+            单词信息
+            </summary>
+        </member>
+        <member name="F:PengeSoft.IndexQuery.WordResult.Word">
+            <summary>
+            单词
+            </summary>
+        </member>
+        <member name="F:PengeSoft.IndexQuery.WordResult.Position">
+            <summary>
+            位置
+            </summary>
+        </member>
+        <member name="F:PengeSoft.IndexQuery.WordResult.Frequency">
+            <summary>
+            频度
+            </summary>
+        </member>
+        <member name="T:PengeSoft.IndexQuery.IWordSegment">
+            <summary>
+            分词接口
+            </summary>
+        </member>
+    </members>
+</doc>

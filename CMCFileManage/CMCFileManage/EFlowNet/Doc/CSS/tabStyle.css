@@ -1,0 +1,30 @@
+.TopGroup
+{
+	position: relative;
+	top: 1px;
+}
+
+.DefaultTab
+{
+	color: black;
+	background-image: url(../../images/tab_bg.gif);
+	font-size: 9pt;
+	cursor: default;
+}
+
+.DefaultTabHover
+{
+	color: black;
+	background-image: url(../../images/hover_tab_bg.gif);
+	font-size: 9pt;
+	cursor: default;
+}
+
+.SelectedTab
+{
+	color: black;
+	background-image: url(../../images/selected_tab_bg.gif);
+	font-size: 9pt;
+	cursor: default;
+}
+

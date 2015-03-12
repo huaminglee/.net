@@ -1,0 +1,4386 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utils.Silverlight</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.Core.Thread.ThreadWorkSvr">
+            <summary>
+            服务类线程基类，由Interval属性决定处理间隔，在等待时可用Active()激活处理。
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Core.Thread.ThreadWorkSvr.Work_Sucess">
+            <summary>成功完成</summary>
+        </member>
+        <member name="F:PengeSoft.Core.Thread.ThreadWorkSvr.Work_Break">
+            <summary>用户中断</summary>
+        </member>
+        <member name="M:PengeSoft.Core.Thread.ThreadWorkSvr.DoWorkMain">
+            <summary>
+            线程入口
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Core.Thread.ThreadWorkSvr.CreateNewThread">
+            <summary>
+            创建一个新的线程实例
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Core.Thread.ThreadWorkSvr.Shutdown">
+            <summary>
+            请求中止处理，执行该功能并不会立即中止线程，只是在当前DoWork()完成后结束线程运行。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Core.Thread.ThreadWorkSvr.Active">
+            <summary>
+            激活处理
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Core.Thread.ThreadWorkSvr.Initial">
+            <summary>
+            运行前初始化过程，虚函数。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Core.Thread.ThreadWorkSvr.finished">
+            <summary>
+            线程运行完成时被自动调用。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Core.Thread.ThreadWorkSvr.DoWork">
+            <summary>
+            实际处理程序，虚函数，必须重载。
+            </summary>
+            <returns>运行完成状态</returns>
+        </member>
+        <member name="P:PengeSoft.Core.Thread.ThreadWorkSvr.Interval">
+            <summary>
+            运行间格，两次 DoWork() 处理中间的间隔时间。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Core.Thread.ThreadWorkSvr.Busy">
+            <summary>
+            正在执行
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Core.Thread.ThreadWorkSvr.RetValue">
+            <summary>
+            处理完成后的返回值
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Core.Thread.ThreadWorkSvr.ShouldStop">
+            <summary>
+            保护类属性，告知线程中止工作
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserRoleQueryPara">
+            <summary>
+            UserRole 查询参数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.db.QueryParameter">
+            <summary>
+            查询参数表Hashtable
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.IXmlSerializer">
+            <summary>
+            对象Xml序列化处理接口，用于繁杂类型处理，只能用序列化为元素。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.IXmlSerializer.XmlEncode(System.Xml.XmlWriter)">
+            <summary>
+            将对象写入Xml节点
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="M:PengeSoft.Data.IXmlSerializer.XmlDecode(System.Xml.XmlReader)">
+            <summary>
+            从Xml节点中读出对象
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="M:PengeSoft.Data.IXmlSerializer.Clear">
+            <summary>
+            清除数数据，恢复缺省值
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddDateRange(System.String,System.DateTime,System.DateTime)">
+            <summary>
+            在条件表中加入日期条件, 当只有StartDate有值(不为DateTime.MinValue)时时以该日期为条件，
+            当StartDate和EndDate均有值时,表示一个日期范围。
+            </summary>
+            <remarks>
+            为<see cref="!:PengeSoft.db.IDataProvider"/>的QueryLis(),QueryCount()准备。
+            </remarks>
+            <param name="atrName">属性名称</param>
+            <param name="StartDate">开始日期</param>
+            <param name="EndDate">结束日期</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddCondition(System.String,System.DateTime)">
+            <summary>
+            在条件表中加入日期条件
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">日期条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddCondition(System.String,System.String)">
+            <summary>
+            在条件表中加入 string 条件
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">string 条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddCondition(System.String,System.Guid)">
+            <summary>
+            在条件表中加入 Guid 条件
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">Guid 条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddConditionNonzero(System.String,System.Int32)">
+            <summary>
+            在条件表中加入数值非0条件
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">数值条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddConditionNonzero(System.String,System.Int64)">
+            <summary>
+            在条件表中加入数值非0条件
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">数值条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddConditionNonzero(System.String,System.Double)">
+            <summary>
+            在条件表中加入数值非0条件
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">数值条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddConditionNonzero(System.String,System.Decimal)">
+            <summary>
+            在条件表中加入数值非0条件
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">数值条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddCondition(System.String,System.Object)">
+            <summary>
+            在条件表中加入 Object 条件, 用于添加未处理的类型。目前处理了 string , Guid, DateTime 。
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="value">Guid 条件值</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryParameter.AddRangeCondition(System.String,System.Object,System.Object)">
+            <summary>
+            在条件表中加入 Object 的 Range 条件, 用于添加未处理的类型，只用于处理了string, int, double, decmial等简单类型 。
+            </summary>
+            <param name="atrName">属性名称</param>
+            <param name="low">下限</param>
+            <param name="high">上限</param>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.UserRoleQueryPara.OrderByLoginID">
+            <summary>按LoginID排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.UserRoleQueryPara.OrderByLoginID_desc">
+            <summary>按LoginID排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.UserRoleQueryPara.OrderByDetail">
+            <summary>按Detail排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.UserRoleQueryPara.OrderByDetail_desc">
+            <summary>按Detail排序,降序</summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRoleQueryPara.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRoleQueryPara.#ctor(PengeSoft.WorkZoneData.UserRole,System.String)">
+            <summary>
+            构造函数,指定参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRoleQueryPara.SetQueryPara(PengeSoft.WorkZoneData.UserRole,System.String)">
+            <summary>
+            指定查询参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRoleQueryPara.SetOrderByField(System.String)">
+            <summary>
+            设排序字段
+            </summary>
+            <param name="Order">排序字段</param>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ComparerUserRole">
+            <summary>
+            UserRole 排序比较器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ComparerUserRole.#ctor(System.String)">
+            <summary>
+            创建实例,并初始化排序字段
+            </summary>
+            <param name="sortField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ComparerUserRole.Compare(System.Object,System.Object)">
+            <summary>
+            比较两个 <see cref="!:Zjjhxmmx"/> 对象并返回一个值，指示一个对象是小于、等于还是大于另一个对象。
+            </summary>
+            <param name="x">要比较的第一个对象。</param>
+            <param name="y">要比较的第二个对象。</param>
+            <returns>值 条件 小于零 x 小于 y。 零 x 等于 y。 大于零 x 大于 y。</returns>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ComparerUserRole.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:PengeSoft.db.QueryDataList">
+            <summary>
+            QueryDataList 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.NorDataList">
+            <summary>
+            DataListSL 的 ArrayList 实现。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.DataList">
+            <summary>
+            从DataPacketSL派生，实现数据集合管理。此类为虚类，不能实例化。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.BinSerial">
+            <summary>
+            BinSerial, 二进制序列化对象的基类
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.IBinSerial">
+            <summary>
+            对象binary序列化处理接口，用于繁杂类型处理，只能用序列化为元素。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.IBinSerial.SaveToStream(System.IO.Stream)">
+            <summary>
+            将对象写入到流
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="M:PengeSoft.Data.IBinSerial.LoadFromStream(System.IO.Stream)">
+            <summary>
+            从流中读出对象
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="M:PengeSoft.Data.BinSerial.SaveToStream(System.IO.Stream)">
+            <summary>
+            将对象写入到流
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="M:PengeSoft.Data.BinSerial.LoadFromStream(System.IO.Stream)">
+            <summary>
+            从流中读出对象
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="M:PengeSoft.Data.BinSerial.WriteToStreamStrFmt(System.IO.Stream,System.Byte[])">
+            <summary>
+            将二进制数据 byte[] 以 Delphi String 格式存储到流中
+            </summary>
+            <param name="stream"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PengeSoft.Data.BinSerial.ReadFromStreamStrFmt(System.IO.Stream,System.Byte[]@)">
+            <summary>
+            将流中以 Delphi String 格式存储的二进制数据读到 byte[]
+            </summary>
+            <param name="stream"></param>
+            <param name="value"></param>
+        </member>
+        <member name="F:PengeSoft.Data.DataPacket.PS_DATANODE_ID">
+            <summary>
+            DataPacketSL序列化时的节点名称
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataPacket.StringArraySplit">
+            <summary>
+            StringArray序列化时的分隔符 (char)10
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DataPacket.XmlEncodeElement(System.Xml.XmlWriter)">
+            <summary>
+            序列化实体类属性，重载该函数必须返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataPacket.XmlEncodeAttrib(System.Xml.XmlWriter)">
+            <summary>
+            序列化属性类属性，重载该函数必须返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataPacket.XmlSetElement(System.Xml.XmlReader,System.String)">
+            <summary>
+            反列化实体类属性，重载可用非反射方式处理。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 表示该节点被处理。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataPacket.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacketSL继承</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Clear">
+            <summary>
+            清除DataListSL中所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            将一个 PengeSoft.Data.DataListSL 中元素附本复制到现有集合, 元素必须是 DataPacketSL 。
+            </summary>
+            <param name="sou">被复制的 PengeSoft.Data.DataListSL</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Add(PengeSoft.Data.DataPacket)">
+            <summary>
+            将元素添加到 PengeSoft.Data.DataListSL 中。如果 AutoGenID 属性为 true, 则产生RID,并自动增加。
+            </summary>
+            <param name="item">要添加到集合的 DataPacketSL 元素</param>
+            <returns>新元素的插入位置</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.AddNew">
+            <summary>
+            创建一个 ItemType 指定的新元素并添加到 PengeSoft.Data.ObjList 中， 要求 ItemType 必须不为 null。
+            如果 AutoGenID 属性为 true, 则产生RID,并自动增加。
+            </summary>
+            <returns>新元素的插入位置</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Insert(System.Int32,PengeSoft.Data.DataPacket)">
+            <summary>
+             将一个新元素插入指定索引处的 PengeSoft.Data.DataListSL。
+            如果 AutoGenID 属性为 true, 则产生RID,并自动增加。
+            </summary>
+            <param name="index">从零开始的索引，应在该位置插入 item。</param>
+            <param name="item">要插入 PengeSoft.Data.DataListSL 中的 DataPacketSL 元素。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.AddFrom(System.Collections.ICollection)">
+            <summary>
+            从一个集合中添加元素引用，并不复制元素。要求元素必须是 DataPacketSL
+            </summary>
+            <param name="c">源集合</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.AddCopyFrom(System.Collections.ICollection)">
+            <summary>
+            从一个集合中添加元素附本(复制元素)。要求元素必须是 DataPacketSL
+            </summary>
+            <param name="c">源集合</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Sort(System.Collections.IComparer)">
+            <summary>
+            使用指定的比较器对整个 PengeSoft.Data.DataListSL 中的字符串进行排序。
+            </summary>
+            <param name="comparer">比较元素时要使用的 System.Collections.IComparer 实现。若为 null，则使用则使用每个元素的 System.IComparable</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Sort(System.Int32,System.Int32,System.Collections.IComparer)">
+            <summary>
+            使用指定的比较器对 PengeSoft.Data.DataListSL 中某个范围内的元素进行排序。
+            </summary>
+            <param name="index">要排序的范围的从零开始的起始索引。</param>
+            <param name="count">要排序的范围的长度。</param>
+            <param name="comparer">比较元素时要使用的 System.Collections.IComparer 实现。若为 null，则使用则使用每个元素的 System.IComparable</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.CreateNewItem">
+            <summary>
+            根据ItemType创建一个新 DataPacketSL 元素
+            </summary>
+            <returns>新 DataPacketSL 元素, 如果 ItemType 为 null 则返回 null。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.GetItemType">
+            <summary>
+            取得ItemType的虚函数, 如果未设ItemType且有元素存在，则取第一个元素类型
+            </summary>
+            <returns>ItemType</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.GetItems(System.Int32)">
+            <summary>
+             获取指定索引处的元素。
+            </summary>
+            <param name="index">要获得或设置的元素从零开始的索引。</param>
+            <returns>指定索引处的 DataPacketSL 元素。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.SetItems(System.Int32,PengeSoft.Data.DataPacket)">
+            <summary>
+             设置指定索引处的元素。
+            </summary>
+            <param name="Index">要获得或设置的元素从零开始的索引。</param>
+            <param name="value">指定的 DataPacketSL 元素。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.GetCount">
+            <summary>
+            获取 PengeSoft.Data.DataListSL 中实际包含的元素数。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.ClearItems">
+            <summary>
+            清除 PengeSoft.Data.DataListSL 中的所有元素。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.AddItem(PengeSoft.Data.DataPacket)">
+            <summary>
+            将元素添加到 PengeSoft.Data.DataListSL 中。
+            </summary>
+            <param name="item">要添加到集合的 DataPacketSL 元素</param>
+            <returns>新元素的插入位置</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.InsertItem(System.Int32,PengeSoft.Data.DataPacket)">
+            <summary>
+             将一个新元素插入指定索引处的 PengeSoft.Data.DataListSL。
+            </summary>
+            <param name="index">从零开始的索引，应在该位置插入 item。</param>
+            <param name="item">要插入 PengeSoft.Data.DataListSL 中的 DataPacketSL 元素。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Delete(System.Int32)">
+            <summary>
+            移除指定索引处的 PengeSoft.Data.DataListSL 项。
+            </summary>
+            <param name="index">从零开始的索引（属于要移除的项）。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.UpdateItem(PengeSoft.Data.DataPacket)">
+            <summary>
+             更新 PengeSoft.Data.DataListSL 中的元素。如元素不存在，则添加新元素(Add方式)。
+            </summary>
+            <param name="item">要更新的 DataPacketSL 元素。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.IndexOf(PengeSoft.Data.DataPacket)">
+            <summary>
+            确定 PengeSoft.Data.DataListSL 中特定元素的索引。
+            </summary>
+            <param name="item">要在 PengeSoft.Data.DataListSL 中查找的 DataPacketSL 元素。</param>
+            <returns>如果在列表中找到，则为 item 的索引；否则为 -1。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Move(System.Int32,System.Int32)">
+            <summary>
+            移动指定索引处的 PengeSoft.Data.DataListSL 项到新位置。
+            </summary>
+            <param name="CurIndex">从零开始的索引（要移动的项）。</param>
+            <param name="NewIndex">从零开始的索引（新位置）。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Remove(PengeSoft.Data.DataPacket)">
+            <summary>
+            从 PengeSoft.Data.DataListSL 中移除特定元素的第一个匹配项。
+            </summary>
+            <param name="item">要从 PengeSoft.Data.DataListSL 移除的 DataPacketSL 元素。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.GetEnumerator">
+            <summary>
+            返回一个循环访问集合的枚举数。
+            </summary>
+            <returns>可用于循环访问集合的 System.Collections.IEnumerator 对象。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Add(System.Object)">
+            <summary>
+            IList成员，将某项添加到 DataListSL 中。
+            </summary>
+            <param name="value">要添加到 DataListSL 的 System.Object。必须从 DataPacketSL 继承</param>
+            <returns>新元素的插入位置。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Contains(System.Object)">
+            <summary>
+            IList成员，确定 DataListSL 是否包含特定值。
+            </summary>
+            <param name="value">要在 DataListSL 中查找的 System.Object。</param>
+            <returns>如果在 DataListSL 中找到 System.Object，则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.IndexOf(System.Object)">
+            <summary>
+            IList成员，确定 DataListSL 中特定项的索引。
+            </summary>
+            <param name="value">要在 DataListSL 中查找的 System.Object。</param>
+            <returns>如果在列表中找到，则为 value 的索引；否则为 -1。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Insert(System.Int32,System.Object)">
+            <summary>
+            IList成员，将一个项插入指定索引处的 DataListSL。
+            </summary>
+            <param name="index">从零开始的索引，应在该位置插入 value。</param>
+            <param name="value">要插入 DataListSL 中的 System.Object。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.Remove(System.Object)">
+            <summary>
+            IList成员，从 DataListSL 中移除特定对象的第一个匹配项。
+            </summary>
+            <param name="value">要从 DataListSL 移除的 System.Object。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.RemoveAt(System.Int32)">
+            <summary>
+            IList成员，移除指定索引处的 DataListSL 项。
+            </summary>
+            <param name="index">从零开始的索引（属于要移除的项）。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.DoCopyTo(System.Array,System.Int32)">
+            <summary>
+            用于实现ICollection.CopyTo()的虚函数，需重载。
+            </summary>
+            <param name="array">作为从 System.Collections.ICollection 复制的元素的目标位置的一维 System.Array。System.Array 必须具有从零开始的索引。</param>
+            <param name="index">array 中从零开始的索引，从此处开始复制。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.GetIsSynchronized">
+            <summary>
+            用于实现ICollection.IsSynchronized的虚函数，需重载。
+            </summary>
+            <returns>如果对 System.Collections.ICollection 的访问是同步的（线程安全），则为 true；否则为 false。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.GetSyncRoot">
+            <summary>
+            用于实现ICollection.SyncRoot的虚函数，需重载。
+            </summary>
+            <returns>可用于同步对 System.Collections.ICollection 的访问的对象。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataList.System#Collections#ICollection#CopyTo(System.Array,System.Int32)">
+            <summary>
+            ICollection 成员,从特定的 System.Array 索引处开始，将 System.Collections.ICollection 的元素复制到一个 System.Array 中。
+            </summary>
+            <param name="array">作为从 System.Collections.ICollection 复制的元素的目标位置的一维 System.Array。System.Array 必须具有从零开始的索引。</param>
+            <param name="index">array 中从零开始的索引，从此处开始复制。</param>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.Item(System.Int32)">
+            <summary>
+             获取或设置指定索引处的元素。
+            </summary>
+            <param name="index">要获得或设置的元素从零开始的索引。</param>
+            <returns>指定索引处的元素。</returns>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.Count">
+            <summary>
+            获取 PengeSoft.Data.DataListSL 中实际包含的元素数。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.ItemType">
+            <summary>
+            设置或获取被管理元素的缺省类型，可以为 null。如果要从Xml中恢复，必须指定该属性。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.IsFixedSize">
+            <summary>
+            IList成员，获取一个值，该值指示 DataListSL 是否具有固定大小。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.IsReadOnly">
+            <summary>
+            IList成员，获取一个值，该值指示 DataListSL 是否为只读。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.System#Collections#IList#Item(System.Int32)">
+            <summary>
+            IList成员，获取或设置指定索引处的元素。
+            </summary>
+            <param name="index">要获得或设置的元素从零开始的索引。</param>
+            <returns>指定索引处的元素。</returns>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.System#Collections#ICollection#IsSynchronized">
+            <summary>
+            ICollection 成员,获取一个值，该值指示是否同步对 System.Collections.ICollection 的访问（线程安全）。
+            <remarks>如果对 System.Collections.ICollection 的访问是同步的（线程安全），则为 true；否则为 false。</remarks>
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DataList.System#Collections#ICollection#SyncRoot">
+            <summary>
+            ICollection 成员,获取可用于同步 System.Collections.ICollection 访问的对象。
+            <remarks>返回可用于同步对 System.Collections.ICollection 的访问的对象。</remarks>
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.#ctor">
+            <summary>
+            初始化 PengeSoft.Data.NorDataList 类的新实例，该实例为空并且具有默认初始容量。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.#ctor(System.Int32)">
+            <summary>
+            初始化 System.Collections.ArrayList 类的新实例，该实例为空并且具有指定的初始容量。
+            </summary>
+            <param name="capacity">新列表最初可以存储的元素数。</param>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化 PengeSoft.Data.NorDataList 类的新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c">System.Collections.ICollection，它的元素被复制到新列表中。该表中元素必须是 DataPacketSL 的派生类。</param>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.GetItems(System.Int32)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+            <param name="Index"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.SetItems(System.Int32,PengeSoft.Data.DataPacket)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.GetCount">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.ClearItems">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.AddItem(PengeSoft.Data.DataPacket)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.InsertItem(System.Int32,PengeSoft.Data.DataPacket)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.Delete(System.Int32)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.UpdateItem(PengeSoft.Data.DataPacket)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.IndexOf(PengeSoft.Data.DataPacket)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.Move(System.Int32,System.Int32)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.Remove(PengeSoft.Data.DataPacket)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.DoCopyTo(System.Array,System.Int32)">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.GetIsSynchronized">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.GetSyncRoot">
+            <summary>
+            DataListSL虚函数实现
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.Sort(System.Collections.Generic.IComparer{PengeSoft.Data.DataPacket})">
+            <summary>
+            使用指定的比较器对整个 PengeSoft.Data.DataListSL 中的字符串进行排序。
+            </summary>
+            <param name="comparer">比较元素时要使用的 System.Collections.IComparer 实现。若为 null，则使用则使用每个元素的 System.IComparable</param>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList.Sort(System.Int32,System.Int32,System.Collections.Generic.IComparer{PengeSoft.Data.DataPacket})">
+            <summary>
+            使用指定的比较器对 PengeSoft.Data.DataListSL 中某个范围内的元素进行排序。
+            </summary>
+            <param name="index">要排序的范围的从零开始的起始索引。</param>
+            <param name="count">要排序的范围的长度。</param>
+            <param name="comparer">比较元素时要使用的 System.Collections.IComparer 实现。若为 null，则使用则使用每个元素的 System.IComparable</param>
+        </member>
+        <member name="M:PengeSoft.db.QueryDataList.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.QueryDataList.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.db.QueryDataList.TotalCount">
+            <summary>
+            总记录数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.db.IPagedDataProvider">
+            <summary>
+            数据查询接口，用 Hashtable 传入查询条件，可与<see cref="T:PengeSoft.db.PagedDataList"/>配合使用。
+            </summary>
+            <remarks>
+            条件表中如有日期范围字段应表达为两个值 '属性名称_S' 开始日期 , '属性名称_E' 结束日期。
+            缺省排序字段会存到'_OrderBy'中，注意不要重名。
+            </remarks>
+            <example>
+            <code>
+               Hashtable para = new Hashtable();
+               
+               if (GenDate != DateTime.MinValue)
+               {
+                   if (EndDate != DateTime.MinValue)
+                   {
+                       para.Add("GenDate_S", GenDate);
+                       para.Add("GenDate_E", EndDate);
+                   }
+                   else
+                   {
+                       para.Add("GenDate", GenDate);
+                   }
+               }
+               if (!string.IsNullOrEmpty(Order))
+               {
+                   para.Add("_OrderBy", Order);
+               }
+            </code>
+            </example>
+        </member>
+        <member name="M:PengeSoft.db.IPagedDataProvider.QueryCount(PengeSoft.db.QueryParameter)">
+            <summary>
+            根据数据查询条件取记录总数
+            </summary>
+            <param name="queryPara">查询条件对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.IPagedDataProvider.QueryList(PengeSoft.db.QueryParameter,System.Int32,System.Int32)">
+            <summary>
+            根据数据查询条件取记录列表
+            </summary>
+            <param name="queryPara">查询条件对象</param>
+            <param name="Start">起始记录号</param>
+            <param name="PageSize">页面长度</param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.db.IPagedList">
+            <summary>
+            IPagedList接口，用于实现分页
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.IPagedList.NextPage">
+            <summary>
+            移到下一页，如果当前页是最后一页，移到第一页。
+            </summary>
+            <returns>操作成功返回true,否则为false</returns>
+        </member>
+        <member name="M:PengeSoft.db.IPagedList.PreviousPage">
+            <summary>
+            移到上一页，如果当前页是第一页，移到最后一页。
+            </summary>
+            <returns>操作成功返回true,否则为false</returns>
+        </member>
+        <member name="M:PengeSoft.db.IPagedList.GotoPage(System.Int32)">
+            <summary>
+            移到指定页,如果页号大于最后一页，移到第一页，如果页号小于第一页，移到最后一页。
+            </summary>
+            <param name="pageIndex">指定页号</param>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.TotalSize">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.PageSize">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.IsFirstPage">
+            <summary>
+            当前页是否为第一页
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.IsMiddlePage">
+            <summary>
+            当前页是否为中间页（只有一页时总是返回false）
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.IsLastPage">
+            <summary>
+            当前页是否为最后一页。（只有一页时总是返回true）
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.IsNextPageAvailable">
+            <summary>
+            当前页是否有下一页
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.IsPreviousPageAvailable">
+            <summary>
+            当前页是否有上一页
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.IPagedList.PageIndex">
+            <summary>
+            返回当前页号。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.db.PaginatedArrayList">
+            <summary>
+            分页的ArrayList, 在 IList 上充，实现分页。允许创建实例后对元素进行修改。每次修改均会重计算分页。
+            尽量不要创建实例后对元素进行增删。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.#ctor(System.Int32)">
+            <summary>
+            创建PaginatedArrayList实例，并指定页面大小。
+            </summary>
+            <param name="pageSize">页面大小</param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.#ctor(System.Int32,System.Int32)">
+            <summary>
+            创建PaginatedArrayList实例，并指定初始容量和页面大小。
+            </summary>
+            <param name="initialCapacity">List初始容量</param>
+            <param name="pageSize">页面大小</param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.#ctor(System.Collections.Generic.ICollection{System.Object},System.Int32,System.Int32)">
+            <summary>
+            创建PaginatedArrayList实例，从指定集合中复制（引用）元素，并指定页面大小及起始页面。
+            </summary>
+            <param name="c">源集合</param>
+            <param name="pageSize">页面大小</param>
+            <param name="pageIndex">起始页面号</param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.#ctor(System.Collections.Generic.ICollection{System.Object},System.Int32)">
+            <summary>
+            创建PaginatedArrayList实例，从指定集合中复制（引用）元素，并指定页面大小。
+            </summary>
+            <param name="c">源集合</param>
+            <param name="pageSize">页面大小</param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.Repaginate">
+            <summary>
+            重计算分页
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.SubList(System.Collections.IList,System.Int32,System.Int32)">
+            <summary>
+            Provides a view of the IList pramaeter 
+            from the specified position <paramref name="fromIndex"/> 
+            to the specified position <paramref name="toIndex"/>. 
+            </summary>
+            <param name="list">The IList elements.</param>
+            <param name="fromIndex">Starting position for the view of elements. </param>
+            <param name="toIndex">Ending position for the view of elements. </param>
+            <returns> A view of list.
+            </returns>
+            <remarks>
+            The list that is returned is just a view, it is still backed
+            by the orignal list.  Any changes you make to it will be 
+            reflected in the orignal list.
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.NextPage">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.PreviousPage">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.GotoPage(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="pageIndex"></param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.RemoveAt(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.Insert(System.Int32,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.Remove(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.Contains(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.IndexOf(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.Add(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.CopyTo(System.Array,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:PengeSoft.db.PaginatedArrayList.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsEmpty">
+            <summary>
+            返回当前页面是否为空。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.TotalSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.PageCount">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.PageSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsFirstPage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsMiddlePage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsLastPage">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsNextPageAvailable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsPreviousPageAvailable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.PageIndex">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsFixedSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.IsSynchronized">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PaginatedArrayList.SyncRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ServerDefRec">
+            <summary>
+            ServerDefRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ServerDefRec.Get_OptionSet(System.Int32)">
+            <summary>
+            设位集: 选项 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ServerDefRec.Set_OptionSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 选项 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ServerDefRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ServerDefRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.Owner">
+            <summary>
+            所有者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.Name">
+            <summary>
+            服务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.TypeName">
+            <summary>
+            服务类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.SubType">
+            <summary>
+            服务子类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.Mode">
+            <summary>
+            工作模式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.Option">
+            <summary>
+            选项 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.URL">
+            <summary>
+            位置 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.Act">
+            <summary>
+            权限码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.ActID">
+            <summary>
+            权限名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.SMSCmd">
+            <summary>
+            SMS命令标记 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.EMailCmd">
+            <summary>
+            EMail命令标记 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.Attribs">
+            <summary>
+            属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ServerDefRec.RegTime">
+            <summary>
+            注册时间 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.AppActionRec">
+            <summary>
+            AppActionRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppActionRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppActionRec.Get_OptionSet(System.Int32)">
+            <summary>
+            设位集: 选项 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppActionRec.Set_OptionSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 选项 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppActionRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppActionRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppActionRec.ActName">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppActionRec.FullName">
+            <summary>
+            全名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppActionRec.Option">
+            <summary>
+            选项 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppActionRec.Attribs">
+            <summary>
+            属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppActionRec.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppActionRec.Params">
+            <summary>
+            参数表 
+            </summary>
+        </member>
+        <!-- 对于成员“T:PengeSoft.WorkZoneData.AppActionList”忽略有格式错误的 XML 注释 -->
+        <member name="M:PengeSoft.WorkZoneData.AppActionList.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppActionList.AddNewAction(System.String,System.String,System.String)">
+            <summary>
+            添加新操作
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.AppAttribBaseRec">
+            <summary>
+            AppAttribBaseRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppAttribBaseRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppAttribBaseRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AppAttribBaseRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppAttribBaseRec.Verbs">
+            <summary>
+            动做表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AppAttribBaseRec.Detail">
+            <summary>
+            详细描述 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.AttribQueryRec">
+            <summary>
+            AttribQueryRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AttribQueryRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AttribQueryRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AttribQueryRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AttribQueryRec.Params">
+            <summary>
+            查询参数表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AttribQueryRec.RetVals">
+            <summary>
+            返回列表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.AttribRptRec">
+            <summary>
+            AttribRptRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AttribRptRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AttribRptRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AttribRptRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AttribRptRec.Params">
+            <summary>
+            报表参数表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.DataMemberList">
+            <summary>
+            DataMemberList 的摘要说明。
+            </summary>
+            <remarks>
+            生成模型添加了新方法 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberList.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberList.AddNewMember(System.String,System.String,System.Int32)">
+            <summary>
+            添加新成员
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberList.AddNewMember(System.String,System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            添加新成员
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.DataTagRec">
+            <summary>
+            DataTagRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataTagRec.Get_ModiStatusSet(System.Int32)">
+            <summary>
+            设位集:  
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataTagRec.Set_ModiStatusSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集:  
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataTagRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataTagRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataTagRec.LastUpdate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataTagRec.VerCount">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataTagRec.ModiStatus">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataTagRec.LockUserID">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.FuncParams">
+            <summary>
+            FuncParams 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.FuncParams.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.FuncParams.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.FuncParams.Values">
+            <summary>
+            参数值 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.FuncValue">
+            <summary>
+            FuncValue 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.FuncValue.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.FuncValue.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.FuncValue.Value">
+            <summary>
+            参数值 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Utils.Silverlight.MD5">
+            <summary>
+            Summary description for MD5.
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.ROTATE_LEFT(System.UInt32,System.Byte)">
+            <summary>
+            rotates x left n bits.
+            </summary>
+            <param name="x"></param>
+            <param name="n"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.FF(System.UInt32@,System.UInt32,System.UInt32,System.UInt32,System.UInt32,System.Byte,System.UInt32)">
+            FF, GG, HH, and II transformations 
+            for rounds 1, 2, 3, and 4.
+            Rotation is separate from addition to prevent recomputation.
+        </member>
+        <member name="F:PengeSoft.Utils.Silverlight.MD5.state">
+            <summary>
+            state (ABCD)
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Utils.Silverlight.MD5.count">
+            <summary>
+            number of bits, modulo 2^64 (lsb first)
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Utils.Silverlight.MD5.buffer">
+            <summary>
+            input buffer
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.Initialize">
+            <summary>
+            MD5 initialization. Begins an MD5 operation, writing a new context.
+            </summary>
+            <remarks>
+            The RFC named it "MD5Init"
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.HashCore(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            MD5 block update operation. Continues an MD5 message-digest
+            operation, processing another message block, and updating the
+            context.
+            </summary>
+            <param name="input"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+            <remarks>The RFC Named it MD5Update</remarks>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.HashFinal">
+            <summary>
+            MD5 finalization. Ends an MD5 message-digest operation, writing the
+            the message digest and zeroizing the context.
+            </summary>
+            <returns>message digest</returns>
+            <remarks>The RFC named it MD5Final</remarks>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.Transform(System.Byte[],System.Int32)">
+            <summary>
+            MD5 basic transformation. Transforms state based on 64 bytes block.
+            </summary>
+            <param name="block"></param>
+            <param name="offset"></param>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.Encode(System.Byte[],System.Int32,System.UInt32[],System.Int32,System.Int32)">
+            <summary>
+            Encodes input (uint) into output (byte). Assumes len is
+             multiple of 4.
+            </summary>
+            <param name="output"></param>
+            <param name="outputOffset"></param>
+            <param name="input"></param>
+            <param name="inputOffset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="M:PengeSoft.Utils.Silverlight.MD5.Decode(System.UInt32[],System.Int32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Decodes input (byte) into output (uint). Assumes len is
+            a multiple of 4.
+            </summary>
+            <param name="output"></param>
+            <param name="outputOffset"></param>
+            <param name="input"></param>
+            <param name="inputOffset"></param>
+            <param name="count"></param>
+        </member>
+        <member name="T:PengeSoft.Data.DataCompressType">
+            <summary>
+            数据压缩方式 
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataCompressType.CPT_NONE">
+            <summary>不压缩</summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataCompressType.CPT_ZIPFAST">
+            <summary>快速Zip，与Delphi对应</summary>
+        </member>
+        <member name="T:PengeSoft.Data.DataEnCodeType">
+            <summary>
+            数据加密方式
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.DataEncodingType">
+            <summary>
+            字符串数据编码方式
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.XmlAttribAttribute">
+            <summary>
+            IXmlSerializer 属性定义。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.XmlAttribAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.NoXmlSerialAttribute">
+            <summary>
+            IXmlSerializer 属性定义。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NoXmlSerialAttribute.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Common.GenCacheItem`1">
+            <summary>
+            通用资源Cache的缓冲对象
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Common.GenCacheItem`1.#ctor(System.Double,`0)">
+            <summary>
+            构造函数，生成Cache项实例
+            </summary>
+            <param name="validtime"></param>
+            <param name="val"></param>
+        </member>
+        <member name="M:PengeSoft.Common.GenCacheItem`1.SetValidtime(System.Double)">
+            <summary>
+            修改有效时间
+            </summary>
+            <param name="validtime"></param>
+        </member>
+        <member name="T:PengeSoft.Common.ResoureManager`1">
+            <summary>
+            带Cache的资源管类, 使用该类需注意，当管理的资源为C#对象，为引用类型时，
+            任何对取出资源的修改均会影响Cache，除非重载 GetResourceCopy() 。
+            添加的到Cache 中的资源也为引用，除非重载 GetCacheItem() 添加的到Cache中的资源复制为附本。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.#ctor">
+            <summary>
+            构造函数，缺省资源有效时间为600秒
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.#ctor(System.Double)">
+            <summary>
+            构造函数，指定资源有效时间，单位秒
+            </summary>
+            <param name="validtime"></param>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.#ctor(System.Double,System.Boolean)">
+            <summary>
+            构造函数，指定资源有效时间，单位秒
+            </summary>
+            <param name="validtime"></param>
+            <param name="extendvalid"></param>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.LoadResource(System.String,`0@)">
+            <summary>
+            根据key调入资源
+            </summary>
+            <param name="key">关键字</param>
+            <param name="value">资源值</param>
+            <returns>是否成功调入</returns>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.AddCache(System.String,`0)">
+            <summary>
+            向Cache中添加资源
+            </summary>
+            <param name="key"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.GetCacheItem(`0)">
+            <summary>
+            形成Cache条目
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.GetResourceCopy(`0@)">
+            <summary>
+            取得资源附本，本函数没有实现附本功能。
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.FindResource(System.String,`0@)">
+            <summary>
+            查找资源
+            </summary>
+            <param name="key">关键字</param>
+            <param name="value">资源值</param>
+            <returns>成功与否</returns>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.GetResource(System.String,`0@)">
+            <summary>
+            取资源，与FindResource()的差另在于如果找不到，会调用LoadResource()
+            </summary>
+            <param name="key">关键字</param>
+            <param name="value">资源值</param>
+            <returns>成功与否</returns>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.AddResource(System.String,`0)">
+            <summary>
+            添加资源
+            </summary>
+            <param name="key">关键字</param>
+            <param name="value">资源值</param>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.ReleaseResource(System.String)">
+            <summary>
+            释放资源
+            </summary>
+            <param name="key">关键字</param>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.ReleaseAll">
+            <summary>
+            释放全部资源
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Common.ResoureManager`1.ClearTimeout">
+            <summary>
+            释放超时资源
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Common.ResoureManager`1.Validtime">
+            <summary>
+            资源有效时间
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Common.ResoureManager`1.Extendvalid">
+            <summary>
+            访问资源时自动延长有效时间
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Common.ResoureManager`1.AlawysValid">
+            <summary>
+            访问时资源始终有效, 不受 Validtime 影响。
+            </summary>
+        </member>
+        <member name="E:PengeSoft.Common.ResoureManager`1.OnLoadResource">
+            <summary>
+            找不到时调入资源
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Common.SysUtils">
+            <summary>
+            常用共用函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Common.SysUtils.ID15T18(System.String)">
+            <summary>
+            将15位身份证号转为18位
+            </summary>
+            <param name="strTemp">将15位身份证号</param>
+            <returns>18位身份证号</returns>
+        </member>
+        <member name="M:PengeSoft.Common.SysUtils.GetPasswordHash(System.String)">
+            <summary>
+            取得口令的Hash值，与RightCheckTCP配套。
+            </summary>
+            <param name="Password"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Common.SysUtils.GetObjProperty(System.Object,System.String,System.Object@)">
+            <summary>
+            访问对象公共属性或字段值
+            </summary>
+            <param name="obj"></param>
+            <param name="propName"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Common.SysUtils.GetObjProperty(System.Object,System.String,System.Object[],System.Object@)">
+            <summary>
+            访问对象公共属性或字段值,可访问索引
+            </summary>
+            <param name="obj"></param>
+            <param name="propName"></param>
+            <param name="index"></param>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Common.SysUtils.EncodeBase64(System.String)">
+            <summary>
+            Base64加码, 二进制为 UTF-8
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Common.SysUtils.DecodeBase64(System.String)">
+            <summary>
+            Base64解码, 二进制为 UTF-8
+            </summary>
+            <param name="code"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.db.NotifyEventDelegate">
+            <summary>
+            通知事件定义
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:PengeSoft.db.GetListEventDelegate">
+            <summary>
+            取值事件定义
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:PengeSoft.db.GetListDelegate">
+            <summary>
+            取值事件定义
+            </summary>
+            <param name="sender"></param>
+        </member>
+        <member name="T:PengeSoft.db.GetCountDelegate">
+            <summary>
+            根据数据查询条件取记录总数
+            </summary>
+            <param name="queryPara">查询条件对象</param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.db.QueryListDelegate">
+            <summary>
+            根据数据查询条件取记录列表
+            </summary>
+            <param name="queryPara">查询条件对象</param>
+            <param name="Start">起始记录号</param>
+            <param name="PageSize">页面长度</param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.db.PagedList">
+            <summary>
+            处理数据分页基类,不能直接使用，派生类需实现GetTotalSize()和GetDataList(int Start, int localPageSize)。
+            本类虽实现在IList接口，但仅仅为读取使用，对IList元素的修改不会反应到原始数据中去。不要去做修改！
+            </summary>
+        </member>
+        <member name="F:PengeSoft.db.PagedList.DefaultPageSize">
+            <summary>
+            缺省页面大小
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pageSize">页面大小</param>
+            <param name="pageIndex">初始页号</param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.PageForward">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.PageBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.SubList(System.Collections.IList,System.Int32,System.Int32)">
+            <summary>
+            Provides a view of the IList pramaeter 
+            from the specified position <paramref name="fromIndex"/> 
+            to the specified position <paramref name="toIndex"/>. 
+            </summary>
+            <param name="list">The IList elements.</param>
+            <param name="fromIndex">Starting position for the view of elements. </param>
+            <param name="toIndex">Ending position for the view of elements. </param>
+            <returns> A view of list.
+            </returns>
+            <remarks>
+            The list that is returned is just a view, it is still backed
+            by the orignal list.  Any changes you make to it will be 
+            reflected in the orignal list.
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.SafePageTo(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.GetTotalSize">
+            <summary>
+            取数据记录数,需要重载
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.GetDataList(System.Int32,System.Int32)">
+            <summary>
+            取数据列表,同步取列表时调用
+            </summary>
+            <param name="Start">起始位置</param>
+            <param name="localPageSize">取出数据记录数</param>
+            <returns>结果IList</returns>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.PageTo(System.Int32)">
+            <summary>
+            移到指定页，未做异常处理。
+            </summary>
+            <param name="index">页号</param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.GotoPage(System.Int32)">
+            <summary>
+            移到指定页，做异常处理。
+            </summary>
+            <param name="pageIndex"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.NextPage">
+            <summary>
+            移到下一页。
+            </summary>
+            <returns>操作成功返回true,否则为false</returns>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.PreviousPage">
+            <summary>
+            移到上一页。
+            </summary>
+            <returns>操作成功返回true,否则为false</returns>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.RemoveAt(System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.Insert(System.Int32,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="index"></param>
+            <param name="value"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.Remove(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.Contains(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.Clear">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.IndexOf(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.Add(System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.CopyTo(System.Array,System.Int32)">
+            <summary>
+            
+            </summary>
+            <param name="array"></param>
+            <param name="index"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedList.GetEnumerator">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsEmpty">
+            <summary>
+            当前页面是否为空。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.TotalSize">
+            <summary>
+            总记录数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.PageCount">
+            <summary>
+            总页数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.PageIndex">
+            <summary>
+            返回当前页号。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsPreviousPageAvailable">
+            <summary>
+            当前页是否有上一页
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsFirstPage">
+            <summary>
+            当前页是否为第一页
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.PageSize">
+            <summary>
+            每页记录数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsMiddlePage">
+            <summary>
+            当前页是否为中间页（只有一页时总是返回false）
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsNextPageAvailable">
+            <summary>
+            当前页是否有下一页
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsLastPage">
+            <summary>
+            当前页是否为最后一页。（只有一页时总是返回true）
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsReadOnly">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.Item(System.Int32)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsFixedSize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.IsSynchronized">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.Count">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:PengeSoft.db.PagedList.SyncRoot">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:PengeSoft.db.PagedDataList">
+            <summary>
+            处理数据库分页的数据接口, 使用 GetCountDelegate() 和 QueryListDelegate() 委托，或 <see cref="T:PengeSoft.db.IPagedDataProvider"/> 接口。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedDataList.#ctor(PengeSoft.db.QueryListDelegate,PengeSoft.db.GetCountDelegate,PengeSoft.db.QueryParameter,System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="QueryMethod"></param>
+            <param name="GetCountMethod"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+            <param name="parameterObject"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedDataList.#ctor(PengeSoft.db.QueryListDelegate,PengeSoft.db.GetCountDelegate,PengeSoft.db.QueryParameter,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="QueryMethod"></param>
+            <param name="GetCountMethod"></param>
+            <param name="pageSize"></param>
+            <param name="parameterObject"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedDataList.#ctor(PengeSoft.db.IPagedDataProvider,PengeSoft.db.QueryParameter,System.Int32,System.Int32)">
+            <summary>
+            构造函数, 使用 <see cref="T:PengeSoft.db.IPagedDataProvider"/> 接口
+            </summary>
+            <param name="service"></param>
+            <param name="parameterObject"></param>
+            <param name="pageSize"></param>
+            <param name="pageIndex"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedDataList.#ctor(PengeSoft.db.IPagedDataProvider,PengeSoft.db.QueryParameter,System.Int32)">
+            <summary>
+            构造函数, 使用 <see cref="T:PengeSoft.db.IPagedDataProvider"/> 接口
+            </summary>
+            <param name="service"></param>
+            <param name="parameterObject"></param>
+            <param name="pageSize"></param>
+        </member>
+        <member name="M:PengeSoft.db.PagedDataList.GetTotalSize">
+            <summary>
+            取数据记录数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedDataList.GetDataList(System.Int32,System.Int32)">
+            <summary>
+            取数据列表
+            </summary>
+            <param name="Start">起始位置</param>
+            <param name="localPageSize">取出数据记录数</param>
+            <returns>结果IList</returns>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.PersonRecList">
+            <summary>
+            PersonRecList 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.PersonRec">
+            <summary>
+            PersonRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRec.Get_TagsSet(System.Int32)">
+            <summary>
+            设位集: 标记位 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRec.Set_TagsSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 标记位 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.UniqID">
+            <summary>
+            唯一标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.IDCard">
+            <summary>
+            身份证号 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.NickName">
+            <summary>
+            呢称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.FullName">
+            <summary>
+            全名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Unit">
+            <summary>
+            单位名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Dept">
+            <summary>
+            部门 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Job">
+            <summary>
+            职务 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Addr">
+            <summary>
+            地址 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Zip">
+            <summary>
+            邮编 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Chief">
+            <summary>
+            负责人 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Contact">
+            <summary>
+            联系人 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Tel1">
+            <summary>
+            电话1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Tel2">
+            <summary>
+            电话2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Fax">
+            <summary>
+            传真 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Mob1">
+            <summary>
+            手机1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Mob2">
+            <summary>
+            手机2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.EMail">
+            <summary>
+            EMail 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.IMCode">
+            <summary>
+            IM地址(QQ,MSN,Skype等) 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.WebURL">
+            <summary>
+            网页地址 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Memo">
+            <summary>
+            备注 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.ExtParm">
+            <summary>
+            扩展参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.PersonRec.Tags">
+            <summary>
+            标记位 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.SimPersonRec">
+            <summary>
+            SimPersonRec 简化的个人信息。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.SimPersonRec.Get_TagsSet(System.Int32)">
+            <summary>
+            设位集: 标记位 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.SimPersonRec.Set_TagsSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 标记位 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.SimPersonRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.SimPersonRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.SimPersonRec.UniqID">
+            <summary>
+            唯一标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.SimPersonRec.NickName">
+            <summary>
+            呢称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.SimPersonRec.FullName">
+            <summary>
+            全名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.SimPersonRec.Tags">
+            <summary>
+            标记位 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ActionRec">
+            <summary>
+            ActionRec 权限信息，包括具有权限的用户和组。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActionRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActionRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActionRec.ActName">
+            <summary>
+            操作名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActionRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActionRec.ActID">
+            <summary>
+            操作代码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActionRec.Users">
+            <summary>
+            具有限的用户SID表 
+            SID可为用户和组 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActionRec.IncludeGroup">
+            <summary>
+            包括组数据 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.GroupRec">
+            <summary>
+            GroupRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.GroupRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.GroupRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.GroupRec.LoginID">
+            <summary>
+            组登录名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.GroupRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.GroupRec.Users">
+            <summary>
+            组用户SID表 
+            SID为用户唯一标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.GroupRec.UserIDs">
+            <summary>
+            用户标识表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.RightAutherRec">
+            <summary>
+            RightAutherRec 用于存贮用户登录后的有关信息。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightAutherRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightAutherRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.Host">
+            <summary>
+            主机地址 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.LoginID">
+            <summary>
+            登录名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.DesKey">
+            <summary>
+            通讯加密字 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.DTag">
+            <summary>
+            用户安全标记 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.UserUniqID">
+            <summary>
+            用户唯一标识 
+            为Guid字符串 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.ServerID">
+            <summary>
+            认证服务器标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.KeySN">
+            <summary>
+            用户端锁号 
+            用于用户认证 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.KeyUDef">
+            <summary>
+            用户端自定义标识 
+            用于用户认证 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.KeyMac">
+            <summary>
+            用户端网卡Mac地址 
+            用于用户认证 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightAutherRec.KeyHDD">
+            <summary>
+            用户端HDD序列号 
+            用于用户认证 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.BoardMsg">
+            <summary>
+            BoardMsg 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.BoardMsg.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.BoardMsg.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.BoardMsg.MsgID">
+            <summary>
+            消息标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.BoardMsg.BoardID">
+            <summary>
+            公告牌标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.BoardMsg.Msg">
+            <summary>
+            消息 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.BoardMsg.UserID">
+            <summary>
+            创建用户 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.BoardMsg.PubDate">
+            <summary>
+            创建时间 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserRole">
+            <summary>
+            UserRole 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRole.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRole.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRole.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.LoginID">
+            <summary>
+            登录名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.FullName">
+            <summary>
+            全名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.Deep">
+            <summary>
+            树级次 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.Type">
+            <summary>
+            类别 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.Status">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.GroupID">
+            <summary>
+            分组号 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.UserList">
+            <summary>
+            用户ID列表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.UserIDs">
+            <summary>
+            用户名称表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRole.Attrib">
+            <summary>
+            属性 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserRoles">
+            <summary>
+            UserRoles 的摘要说明。
+            </summary>
+            <remarks>
+            UserRole列表 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRoles.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.LimitsRec">
+            <summary>
+            LimitsRec 的摘要说明。
+            </summary>
+            <remarks>
+            用户安全选项 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LimitsRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LimitsRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LimitsRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.IP">
+            <summary>
+            IP限制 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.IPRange">
+            <summary>
+            IP范围 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.DateTime">
+            <summary>
+            有效日期 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.Mac">
+            <summary>
+            Mac地址 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.CPU">
+            <summary>
+            CPU标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.SN">
+            <summary>
+            锁号 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.HddSN">
+            <summary>
+            硬盘序列号 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LimitsRec.UserDef">
+            <summary>
+            用户自定义标识 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.AccountRec">
+            <summary>
+            AccountRec 的摘要说明。
+            </summary>
+            <remarks>
+            一个用户可以有多个帐户,计次和余额帐户可设缺省帐户,表示为这一类的总帐,消费记录另行存放 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AccountRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.AccountRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AccountRec.ActID">
+            <summary>
+            记帐权限标识 
+            此项为0表示的缺省帐户 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AccountRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AccountRec.Type">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AccountRec.Price">
+            <summary>
+            价格 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AccountRec.Value">
+            <summary>
+            余额 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AccountRec.Date">
+            <summary>
+            日期限制 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.AccountRec.AddAttrib">
+            <summary>
+            附加属性 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserRec">
+            <summary>
+            UserRec 的摘要说明。
+            </summary>
+            <remarks>
+            用户信息 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRec.Get_UStatusSet(System.Int32)">
+            <summary>
+            设位集: 用户状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRec.Set_UStatusSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 用户状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.SecLevel">
+            <summary>
+            安全标识 
+            暂未用,用的是DataPacket的ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.Password">
+            <summary>
+            口令的 MD5 值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.UType">
+            <summary>
+            用户类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.UStatus">
+            <summary>
+            用户状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.GUID">
+            <summary>
+            特殊用户的接口GUID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.Para">
+            <summary>
+            特殊用户的接口参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.AddAttrib">
+            <summary>
+            附加属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.Logins">
+            <summary>
+            多机登陆 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.Limits">
+            <summary>
+            安全选项 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.AccountList">
+            <summary>
+            记帐数据 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRec.GroupID">
+            <summary>
+            成组ID 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.Users">
+            <summary>
+            Users 的摘要说明。
+            </summary>
+            <remarks>
+            用户信息表 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Users.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserGroupRec">
+            <summary>
+            UserGroupRec 的摘要说明。
+            </summary>
+            <remarks>
+            用户组信息, 本模型生成的代码需修改才能与Delphi兼容 
+            </remarks>
+        </member>
+        <member name="T:PengeSoft.Data.AdvStrRec">
+            <summary>
+            AdvStrRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.StrRec">
+            <summary>
+            StrRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.StrRec.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.StrRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.StrRec.XmlEncodeAttrib(System.Xml.XmlWriter)">
+            <summary>
+            序列化实体类属性，返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.StrRec.XmlEncodeElement(System.Xml.XmlWriter)">
+            <summary>
+            序列化属性类属性，返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.StrRec.XmlSetElement(System.Xml.XmlReader,System.String)">
+            <summary>
+            反列化实体类属性，用非反射方式处理。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 表示该节点被处理。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.StrRec.XmlSetProperty(System.Reflection.PropertyInfo,System.String,System.String)">
+            <summary>
+            反列化属性类属性，用非反射方式处理。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 表示该属性被处理。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.StrRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从 DataPacketSL 继承</param>
+        </member>
+        <member name="P:PengeSoft.Data.StrRec.status">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.StrRec.rtype">
+            <summary>
+            数据类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.StrRec.row">
+            <summary>
+            行号 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.StrRec.deep">
+            <summary>
+            级次 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.StrRec.HideCnt">
+            <summary>
+            隐藏记数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.StrRec.Childs">
+            <summary>
+            子数据 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.AdvStrRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.AdvStrRec.XmlEncodeAttrib(System.Xml.XmlWriter)">
+            <summary>
+            序列化实体类属性，返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.AdvStrRec.XmlEncodeElement(System.Xml.XmlWriter)">
+            <summary>
+            序列化属性类属性，返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.AdvStrRec.XmlSetElement(System.Xml.XmlReader,System.String)">
+            <summary>
+            反列化实体类属性，用非反射方式处理。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 表示该节点被处理。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.AdvStrRec.XmlSetProperty(System.Reflection.PropertyInfo,System.String,System.String)">
+            <summary>
+            反列化属性类属性，用非反射方式处理。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 表示该属性被处理。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.AdvStrRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从 DataPacketSL 继承</param>
+        </member>
+        <member name="P:PengeSoft.Data.AdvStrRec.ImageIndex">
+            <summary>
+            图标号 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.AdvStrRec.CheckBox">
+            <summary>
+            有无选中框 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupRec.Get_GStatusSet(System.Int32)">
+            <summary>
+            设位集: 组状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupRec.Set_GStatusSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 组状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.LoginID">
+            <summary>
+            登录标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.FullName">
+            <summary>
+            全名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.SecLevel">
+            <summary>
+            安全标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.GType">
+            <summary>
+            组类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.GStatus">
+            <summary>
+            组状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.AddAttrib">
+            <summary>
+            附加属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.UserList">
+            <summary>
+            组用户表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.UserIds">
+            <summary>
+            组用户loginId表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.Limits">
+            <summary>
+            安全选项 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupRec.GroupID">
+            <summary>
+            成组ID 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserGroups">
+            <summary>
+            UserGroups 的摘要说明。
+            </summary>
+            <remarks>
+            用户组信息表 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroups.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.SubActionRec">
+            <summary>
+            SubActionRec 的摘要说明。
+            </summary>
+            <remarks>
+            子权限定义 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.SubActionRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.SubActionRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.SubActionRec.RightName">
+            <summary>
+            权限名称 
+            暂未用,用的是DataPacket的ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.SubActionRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.SubActionRec.AddAttrib">
+            <summary>
+            附加属性 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.LoginUserRec">
+            <summary>
+            LoginUserRec 的摘要说明。
+            </summary>
+            <remarks>
+            登录信息,使用时时间需按OleDate转换 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserRec.Get_LStatusSet(System.Int32)">
+            <summary>
+            设位集: 用户状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserRec.Set_LStatusSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 用户状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.LoginUserRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.UID">
+            <summary>
+            用户ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.LoginTime">
+            <summary>
+            登录时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.ExpTime">
+            <summary>
+            过期时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.LStatus">
+            <summary>
+            用户状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.DTag">
+            <summary>
+            用户数字签名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.USID">
+            <summary>
+            用户安全标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.UIP">
+            <summary>
+            用户IP 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.PUBLICKEY">
+            <summary>
+            DES 密匙 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.AppKey">
+            <summary>
+            第三方应用密码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.AppTag">
+            <summary>
+            第三方应用标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.PeerIP">
+            <summary>
+            用户连接IP 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.LoginUserRec.PeerPort">
+            <summary>
+            用户连接UDP端口 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserActRec">
+            <summary>
+            UserActRec 的摘要说明。
+            </summary>
+            <remarks>
+            用户权限定义 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActRec.ActID">
+            <summary>
+            权限标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActRec.ActName">
+            <summary>
+            权限名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActRec.ActMask">
+            <summary>
+            权限掩码 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserActs">
+            <summary>
+            UserActs 的摘要说明。
+            </summary>
+            <remarks>
+            用户权限表 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActs.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserRightRec">
+            <summary>
+            UserRightRec 的摘要说明。
+            </summary>
+            <remarks>
+            权限定义记录 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRightRec.Get_AStatusSet(System.Int32)">
+            <summary>
+            设位集: 权限状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRightRec.Set_AStatusSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 权限状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRightRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserRightRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRightRec.Deep">
+            <summary>
+            级次 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRightRec.ActName">
+            <summary>
+            权限名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRightRec.Detail">
+            <summary>
+            权限描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRightRec.ActID">
+            <summary>
+            权限标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRightRec.GroupID">
+            <summary>
+            成组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserRightRec.AStatus">
+            <summary>
+            权限状态 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.RightDefRec">
+            <summary>
+            RightDefRec 的摘要说明。
+            </summary>
+            <remarks>
+            权限中用户/组安权限定义记录 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightDefRec.SID">
+            <summary>
+            用户/组安全标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.RightDefRec.Mask">
+            <summary>
+            权限掩码 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.RightDefs">
+            <summary>
+            RightDefs 的摘要说明。
+            </summary>
+            <remarks>
+            权限中用户/组安权限定义记录表 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.RightDefs.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserActionRec">
+            <summary>
+            UserActionRec 的摘要说明。
+            </summary>
+            <remarks>
+            用户权限定义记录，生成代码需修改才能与Delphi兼容 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActionRec.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActionRec.Get_AStatusSet(System.Int32)">
+            <summary>
+            设位集: 状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActionRec.Set_AStatusSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 状态 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActionRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserActionRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.ActName">
+            <summary>
+            权限名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.Detail">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.ActID">
+            <summary>
+            权限标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.AddAttrib">
+            <summary>
+            附加属性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.DisInherited">
+            <summary>
+            中断继承 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.Account">
+            <summary>
+            计帐信息 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.UserRights">
+            <summary>
+            用户/组权限表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.GroupID">
+            <summary>
+            成组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.AStatus">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserActionRec.Parameter">
+            <summary>
+            参数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ActRightRec">
+            <summary>
+            ActRightRec 的摘要说明。
+            </summary>
+            <remarks>
+            权限项(Action)的权限(Mask)定义记录 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRightRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActRightRec.ActID">
+            <summary>
+            权限标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ActRightRec.Mask">
+            <summary>
+            权限掩码 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ActRights">
+            <summary>
+            ActRights 的摘要说明。
+            </summary>
+            <remarks>
+            权限项(Action)的权限(Mask)定义记录 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ActRights.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserGroupDefRec">
+            <summary>
+            UserGroupDefRec 的摘要说明。
+            </summary>
+            <remarks>
+            用户所属组定义记录 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupDefRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupDefRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupDefRec.GroupId">
+            <summary>
+            组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupDefRec.GroupName">
+            <summary>
+            组名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.UserGroupDefRec.Action">
+            <summary>
+            动做 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.UserGroupDefs">
+            <summary>
+            UserGroupDefs 的摘要说明。
+            </summary>
+            <remarks>
+            用户所属组定义记录表 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.UserGroupDefs.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:Utils.Silverlight.UI.Backpage.InitializeComponent">
+            <summary>
+            InitializeComponent
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.Generator">
+            <summary>
+            Generator 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Generator.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Generator.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Generator.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Generator.Name">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Generator.SourceType">
+            <summary>
+            源文件类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Generator.Source">
+            <summary>
+            源文件 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Generator.Type">
+            <summary>
+            报表类型,<see cref="!:PengeSoft.WorkZoneData.ServerDef"/> RPT_*  
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Generator.Parameters">
+            <summary>
+            参数表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Encryption.Blowfish">
+            <summary>
+            Class that provides blowfish encryption.
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Encryption.Blowfish.#ctor(System.Byte[],System.Boolean)">
+            <summary>
+            Constructs and initializes a blowfish instance with the supplied key.
+            </summary>
+            <param name="key">The key to cipher with.</param>
+        </member>
+        <member name="M:PengeSoft.Encryption.Blowfish.F(System.UInt32)">
+            <summary>
+            
+            </summary>
+            <param name="x"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Encryption.Blowfish.Encipher(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Encrypts a byte array in place.
+            </summary>
+            <param name="data">The array to encrypt.</param>
+            <param name="length">The amount to encrypt.</param>
+        </member>
+        <member name="M:PengeSoft.Encryption.Blowfish.Encipher(System.UInt32@,System.UInt32@)">
+            <summary>
+            Encrypts 8 bytes of data (1 block)
+            </summary>
+            <param name="xl">The left part of the 8 bytes.</param>
+            <param name="xr">The right part of the 8 bytes.</param>
+        </member>
+        <member name="M:PengeSoft.Encryption.Blowfish.Decipher(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Decrypts a byte array in place.
+            </summary>
+            <param name="data">The array to decrypt.</param>
+            <param name="length">The amount to decrypt.</param>
+        </member>
+        <member name="M:PengeSoft.Encryption.Blowfish.Decipher(System.UInt32@,System.UInt32@)">
+            <summary>
+            Decrypts 8 bytes of data (1 block)
+            </summary>
+            <param name="xl">The left part of the 8 bytes.</param>
+            <param name="xr">The right part of the 8 bytes.</param>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.Flush">
+            <summary>
+            Flushes the stream.
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.Read(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Read data from the stream and encrypt it.
+            </summary>
+            <param name="buffer">The buffer to read into.</param>
+            <param name="offset">The offset in the buffer to begin storing data.</param>
+            <param name="count">The number of bytes to read.</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.Write(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            Write data to the stream after decrypting it.
+            </summary>
+            <param name="buffer">The buffer containing the data to write.</param>
+            <param name="offset">The offset in the buffer where the data begins.</param>
+            <param name="count">The number of bytes to write.</param>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.BeginRead(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+            <param name="callback"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.EndRead(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="asyncResult"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.ReadComplete(System.IAsyncResult)">
+            <summary>
+            The Read has completed.
+            </summary>
+            <param name="result">The result of the async write.</param>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.BeginWrite(System.Byte[],System.Int32,System.Int32,System.AsyncCallback,System.Object)">
+            <summary>
+            
+            </summary>
+            <param name="buffer"></param>
+            <param name="offset"></param>
+            <param name="count"></param>
+            <param name="callback"></param>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.Seek(System.Int64,System.IO.SeekOrigin)">
+            <summary>
+            Move the current stream posistion to the specified location.
+            </summary>
+            <param name="offset">The offset from the origin to seek.</param>
+            <param name="origin">The origin to seek from.</param>
+            <returns>The new position.</returns>
+        </member>
+        <member name="M:PengeSoft.Encryption.BlowfishStream.SetLength(System.Int64)">
+            <summary>
+            Set the stream length.
+            </summary>
+            <param name="value">The length to set.</param>
+        </member>
+        <member name="P:PengeSoft.Encryption.BlowfishStream.CanRead">
+            <summary>
+            Returns true if the stream support reads.
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Encryption.BlowfishStream.CanSeek">
+            <summary>
+            Returns true is the stream supports seeks.
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Encryption.BlowfishStream.CanWrite">
+            <summary>
+            Returns true if the stream supports writes.
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Encryption.BlowfishStream.Length">
+            <summary>
+            Returns the length of the stream.
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Encryption.BlowfishStream.Position">
+            <summary>
+            Gets or Sets the posistion of the stream.
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.ObjList">
+            <summary>
+            ObjList 实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.ObjList.#ctor">
+            <summary>
+            初始化 PengeSoft.Data.NorDataList 类的新实例，该实例为空并且具有默认初始容量。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.ObjList.#ctor(System.Int32)">
+            <summary>
+            初始化 System.Collections.ArrayList 类的新实例，该实例为空并且具有指定的初始容量。
+            </summary>
+            <param name="capacity">新列表最初可以存储的元素数。</param>
+        </member>
+        <member name="M:PengeSoft.Data.ObjList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化 PengeSoft.Data.NorDataList 类的新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c">System.Collections.ICollection，它的元素被复制到新列表中。该表中元素必须是 DataPacketSL 的派生类。</param>
+        </member>
+        <member name="T:PengeSoft.Data.StringList">
+            <summary>
+            StringList 类型, 用于与Delphi兼容
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.StringList.Delete(System.Int32)">
+            <summary>
+            移除指定索引处的 PengeSoft.Data.StringList 项。
+            </summary>
+            <param name="index">从零开始的索引（属于要移除的项）。</param>
+        </member>
+        <member name="M:PengeSoft.Data.StringList.Assign(PengeSoft.Data.StringList)">
+            <summary>
+            从一个 PengeSoft.Data.StringList 中复制字符串。
+            </summary>
+            <param name="list">被复制的 PengeSoft.Data.StringList</param>
+        </member>
+        <member name="M:PengeSoft.Data.StringList.AppendFrom(PengeSoft.Data.StringList)">
+            <summary>
+            将一个 PengeSoft.Data.StringList 中字符串添加到现有集合。
+            </summary>
+            <param name="list">被复制的 PengeSoft.Data.StringList</param>
+        </member>
+        <member name="P:PengeSoft.Data.StringList.Text">
+            <summary>
+            获取或设置 PengeSoft.Data.StringList 的文本值，字符串间用"\r\n"隔开。设置的值字符串间可只用"\n"隔开。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.DataEndeCoding">
+            <summary>
+            与Delphi兼容的编码/解码
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DataEndeCoding.EncodeDataStr(System.String,System.String,System.Boolean)">
+            <summary>
+            字符串加码
+            </summary>
+            <param name="Key"></param>
+            <param name="Str"></param>
+            <param name="Compress"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataEndeCoding.EncodeDataStr(System.String,System.String)">
+            <summary>
+            字符串加码
+            </summary>
+            <param name="Key"></param>
+            <param name="Str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Data.DataEndeCoding.DecodeDataStr(System.String,System.String)">
+            <summary>
+            字符串解码
+            </summary>
+            <param name="Key"></param>
+            <param name="Str"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.Data.PsCoreException">
+            <summary>
+            核心代码异常定义
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.PsCoreException.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.PsCoreException.#ctor(System.String)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">异常消息</param>
+        </member>
+        <member name="M:PengeSoft.Data.PsCoreException.#ctor(System.String,System.Exception)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="message">异常消息</param>
+            <param name="inner">引发此异常的异常</param>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.DataMemberRec">
+            <summary>
+            DataMemberRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberRec.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberRec.Get_OptionSet(System.Int32)">
+            <summary>
+            设位集: 选项 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberRec.Set_OptionSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 选项 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberRec.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.DataMemberRec.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.MName">
+            <summary>
+            变量名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.MType">
+            <summary>
+            变量类型, <see cref="!:PengeSoft.WorkZoneData.ServerDef"/>  DMTP_* 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.Option">
+            <summary>
+            选项 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.Title">
+            <summary>
+            标题 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.DecNum">
+            <summary>
+            小数位 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.DefaultVal">
+            <summary>
+            缺省值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.OptValue">
+            <summary>
+            可选值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.DataMemberRec.Childs">
+            <summary>
+            子项 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ReportAttribs">
+            <summary>
+            ReportAttribs 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ReportAttribs.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ReportAttribs.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportAttribs.Name">
+            <summary>
+            报表名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportAttribs.Image">
+            <summary>
+            图标 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportAttribs.GroupId">
+            <summary>
+            分组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportAttribs.Type">
+            <summary>
+            报表类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportAttribs.ViewType">
+            <summary>
+            视图标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportAttribs.ViewDef">
+            <summary>
+            视图定义 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.Report">
+            <summary>
+            Report 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Report.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Report.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Report.Name">
+            <summary>
+            报表名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Report.Image">
+            <summary>
+            图标 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Report.GroupId">
+            <summary>
+            分组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Report.Type">
+            <summary>
+            报表类型,<see cref="!:PengeSoft.WorkZoneData.ServerDef"/> RPT_* 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Report.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Report.ViewerId">
+            <summary>
+            视图标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Report.GeneratorId">
+            <summary>
+            生成器标识 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.db.PagedListRemoteSvr.#ctor(System.Int32,System.Int32)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="pageSize">页面大小</param>
+            <param name="pageIndex">初始页号</param>
+        </member>
+        <member name="T:PengeSoft.Data.DataType">
+            <summary>
+            数据类型
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtNone">
+            <summary></summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtEmpty">
+            <summary></summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtSpace">
+            <summary></summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtData">
+            <summary></summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtSubData">
+            <summary></summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtSubTotal">
+            <summary></summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtTotal">
+            <summary></summary>
+        </member>
+        <member name="F:PengeSoft.Data.DataType.dtEnd">
+            <summary></summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.Viewer">
+            <summary>
+            Viewer 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Viewer.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.Viewer.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Viewer.Name">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Viewer.VType">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.Viewer.Define">
+            <summary>
+            定义 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Enterprise.Appication.ReportIndex">
+            <summary>
+            ReportIndex 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Enterprise.Appication.ReportIndex.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Enterprise.Appication.ReportIndex.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.RptId">
+            <summary>
+            报表标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.FileName">
+            <summary>
+            报表文件名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.RptName">
+            <summary>
+            报表名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.Paramater">
+            <summary>
+            报表参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.Operator">
+            <summary>
+            操作者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.StartTime">
+            <summary>
+            生成启动时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.EndTime">
+            <summary>
+            生成结束时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.RptType">
+            <summary>
+            报表类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.Status">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Enterprise.Appication.ReportIndex.Memo">
+            <summary>
+            备注 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.Service.Error_Result">
+            <summary>
+            Error_Result 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.Service.Error_Result.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.Service.Error_Result.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Data.Service.Error_Result.Code">
+            <summary>
+            出错代码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.Service.Error_Result.Msg">
+            <summary>
+            出错消息 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.PersonRecQueryPara">
+            <summary>
+            PersonRec 查询参数
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByNickName">
+            <summary>按NickName排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByNickName_desc">
+            <summary>按NickName排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByFullName">
+            <summary>按FullName排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByFullName_desc">
+            <summary>按FullName排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByUnit">
+            <summary>按Unit排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByUnit_desc">
+            <summary>按Unit排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByAddr">
+            <summary>按Addr排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByAddr_desc">
+            <summary>按Addr排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByZip">
+            <summary>按Zip排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByZip_desc">
+            <summary>按Zip排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByChief">
+            <summary>按Chief排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByChief_desc">
+            <summary>按Chief排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByContact">
+            <summary>按Contact排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.OrderByContact_desc">
+            <summary>按Contact排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_UniqID">
+            <summary>查询 UniqID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_IDCard">
+            <summary>查询 IDCard 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_NickName">
+            <summary>查询 NickName 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_FullName">
+            <summary>查询 FullName 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Detail">
+            <summary>查询 Detail 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Unit">
+            <summary>查询 Unit 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Dept">
+            <summary>查询 Dept 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Addr">
+            <summary>查询 Addr 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Zip">
+            <summary>查询 Zip 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Chief">
+            <summary>查询 Chief 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Contact">
+            <summary>查询 Contact 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Tel1">
+            <summary>查询 Tel1 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Tel2">
+            <summary>查询 Tel2 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Fax">
+            <summary>查询 Fax 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Mob1">
+            <summary>查询 Mob1 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Mob2">
+            <summary>查询 Mob2 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkZoneData.PersonRecQueryPara.QueryKey_Memo">
+            <summary>查询 Memo 条件键名称</summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.#ctor(PengeSoft.WorkZoneData.PersonRec,System.String)">
+            <summary>
+            构造函数,指定参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetQueryPara(PengeSoft.WorkZoneData.PersonRec,System.String)">
+            <summary>
+            指定查询参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetUniqID(System.String)">
+            <summary>
+            设 唯一标识 条件
+            </summary>
+            <param name="UniqID">唯一标识</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetIDCard(System.String)">
+            <summary>
+            设 身份证号 条件
+            </summary>
+            <param name="IDCard">身份证号</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetNickName(System.String)">
+            <summary>
+            设 呢称 条件
+            </summary>
+            <param name="NickName">呢称</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetFullName(System.String)">
+            <summary>
+            设 全名 条件
+            </summary>
+            <param name="FullName">全名</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetDetail(System.String)">
+            <summary>
+            设 描述 条件
+            </summary>
+            <param name="Detail">描述</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetUnit(System.String)">
+            <summary>
+            设 单位名称 条件
+            </summary>
+            <param name="Unit">单位名称</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetDept(System.String)">
+            <summary>
+            设 部门 条件
+            </summary>
+            <param name="Dept">部门</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetAddr(System.String)">
+            <summary>
+            设 地址 条件
+            </summary>
+            <param name="Addr">地址</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetZip(System.String)">
+            <summary>
+            设 邮编 条件
+            </summary>
+            <param name="Zip">邮编</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetChief(System.String)">
+            <summary>
+            设 负责人 条件
+            </summary>
+            <param name="Chief">负责人</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetContact(System.String)">
+            <summary>
+            设 联系人 条件
+            </summary>
+            <param name="Contact">联系人</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetTel1(System.String)">
+            <summary>
+            设 电话1 条件
+            </summary>
+            <param name="Tel1">电话1</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetTel2(System.String)">
+            <summary>
+            设 电话2 条件
+            </summary>
+            <param name="Tel2">电话2</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetFax(System.String)">
+            <summary>
+            设 传真 条件
+            </summary>
+            <param name="Fax">传真</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetMob1(System.String)">
+            <summary>
+            设 手机1 条件
+            </summary>
+            <param name="Mob1">手机1</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetMob2(System.String)">
+            <summary>
+            设 手机2 条件
+            </summary>
+            <param name="Mob2">手机2</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetMemo(System.String)">
+            <summary>
+            设 备注 条件
+            </summary>
+            <param name="Memo">备注</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.PersonRecQueryPara.SetOrderByField(System.String)">
+            <summary>
+            设排序字段
+            </summary>
+            <param name="Order">排序字段</param>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ComparerPersonRec">
+            <summary>
+            PersonRec 排序比较器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ComparerPersonRec.#ctor(System.String)">
+            <summary>
+            创建实例,并初始化排序字段
+            </summary>
+            <param name="sortField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ComparerPersonRec.Compare(System.Object,System.Object)">
+            <summary>
+            比较两个 <see cref="!:Zjjhxmmx"/> 对象并返回一个值，指示一个对象是小于、等于还是大于另一个对象。
+            </summary>
+            <param name="x">要比较的第一个对象。</param>
+            <param name="y">要比较的第二个对象。</param>
+            <returns>值 条件 小于零 x 小于 y。 零 x 等于 y。 大于零 x 大于 y。</returns>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ComparerPersonRec.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkZoneData.ReportDef">
+            <summary>
+            ReportDef 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ReportDef.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ReportDef.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkZoneData.ReportDef.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportDef.Generators">
+            <summary>
+            生成器 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportDef.Viewers">
+            <summary>
+            视图 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkZoneData.ReportDef.Reports">
+            <summary>
+            报表 
+            </summary>
+        </member>
+    </members>
+</doc>

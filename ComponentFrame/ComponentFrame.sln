@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PengeSoft.CMS.Presentation", "CMS.Presentation\PengeSoft.CMS.Presentation.csproj", "{761E6A98-DADB-48BF-81EE-A67914EED8B8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PengeSoft.CMS.BaseDatum", "CMS.BaseDatum\PengeSoft.CMS.BaseDatum.csproj", "{BA35BB73-7569-4D75-AAB2-1DF57DE23981}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "CMSWebSite", "http://localhost:13722", "{493E98AA-2F45-40D5-BD77-75C65EAB7F2E}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.5"
+		ProjectReferences = "{ba35bb73-7569-4d75-aab2-1df57de23981}|PengeSoft.CMS.BaseDatum.dll;{761e6a98-dadb-48bf-81ee-a67914eed8b8}|PengeSoft.CMS.Presentation.dll;{4038df55-2839-4319-9c2f-b7e519332404}|PengeSoft.CMS.UserdefLayout.dll;"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_13722"
+		Debug.AspNetCompiler.PhysicalPath = "CMSWebSite\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13722\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_13722"
+		Release.AspNetCompiler.PhysicalPath = "CMSWebSite\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_13722\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "CMSWebSite\"
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CommonUnitTest", "CommonUnitTest\CommonUnitTest.csproj", "{C0AABCB4-2E9D-45AA-849A-2DC08AF0679E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PengeSoft.CMS.UserdefLayout", "PengeSoft.CMS.UserdefLayout\PengeSoft.CMS.UserdefLayout.csproj", "{4038DF55-2839-4319-9C2F-B7E519332404}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{761E6A98-DADB-48BF-81EE-A67914EED8B8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{761E6A98-DADB-48BF-81EE-A67914EED8B8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{761E6A98-DADB-48BF-81EE-A67914EED8B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{761E6A98-DADB-48BF-81EE-A67914EED8B8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA35BB73-7569-4D75-AAB2-1DF57DE23981}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA35BB73-7569-4D75-AAB2-1DF57DE23981}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA35BB73-7569-4D75-AAB2-1DF57DE23981}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA35BB73-7569-4D75-AAB2-1DF57DE23981}.Release|Any CPU.Build.0 = Release|Any CPU
+		{493E98AA-2F45-40D5-BD77-75C65EAB7F2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{493E98AA-2F45-40D5-BD77-75C65EAB7F2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{493E98AA-2F45-40D5-BD77-75C65EAB7F2E}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{493E98AA-2F45-40D5-BD77-75C65EAB7F2E}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{C0AABCB4-2E9D-45AA-849A-2DC08AF0679E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0AABCB4-2E9D-45AA-849A-2DC08AF0679E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0AABCB4-2E9D-45AA-849A-2DC08AF0679E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0AABCB4-2E9D-45AA-849A-2DC08AF0679E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4038DF55-2839-4319-9C2F-B7E519332404}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4038DF55-2839-4319-9C2F-B7E519332404}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4038DF55-2839-4319-9C2F-B7E519332404}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4038DF55-2839-4319-9C2F-B7E519332404}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

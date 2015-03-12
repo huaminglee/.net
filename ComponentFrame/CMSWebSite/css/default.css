@@ -1,0 +1,172 @@
+﻿/*通用*/
+body, html {
+    font-size: 12px;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: left;
+    color: #555;
+    line-height: 20px;
+    background: #dadada;
+    height: 100%;
+}
+
+* li {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: #20537A;
+}
+
+    a:hover {
+        text-decoration: underline;
+    }
+
+
+.clearfix:after {
+    content: "\0020";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.clearfix {
+    _zoom: 1;
+}
+
+.menu_navcc {
+    width: 970px;
+    margin: 0 auto;
+    padding-top: 38px;
+}
+
+.menu_nav {
+    width: 970px;
+    height: 48px;
+    background: url(../img/nav_bg.png) repeat-x;
+    float: left;
+    margin-top: 18px;
+}
+
+    .menu_nav .nav_content {
+        padding-left: 25px;
+        background: url(../img/nav_l_bg.png) no-repeat;
+        float: left;
+        margin-left: -5px;
+    }
+
+        .menu_nav .nav_content li {
+            width: 88px;
+            height: 48px;
+            padding-left: 15px;
+            padding-right: 13px;
+            background: url(../img/nav_li_right.gif) no-repeat right center;
+            float: left;
+            line-height: 48px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            -webkit-box-sizing:inherit !important;
+            box-sizing:content-box !important;
+        }
+
+            .menu_nav .nav_content li a {
+                color: #fff;
+                width: 88px;
+                height: 48px;
+                display: block;
+                  
+            }
+
+            /*.menu_nav .nav_content li.current {
+                        line-height: 37px;
+                    }*/
+
+            .menu_nav .nav_content li em {
+                background: url(../img/bid_new.png) no-repeat;
+                width: 35px;
+                height: 21px;
+                display: inline-block;
+                position: absolute;
+                top: -20px;
+                left: 40px;
+            }
+
+            .menu_nav .nav_content li.current a {
+                width: 88px;
+                height: 37px;
+                background: url(../img/nav_li_current.png) no-repeat;
+                display: block;
+                color: #fff;
+              
+            }
+
+            .menu_nav .nav_content li a:hover {
+                background: url(../img/nav_li_hover.png) no-repeat;
+                text-decoration: none;
+            }
+
+.menu_nav_right {
+    padding-right: 20px;
+    background: url(../img/nav_r_bg.png) no-repeat right top;
+    float: right;
+    margin-left: 50px;
+    padding-top: 13px;
+    height: 23px;
+    padding-bottom: 12px;
+    margin-right: -5px;
+}
+
+p {
+    margin-bottom: 15px;
+}
+
+#header {
+    width: 900px;
+    margin: 0 0 0 0;
+    padding-top: 65px;
+}
+
+#topheader {
+    height: 100px;
+    background: url(../images/headertp.png) no-repeat;
+    background-color: rgb(47, 127, 190);
+}
+
+#footer {
+    position: absolute;
+    bottom: 0;
+    background-color: rgb(47, 127, 190);
+    width: 100%;
+    height: 44px;
+}
+
+#wapper {
+    position: relative; /*重要！保证footer是相对于wapper位置绝对*/
+    _height: 100%;
+    min-height: 100%; /* IE6不支持，IE6要单独配置*/
+    
+}
+
+#leftp {
+    width: 12%;
+ 
+    float:left;
+    margin-top:20px;
+    margin-left:5px;
+    padding-top:20px;
+    border:solid 1px grey;
+    background-color:white;
+}
+
+#content {
+    float: right;
+    width: 87%;
+}
+
+#main {
+    padding-bottom: 44px;
+    overflow:hidden;
+}

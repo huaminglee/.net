@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="E:\ydoa\CommunityFramework\10编码\ComponentFrame\CommonUnitTest\bin\Debug\CommonUnitTest.dll" total="1" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2015-02-03" time="16:18:05">
+  <environment nunit-version="2.6.3.13283" clr-version="2.0.50727.5485" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="E:\ydoa\CommunityFramework\10编码\ComponentFrame\CommonUnitTest\bin\Debug" machine-name="PC201407071801" user="Administrator" user-domain="PC201407071801" />
+  <culture-info current-culture="zh-CN" current-uiculture="zh-CN" />
+  <test-suite type="Assembly" name="E:\ydoa\CommunityFramework\10编码\ComponentFrame\CommonUnitTest\bin\Debug\CommonUnitTest.dll" executed="True" result="Success" success="True" time="0.037" asserts="0">
+    <results>
+      <test-suite type="Namespace" name="PengeSoft" executed="True" result="Success" success="True" time="0.037" asserts="0">
+        <results>
+          <test-suite type="Namespace" name="CMS" executed="True" result="Success" success="True" time="0.036" asserts="0">
+            <results>
+              <test-suite type="Namespace" name="BaseDatumTest" executed="True" result="Success" success="True" time="0.036" asserts="0">
+                <results>
+                  <test-suite type="TestFixture" name="UserBaseInfoManageSvrTest" executed="True" result="Success" success="True" time="0.036" asserts="0">
+                    <results>
+                      <test-case name="PengeSoft.CMS.BaseDatumTest.UserBaseInfoManageSvrTest.GetUserRightsListByUser" executed="True" result="Success" success="True" time="0.035" asserts="1" />
+                    </results>
+                  </test-suite>
+                </results>
+              </test-suite>
+            </results>
+          </test-suite>
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>

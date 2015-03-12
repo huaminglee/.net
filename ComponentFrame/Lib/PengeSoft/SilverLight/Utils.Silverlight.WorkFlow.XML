@@ -1,0 +1,1237 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utils.Silverlight.WorkFlow</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.WorkFlow.TaskResult">
+            <summary>
+            TaskResult 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskResult.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskResult.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskResult.FinishState">
+            <summary>
+            任务完成状态 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.IBranch">
+            <summary>
+            分支处理器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IBranch.NextTaskList(PengeSoft.WorkFlow.TaskInstance)">
+            <summary>
+            根据当前任务状态取到后继任务表
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.IJoin">
+            <summary>
+            汇聚处理器
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.IMsgHandler">
+            <summary>
+            消息发送接口
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IMsgHandler.NotifyTask(System.Guid,System.String,System.String,PengeSoft.WorkFlow.TaskInstance,PengeSoft.WorkFlow.TaskMessage)">
+            <summary>
+            发送任务相关消息
+            </summary>
+            <param name="templateId"></param>
+            <param name="workName"></param>
+            <param name="task"></param>
+            <param name="taskMessage"></param>
+            <param name="owner"></param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IMsgHandler.NotifyWork(PengeSoft.WorkFlow.WorkInstance,PengeSoft.WorkFlow.WorkMessage)">
+            <summary>
+            发送工作有关消息
+            </summary>
+            <param name="work"></param>
+            <param name="workMessage"></param>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.MsgDistribute">
+            <summary>
+            任务处理程序类别
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.MsgDistribute.NoCare">
+            <summary>不关注该消息</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.MsgDistribute.Sucess">
+            <summary>消息处理成功</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.MsgDistribute.Fault">
+            <summary>消息处理失败</summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.IMsgFilter">
+            <summary>
+            消息过滤处理器接口, 通过过滤器接口可对工作流消息过行预处理。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IMsgFilter.Distribute(PengeSoft.WorkFlow.WorkFlowMessage)">
+            <summary>
+            分发消息
+            </summary>
+            <param name="item">消息</param>
+            <returns>处理结果</returns>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.IMsgSubscriber">
+            <summary>
+            消息订阅者接口
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IMsgSubscriber.FormParameter(System.Object,System.Int32,PengeSoft.WorkFlow.NamedValue)">
+            <summary>
+            形成参数模板
+            </summary>
+            <param name="sender"></param>
+            <param name="msgType"></param>
+            <param name="para"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.IMsgSubscriber.Name">
+            <summary>
+            消息定阅器名称
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.IMsgSubscriber.Description">
+            <summary>
+            消息定阅器描述
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskImplementType">
+            <summary>
+            任务处理程序类别
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskImplementType.Manual">
+            <summary>需人工启动</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskImplementType.AsynTask">
+            <summary>异步任务</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskImplementType.SynTask">
+            <summary>同步任务</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskImplementType.SynTaskTimeLimit">
+            <summary>同步任务,限制执行时间</summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskMessage">
+            <summary>
+            任务消息类别
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.WorkMessage">
+            <summary>
+            工作消息类别
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.ITaskImplement">
+            <summary>
+            任务实现接口
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ITaskImplement.Start(PengeSoft.WorkFlow.TaskInstance)">
+            <summary>
+            启动任务，异步工作使用。
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ITaskImplement.Stop(PengeSoft.WorkFlow.TaskInstance)">
+            <summary>
+            中止任务，异步工作使用。
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ITaskImplement.Pause(PengeSoft.WorkFlow.TaskInstance)">
+            <summary>
+            暂停任务，异步工作使用。
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ITaskImplement.Continue(PengeSoft.WorkFlow.TaskInstance)">
+            <summary>
+            继续暂停任务，异步工作使用。
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ITaskImplement.Run(PengeSoft.WorkFlow.TaskInstance)">
+            <summary>
+            执行任务，同步任务使用
+            </summary>
+            <param name="task"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.ITaskImplement.TaskType">
+            <summary>
+            返回任务类型: <see cref="T:PengeSoft.WorkFlow.TaskImplementType"/> 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.ITaskImplement.TimeOut">
+            <summary>
+            超时毫秒数，-1表示不处理超时
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskNodeType">
+            <summary>
+            任务节点类型
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.Start">
+            <summary>
+            起始任务
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.End">
+            <summary>
+            结束任务
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.Task">
+            <summary>
+            一般任务
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.EdgeTask">
+            <summary>
+            边界任务
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.Join">
+            <summary>
+            汇聚任务
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.Branch">
+            <summary>
+            分支任务
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.MergeTask">
+            <summary>
+            会签任务
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskNodeType.SubFlow">
+            <summary>
+            子流程
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.WorkFlowMessage">
+            <summary>
+            WorkFlowMessage 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowMessage.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowMessage.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowMessage.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkFlowMessage.Sender">
+            <summary>
+            消息产生对象 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkFlowMessage.MsgType">
+            <summary>
+            消息类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkFlowMessage.TemplateId">
+            <summary>
+            模板Id 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkFlowMessage.WorkId">
+            <summary>
+            工作Id 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkFlowMessage.WorkName">
+            <summary>
+            工作名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkFlowMessage.TaskName">
+            <summary>
+            任务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkFlowMessage.WorkOwner">
+            <summary>
+            工作创建人 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.RightGroupDef">
+            <summary>
+            RightGroupDef 的摘要说明。
+            </summary>
+            <remarks>
+            工作流权限分组定义 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RightGroupDef.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RightGroupDef.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RightGroupDef.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RightGroupDef.GroupId">
+            <summary>
+            组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RightGroupDef.Descripts">
+            <summary>
+            说明 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RightGroupDef.UserIds">
+            <summary>
+            组成员表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RightGroupDef.Childs">
+            <summary>
+            组子成员 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.RightGroups">
+            <summary>
+            RightGroups 的摘要说明。
+            </summary>
+            <remarks>
+            工作流权限分组定义表 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RightGroups.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.WorkInstance">
+            <summary>
+            WorkInstance 的摘要说明。
+            </summary>
+            <remarks>
+            工作流实例 
+            </remarks>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskList">
+            <summary>
+            TaskList 的摘要说明。
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Ready">
+            <summary>工作已准备好运行</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Running">
+            <summary>工作在运行中</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Waitting">
+            <summary>工作处于等待</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Pause">
+            <summary>工作被暂停</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Stop">
+            <summary>工作被中止</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Error">
+            <summary>工作执行出错</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Finish">
+            <summary>工作已完成中</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstance.WorkStatus_Lock">
+            <summary>工作在运行中，被引擎锁定，正在执行任务，做为位处理</summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstance.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstance.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstance.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstance.FindTaskByType(System.Int32)">
+            <summary>
+            根据任务类别查找任务,找到第一个就返回。
+            </summary>
+            <param name="nodeType"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstance.FindTaskByName(System.String)">
+            <summary>
+            根据任务名称查找任务。
+            </summary>
+            <param name="taskName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstance.GetTaskList(System.Int32)">
+            <summary>
+            取处于指定状态的任务表
+            </summary>
+            <param name="state"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstance.GetLinkTask(PengeSoft.WorkFlow.TaskLink)">
+            <summary>
+            取指定Link所指向的任务
+            </summary>
+            <param name="link"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.SyncRoot">
+            <summary>
+            同步用对象
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.TaskList">
+            <summary>
+            任务列表
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.IsLocked">
+            <summary>
+            工作是否被锁定
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.State">
+            <summary>
+            工作状态
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.WorkID">
+            <summary>
+            实例标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.TemplateID">
+            <summary>
+            模板标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.WorkIDStr">
+            <summary>
+            实例标识string格式
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.TemplateIDStr">
+            <summary>
+            模板标识string格式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.Operators">
+            <summary>
+            操作者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.OpLevel">
+            <summary>
+            权限级别 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.Name">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.SortCode">
+            <summary>
+            分类标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.Type">
+            <summary>
+            工作流类型 
+            工作流类型，如顺序、状态机，目前还没使用 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.Class">
+            <summary>
+            工作类别 
+            工作类别，主要用于分类查询，由用户定义 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.Owner">
+            <summary>
+            创建人 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.CreateTime">
+            <summary>
+            创建时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.FinishedTime">
+            <summary>
+            完成时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.Status">
+            <summary>
+            状态 
+            Ready,Running,Pause,Stop,Finish等 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.Memo">
+            <summary>
+            说明 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.MsgSubList">
+            <summary>
+            消息订阅表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.WorkInstance.RightGroup">
+            <summary>
+            权限分组 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.WorkInstanceQueryPara">
+            <summary>
+            WorkInstance 查询参数
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByName">
+            <summary>按Name排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByName_desc">
+            <summary>按Name排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderBySortCode">
+            <summary>按SortCode排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderBySortCode_desc">
+            <summary>按SortCode排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByClass">
+            <summary>按Class排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByClass_desc">
+            <summary>按Class排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByOwner">
+            <summary>按Owner排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByOwner_desc">
+            <summary>按Owner排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByCreateTime">
+            <summary>按CreateTime排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.OrderByCreateTime_desc">
+            <summary>按CreateTime排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_WorkID">
+            <summary>查询 WorkID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_Operators">
+            <summary>查询 Operators 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_OpLevel">
+            <summary>查询 OpLevel 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_Name">
+            <summary>查询 Name 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_SortCode">
+            <summary>查询 SortCode 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_Class">
+            <summary>查询 Class 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_Owner">
+            <summary>查询 Owner 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_CreateTime">
+            <summary>查询 CreateTime 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_CreateTime_S">
+            <summary>查询 CreateTime 条件起始日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_CreateTime_E">
+            <summary>查询 CreateTime 条件结束日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_Status">
+            <summary>查询 Status 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.WorkInstanceQueryPara.QueryKey_Memo">
+            <summary>查询 Memo 条件键名称</summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.#ctor(PengeSoft.WorkFlow.WorkInstance,System.String)">
+            <summary>
+            构造函数,指定参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetQueryPara(PengeSoft.WorkFlow.WorkInstance,System.String)">
+            <summary>
+            指定查询参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetWorkID(System.Guid)">
+            <summary>
+            设 实例标识 条件
+            </summary>
+            <param name="WorkID">实例标识</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetOperators(System.String)">
+            <summary>
+            设 操作者 条件
+            </summary>
+            <param name="Operators">操作者</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetOpLevel(System.Int32)">
+            <summary>
+            设 权限级别 非零值条件
+            </summary>
+            <param name="OpLevel">权限级别</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetName(System.String)">
+            <summary>
+            设 名称 条件
+            </summary>
+            <param name="Name">名称</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetSortCode(System.String)">
+            <summary>
+            设 分类标识 条件
+            </summary>
+            <param name="SortCode">分类标识</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetClass(System.String)">
+            <summary>
+            设 工作类别 条件
+            </summary>
+            <param name="Class">工作类别</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetOwner(System.String)">
+            <summary>
+            设 创建人 条件
+            </summary>
+            <param name="Owner">创建人</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetCreateTime(System.DateTime)">
+            <summary>
+            设 创建时间 条件
+            </summary>
+            <param name="CreateTime">创建时间</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetCreateTime(System.DateTime,System.DateTime)">
+            <summary>
+            设 创建时间 范围条件
+            </summary>
+            <param name="StartDate">起始日期</param>
+            <param name="EndDate">结束日期</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetStatus(System.Int32)">
+            <summary>
+            设 状态 非零值条件
+            </summary>
+            <param name="Status">状态</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetMemo(System.String)">
+            <summary>
+            设 说明 条件
+            </summary>
+            <param name="Memo">说明</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkInstanceQueryPara.SetOrderByField(System.String)">
+            <summary>
+            设排序字段
+            </summary>
+            <param name="Order">排序字段</param>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.ComparerWorkInstance">
+            <summary>
+            WorkInstance 排序比较器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ComparerWorkInstance.#ctor(System.String)">
+            <summary>
+            创建实例,并初始化排序字段
+            </summary>
+            <param name="sortField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ComparerWorkInstance.Compare(System.Object,System.Object)">
+            <summary>
+            比较两个 <see cref="!:Zjjhxmmx"/> 对象并返回一个值，指示一个对象是小于、等于还是大于另一个对象。
+            </summary>
+            <param name="x">要比较的第一个对象。</param>
+            <param name="y">要比较的第二个对象。</param>
+            <returns>值 条件 小于零 x 小于 y。 零 x 等于 y。 大于零 x 大于 y。</returns>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.ComparerWorkInstance.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.NamedValue">
+            <summary>
+            NamedValue 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.NamedValue.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.NamedValue.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.NamedValue.TaskID">
+            <summary>
+            任务标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.NamedValue.TaskIDStr">
+            <summary>
+            任务标识Str 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.NamedValue.Name">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.NamedValue.TypeName">
+            <summary>
+            类型 
+            string,double,int等标准类型,file,ftp,RemoteFile，其他数据类型别名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.NamedValue.Value">
+            <summary>
+            属性值 
+            可以是字符串，数值，也可是对象的XML序列。 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.NamedValue.Memo">
+            <summary>
+            说明 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.NamedValue.ObjValue">
+            <summary>
+            值对象
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskInstance">
+            <summary>
+            TaskInstance 的摘要说明。
+            </summary>
+            <remarks>
+            工作流运行时任务实例对象。 
+            </remarks>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Idle">
+            <summary>空闲</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Begin">
+            <summary>开始准备</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Ready">
+            <summary>前趋已准备好</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Start">
+            <summary>等待起动</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Running">
+            <summary>已启动，正在运行</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Done">
+            <summary>任务执行已正常完成</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Stop">
+            <summary>任务被中止执行</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Error">
+            <summary>任务执行出错</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.TaskInstance.State_Pause">
+            <summary>任务被暂停执行</summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskInstance.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskInstance.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskInstance.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskInstance.AssignFromMain(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskInstance.GetPreLink(System.String)">
+            <summary>
+            取指向前趋节的TaskLink
+            </summary>
+            <param name="taskName"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskInstance.GetNextLink(System.String)">
+            <summary>
+            取指向后继节的TaskLink
+            </summary>
+            <param name="taskName"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.SyncRoot">
+            <summary>
+            同步用对象
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.WorkID">
+            <summary>
+            工作实例Guid 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.TaskID">
+            <summary>
+            任务Guid 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.WorkIDStr">
+            <summary>
+            工作实例Guid的string格式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.TaskIDStr">
+            <summary>
+            任务Guid的string格式  
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Name">
+            <summary>
+            任务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Class">
+            <summary>
+            任务类别 
+            任务类别，主要用于分类查询，由用户定义 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Operators">
+            <summary>
+            操作者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.TimeLimite">
+            <summary>
+            工期 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.OpLevel">
+            <summary>
+            权限级别 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Action">
+            <summary>
+            动作 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.ActionPara">
+            <summary>
+            动作参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.EventHandler">
+            <summary>
+            事件处理 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.NodeType">
+            <summary>
+            节点类型 
+            开始节点，结束节点，子流程节点，汇聚节点，分拆节点，边界节点，自动任务节点，人工任务节点，会签节点
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.NextTasks">
+            <summary>
+            后续任务表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.NextTaskSelector">
+            <summary>
+            后续任务选择器 
+            类型名称，不指定表示同时启动后续所有任务 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.PreTasks">
+            <summary>
+            前趋任务表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.PreTaskSelector">
+            <summary>
+            前趋任务选择器 
+            类型名称，不指定表示所有前趋完成才能执行 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Memo">
+            <summary>
+            说明 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.ActionImp">
+            <summary>
+            任务实现 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.NextTaskImp">
+            <summary>
+            后续选择器实现 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.PreTaskImp">
+            <summary>
+            前趋选择器实现 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.StartTime">
+            <summary>
+            开始时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.EndTime">
+            <summary>
+            结束时间 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Runner">
+            <summary>
+            执行人 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.MainParaIn">
+            <summary>
+            主参数输入 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.MainParaOut">
+            <summary>
+            主参数输出 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Input">
+            <summary>
+            输入参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.Output">
+            <summary>
+            输出参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.TaskStatus">
+            <summary>
+            任务状态 
+            未激活、活动、已完成 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.RunCount">
+            <summary>
+            运行计数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.LocationX">
+            <summary>
+            图符位置X 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.LocationY">
+            <summary>
+            图符位置Y 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskInstance.MsgSubList">
+            <summary>
+            消息订阅表 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.SubscribeList">
+            <summary>
+            SubscribeListRec 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.SubscribeList.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.MsgSubscribe">
+            <summary>
+            MsgSubscribe 的摘要说明。
+            </summary>
+            <remarks>
+            工程流消息订阅记录 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.MsgSubscribe.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.MsgSubscribe.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.MsgSubscribe.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.AutoKey">
+            <summary>
+            自动键 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.WorkId">
+            <summary>
+            工作或工作模板Id 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.TaskName">
+            <summary>
+            任务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.TypeId">
+            <summary>
+            消息类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.Title">
+            <summary>
+            消息名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.Subscriber">
+            <summary>
+            订阅者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.Para">
+            <summary>
+            订阅者参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.MsgSubscribe.Memo">
+            <summary>
+            备注 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.WorkFlow">
+            <summary>
+            WorkFlow 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.Task">
+            <summary>
+            Task 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskParameter">
+            <summary>
+            TaskParameter 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskParameter.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.LinkLineType">
+            <summary>
+            连接线型
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskLink">
+            <summary>
+            TaskLink 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.#ctor">
+            <summary>
+            构造函数, 创建实例
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.#ctor(System.String,System.String)">
+            <summary>
+            构造函数, 创建实例, 指定参数和节点名称。
+            </summary>
+            <param name="para"></param>
+            <param name="nodeName"></param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.Get_LinkTypeSet(System.Int32)">
+            <summary>
+            设位集: 连接类型 
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.Set_LinkTypeSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集: 连接类型 
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.XmlEncodeAttrib(System.Xml.XmlWriter)">
+            <summary>
+            序列化实体类属性，返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.XmlEncodeElement(System.Xml.XmlWriter)">
+            <summary>
+            序列化属性类属性，返回 true 以取消用反射序列化。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 以取消用反射序列化。</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.XmlSetElement(System.Xml.XmlReader,System.String)">
+            <summary>
+            反列化实体类属性，用非反射方式处理。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 表示该节点被处理。</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.XmlSetProperty(System.Reflection.PropertyInfo,System.String,System.String)">
+            <summary>
+            反列化属性类属性，用非反射方式处理。
+            </summary>
+            <param name="writer">XmlWriter对象</param>
+            <returns>返回 true 表示该属性被处理。</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLink.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskLink.LinkTask">
+            <summary>
+            运行时参数，连接任务对象
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskLink.Para">
+            <summary>
+            参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskLink.NodeName">
+            <summary>
+            节点名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskLink.LinkType">
+            <summary>
+            连接类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskLink.State">
+            <summary>
+            状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.TaskLink.LineType">
+            <summary>
+            线型 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.TaskLinkList">
+            <summary>
+            TaskLinkList 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.TaskLinkList.#ctor">
+            <summary>
+            构造函数, 确定List管理元素类型
+            </summary>
+        </member>
+    </members>
+</doc>

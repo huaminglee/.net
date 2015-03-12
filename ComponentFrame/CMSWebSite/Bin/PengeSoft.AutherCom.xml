@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.AutherCom</name>
+    </assembly>
+    <members>
+        <!-- 对于成员“T:PengeSoft.Auther.RightCheck.AutherObj”忽略有格式错误的 XML 注释 -->
+        <member name="M:PengeSoft.Auther.RightCheck.AutherObj.GetInstance">
+            <summary>
+            取得权限认证对象实例。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.Auther.RightCheck.RightCheckConnectType">
+            <summary>
+            使用通讯协议类型
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Auther.RightCheck.AutherUseRightCheck">
+            <summary>
+            使用RightCheck.dll进行权限认证, 推荐使用
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.#ctor(System.String,System.String,System.String)">
+            <summary>
+            构造函数，同时指定主机及用户
+            </summary>
+            <param name="Host">主机地址</param>
+            <param name="LoginID"></param>
+            <param name="Password"></param>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.GetUserAttrib(System.String,PengeSoft.WorkZoneData.PersonRec@)">
+            <summary>
+            取用户属性
+            </summary>
+            <param name="LoginID">登录名称</param>
+            <param name="Attrib">用户属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.UpdateUserAttrib(System.String,PengeSoft.WorkZoneData.PersonRec)">
+            <summary>
+            更新用户属性
+            </summary>
+            <param name="LoginID">登录名称</param>
+            <param name="Attrib">用户属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.GetAction(System.String,PengeSoft.WorkZoneData.ActionRec@)">
+            <summary>
+            取权限信息
+            </summary>
+            <param name="actName">权限名称</param>
+            <param name="action">权限对象,取不成功时为null</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.SetAction(PengeSoft.WorkZoneData.ActionRec)">
+            <summary>
+            修改权限信息
+            </summary>
+            <param name="action">权限对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.GetIdNames(System.String,System.String@)">
+            <summary>
+            取用户/组标识(Id)对应的名称
+            </summary>
+            <param name="IDs">标识表，用','号分开</param>
+            <param name="Names">返回值名称表，用','号分开</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.GetGroupUsers(System.String,System.Int32,System.String@)">
+            <summary>
+            取组（可以多个）中所含的用户
+            </summary>
+            <remarks>
+              // Option for GetGroupUsers
+              GGUL_LEVELMASK  = 0x00FF;
+              // 以下为字符串输出格式 ','号分隔
+              GGUL_ONLYID   = 0;
+              GGUL_ONLYSID  = 1;
+              GGUL_ONLYNAME = 2;
+              GGUL_ONLYMOB  = 3;
+              GGUL_ONLYMAIL = 4;
+              // 以下为Xml输出格式, PersonRec 的 DataList
+              GGUL_TINY     = 5;
+              GGUL_LITTLE   = 6;
+              GGUL_MID      = 7;
+              GGUL_DETAIL   = 8;
+              // 掩码
+              GGUL_INCLUDESID = 0x0100;    // 对 GGUL_TINY,GGUL_LITTLE,GGUL_MID 有效
+              GGUL_MIXNAMES   = 0x0200;    // 对所有输出方式有效，输入接收混合格式 '_User' , '@Group'
+              GGUL_GroupInherited = 0x0400;    // 组继承
+            </remarks>
+            <param name="GroupNames">组名称表，用','号分开</param>
+            <param name="Option">选项</param>
+            <param name="ans">返回用户名称表，用','号分开</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.SetUserPwd(System.String,System.String)">
+            <summary>
+            修改指定用户口令
+            </summary>
+            <param name="LoginID">用户登录名</param>
+            <param name="NewPwd">新口令hash值</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.GetGroup(System.String,PengeSoft.WorkZoneData.GroupRec@)">
+            <summary>
+            取组数据
+            </summary>
+            <param name="GroupName">组名称</param>
+            <param name="group">返回的组数据对象,不成功返回null</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.SetGroup(PengeSoft.WorkZoneData.GroupRec)">
+            <summary>
+            设组数据
+            </summary>
+            <param name="group">组数据对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.GetActionUsers(System.String,System.String@)">
+            <summary>
+            返回有指定权限的用户名称表
+            </summary>
+            <param name="actName">权限名称</param>
+            <param name="users">用户名称表，用','号分开</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.AutherUseRightCheck.GenUserKey(System.String,System.Int32,System.Int32@,System.String@)">
+            <summary>
+            生成一次性登录标识
+            </summary>
+            <param name="UserID">指定用户登录后的安全标识</param>
+            <param name="expire">标识有效时间</param>
+            <param name="sn">标识序号</param>
+            <param name="Key">标识</param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.Auther.RightCheck.UserRightCheck">
+            <summary>
+            使用RightCheck.dll进行权限认证, 但不维持COM实例, 目前部分函数还未实现，谨慎使用。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.UserRightCheck.GetUserAttrib(System.String,PengeSoft.WorkZoneData.PersonRec@)">
+            <summary>
+            取用户属性
+            </summary>
+            <param name="LoginID">登录名称</param>
+            <param name="Attrib">用户属性</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheck.UserRightCheck.UpdateUserAttrib(System.String,PengeSoft.WorkZoneData.PersonRec)">
+            <summary>
+            更新用户属性
+            </summary>
+            <param name="LoginID">登录名称</param>
+            <param name="Attrib">用户属性</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

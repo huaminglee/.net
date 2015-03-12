@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<FormURLS>
+  <FormURL>
+    <Type>1</Type>
+    <URL>WorkManage/ucDeptSendFile</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+  <FormURL>
+    <Type>2</Type>
+    <URL>WorkManage/ucWorkManage</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+  <FormURL>
+    <Type>3</Type>
+    <URL>WorkManage/ucWorkManage</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+  <FormURL>
+    <Type>4</Type>
+    <URL>WorkManage/ucWorkManage</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+  <FormURL>
+    <Type>5</Type>
+    <URL>WorkManage/ucWorkManage</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+  <FormURL>
+    <Type>6</Type>
+    <URL>WorkManage/ucWorkManage</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+  <FormURL>
+    <Type>7</Type>
+    <URL>WorkManage/ucWorkManage</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+  <FormURL>
+    <Type>8</Type>
+    <URL>WorkManage/ucSuggestion</URL>
+    <TaskName>test1</TaskName>
+  </FormURL>
+</FormURLS>

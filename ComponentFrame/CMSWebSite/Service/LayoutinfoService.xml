@@ -1,0 +1,2 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<PsDataPacket Id="LayoutInfoServerSvr" Service="PengeSoft.CMS.BaseDatum.ILayoutInfoServerSvr, PengeSoft.CMS.BaseDatum" RspType="json"/>

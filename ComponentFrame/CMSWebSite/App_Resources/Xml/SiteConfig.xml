@@ -1,0 +1,421 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Root>
+
+  <MenuItems>
+    <Item Name="日常公文" Type="1" Value="~/HomePage.aspx?action=Archive/ucArchiveList&amp;archiveType=1" ImgUrl="shouwen.png"/>
+    <Item Name="督办工作" Type="2" Value="~/HomePage.aspx?action=Archive/ucArchiveList&amp;archiveType=2" ImgUrl="dubangongzuo.png"/>
+    <Item Name="建议提案" Type="3" Value="~/HomePage.aspx?action=Archive/ucArchiveList&amp;archiveType=3" ImgUrl="jianyitian.png"/>
+    <Item Name="信访" Type="4" Value="~/HomePage.aspx?action=Archive/ucArchiveList&amp;archiveType=4" ImgUrl="xinfang.png"/>
+    <!--<Item Name="发文" Type="5" Value="~/HomePage.aspx?action=Archive/ucArchiveList&amp;archiveType=5" ImgUrl="fawen.png"/>-->
+  </MenuItems>
+  
+  <MessageType>
+    <Item Name="收件箱" Value="收件箱"  ></Item>
+    <Item Name="发件箱" Value="发件箱"></Item>
+    <Item Name="草稿箱" Value="草稿箱"></Item>
+    <Attache>
+      
+    </Attache>
+  </MessageType>
+
+  <MessageReadStatus>
+    <Item Name="全部消息" Value="1"></Item>
+    <Item Name="未读消息" Value="2"></Item>
+  </MessageReadStatus>
+  <MailReadStatus>
+    <Item Name="(全部)" Value="1"></Item>
+    <Item Name="待阅读" Value="2"></Item>
+    <Item Name="已阅读" Value="3"></Item>
+  </MailReadStatus>
+  <SearchType>
+    <Item Name="工作序号" Value="WorkNo.1"></Item>
+    <!--<Item Name="工作流程" Value="ArchiveType.2"></Item>-->
+    <Item Name="级别" Value="ArchiveLevel.3"></Item>
+    <Item Name="当前步骤" Value="Name.4"></Item>
+    <Item Name="公文标题" Value="Title.1"></Item>
+    <Item Name="文种" Value="DocType.5"></Item>
+    <Item Name="文件编号" Value="DocNo.1"></Item>
+    <Item Name="公文序号" Value="ArchiveNo.1"></Item>
+    <Item Name="来文单位" Value="SendUnit.1"></Item>
+    <Item Name="送达时间" Value="CreateTime.7"></Item>
+    <Item Name="发送人员" Value="Sender.1"></Item>
+    <Item Name="类型" Value="Type.6"></Item>
+  </SearchType>
+
+  <ArchiveFlowType>
+    <Item Name="待处理工作" Value="1"></Item>
+    <Item Name="已处理工作" Value="2"></Item>
+  </ArchiveFlowType>
+  <ConferenceType>
+    <Item Name="待审核会议" Value="1"></Item>
+    <Item Name="审核未通过会议" Value="2"></Item>
+    <Item Name="待召开会议" Value="4"></Item>
+    <Item Name="已召开会议" Value="5"></Item>
+  </ConferenceType>
+  <AddeConferenceType>
+    <Item Name="我将参加的会议" Value="1"></Item>
+    <Item Name="我已参加的会议" Value="2"></Item>
+  </AddeConferenceType>
+  <ConferenceAudit>
+    <Item Name="待审核会议" Value="1"></Item>
+    <Item Name="待召开会议" Value="4"></Item>
+    <Item Name="已召开会议" Value="5"></Item>
+  </ConferenceAudit>
+  <Conference>
+    <Item Name="待召开会议" Value="1"></Item>
+    <Item Name="已召开会议" Value="2"></Item>
+  </Conference>
+  <TimelyRemindTime>
+    <Item Name="0小时" Value="0"></Item>
+    <Item Name="0.5小时" Value="-0.5"></Item>
+    <Item Name="1小时" Value="-1"></Item>
+    <Item Name="2小时" Value="-2"></Item>
+    <Item Name="3小时" Value="-3"></Item>
+    <Item Name="5小时" Value="-5"></Item>
+    <Item Name="10小时" Value="-10"></Item>
+  </TimelyRemindTime>
+  
+  <SearchColumn>
+    <Item Name="工作序号" Oper="=,like,&lt;&gt;"  Value="WorkNo" DataType="string" ValueTpye="textbox"/>
+    <!--<Item Name="工作流程" Oper="=,like,&lt;&gt;"  Value="ArchiveType" DataType="string" ValueTpye="dropdownlist"/>-->
+    <!--<Item Name="级别" Oper="=,like,&lt;&gt;"  Value="ArchiveLevel" DataType="int"  ValueTpye="dropdownlist"/>-->
+    <Item Name="当前步骤" Oper="=,like,&lt;&gt;"   Value="Name" DataType="int" ValueTpye="dropdownlist"/>
+    <Item Name="公文标题" Oper="=,like,&lt;&gt;"   Value="Title" DataType="string" ValueTpye="textbox"/>
+    <Item Name="文种" Oper="=,like,&lt;&gt;"  Value="DocType" DataType="string" ValueTpye="dropdownlist"/>
+    <Item Name="公文序号" Oper="=,like,&lt;&gt;" Value="ArchiveNo" DataType="string" ValueTpye="textbox"/>
+    <Item Name="文件编号" Oper="=,like,&lt;&gt;"  Value="DocNo" DataType="string" ValueTpye="textbox"/>
+    <Item Name="来文单位" Oper="=,like,&lt;&gt;"   Value="SendUnit" DataType="string" ValueTpye="textbox"/>
+    <Item Name="送达时间" Oper="=,&lt;,&lt;=,&gt;,&gt;=" Value="CreateTime" DataType="DateTime" ValueTpye="textbox"/>
+    <Item Name="发送人员" Oper="=,like,&lt;&gt;" Value="Sender" DataType="string" ValueTpye="textbox"/>
+    <Item Name="类型" Oper="=,like,&lt;&gt;" Value="Type" DataType="int"  ValueTpye="dropdownlist"/>
+    <Item Name="项目名称" Oper="=,like,&lt;&gt;"   Value="Project" DataType="string" ValueTpye="textbox"/>
+  </SearchColumn>
+  <AuditConference>
+   
+    <Item Name="通过" Value="4"></Item>
+    <Item Name="未通过" Value="2"></Item>
+  </AuditConference>
+  <SearchConference>
+    <Item Name="会议主题" Oper="=,like,&lt;&gt;"  Value="Title" DataType="string" ValueTpye="textbox"/>
+    <Item Name="会议地点" Oper="=,like,&lt;&gt;"  Value="Location" DataType="string" ValueTpye="textbox"/>
+    <Item Name="会议开始时间" Oper="=,&lt;,&lt;=,&gt;,&gt;=" Value="StartTime" DataType="DateTime" ValueTpye="textbox"/>
+    <Item Name="会议结束时间" Oper="=,&lt;,&lt;=,&gt;,&gt;=" Value="EndTime" DataType="DateTime" ValueTpye="textbox"/>
+    <Item Name="发起单位" Oper="=,like,&lt;&gt;"   Value="ApplyUnit" DataType="string" ValueTpye="textbox"/>
+    <Item Name="主持人" Oper="=,like,&lt;&gt;"   Value="Compere" DataType="string" ValueTpye="textbox"/>
+    <Item Name="创建人" Oper="=,like,&lt;&gt;"  Value="Creator" DataType="string" ValueTpye="textbox"/>
+
+  </SearchConference>
+  <ArchiveState>
+    <!--<Item Name="未开始" Value="4"></Item>-->
+    <Item Name="进行中" Value="2"></Item>
+    <Item Name="已归档" Value="4"></Item>
+    <Item Name="已撤销" Value="8"></Item>
+  </ArchiveState>
+
+  <DocNoUnit>
+    <Item Name="成信息中心发" Value="成信息中心发"></Item>
+	<Item Name="成文发" Value="成文发"></Item>
+  </DocNoUnit>
+
+  <AdviseHandleClassify>
+	<Item Name="请选择" Value="0"></Item>
+    <Item Name="A类(已采纳)" Value="1"></Item>
+    <Item Name="B类(计划采纳)" Value="2"></Item>
+    <Item Name="C类(不采纳)" Value="3"></Item>
+  </AdviseHandleClassify>
+
+  <!--督办工作落实情况-->
+  <ArchiveSuperviseHandleResult>
+    <Item Name="已上报" Value="已上报"></Item>
+    <Item Name="已落实" Value="已落实"></Item>
+    <Item Name="落实中" Value="落实中"></Item>
+    <Item Name="已阅" Value="已阅"></Item>
+  </ArchiveSuperviseHandleResult>
+
+  <ArchiveLevel>
+    <Item Name="请选择" Value="0"></Item>
+    <Item Name="全局" Value="1"></Item>
+    <Item Name="本部门" Value="2"></Item>
+  </ArchiveLevel>
+
+	<!--局领导批示落实情况-->
+	<LeaderShipHandleResult>
+		<Item Name="已落实" Value="已落实"></Item>
+		<Item Name="延期" Value="延期"></Item>
+		<Item Name="超期" Value="超期"></Item>
+	</LeaderShipHandleResult>
+  
+  <!--廉政教育分类查询-->
+  <RiskEduType>
+    <Item Name="全部"></Item>
+    <Item Name="法律法规" Value="法律法规"></Item>
+    <Item Name="文件通知" Value="文件通知"></Item>
+    <Item Name="讲话精神" Value="讲话精神"></Item>
+    <Item Name="影像资料" Value="影像资料"></Item>
+    <Item Name="警示案例" Value="警示案例"></Item>
+  </RiskEduType>
+  <!--廉政教育分类-->
+  <RiskEduTypeEx>
+    <Item Name="法律法规" Value="法律法规"></Item>
+    <Item Name="文件通知" Value="文件通知"></Item>
+    <Item Name="讲话精神" Value="讲话精神"></Item>
+    <Item Name="影像资料" Value="影像资料"></Item>
+    <Item Name="警示案例" Value="警示案例"></Item>
+  </RiskEduTypeEx>
+
+  <!--业务类型-->
+  <BusinessType>
+    <Item Name="----请选择----" Value="0"></Item>
+    <Item Name="单位发文" Value="1"></Item>
+    <Item Name="一般阅件" Value="2"></Item>
+    <Item Name="普通办件" Value="3"></Item>
+    <Item Name="领导批示件" Value="4"></Item>
+    <Item Name="党组会督办" Value="5"></Item>
+    <Item Name="局长办公会督办" Value="6"></Item>
+    <Item Name="信访督办件" Value="7"></Item>
+    <Item Name="建议提案" Value="8"></Item>
+    <Item Name="人事任免" Value="9"></Item>
+    <Item Name="水务工程项目" Value="10"></Item>
+    <Item Name="取水许可" Value="11"></Item>
+    <Item Name="排水许可" Value="12"></Item>
+    <Item Name="水土保持" Value="13"></Item>
+    <Item Name="涉水项目" Value="14"></Item>
+    <Item Name="用水计划" Value="15"></Item>
+    <Item Name="财政预决算" Value="16"></Item>
+    <Item Name="三公经费" Value="17"></Item>
+    <Item Name="风险处置" Value="51"></Item>
+    <Item Name="监督督查" Value="52"></Item>
+  </BusinessType>
+  
+  <!--部门-->
+  <Department>
+    <Item Name="----请选择----" Value="0"></Item>
+    <Item Name="成都市水务局" Value="1"></Item>
+    <Item Name="局领导" Value="2"></Item>
+    <Item Name="系统开发测试" Value="3"></Item>
+    <Item Name="办公室" Value="4"></Item>
+    <Item Name="直属机关党委" Value="5"></Item>
+    <Item Name="政策法规处" Value="6"></Item>
+    <Item Name="规划计划处" Value="7"></Item>
+    <Item Name="水资源管理处" Value="8"></Item>
+    <Item Name="水域管理处" Value="9"></Item>
+    <Item Name="供水管理处" Value="10"></Item>
+    <Item Name="排水管理处" Value="11"></Item>
+    <Item Name="建设管理处" Value="12"></Item>
+    <Item Name="水利水保处" Value="13"></Item>
+    <Item Name="水产管理处" Value="14"></Item>
+    <Item Name="安全监督管理处" Value="15"></Item>
+    <Item Name="行政审批处" Value="16"></Item>
+    <Item Name="财务处" Value="17"></Item>
+    <Item Name="人事处" Value="18"></Item>
+    <Item Name="派驻局监察室" Value="19"></Item>
+    <Item Name="离退休人员工作处" Value="20"></Item>
+    <Item Name="水务执法监察支队" Value="21"></Item>
+    <Item Name="市防汛办" Value="22"></Item>
+    <Item Name="节水办" Value="23"></Item>
+    <Item Name="打印室" Value="24"></Item>
+  </Department>
+  
+  <!--风险类别-->
+  <RiskType>
+    <Item Name="----请选择----" Value="0"></Item>
+    <Item Name="超期风险" Value="1"></Item>
+    <Item Name="违规风险" Value="2"></Item>
+    <Item Name="监督督察" Value="3"></Item>
+  </RiskType>
+
+  <!--风险防控-->
+  <RiskPrevention>
+    <RiskModuleType Name="----请选择----" Value="0"/>
+    <RiskModuleType Name="日常办公公文" Value="1">
+      <RiskModule Name="----请选择----" Value="0"/>
+      <RiskModule Name="一般阅件" Value="1">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="新建阅件" Value="1"/>
+        <RiskStep Name="领导签发" Value="2"/>
+        <RiskStep Name="派件" Value="派件"/>
+        <RiskStep Name="阅件" Value="4"/>
+        <RiskStep Name="归档" Value="5"/>
+      </RiskModule>
+      <RiskModule Name="普通办件" Value="2">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="新建办件" Value="1"/>
+        <RiskStep Name="指派专管员" Value="2"/>
+        <RiskStep Name="领导签发" Value="3"/>
+        <RiskStep Name="派件" Value="4"/>
+        <RiskStep Name="办理" Value="5"/>
+        <RiskStep Name="专管员呈领导" Value="6"/>
+        <RiskStep Name="领导签阅" Value="7"/>
+        <RiskStep Name="专管员转机要" Value="8"/>
+        <RiskStep Name="归档" Value="9"/>
+      </RiskModule>
+      <RiskModule Name="单位发文" Value="3">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="公文拟稿" Value="1"/>
+        <RiskStep Name="处室领导审核" Value="2"/>
+        <RiskStep Name="分管领导审签（抄送联络员）" Value="3"/>
+        <RiskStep Name="送主要领导审签" Value="4"/>
+        <RiskStep Name="主要领导审签（抄送联络员）" Value="5"/>
+        <RiskStep Name="机要员派件" Value="6"/>
+        <RiskStep Name="处室办理" Value="7"/>
+        <RiskStep Name="打印室印发" Value="8"/>
+        <RiskStep Name="归档" Value="9"/>
+      </RiskModule>
+      <RiskModule Name="督办工作" Value="4">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="新建公文" Value="1"/>
+        <RiskStep Name="指派专管员" Value="2"/>
+        <RiskStep Name="局领导批示" Value="3"/>
+        <RiskStep Name="专管员派件" Value="4"/>
+        <RiskStep Name="处室办理" Value="5"/>
+        <RiskStep Name="专管员转领导签阅" Value="6"/>
+        <RiskStep Name="局领导签阅" Value="7"/>
+        <RiskStep Name="专管员转机要归档" Value="8"/>
+        <RiskStep Name="归档" Value="9"/>
+      </RiskModule>
+      <RiskModule Name="建议提案" Value="5">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="新建提案" Value="1"/>
+        <RiskStep Name="拟办意见" Value="2"/>
+        <RiskStep Name="专管员转呈领导" Value="3"/>
+        <RiskStep Name="领导批示" Value="4"/>
+        <RiskStep Name="专管员派件" Value="5"/>
+        <RiskStep Name="办理" Value="6"/>
+        <RiskStep Name="归档" Value="7"/>
+      </RiskModule>
+      <RiskModule Name="人事任免" Value="6">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="工作启动" Value="1"/>
+        <RiskStep Name="初步建议" Value="2"/>
+        <RiskStep Name="工作方案" Value="3"/>
+        <RiskStep Name="会议投票推荐" Value="4"/>
+        <RiskStep Name="统计分析推荐情况" Value="5"/>
+        <RiskStep Name="酝酿确定考察对象" Value="6"/>
+        <RiskStep Name="考察预告" Value="7"/>
+        <RiskStep Name="实施考察" Value="8"/>
+        <RiskStep Name="党风廉政意见" Value="9"/>
+        <RiskStep Name="反馈考察情况" Value="10"/>
+        <RiskStep Name="酝酿" Value="11"/>
+        <RiskStep Name="党组讨论" Value="12"/>
+        <RiskStep Name="任前公示" Value="13"/>
+        <RiskStep Name="任职谈话" Value="14"/>
+        <RiskStep Name="办理任职手续" Value="15"/>
+      </RiskModule>
+      <RiskModule Name="水务工程项目" Value="7">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="项目备案" Value="1"/>
+        <RiskStep Name="项目办理" Value="2"/>
+        <RiskStep Name="项目完结" Value="3"/>
+        <RiskStep Name="规划" Value="规划"/>
+      </RiskModule>
+      <RiskModule Name="取水许可" Value="8">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="接件" Value="1"/>
+        <RiskStep Name="初审" Value="2"/>
+        <RiskStep Name="复审" Value="3"/>
+        <RiskStep Name="审核" Value="4"/>
+        <RiskStep Name="审批" Value="5"/>
+        <RiskStep Name="办结" Value="6"/>
+      </RiskModule>
+      <RiskModule Name="排水许可" Value="9">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="接件" Value="1"/>
+        <RiskStep Name="审查" Value="2"/>
+        <RiskStep Name="审批" Value="3"/>
+        <RiskStep Name="办结" Value="4"/>
+      </RiskModule>
+      <RiskModule Name="水土保持" Value="10">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="接件" Value="1"/>
+        <RiskStep Name="审查" Value="2"/>
+        <RiskStep Name="审核" Value="3"/>
+        <RiskStep Name="审批" Value="4"/>
+        <RiskStep Name="办结" Value="5"/>
+      </RiskModule>
+      <RiskModule Name="涉水项目" Value="11">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="接件" Value="1"/>
+        <RiskStep Name="审查" Value="2"/>
+        <RiskStep Name="审核" Value="3"/>
+        <RiskStep Name="审批" Value="4"/>
+        <RiskStep Name="办结" Value="5"/>
+      </RiskModule>
+      <RiskModule Name="用水计划" Value="12">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="接件" Value="1"/>
+        <RiskStep Name="审查" Value="2"/>
+        <RiskStep Name="审批" Value="3"/>
+        <RiskStep Name="办结" Value="4"/>
+      </RiskModule>
+      <RiskModule Name="风险处置单" Value="13">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="新建" Value="1"/>
+        <RiskStep Name="拟办意见" Value="2"/>
+        <RiskStep Name="转呈领导批示" Value="3"/>
+        <RiskStep Name="领导批示" Value="4"/>
+        <RiskStep Name="派件" Value="5"/>
+        <RiskStep Name="办理" Value="6"/>
+        <RiskStep Name="归档" Value="7"/>
+      </RiskModule>
+      <RiskModule Name="财政预决算" Value="14">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="发布" Value="1"/>
+      </RiskModule>
+      <RiskModule Name="三公经费" Value="15">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="发布" Value="1"/>
+      </RiskModule>
+    </RiskModuleType>
+    <RiskModuleType Name="水务项目" Value="2">
+      <RiskModule Name="----请选择----" Value="0"/>
+      <RiskModule Name="基建项目" Value="1">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="项目备案" Value="1"/>
+        <RiskStep Name="规划" Value="2"/>
+        <RiskStep Name="项目建议书" Value="3"/>
+        <RiskStep Name="可行性研究报告" Value="4"/>
+        <RiskStep Name="初步设计或实施方案" Value="5"/>
+        <RiskStep Name="施工准备" Value="6"/>
+        <RiskStep Name="建议实施" Value="7"/>
+        <RiskStep Name="生产准备" Value="8"/>
+        <RiskStep Name="竣工验收" Value="9"/>
+        <RiskStep Name="后评价" Value="10"/>
+      </RiskModule>
+      <RiskModule Name="市财政项目" Value="2">
+        <RiskStep Name="----请选择----" Value="0"/>
+        <RiskStep Name="项目备案" Value="1"/>
+        <RiskStep Name="审定计划" Value="2"/>
+        <RiskStep Name="上报计划" Value="3"/>
+        <RiskStep Name="下达计划" Value="4"/>
+        <RiskStep Name="项目实施" Value="5"/>
+        <RiskStep Name="施工拨付" Value="6"/>
+        <RiskStep Name="竣工验收" Value="7"/>
+      </RiskModule>
+    </RiskModuleType>
+  </RiskPrevention>
+  <!--资金来源-->
+  <MoneySource>
+    <Item Name="市财政" Value="1"></Item>
+    <Item Name="市规划" Value="2"></Item>
+  </MoneySource>
+
+  <!--组织方式-->
+  <Organization>
+    <Item Name="市本级组织" Value="1"></Item>
+    <Item Name="区县组织" Value="2"></Item>
+    <Item Name="其他" Value="3"></Item>
+  </Organization>
+
+  <!--归档处室-->
+  <ArchiveOffice>
+    <Item Name="规划处" Value="1"></Item>
+    <Item Name="财务处" Value="2"></Item>
+  </ArchiveOffice>
+  
+  <!--滚动新闻显示条数-->
+  <ScrollNews ScrollCount="10"/>
+  <!--权限编码前缀-->
+  <RightPrefix Prefix="OA_R" Digit="2"/>
+  <!--角色编码前缀-->
+  <RolePrefix Prefix="SWOA_R" Digit="4"/>
+</Root>

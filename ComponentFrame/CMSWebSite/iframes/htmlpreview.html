@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+<HEAD>
+<TITLE> HTML Preview </TITLE>
+</HEAD>
+<BODY BGCOLOR="#FFFFFF" onload="Init()">
+
+<script language="javascript">
+
+var fullpath, curdir, thisfilename;
+
+
+
+fullpath = location.href; // fully qualified filepath 
+// of the form "file:///c:/Documents%20and%20Settings/Administrator/My%20Documents/htmlpreview.html"
+
+// regexp weirdo
+fullpath = fullpath.replace(/file:\/\/\//,""); // remove file:///
+fullpath = fullpath.replace(/\//g,"\\"); // replace slash with backslash (for use on Windows OS)
+fullpath = fullpath.replace(/%20/g," "); // replace escaped space
+
+// split path and filename
+var iLastBackslash = fullpath.lastIndexOf("\\");
+var thisfilename = fullpath.substring( iLastBackslash+1, fullpath.length); // = htmlpreview.html
+// remove filename from full path, we are just interested in the path
+var curdir = fullpath.substring( 0, iLastBackslash );
+
+
+// put the following line in comment if you don't want scaling
+var imgsize = " width=400 height=330";
+var clsid = " classid='clsid:1D2B4F40-1F10-11D1-9E88-00C04FDCAB92'";
+
+
+// main loop follows
+// purpose : use directory file enumerator to list all *.htm* files
+//           and prepare a table cell to preview it using the preview ActiveX
+
+var fso = new ActiveXObject("Scripting.FileSystemObject"), f, fc;
+
+f = fso.GetFolder(curdir);
+fc = new Enumerator(f.files); 
+s = "";
+sf = "<script language='javascript'> function Init() { ";
+i = 0;
+
+for (; !fc.atEnd(); fc.moveNext())
+{
+  // create an ActiveX instance for the preview of this html file
+  name = "Thumbnail"+i
+  s = "<object id=" + name + clsid + imgsize + "></"+"object>";
+  if (fc.item().Name.indexOf(".htm",0)>-1 && fc.item().Name!=thisfilename)
+  {
+      // and add an hyperlink to play with
+	  s = "<a href='"+fc.item().Name+"'>" + s + "</a>";
+	  document.write(s);
+	  // attach initialisation code to it
+	  // .replace(/\\/g, &quot;\\\\&quot;) replaces simple backslashes with double-backslashes
+	  s = name + ".displayFile( '" + fc.item().Path.replace(/\\/g, "\\\\") + "');";
+	  sf += s;
+	  i++;
+  }
+}
+sf += "} </"+ "script>";
+document.writeln(sf);
+
+</script>
+
+<!-- LEGACY CODE, here just for understanding purpose
+<table>
+<tr><td><object id=Thumbnail10 classid="clsid:1D2B4F40-1F10-11D1-9E88-00C04FDCAB92" width=120 height=100></object></td>
+<td>&nbsp;</td>
+</tr>
+</table>
+<script>
+function Init2()
+{
+ Thumbnail10.displayFile( 'D:\\new_stuff\\job_mediametrie.htm' )
+}
+</script>
+-->
+</BODY>
+</HTML>

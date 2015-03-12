@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Utils.Silverlight.Client</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.Client.OperateCompletedEventArgs">
+            <summary>
+            异步调用WebService的操作完成事件参数的基类
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Client.OperateCompletedEventArgs.PrimitiveEventArgs">
+            <summary>
+            获取原始事件参数
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Client.OperateCompletedEventArgs.Error">
+            <summary>
+            得到异常（正常调用完成时，此对像为Null）
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Client.OperateCompletedEventArgs.Result">
+            <summary>
+            得到正常调用完成时的原始返回结果
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Client.OperateCompletedEventArgs.ErrorResult">
+            <summary>
+            得到服务器发送的异常对像信息
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Client.OperateCompletedEventArgs.ResultObject">
+            <summary>
+            得到正常调用完成时的返回结果
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Client.WebServiceProxyBase">
+            <summary>
+            异步调用WebService的客户端基类
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Client.WebServiceProxyBase.InitializeWebClient">
+            <summary>
+            初始化WebClient对象
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Client.WebServiceProxyBase.CreatePostData(System.Collections.Generic.IDictionary{System.String,System.String})">
+            <summary>
+            创建POST参数
+            </summary>
+            <param name="postDatas">参数键值对</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Client.WebServiceProxyBase.GetOperateURI(System.String)">
+            <summary>
+            取得指定操作的Uri
+            </summary>
+            <param name="operateName">操作名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Client.WebServiceProxyBase.GetEncryptKey(System.String,System.String)">
+            <summary>
+            取指定操作的键，此方法需要在派生类中重写
+            </summary>
+            <param name="UTag">用户标识</param>
+            <param name="operateName">操作名称</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Client.WebServiceProxyBase.EncodeWebParam(System.Boolean,System.String,System.Object)">
+            <summary>
+            编码WebService参数数据
+            </summary>
+            <param name="isEncode">是否加码</param>
+            <param name="key">键</param>
+            <param name="data">数据对象</param>
+            <returns>编码后的对象数据</returns>
+        </member>
+        <member name="M:PengeSoft.Client.WebServiceProxyBase.DecodeWebResult(System.Boolean,System.String,System.String)">
+            <summary>
+            解码WebService参数数据
+            </summary>
+            <param name="isEncoded">是否加码</param>
+            <param name="key">键</param>
+            <param name="data">数据</param>
+            <returns>解码后的对象</returns>
+        </member>
+        <member name="P:PengeSoft.Client.WebServiceProxyBase.BaseAddress">
+            <summary>
+            获取WebService的基地址
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Client.WebServiceUserToken">
+            <summary>
+            异步调用WebService的状态参数，用于在异步调用完成时区别不同的
+            </summary>
+        </member>
+    </members>
+</doc>

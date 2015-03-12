@@ -1,0 +1,5 @@
+E:\ydoa\CommunityFramework\10编码\ComponentFrame\PengeSoft.CMS.UserdefLayout\bin\Debug\PengeSoft.CMS.UserdefLayout.dll
+E:\ydoa\CommunityFramework\10编码\ComponentFrame\PengeSoft.CMS.UserdefLayout\bin\Debug\PengeSoft.CMS.UserdefLayout.pdb
+E:\ydoa\CommunityFramework\10编码\ComponentFrame\PengeSoft.CMS.UserdefLayout\obj\Debug\PengeSoft.CMS.UserdefLayout.csprojResolveAssemblyReference.cache
+E:\ydoa\CommunityFramework\10编码\ComponentFrame\PengeSoft.CMS.UserdefLayout\obj\Debug\PengeSoft.CMS.UserdefLayout.dll
+E:\ydoa\CommunityFramework\10编码\ComponentFrame\PengeSoft.CMS.UserdefLayout\obj\Debug\PengeSoft.CMS.UserdefLayout.pdb

@@ -1,0 +1,507 @@
+body {
+	margin: 0px; padding: 0px;
+}
+div {
+	margin: 0px; padding: 0px;
+}
+dl {
+	margin: 0px; padding: 0px;
+}
+dt {
+	margin: 0px; padding: 0px;
+}
+dd {
+	margin: 0px; padding: 0px;
+}
+ul {
+	margin: 0px; padding: 0px;
+}
+ol {
+	margin: 0px; padding: 0px;
+}
+li {
+	margin: 0px; padding: 0px;
+}
+h1 {
+	margin: 0px; padding: 0px;
+}
+h2 {
+	margin: 0px; padding: 0px;
+}
+h3 {
+	margin: 0px; padding: 0px;
+}
+h4 {
+	margin: 0px; padding: 0px;
+}
+h5 {
+	margin: 0px; padding: 0px;
+}
+h6 {
+	margin: 0px; padding: 0px;
+}
+input {
+	margin: 0px; padding: 0px;
+}
+button {
+	margin: 0px; padding: 0px;
+}
+textarea {
+	margin: 0px; padding: 0px;
+}
+p {
+	margin: 0px; padding: 0px;
+}
+blockquote {
+	margin: 0px; padding: 0px;
+}
+th {
+	margin: 0px; padding: 0px;
+}
+td {
+	margin: 0px; padding: 0px;
+}
+form {
+	margin: 0px; padding: 0px;
+}
+input {
+	outline: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+button {
+	outline: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+textarea {
+	outline: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+select {
+	outline: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+optgroup {
+	outline: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+option {
+	outline: 0px; font-family: inherit; font-size: inherit; font-style: inherit; font-weight: inherit;
+}
+li {
+	list-style: none;
+}
+.xxim_icon {
+	background: url("/Image/icon.png") no-repeat; position: absolute;
+}
+.xxim_main i {
+	background: url("/Image/icon.png") no-repeat; position: absolute;
+}
+.layim_chatbox i {
+	background: url("/Image/icon.png") no-repeat; position: absolute;
+}
+.loading {
+	background: url("/Image/layim_loading.gif") no-repeat center;
+}
+.layim_chatbox a {
+	color: rgb(52, 52, 52); text-decoration: none;
+}
+.layim_chatbox a:hover {
+	color: rgb(52, 52, 52); text-decoration: none;
+}
+.layim_zero {
+	border-style: dashed; border-color: transparent; width: 0px; height: 0px; overflow: hidden; position: absolute;
+}
+.xxim_main {
+	border: 1px solid rgb(190, 190, 190); border-image: none; width: 230px; right: 1px; bottom: 1px; font-size: 12px; position: fixed; z-index: 1989; box-shadow: 0px 0px 10px rgba(0,0,0,0.2); background-color: rgb(255, 255, 255);
+}
+.layim_chatbox textarea {
+	resize: none;
+}
+.xxim_main em {
+	font-style: normal; font-weight: 400;
+}
+.xxim_main i {
+	font-style: normal; font-weight: 400;
+}
+.layim_chatbox em {
+	font-style: normal; font-weight: 400;
+}
+.layim_chatbox i {
+	font-style: normal; font-weight: 400;
+}
+.xxim_main h5 {
+	font-size: 100%; font-weight: 400;
+}
+.xxim_search {
+	height: 40px; padding-left: 40px; border-bottom-color: rgb(220, 220, 220); border-bottom-width: 1px; border-bottom-style: solid; position: relative; background-color: rgb(255, 255, 255);
+}
+.xxim_search i {
+	background-position: -175px -40px; left: 10px; top: 12px; width: 16px; height: 16px;
+}
+.xxim_search input {
+	background: none; border: currentColor; border-image: none; width: 180px; line-height: 20px; margin-top: 10px;
+}
+.xxim_search span {
+	padding: 0px 2px; border-radius: 2px; top: 10px; height: 18px; right: 10px; color: rgb(255, 255, 255); line-height: 18px; font-size: 12px; font-weight: 900; display: none; position: absolute; cursor: pointer; background-color: rgb(175, 175, 175);
+}
+.xxim_search span:hover {
+	background-color: rgb(252, 190, 0);
+}
+.xxim_tabs {
+	height: 45px; font-size: 0px; border-bottom-color: rgb(219, 219, 219); border-bottom-width: 1px; border-bottom-style: solid; background-color: rgb(244, 244, 244);
+}
+.xxim_tabs span {
+	width: 76px; height: 45px; font-size: 12px; vertical-align: top; border-right-color: rgb(219, 219, 219); border-right-width: 1px; border-right-style: solid; display: inline-block; position: relative; cursor: pointer;
+}
+.xxim_tabs span i {
+	left: 50%; top: 13px; width: 19px; height: 18px; margin-left: -10px;
+}
+.xxim_tabs .xxim_tabnow {
+	height: 46px; background-color: rgb(255, 255, 255);
+}
+.xxim_tabs .xxim_latechat {
+	border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.xxim_tabs .xxim_tabfriend i {
+	background-position: -45px -40px; width: 14px; margin-left: -7px;
+}
+.xxim_tabs .xxim_tabgroup i {
+	background-position: -65px -40px;
+}
+.xxim_tabs .xxim_latechat i {
+	background-position: -90px -40px;
+}
+.xxim_list {
+	padding: 5px 0px; height: 320px; overflow: hidden; display: none;
+}
+.xxim_list:hover {
+	-ms-overflow-y: auto;
+}
+.xxim_list h5 {
+	height: 26px; color: rgb(0, 0, 0); line-height: 26px; padding-left: 32px; font-size: 0px; position: relative; cursor: pointer;
+}
+.xxim_list h5 span {
+	overflow: hidden; font-size: 12px; vertical-align: top; display: inline-block; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 140px;
+}
+.xxim_list h5 i {
+	background-position: -20px -5px; left: 15px; top: 10px; width: 7px; height: 8px;
+}
+.xxim_list h5 * {
+	font-size: 12px;
+}
+.xxim_list .xxim_chatlist {
+	display: none;
+}
+.xxim_list .xxim_liston h5 i {
+	background-position: -5px -5px; width: 8px; height: 7px;
+}
+.xxim_list .xxim_liston .xxim_chatlist {
+	display: block;
+}
+.xxim_chatlist {
+	
+}
+.xxim_chatlist li {
+	padding: 5px 10px; height: 30px; line-height: 30px; font-size: 0px; position: relative; cursor: pointer;
+}
+.xxim_chatlist li:hover {
+	background-color: rgb(242, 244, 248);
+}
+.xxim_chatlist li * {
+	font-size: 12px; vertical-align: top; display: inline-block;
+}
+.xxim_chatlist li span {
+	overflow: hidden; padding-left: 10px; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 120px;
+}
+.xxim_chatlist li img {
+	width: 30px; height: 30px;
+}
+.xxim_chatlist li .xxim_time {
+	right: 10px; color: rgb(153, 153, 153); position: absolute;
+}
+.xxim_list .xxim_errormsg {
+	margin: 50px 0px; text-align: center; color: rgb(153, 153, 153);
+}
+.xxim_searchmain {
+	left: 0px; top: 41px; width: 230px; height: 491px; position: absolute; z-index: 10; background-color: rgb(255, 255, 255);
+}
+.xxim_bottom {
+	height: 32px; border-top-color: rgb(208, 220, 243); border-top-width: 1px; border-top-style: solid; background-color: rgb(242, 244, 248);
+}
+.xxim_expend {
+	border-bottom-color: rgb(208, 220, 243); border-left-color: rgb(208, 220, 243); border-bottom-width: 1px; border-left-width: 1px; border-bottom-style: solid; border-left-style: solid;
+}
+.xxim_bottom li {
+	width: 50px; height: 32px; line-height: 32px; border-right-color: rgb(208, 220, 243); border-right-width: 1px; border-right-style: solid; float: left; position: relative; cursor: pointer;
+}
+.xxim_bottom li i {
+	top: 11px;
+}
+.xxim_bottom .xxim_hide {
+	border-right-color: currentColor; border-right-width: medium; border-right-style: none;
+}
+.xxim_bottom .xxim_online {
+	width: 75px; padding-left: 35px;
+}
+.xxim_online i {
+	background-position: -50px -5px; left: 13px; width: 12px; height: 12px;
+}
+.xxim_setonline {
+	border: 1px solid rgb(220, 220, 220); border-image: none; left: -79px; bottom: -1px; display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+.xxim_setonline span {
+	padding: 0px 10px 0px 35px; width: 77px; display: block; position: relative;
+}
+.xxim_setonline span:hover {
+	background-color: rgb(242, 244, 248);
+}
+.xxim_offline .xxim_nowstate {
+	background-position: -35px -5px;
+}
+.xxim_setoffline i {
+	background-position: -35px -5px;
+}
+.xxim_mymsg i {
+	background-position: -105px -5px; left: 18px; width: 13px; height: 13px;
+}
+.xxim_mymsg a {
+	left: 0px; top: 0px; width: 50px; height: 32px; position: absolute;
+}
+.xxim_seter i {
+	background-position: -84px -5px; left: 18px; width: 13px; height: 13px;
+}
+.xxim_hide i {
+	background-position: -115px -40px; left: 18px; width: 14px; height: 14px;
+}
+.xxim_show i {
+	background-position: -135px -40px;
+}
+.xxim_bottom .xxim_on {
+	background-position: -25px -65px; left: -15px; top: 50%; width: 13px; height: 97px; margin-top: -49px; position: absolute;
+}
+.xxim_bottom .xxim_off {
+	background-position: -5px -65px;
+}
+.layim_chatbox {
+	border: 1px solid rgb(190, 190, 190); border-image: none; width: 620px; font-size: 12px; box-shadow: 0px 0px 10px rgba(0,0,0,0.2); background-color: rgb(255, 255, 255);
+}
+.layim_chatbox h6 {
+	height: 40px; border-bottom-color: rgb(217, 217, 217); border-bottom-width: 1px; border-bottom-style: solid; position: relative; background-color: rgb(252, 253, 250);
+}
+.layim_move {
+	width: 620px; height: 40px; position: absolute; z-index: 0;
+}
+.layim_face {
+	padding: 1px; border: 1px solid rgb(204, 204, 204); border-image: none; left: 10px; width: 60px; height: 60px; bottom: -1px; position: absolute;
+}
+.layim_face img {
+	width: 60px; height: 60px;
+}
+.layim_names {
+	left: 20px; color: rgb(0, 0, 0); line-height: 40px; overflow: hidden; font-size: 14px; white-space: nowrap; position: absolute; -ms-text-overflow: ellipsis; max-width: 300px;
+}
+.layim_rightbtn {
+	top: 12px; right: 15px; font-size: 0px; position: absolute;
+}
+.layim_rightbtn i {
+	transition:0.3s; width: 16px; height: 16px; vertical-align: top; display: inline-block; position: relative; cursor: pointer;
+}
+.layim_rightbtn .layim_close {
+	background-position: -5px -40px;
+}
+.layim_rightbtn .layim_close:hover {
+	-webkit-transform: rotate(180deg); -moz-transform: rotate(180deg);
+}
+.layim_rightbtn .layer_setmin {
+	background-position: -275px -2px; margin-right: 15px;
+}
+.layim_chat {
+	height: 450px; overflow: hidden;
+}
+.layim_chatmore {
+	height: 450px; overflow: hidden;
+}
+.layim_groups {
+	height: 450px; overflow: hidden;
+}
+.layim_chatmore {
+	width: 135px; border-right-color: rgb(190, 190, 190); border-right-width: 1px; border-right-style: solid; float: left; display: none; background-color: rgb(242, 242, 242);
+}
+.layim_chatlist li {
+	padding: 0px 10px; height: 30px; line-height: 30px; overflow: hidden; white-space: nowrap; position: relative; cursor: pointer; -ms-text-overflow: ellipsis;
+}
+.layim_groups li {
+	padding: 0px 10px; height: 30px; line-height: 30px; overflow: hidden; white-space: nowrap; position: relative; cursor: pointer; -ms-text-overflow: ellipsis;
+}
+.layim_chatlist li {
+	padding: 0px 20px 0px 10px;
+}
+.layim_chatlist li:hover {
+	background-color: rgb(227, 227, 227);
+}
+.layim_chatlist li span {
+	width: 90px; overflow: hidden; vertical-align: top; display: inline-block; white-space: nowrap; -ms-text-overflow: ellipsis;
+}
+.layim_chatlist li em {
+	padding: 0px 3px; border-radius: 3px; top: 6px; height: 18px; right: 10px; line-height: 18px; font-weight: 900; display: none; position: absolute;
+}
+.layim_chatlist li em:hover {
+	color: rgb(255, 255, 255); background-color: rgb(252, 190, 0);
+}
+.layim_chatlist .layim_chatnow {
+	background-color: rgb(255, 255, 255);
+}
+.layim_chatlist .layim_chatnow:hover {
+	background-color: rgb(255, 255, 255);
+}
+.layim_chat {
+	
+}
+.layim_chatarea {
+	height: 280px;
+}
+.layim_chatview {
+	height: 280px; overflow: hidden; display: none;
+}
+.layim_chatviews {
+	height: 280px; overflow: auto; display: none;
+}
+.layim_chatmore:hover {
+	-ms-overflow-y: auto;
+}
+.layim_groups:hover {
+	-ms-overflow-y: auto;
+}
+.layim_chatview:hover {
+	-ms-overflow-y: auto;
+}
+.layim_chatview li {
+	clear: both; margin-bottom: 10px;
+}
+.layim_chatview li::after {
+	height: 0px; clear: both; display: block; content: "\20";
+}
+.layim_chatviews:hover {
+	-ms-overflow-y: auto;
+}
+.layim_chatviews li {
+	clear: both; margin-bottom: 10px;
+}
+.layim_chatviews li::after {
+	height: 0px; clear: both; display: block; content: "\20";
+}
+.layim_chatthis {
+	display: block;
+}
+.layim_chatuser {
+	padding: 15px; font-size: 0px; float: left;
+}
+.layim_chatuser * {
+	line-height: 30px; padding-right: 10px; font-size: 12px; vertical-align: top; display: inline-block;
+}
+.layim_chatuser img {
+	width: 30px; height: 30px;
+}
+.layim_chatuser .layim_chatname {
+	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 230px;
+}
+.layim_chatuser .layim_chattime {
+	color: rgb(153, 153, 153); padding-left: 10px;
+}
+.layim_chatsay {
+	margin: 0px 15px; padding: 10px; border-radius: 3px; line-height: 20px; clear: both; float: left; position: relative; background-color: rgb(243, 243, 243);
+}
+.layim_chatsay .layim_zero {
+	border-width: 8px; left: 5px; top: -8px; border-right-color: rgb(243, 243, 243); border-right-style: solid;
+}
+.layim_chateme .layim_chatuser {
+	float: right;
+}
+.layim_chateme .layim_chatuser * {
+	padding-right: 0px; padding-left: 10px;
+}
+.layim_chateme .layim_chatsay .layim_zero {
+	left: auto; right: 10px;
+}
+.layim_chateme .layim_chatuser .layim_chattime {
+	padding-right: 10px; padding-left: 0px;
+}
+.layim_chateme .layim_chatsay {
+	float: right; background-color: rgb(235, 251, 227);
+}
+.layim_chateme .layim_zero {
+	border-right-color: rgb(235, 251, 227);
+}
+.layim_groups {
+	width: 130px; border-left-color: rgb(217, 217, 217); border-left-width: 1px; border-left-style: solid; float: right; display: none; background-color: rgb(255, 255, 255);
+}
+.layim_groups ul {
+	display: none;
+}
+.layim_groups ul.layim_groupthis {
+	display: block;
+}
+.layim_groups li * {
+	margin-right: 10px; vertical-align: top; display: inline-block;
+}
+.layim_groups li img {
+	width: 20px; height: 20px; margin-top: 5px;
+}
+.layim_groups li span {
+	overflow: hidden; white-space: nowrap; -ms-text-overflow: ellipsis; max-width: 80px;
+}
+.layim_groups li:hover {
+	background-color: rgb(243, 243, 243);
+}
+.layim_groups .layim_errors {
+	text-align: center; color: rgb(153, 153, 153);
+}
+.layim_tool {
+	height: 35px; line-height: 35px; padding-left: 10px; position: relative; background-color: rgb(243, 243, 243);
+}
+.layim_tool i {
+	top: 10px; width: 15px; height: 15px; margin-right: 10px; vertical-align: top; display: inline-block; position: relative; cursor: pointer;
+}
+.layim_tool .layim_addface {
+	background-position: -5px -20px;
+}
+.layim_tool .layim_addimage {
+	background-position: -47px -20px;
+}
+.layim_tool .layim_addfile {
+	background-position: -25px -20px;
+}
+.layim_tool .layim_seechatlog {
+	right: 15px; position: absolute;
+}
+.layim_tool .layim_seechatlog i {
+	background-position: -70px -20px;
+}
+.layim_write {
+	margin: 5px auto 0px; border: currentColor; border-image: none; width: 98%; height: 90px; line-height: 20px; display: block;
+}
+.layim_send {
+	height: 40px; position: relative; background-color: rgb(243, 243, 243);
+}
+.layim_sendbtn {
+	padding: 0px 40px 0px 20px; border-radius: 3px; top: 8px; height: 26px; right: 10px; color: rgb(255, 255, 255); line-height: 26px; position: absolute; cursor: pointer; background-color: rgb(255, 160, 10);
+}
+.layim_enter {
+	width: 24px; height: 26px; right: 0px; border-left-color: rgb(255, 185, 79); border-left-width: 1px; border-left-style: solid; position: absolute;
+}
+.layim_enter:hover {
+	border-radius: 0px 3px 3px 0px; background-color: rgb(230, 138, 0);
+}
+.layim_enter .layim_zero {
+	border-width: 5px; left: 7px; top: 11px; border-top-color: rgb(255, 224, 179); border-top-style: solid;
+}
+.layim_sendtype {
+	border: 1px solid rgb(217, 217, 217); border-image: none; text-align: left; right: 10px; bottom: 37px; display: none; position: absolute; background-color: rgb(255, 255, 255);
+}
+.layim_sendtype span {
+	padding: 0px 10px 0px 25px; line-height: 24px; display: block; cursor: pointer;
+}
+.layim_sendtype span:hover {
+	background-color: rgb(243, 243, 243);
+}
+.layim_sendtype span i {
+	background-position: -999px -999px; left: 5px;
+}
+.layim_min {
+	padding: 0px 10px; border: 1px solid rgb(204, 204, 204); border-image: none; left: -190px; width: 160px; height: 32px; bottom: -1px; line-height: 32px; overflow: hidden; display: none; white-space: nowrap; position: absolute; cursor: pointer; -ms-text-overflow: ellipsis; box-shadow: 0px 0px 5px rgba(0,0,75,0.2); background-color: rgb(252, 253, 250);
+}

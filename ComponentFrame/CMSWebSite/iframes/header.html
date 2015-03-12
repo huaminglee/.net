@@ -1,0 +1,59 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>鹏业门户系统-公共顶部</title>
+    <!--设置移动设备的支持-->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="/jquery/1.9.1/jquery.min.js"></script>
+    <link href="/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/myskin/myskin1.css" rel="stylesheet" />
+    <link href="/css/mycss/common.css" rel="stylesheet" />
+    <link href="/css/jquery.gridster.css" rel="stylesheet" />
+    <script src="/assets/js/ie-emulation-modes-warning.js"></script>
+    <script src="/assets/js/ie10-viewport-bug-workaround.js"></script>
+    <script src="/js/json2.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script src="/js/jquery.gridster.min.js"></script>
+    <script src="/Script/layer/layer.min.js"></script>
+    <!--ie8对html5的支持补丁-->
+    <script src="/js/html5shiv.min.js"></script>
+    <!--ie6-8对响应式布局的支持-->
+    <script src="/js/respond.min.js"></script>
+    <script src="/js/UrlJump.js"></script>
+    <script src="/js/BaseService.js"></script>
+    <script src="/js/MessageService.js"></script>
+    <script src="/js/UserBaseInfoService.js"></script>
+    <script src="/js/myjs/header.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse-blue navbar-fixed-top" role="navigation">
+      <div class="container-fluid" >
+        <div class="navbar-header header-title">
+            <img src="/Image/logo.png" width="153px" height="60px"/>
+            鹏业门户系统
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right navbar-font">
+            <li><a href="#"  data-target="/iframes/message/MyMessage.html?State=1" data-model="container"><span class="glyphicon glyphicon-comment" id="msg_comment"></span>&nbsp;<span class="badge" id="messagecount"></span></a></li>
+            <li><a href="#" ><span id="suname"></span>，欢迎你</a></li>
+            <li><a href="#" onclick="UpdetePass()">修改密码</a></li>
+            <li><a href="#" onclick="modalSkin()">皮肤管理</a></li>
+            <li><a href="#" onclick="goIndexDesign()">设计模式</a></li>
+            <li><a href="#" onclick="logout()">退出</a></li>
+          </ul> 
+        </div> 
+        <div class="input-group" style="width:300px;float:right;margin-right:40px;margin-top:-30px;margin-bottom:10px">
+                <input type="text" class="form-control" placeholder="请输入关键字搜索...">
+                <span class="input-group-btn">
+                    <button class="btn btn-default" title="站内搜索">
+                        <span class="glyphicon glyphicon-search"></span>
+                    </button>
+                </span>
+            </div> 
+      </div>
+    </nav>
+
+</body>
+</html>

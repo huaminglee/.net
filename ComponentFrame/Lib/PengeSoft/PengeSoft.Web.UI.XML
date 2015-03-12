@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.Web.UI</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.Web.UI.ETextBoxValidateMode">
+            <summary>
+            文本框验证模式
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Web.UI.ETextBoxValidateMode.None">
+            <summary>
+            不做任何检查
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Web.UI.ETextBoxValidateMode.Number">
+            <summary>
+            不能为空，并且是数值类型
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Web.UI.ETextBoxValidateMode.NumberChar">
+            <summary>
+            是数字字符
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Web.UI.ETextBoxValidateMode.WordChar">
+            <summary>
+            是字符字符
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Web.UI.ETextBoxValidateMode.WordAndNumberChar">
+            <summary>
+            是数字和字母字符
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Web.UI.ETextBoxValidateMode.Email">
+            <summary>
+            电子邮件地址
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Web.UI.ETextBoxValidateMode.Regex">
+            <summary>
+            正则表达式
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.ValidButton">
+            <summary>
+            带客户端验证的按钮控件
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.IValidControl">
+            <summary>
+            Web服务器控件在需要实现客户端验证的情况下，需要实现此接口
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.IValidControl.RegPublicScript">
+            <summary>
+            注册公共脚本，由开发人员调用
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.IValidControl.RegClientScript">
+            <summary>
+            注册控件的客户端验证脚本，同开发人员调用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.IValidControl.ErrorText">
+            <summary>
+            获取或设置控件验证未通过时的提示文本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.IValidControl.ClientCheckFunName">
+            <summary>
+            获取控件的客户端验证函数名称
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.IValidControl.IsCreatedClientCheckScript">
+            <summary>
+            获取一个值，指示控件是否创建了客户端验证脚本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidButton.ErrorText">
+            <summary>
+            获取或设置验证未通过时的提示文本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidButton.ClientCheckFunName">
+            <summary>
+            获取控件的客户端验证函数名称
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidButton.IsCreatedClientCheckScript">
+            <summary>
+            获取一个值，指示控件是否创建了客户端验证脚本
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.EListValidateMode">
+            <summary>
+            列表控件的验证模式
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.ControlService">
+            <summary>
+            ControlService 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.ValidControlNameCollection">
+            <summary>
+            ValidControlsc 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.CheckItem">
+            <summary>
+            CheckItem 的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.SortTip">
+            <summary>
+            排序提示类
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.SortTip.ToString">
+            <summary>
+            ToString()
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.Web.UI.SortTip.SortDescImage">
+            <summary>
+            降序提示图片
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.SortTip.SortAscImage">
+            <summary>
+            升序提示图片
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.SortTip.SortDescText">
+            <summary>
+            降序提示文本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.SortTip.SortAscText">
+            <summary>
+            升序提示文本
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.GridViewPaged">
+            <summary>
+            使用<see cref="T:PengeSoft.db.IPagedList"/>做为数据源的GridView, 并扩展了排序功能。
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.GridViewPaged.SortTip">
+            <summary>
+            排序提示信息
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.ValidTextBox">
+            <summary>
+            带客户端验证的文本输入控件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.ValidTextBox.RegPublicScript">
+            <summary>
+            注册公共脚本，由开发人员调用
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.ValidTextBox.RegClientScript">
+            <summary>
+            注册控件的客户端验证脚本，同开发人员调用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidTextBox.ValidateMode">
+            <summary>
+            获取或设置验证模式
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidTextBox.NotNull">
+            <summary>
+            获取或设置控件是否可能为空
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidTextBox.Expression">
+            <summary>
+            获取或设置用户验证的表达式
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidTextBox.ErrorText">
+            <summary>
+            获取或设置验证未通过时的提示文本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidTextBox.ClientCheckFunName">
+            <summary>
+            获取控件的客户端验证函数名称
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidTextBox.IsCreatedClientCheckScript">
+            <summary>
+            获取一个值，指示控件是否创建了客户端验证脚本
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.ValidListBox">
+            <summary>
+            带客户端验证的允许单项或多项选择的列表框控件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.ValidListBox.RegPublicScript">
+            <summary>
+            注册公共脚本，由开发人员调用
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.ValidListBox.RegClientScript">
+            <summary>
+            注册控件的客户端验证脚本，同开发人员调用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidListBox.ErrorText">
+            <summary>
+            获取或设置验证未通过时的提示文本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidListBox.ClientCheckFunName">
+            <summary>
+            获取控件的客户端验证函数名称
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidListBox.IsCreatedClientCheckScript">
+            <summary>
+            获取一个值，指示控件是否创建了客户端验证脚本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidListBox.ValidateMode">
+            <summary>
+            获取或设置验证模式
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidListBox.NoSelectedValue">
+            <summary>
+            获取或设置表示未选中的项目的值
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Web.UI.ValidDropDownList">
+            <summary>
+            带客户端验证的允许用户从下拉列表中选择一项的控件
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.ValidDropDownList.RegPublicScript">
+            <summary>
+            注册公共脚本，由开发人员调用
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Web.UI.ValidDropDownList.RegClientScript">
+            <summary>
+            注册控件的客户端验证脚本，同开发人员调用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidDropDownList.ErrorText">
+            <summary>
+            获取或设置验证未通过时的提示文本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidDropDownList.ClientCheckFunName">
+            <summary>
+            获取控件的客户端验证函数名称
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidDropDownList.IsCreatedClientCheckScript">
+            <summary>
+            获取一个值，指示控件是否创建了客户端验证脚本
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidDropDownList.ValidateMode">
+            <summary>
+            获取或设置验证模式
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Web.UI.ValidDropDownList.NoSelectedValue">
+            <summary>
+            获取或设置表示未选中的项目的值
+            </summary>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,76 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <!-- 移动设备优先 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>模块列表</title>
+    <!-- 最新 Bootstrap 核心 CSS 文件 -->
+    <link href="/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/html5_layout.css" rel="stylesheet" />
+    <link href="/easyui/1.3.6/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <link href="/easyui/1.3.6/themes/icon.css" rel="stylesheet" />
+    
+    <!-- jQuery文件务必在bootstrap.min.js 之前引入 -->
+    <script src="/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/easyui/1.3.6/jquery.easyui.min.js"></script>
+    <!-- 最新 Bootstrap 核心 JavaScript 文件 -->
+    <script src="/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="/Script/layer/layer.min.js"></script>
+    <script src="/Script/My97DatePicker/WdatePicker.js"></script>
+    <script src="/js/UrlJump.js"></script>
+    <script src="/js/BaseService.js"></script>
+    <script src="/js/ModelInfoService.js"></script>
+    <script src="/js/ModelInfoService.js"></script>
+    <script src="/js/myjs/model.js"></script>
+</head>
+<body>
+    <section class="container" style="height:100%">
+        <div class="container-fluid">
+                <fieldset>
+                    <legend><small class="text-primary">模块列表</small></legend>
+                    <div class="row">
+                        <div class="col-sm-1">
+                            <input type="button" class="btn btn-primary" onclick="Newmodel()" value="新&ensp;增" />
+                        </div>
+                    </div>
+                    <br />
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover table-condensed table-bordered cursor">
+                                    <thead>
+                                        <tr>
+                                            <th style="width: 5%; text-align: center">编号</th>
+                                            <th style="width: 10%; text-align: center">模块名称</th>
+                                            <th style="width: 20%; text-align: center">模块内容</th>
+                                            <th style="width: 15%; text-align: center">模块图标</th>
+                                            <th style="width: 10%; text-align: center">所属权限</th>
+                                            <th style="width: 30%; text-align: center">描述</th>
+                                            <th style="width: 10%; text-align: center">管理</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="tb_modellist"></tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 分页 -->
+                    <div class="row">
+                        <div class="col-sm-12 text-center">
+                            <div id="pagination" class="easyui-pagination" data-options="
+                            total:0,
+                            pageSize:10,
+                            layout:['first','prev','sep','links','sep','next','last','manual'],
+                            beforePageText:'转到',
+                            afterPageText:'页',
+                            displayMsg:' 共 {total} 条记录，当前显示 {from} 到 {to}条'
+                            "></div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+    </section>
+</body>
+</html>

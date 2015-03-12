@@ -1,0 +1,107 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FlawlessCode.Navigation</name>
+    </assembly>
+    <members>
+        <member name="T:FlawlessCode.Navigation.TransitionBase">
+            <summary>
+            Represents a transition between two UserControls
+            </summary>
+        </member>
+        <member name="M:FlawlessCode.Navigation.TransitionBase.PerformTranstition(System.Windows.Controls.UserControl,System.Windows.Controls.UserControl)">
+            <summary>
+            Performs a transition between two UserControls.
+            </summary>
+            <param name="newPage">The new UserControl to be displayed.</param>
+            <param name="oldPage">The old UserControl to be removed.</param>
+        </member>
+        <member name="E:FlawlessCode.Navigation.TransitionBase.TransitionCompleted">
+            <summary>
+            Fired when the transition is complete and the NavigationHelper can
+            remove the old UserControl. Implementors must fire the event when
+            the transition is complete.
+            </summary>
+        </member>
+        <member name="T:FlawlessCode.Navigation.NavigationHelper">
+            <summary>
+            Provides methods to allow page transitions between two UserControls.
+            </summary>
+        </member>
+        <member name="F:FlawlessCode.Navigation.NavigationHelper.root">
+            <summary>
+            A reference to our root xaml element for our app.
+            </summary>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelper.#cctor">
+            <summary>
+            Provides methods to allow page transitions between two UserControls.
+            </summary>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelper.Navigate(FlawlessCode.Navigation.TransitionBase,System.Windows.Controls.UserControl)">
+            <summary>
+            Causes a new UserControl to be displayed taking over from the old one
+            using the supplied transition.
+            </summary>
+            <param name="transition">The transition to use.</param>
+            <param name="newPage">The new UserControl to display.</param>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelper.Navigate(System.Windows.Controls.UserControl)">
+            <summary>
+            Causes a new UserControl to be displayed taking over from the old one.
+            </summary>
+            <param name="newPage">The new UserControl to display.</param>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelper.transition_TransitionCompleted(System.Object,FlawlessCode.Navigation.TransitionCompletedEventArgs)">
+            <summary>
+            Fired when a transition is completed, this allows us to remove the
+            old UserControl from the tree.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">The TransitionCompletedEventArgs.</param>
+        </member>
+        <member name="T:FlawlessCode.Navigation.NavigationHelperEx">
+            <summary>
+            Provides methods to allow page transitions between two UserControls.
+            </summary>
+        </member>
+        <member name="F:FlawlessCode.Navigation.NavigationHelperEx.root">
+            <summary>
+            A reference to our root xaml element for our app.
+            </summary>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelperEx.#ctor(System.Windows.Controls.Grid)">
+            <summary>
+            Provides methods to allow page transitions between two UserControls.
+            </summary>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelperEx.Navigate(FlawlessCode.Navigation.TransitionBase,System.Windows.Controls.UserControl)">
+            <summary>
+            Causes a new UserControl to be displayed taking over from the old one
+            using the supplied transition.
+            </summary>
+            <param name="transition">The transition to use.</param>
+            <param name="newPage">The new UserControl to display.</param>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelperEx.Navigate(System.Windows.Controls.UserControl)">
+            <summary>
+            Causes a new UserControl to be displayed taking over from the old one.
+            </summary>
+            <param name="newPage">The new UserControl to display.</param>
+        </member>
+        <member name="M:FlawlessCode.Navigation.NavigationHelperEx.transition_TransitionCompleted(System.Object,FlawlessCode.Navigation.TransitionCompletedEventArgs)">
+            <summary>
+            Fired when a transition is completed, this allows us to remove the
+            old UserControl from the tree.
+            </summary>
+            <param name="sender">The sender of the event.</param>
+            <param name="e">The TransitionCompletedEventArgs.</param>
+        </member>
+        <member name="T:FlawlessCode.Navigation.TransitionCompletedEventArgs">
+            <summary>
+            EventArgs class which is used for the TransitionCompleted event
+            fired by TransitionBase
+            </summary>
+        </member>
+    </members>
+</doc>

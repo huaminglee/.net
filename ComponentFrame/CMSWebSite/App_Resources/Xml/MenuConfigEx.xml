@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<MenuItem Title="根" >
+
+  <MenuItem ShowLeft="0" ActionName="OA0101" Title="首页" Description="首页" Uri="HomePage.aspx" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA0206" Title="日常公文" Description="日常公文" Uri="HomePage.aspx?action=Archive/ucArchiveList&amp;ArchiveType=1" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA0207" Title="督办工作" Description="督办工作" Uri="HomePage.aspx?action=Archive/ucArchiveList&amp;ArchiveType=2" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA0208" Title="建议提案" Description="建议提案" Uri="HomePage.aspx?action=Archive/ucArchiveList&amp;ArchiveType=3" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA0210" Title="局领导批示" Description="局领导批示" Uri="HomePage.aspx?action=Archive/ucArchiveList&amp;ArchiveType=6" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA12" Title="预售许可" Description="预售许可" Uri="HomePage.aspx?action=Archive/ucArchiveList&amp;ArchiveType=8" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA03" Title="公告消息" Description="公告消息" Uri="HomePage.aspx?Action=Message/ucMessageList" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA040--no" Title="会议通知" Description="会议通知" Uri="HomePage.aspx?action=Conference/ucConferenceList" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA0908"  Title="廉政教育" Uri="HomePage.aspx?action=RiskControl/ucRiskEduList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+
+  <MenuItem ShowLeft="1" ActionName="OA10" Title="工作监控" Description="工作监控" Uri="HomePage.aspx?Action=Blank" backgroundImage="App_Resources/Images/leftMenu_02.jpg">
+    <MenuItem Title="房屋登记" Description="房屋登记" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA100101"  Title="业务监控" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseRegiWorkCount" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem Title="风险监控" Description="风险监控" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+        <MenuItem ActionName="OA10010201"  Title="办件超期" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseOverDueList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10010202"  Title="办件撤销" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseCancelList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10010204"  Title="提前办件" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseAdvanceList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10010205"  Title="抵押风险" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseRiskList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10010205"  Title="办件暂停" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseOverPauseList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10010205"  Title="办件回退" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseOverBackList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      </MenuItem>
+    </MenuItem>
+    <MenuItem Title="住房保障" Description="住房保障" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA100201"  Title="业务监控" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipWorkCount" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem Title="风险监控" Description="风险监控" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+        <MenuItem ActionName="OA10020201"  Title="住房面积超标" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipOverAreaList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10020202"  Title="审核环节遗漏" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipMissList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10020203"  Title="保障资格异常" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipQtExcpList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10020204"  Title="廉租补贴超标" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipOverPayList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10020205"  Title="廉租补贴超期" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipOverDueList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10020206"  Title="合同逾期" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipOverDateList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10020207"  Title="租金欠缴" Uri="HomePage.aspx?action=RiskControl/ucThrdHsipNoRentList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      </MenuItem>
+    </MenuItem>
+    <MenuItem Title="维修资金" Description="维修资金" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem Title="业务监控" Description="业务监控" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+        <MenuItem ActionName="OA10030101"  Title="维修资金归集与使用" Uri="HomePage.aspx?action=RiskControl/ucThrdFundsBisWorkCount" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      </MenuItem>
+      <MenuItem Title="风险监控" Description="风险监控" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+        <MenuItem ActionName="OA10030201"  Title="开发商应缴未缴" Uri="HomePage.aspx?action=RiskControl/ucThrdFundsBuildUnitNotDepositList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10030202"  Title="购房人应缴未缴" Uri="HomePage.aspx?action=RiskControl/ucThrdFundsHouseNotDepositList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10030203"  Title="办件超期" Uri="HomePage.aspx?action=RiskControl/ucThrdFundsOverDueList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      </MenuItem>
+    </MenuItem>
+    <MenuItem Title="房屋征收" Description="房屋征收" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA100401"  Title="业务监控" Uri="HomePage.aspx?action=RiskControl/ucThrdHouseLevyWorkCount" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+    <MenuItem Title="行政审批" Description="行政审批" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem Title="业务监控" Description="业务监控" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+        <MenuItem ActionName="OA10050101"  Title="物业企业资质备案" Uri="HomePage.aspx?action=RiskControl/ucThrdEstateMgeWorkCount" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+        <MenuItem ActionName="OA10050102"  Title="预售许可审批" Uri="HomePage.aspx?action=RiskControl/ucThrdHousePreSellList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      </MenuItem>
+      <MenuItem Title="风险监控" Description="风险监控" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+        <MenuItem ActionName="OA10050201"  Title="物业管理办件超期" Uri="HomePage.aspx?action=RiskControl/ucThrdEstateOverDueList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      </MenuItem>
+    </MenuItem>
+    <MenuItem Title="行政处罚" Description="行政处罚" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA100601"  Title="业务监控" Uri="HomePage.aspx?action=RiskControl/ucThrdAdminPunishList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+    <MenuItem NoChild="1" ActionName="OA1007"  Title="市场监管"  Uri="http://172.29.251.163:8080/DigitalHouseClient/bin/index.html" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    <MenuItem Title="廉政投诉" Description="廉政投诉" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA100801"  Title="监督投诉" Uri="HomePage.aspx?action=RiskControl/ucThrdComplaintsList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA100802"  Title="廉政回访" Uri="HomePage.aspx?action=RiskControl/ucThrdGovHonestInfoList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+    <MenuItem Title="内部职权" Description="内部职权" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA100905"  Title="局三重一大规定"  Uri="HomePage.aspx?action=SysMge/ucSanZhongYidaGuiding" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA100901"  Title="重大事项决策"  Uri="HomePage.aspx?action=SysMge/ucPolicyRecordList&amp;IsHomePage=true&amp;PolicyType=重大决策" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA100902"  Title="重要干部任免"  Uri="HomePage.aspx?action=SysMge/ucHrAppointmentList&amp;IsHomePage=true" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA100903"  Title="重要项目安排"  Uri="HomePage.aspx?action=SysMge/ucPolicyRecordList&amp;IsHomePage=true&amp;PolicyType=重大项目安排" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA100904"  Title="大额资金使用"  Uri="HomePage.aspx?action=SysMge/ucLargeMoneyUseList&amp;IsHomePage=true&amp;QueryType=1" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+  </MenuItem>
+
+  <MenuItem ShowLeft="0" ActionName="OA0221" Title="风险管理" Description="风险管理" Uri="HomePage.aspx?action=Archive/ucArchiveList&amp;ArchiveType=7" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA05--no" Title="公文查询" Description="公文查询" Uri="HomePage.aspx?Action=ArchiveSearch/ucArchvieSearch" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+  <MenuItem ShowLeft="0" ActionName="OA08--no" Title="建言献策" Description="建言献策" Uri="HomePage.aspx?Action=PubSuggestion/ucPubSuggestionList" backgroundImage="App_Resources/Images/leftMenu_02.jpg"/>
+
+  <MenuItem ShowLeft="1" ActionName="OA11"  Title="风险评估" Description="风险评估"  Uri="HomePage.aspx?Action=Blank" backgroundImage="App_Resources/Images/leftMenu_03.gif">
+    <MenuItem Title="廉政教育评估" Description="廉政教育评估" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA110101"  Title="单位学习统计" Uri="HomePage.aspx?action=RiskControl/ucRiskEduDeptStatList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA110102"  Title="个人学习统计" Uri="HomePage.aspx?action=RiskControl/ucRiskEduPersonalStatList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+    <MenuItem Title="业务风险评估" Description="业务风险评估" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA110201"  Title="按处室（单位）统计" Uri="HomePage.aspx?action=RiskControl/ucBisRiskStatForDeptList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA110202"  Title="按风险名称统计" Uri="HomePage.aspx?action=RiskControl/ucBisRiskStatForRiskNameList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA110203"  Title="按风险等级统计" Uri="HomePage.aspx?action=RiskControl/ucBisRiskStatForRiskLevelList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+    <MenuItem Title="风险处置评估" Description="风险处置评估" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA110301"  Title="风险单流转评估" Uri="HomePage.aspx?action=RiskControl/ucRiskExchangeStatList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA110302"  Title="风险处置效能评估" Uri="HomePage.aspx?action=RiskControl/ucRiskEffectStatList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+    <MenuItem Title="每日一题评估" Description="每日一题评估" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA110401"  Title="单位测试评估" Uri="HomePage.aspx?action=RiskControl/ucEverydayQuestionDeptStatList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA110402"  Title="个人测试评估" Uri="HomePage.aspx?action=RiskControl/ucEverydayQuestionPersonalStatList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+
+    </MenuItem>
+  </MenuItem>
+  
+  <MenuItem ShowLeft="1"  Title="系统管理" Description="系统管理" Uri="HomePage.aspx?Action=Blank" backgroundImage="App_Resources/Images/leftMenu_02.jpg">
+    <MenuItem Title="基础数据" Description="基础数据" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA0604"  Title="交办单位" Uri="HomePage.aspx?action=SysMge/ucUnitsList&amp;UnitsType=1" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0605"  Title="承办单位" Uri="HomePage.aspx?action=SysMge/ucUnitsList&amp;UnitsType=2" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0606"  Title="来文单位" Uri="HomePage.aspx?action=SysMge/ucUnitsList&amp;UnitsType=3" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0607"  Title="发文单位" Uri="HomePage.aspx?action=SysMge/ucUnitsList&amp;UnitsType=4" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0608"  Title="信访问题分类" Uri="HomePage.aspx?action=SysMge/ucVisitQuesClassList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0609"  Title="文种维护" Uri="HomePage.aspx?action=SysMge/ucLingualList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0610"  Title="部门默认公文接收人" Uri="HomePage.aspx?action=SysMge/ucDefaultDeptReceiverList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0613"  Title="办理意见模板" Uri="HomePage.aspx?action=SysMge/ucTempleList&amp;TempletProp=1&amp;TempletType=2" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0614"  Title="会议室" Uri="HomePage.aspx?action=SysMge/ucConferenceRoomList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+
+    <MenuItem Title="权限管理" Description="权限管理" backgroundImage="App_Resources/Images/leftMenu_02.jpg">
+      <MenuItem ActionName="OA0601"  Title="角色管理" Uri="HomePage.aspx?action=SysMge/ucRoleList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0602" Title="权限管理" Uri="BMMge.aspx" Description="" backgroundImage="App_Resources/Images/leftMenu_05.gif"/>
+    </MenuItem>
+    <MenuItem Title="日志管理" Description="日志管理" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA0616"  Title="操作日志" Uri="HomePage.aspx?action=SysMge/ucQueryLogList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0617"  Title="在线用户" Uri="HomePage.aspx?action=SysMge/ucOnLineList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+
+    <MenuItem Title="查询统计" Description="查询统计" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA0701"  Title="收文薄" Uri="HomePage.aspx?action=Statistics/ucArchiveBook&amp;StatisticsType=ArchiveBook&amp;ArchiveLevel=1" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0711"  Title="本部门收文薄" Uri="HomePage.aspx?action=Statistics/ucArchiveBook&amp;StatisticsType=ArchiveBook&amp;ArchiveLevel=2" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0702"  Title="未完成工作统计" Uri="HomePage.aspx?action=Statistics/ucOutStandingCount&amp;ArchiveLevel=1" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0712"  Title="本部门未完成工作统计" Uri="HomePage.aspx?action=Statistics/ucOutStandingCount&amp;ArchiveLevel=2" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0703"  Title="未完成工作清单" Uri="HomePage.aspx?action=Statistics/ucOutStandingList&amp;StatisticsType=OutStandingList&amp;ArchiveLevel=1" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0713"  Title="本部门未完成工作清单" Uri="HomePage.aspx?action=Statistics/ucOutStandingList&amp;StatisticsType=OutStandingList&amp;ArchiveLevel=2" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0704"  Title="督办工作统计" Uri="HomePage.aspx?action=Statistics/ucArchiveSuperviseList&amp;ArchiveLevel=1" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0714"  Title="本部门督办工作统计" Uri="HomePage.aspx?action=Statistics/ucArchiveSuperviseList&amp;ArchiveLevel=2" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0715"  Title="局领导批示统计" Uri="HomePage.aspx?action=Statistics/ucArchiveLeaderShipList&amp;ArchiveLevel=1" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+
+    <MenuItem Title="后台管理" Description="后台管理" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA0618"  Title="公文管理" Uri="HomePage.aspx?action=SysMge/ucArchiveMge&amp;ArchiveLevel=1" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0628"  Title="本部门公文管理" Uri="HomePage.aspx?action=SysMge/ucArchiveMge&amp;ArchiveLevel=2" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0619"  Title="公告消息" Uri="HomePage.aspx?action=SysMge/ucMessageMge" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0620"  Title="会议通知" Uri="HomePage.aspx?action=SysMge/ucConferenceMgeList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0621"  Title="详细工作日历" Uri="HomePage.aspx?action=SysMge/ucCalender" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0630"  Title="建言献策" Uri="HomePage.aspx?action=SysMge/ucSuggestionList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0633"  Title="系统帮助" Uri="HomePage.aspx?action=SysMge/ucHotLinkList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0633"  Title="短信发送" Uri="HomePage.aspx?action=SysMge/ucMessagesSendList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0633"  Title="通知公告" Uri="HomePage.aspx?action=SysMge/ucSendNoticeList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+
+    </MenuItem>
+
+    <MenuItem Title="廉政风险" Description="廉政风险" backgroundImage="App_Resources/Images/leftMenu_01.jpg">
+      <MenuItem ActionName="OA0901"  Title="岗位风险" Uri="HomePage.aspx?action=SysMge/ucIncorruptionList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0902"  Title="岗位职责" Uri="HomePage.aspx?action=RiskControl/ucPostDutyList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0903"  Title="廉政教育" Uri="HomePage.aspx?action=RiskControl/ucRiskEduMgeList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0904"  Title="三重一大备案" Uri="HomePage.aspx?action=SysMge/ucPolicyRecordList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0906"  Title="重要干部任免" Uri="HomePage.aspx?action=SysMge/ucHrAppointmentList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0909"  Title="大额资金使用" Uri="HomePage.aspx?action=SysMge/ucLargeMoneyUseList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0907"  Title="在线测试题库" Uri="HomePage.aspx?action=RiskControl/ucEverydayQuestionList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+      <MenuItem ActionName="OA0910"  Title="资料库" Uri="HomePage.aspx?action=RiskControl/ucDataStoreList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>
+    </MenuItem>
+  </MenuItem>
+</MenuItem>
+
+<!--<MenuItem ActionName="OA10010203"  Title="办件暂停" Uri="HomePage.aspx?action=RiskControl/ucThrdHousePauseList" Description="" backgroundImage="App_Resources/Images/leftMenu_03.gif"/>-->

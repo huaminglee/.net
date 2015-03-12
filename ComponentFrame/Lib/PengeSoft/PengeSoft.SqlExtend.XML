@@ -1,0 +1,64 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.SqlExtend</name>
+    </assembly>
+    <members>
+        <member name="T:UserDefinedFunctions">
+             <summary>
+             SQL Server 2005 扩展函数
+             <example>
+             EXEC sp_configure 'clr enabled',1 
+             go 
+             RECONFIGURE 
+             go 
+            
+             create assembly [PengeSoft.SqlExtend]
+             FROM 'D:\MyWork\dotNetPlam\NetFrame\Lib\SqlExtend.dll';
+             go
+            
+             CREATE FUNCTION InNames(@ids nvarchar(4000), @names nvarchar(4000)) 
+             RETURNS int
+             AS 
+             External name [PengeSoft.SqlExtend].[UserDefinedFunctions].InNames;
+             go
+            
+             CREATE FUNCTION RegexMatch(@input nvarchar(4000), @pattern nvarchar(4000)) 
+             RETURNS bit 
+             AS 
+             External name [PengeSoft.SqlExtend].[UserDefinedFunctions].RegexMatch;
+             go
+             
+             使用：
+             
+               select * from Customer where dbo.RegexMatch(addr, '(清江|太升)(.*)路') > 0
+             
+             </example>
+             </summary>
+        </member>
+        <member name="M:UserDefinedFunctions.InNames(System.Data.SqlTypes.SqlString,System.Data.SqlTypes.SqlString)">
+            <summary>
+            用于权限的多对多匹配，用‘，’号隔开, 可代替存储过程中的 InNames
+            </summary>
+            <param name="ids"></param>
+            <param name="names"></param>
+            <returns>匹配成功:1 否则:0</returns>
+        </member>
+        <member name="M:UserDefinedFunctions.InNamesEx(System.Data.SqlTypes.SqlString,System.Data.SqlTypes.SqlString)">
+            <summary>
+            多对多匹配，用‘,’号隔开
+            </summary>
+            <param name="ids"></param>
+            <param name="names"></param>
+            <returns>匹配成功:1 否则:0</returns>
+        </member>
+        <member name="M:UserDefinedFunctions.InNamesCase(System.Data.SqlTypes.SqlString,System.Data.SqlTypes.SqlString)">
+            <summary>
+            多对多匹配，用‘,’号隔开, 区分大小写
+            </summary>
+            <param name="ids"></param>
+            <param name="names"></param>
+            <returns>匹配成功:1 否则:0</returns>
+        </member>
+    </members>
+</doc>

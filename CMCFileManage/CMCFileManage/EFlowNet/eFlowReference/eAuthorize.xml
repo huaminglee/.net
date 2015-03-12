@@ -1,0 +1,289 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+eAuthorize
+</name>
+</assembly>
+<members>
+<member name="P:Platform.eAuthorize.UserInfo.IsAuthenticated">
+	<summary>
+ 判斷當前用戶是否已通過驗証
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.UserInfo.CurrentUserID">
+	<summary>
+ 當前用戶帳號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.UserInfo.CurrentUserCHName">
+	<summary>
+ 當前用戶中文姓名
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.UserInfo.CurrentUserInstance">
+	<summary>
+ 當前用戶的用戶帳號實例
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.UserInfo.CurrentUserDept">
+	<summary>
+ 當前用戶所在的部門列表
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.UserInfo.CurrentUserGroup">
+	<summary>
+ 當前用戶所在的群組列表
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.UserInfo.InGroup(Platform.eHR.Core.GroupSettingInfo)">
+	<summary>
+ 判斷當前用戶是否在指定的群組中
+ </summary>
+	<param name="GroupInfo">指定的群組實例</param>
+	<returns>True/False</returns>
+	<remarks>判斷的依據是群組名稱和作用域相同</remarks>
+</member><member name="M:Platform.eAuthorize.UserInfo.InGroup(System.String,System.String,System.Int32)">
+	<summary>
+ 判斷特定的帳號是否在指定的群組中
+ </summary>
+	<param name="GroupName">群組名稱</param>
+	<param name="SpecUserSID">帳號</param>
+	<param name="ScopePKID">群組所在的作用域</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.UserInfo.GetSpecAccountInfo(System.String)">
+	<summary>
+ 取得特定用戶帳號對應的帳號實例
+ </summary>
+	<param name="UserSID">帳號SID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.UserInfo.IsInRoles(System.String)">
+	<summary>
+ 判斷當前用戶的角色是否在指定的角色列表中
+ </summary>
+	<param name="RolesInfo">指定的角色列表</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.UserInfo.GetAgentManInfoCollection(System.String,Platform.eHR.Core.AgentManage.EnumAgentStatus,System.Int32,System.Int32,System.Int32)">
+	<summary>
+ 取得指定人員的代理情況
+ </summary>
+	<param name="HumanID">人員帳號</param>
+	<param name="AgentStatus">代理狀態<see cref="T:Platform.eHR.Core.AgentManage.EnumAgentStatus">EnumAgentStatus</see></param>
+	<param name="ScopePKID">作用域編號</param>
+	<param name="AgentType">代理類型</param>
+	<param name="AgentObjectPKID">代理</param>
+	<returns>
+	</returns>
+	<remarks>
+	</remarks>
+</member><member name="F:Platform.eAuthorize.UserInfo.EnumObjType.HumanSID">
+	<summary>
+ 帳號
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.UserInfo.EnumObjType.HumanName">
+	<summary>
+ 人員姓名
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.UserInfo.EnumObjType.Dept">
+	<summary>
+ 部門名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.UserInfo.EnumObjType.Role">
+	<summary>
+ 角色名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.UserInfo.EnumObjType.Group">
+	<summary>
+ 群組名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eAuthorize.UserInfo.EnumObjType">
+	<summary>
+ 對象類別枚舉
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.UserInfo.ObjName2ObjPKID(System.String,Platform.eAuthorize.UserInfo.EnumObjType)">
+	<summary>
+ 取得特定對象的編號
+ </summary>
+	<param name="ObjName">對象名稱</param>
+	<param name="ObjType">對象類別</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eAuthorize.UserInfo">
+	<summary>
+ 當前帳戶實體信息類
+ </summary>
+	<remarks>後續擴展本類中的方法及屬性</remarks>
+</member><member name="F:Platform.eAuthorize.Authorization.RoleCookieName">
+	<summary>
+ 驗証Cookie名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.Authorization.Dispose">
+	<summary>
+ Dispose作業
+ </summary>
+	<remarks>目前暫未設定</remarks>
+</member><member name="M:Platform.eAuthorize.Authorization.Init(System.Web.HttpApplication)">
+	<summary>
+ 實作IHttpModule.Init方法
+ </summary>
+	<param name="context">System.Web.HttpApplication實例</param>
+	<remarks>此方法執行Context上下文實例的驗証請求動作</remarks>
+</member><member name="M:Platform.eAuthorize.Authorization.OnAuthenticateRequest(System.Object,System.EventArgs)">
+	<summary>
+ 驗証請求初始作業
+ </summary>
+	<param name="sender">System.Web.HttpApplication實例</param>
+	<param name="e">事件參數（預留擴展）</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.Authorization.Logout">
+	<summary>
+ 登出當前用戶的帳戶
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eAuthorize.Authorization">
+	<summary>
+ Web專案身份驗証類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.IPHelper.GetMACFromIP(System.String)">
+	<summary>
+ 取得指定IP地址的主機Mac地址
+ </summary>
+	<param name="A_strIP">IP地址</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.IPHelper.GetIPSubMaskAndGateway">
+	<summary>
+ 取得本機的網絡設置信息
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.IPHelper.IPStructure.NetworkCard">
+	<summary>
+ 網卡名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.IPHelper.IPStructure.IPAddressList">
+	<summary>
+ IP地址列表
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.IPHelper.IPStructure.DefaultGateway">
+	<summary>
+ 默認網關地址
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eAuthorize.IPHelper.IPStructure.SubnetNask">
+	<summary>
+ 子網掩碼
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eAuthorize.IPHelper.IPStructure">
+	<summary>
+ 本機網絡設置信息結構
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.IPHelper.GetCustomerMac(System.String)">
+	<summary>
+ 取得特定IP對應的Mac地址
+ </summary>
+	<param name="IP">IP</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.IPHelper.IPStringToInteger(System.String)">
+	<summary>
+ 將IP地址轉成IP十進制數值
+ </summary>
+	<param name="IpString">IP地址</param>
+	<returns></returns>
+	<remarks>
+ IPStringToInteger("10.162.198.115")="178439795"
+ </remarks>
+</member><member name="M:Platform.eAuthorize.IPHelper.IPIntegerToString(System.String)">
+	<summary>
+ 將IP十進制數值轉成IP地址
+ </summary>
+	<param name="IpInteger">IP十進制數值</param>
+	<returns></returns>
+	<remarks>
+ IPIntegerToString("178439795")="10.162.198.115"
+ </remarks>
+</member><member name="T:Platform.eAuthorize.IPHelper">
+	<summary>
+ IPHelper
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.CustomPrincipal.Identity">
+	<summary>
+ 用戶票據
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.CustomPrincipal.#ctor">
+	<summary>
+ 建構式
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.CustomPrincipal.#ctor(System.Security.Principal.IIdentity,System.String)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="identity">身分識別</param>
+	<param name="userRole">角色字串</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.CustomPrincipal.UserRole">
+	<summary>
+ 用戶權限角色（Roles）
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eAuthorize.CustomPrincipal.IsInRole(System.String)">
+	<summary>
+ 判斷指定輸入的用戶角色是否是系統許可的角色，並返回判斷結果
+ </summary>
+	<param name="role">角色名稱</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eAuthorize.CustomPrincipal">
+	<summary>
+ 用戶驗証票據類
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Platform.eAuthorize.My.Resources.Resources.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:Platform.eAuthorize.My.Resources.Resources.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強型別資源類別的資源查閱。
+</summary>
+</member><member name="T:Platform.eAuthorize.My.Resources.Resources">
+	<summary>
+  用於查詢當地語系化字串等的強型別資源類別
+</summary>
+</member>
+</members>
+</doc>

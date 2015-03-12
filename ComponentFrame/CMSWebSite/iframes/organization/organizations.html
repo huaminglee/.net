@@ -1,0 +1,244 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>组织机构管理</title>
+    <!-- 移动设备优先 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 最新 Bootstrap 核心 CSS 文件 -->
+    <link href="/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/html5_layout.css" rel="stylesheet" />
+    <link href="/easyui/1.3.6/themes/bootstrap/easyui.css" rel="stylesheet" />
+    <link href="/easyui/1.3.6/themes/icon.css" rel="stylesheet" />
+    <!-- jQuery文件务必在bootstrap.min.js 之前引入 -->
+    <script src="/jquery/1.9.1/jquery.min.js"></script>
+    <script src="/easyui/1.3.6/jquery.easyui.min.js"></script>
+    <script src="/js/common.js" charset="gb2312"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/assets/js/docs.min.js"></script>
+    <script src="/js/jquery.gridster.min.js"></script>
+    <script src="/Script/layer/layer.min.js"></script>
+    <!--ie8对html5的支持补丁-->
+    <script src="/js/html5shiv.min.js"></script>
+    <!--ie6-8对响应式布局的支持-->
+    <script src="/js/respond.min.js"></script>
+    <script src="/js/UrlJump.js"></script>
+    <!-- Tress_v3需要引入的文件-->
+    <link rel="stylesheet" href="/App_Resources/zTree_v3/css/zTreeStyle/zTreeStyle.css" type="text/css">
+    <script type="text/javascript" src="/App_Resources/zTree_v3/js/jquery.ztree.core-3.5.js"></script>
+    <script type="text/javascript" src="/App_Resources/zTree_v3/js/jquery.ztree.excheck-3.5.js"></script>
+	<script type="text/javascript" src="/App_Resources/zTree_v3/js/jquery.ztree.exedit-3.5.js"></script>
+
+    
+    <script src="/js/BaseDeptInfo.js"></script>
+    <script src="/js/BaseService.js"></script>
+    <script src="/js/UserBaseInfoService.js"></script>
+    <script src="/js/myjs/organization.js"></script>
+    <style type="text/css">
+        .ztree li span.button.add {margin-left:2px; margin-right: -1px; background-position:-144px 0; vertical-align:top; *vertical-align:middle}
+	</style>
+
+    <script type="text/javascript">
+        var setting = {
+            view: {
+                addHoverDom: addHoverDom,
+                removeHoverDom: removeHoverDom,
+                selectedMulti: false
+            },
+            edit: {
+                enable: true,
+                editNameSelectAll: true,
+                showRemoveBtn: showEditBtn,
+                showRenameBtn: showEditBtn,
+                removeTitle: "删除",
+                renameTitle: "编辑"
+
+            },
+            data: {
+                simpleData: {
+                    enable: true
+                }
+            },
+            callback: {
+                beforeClick: beforeClick,
+                onClick: onClick,
+                beforeRemove: beforeRemove,
+                beforeRename: beforeRename
+            }
+        };
+
+    var zNodes = [
+        { id: 0, pId: 0, name: "成都鹏业软件", open: true, iconOpen: "/App_Resources/zTree_v3/css/zTreeStyle/img/diy/1_open.png", iconClose: "/App_Resources/zTree_v3/css/zTreeStyle/img/diy/1_close.png" },
+    ];
+    var log, className = "dark";
+
+    function beforeClick(treeId, treeNode, clickFlag) {
+        className = (className === "dark" ? "" : "dark");
+        return (treeNode.click != false);
+    }
+
+    function onClick(event, treeId, treeNode, clickFlag) {
+        if (treeNode.id != 0) {
+            deptId = treeNode.name;
+            getAllMembers();
+        }
+        else {
+            $("#tb_memberlist").html("");
+        }
+    }
+
+    function beforeRemove(treeId, treeNode) {
+        className = (className === "dark" ? "" : "dark");
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+        zTree.selectNode(treeNode);
+        //删除节点
+        delDept(zTree);
+        return false;
+    }
+    function beforeRename(treeId, treeNode, newName, isCancel) {
+        className = (className === "dark" ? "" : "dark");
+        if (newName.length == 0) {
+            layer.tips("部门名称不能为空", $("#" + treeNode.tId + "_span"), {
+                guide: 1,
+                time: 2,
+                style: ['background-color:#F26C4F; color:#fff'],
+                maxWidth: 300
+            });
+            return false;
+        }
+        else {
+            if (treeNode.isAddState) {
+                //新增
+                addDept(treeNode, newName, "");
+            }
+            else {
+                //编辑,只有更改了名称才提交修改
+                if (treeNode.name != newName) {
+                    editDept(treeNode, newName, "");
+                }
+            }
+        }
+        return false;
+    }
+    function showEditBtn(treeId, treeNode) {
+        return treeNode.id!= 0;
+    }
+
+    var newCount = 1;
+    function addHoverDom(treeId, treeNode) {
+        var sObj = $("#" + treeNode.tId + "_span");
+        if (treeNode.editNameFlag || $("#addBtn_" + treeNode.tId).length > 0) return;
+        var addStr = "<span class='button add' id='addBtn_" + treeNode.tId
+            + "' title='新增子项' onfocus='this.blur();'></span>";
+        sObj.after(addStr);
+        var btn = $("#addBtn_" + treeNode.tId);
+        if (btn) btn.bind("click", function () {
+            var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+            zTree.addNodes(treeNode, { id: (treeNode.id * 10 + newCount), pId: treeNode.id, name: "new node" + (newCount++), isAddState: true });
+            if (treeNode) {
+                zTree.editName(treeNode.children[treeNode.children.length - 1]);
+            } else {
+                alert("节点被锁定，无法增加子项");
+            }
+            return false;
+        });
+    };
+    function removeHoverDom(treeId, treeNode) {
+        $("#addBtn_" + treeNode.tId).unbind().remove();
+    };
+    function add(e) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+        nodes = zTree.getSelectedNodes(),
+        treeNode = nodes[0];
+        if (treeNode) {
+            treeNode = zTree.addNodes(treeNode, { id: (treeNode.id * 10 + newCount), pId: treeNode.id, name: "new node" + (newCount++), isAddState : true });
+        } else {
+            treeNode = zTree.addNodes(zTree.getNodes()[0], { id: (zTree.getNodes()[0].id * 10 + newCount), pId: 0, name: "new node" + (newCount++), isAddState: true });
+        }
+        if (treeNode) {
+            zTree.editName(treeNode[0]);
+        } else {
+            alert("节点被锁定，无法增加子项");
+        }
+    };
+    function edit() {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo"),
+        nodes = zTree.getSelectedNodes(),
+        treeNode = nodes[0];
+        if (nodes.length == 0) {
+            alert("请先选择一个节点");
+            return;
+        }
+        else if (treeNode.id == 0) {
+            return;
+        }
+        zTree.editName(treeNode);
+    };
+    function remove(e) {
+        var zTree = $.fn.zTree.getZTreeObj("treeDemo");
+        //删除节点
+        delDept(zTree);
+    };
+
+    $(document).ready(function () {
+        initDeptTree("");
+        //初始化所有用户
+        queryUsers();
+        $("#addLeaf").bind("click", add);
+        $("#edit").bind("click", edit);
+        $("#remove").bind("click", remove);
+    });
+	</script>
+</head>
+<body>
+     <section class="container" style="height: 100%">
+        <div class="container-fluid">
+            <fieldset>
+                <legend><small class="text-primary">组织机构管理</small></legend>
+                <div class="row">
+                    <div class="col-xs-1" style="width:30%">
+                        <form class="form-inline" role="form">      
+                            <div class="form-group" style="margin-bottom:10px"> 
+                                <button id="addLeaf" type="button" class="btn btn-primary">添加子项</button>
+                                <button id="edit" type="button" class="btn btn-info" >编辑</button>
+                                <button id="remove" type="button" class="btn btn-danger">删除</button>
+                            </div>
+                        </form>
+                        <div class="panel-default" style="height:480px;width:100%;overflow:auto">
+                              <div class="panel-body" style="padding:5px">
+                                <ul id="treeDemo" class="ztree">
+                                </ul>
+                              </div>
+                        </div>
+                    </div>
+                    <div class="panel-success col-xs-1" style="width:35%">
+                        <div class="panel-heading">
+                            <div style="height:30px;line-height:30px">
+                                <label>部门成员</label>
+                                <button id="saveUpdateBtn" type="button" class="btn btn-success"  onclick="saveMember()" style="float:right">保存成员</button>
+                            </div>
+                        </div>
+                        <div class="panel-body" style="height:470px">
+                            <div class="list-group" id="tb_memberlist">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel-primary col-xs-1" style="width:35%">
+                        <div class="panel-heading">所有用户</div>
+                        <div class="panel-body" style="height:480px">
+                            <div class="input-group">
+                                <input id="userparam" type="text" class="form-control" placeholder="用户名或姓名">
+                                <span class="input-group-btn">
+                                    <button class="btn btn-default" type="button" onclick="queryUsers()">查询</button>
+                                </span>
+                            </div>
+                        <div class="list-group" id="tb_userlist">
+                        </div>
+                        </div>                          
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </section>
+</body>
+</html>

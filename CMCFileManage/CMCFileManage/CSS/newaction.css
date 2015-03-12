@@ -1,0 +1,137 @@
+﻿.shortcut-button {
+                border: 1px solid #ccc;
+                background: #f7f7f7 url('../images/shortcut-button-bg.gif') top left no-repeat;
+                display: block;
+                width: 120px;
+                margin: 0 0 20px 0;
+                color :Black ;
+                text-align :center ;
+                text-decoration: none;
+                }
+.shortcut-button span {
+                -moz-border-radius: 7px;
+                -webkit-border-radius: 7px;
+				border-radius: 7px;
+				text-align :center ;
+                }
+ul.shortcut-buttons-set
+                {
+                    
+                    padding :0 0 0 0;
+                    margin :0 0 0 0;
+                }
+ ul.shortcut-buttons-set li {
+                float: left;
+                margin: 0 15px 0 0;
+				padding: 0 !important;
+				background: 0;
+				text-align :center ;
+				list-style: none;
+                }
+ .searchli
+ {
+     padding :0 0 0 0;
+   margin  :0 0 0 0;
+                }
+                    
+ ul.searchli li
+ {
+     margin-left :0px;
+                 float: left;
+				list-style: none;
+                }
+                
+
+.shortcut-button span img {
+                margin-bottom: 10px;
+                border:0;
+                }
+
+.shortcut-button:hover {
+                background: #fff;
+				
+                }
+				
+.shortcut-button span:hover {
+				color: #57a000; 
+                }
+
+/************ Button ************/
+.button {
+				font-family: Verdana, Arial, sans-serif;
+                display: inline-block;
+                background: #459300 url('../images/bg-button-green.gif') top left repeat-x !important;
+                border: 1px solid #459300 !important;
+                padding: 4px 7px 4px 7px !important;
+                color: #fff !important;
+                font-size: 12px !important;
+                cursor: pointer;
+                }
+                
+.button:hover {
+                text-decoration: underline;
+                }
+                
+.button:active {
+                padding: 5px 7px 3px 7px !important;
+                }
+				
+a.remove-link {
+				color: #bb0000;
+				}
+
+a.remove-link:hover {
+				color: #000;
+				}
+form input.text-input,
+form select,
+form textarea,
+form .wysiwyg {
+                padding: 6px;
+                font-size: 13px;
+                background: #fff url('../images/bg-form-field.gif') top left repeat-x;
+                border: 1px solid #d5d5d5;
+				color: #333;
+                }
+            
+form .small-input {
+                width: 25% !important;
+                }
+                
+form .medium-input {
+                width: 50% !important;
+                }
+                
+form .large-input {
+                width: 97.5% !important;
+				font-size: 16px !important;
+				padding: 8px !important;
+                }
+                
+form textarea {
+                width: 97.5% !important;
+                font-family: Arial, Helvetica, sans-serif;
+                }
+                
+form select {
+                padding: 4px;
+                background: #fff;
+                }
+                .novisi
+                {
+                    display :none ;
+                }
+                a
+                {
+                   color:Black ;
+                   text-decoration :none;
+            
+                }
+a:hover,a:active,a:focus
+{
+    border: 1px solid #7eabcd;
+    font-weight :bold ;
+     color:Green ;
+}
+				
+                

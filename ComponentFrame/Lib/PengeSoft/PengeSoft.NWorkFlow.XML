@@ -1,0 +1,2185 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.NWorkFlow</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.NWorkFlow.INWorkFlowEngineSvr">
+            <summary>
+            INWorkFlowEngineSvr 接口定义。非自动工作流引擎    
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.CreateFlow(System.String,System.String,System.String,System.String)">
+            <summary>
+            创建新工作流程，返回工作ID。新工作的状态是NoStart。   
+            </summary>
+            <param name="caption">标题</param>
+            <param name="creator">创建人</param>
+            <param name="templateID">模板ID</param>
+            <param name="parameters">工作参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.StartFlow(System.String,PengeSoft.NWorkFlow.NTaskList,System.String,System.String)">
+            <summary>
+            开始指定工作流程   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="tasks">任务表,工作开始时任务</param>
+            <param name="submitor">任务提交者</param>
+            <param name="parameters">任务参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.RepealFlow(System.String)">
+            <summary>
+            撤销工作流程   
+            </summary>
+            <param name="workID">工作ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.StopFlow(System.String)">
+            <summary>
+            结束工作流程   
+            </summary>
+            <param name="workID">工作ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.RepealTask(System.String)">
+            <summary>
+            撤销任务   
+            </summary>
+            <param name="taskID">任务ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.FinishTask(System.String,System.String,System.String,PengeSoft.NWorkFlow.NTaskList)">
+            <summary>
+            完成任务通知   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="runner">执行人</param>
+            <param name="parameters">任务参数</param>
+            <param name="nextTasks">后续任务表</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.ModifyWork(System.String,System.String,System.String)">
+            <summary>
+            修改工作实例属性，只能修改标题、创建人、参数   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="caption">标题,null表示不修改</param>
+            <param name="creator">创建人,null表示不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.ModifyTask(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            修改任务实例属性，只能提交者、执行人、任务类型   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="runner">执行人 null不修改</param>
+            <param name="type">任务类型 NoSet不修改</param>
+            <param name="submitor">提交者 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.QueryWorkCount(PengeSoft.NWorkFlow.NWorkInstanceQueryPara)">
+            <summary>
+            查询工作数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.QueryWorkList(PengeSoft.NWorkFlow.NWorkInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询工作列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.GetWorkInstance(System.String,System.Boolean)">
+            <summary>
+            取工作实例   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.QueryTaskCount(PengeSoft.NWorkFlow.NTaskInstanceQueryPara)">
+            <summary>
+            查询任务数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.QueryTaskList(PengeSoft.NWorkFlow.NTaskInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询任务列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkFlowEngineSvr.GetTaskInstance(System.String,System.Boolean)">
+            <summary>
+            取任务实例   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NWorkInstanceList">
+            <summary>
+            NWorkInstanceList 工作实例列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NWorkFlowEngineSvr">
+            <summary>
+            NWorkFlowEngineSvr实现。非自动工作流引擎
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.CreateFlow(System.String,System.String,System.String,System.String)">
+            <summary>
+            创建新工作流程，返回工作ID。新工作的状态是NoStart。   
+            </summary>
+            <param name="caption">标题</param>
+            <param name="creator">创建人</param>
+            <param name="templateID">模板ID</param>
+            <param name="parameters">工作参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.StartFlow(System.String,PengeSoft.NWorkFlow.NTaskList,System.String,System.String)">
+            <summary>
+            开始指定工作流程   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="tasks">任务表,工作开始时任务</param>
+            <param name="submitor">任务提交者</param>
+            <param name="parameters">任务参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.RepealFlow(System.String)">
+            <summary>
+            撤销工作流程   
+            </summary>
+            <param name="workID">工作ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.StopFlow(System.String)">
+            <summary>
+            结束工作流程   
+            </summary>
+            <param name="workID">工作ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.RepealTask(System.String)">
+            <summary>
+            撤销任务   
+            </summary>
+            <param name="taskID">任务ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.FinishTask(System.String,System.String,System.String,PengeSoft.NWorkFlow.NTaskList)">
+            <summary>
+            完成任务通知   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="runner">执行人</param>
+            <param name="parameters">任务参数</param>
+            <param name="nextTasks">后续任务表</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.ModifyWork(System.String,System.String,System.String)">
+            <summary>
+            修改工作实例属性，只能修改标题、创建人、参数   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="caption">标题,null表示不修改</param>
+            <param name="creator">创建人,null表示不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.ModifyTask(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            修改任务实例属性，只能提交者、执行人、任务类型   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="runner">执行人 null不修改</param>
+            <param name="type">任务类型 NoSet不修改</param>
+            <param name="submitor">提交者 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.QueryWorkCount(PengeSoft.NWorkFlow.NWorkInstanceQueryPara)">
+            <summary>
+            查询工作数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.QueryWorkList(PengeSoft.NWorkFlow.NWorkInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询工作列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.GetWorkInstance(System.String,System.Boolean)">
+            <summary>
+            取工作实例   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.QueryTaskCount(PengeSoft.NWorkFlow.NTaskInstanceQueryPara)">
+            <summary>
+            查询任务数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.QueryTaskList(PengeSoft.NWorkFlow.NTaskInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询任务列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkFlowEngineSvr.GetTaskInstance(System.String,System.Boolean)">
+            <summary>
+            取任务实例   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.EWorkInstanceState">
+            <summary>
+            枚举：工作实例状态
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.EWorkInstanceState.NoSet">
+            <summary>
+            未设置
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.EWorkInstanceState.NoStart">
+            <summary>
+            未开始
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.EWorkInstanceState.Running">
+            <summary>
+            运行中
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.EWorkInstanceState.Done">
+            <summary>
+            已完成
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.EWorkInstanceState.Repeal">
+            <summary>
+            已撤销
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.ETaskType">
+            <summary>
+            枚举：任务类型
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.ETaskType.NoSet">
+            <summary>
+            未设置
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.ETaskType.Master">
+            <summary>
+            主任务，完成任务时将会驱动流程
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.ETaskType.Minor">
+            <summary>
+            次任务，完成是不驱动流程
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.ETaskInstanceState">
+            <summary>
+            枚举：任务实例状态
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.ETaskInstanceState.NoSet">
+            <summary>
+            未设置
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.ETaskInstanceState.Running">
+            <summary>
+            执行中
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.ETaskInstanceState.Done">
+            <summary>
+            已完成
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.ETaskInstanceState.Repeal">
+            <summary>
+            已撤销
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NWorkInstance">
+            <summary>
+            NWorkInstance 工作实例的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstance.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstance.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstance.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstance.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstance.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NWorkInstance.ID">
+            <summary>
+            工作ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NWorkInstance.Caption">
+            <summary>
+            标题 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NWorkInstance.State">
+            <summary>
+            工作状态<see cref="T:PengeSoft.NWorkFlow.EWorkInstanceState">EWorkInstanceState</see> 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NWorkInstance.Creator">
+            <summary>
+            创建者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NWorkInstance.Parameters">
+            <summary>
+            参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NWorkInstance.Template">
+            <summary>
+            流程模板 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NWorkInstance.CreateTime">
+            <summary>
+            创建时间 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskDefine">
+            <summary>
+            NTaskDefine 任务定义的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDefine.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDefine.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDefine.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDefine.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskDefine.Name">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskDefine.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.INWorkInstanceDao">
+            <summary>
+            INWorkInstanceDao接口定主义。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NWorkInstanceDao">
+            <summary>
+            NWorkInstanceDao实现, 从BaseSqlMapDao继承。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.GetParaHashTable(PengeSoft.NWorkFlow.NWorkInstance,System.String)">
+            <summary>
+            根据条件对象取得条件 Hashtable
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Order">排序字段</param>
+            <returns>条件Hashtable</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.QueryCount(System.Collections.Hashtable)">
+            <summary>
+            查询记录数,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.QueryCount(System.String,System.Collections.Hashtable)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.QueryList(System.String,System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.GetCount">
+            <summary>
+            取记录数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.GetList(System.Int32,System.Int32,System.String)">
+            <summary>
+            取列表
+            </summary>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.QueryCount(PengeSoft.Data.DataPacket)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="Data">条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.QueryList(PengeSoft.Data.DataPacket,System.Int32,System.Int32,System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="detail">取明细数据</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Insert(PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Insert(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Update(PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Update(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Update(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Update(System.String,PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.GetDetail(PengeSoft.Data.DataPacket)">
+            <summary>
+            取详细数据
+            </summary>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.GetDetail(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            取数据
+            </summary>
+            <param name="data">条件对象</param>
+            <param name="detail">取明细数据</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.GetDetail(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            取数据
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Delete(PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceDao.Delete(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NWorkInstanceQueryPara">
+            <summary>
+            NWorkInstance 查询参数
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByID">
+            <summary>按ID排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByID_desc">
+            <summary>按ID排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByCaption">
+            <summary>按Caption排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByCaption_desc">
+            <summary>按Caption排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByState">
+            <summary>按State排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByState_desc">
+            <summary>按State排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByCreator">
+            <summary>按Creator排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByCreator_desc">
+            <summary>按Creator排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByParameters">
+            <summary>按Parameters排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByParameters_desc">
+            <summary>按Parameters排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByCreateTime">
+            <summary>按CreateTime排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.OrderByCreateTime_desc">
+            <summary>按CreateTime排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_ID">
+            <summary>查询 ID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_Caption">
+            <summary>查询 Caption 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_State">
+            <summary>查询 State 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_Creator">
+            <summary>查询 Creator 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_Parameters">
+            <summary>查询 Parameters 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_CreateTime">
+            <summary>查询 CreateTime 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_CreateTime_S">
+            <summary>查询 CreateTime 条件起始日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.QueryKey_CreateTime_E">
+            <summary>查询 CreateTime 条件结束日期键名称</summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.#ctor(PengeSoft.NWorkFlow.NWorkInstance,System.String)">
+            <summary>
+            构造函数,指定参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetQueryPara(PengeSoft.NWorkFlow.NWorkInstance,System.String)">
+            <summary>
+            指定查询参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetID(System.String)">
+            <summary>
+            设 工作ID 条件
+            </summary>
+            <param name="ID">工作ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetCaption(System.String)">
+            <summary>
+            设 标题 条件
+            </summary>
+            <param name="Caption">标题</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetState(System.Int32)">
+            <summary>
+            设 工作状态<see cref="T:PengeSoft.NWorkFlow.EWorkInstanceState">EWorkInstanceState</see> 非零值条件
+            </summary>
+            <param name="State">工作状态<see cref="T:PengeSoft.NWorkFlow.EWorkInstanceState">EWorkInstanceState</see></param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetCreator(System.String)">
+            <summary>
+            设 创建者 条件
+            </summary>
+            <param name="Creator">创建者</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetParameters(System.String)">
+            <summary>
+            设 参数 条件
+            </summary>
+            <param name="Parameters">参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetCreateTime(System.DateTime)">
+            <summary>
+            设 创建时间 条件
+            </summary>
+            <param name="CreateTime">创建时间</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetCreateTime(System.DateTime,System.DateTime)">
+            <summary>
+            设 创建时间 范围条件
+            </summary>
+            <param name="StartDate">起始日期</param>
+            <param name="EndDate">结束日期</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkInstanceQueryPara.SetOrderByField(System.String)">
+            <summary>
+            设排序字段
+            </summary>
+            <param name="Order">排序字段</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.ComparerNWorkInstance">
+            <summary>
+            NWorkInstance 排序比较器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.ComparerNWorkInstance.#ctor(System.String)">
+            <summary>
+            创建实例,并初始化排序字段
+            </summary>
+            <param name="sortField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.ComparerNWorkInstance.Compare(System.Object,System.Object)">
+            <summary>
+            比较两个 <see cref="!:Zjjhxmmx"/> 对象并返回一个值，指示一个对象是小于、等于还是大于另一个对象。
+            </summary>
+            <param name="x">要比较的第一个对象。</param>
+            <param name="y">要比较的第二个对象。</param>
+            <returns>值 条件 小于零 x 小于 y。 零 x 等于 y。 大于零 x 大于 y。</returns>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.ComparerNWorkInstance.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.INJoinRule">
+            <summary>
+            非自动工作流引擎汇聚规则定义接口
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INJoinRule.Join(PengeSoft.NWorkFlow.NTaskList,PengeSoft.NWorkFlow.NFlowTemplate)">
+            <summary>
+            汇聚任务
+            </summary>
+            <param name="taskList">汇聚前的任务列表，要求任务分组名称必须一致。</param>
+            <param name="template">相关的流程模板</param>
+            <returns>汇聚后的任务列表</returns>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskInstanceList">
+            <summary>
+            NTaskInstanceList 任务实例列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskInstance">
+            <summary>
+            NTaskInstance 任务实例的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTask">
+            <summary>
+            NTask 任务的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTask.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTask.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTask.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTask.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTask.Name">
+            <summary>
+            任务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTask.GroupName">
+            <summary>
+            分组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTask.Type">
+            <summary>
+            任务类型<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see> 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTask.Runner">
+            <summary>
+            执行人 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstance.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstance.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstance.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstance.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstance.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.ID">
+            <summary>
+            任务ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.WorkID">
+            <summary>
+            工作实例ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.State">
+            <summary>
+            任务状态<see cref="T:PengeSoft.NWorkFlow.ETaskInstanceState">ETaskInstanceState</see> 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.Submitor">
+            <summary>
+            提交者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.Parameters">
+            <summary>
+            参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.Step">
+            <summary>
+            步骤实例标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.PreTaskIndexs">
+            <summary>
+            前驱任务实例表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.NextTasks">
+            <summary>
+            后续任务表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstance.CreateTime">
+            <summary>
+            创建时间 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.INTaskInstanceDao">
+            <summary>
+            INTaskInstanceDao接口定主义。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskInstanceDao">
+            <summary>
+            NTaskInstanceDao实现, 从BaseSqlMapDao继承。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.GetParaHashTable(PengeSoft.NWorkFlow.NTaskInstance,System.String)">
+            <summary>
+            根据条件对象取得条件 Hashtable
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Order">排序字段</param>
+            <returns>条件Hashtable</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.QueryCount(System.Collections.Hashtable)">
+            <summary>
+            查询记录数,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.QueryCount(System.String,System.Collections.Hashtable)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.QueryList(System.String,System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.GetCount">
+            <summary>
+            取记录数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.GetList(System.Int32,System.Int32,System.String)">
+            <summary>
+            取列表
+            </summary>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.QueryCount(PengeSoft.Data.DataPacket)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="Data">条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.QueryList(PengeSoft.Data.DataPacket,System.Int32,System.Int32,System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="detail">取明细数据</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Insert(PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Insert(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Update(PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Update(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Update(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Update(System.String,PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.GetDetail(PengeSoft.Data.DataPacket)">
+            <summary>
+            取详细数据
+            </summary>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.GetDetail(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            取数据
+            </summary>
+            <param name="data">条件对象</param>
+            <param name="detail">取明细数据</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.GetDetail(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            取数据
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Delete(PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceDao.Delete(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskInstanceQueryPara">
+            <summary>
+            NTaskInstance 查询参数
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByName">
+            <summary>按Name排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByName_desc">
+            <summary>按Name排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByGroupName">
+            <summary>按GroupName排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByGroupName_desc">
+            <summary>按GroupName排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByType">
+            <summary>按Type排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByType_desc">
+            <summary>按Type排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByRunner">
+            <summary>按Runner排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByRunner_desc">
+            <summary>按Runner排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByID">
+            <summary>按ID排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByID_desc">
+            <summary>按ID排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByWorkID">
+            <summary>按WorkID排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByWorkID_desc">
+            <summary>按WorkID排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByState">
+            <summary>按State排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByState_desc">
+            <summary>按State排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderBySubmitor">
+            <summary>按Submitor排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderBySubmitor_desc">
+            <summary>按Submitor排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByParameters">
+            <summary>按Parameters排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByParameters_desc">
+            <summary>按Parameters排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByStep">
+            <summary>按Step排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByStep_desc">
+            <summary>按Step排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByCreateTime">
+            <summary>按CreateTime排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.OrderByCreateTime_desc">
+            <summary>按CreateTime排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_Name">
+            <summary>查询 Name 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_GroupName">
+            <summary>查询 GroupName 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_Type">
+            <summary>查询 Type 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_Runner">
+            <summary>查询 Runner 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_ID">
+            <summary>查询 ID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_WorkID">
+            <summary>查询 WorkID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_State">
+            <summary>查询 State 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_Submitor">
+            <summary>查询 Submitor 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_Parameters">
+            <summary>查询 Parameters 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_Step">
+            <summary>查询 Step 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_CreateTime">
+            <summary>查询 CreateTime 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_CreateTime_S">
+            <summary>查询 CreateTime 条件起始日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.QueryKey_CreateTime_E">
+            <summary>查询 CreateTime 条件结束日期键名称</summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.#ctor(PengeSoft.NWorkFlow.NTaskInstance,System.String)">
+            <summary>
+            构造函数,指定参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetQueryPara(PengeSoft.NWorkFlow.NTaskInstance,System.String)">
+            <summary>
+            指定查询参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetName(System.String)">
+            <summary>
+            设 任务名称 条件
+            </summary>
+            <param name="Name">任务名称</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetGroupName(System.String)">
+            <summary>
+            设 分组标识 条件
+            </summary>
+            <param name="GroupName">分组标识</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetType(System.Int32)">
+            <summary>
+            设 任务类型<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see> 非零值条件
+            </summary>
+            <param name="Type">任务类型<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see></param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetRunner(System.String)">
+            <summary>
+            设 执行人 条件
+            </summary>
+            <param name="Runner">执行人</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetID(System.String)">
+            <summary>
+            设 任务ID 条件
+            </summary>
+            <param name="ID">任务ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetWorkID(System.String)">
+            <summary>
+            设 工作实例ID 条件
+            </summary>
+            <param name="WorkID">工作实例ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetState(System.Int32)">
+            <summary>
+            设 任务状态<see cref="T:PengeSoft.NWorkFlow.ETaskInstanceState">ETaskInstanceState</see> 非零值条件
+            </summary>
+            <param name="State">任务状态<see cref="T:PengeSoft.NWorkFlow.ETaskInstanceState">ETaskInstanceState</see></param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetSubmitor(System.String)">
+            <summary>
+            设 提交者 条件
+            </summary>
+            <param name="Submitor">提交者</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetParameters(System.String)">
+            <summary>
+            设 参数 条件
+            </summary>
+            <param name="Parameters">参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetStep(System.String)">
+            <summary>
+            设 步骤实例标识 条件
+            </summary>
+            <param name="Step">步骤实例标识</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetCreateTime(System.DateTime)">
+            <summary>
+            设 创建时间 条件
+            </summary>
+            <param name="CreateTime">创建时间</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetCreateTime(System.DateTime,System.DateTime)">
+            <summary>
+            设 创建时间 范围条件
+            </summary>
+            <param name="StartDate">起始日期</param>
+            <param name="EndDate">结束日期</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceQueryPara.SetOrderByField(System.String)">
+            <summary>
+            设排序字段
+            </summary>
+            <param name="Order">排序字段</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.ComparerNTaskInstance">
+            <summary>
+            NTaskInstance 排序比较器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.ComparerNTaskInstance.#ctor(System.String)">
+            <summary>
+            创建实例,并初始化排序字段
+            </summary>
+            <param name="sortField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.ComparerNTaskInstance.Compare(System.Object,System.Object)">
+            <summary>
+            比较两个 <see cref="!:Zjjhxmmx"/> 对象并返回一个值，指示一个对象是小于、等于还是大于另一个对象。
+            </summary>
+            <param name="x">要比较的第一个对象。</param>
+            <param name="y">要比较的第二个对象。</param>
+            <returns>值 条件 小于零 x 小于 y。 零 x 等于 y。 大于零 x 大于 y。</returns>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.ComparerNTaskInstance.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NFlowTemplateManagerSvr">
+            <summary>
+            NFlowTemplateManagerSvr实现。流程模板管理器
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.INFlowTemplateManagerSvr">
+            <summary>
+            INFlowTemplateManagerSvr 接口定义。流程模板管理器    
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INFlowTemplateManagerSvr.CreateFlowTemplate(PengeSoft.NWorkFlow.NFlowTemplate)">
+            <summary>
+            创建新流程模板   
+            </summary>
+            <param name="flowTemplate">流程模板</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INFlowTemplateManagerSvr.ModifyFlowTemplate(PengeSoft.NWorkFlow.NFlowTemplate)">
+            <summary>
+            修改流程模板   
+            </summary>
+            <param name="flowTemplate">流程模板</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INFlowTemplateManagerSvr.DeleteFlowTemplate(System.String)">
+            <summary>
+            删除流程模板   
+            </summary>
+            <param name="templateID">模板ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INFlowTemplateManagerSvr.GetFlowTemplate(System.String,System.Boolean)">
+            <summary>
+            取流程模板   
+            </summary>
+            <param name="templateID">模板ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回TaskDefines）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INFlowTemplateManagerSvr.GetFlowTemplateList(System.Boolean)">
+            <summary>
+            取流程模板列表   
+            </summary>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回TaskDefines）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplateManagerSvr.CreateFlowTemplate(PengeSoft.NWorkFlow.NFlowTemplate)">
+            <summary>
+            创建新流程模板   
+            </summary>
+            <param name="flowTemplate">流程模板</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplateManagerSvr.ModifyFlowTemplate(PengeSoft.NWorkFlow.NFlowTemplate)">
+            <summary>
+            修改流程模板   
+            </summary>
+            <param name="flowTemplate">流程模板</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplateManagerSvr.DeleteFlowTemplate(System.String)">
+            <summary>
+            删除流程模板   
+            </summary>
+            <param name="templateID">模板ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplateManagerSvr.GetFlowTemplate(System.String,System.Boolean)">
+            <summary>
+            取流程模板   
+            </summary>
+            <param name="templateID">模板ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回TaskDefines）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplateManagerSvr.GetFlowTemplateList(System.Boolean)">
+            <summary>
+            取流程模板列表   
+            </summary>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回TaskDefines）。</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskList">
+            <summary>
+            NTaskList 任务列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskDefineList">
+            <summary>
+            NTaskDefineList 任务定义列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDefineList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDefineList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NWorkDataManagerSvr">
+            <summary>
+            NWorkDataManagerSvr实现。工作数据管理器，此服务管理的均是工作实例。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.INWorkDataManagerSvr">
+            <summary>
+            INWorkDataManagerSvr 接口定义。工作数据管理器，此服务管理的均是工作实例。    
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkDataManagerSvr.InsertWork(System.String,System.String,PengeSoft.NWorkFlow.NFlowTemplate,System.String)">
+            <summary>
+            插入新工作，返回工作ID。新工作的状态是NoStart。   
+            </summary>
+            <param name="caption">标题</param>
+            <param name="creator">创建人</param>
+            <param name="template">流程模板</param>
+            <param name="parameters">工作参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkDataManagerSvr.ChangeWorkByState(System.String,System.Int32,System.String)">
+            <summary>
+            修改工作状态和参数   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="state">状态 NoSet不修改</param>
+            <param name="parameters">参数 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkDataManagerSvr.ChangeWorkByAttrib(System.String,System.String,System.String)">
+            <summary>
+            修改工作属性   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="caption">标题 null不修改</param>
+            <param name="creator">创建人 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkDataManagerSvr.QueryWorkCount(PengeSoft.NWorkFlow.NWorkInstanceQueryPara)">
+            <summary>
+            查询工作数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkDataManagerSvr.QueryWorkList(PengeSoft.NWorkFlow.NWorkInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询工作列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkDataManagerSvr.GetWorkInstance(System.String,System.Boolean)">
+            <summary>
+            取工作实例   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INWorkDataManagerSvr.DeleteWork(System.String)">
+            <summary>
+            删除工作(同时删除对应的任务实例)   
+            </summary>
+            <param name="workID">工作ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.#ctor(PengeSoft.NWorkFlow.INFlowTemplateManagerSvr)">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.InsertWork(System.String,System.String,PengeSoft.NWorkFlow.NFlowTemplate,System.String)">
+            <summary>
+            插入新工作，返回工作ID。新工作的状态是NoStart。   
+            </summary>
+            <param name="caption">标题</param>
+            <param name="creator">创建人</param>
+            <param name="template">流程模板</param>
+            <param name="parameters">工作参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.ChangeWorkByState(System.String,System.Int32,System.String)">
+            <summary>
+            修改工作状态和参数   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="state">状态 NoSet不修改</param>
+            <param name="parameters">参数 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.ChangeWorkByAttrib(System.String,System.String,System.String)">
+            <summary>
+            修改工作属性   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="caption">标题 null不修改</param>
+            <param name="creator">创建人 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.QueryWorkCount(PengeSoft.NWorkFlow.NWorkInstanceQueryPara)">
+            <summary>
+            查询工作数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.QueryWorkList(PengeSoft.NWorkFlow.NWorkInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询工作列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.GetWorkInstance(System.String,System.Boolean)">
+            <summary>
+            取工作实例   
+            </summary>
+            <param name="workID">工作ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回Template）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NWorkDataManagerSvr.DeleteWork(System.String)">
+            <summary>
+            删除工作   
+            </summary>
+            <param name="workID">工作ID</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.INTaskDataManagerSvr">
+            <summary>
+            INTaskDataManagerSvr 接口定义。任务数据管理器，此服务管理的均是任务实例。    
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INTaskDataManagerSvr.InsertTask(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,PengeSoft.NWorkFlow.NTaskInstanceIndexList,System.String)">
+            <summary>
+            插入新任务，返回任务的ID   
+            </summary>
+            <param name="taskName">任务名称</param>
+            <param name="type">任务类型，取值范围<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see>，不能选择NoSet。</param>
+            <param name="groupName">分组名称</param>
+            <param name="submitor">提交者</param>
+            <param name="runner">执行人</param>
+            <param name="parameters">任务参数</param>
+            <param name="step">步骤实例标识</param>
+            <param name="preTaskIndexs">前驱任务索引表（任务实例的索引）</param>
+            <param name="workID">工作实例ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INTaskDataManagerSvr.ChangeTaskByState(System.String,System.Int32,System.String,PengeSoft.NWorkFlow.NTaskList)">
+            <summary>
+            修改任务状态和参数   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="state">状态 NoSet不修改</param>
+            <param name="parameters">参数 null不修改</param>
+            <param name="nextTasks">后续任务表 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INTaskDataManagerSvr.ChangeTaskByAttrib(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            修改任务属性   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="runner">执行人 null不修改</param>
+            <param name="type">任务类型 NoSet不修改</param>
+            <param name="submitor">提交者 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INTaskDataManagerSvr.QueryTaskCount(PengeSoft.NWorkFlow.NTaskInstanceQueryPara)">
+            <summary>
+            查询任务数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INTaskDataManagerSvr.QueryTaskList(PengeSoft.NWorkFlow.NTaskInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询任务列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INTaskDataManagerSvr.GetTaskInstance(System.String,System.Boolean)">
+            <summary>
+            取任务实例   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.INTaskDataManagerSvr.DeleteTask(System.String)">
+            <summary>
+            删除任务   
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskDataManagerSvr">
+            <summary>
+            NTaskDataManagerSvr实现。任务数据管理器，此服务管理的均是任务实例。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.InsertTask(System.String,System.Int32,System.String,System.String,System.String,System.String,System.String,PengeSoft.NWorkFlow.NTaskInstanceIndexList,System.String)">
+            <summary>
+            插入新任务，返回任务的ID   
+            </summary>
+            <param name="taskName">任务名称</param>
+            <param name="type">任务类型，取值范围<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see>，不能选择NoSet。</param>
+            <param name="groupName">分组名称</param>
+            <param name="submitor">提交者</param>
+            <param name="runner">执行人</param>
+            <param name="parameters">任务参数</param>
+            <param name="step">步骤实例标识</param>
+            <param name="preTaskIndexs">前驱任务索引表（任务实例的索引）</param>
+            <param name="workID">工作实例ID</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.ChangeTaskByState(System.String,System.Int32,System.String,PengeSoft.NWorkFlow.NTaskList)">
+            <summary>
+            修改任务状态和参数   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="state">状态 NoSet不修改</param>
+            <param name="parameters">参数 null不修改</param>
+            <param name="nextTasks">后续任务表 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.ChangeTaskByAttrib(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            修改任务属性   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="runner">执行人 null不修改</param>
+            <param name="type">任务类型 NoSet不修改</param>
+            <param name="submitor">提交者 null不修改</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.QueryTaskCount(PengeSoft.NWorkFlow.NTaskInstanceQueryPara)">
+            <summary>
+            查询任务数   
+            </summary>
+            <param name="queryParam">查询参数</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.QueryTaskList(PengeSoft.NWorkFlow.NTaskInstanceQueryPara,System.Boolean,System.Int32,System.Int32)">
+            <summary>
+            查询任务列表   
+            </summary>
+            <param name="queryParam">查询参数</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+            <param name="startIndex">开始记录索引</param>
+            <param name="pageSize">页长度</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.GetTaskInstance(System.String,System.Boolean)">
+            <summary>
+            取任务实例   
+            </summary>
+            <param name="taskID">任务ID</param>
+            <param name="detail">返回全部数据，true返回全部数据，false返回摘要数据（不返回PreTaskIndexs和NextTasks）。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskDataManagerSvr.DeleteTask(System.String)">
+            <summary>
+            删除任务   
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NFlowTemplate">
+            <summary>
+            NFlowTemplate 流程模板的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplate.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplate.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplate.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplate.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplate.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NFlowTemplate.ID">
+            <summary>
+            模板ID 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NFlowTemplate.TaskDefines">
+            <summary>
+            任务定义表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NFlowTemplate.JionRuleService">
+            <summary>
+            汇聚规则服务 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskInstanceIndexList">
+            <summary>
+            NTaskInstanceIndexList 任务实例索引列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceIndexList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceIndexList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NTaskInstanceIndex">
+            <summary>
+            NTaskInstanceIndex 任务实例索引的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceIndex.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceIndex.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceIndex.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NTaskInstanceIndex.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NTaskInstanceIndex.TaskInstanceID">
+            <summary>
+            任务实例ID 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NFlowTemplateList">
+            <summary>
+            NFlowTemplateList 流程模板列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplateList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NFlowTemplateList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NNextTask">
+            <summary>
+            NNextTask 下一步任务的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTask.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTask.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTask.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTask.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NNextTask.Name">
+            <summary>
+            任务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NNextTask.GroupName">
+            <summary>
+            分组标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NNextTask.Type">
+            <summary>
+            任务类型<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see> 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NNextTask.Runner">
+            <summary>
+            执行人 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NNextTask.TaskID">
+            <summary>
+            任务标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.NNextTask.ID">
+            <summary>
+            标识 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NNextTaskList">
+            <summary>
+            NNextTaskList 下一步任务列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.INNextTaskDao">
+            <summary>
+            INNextTaskDao接口定主义。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NNextTaskDao">
+            <summary>
+            NNextTaskDao实现, 从BaseSqlMapDao继承。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.GetParaHashTable(PengeSoft.NWorkFlow.NNextTask,System.String)">
+            <summary>
+            根据条件对象取得条件 Hashtable
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Order">排序字段</param>
+            <returns>条件Hashtable</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.QueryCount(System.Collections.Hashtable)">
+            <summary>
+            查询记录数,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.QueryCount(System.String,System.Collections.Hashtable)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.QueryList(System.String,System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.GetCount">
+            <summary>
+            取记录数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.GetList(System.Int32,System.Int32,System.String)">
+            <summary>
+            取列表
+            </summary>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.QueryCount(PengeSoft.Data.DataPacket)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="Data">条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.QueryList(PengeSoft.Data.DataPacket,System.Int32,System.Int32,System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="detail">取明细数据</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Insert(PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Insert(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Update(PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Update(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Update(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Update(System.String,PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.GetDetail(PengeSoft.Data.DataPacket)">
+            <summary>
+            取详细数据
+            </summary>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.GetDetail(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            取数据
+            </summary>
+            <param name="data">条件对象</param>
+            <param name="detail">取明细数据</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.GetDetail(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            取数据
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Delete(PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskDao.Delete(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.NNextTaskQueryPara">
+            <summary>
+            NNextTask 查询参数
+            </summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByName">
+            <summary>按Name排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByName_desc">
+            <summary>按Name排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByGroupName">
+            <summary>按GroupName排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByGroupName_desc">
+            <summary>按GroupName排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByType">
+            <summary>按Type排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByType_desc">
+            <summary>按Type排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByRunner">
+            <summary>按Runner排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByRunner_desc">
+            <summary>按Runner排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByTaskID">
+            <summary>按TaskID排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByTaskID_desc">
+            <summary>按TaskID排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByID">
+            <summary>按ID排序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.OrderByID_desc">
+            <summary>按ID排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.QueryKey_Name">
+            <summary>查询 Name 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.QueryKey_GroupName">
+            <summary>查询 GroupName 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.QueryKey_Type">
+            <summary>查询 Type 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.QueryKey_Runner">
+            <summary>查询 Runner 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.QueryKey_TaskID">
+            <summary>查询 TaskID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.NWorkFlow.NNextTaskQueryPara.QueryKey_ID">
+            <summary>查询 ID 条件键名称</summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.#ctor(PengeSoft.NWorkFlow.NNextTask,System.String)">
+            <summary>
+            构造函数,指定参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetQueryPara(PengeSoft.NWorkFlow.NNextTask,System.String)">
+            <summary>
+            指定查询参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetName(System.String)">
+            <summary>
+            设 任务名称 条件
+            </summary>
+            <param name="Name">任务名称</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetGroupName(System.String)">
+            <summary>
+            设 分组标识 条件
+            </summary>
+            <param name="GroupName">分组标识</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetType(System.Int32)">
+            <summary>
+            设 任务类型<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see> 非零值条件
+            </summary>
+            <param name="Type">任务类型<see cref="T:PengeSoft.NWorkFlow.ETaskType">ETaskType</see></param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetRunner(System.String)">
+            <summary>
+            设 执行人 条件
+            </summary>
+            <param name="Runner">执行人</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetTaskID(System.String)">
+            <summary>
+            设 任务标识 条件
+            </summary>
+            <param name="TaskID">任务标识</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetID(System.String)">
+            <summary>
+            设 标识 条件
+            </summary>
+            <param name="ID">标识</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.NNextTaskQueryPara.SetOrderByField(System.String)">
+            <summary>
+            设排序字段
+            </summary>
+            <param name="Order">排序字段</param>
+        </member>
+        <member name="T:PengeSoft.NWorkFlow.ComparerNNextTask">
+            <summary>
+            NNextTask 排序比较器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.ComparerNNextTask.#ctor(System.String)">
+            <summary>
+            创建实例,并初始化排序字段
+            </summary>
+            <param name="sortField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.NWorkFlow.ComparerNNextTask.Compare(System.Object,System.Object)">
+            <summary>
+            比较两个 <see cref="!:Zjjhxmmx"/> 对象并返回一个值，指示一个对象是小于、等于还是大于另一个对象。
+            </summary>
+            <param name="x">要比较的第一个对象。</param>
+            <param name="y">要比较的第二个对象。</param>
+            <returns>值 条件 小于零 x 小于 y。 零 x 等于 y。 大于零 x 大于 y。</returns>
+        </member>
+        <member name="P:PengeSoft.NWorkFlow.ComparerNNextTask.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+    </members>
+</doc>
