@@ -1,0 +1,38 @@
+﻿
+.let2 {
+            letter-spacing: 2px;
+        }
+        .let6 {
+            letter-spacing: 6px;
+        }
+.auto-style1
+        {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            text-align: right;
+            height: 26px;
+            width: 109%;
+        }
+        .auto-style2
+        {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            text-align: left;
+            height: 26px;
+        }
+        
+        
+        .auto-style3 {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            text-align: right;
+            width: 29%;
+        }
+        .auto-style5 {
+            padding-top: 6px;
+            padding-bottom: 6px;
+            text-align: right;
+        }
+        .auto-style6 {
+            width: 109%
+        }

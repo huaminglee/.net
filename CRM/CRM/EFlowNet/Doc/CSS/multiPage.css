@@ -1,0 +1,27 @@
+.MultiPage
+{
+  background-color:White;
+  overflow:visible;
+  position:relative;
+  padding:5px;
+  top:-3px;
+  left:1px;
+
+  border: 1px solid #919B9C;
+  height:200px;
+}
+
+.PageContent
+{
+  font-size:9pt; 
+}
+
+.PageHeader
+{
+  font-size:22px;
+  font-weight:bold;
+  letter-spacing:-0.2mm;
+  color: #3F3F3F; 
+  margin-top:0px;
+  margin-bottom:0px;
+}

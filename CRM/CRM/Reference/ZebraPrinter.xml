@@ -1,0 +1,28 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+ZebraPrinter
+</name>
+</assembly>
+<members>
+<member name="M:ZebraPrinter.PrintTask.PrintReady">
+	<summary>
+ 執行打印準備作業
+ </summary>
+	<returns>執行成功Or失敗</returns>
+	<remarks>開啟印表機，開啟列印檔案</remarks>
+</member><member name="M:ZebraPrinter.PrintTask.GetPrintDateStr">
+	<summary>
+    取得打印數據
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:ZebraPrinter.PrintTask.PrintFinish">
+	<summary>
+   結束打印作業
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

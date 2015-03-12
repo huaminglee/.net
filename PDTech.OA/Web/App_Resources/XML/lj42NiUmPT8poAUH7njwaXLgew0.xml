@@ -1,0 +1,117 @@
+<?xml version="1.0"?>
+<TestOnline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestName>test1</TestName>
+  <TestCount>10</TestCount>
+  <TestScore>10</TestScore>
+  <QuestionCollection>
+    <Question>
+      <QuestionID>5b6cf6c6-3df6-4ee9-b0fe-d59e0ccf5229</QuestionID>
+      <Title>《中共中央纪委关于严格禁止利用职务上的便利谋取不正当利益的若干规定》适用对象（  ）。</Title>
+      <OptionA>国家工作人员</OptionA>
+      <OptionB>共产党员</OptionB>
+      <OptionC>公务员</OptionC>
+      <OptionD>国家工作人员中的共产党员</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5badb088-8c11-453f-92fa-6c2ad823fd0c</QuestionID>
+      <Title>根据《行政机关公务员处分条例》第四十八条规定，受到处分的行政机关公务员对处分决定不服的，可以申请复核或者申诉。复核、申诉期间（  ）。</Title>
+      <OptionA>不停止处分的执行</OptionA>
+      <OptionB>停止处分的执行</OptionB>
+      <OptionC>经领导批准可以停止处分的执行</OptionC>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5b5ab6b1-e797-47fa-844b-822a348045dd</QuestionID>
+      <Title>党风廉政建设和反腐败工作作为党和国家工作的重要组成部分，必须坚持党的基本路线，（  ），为深化改革、促进发展、维护稳定服务。</Title>
+      <OptionA>与时俱进、改革创新</OptionA>
+      <OptionB>围绕中心、服务大局</OptionB>
+      <OptionC>实事求是、解放思想</OptionC>
+      <OptionD>标本兼治、综合治理</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5bff0f77-0b3d-46ea-b15f-c1784ad01956</QuestionID>
+      <Title>《关于实行党风廉政建设责任制的规定》中明确，领导干部执行党风廉政建设责任制的情况，应当列为（  ）的重要内容，并在本单位、本部门进行评议。</Title>
+      <OptionA>民主生活会和述职述廉</OptionA>
+      <OptionB>领导干部报告个人有关事项</OptionB>
+      <OptionC>询问质询</OptionC>
+      <OptionD>罢免撤换</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5c211446-4702-401d-b366-1ef13e2e15f0</QuestionID>
+      <Title>个人借用公款超过（  ）不还的,追还所欠公款,情节较重的,给予警告或者严重警告处分;情节严重的,给予撤销党内职务处分。但确因生活困难到期无力归还的除外。</Title>
+      <OptionA>三个月</OptionA>
+      <OptionB>六个月</OptionB>
+      <OptionC>一年</OptionC>
+      <OptionD>两年</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5b4f29b5-b39c-46db-a9d5-735de9788e2b</QuestionID>
+      <Title>下列哪种行为违反了《中国共产党党员领导干部廉洁从政若干准则》中关于禁止违反公共财物管理和使用的规定（  ）。</Title>
+      <OptionA>借用公款、公物或者将公款、公物借给他人</OptionA>
+      <OptionB>用公款参与高消费娱乐、健身活动和获取各种形式的俱乐部会员资格</OptionB>
+      <OptionC>用公款购买商业保险，缴纳住房公积金，发津贴、补贴、奖金等</OptionC>
+      <OptionD>擅自用公款包租、占用客房供个人使用</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5ca04b71-755c-4ff3-bfd4-33ed24a14b4d</QuestionID>
+      <Title>国家建立（）制度。省、自治区、直辖市人民政府应当划定饮用水水源保护区，并采取措施，防止水源枯竭和水体污染，保证城乡居民饮用水安全 。</Title>
+      <OptionA>水源保护区   </OptionA>
+      <OptionB>饮用水水源保护区   </OptionB>
+      <OptionC>饮用水保护区 </OptionC>
+      <OptionD>生活水源保护区</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5ca65bbd-7962-414d-baa4-6c2b8f2cce8c</QuestionID>
+      <Title>引水截（蓄）水排水，损害公共利益或者他人合法权益的，依法( )责任。 </Title>
+      <OptionA>承担民事      </OptionA>
+      <OptionB>承担行政     </OptionB>
+      <OptionC>承担赔偿</OptionC>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5b4d6f94-e7d6-4303-bf00-95a8725e24fb</QuestionID>
+      <Title>被问责的党政领导干部，不受一年内不得担任与其原任职务相当的领导职务限制的问责方式是哪一项：（  ）。</Title>
+      <OptionA>引咎辞职</OptionA>
+      <OptionB>停职检查</OptionB>
+      <OptionC>免职</OptionC>
+      <OptionD>责令辞职</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5cea9fed-9689-4b60-a389-bd38e0e36821</QuestionID>
+      <Title>党员郑某因不明真相被裹挟参加民族分裂游行活动，经组织批评教育后也确实有悔改表现的。据此，对郑某如何处理（  ）。</Title>
+      <OptionA>应当给予其党内警告处分</OptionA>
+      <OptionB>可以免予处分或不予处分</OptionB>
+      <OptionC>应当给予处分</OptionC>
+      <OptionD>应当免予处分</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+  </QuestionCollection>
+  <ReplyTime>2014-10-30T14:01:34</ReplyTime>
+</TestOnline>

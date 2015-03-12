@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap 
+	namespace="PengeSoft.CMS.BaseDatum" 
+	xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<alias>
+		<typeAlias alias="SkinInfo" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.SkinInfo, PengeSoft.CMS.BaseDatum" />
+	</alias>
+
+	<resultMaps>  
+                                  
+		<resultMap id="SkinInfoResult" class="SkinInfo">
+			<result property="SId" column="SId" />
+			<result property="Uid" column="Uid" />
+			<result property="Sname" column="Sname" />
+			<result property="Remark" column="Remark" />
+			<result property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+			<result property="ExtendFields1" column="ExtendFields1" />
+			<result property="ExtendFields2" column="ExtendFields2" />
+			<result property="ExtendFields3" column="ExtendFields3" />
+		</resultMap>
+
+	</resultMaps>
+	
+	<parameterMaps>  
+                                  
+		<parameterMap id="SkinInfoParams" class="SkinInfo">
+			<parameter property="Uid" column="Uid" />
+			<parameter property="Sname" column="Sname" />
+			<parameter property="Remark" column="Remark" />
+			<parameter property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+			<parameter property="ExtendFields1" column="ExtendFields1" />
+			<parameter property="ExtendFields2" column="ExtendFields2" />
+			<parameter property="ExtendFields3" column="ExtendFields3" />
+		</parameterMap>
+    <parameterMap id="MySkinInfoParams" class="SkinInfo">
+      <parameter property="Uid" column="Uid" />
+      <parameter property="Sname" column="Sname" />
+      <parameter property="Remark" column="Remark" />
+      <parameter property="ExtendFields1" column="ExtendFields1" />
+      <parameter property="ExtendFields2" column="ExtendFields2" />
+      <parameter property="ExtendFields3" column="ExtendFields3" />
+    </parameterMap>
+
+		<parameterMap id="UpdateSkinInfoParams" extends="SkinInfoParams" class="SkinInfo">
+			<parameter property="SId" column="SId" />
+		</parameterMap>
+    <parameterMap id="MyUpdateSkinInfoParams" extends="MySkinInfoParams" class="SkinInfo">
+      <parameter property="Uid" column="Uid" />
+    </parameterMap>
+    
+
+  </parameterMaps>
+	
+	<statements>
+
+		<select id="GetSkinInfoCount"  resultClass="int">
+		  SELECT count(*)
+		  FROM [SkinInfo];
+		</select>
+	
+		<select id="GetSkinInfo"  parameterClass="SkinInfo" resultMap="SkinInfoResult">
+			SELECT *
+			FROM [SkinInfo]			
+			WHERE ([SId] = #SId#) ;
+		</select>
+    <select id="MyGetDetail" parameterClass="SkinInfo" resultMap="SkinInfoResult">
+      SELECT *
+      FROM [SkinInfo]
+      WHERE ([Uid] = #Uid#) ;
+    </select>
+		
+		<select id="GetSkinInfoByPara"  parameterClass="Hashtable" resultMap="SkinInfoResult">
+			SELECT *
+			FROM [SkinInfo]
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Sname" >
+				  [Sname] like #Sname#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+			</dynamic>
+
+		</select>
+
+		<select id="GetSkinInfoList" parameterClass="string" resultMap="SkinInfoResult" listClass="NorDataList">
+			SELECT *
+			FROM [SkinInfo]			
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="SId">
+				  [SId]
+				</isEqual>
+				<isEqual compareValue="SId_D">
+				  [SId] desc
+				</isEqual>
+			</dynamic>
+		</select>
+		
+		<select id="QuerySkinInfoCount" parameterClass="Hashtable" resultClass="int">
+			SELECT count(*)
+			FROM [SkinInfo]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Sname" >
+				  [Sname] like #Sname#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<select id="QuerySkinInfoList" parameterClass="Hashtable" resultMap="SkinInfoResult" listClass="NorDataList">
+			SELECT *
+			FROM [SkinInfo]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Sname" >
+				  [Sname] like #Sname#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+			</dynamic>
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="SId" property="_OrderBy">
+				  [SId]
+				</isEqual>
+				<isEqual compareValue="SId_D" property="_OrderBy">
+				  [SId] desc
+				</isEqual>
+			</dynamic>
+		</select>
+    
+		<insert id="InsertSkinInfo" parameterMap="MySkinInfoParams">
+			<generate table="SkinInfo" />
+			<selectKey resultClass="int" type="post" property="SId" >
+				select @@IDENTITY as value
+			</selectKey>
+		</insert>
+
+		<delete id="DeleteSkinInfo" parameterClass="SkinInfo">
+			DELETE FROM [SkinInfo] WHERE ([SId] = #SId#) ;
+		</delete>
+		
+		<select id="DeleteSkinInfoByPara" parameterClass="Hashtable">
+			DELETE FROM [SkinInfo]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Sname" >
+				  [Sname] like #Sname#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<update id="UpdateSkinInfo" parameterMap="UpdateSkinInfoParams">
+      UPDATE [SkinInfo] SET
+      [Uid] = ?,
+      [Sname] = ?,
+      [Remark] = ?,
+      [CreateTime]=?,
+      [ExtendFields1] = ?,
+      [ExtendFields2] = ?,
+      [ExtendFields3] = ?
+      WHERE SId = ?
+    </update>
+    <update id="MyUpdateSkinInfo" parameterMap="MyUpdateSkinInfoParams">
+      UPDATE [SkinInfo] SET
+      [Uid] = ?,
+      [Sname] = ?,
+      [Remark] = ?,
+      [ExtendFields1] = ?,
+      [ExtendFields2] = ?,
+      [ExtendFields3] = ?
+      WHERE Uid = ?
+    </update>
+		
+                <select id="UpdateSkinInfoByPara" parameterClass="Hashtable">
+			UPDATE [SkinInfo]			
+			<dynamic prepend="Set" >
+
+                          <isNotEmpty prepend="," property="Uid" >
+			      [Uid] = #Uid#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="Sname" >
+			      [Sname] = #Sname#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="Remark" >
+			      [Remark] = #Remark#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="CreateTime" >
+			      [CreateTime] = #CreateTime#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="ExtendFields1" >
+			      [ExtendFields1] = #ExtendFields1#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="ExtendFields2" >
+			      [ExtendFields2] = #ExtendFields2#
+			  </isNotEmpty>
+
+                        <isNotEmpty prepend="," property="ExtendFields3" >
+			      [ExtendFields3] = #ExtendFields3#
+			  </isNotEmpty>
+                        </dynamic>
+			<dynamic prepend="Where" >
+			
+                          <isNotEmpty prepend="AND" property="Uid_W" >
+			      [Uid] = #Uid_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Sname_W" >
+			      [Sname] = #Sname_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Remark_W" >
+			      [Remark] = #Remark_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="CreateTime_W" >
+			      [CreateTime] = #CreateTime_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="ExtendFields1_W" >
+			      [ExtendFields1] = #ExtendFields1_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="ExtendFields2_W" >
+			      [ExtendFields2] = #ExtendFields2_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="ExtendFields3_W" >
+			      [ExtendFields3] = #ExtendFields3_W#
+			  </isNotEmpty>
+                        </dynamic>
+		</select>
+
+	</statements>
+	
+</sqlMap>

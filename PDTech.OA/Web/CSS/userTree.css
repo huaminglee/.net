@@ -1,0 +1,184 @@
+﻿.Main_Body
+{
+	width:489px;
+	height: 430px;
+	border-color: #d2d8dc;
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 20px;
+	margin-top: 12px;
+}
+.con_h
+{
+	width:488px;
+	height: 28px;
+	background-color: #f0f5f8;
+	border-bottom: 1px solid #d2d8dc;
+	border-right: 1px solid #d2d8dc;
+}
+.con_p
+{
+	width: 230px;
+	border-right: 1px solid #d2d8dc;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	float: left;
+}
+
+.con_h span
+{
+	margin-left: 12px;
+}
+
+.con_r
+{
+	width: 257px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	float: left;
+}
+.con_s
+{
+	width: 490px;
+	height: 39px;
+	line-height: 39px;
+	float: left;
+}
+.con_s span
+{
+	margin-left: 12px;
+}
+.con_Query
+{
+	width: 230px;
+	border-right: 1px solid #d2d8dc;
+	height: 39px;
+	line-height: 39px;
+	font-size: 12px;
+	float: left;
+	border-bottom: 1px solid #d2d8dc;
+}
+.con_temp
+{
+	width: 257px;
+	height: 39px;
+	line-height: 39px;
+	font-size: 12px;
+	float: left;
+	border-bottom: 1px solid #d2d8dc;
+}
+
+.btn
+{
+	width: 80px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(/images/Pop-stn.png);
+	background-repeat: no-repeat;
+	border: none;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+
+.input
+{
+	border: 1px solid;
+	border-color: #999999 #e1e1e1 #e1e1e1 #999999;
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+	height: 26px;
+	margin-left: 12px;
+}
+
+	.input:focus
+	{
+		border: 1px solid;
+		border-color: #555 #aaa #aaa #555;
+		background: #fffbde;
+	}
+
+.inpute
+{
+	width: 122px;
+}
+.btn_four
+{
+	padding-left: 10px;
+	padding-top: 2px;
+}
+.con_c
+{
+	width:488px;
+	height: 322px;
+	border-bottom: 1px solid #d2d8dc;
+	float: left;
+}
+.con_c .con_tree
+	{
+		width: 230px;
+		height: 322px;
+		border-right: 1px solid #d2d8dc;
+		float: left;
+	    border-bottom: 1px solid #d2d8dc;
+	}
+
+	.con_c .con_say
+	{
+		width: 257px;
+		height: 322px;
+		float: left;
+	}
+	.con_person
+{
+	width: 257px;
+	height: 322px;
+	border-bottom: 1px solid #d2d8dc;
+	padding-top: 3px;
+	overflow: auto;
+}
+.con_btn
+{
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	float: left;
+	text-align: center;
+}
+.btn_submit
+{
+	background: url('../images/btn_submit.png');
+	cursor: pointer;
+}
+.btn_back
+{
+	background: url('../images/btn_back.png');
+	cursor: pointer;
+}
+.con_oper_btn
+{
+	display: inline-block;
+	width: 107px;
+	height: 33px;
+	color: #fff;
+	padding: 2px 0 0 30px;
+	border: none;
+	cursor: pointer;
+	letter-spacing: 3px;
+}
+.btn-default
+{
+	width: 236px;
+	height: 22px;
+	line-height: 22px;
+	background: #f0f5f8;
+	text-align: center;
+	border: 1px solid #d2d8dc;
+	margin-left: 10px;
+	text-decoration: none;
+}

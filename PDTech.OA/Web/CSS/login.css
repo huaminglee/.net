@@ -1,0 +1,14 @@
+﻿@charset "utf-8";
+
+/* header（头部） */
+header.master { margin:0 auto; width:980px; height:183px; background-image:url("/images/login_top_center.jpg");}
+
+/* section（内容） */
+section.container { margin:0 auto; width:980px; height:443px; background-image:url("/images/login_center_new.png");}
+section.container .forms { width:350px; margin:15% 3% 0 0;}
+section.container .forms #btn_submit { margin-top:5%;}
+.clear { clear:both;}
+
+/* footer（内容） */
+footer.master { margin:0 auto; width:980px; height:119px; background-image:url("/images/login_down_center.jpg");}
+footer.master p { line-height:2.5em;}

@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+  <sqlMap
+    namespace="PengeSoft.CMS.BaseDatum"
+    xmlns="http://ibatis.apache.org/mapping"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+    <statements>
+      <select id="QueryAttudeTempletList" parameterClass="Hashtable" resultMap="TempletResult" listClass="NorDataList">
+        SELECT *
+        FROM OA_Templet where TempletProp=1 or (TempletProp=2 and Owner like #Owner#) and templettype = 2 order by TempletProp,TempletContent
+      </select>
+
+      <select id="QueryAttudeTempletCount" parameterClass="Hashtable" resultClass="int">
+		  SELECT count(*)
+		  FROM OA_Templet where TempletProp=1 or (TempletProp=2 and Owner like #Owner#) and templettype = 2
+	  </select>
+
+      <delete id="DeletePersonalTempletByRefID" parameterClass="Templet">
+        Delete from OA_PersonalTemplet where refid = #TempletId#
+      </delete>
+
+    </statements>
+  </sqlMap>

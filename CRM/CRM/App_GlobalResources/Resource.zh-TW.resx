@@ -1,0 +1,255 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="BtnAduitTitle" xml:space="preserve">
+    <value>确定</value>
+  </data>
+  <data name="ChkProrityTop" xml:space="preserve">
+    <value>當設定優先級為高時立即發送郵件通知下一站人員</value>
+  </data>
+  <data name="ChkTtile" xml:space="preserve">
+    <value>選擇</value>
+  </data>
+  <data name="DeleteErrorAlert" xml:space="preserve">
+    <value>文件刪除時發生錯誤！請聯繫系統管理員或系統開發人員。錯誤信息為:</value>
+  </data>
+  <data name="DeleteFileConfirm" xml:space="preserve">
+    <value>請確認是否移除本份文件?</value>
+  </data>
+  <data name="ErrorAlert" xml:space="preserve">
+    <value>時發生錯誤！請聯繫系統管理員或系統開發人員。錯誤信息為:</value>
+  </data>
+  <data name="ErrorFile" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="ErrorTitle" xml:space="preserve">
+    <value>服務器處理過程中出現異常!</value>
+  </data>
+  <data name="FileBanliAlert" xml:space="preserve">
+    <value>文件可能已經被其他辦理人員處理！</value>
+  </data>
+  <data name="FlowActiveError" xml:space="preserve">
+    <value>流程未啟用(不能進行流程審核),请检查流程配置并启动流程!</value>
+  </data>
+  <data name="FlowAdviceTitle" xml:space="preserve">
+    <value>請填寫處理意見</value>
+  </data>
+  <data name="FlowStateTitle" xml:space="preserve">
+    <value>狀態</value>
+  </data>
+  <data name="IDocInfoerror" xml:space="preserve">
+    <value>當前文件尚未實作IDocInfo接口,無法執行文件保存功能!</value>
+  </data>
+  <data name="LblAdviceTitle" xml:space="preserve">
+    <value>處理意见</value>
+  </data>
+  <data name="lblProprityTitle" xml:space="preserve">
+    <value>優先級</value>
+  </data>
+  <data name="LeaderManageTitle" xml:space="preserve">
+    <value>直接主管：</value>
+  </data>
+  <data name="linkCancelTitle" xml:space="preserve">
+    <value>取消</value>
+  </data>
+  <data name="LinkDeleteTitle" xml:space="preserve">
+    <value>刪除</value>
+  </data>
+  <data name="LinkLeaveTitle" xml:space="preserve">
+    <value>离开</value>
+  </data>
+  <data name="LinkManageTitle" xml:space="preserve">
+    <value>管理</value>
+  </data>
+  <data name="LinkSaveTitle" xml:space="preserve">
+    <value>保存</value>
+  </data>
+  <data name="LoadMag" xml:space="preserve">
+    <value>正在獲取數據,請稍候....</value>
+  </data>
+  <data name="MutliSignBZ" xml:space="preserve">
+    <value>會簽</value>
+  </data>
+  <data name="NextUserError" xml:space="preserve">
+    <value>流程下步辦理人員設置有誤!</value>
+  </data>
+  <data name="NOFlowInfo" xml:space="preserve">
+    <value>搜索不到與當前文件其對應的流程定義文件!</value>
+  </data>
+  <data name="NOFlowParam" xml:space="preserve">
+    <value>必須設定流程名稱和流程版本!</value>
+  </data>
+  <data name="NOFlowRejectUser" xml:space="preserve">
+    <value>依設定搜索不到駁回人員!</value>
+  </data>
+  <data name="Prority1" xml:space="preserve">
+    <value>一般</value>
+  </data>
+  <data name="Prority2" xml:space="preserve">
+    <value>緊急</value>
+  </data>
+  <data name="RecordCTTitle" xml:space="preserve">
+    <value>辦理時間</value>
+  </data>
+  <data name="SaveErrorAlert" xml:space="preserve">
+    <value>文件儲存時發生錯誤！請聯繫系統管理員或系統開發人員。錯誤信息為:</value>
+  </data>
+  <data name="SearchNextUser" xml:space="preserve">
+    <value>依設定搜索不到下步流程人員!</value>
+  </data>
+  <data name="SelectUserTitle" xml:space="preserve">
+    <value>請選擇人員信息</value>
+  </data>
+  <data name="SepcialDeptTitle" xml:space="preserve">
+    <value>特定部門：</value>
+  </data>
+  <data name="SepcialGroupTitle" xml:space="preserve">
+    <value>特定群組 :</value>
+  </data>
+  <data name="SepcialLanWei" xml:space="preserve">
+    <value>特定欄位：</value>
+  </data>
+  <data name="SepcialRoleTitle" xml:space="preserve">
+    <value>特定角色：</value>
+  </data>
+  <data name="SepcialStatus" xml:space="preserve">
+    <value>特定步鄹：</value>
+  </data>
+  <data name="SepcialUserTitle" xml:space="preserve">
+    <value>特定人員：</value>
+  </data>
+  <data name="SignUserTitle" xml:space="preserve">
+    <value>簽核人員</value>
+  </data>
+  <data name="StateNameTitle" xml:space="preserve">
+    <value>狀態名稱</value>
+  </data>
+  <data name="TranOptionTitle" xml:space="preserve">
+    <value>執行動作</value>
+  </data>
+  <data name="TransactResult" xml:space="preserve">
+    <value>簽核意見</value>
+  </data>
+  <data name="UserNameTitle" xml:space="preserve">
+    <value>姓名</value>
+  </data>
+  <data name="UserSIDTitle" xml:space="preserve">
+    <value>帳號</value>
+  </data>
+</root>

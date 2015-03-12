@@ -1,0 +1,567 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.IM</name>
+    </assembly>
+    <members>
+        <member name="M:PengeSoft.Auther.RightCheckBase.Get_StatusSet(System.Int32)">
+            <summary>
+            设位集:  
+            </summary>
+            <param name="n">属性序号</param>
+            <returns>属性值</returns>
+        </member>
+        <member name="M:PengeSoft.Auther.RightCheckBase.Set_StatusSet(System.Int32,System.Boolean)">
+            <summary>
+            取位集:  
+            </summary>
+            <param name="n">属性序号</param>
+            <param name="v">属性值</param>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherUserManager.ModifyUserLimitKey(System.String,PengeSoft.Data.StringList,PengeSoft.Data.StringList,System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            修改用户安全选项, 特别注意：IP,IPRange,SN,HddSN,Mac,UserDef等在用 null 作参数时，表示不修改，用相应对象的空时表清除。
+            </summary>
+            <param name="LoginID">登录名称</param>
+            <param name="IP">IP限制</param>
+            <param name="IPRange">IP范围</param>
+            <param name="SN">锁号</param>
+            <param name="HddSN"> 硬盘序列号</param>
+            <param name="CPU">CPU标识</param>
+            <param name="Mac">Mac地址</param>
+            <param name="UserDef">用户自定义标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherGroupManager.GetGroupList(System.Int32,System.Int32,System.Int32,System.Int32,PengeSoft.WorkZoneData.UserRoles@)">
+            <summary>
+            取组列表
+            </summary>
+            <param name="level">
+            取列表的级别，有以下方面:
+                      GATL_DETAIL,GATL_LITTLE
+            和下面可或上的选项
+                    GATL_GETDEPT
+                    GATL_GETByID        取 Tag 指定组号的组信息
+                    GATL_IncludeUID     信息中含用户LoginID表
+                    GATL_IncludeChilds  取 Tag 指定组及下一级组信息
+                    GATL_OnlyChilds     取 Tag 指定组号的下一级组信息
+                    GATL_AllChilds      递归取出所有子组
+                    GATL_IncludeSys     取出系统组
+            GROUP_ADMI, GROUP_POWER, GROUP_USER 用户组的用户才能有 GATL_DETAIL 权限
+            </param>
+            <param name="Tag">level具有GATL_GETByID位时，为组号, 其他情况为组的最大级次(deep)取到树的第几级, -1 表示全部</param>
+            <param name="start">结果起始记录号, 从 0 开始</param>
+            <param name="len">结果记录条数, -1 表示全部</param>
+            <param name="ans">用于存贮返回值的列表，元素类型为 <see cref="T:PengeSoft.WorkZoneData.UserRole"/> </param>
+            <returns>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码<see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherGroupManager.UpdateGroup(PengeSoft.WorkZoneData.UserGroupRec,System.Int32,System.Int32@)">
+            <summary>
+            更新组/部门数据
+            </summary>
+            <param name="rec">组/部门数据 <see cref="T:PengeSoft.WorkZoneData.UserGroupRec"/></param>
+            <param name="Option">
+               GUPOP_UserExclusive = 0x0001;           // 用户只出现在一个部门中（该选项对组无效）
+               GUPOP_UseUserIds    = 0x0002;           // 使用 UserGroupRec.UserIds 参数确定组/部门成员
+            </param>
+            <param name="SID">组/部门的SID(整数)</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.Add(System.Int32,System.Int32,System.Int32,System.String,System.String,System.Int32@)">
+            <summary>
+            添加一新权限
+            </summary>
+            <param name="PosAct">添加位置的权限标识，找不到则为根节点</param>
+            <param name="ActID">给定权限标识，0则自动选取</param>
+            <param name="Option">添加选项
+            <remarks>
+            Option选项:
+              DTAO_AddSub : 添加子项目(不指定则添加或插入同级项目，会跳过已有子项目)
+              DTAO_Insert : 在PosAct后插入项目
+            </remarks>
+            </param>
+            <param name="ActName">权限名称</param>
+            <param name="Detail">权限描述</param>
+            <param name="ID">返回添后成功后的标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.RemoveAct(System.Int32)">
+            <summary>
+            删除权限
+            </summary>
+            <param name="ActID">权限标识</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.GetDetail(System.Int32,System.String@)">
+            <summary>
+            取权限详细信息，成功返回 <see cref="T:PengeSoft.WorkZoneData.UserActionRec"/> 的Xml描述
+            </summary>
+            <param name="ActID">权限标识</param>
+            <param name="ans">返回值， <see cref="T:PengeSoft.WorkZoneData.UserActionRec"/> 的Xml描述</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.GetActList(System.Int32,System.Int32,System.Int32,System.Int32,System.String@)">
+            <summary>
+            取权限列表
+            </summary>
+            <param name="level">
+            取列表的级别，有以下方面:
+                    ACTL_DETAIL  : 取详细信息
+                    ACTL_LITTLE  : 取少量信息
+            和下面两个可或上的选项(可或在一起)
+                    ACTL_GETBYNODE : 按 Tag 指定节点取
+                    ACTL_INPARNODE : 包括 Tag 指定节点本身
+            </param>
+            <param name="Tag">指定节点的标识(权限号)</param>
+            <param name="start">结果起始记录号, 从 0 开始</param>
+            <param name="count">结果记录条数, -1 表示全部</param>
+            <param name="ansXml">结果的Xml序列值, 存贮的 UserRightRec 的 DataList </param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.GetActDefs(System.Int32,System.Int32,System.Int32,PengeSoft.WorkZoneData.ActRights@)">
+            <summary>
+            取用户权限定义数据，不考虑任何继承关系
+            </summary>
+            <param name="Sid">用户安全标识号</param>
+            <param name="node">起始权限节点号，0表示全部节点，取该节点及子节点</param>
+            <param name="option"></param>
+            <param name="defs">返回值 <see cref="T:PengeSoft.WorkZoneData.ActRights"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.UpdateActDefs(System.Int32,System.Int32,PengeSoft.WorkZoneData.ActRights)">
+            <summary>
+            更新用户权限定义数据，不考虑任何继承关系
+            </summary>
+            <param name="Sid">用户标识</param>
+            <param name="option">选项,暂时未用</param>
+            <param name="defs">权限定义数据 <see cref="T:PengeSoft.WorkZoneData.ActRights"/></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.GetUserActionRight(System.Int32,System.Int32,System.UInt64@)">
+            <summary>
+            取用户权限掩码
+            </summary>
+            <param name="sid">用户标识</param>
+            <param name="actId">权限标识</param>
+            <param name="rightMask">输出的权限掩码</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.GetRoleActionRight(System.Int32,System.Int32,System.UInt64@)">
+            <summary>
+            取角色权限掩码
+            </summary>
+            <param name="roleId">角色标识</param>
+            <param name="actId">权限标识</param>
+            <param name="rightMask">输出的权限掩码</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.GetUserActionRight(System.String,System.String,System.UInt64@)">
+            <summary>
+            取用户权限掩码，使用用户及权限名称
+            </summary>
+            <param name="loginId">用户登录名称</param>
+            <param name="actName">权限名称</param>
+            <param name="rightMask">输出的权限掩码</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherActionManager.GetRoleActionRight(System.String,System.String,System.UInt64@)">
+            <summary>
+            取角色权限掩码，使用角色及权限名称
+            </summary>
+            <param name="roleName">角色名称</param>
+            <param name="actName">权限名称</param>
+            <param name="rightMask">输出的权限掩码</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherLoginManager.ForceAdd(System.String,System.String@,System.String,System.String,System.String,System.Double,System.Int32)">
+            <summary>
+            强制用用户名登录
+            </summary>
+            <param name="LoginID">必填</param>
+            <param name="DTag">填空自动生成,并返回登录后的DTag</param>
+            <param name="UIP">必填</param>
+            <param name="DesKey">填空自动生成</param>
+            <param name="UserLimits">可以为空</param>
+            <param name="ExpTime">填0用缺省值</param>
+            <param name="Status">填0</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.Auther.AutherLoginManager.ForceAdd(System.String,System.String@,System.String,System.String,System.String,System.String,System.Double,System.Int32)">
+            <summary>
+            强制用用户名登录
+            </summary>
+            <param name="LoginID">必填</param>
+            <param name="DTag">填空自动生成,并返回登录后的DTag</param>
+            <param name="UHost">用户主机名称</param>
+            <param name="UIP">必填</param>
+            <param name="DesKey">填空自动生成</param>
+            <param name="UserLimits">可以为空</param>
+            <param name="ExpTime">填0用缺省值</param>
+            <param name="Status">填0</param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.IM.TIMCmdHead">
+            <summary>
+            消息头
+            </summary>
+        </member>
+        <member name="T:PengeSoft.IM.IMCmdMessageBase">
+            <summary>
+            IMCmdMessageBase IM消息基类
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessageBase.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessageBase.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessageBase.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessageBase.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessageBase.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessageBase.SaveToStream(System.IO.Stream)">
+            <summary>
+            将对象写入到流
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessageBase.LoadFromStream(System.IO.Stream)">
+            <summary>
+            从流中读出对象
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.Head">
+            <summary>
+            消息头 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.PkType">
+            <summary>
+            数据包类型,未使用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.MsgID">
+            <summary>
+            数据包序号,未使用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.UTag">
+            <summary>
+            用户标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.Cmd">
+            <summary>
+            命令码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.ResCode">
+            <summary>
+            返回值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.EnCodeType">
+            <summary>
+            加密方式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.CompressType">
+            <summary>
+            压缩方式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.DataSize">
+            <summary>
+            消息长度 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.EnCodeKey">
+            <summary>
+            加密字
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessageBase.EnCoded">
+            <summary>
+            是否加密
+            </summary>
+        </member>
+        <member name="T:PengeSoft.IM.IMCmdMessage">
+            <summary>
+            IMCmdMessage 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessage.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessage.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessage.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessage.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessage.SaveToStream(System.IO.Stream)">
+            <summary>
+            将对象写入到流
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="M:PengeSoft.IM.IMCmdMessage.LoadFromStream(System.IO.Stream)">
+            <summary>
+            从流中读出对象
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.P1">
+            <summary>
+            整数参数1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.P2">
+            <summary>
+            整数参数2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.P3">
+            <summary>
+            整数参数3 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.P4">
+            <summary>
+            整数参数4 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.P5">
+            <summary>
+            整数参数5 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.SP1">
+            <summary>
+            字符参数1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.SP2">
+            <summary>
+            字符参数2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.SP3">
+            <summary>
+            字符参数3 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.SP4">
+            <summary>
+            字符参数4 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.IMCmdMessage.SP5">
+            <summary>
+            字符参数5 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.IM.TcpHead">
+            <summary>
+            消息头
+            </summary>
+        </member>
+        <member name="T:PengeSoft.IM.CmdMessage">
+            <summary>
+            CmdMessage 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.CmdMessage.#ctor">
+            <summary>
+            构造函数 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.CmdMessage.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.IM.CmdMessage.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.IM.CmdMessage.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.IM.CmdMessage.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.IM.CmdMessage.SaveToStream(System.IO.Stream)">
+            <summary>
+            将对象写入到流
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="M:PengeSoft.IM.CmdMessage.LoadFromStream(System.IO.Stream)">
+            <summary>
+            从流中读出对象
+            </summary>
+            <param name="stream">I/O流</param>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.Head">
+            <summary>
+            消息头 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.PkType">
+            <summary>
+            数据包类型,未使用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.MsgID">
+            <summary>
+            数据包序号,未使用
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.UTag">
+            <summary>
+            用户标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.EnCodeType">
+            <summary>
+            加密方式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.CompressType">
+            <summary>
+            压缩方式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.DataSize">
+            <summary>
+            消息长度 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.Cmd">
+            <summary>
+            命令码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.ResCode">
+            <summary>
+            返回值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.p1">
+            <summary>
+            整数参数1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.p2">
+            <summary>
+            整数参数2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.p3">
+            <summary>
+            整数参数3 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.p4">
+            <summary>
+            整数参数4 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.p5">
+            <summary>
+            整数参数5 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.Sp1">
+            <summary>
+            字符参数1 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.Sp2">
+            <summary>
+            字符参数2 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.Sp3">
+            <summary>
+            字符参数3 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.Sp4">
+            <summary>
+            字符参数4 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.Sp5">
+            <summary>
+            字符参数5 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.CRC32">
+            <summary>
+            校验和 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.EnCodeKey">
+            <summary>
+            加密字
+            </summary>
+        </member>
+        <member name="P:PengeSoft.IM.CmdMessage.EnCoded">
+            <summary>
+            是否加密
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.MsgSubscriber.WorkZoneMsgSubIM">
+            <summary>
+            鹏业工作站消息定阅, 在收件人字段可加引导字'#'表示发到WorkZone的用户和组(前缀'_','@'分别表示用户和组)，如:
+              #_LoginId,@GroupID
+            最常见有用法就是:  #<![CDATA[<%Operators%>]]> 表示发给当前任务的操作人员。
+            发送方法分用IM系统及文件系统，使用文件系统应用需与权限管理系统部署在一个服务器
+            </summary>
+        </member>
+    </members>
+</doc>

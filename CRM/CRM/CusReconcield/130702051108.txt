@@ -1,0 +1,16 @@
+==============
+錯誤發生的時間：2013/7/1 下午 05:30:13
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 ExpenseStock.StockSheetDetails.BindStockSheet()
+   於 ExpenseStock.StockSheetDetails.LoadDocInfo(DocInfoSystem CurDocInfo)
+   於 eFlowDoc.ctlFlowActionList.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：BindStockSheet
+出錯的類為：
+URL:/EXPENSESTOCK/STOCKSHEETDETAILS.ASPX
+主機地址:10.153.1.214
+===================================================================================================

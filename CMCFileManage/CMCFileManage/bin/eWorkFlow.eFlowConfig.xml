@@ -1,0 +1,185 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+eWorkFlow.eFlowConfig
+</name>
+</assembly>
+<members>
+<member name="P:Platform.eFlowConfiguration.My.Resources.Resources.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:Platform.eFlowConfiguration.My.Resources.Resources.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強型別資源類別的資源查閱。
+</summary>
+</member><member name="T:Platform.eFlowConfiguration.My.Resources.Resources">
+	<summary>
+  用於查詢當地語系化字串等的強型別資源類別
+</summary>
+</member><member name="M:Platform.eFlowConfiguration.ConfigurationInfo.IsWEBProject">
+	<summary>
+ 判斷當前專案是否為Web專案。要加入System.Web.dll和System.Window.Form.dll文件作為專案參考
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.eFlowConfigAssemblyVersion">
+	<summary>
+ 取得eFlow配置檔對應的版本號
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.DefaultConfigXMLPath">
+	<summary>
+ Config文件的默認路徑
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.eFlowConfigInstance">
+	<summary>
+ eFlowConfig的實例
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.CustomPageSize">
+	<summary>
+ 自定分頁默認記錄數
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.RegisterName">
+	<summary>
+ eFlow組件註冊名
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.RegisterKeycode">
+	<summary>
+ eFlow組件註冊密碼
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.EncrytionOption">
+	<summary>
+ 數據庫連接字串是否加密
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.EncrytionSaltValue">
+	<summary>
+ 加密密碼
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.DBConnString">
+	<summary>
+ 數據庫連接字串
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.SwitchWFTrackingFlag">
+	<summary>
+ WF工作流追蹤標誌
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.SwitchWFPersistenceFlag">
+	<summary>
+ WF工作流持久化標誌
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.WFTrackingDBConnStr">
+	<summary>
+ WF追蹤數據庫連接字串
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.WFPersistenceDBConnStr">
+	<summary>
+ WF持久化數據庫連接字串
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.SMTPHost">
+	<summary>
+ SMTP服務器主機地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.SMTPPort">
+	<summary>
+ SMTP服務器主機連接埠
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.LDAPPath">
+	<summary>
+ LDAP地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eFlowConfiguration.ConfigurationInfo.SelectUserApPath">
+	<summary>
+ SelectUserApPath流程選擇人員信息的eFlowNet配置地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eFlowConfiguration.ConfigurationInfo.#ctor">
+	<summary>
+ 建構式,配置文件的路徑請參照DefaultConfigXMLPath屬性值
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eFlowConfiguration.ConfigurationInfo.#ctor(System.String)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="ConfigFilePath">eFlow的配置文件</param>
+	<remarks>
+		<example>
+			<code>
+       Dim path As String = HttpContext.Current.Server.MapPath("")
+       doc.Load(path + "\test.xml")
+ </code>
+		</example>
+	</remarks>
+</member><member name="M:Platform.eFlowConfiguration.ConfigurationInfo.DESEncrypt(System.String,System.String)">
+	<summary>
+ DES加密字符串數據
+ </summary>
+	<param name="strKey">密鑰</param>
+	<param name="strData">被加密數據</param>
+	<returns>返回加密後的數據</returns>
+	<remarks>
+	</remarks>
+</member><member name="M:Platform.eFlowConfiguration.ConfigurationInfo.DESDecrypt(System.String,System.String)">
+	<summary>
+ DES解密字符串數據
+ </summary>
+	<param name="strKey">密鑰</param>
+	<param name="strData">被解密數據</param>
+	<returns>返回解密後的數據</returns>
+	<remarks>
+	</remarks>
+</member>
+</members>
+</doc>

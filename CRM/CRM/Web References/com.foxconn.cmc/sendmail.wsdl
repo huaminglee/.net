@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://cmc.foxconn.com" xmlns:s1="http://cmc.foxconn.com/AbstractTypes" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://cmc.foxconn.com" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://cmc.foxconn.com">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MailSendToOne">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MailAddress" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="CCList" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MailSendToOneResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MailSendToOneResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="MailSendToList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="MailAddressLst" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="subject" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="content" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="MailSendToListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="MailSendToListResult" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="string" nillable="true" type="s:string" />
+      <s:element name="boolean" type="s:boolean" />
+    </s:schema>
+    <s:schema targetNamespace="http://cmc.foxconn.com/AbstractTypes">
+      <s:import namespace="http://schemas.xmlsoap.org/soap/encoding/" />
+      <s:complexType name="StringArray">
+        <s:complexContent mixed="false">
+          <s:restriction base="soapenc:Array">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="unbounded" name="String" type="s:string" />
+            </s:sequence>
+          </s:restriction>
+        </s:complexContent>
+      </s:complexType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToOneSoapIn">
+    <wsdl:part name="parameters" element="tns:MailSendToOne" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToOneSoapOut">
+    <wsdl:part name="parameters" element="tns:MailSendToOneResponse" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToListSoapIn">
+    <wsdl:part name="parameters" element="tns:MailSendToList" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToListSoapOut">
+    <wsdl:part name="parameters" element="tns:MailSendToListResponse" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpGetIn" />
+  <wsdl:message name="HelloWorldHttpGetOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToOneHttpGetIn">
+    <wsdl:part name="MailAddress" type="s:string" />
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="CCList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToOneHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToListHttpGetIn">
+    <wsdl:part name="MailAddressLst" type="s1:StringArray" />
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToListHttpGetOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldHttpPostIn" />
+  <wsdl:message name="HelloWorldHttpPostOut">
+    <wsdl:part name="Body" element="tns:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToOneHttpPostIn">
+    <wsdl:part name="MailAddress" type="s:string" />
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+    <wsdl:part name="CCList" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToOneHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToListHttpPostIn">
+    <wsdl:part name="MailAddressLst" type="s1:StringArray" />
+    <wsdl:part name="subject" type="s:string" />
+    <wsdl:part name="content" type="s:string" />
+  </wsdl:message>
+  <wsdl:message name="MailSendToListHttpPostOut">
+    <wsdl:part name="Body" element="tns:boolean" />
+  </wsdl:message>
+  <wsdl:portType name="SendMailSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <wsdl:input name="MailSendToOne" message="tns:MailSendToOneSoapIn" />
+      <wsdl:output name="MailSendToOne" message="tns:MailSendToOneSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input name="MailSendToList" message="tns:MailSendToListSoapIn" />
+      <wsdl:output name="MailSendToList" message="tns:MailSendToListSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SendMailHttpGet">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpGetIn" />
+      <wsdl:output message="tns:HelloWorldHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <wsdl:input name="MailSendToOne" message="tns:MailSendToOneHttpGetIn" />
+      <wsdl:output name="MailSendToOne" message="tns:MailSendToOneHttpGetOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input name="MailSendToList" message="tns:MailSendToListHttpGetIn" />
+      <wsdl:output name="MailSendToList" message="tns:MailSendToListHttpGetOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:portType name="SendMailHttpPost">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldHttpPostIn" />
+      <wsdl:output message="tns:HelloWorldHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <wsdl:input name="MailSendToOne" message="tns:MailSendToOneHttpPostIn" />
+      <wsdl:output name="MailSendToOne" message="tns:MailSendToOneHttpPostOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <wsdl:input name="MailSendToList" message="tns:MailSendToListHttpPostIn" />
+      <wsdl:output name="MailSendToList" message="tns:MailSendToListHttpPostOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="SendMailSoap" type="tns:SendMailSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://cmc.foxconn.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <soap:operation soapAction="http://cmc.foxconn.com/MailSendToOne" style="document" />
+      <wsdl:input name="MailSendToOne">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MailSendToOne">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap:operation soapAction="http://cmc.foxconn.com/MailSendToList" style="document" />
+      <wsdl:input name="MailSendToList">
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MailSendToList">
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendMailSoap12" type="tns:SendMailSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://cmc.foxconn.com/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <soap12:operation soapAction="http://cmc.foxconn.com/MailSendToOne" style="document" />
+      <wsdl:input name="MailSendToOne">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MailSendToOne">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <soap12:operation soapAction="http://cmc.foxconn.com/MailSendToList" style="document" />
+      <wsdl:input name="MailSendToList">
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output name="MailSendToList">
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendMailHttpGet" type="tns:SendMailHttpGet">
+    <http:binding verb="GET" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <http:operation location="/MailSendToOne" />
+      <wsdl:input name="MailSendToOne">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="MailSendToOne">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <http:operation location="/MailSendToList" />
+      <wsdl:input name="MailSendToList">
+        <http:urlEncoded />
+      </wsdl:input>
+      <wsdl:output name="MailSendToList">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="SendMailHttpPost" type="tns:SendMailHttpPost">
+    <http:binding verb="POST" />
+    <wsdl:operation name="HelloWorld">
+      <http:operation location="/HelloWorld" />
+      <wsdl:input>
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output>
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MailSend">
+      <http:operation location="/MailSendToOne" />
+      <wsdl:input name="MailSendToOne">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="MailSendToOne">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SendMail">
+      <http:operation location="/MailSendToList" />
+      <wsdl:input name="MailSendToList">
+        <mime:content type="application/x-www-form-urlencoded" />
+      </wsdl:input>
+      <wsdl:output name="MailSendToList">
+        <mime:mimeXml part="Body" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SendMail">
+    <wsdl:port name="SendMailSoap" binding="tns:SendMailSoap">
+      <soap:address location="http://cmc.foxconn.com/crm/action/sendmail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendMailSoap12" binding="tns:SendMailSoap12">
+      <soap12:address location="http://cmc.foxconn.com/crm/action/sendmail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendMailHttpGet" binding="tns:SendMailHttpGet">
+      <http:address location="http://cmc.foxconn.com/crm/action/sendmail.asmx" />
+    </wsdl:port>
+    <wsdl:port name="SendMailHttpPost" binding="tns:SendMailHttpPost">
+      <http:address location="http://cmc.foxconn.com/crm/action/sendmail.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="DoAttitude" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.DoAttitude, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="DoAttitudeResult" class="DoAttitude">
+      <result property="AttitudeId" column="AttitudeId" />
+      <result property="FormID" column="FormID" />
+      <result property="StateName" column="StateName" />
+      <result property="Creator" column="Creator" />
+      <result property="Department" column="Department" />
+      <result property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+      <result property="ArchiveContent" column="ArchiveContent" />
+      <result property="TaskID" column="TaskID" />
+      <result property="WorkID" column="WorkID" />
+    </resultMap>
+
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="DoAttitudeParams" class="DoAttitude">
+      <parameter property="AttitudeId" column="AttitudeId" />
+      <parameter property="FormID" column="FormID" />
+      <parameter property="StateName" column="StateName" />
+      <parameter property="Creator" column="Creator" />
+      <parameter property="Department" column="Department" />
+      <parameter property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+      <parameter property="ArchiveContent" column="ArchiveContent" />
+      <parameter property="TaskID" column="TaskID" />
+      <parameter property="WorkID" column="WorkID" />
+    </parameterMap>
+
+    <parameterMap id="UpdateDoAttitudeParams" extends="DoAttitudeParams" class="DoAttitude">
+      <parameter property="AttitudeId" column="AttitudeId" />
+    </parameterMap>
+
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetDoAttitudeCount"  resultClass="int">
+      SELECT count(*)
+      FROM [DOATTITUDE];
+    </select>
+
+    <select id="GetDoAttitude"  parameterClass="DoAttitude" resultMap="DoAttitudeResult">
+      SELECT *
+      FROM [DOATTITUDE]
+      WHERE ([AttitudeId] = #AttitudeId#) ;
+    </select>
+
+    <select id="GetDoAttitudeByPara"  parameterClass="Hashtable" resultMap="DoAttitudeResult">
+      SELECT *
+      FROM [DOATTITUDE]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+      </dynamic>
+
+    </select>
+
+    <select id="GetDoAttitudeList" parameterClass="string" resultMap="DoAttitudeResult" listClass="NorDataList">
+      SELECT *
+      FROM [DOATTITUDE]
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="CreateTime">
+          [CreateTime]
+        </isEqual>
+        <isEqual compareValue="CreateTime_D">
+          [CreateTime] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryDoAttitudeCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM [DOATTITUDE]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryDoAttitudeList" parameterClass="Hashtable" resultMap="DoAttitudeResult" listClass="NorDataList">
+      SELECT *
+      FROM [DOATTITUDE]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="CreateTime" property="_OrderBy">
+          [CreateTime]
+        </isEqual>
+        <isEqual compareValue="CreateTime_D" property="_OrderBy">
+          [CreateTime] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <insert id="InsertDoAttitude" parameterMap="DoAttitudeParams">
+      <generate table="DOATTITUDE" />
+    </insert>
+
+    <delete id="DeleteDoAttitude" parameterClass="DoAttitude">
+      DELETE FROM [DOATTITUDE] WHERE ([AttitudeId] = #AttitudeId#) ;
+    </delete>
+
+    <select id="DeleteDoAttitudeByPara" parameterClass="Hashtable">
+      DELETE FROM [DOATTITUDE]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <update id="UpdateDoAttitude" parameterMap="UpdateDoAttitudeParams">
+      UPDATE [DOATTITUDE] SET
+      [AttitudeId] = ?,
+      [FormID] = ?,
+      [StateName] = ?,
+      [Creator] = ?,
+      [Department] = ?,
+      [CreateTime] = ?,
+      [ArchiveContent] = ?,
+      [TaskID] = ?,
+      [WorkID] = ?
+      WHERE AttitudeId = ?;
+    </update>
+
+    <select id="UpdateDoAttitudeByPara" parameterClass="Hashtable">
+      UPDATE [DOATTITUDE]
+      <dynamic prepend="Set" >
+
+        <isNotEmpty prepend="," property="AttitudeId" >
+          [AttitudeId] = #AttitudeId#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="FormID" >
+          [FormID] = #FormID#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="StateName" >
+          [StateName] = #StateName#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Creator" >
+          [Creator] = #Creator#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Department" >
+          [Department] = #Department#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="CreateTime" >
+          [CreateTime] = #CreateTime#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ArchiveContent" >
+          [ArchiveContent] = #ArchiveContent#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="TaskID" >
+          [TaskID] = #TaskID#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="WorkID" >
+          [WorkID] = #WorkID#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Where" >
+
+        <isNotEmpty prepend="AND" property="AttitudeId_W" >
+          [AttitudeId] = #AttitudeId_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="FormID_W" >
+          [FormID] = #FormID_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="StateName_W" >
+          [StateName] = #StateName_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Creator_W" >
+          [Creator] = #Creator_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Department_W" >
+          [Department] = #Department_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="CreateTime_W" >
+          [CreateTime] = #CreateTime_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ArchiveContent_W" >
+          [ArchiveContent] = #ArchiveContent_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="TaskID_W" >
+          [TaskID] = #TaskID_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="WorkID_W" >
+          [WorkID] = #WorkID_W#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+  </statements>
+
+</sqlMap>

@@ -1,0 +1,373 @@
+﻿body 
+{
+	color:Black;
+	background-color:#E3E3E3;
+	text-align:center;
+	margin-top:3px;
+	font-family:Geneva,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	padding:0px;
+}
+/*--------*/
+#Page
+{
+	background-color:White;
+	width:1000px;
+	border-color:Silver;
+	border-style:solid;
+	border-width:1px;
+	margin-left:auto;
+	margin-right:auto;
+}
+/*-------------	-----------Page包含的3个模块（Top,Content,Footer）----background-image:url(Images/header_bg.png);
+	background-repeat:repeat-x;
+	background-color:#EEEEEE;----------
+	-----------------*/
+#Top
+{
+
+	
+	border-bottom-color:Silver;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	margin:0px;		
+	width:100%;
+	padding:0px;
+	height:82px;
+	text-align:left;
+
+}
+#Top img
+{
+	
+	margin-top:10px;
+	margin-left:10px;
+
+	}
+#Top #TLeft
+{
+	display:none;
+	}
+#Top #TRight
+{
+	display:none;
+		}
+/*--------------------------------------------------------------------------*/
+#divMenu
+{
+	margin:0px;	
+	margin-left:0px;
+	border-bottom-color:Silver;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	padding:0px;
+	text-align:left;
+	}		
+/*--------------------------------------------------------------------------*/
+#Content
+{
+
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+/*-----------Content包含的3个模块（Left,Main,Right）-----------------*/
+/*-左模块---------*/
+#Left
+{
+	display:none;
+	width:16%;
+	float:left;
+	border-width:0px;
+	border-right-color:Silver;
+	border-right-width:1px;
+	border-right-style:solid;
+	overflow-x:hidden;
+	padding:0px;
+	margin:0px;
+	text-align:left;
+}
+/*----	border-bottom-color:Silver;
+	border-bottom-style:solid;
+	border-bottom-width:1px;--*/
+#Left #LTop
+{
+	padding:0px;	
+	margin: 0 3px 0 3px;
+
+	}
+	/*-------border-bottom-color:Silver;
+	border-bottom-style:solid;
+	border-bottom-width:1px;--------*/
+#Left #LCenter
+{
+	padding:0px;	
+	margin: 0 3px 0 3px;
+	
+	}
+#Left #LBottom
+{
+	visibility:hidden;
+	padding:0px;	
+	margin: 0 3px 0 0;
+	border-bottom-color:Silver;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	}
+/*----*/
+#Dot
+{
+	display:none;
+	float:left;
+	width:0.1%;
+	text-align:center;
+	background-image:url('../App_Themes/Default/Images/dot_08.gif');
+	background-position:center;
+	background-repeat:no-repeat;
+	background-color:Silver;
+	cursor:pointer;
+	}
+/*-中间模块（页面主内容）---------text-align:left;	----------*/
+#Main
+{
+	
+	width:100%;
+	border-style:none;
+	border-width:0px;
+	overflow-x:auto;
+	margin:0px;
+	padding:0px;
+	margin-left:0px;	
+	float:left;
+	text-align:left;
+	height:500px;
+}
+/*-右模块-*/
+#Right
+{
+	display:none;/*--右模块，默认情况为没有，如需添加右模块注释掉本句，并使（#Left，#Main，#Right）的width值的和为99%--*/
+	/*width:20%;*/
+	border-left-color:Silver;
+	border-left-width:1px;
+	border-left-style:solid;
+	overflow-x:auto;
+	margin:0px;
+	padding:0px;
+	float:left;
+	text-align:left;
+	}
+/*---------------------------------------------------------------------------*/
+#Footer
+{
+	border-top: 1px solid Silver;
+    height:50px;
+	    clear:both;
+	    margin:0px;
+	    width:100%;
+	    padding:0px;
+	background-image:url('../App_Themes/Default/Images/Footer_bg.png');
+	    background-repeat:repeat-x;
+	background-position:50% bottom;
+	    background-color:#EEEEEE;
+}
+#MainTop
+{
+	
+	background-image:url('../App_Themes/Default/Images/Footer_bg.png');
+	background-position:50% bottom;
+	background-repeat:repeat-x;
+	height:25px;
+	width:100%;
+	margin-bottom:3px;
+	text-align:left;	
+	}
+.ContentMain
+{
+	overflow:auto;
+}
+.Clear
+{
+	border-style:none;
+	border-width:0px;
+	width:0px;
+	height:0px;
+	margin:0px;
+	padding:0px;
+	}
+.Txt
+{
+	border: 1px solid Silver;
+	background-color:#EEEEEE;
+	margin-left: 0px;
+}
+a
+{
+	color:#6E6E6E;
+
+}
+a:hover
+{
+	color:Black;
+	text-decoration:none;
+}
+.GridAlterItem
+{
+	border-left:solid 1px #BABABA;
+	background:#FFFFFF;
+	
+	color:#547384;
+	}
+.GridAlterItem td
+{
+	white-space:nowrap;
+	border-bottom:solid 1px #BABABA;
+	border-right:solid 1px #BABABA;
+	font-size:12px;
+	padding-left:4px;
+	padding-top:4px;
+	}
+.GridItem
+{
+border-left:solid 1px #BABABA;
+background:#FFFFFF;
+
+color:#547384;
+	}
+.GridItem td
+{
+	white-space:nowrap;
+	border-bottom:solid 1px #BABABA;
+	border-right:solid 1px #BABABA;
+	font-size:12px;
+	padding-left:4px;
+	padding-top:4px;
+	}
+
+.GridHead
+{
+    font-weight: bold;
+    color: #003366;
+    border: solid 1px #CCFFFF;
+    background-color: #A9A9A9;
+    background-position: center;
+    background-image: url('../App_Themes/Default/Images/R.gif');
+    line-height: 20px;
+}
+.GridHead th
+{
+   border:solid 1px #CCCCFF;       
+   white-space:nowrap; 
+	}
+
+
+
+.GridFooter
+{
+	color:#4A3C8C;
+	background-color:#B5C7DE;
+	}
+.GridRowSelect
+{
+	border-left:solid 1px #BABABA;
+	white-space:nowrap;
+	background-color:#F4FBFF;
+    color:#0066FF;
+	}
+.GridRowSelect td
+{
+	border-bottom:solid 1px #BABABA;
+	border-right:solid 1px #BABABA;
+	white-space:nowrap;
+	padding-left:4px;
+	padding-top:4px;
+	}
+.Btn 
+{
+	border: #7b9ebd 1px solid; 
+	padding-right: 2px; 
+	padding-left: 2px;
+	font-size: 12px;
+	cursor:pointer; 
+	color: black; 
+	padding-top: 2px; 
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#cecfde);
+	height: 20px;
+}
+.Display
+{
+	display:block;
+	display:none;
+	}
+.tab
+{
+	float:right;
+		}
+		
+.menu
+{
+
+}
+.menu a:hover
+{
+	 text-decoration:none;
+	  background:#FF9900; 
+	  color:White;
+	}
+.menuItem
+{
+	padding-bottom:5px;
+	padding-top:5px;
+	}
+
+.Dmenu
+{
+	background-color:#FFFFFF;
+border-color:#CCCCCC;
+border-style:solid;
+border-width:1px;
+filter : progid:DXImageTransform.Microsoft.DropShadow(color=#FF404040,offX=3,offY=3,positives=true);
+
+	}
+.DmenuItem
+{
+	padding:5px;
+text-align:left;	
+margin:0px;
+	}
+.DmenuItem a:hover
+{
+	color:White;
+	text-decoration:underline;
+}
+.DmenuSelect
+{
+	background-color:#FF9900;
+	padding:4px;
+	margin:0px;
+    color:#FF9900;
+}
+UL
+{
+	clear: both;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	padding-top: 5px;
+	height:20px;
+	list-style-type: none;
+}
+LI
+{
+	padding-right: 0px;
+	display: block;
+	padding-left: 0px;
+	float: left;
+	padding-bottom: 0px;
+	margin: 0px;
+	width: 70px;
+	line-height: 20px;
+	padding-top: 0px;
+	height: auto;
+	text-align:left;
+}

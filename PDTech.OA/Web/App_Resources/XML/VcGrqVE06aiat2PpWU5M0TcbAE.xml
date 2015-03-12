@@ -1,0 +1,337 @@
+<?xml version="1.0"?>
+<TestOnline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestName>0</TestName>
+  <TestCount>30</TestCount>
+  <TestScore>30</TestScore>
+  <QuestionCollection>
+    <Question>
+      <QuestionID>561d0223-1729-4b8f-b867-8913c1a40175</QuestionID>
+      <Title>《党章》规定，正确行使人民赋予的权力，坚持原则，依法办事，（  ），勤政为民，以身作则，艰苦朴素，密切联系群众，坚持党的群众路线，自觉地接受党和群众的批评和监督。</Title>
+      <OptionA>创先争优</OptionA>
+      <OptionB>清正廉洁</OptionB>
+      <OptionC>惩治腐败</OptionC>
+      <OptionD>以人为本</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5674a86f-ef28-4ae0-a7ae-74c8f38e19da</QuestionID>
+      <Title>根据《行政机关公务员处分条例》第三十八条规定，被调查的公务员在违法违纪案件立案调查期间，不得交流、出境、辞去公职，（  ）。</Title>
+      <OptionA>但可以办理退休手续</OptionA>
+      <OptionB>经领导批准可以办理退休手续</OptionB>
+      <OptionC>不得办理退休手续</OptionC>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5688890e-357a-43b1-8844-fe9fc0948d00</QuestionID>
+      <Title>公务员法中规定的领导成员的辞职制度中，有一种辞职方式实际上是领导成员对本人失职失误的一种主动追究，请问是那种辞职方式（  ）。</Title>
+      <OptionA>因公辞职</OptionA>
+      <OptionB>自愿辞职</OptionB>
+      <OptionC>引咎辞职</OptionC>
+      <OptionD>责令辞职</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>561c664a-b211-4f8f-b985-f11e88e8ed4f</QuestionID>
+      <Title>中国共产党第十八次全国代表大会，是在我国进入（  ）小康社会决定性阶段召开的一次十分重要的大会。</Title>
+      <OptionA>全面建设</OptionA>
+      <OptionB>全面建成</OptionB>
+      <OptionC>基本建立</OptionC>
+      <OptionD>基本建成</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>56ece11c-5dbe-4719-b478-8b4c891ae384</QuestionID>
+      <Title>不属于口试方式的是（ ）。 </Title>
+      <OptionA>直答式              </OptionA>
+      <OptionB>有结构式 </OptionB>
+      <OptionC>无结构式             </OptionC>
+      <OptionD>压力式</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>57000552-5c30-482e-88f8-cfc7ff891562</QuestionID>
+      <Title>党是按照（ ）组织起来的统一整体。  </Title>
+      <OptionA>集体领导和个人分工负责相结合的制度</OptionA>
+      <OptionB>民主集中制   </OptionB>
+      <OptionC>代议制   </OptionC>
+      <OptionD>选举制</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>57774864-80c6-4f10-8f08-24dbcaaa0a89</QuestionID>
+      <Title>《关于党内政治生活的若干准则》中明确，下列说法错误的是：（  ）。</Title>
+      <OptionA>在任何情况下，都不许用其他形式的组织取代党委会及其常委会的领导</OptionA>
+      <OptionB>在党委会内，决定问题要严格遵守少数服从多数的原则</OptionB>
+      <OptionC>党委书记是党委领导，党委内部意见不统一时，以党委书记的意见为准</OptionC>
+      <OptionD>各个领导成员之间，要互相支持、互相谅解、善于合作。大家都要自觉地维护党委集体领导的威信</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>54cde253-04bb-4129-9330-88937936875f</QuestionID>
+      <Title>《廉政准则》的主要创新发展之处是突出了防止（  ）的精神。</Title>
+      <OptionA>违纪违法</OptionA>
+      <OptionB>滥用权力</OptionB>
+      <OptionC>利益冲突</OptionC>
+      <OptionD>腐化堕落</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>578b8a0b-7e85-4796-914f-38904cd07912</QuestionID>
+      <Title>《党政领导干部选拔任用工作责任追究办法（试行）》中规定,组织处理的方式不包括下列哪种？（  ）</Title>
+      <OptionA>调离岗位</OptionA>
+      <OptionB>责令公开道歉</OptionB>
+      <OptionC>引咎辞职</OptionC>
+      <OptionD>责令辞职</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>579d3667-936a-445a-9498-295fa2aaa362</QuestionID>
+      <Title>县级以上地方各级人民政府监察机关正职、副职领导人员的任命，在提请决定前，必须经（  ）同意。</Title>
+      <OptionA>上一级监察机关</OptionA>
+      <OptionB>同级纪委</OptionB>
+      <OptionC>上一级纪委</OptionC>
+      <OptionD>上一级政府</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5499df39-1ef7-4a2c-a7ed-572ff2e05046</QuestionID>
+      <Title>有权对党的委员会全体会议决议、决定执行中存在的问题提出询问或质询的是（  ）。</Title>
+      <OptionA>党的地方各级委员会</OptionA>
+      <OptionB>党的地方各级纪律检查委员会委员</OptionB>
+      <OptionC>党的各级纪律检查委员会</OptionC>
+      <OptionD>党的地方各级委员会委员</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>57ab771c-c873-462e-95c0-1ab7690829af</QuestionID>
+      <Title>国家行政机关对准备晋升一定领导职务的公务员，按照其相应职位的要求所实施的培训，被称之为（ ）。 </Title>
+      <OptionA>初任培训                 </OptionA>
+      <OptionB>任职培训 </OptionB>
+      <OptionC>专门业务培训            </OptionC>
+      <OptionD>更新知识的培训 </OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>585af190-0237-4365-9d21-a2b0d7e854f4</QuestionID>
+      <Title>主管部门审批辞职申请，以（  ）为限。  </Title>
+      <OptionA>两个月               </OptionA>
+      <OptionB>三个月  </OptionB>
+      <OptionC>四个月               </OptionC>
+      <OptionD>半年</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5492b9cd-8828-4be2-9799-abdf745a5d9b</QuestionID>
+      <Title>某党员非法买卖土地使用权，情节严重，应当给予（  ）处分。</Title>
+      <OptionA>严重警告</OptionA>
+      <OptionB>留党察看</OptionB>
+      <OptionC>开除党籍</OptionC>
+      <OptionD>留党察看或开除党籍</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5868ea0b-3b6d-4007-8b05-2ce2a8d2d37d</QuestionID>
+      <Title>人事行政系统中，作为要素分系统统合其它三种机制的首要方式的是（ ）。 </Title>
+      <OptionA>竞争机制             </OptionA>
+      <OptionB>更新机制 </OptionB>
+      <OptionC>激励机制             </OptionC>
+      <OptionD>监控机制</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>58815d57-84ad-4e7c-90a0-691f98454380</QuestionID>
+      <Title>某市审计局副局长刘某（党员）因受贿错误于2009年9月受到留党察看二年处分。2010年10月，有关部门又查清刘某存在利用职务之便贪污5000元的事实，对刘某应当（  ）。</Title>
+      <OptionA>给予其开除党籍处分</OptionA>
+      <OptionB>延长一年察看期</OptionB>
+      <OptionC>延长两年察看期</OptionC>
+      <OptionD>清除出党</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>53dc75b2-81cc-4b0d-89eb-6be7e21bac95</QuestionID>
+      <Title>习近平同志在十八届中央纪委第二次全会上的讲话中指出，抓改进工作作风，各项工作都很重要，但最根本的是要坚持和发扬（  ）精神。</Title>
+      <OptionA>克勤克俭</OptionA>
+      <OptionB>奋发图强</OptionB>
+      <OptionC>艰苦奋斗</OptionC>
+      <OptionD>自力更生</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>58986114-e488-432d-9a09-54cfda72f47b</QuestionID>
+      <Title>某党员干部占用公物达6个月，应给予警告处分，但同时该党员又违反规定从事营利活动，情节严重，应给予开除党籍处分，对于该同志的处分应该是（  ）。</Title>
+      <OptionA>先警告再开除党籍</OptionA>
+      <OptionB>开除党籍</OptionB>
+      <OptionC>分别处理</OptionC>
+      <OptionD>警告</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>58a65e1e-ea79-48cb-ab93-7ae9fc56bbae</QuestionID>
+      <Title>以下哪种情况不能录用为公务员：（  ）。</Title>
+      <OptionA>曾被行政撤职处分的</OptionA>
+      <OptionB>受过行政拘留的</OptionB>
+      <OptionC>曾被开除公职的</OptionC>
+      <OptionD>大专学历</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>53d1da06-6e88-41a2-b039-785088091a40</QuestionID>
+      <Title>民主集中制是民主基础上的集中和集中指导下的民主相结合。它既是党的（  ），也是群众路线在党的生活中的运用。</Title>
+      <OptionA>根本政治制度</OptionA>
+      <OptionB>组织生活原则</OptionB>
+      <OptionC>组织纪律规定</OptionC>
+      <OptionD>根本组织制度</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>59728968-8950-430e-835e-44ad4cb8be56</QuestionID>
+      <Title>下列选项不属于《十八届中央政治局关于改进工作作风、密切联系群众的八项规定》中规范出访活动方面规定内容的是？（  ）</Title>
+      <OptionA>中央政治局委员围绕外交工作需要合理安排出访活动</OptionA>
+      <OptionB>严格控制出访陪同人员</OptionB>
+      <OptionC>严格按照规定乘坐交通工具</OptionC>
+      <OptionD>不得借出访之名进行旅游、观光活动</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>59fedd40-5b05-4448-bd0b-944508f1dff4</QuestionID>
+      <Title>以下情况不能录用为公务员的是（  ）。</Title>
+      <OptionA>曾受到行政处分的</OptionA>
+      <OptionB>曾被行政拘留的</OptionB>
+      <OptionC>曾被开除公职的</OptionC>
+      <OptionD>大专学历</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>53c2229e-8509-40e0-a70a-89efbec07143</QuestionID>
+      <Title>习近平同志在十八届中央纪委第二次全会上的讲话中指出，实现党的十八大确定的各项目标任务，实现“两个一百年”目标，实现中华民族伟大复兴的“中国梦”，必须把我们（  ）建设好。</Title>
+      <OptionA>经济</OptionA>
+      <OptionB>党</OptionB>
+      <OptionC>反腐倡廉</OptionC>
+      <OptionD>干部队伍</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5a28c73d-abeb-4aa7-890f-e68553a90542</QuestionID>
+      <Title>《党章》指出，中国共产党在领导社会主义事业中，必须坚持以（  ）为中心，其他各项工作都服从和服务于这个中心。</Title>
+      <OptionA>经济建设</OptionA>
+      <OptionB>科教兴国</OptionB>
+      <OptionC>科学发展</OptionC>
+      <OptionD>和谐稳定</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5a2c43fb-9140-440a-b626-3789eaea07fc</QuestionID>
+      <Title>公务员旷工或者外出、请假期满无正当理由逾期不归连续超过____天，或者一年内累计超过____天的，予以辞退。（  ）</Title>
+      <OptionA>20  30</OptionA>
+      <OptionB>15  45</OptionB>
+      <OptionC>15  30</OptionC>
+      <OptionD>20  45</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>52ec1d3c-a50b-41cd-b878-7f7c0fde894e</QuestionID>
+      <Title>中央纪委向党的十八大工作报告中指出，建立健全（  ）是反腐倡廉建设的重要任务，也是防止权力滥用的重要制度保证。</Title>
+      <OptionA>权力运行机制</OptionA>
+      <OptionB>内部制约机制</OptionB>
+      <OptionC>权力制约监督机制</OptionC>
+      <OptionD>干部监督机制</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5a48dca8-96e6-4e0c-8607-1e1303980d16</QuestionID>
+      <Title>制定规划，必须进行水资源（   ）考察和调查评价。</Title>
+      <OptionA>实地   </OptionA>
+      <OptionB>综合   </OptionB>
+      <OptionC>综合科学 </OptionC>
+      <OptionD>开发利用</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5b1fc4a5-deab-44a7-9fee-d97cffa428df</QuestionID>
+      <Title> 国家对用水实行总量控制和(  )相结合的制度。</Title>
+      <OptionA>定额管理      </OptionA>
+      <OptionB>定量管理      </OptionB>
+      <OptionC>分级管理</OptionC>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>52df3486-2a5c-40c2-ac2a-78590cb9afd4</QuestionID>
+      <Title>中国共产党首次设立的专门的纪律检查机构是（  ），当时该机构的主席是（  ）。</Title>
+      <OptionA>中央审查委员会，朱德</OptionA>
+      <OptionB>中央监察委员会，杨匏安</OptionB>
+      <OptionC>中央审查委员会，董必武</OptionC>
+      <OptionD>中央监察委员会，王荷波</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>5b4d6f94-e7d6-4303-bf00-95a8725e24fb</QuestionID>
+      <Title>被问责的党政领导干部，不受一年内不得担任与其原任职务相当的领导职务限制的问责方式是哪一项：（  ）。</Title>
+      <OptionA>引咎辞职</OptionA>
+      <OptionB>停职检查</OptionB>
+      <OptionC>免职</OptionC>
+      <OptionD>责令辞职</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+  </QuestionCollection>
+  <ReplyTime xsi:nil="true" />
+</TestOnline>

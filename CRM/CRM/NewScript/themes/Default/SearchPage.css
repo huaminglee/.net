@@ -1,0 +1,283 @@
+body
+{
+font-family: SimSun, ·s²Ó©úÅé, Tahoma, Arial, Helvetica;
+margin:0;
+padding:0;
+background-color: White;
+font-size:10.5pt;
+}
+
+#PageContainer
+{
+margin:2px 14px 0;
+}
+
+#PageTitle
+{
+	text-align:center;
+	font-weight:bold;
+	font-size:12pt;
+}
+
+
+
+#SearchBar
+{
+	background-Color:buttonface;
+	width:100%;
+	border:1px solid buttonshadow;
+}
+
+#SearchBar .textbox
+{
+	width:120px;
+}
+
+#SearchBar .SearchBar_Row
+{
+	height:25px;
+	border:1px solid buttonshadow;
+	width:100%;
+	padding-top:4px;
+	border-bottom:0;
+}
+
+#SearchBar .SearchBar_ColumnFlag
+{
+	width:4%;
+	float:left;
+	text-align:center;
+}
+
+#SearchBar .SearchBar_ColumnTitle
+{
+	width:10%;
+	float:left;
+	text-align:right;
+	line-height:19pt;
+	padding-right:5px;
+}
+
+#SearchBar .SearchBar_ColumnContent
+{
+	width:16%;
+	float:left;
+	text-align:left;
+}
+
+#SearchBar .SearchBar_ColumnButton
+{
+	float:left;
+	padding-left:40px;
+}
+
+#ToolBar
+{
+	height:15px;
+	margin-top:10px;
+}
+
+#ToolBar ul
+{
+	margin:0;
+	padding:0;
+	list-style:none;
+}
+
+.RegionStyle
+{
+	margin-top:10px;
+}
+
+
+
+
+
+ #PageContainer UL
+{
+	clear: both;
+	padding-right: 0px;
+	padding-left: 0px;
+	padding-bottom: 0px;
+	margin: 0px;
+	list-style-type: none;
+	padding-top: 2px;
+}
+ #PageContainer LI
+{
+	padding-right: 0px;
+	display: block;
+	padding-left: 0px;
+	float: left;
+	padding-bottom: 0px;
+	margin: 0px;
+	line-height: 20px;
+	padding-top: 0px;
+	height: auto;
+}   
+
+#ToolBar ul li
+{
+	width:50px;
+	float:left;
+}
+
+#ToolBar ul li a
+{
+	font-size:10pt;
+	color:Black;
+	text-decoration:none;
+}
+
+#ToolBar ul li a:hover
+{
+	color:blue;
+	text-decoration:underline;
+}
+
+.DataView
+{
+	overflow-x:auto;
+	scrollbar-base-color:#dee3e7;
+	border:1px solid #d6d3ce;
+	width:100%;
+	
+}
+
+.DataView table
+{
+	border:1px solid #848284;
+	border-left:0;
+	font-size:10.5pt;
+}
+
+.DataView a
+{
+	color:#295584;
+	text-decoration:none;
+}
+
+.DataView a:hover
+{
+	color:Red;
+	text-decoration:underline;
+}
+
+
+.DataView table td
+{
+	border:1px solid #848284;
+}
+
+.DataView .dgHead
+{
+	font-size:11pt;
+	font-weight:bold;
+	text-align: center;
+	background-color:buttonface;
+	height:25px;
+	color: black;
+	position:relative;
+	cursor: default; 
+	top: expression($('.DataView').scrollTop()); /*IE5+ only*/
+	z-index: 10;
+}
+
+
+.Pager
+{
+	width:100%;
+}
+
+.Pager td
+{
+	font-size:10.5pt;
+	background-color:#e7e3e7;
+}
+
+tr.flag table
+{
+	border:0;
+	border-left:1px solid #848284;
+	border-top:1px solid #848284;
+}
+
+tr.flag td
+{
+	border:0;
+	background-color:#EFEFEF;
+}
+
+.HightLight
+{
+	color:#EF5D00;
+	background-color:#efebde ;
+}
+
+tr.dgitem
+{
+	height:20pt;
+}
+
+tr.dgitem td
+{
+	border-right:0;
+	border-bottom:0;
+}
+
+tr.flag .celltip
+{
+	border:0;
+	border-left:1px solid #848284;
+	border-top:1px solid #848284;
+	font-weight:bold;
+	color:#EF5d00
+}
+
+
+
+tr.flag .rowTitle
+{
+	border-bottom:1px solid #848284;
+	border-right:1px solid #848284;
+}
+
+
+tr.flag .rowContent
+{
+	border-right:1px solid #848284;
+}
+
+tr.flag .rowTitleLeft
+{
+border-bottom:1px solid #848284;
+}
+
+
+tr.flag .rowContentLeft
+{
+	border-right:1px solid #848284;
+}
+
+tr.flag .rowTitleRight
+{
+	border-bottom:1px solid #848284;
+}
+
+a.ImgBtn
+{
+	color:Black;
+	font-weight:bold;
+	text-decoration:none;
+}
+
+a.ImgBtn:hover
+{
+	color:Red;
+}
+
+a.ImgBtn img
+{
+	border:0
+}
+

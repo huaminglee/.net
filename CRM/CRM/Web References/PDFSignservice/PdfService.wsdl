@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="HelloWorld">
+        <s:complexType />
+      </s:element>
+      <s:element name="HelloWorldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="HelloWorldResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteTemplateResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetALLTemplateType">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetALLTemplateTypeResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetALLTemplateTypeResult" type="tns:ArrayOfPDFTemplateInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfPDFTemplateInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="PDFTemplateInfo" nillable="true" type="tns:PDFTemplateInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PDFTemplateInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="TypeID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordCreateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetTemplateStream">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTemplateStreamResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTemplateStreamResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateInfo" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateDecription" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="AddTemplateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpgradeTemplate">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateInfo" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="UpgradeTemplateResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="UpgradeTemplateResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTemplatePages">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TempalteType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTemplatePagesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="GetTemplatePagesResult" type="s:int" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTemplateFileds">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTemplateFiledsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTemplateFiledsResult" type="tns:ArrayOfString" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfString">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="string" nillable="true" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddSignatureField">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="fileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="mSignLocation" type="tns:ArrayOfSignLocation" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFileDic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSignLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SignLocation" nillable="true" type="tns:SignLocation" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SignLocation">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="SignField" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="PageNum" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Position" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="llx" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="lly" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="urx" type="s:int" />
+          <s:element minOccurs="1" maxOccurs="1" name="ury" type="s:int" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddSignatureFieldResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddSignatureFieldResult" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutXMLFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="XmlParam" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFileDic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="PutXMLFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="PutXMLFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFieldValue">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldName" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="FieldValue" type="tns:ArrayOfString" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFileDic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SetFieldValueResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SetFieldValueResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddWaterMask">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageByte" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="absoluteX" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="absoluteY" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaskWidth" type="s:decimal" />
+            <s:element minOccurs="1" maxOccurs="1" name="MaskHeight" type="s:decimal" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFileDic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddWaterMaskResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddWaterMaskResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileStreamByID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFileDic" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsDelete" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileStreamByIDResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileStreamByIDResult" type="s:base64Binary" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePDFFile">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="PDFStream" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="mSignLocation" type="tns:ArrayOfSignLocation" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFileDic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="CreatePDFFileResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="CreatePDFFileResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetFileList">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="TemplateType" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="StartTime" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="EndTime" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SignPDFInfo">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="FilePKID" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="TypeName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PreFileID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileGUID" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="FileDic" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="RecordCreateTime" type="s:dateTime" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSignPDFInfo">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SignPDFInfo" nillable="true" type="tns:SignPDFInfo" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetFileListResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetFileListResult" type="tns:ArrayOfSignPDFInfo" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFileID">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="FileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFileDic" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="DeleteFileIDResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="AddServerSign">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="SignPfx" type="s:base64Binary" />
+            <s:element minOccurs="0" maxOccurs="1" name="password" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="FileID" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SignField" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="SubFiledic" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="ImageByte" type="s:base64Binary" />
+            <s:element minOccurs="1" maxOccurs="1" name="IsShowText" type="s:boolean" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="AddServerSignResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="AddServerSignResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="HelloWorldSoapIn">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="HelloWorldSoapOut">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteTemplate" />
+  </wsdl:message>
+  <wsdl:message name="DeleteTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetALLTemplateTypeSoapIn">
+    <wsdl:part name="parameters" element="tns:GetALLTemplateType" />
+  </wsdl:message>
+  <wsdl:message name="GetALLTemplateTypeSoapOut">
+    <wsdl:part name="parameters" element="tns:GetALLTemplateTypeResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplateStreamSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTemplateStream" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplateStreamSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTemplateStreamResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:AddTemplate" />
+  </wsdl:message>
+  <wsdl:message name="AddTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:AddTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeTemplateSoapIn">
+    <wsdl:part name="parameters" element="tns:UpgradeTemplate" />
+  </wsdl:message>
+  <wsdl:message name="UpgradeTemplateSoapOut">
+    <wsdl:part name="parameters" element="tns:UpgradeTemplateResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplatePagesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTemplatePages" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplatePagesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTemplatePagesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplateFiledsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTemplateFileds" />
+  </wsdl:message>
+  <wsdl:message name="GetTemplateFiledsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTemplateFiledsResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddSignatureFieldSoapIn">
+    <wsdl:part name="parameters" element="tns:AddSignatureField" />
+  </wsdl:message>
+  <wsdl:message name="AddSignatureFieldSoapOut">
+    <wsdl:part name="parameters" element="tns:AddSignatureFieldResponse" />
+  </wsdl:message>
+  <wsdl:message name="PutXMLFileSoapIn">
+    <wsdl:part name="parameters" element="tns:PutXMLFile" />
+  </wsdl:message>
+  <wsdl:message name="PutXMLFileSoapOut">
+    <wsdl:part name="parameters" element="tns:PutXMLFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="SetFieldValueSoapIn">
+    <wsdl:part name="parameters" element="tns:SetFieldValue" />
+  </wsdl:message>
+  <wsdl:message name="SetFieldValueSoapOut">
+    <wsdl:part name="parameters" element="tns:SetFieldValueResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddWaterMaskSoapIn">
+    <wsdl:part name="parameters" element="tns:AddWaterMask" />
+  </wsdl:message>
+  <wsdl:message name="AddWaterMaskSoapOut">
+    <wsdl:part name="parameters" element="tns:AddWaterMaskResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileStreamByIDSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileStreamByID" />
+  </wsdl:message>
+  <wsdl:message name="GetFileStreamByIDSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileStreamByIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="CreatePDFFileSoapIn">
+    <wsdl:part name="parameters" element="tns:CreatePDFFile" />
+  </wsdl:message>
+  <wsdl:message name="CreatePDFFileSoapOut">
+    <wsdl:part name="parameters" element="tns:CreatePDFFileResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListSoapIn">
+    <wsdl:part name="parameters" element="tns:GetFileList" />
+  </wsdl:message>
+  <wsdl:message name="GetFileListSoapOut">
+    <wsdl:part name="parameters" element="tns:GetFileListResponse" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileIDSoapIn">
+    <wsdl:part name="parameters" element="tns:DeleteFileID" />
+  </wsdl:message>
+  <wsdl:message name="DeleteFileIDSoapOut">
+    <wsdl:part name="parameters" element="tns:DeleteFileIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="AddServerSignSoapIn">
+    <wsdl:part name="parameters" element="tns:AddServerSign" />
+  </wsdl:message>
+  <wsdl:message name="AddServerSignSoapOut">
+    <wsdl:part name="parameters" element="tns:AddServerSignResponse" />
+  </wsdl:message>
+  <wsdl:portType name="PDFServiceSoap">
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input message="tns:HelloWorldSoapIn" />
+      <wsdl:output message="tns:HelloWorldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTemplate">
+      <wsdl:input message="tns:DeleteTemplateSoapIn" />
+      <wsdl:output message="tns:DeleteTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetALLTemplateType">
+      <wsdl:input message="tns:GetALLTemplateTypeSoapIn" />
+      <wsdl:output message="tns:GetALLTemplateTypeSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateStream">
+      <wsdl:input message="tns:GetTemplateStreamSoapIn" />
+      <wsdl:output message="tns:GetTemplateStreamSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddTemplate">
+      <wsdl:input message="tns:AddTemplateSoapIn" />
+      <wsdl:output message="tns:AddTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeTemplate">
+      <wsdl:input message="tns:UpgradeTemplateSoapIn" />
+      <wsdl:output message="tns:UpgradeTemplateSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplatePages">
+      <wsdl:input message="tns:GetTemplatePagesSoapIn" />
+      <wsdl:output message="tns:GetTemplatePagesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateFileds">
+      <wsdl:input message="tns:GetTemplateFiledsSoapIn" />
+      <wsdl:output message="tns:GetTemplateFiledsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddSignatureField">
+      <wsdl:input message="tns:AddSignatureFieldSoapIn" />
+      <wsdl:output message="tns:AddSignatureFieldSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="PutXMLFile">
+      <wsdl:input message="tns:PutXMLFileSoapIn" />
+      <wsdl:output message="tns:PutXMLFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SetFieldValue">
+      <wsdl:input message="tns:SetFieldValueSoapIn" />
+      <wsdl:output message="tns:SetFieldValueSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddWaterMask">
+      <wsdl:input message="tns:AddWaterMaskSoapIn" />
+      <wsdl:output message="tns:AddWaterMaskSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileStreamByID">
+      <wsdl:input message="tns:GetFileStreamByIDSoapIn" />
+      <wsdl:output message="tns:GetFileStreamByIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="CreatePDFFile">
+      <wsdl:input message="tns:CreatePDFFileSoapIn" />
+      <wsdl:output message="tns:CreatePDFFileSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <wsdl:input message="tns:GetFileListSoapIn" />
+      <wsdl:output message="tns:GetFileListSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileID">
+      <wsdl:input message="tns:DeleteFileIDSoapIn" />
+      <wsdl:output message="tns:DeleteFileIDSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="AddServerSign">
+      <wsdl:input message="tns:AddServerSignSoapIn" />
+      <wsdl:output message="tns:AddServerSignSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="PDFServiceSoap" type="tns:PDFServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTemplate">
+      <soap:operation soapAction="http://tempuri.org/DeleteTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALLTemplateType">
+      <soap:operation soapAction="http://tempuri.org/GetALLTemplateType" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateStream">
+      <soap:operation soapAction="http://tempuri.org/GetTemplateStream" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTemplate">
+      <soap:operation soapAction="http://tempuri.org/AddTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeTemplate">
+      <soap:operation soapAction="http://tempuri.org/UpgradeTemplate" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplatePages">
+      <soap:operation soapAction="http://tempuri.org/GetTemplatePages" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateFileds">
+      <soap:operation soapAction="http://tempuri.org/GetTemplateFileds" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSignatureField">
+      <soap:operation soapAction="http://tempuri.org/AddSignatureField" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutXMLFile">
+      <soap:operation soapAction="http://tempuri.org/PutXMLFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFieldValue">
+      <soap:operation soapAction="http://tempuri.org/SetFieldValue" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWaterMask">
+      <soap:operation soapAction="http://tempuri.org/AddWaterMask" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileStreamByID">
+      <soap:operation soapAction="http://tempuri.org/GetFileStreamByID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePDFFile">
+      <soap:operation soapAction="http://tempuri.org/CreatePDFFile" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <soap:operation soapAction="http://tempuri.org/GetFileList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileID">
+      <soap:operation soapAction="http://tempuri.org/DeleteFileID" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddServerSign">
+      <soap:operation soapAction="http://tempuri.org/AddServerSign" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="PDFServiceSoap12" type="tns:PDFServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="HelloWorld">
+      <soap12:operation soapAction="http://tempuri.org/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteTemplate">
+      <soap12:operation soapAction="http://tempuri.org/DeleteTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetALLTemplateType">
+      <soap12:operation soapAction="http://tempuri.org/GetALLTemplateType" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateStream">
+      <soap12:operation soapAction="http://tempuri.org/GetTemplateStream" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddTemplate">
+      <soap12:operation soapAction="http://tempuri.org/AddTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UpgradeTemplate">
+      <soap12:operation soapAction="http://tempuri.org/UpgradeTemplate" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplatePages">
+      <soap12:operation soapAction="http://tempuri.org/GetTemplatePages" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTemplateFileds">
+      <soap12:operation soapAction="http://tempuri.org/GetTemplateFileds" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddSignatureField">
+      <soap12:operation soapAction="http://tempuri.org/AddSignatureField" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="PutXMLFile">
+      <soap12:operation soapAction="http://tempuri.org/PutXMLFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetFieldValue">
+      <soap12:operation soapAction="http://tempuri.org/SetFieldValue" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddWaterMask">
+      <soap12:operation soapAction="http://tempuri.org/AddWaterMask" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileStreamByID">
+      <soap12:operation soapAction="http://tempuri.org/GetFileStreamByID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreatePDFFile">
+      <soap12:operation soapAction="http://tempuri.org/CreatePDFFile" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFileList">
+      <soap12:operation soapAction="http://tempuri.org/GetFileList" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteFileID">
+      <soap12:operation soapAction="http://tempuri.org/DeleteFileID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="AddServerSign">
+      <soap12:operation soapAction="http://tempuri.org/AddServerSign" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="PDFService">
+    <wsdl:port name="PDFServiceSoap" binding="tns:PDFServiceSoap">
+      <soap:address location="http://10.162.197.5/PDFmanage/PdfService.asmx" />
+    </wsdl:port>
+    <wsdl:port name="PDFServiceSoap12" binding="tns:PDFServiceSoap12">
+      <soap12:address location="http://10.162.197.5/PDFmanage/PdfService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

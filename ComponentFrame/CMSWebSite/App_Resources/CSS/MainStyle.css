@@ -1,0 +1,1227 @@
+body
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	font-size: 10pt;
+	padding-bottom: 0px;
+	margin: 0px;
+	overflow: auto;
+	text-align: center;
+	margin: 0px auto;
+	cursor: default;
+	padding-top: 0px;
+	font-family: verdana,Arial, Helvetica, sans-serif,;
+}
+.TodayDayCss
+{
+	background: url(../Images/CalendarTodayBg.gif) no-repeat;
+}
+TD
+{
+	font-size: 10pt;
+}
+TH
+{
+	font-size: 10pt;
+}
+A:link
+{
+	font-size: 10pt;
+	color: Black;
+	text-decoration: none;
+}
+A:visited
+{
+	font-size: 10pt;
+	color: #000000;
+	text-decoration: none;
+}
+A:hover
+{
+	font-size: 10pt;
+	color: #f76a00;
+	text-decoration: underline;
+}
+.WellComeLineBox_D7EAF8
+{
+	border-right: #d7eaf8 1px solid;
+	border-top: #d7eaf8 1px solid;
+	border-left: #d7eaf8 1px solid;
+	border-bottom: #d7eaf8 1px solid;
+}
+.WellComeText_0066d3
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #0066d3;
+}
+.WellComeTJTitle
+{
+	font-size: 15pt;
+	font-family: 隶书;
+	text-align: center;
+}
+
+.tdShortcut a
+{
+	padding: 0px 10px;
+	font-size: 10pt;
+}
+.LineBG
+{
+	background-image: url(../Images/listPage_02.jpg);
+}
+.ButtonCSS
+{
+	cursor: hand;
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-image: url(../Images/Btn_Page_bg.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: repeat-x;
+	text-align: center;
+	padding-top: 2px;
+}
+.STextBoxCSS
+{
+	border-right: #81aed7 1px solid;
+	border-top: #81aed7 1px solid;
+	font-size: 10pt;
+	border-left: #81aed7 1px solid;
+	border-bottom: #81aed7 1px solid;
+	height: 20px;
+}
+.PageTitleCSS
+{
+	font-weight: bold;
+	font-size: 10pt;
+	background-image: url(../Images/listPage_01.jpg);
+	color: dimgray;
+	height: 28px;
+	background-color: #f4f4f4;
+	text-indent: 5px;
+}
+.ListPageButtonCSS0
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/oper_01.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+.ListPageButtonCSS1
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/oper_02.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+.ListPageButtonCSS2
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/oper_03.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+.ListPageButtonCSS3
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/oper_04.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+.ListPageButtonCSS4
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/oper_05.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+
+/*列表相关样式*/
+.ListCSS
+{
+	border-collapse: collapse;
+}
+.ListHead
+{
+	font-size: 10pt;
+	background-image: url(../Images/listPage_07.jpg);
+	color: black;
+	background-repeat: repeat-x;
+	height: 23px;
+	cursor: default;
+	text-align: left;
+}
+.ListDHBtnCSS
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/win_04.jpg);
+	border-left: #8abeed 1px solid;
+	height: 18px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: repeat-x;
+	text-align: center;
+	color: #023f82;
+	width: 55px;
+}
+.ListDHText
+{
+	color: #023f82;
+	font-size: 10pt;
+	cursor: default;
+	height: 26px;
+	width: 200px;
+}
+.RowCSS
+{
+	cursor: hand;
+	height: 25px;
+	background-color: #ffffff;
+	color: #333333;
+}
+
+.RowCSS TD
+{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.RowCSS A:link
+{
+	color: #1E5494;
+}
+
+.RowCSS A:visited
+{
+	color: #1E5494;
+}
+
+.SelectedRowCSS A:link
+{
+	color: #1E5494;
+}
+
+.SelectedRowCSS A:hover
+{
+	font-size: 10pt;
+	color: #f76a00;
+	text-decoration: underline;
+}
+
+.SelectedRowCSS A:visited
+{
+	color: #1E5494;
+}
+
+.SelectedRowCSS
+{
+	cursor: hand;
+	background-color: #fffdd7;
+	height: 25px;
+	color: #333333;
+}
+
+.SelectedRowCSS TD
+{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.TitleCss
+{
+	font-weight: bold;
+	color: Black;
+	background-color: #fefefe;
+	height: 46px;
+	border-bottom: solid 1px #b6b6b6;
+}
+
+.ContentCss
+{
+	border-bottom: #adadad 1px solid;
+	border-left: #adadad 1px solid;
+	border-right: #adadad 1px solid;
+	border-top: none;
+	color: Black;
+	background-color: #efefef;
+}
+
+.ContentCss2
+{
+	border-bottom: none;
+	border-left: #adadad 1px solid;
+	border-right: #adadad 1px solid;
+	border-top: none;
+	color: Black;
+	background-color: #efefef;
+}
+
+/*表格样式*/
+.TableCss
+{
+	border-collapse: collapse; /*border:#DADADA 1px solid;*/
+	width: 100%;
+	padding-left: 15px;
+	padding-right: 15px;
+}
+
+.TableOuterCss
+{
+	width: 100%;
+	background-image: url(../Images/Grid_bg.png);
+	background-repeat: no-repeat;
+	background-position: right bottom;
+	background-color: #f7f7f7;
+}
+
+.TableTdCss
+{
+	border-bottom: #adadad 1px solid;
+	height: 35px;
+	padding-left: 15px;
+	vertical-align: middle;
+}
+
+.BorderTdCss
+{
+	border-bottom: #adadad 1px solid;
+}
+
+.BtnCss
+{
+	cursor: hand;
+	width: 70px;
+	height: 26px;
+	font-size: 10pt;
+	border-bottom: #72a1bd 1px solid;
+	border-left: #72a1bd 1px solid;
+	border-top: #72a1bd 1px solid;
+	border-right: #72a1bd 1px solid;
+	background-image: url(../Images/Btn_bgsel.gif);
+	background-color: #ffffff;
+	padding-top: 2px;
+	color: #020808;
+	font-weight: bold;
+}
+
+.BtnSelCss
+{
+	cursor: hand;
+	width: 70px;
+	height: 26px;
+	font-size: 10pt;
+	border-bottom: #a2904d 1px solid;
+	border-left: #a2904d 1px solid;
+	border-top: #a2904d 1px solid;
+	border-right: #a2904d 1px solid;
+	background-image: url(../Images/Btn_bg2.gif);
+	background-color: #ffffff;
+	padding-top: 2px;
+	color: #020808;
+	font-weight: bold;
+}
+
+
+.BtnWhiteCss
+{
+	width: 70px;
+	height: 22px;
+	font-size: 10pt;
+	border-bottom: #adaeb0 1px solid;
+	border-left: #adaeb0 1px solid;
+	border-top: #adaeb0 1px solid;
+	border-right: #adaeb0 1px solid;
+	background-image: url(../Images/Btn_White.gif);
+	background-color: #afafaf;
+	padding-top: 2px;
+	color: #020808;
+}
+
+.BtnCss2
+{
+	border: none;
+	font-size: 11pt;
+	height: 44px;
+	width: 76px;
+	background-color: Transparent;
+	background-image: url(../Images/bg_blue.jpg);
+	background-repeat: no-repeat;
+	color: Black;
+	font-weight: bold;
+	padding-bottom: 10px;
+}
+
+.BtnBackCss
+{
+	border: none;
+	height: 26px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_back.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnCloseCss
+{
+	border: none;
+	height: 26px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_close.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnSureCss
+{
+	cursor: hand;
+	border: none;
+	height: 26px;
+	width: 70px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_sure.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnNewWorkCss
+{
+	cursor: hand;
+	border: none;
+	height: 27px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_NewWorkSel.gif);
+	background-repeat: no-repeat;
+}
+.BtnNewWorkSelCss
+{
+	cursor: hand;
+	border: none;
+	height: 27px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_newwork.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnNewMsgCss
+{
+	cursor: hand;
+	border: none;
+	height: 27px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_NewMsgSel.gif);
+	background-repeat: no-repeat;
+}
+.BtnNewMsgSelCss
+{
+	cursor: hand;
+	border: none;
+	height: 27px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_newmsg.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnSearchCss
+{
+	cursor: hand;
+	border: none;
+	height: 27px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_Search.gif);
+	background-repeat: no-repeat;
+}
+.BtnSearchSelCss
+{
+	cursor: hand;
+	border: none;
+	height: 27px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_SearchSel.gif);
+	background-repeat: no-repeat;
+}
+
+
+.BtnLeftCss
+{
+	cursor: hand;
+	border: none;
+	height: 34px;
+	width: 82px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_left.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnRightCss
+{
+	cursor: hand;
+	border: none;
+	height: 34px;
+	width: 82px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_right.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnToHomeCss
+{
+	border: none;
+	height: 26px;
+	width: 71px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_ToHome.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnAddTmpCss
+{
+	border: none;
+	height: 26px;
+	width: 83px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_AddTmp.gif);
+	background-repeat: no-repeat;
+}
+
+.GridTitleCss
+{
+	background-image: url(../Images/GridTitle_bg.gif);
+	height: 29px;
+	background-repeat: repeat-x;
+	font-size: 10pt;
+}
+.GridTitleCss TD, TH
+{
+	padding-left: 5px;
+	padding-right: 5px;
+	color: #333333;
+	font-weight: bold;
+}
+
+.GridTitleCss2
+{
+	background-image: url(../Images/Title_bg.gif);
+	height: 26px;
+	background-repeat: repeat-x;
+	font-size: 10pt;
+}
+.GridRowCss
+{
+	height: 22px;
+}
+
+.TdLeft
+{
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+.TdCenter
+{
+	text-align: center;
+}
+
+.SequenceCss
+{
+	width: 40px;
+	text-align: center;
+	color: Black;
+}
+
+.TableTdTitleCssLeft
+{
+	text-align: left;
+	border-bottom: #adadad 1px solid;
+	padding-left: 15px;
+	vertical-align: middle;
+	background-image: url(../Images/Title_bg.gif);
+}
+
+.TableTdTitleCss2
+{
+	text-align: left;
+	padding-left: 15px;
+	vertical-align: middle;
+	background-image: url(../Images/GridTitle_bg.gif);
+	font-weight: bold;
+}
+
+a.AttitudeBtn
+{
+	color: #056BD0;
+}
+
+.bgWhite
+{
+	background: url("../Images/bgWhite.gif");
+	height: 21px;
+}
+.padtr td
+{
+	padding: 0px 20px;
+	vertical-align: middle;
+	font-weight: bold;
+}
+
+.padtr td span
+{
+	font-weight: normal;
+}
+
+.TableTdTitleCss
+{
+	text-align: center;
+	padding-left: 10px;
+	vertical-align: middle;
+	background-image: url(../Images/Title_bg.gif);
+	background-repeat: repeat-x;
+	font-weight: bold;
+}
+
+/*绿色标题栏*/
+.TableTdTitleCssGreen
+{
+	color: #ffffff;
+	border-bottom: #adadad 1px solid;
+	padding-left: 10px;
+	vertical-align: middle;
+	background-image: url(../Images/Title_Green_bg.gif);
+}
+/*表格标签样式*/
+.MCTableTr_Left
+{
+	height: 26px;
+	text-align: right;
+}
+/*表格内容样式*/
+.MCTableTr_Right
+{
+	height: 26px;
+	text-align: left;
+}
+#ArchiveTable
+{
+	background-color: #f0f5fb;
+}
+#ArchiveTable input
+{
+	font-size: 10.5pt;
+}
+
+#ArchiveTable textarea
+{
+	font-size: 10.5pt;
+}
+
+#ArchiveTable td
+{
+	font-size: 10.5pt;
+}
+
+#ArchiveTable a
+{
+	font-size: 10.5pt;
+}
+
+#ArchiveTable .microTitle
+{
+	font-family: 宋体;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: #093562;
+}
+
+#ArchiveTable .MCTableTr_Left
+{
+	background: #f0f5fb;
+	text-align: left;
+	height: 26px;
+}
+
+#ArchiveTable .MCTableTr_Right
+{
+	text-indent: 5px;
+	text-align: left;
+	height: 26px;
+}
+
+#ArchiveTable .McTableTr_Right input
+{
+	margin: 2px 5px;
+	padding: 2px 5px;
+}
+#ArchiveTable .McTableTr_Right select
+{
+	margin: 2px 5px;
+	padding: 2px 5px;
+}
+#ArchiveTable .McTableTr_Right textarea
+{
+	margin: 2px 5px;
+	padding: 2px 5px;
+}
+
+.menulayer
+{
+	/*background-image:url(../Images/Calendarbg.gif);*/
+	background-color: #FFF88E;
+	border: 1px solid #9D956E;
+}
+.MessageSty
+{
+	background-color: #efefef;
+	border: #efefef 1px solid;
+	height: 24px;
+}
+
+/*下拉框样式*/
+.DDLCss
+{
+	border: #000000 1px solid;
+}
+
+.TxtCss
+{
+	border-right: #d0d9f7 1px solid;
+	padding-right: 5px;
+	border-top: #d0d9f7 1px solid;
+	padding-left: 5px;
+	font-weight: bold;
+	font-size: 14px;
+	padding-bottom: 5px;
+	border-left: #d0d9f7 1px solid;
+	width: 120px;
+	color: #666666;
+	padding-top: 5px;
+	border-bottom: #d0d9f7 1px solid;
+	height: 20px;
+	background-color: #f7f7f7;
+}
+.SelectedItem
+{
+	border: solid 1px #808080;
+	background-color: #E1F6D5;
+}
+.border3
+{
+	margin: 5px 0px 0px 0px;
+	border: solid 1px #a3c7e2;
+	padding: 2px;
+}
+
+.DayCss
+{
+	background-image: url(../Images/day_bg.gif);
+	background-repeat: no-repeat;
+}
+
+.TableContent
+{
+	background-image: url(../Images/Grid_bg.gif);
+	background-repeat: no-repeat;
+}
+
+.EmptyTitle
+{
+	border-right: solid 1px #b0b0b0;
+	border-bottom: solid 1px #b0b0b0;
+}
+
+.indexRowCSS
+{
+	background-color: #fafafa;
+}
+.indexSelectedRowCSS
+{
+	background-color: #e1e1e1;
+}
+
+#ArchiveTable .ArchiveTr_Right
+{
+	text-indent: 3px;
+	text-align: left;
+	height: 26px;
+	background-color: #8ab5e8;
+}
+#ArchiveTable .ArchiveTr_Left
+{
+	text-indent: 3px;
+	text-align: right;
+	height: 26px;
+	background-color: #518bcb;
+}
+#ArchiveTable .ArchiveBottom
+{
+	vertical-align: middle;
+	text-indent: 3px;
+	text-align: right;
+	height: 50px;
+	background-image: url(../Images/Archivebg.gif);
+}
+.BtnWorkSelCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnWorkSelCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnPrintSelCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnPrintSel.gif);
+	background-repeat: no-repeat;
+}
+.BtnSaveCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnSaveCss.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnScanReadCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnScanReadCss.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnOverCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnOverCss.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnSaveOfficeCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 111px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnSaveOfficeCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnCopyCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnCopyCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnReturnCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnReturnCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnReplyCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnReplyCss.gif);
+	background-repeat: no-repeat;
+}
+
+.BtnTransferCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnTransferCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnSendCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_Send.gif);
+	background-repeat: no-repeat;
+}
+.BtnShareCss
+{
+	cursor:hand;
+    border:none;
+    height: 31px;
+    width:93px;
+    background-color:Transparent;
+    background-image:url(../Images/btn_Share.png);
+    background-repeat:no-repeat;
+}
+.BtnSaveMsgCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/Btn_SaveMsg.gif);
+	background-repeat: no-repeat;
+}
+.BtnapplyCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnapplyCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnNextCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnNextCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnAuditCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnAuditCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnAuditNoCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnAuditNoCss.gif);
+	background-repeat: no-repeat;
+}
+#ArchiveTable .MCTableTr_Left a
+{
+	color: #1e5595;
+	text-decoration: underline;
+	font-weight: bold;
+}
+
+.BtnbgCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnbgCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnSave2Css
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnSave2Css.gif);
+	background-repeat: no-repeat;
+}
+.BtnCreateCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnCreateCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnReadCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnReadCss.gif);
+	background-repeat: no-repeat;
+}
+.BtnDelCss
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/BtnDelbgCss.gif);
+	background-repeat: no-repeat;
+}
+.Login A:link
+{
+	color: #3268cb;
+}
+.Login A:visited
+{
+	font-size: 10pt;
+	color: #000000;
+	text-decoration: none;
+}
+.Login A:hover
+{
+	font-size: 10pt;
+	color: #f76a00;
+	text-decoration: underline;
+}
+.indexWork
+{
+	width: 100%;
+	padding-left: 30px; /*background-color: #f6f6f6;*/
+}
+.indexWorkTd
+{
+	border-bottom: dashed 1px #b7b7b7;
+	height: 30px;
+	padding-left: 10px;
+}
+.Select
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: center;
+}
+.Selected
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: center;
+	background-image: url(../Images/Selected.gif);
+}
+.WaitSelecte
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: right;
+	background-image: url(../Images/Wdout_01.gif);
+}
+.WaitSelected
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: right;
+	background-image: url(../Images/Waitselected.gif);
+}
+.OutSelecte
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: right;
+	background-image: url(../Images/Outselect.gif);
+}
+.OutSelected
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: right;
+	background-image: url(../Images/Wdout_03.gif);
+}
+.limitSelecte
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: right;
+	background-image: url(../Images/Wdout_05.gif);
+}
+.limitSelected
+{
+	font-weight: bold;
+	color: #082a4f;
+	text-align: right;
+	background-image: url(../Images/limitselect.gif);
+}
+a.Conferencebtn
+{
+	color: #1D5396;
+	text-decoration: underline;
+	font-weight: bolder;
+}
+
+@media print
+{
+
+	.noprint
+	{
+		display: none;
+	}
+	.PrintStyle
+	{
+		background-color: White;
+	}
+}
+.BtnTransfer2Css
+{
+	cursor: hand;
+	border: none;
+	height: 31px;
+	width: 93px;
+	background-color: Transparent;
+	background-image: url(../Images/Transfer.gif);
+	background-repeat: no-repeat;
+}
+
+.HandCss
+{
+	cursor: hand;
+}
+
+.CalendarCss TH
+{
+	text-align: center;
+}
+
+.LableCss
+{
+	border: solid 1px #7F9DB9;
+	margin: 2px 5px 2px 0px;
+	padding: 2px 2px 2px 2px;
+}
+.DeleteImage
+{
+	border: none;
+	background: url(../Images/delete.gif) no-repeat;
+	width: 16px;
+	cursor: hand;
+}
+.MyRisk
+{
+	background: url(../Images/MyRisk.png) no-repeat !important; /* FF IE7 */
+	background-repeat: no-repeat;
+	_background-image: none;
+	_filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(enabled=true, sizingMethod=scale, src="App_Resources/Images/MyRisk.png"); /*IE6 */
+}
+.AllRisk
+{
+	background: url(../Images/AllRisk.png) no-repeat;
+}
+.RiskNotice
+{
+	background: url(../Images/RiskNotice.png) no-repeat;
+}
+.RiskEdu
+{
+	background: url(../Images/RiskEdu.png) no-repeat;
+}
+.MyRiskLeftTD
+{
+	font-weight: bold;
+	color: #8c0000;
+	vertical-align: text-top;
+}
+.RiskGridTitleCss
+{
+	background-image: url(../Images/RiskGridTitle_bg.gif);
+	height: 29px;
+	background-repeat: repeat-x;
+	font-size: 10pt;
+}
+
+.PolicyRecord
+{
+	background-color: #7f9db9;
+	line-height: 35px;
+	text-align: center;
+}
+
+.PolicyRecord td
+{
+	font-size: 12pt;
+}
+
+.PolicyRecordAttachment
+{
+	background-color: #7f9db9;
+	line-height: 35px;
+	text-align: center;
+}

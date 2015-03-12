@@ -1,0 +1,591 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:tns="http://tempuri.org/" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" name="WorkflowService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsaw:UsingAddressing />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_CreateWorkFlow_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_BusinessSubmit_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_gotoState_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_addLogicState_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_SetStateNextPerson_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_ProcessFreeze_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_RevokeState_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsp:Policy wsu:Id="WSHttpBinding_IWorkflowService_SaveTransactInfo_policy">
+    <wsp:ExactlyOne>
+      <wsp:All>
+        <wsat:ATAssertion wsp:Optional="true" wsp1:Optional="true" xmlns:wsat="http://schemas.xmlsoap.org/ws/2004/10/wsat" xmlns:wsp1="http://schemas.xmlsoap.org/ws/2002/12/policy" />
+      </wsp:All>
+    </wsp:ExactlyOne>
+  </wsp:Policy>
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://10.162.197.5:7566/WFServer?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://10.162.197.5:7566/WFServer?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://10.162.197.5:7566/WFServer?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/Platform.eWorkFlow.Model" />
+      <xsd:import schemaLocation="http://10.162.197.5:7566/WFServer?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+      <xsd:import schemaLocation="http://10.162.197.5:7566/WFServer?xsd=xsd4" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="IWorkflowService_startRuntime_InputMessage">
+    <wsdl:part name="parameters" element="tns:startRuntime" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_startRuntime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:startRuntimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_stopRuntime_InputMessage">
+    <wsdl:part name="parameters" element="tns:stopRuntime" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_stopRuntime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:stopRuntimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_CreateWorkFlow_InputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWorkFlow" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_CreateWorkFlow_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CreateWorkFlowResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_BusinessSubmit_InputMessage">
+    <wsdl:part name="parameters" element="tns:BusinessSubmit" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_BusinessSubmit_OutputMessage">
+    <wsdl:part name="parameters" element="tns:BusinessSubmitResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_gotoState_InputMessage">
+    <wsdl:part name="parameters" element="tns:gotoState" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_gotoState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:gotoStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_addLogicState_InputMessage">
+    <wsdl:part name="parameters" element="tns:addLogicState" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_addLogicState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:addLogicStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_SetStateNextPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:SetStateNextPerson" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_SetStateNextPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SetStateNextPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessFreeze_InputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessFreeze" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_ProcessFreeze_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ProcessFreezeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_RevokeState_InputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeState" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_RevokeState_OutputMessage">
+    <wsdl:part name="parameters" element="tns:RevokeStateResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_SaveTransactInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransactInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_SaveTransactInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveTransactInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceInfoByInstanceKeyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceInfoByInstanceKeyID" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceInfoByInstanceKeyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceInfoByInstanceKeyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceInfoByInstanceID_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceInfoByInstanceID" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceInfoByInstanceID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceInfoByInstanceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllBatchAduitWorkFlowInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBatchAduitWorkFlowInstance" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllBatchAduitWorkFlowInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllBatchAduitWorkFlowInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetStateNextPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateNextPerson" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetStateNextPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateNextPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceStateInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceStateInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetInstanceStateInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetInstanceStateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetStateInstanceTransact_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateInstanceTransact" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetStateInstanceTransact_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetStateInstanceTransactResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_DeleteInstanceInfoByInstanceID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstanceInfoByInstanceID" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_DeleteInstanceInfoByInstanceID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstanceInfoByInstanceIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_DeleteInstanceInfoByInstanceKeyID_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstanceInfoByInstanceKeyID" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_DeleteInstanceInfoByInstanceKeyID_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteInstanceInfoByInstanceKeyIDResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_DeleteNextPerson_InputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNextPerson" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_DeleteNextPerson_OutputMessage">
+    <wsdl:part name="parameters" element="tns:DeleteNextPersonResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetServerTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTime" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetServerTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetServerVersion_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerVersion" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetServerVersion_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetServerVersionResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetOverTimeInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetOverTimeInstance" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetOverTimeInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetOverTimeInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllWFInstance_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWFInstance" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetAllWFInstance_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetAllWFInstanceResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_clearStateInfo_InputMessage">
+    <wsdl:part name="parameters" element="tns:clearStateInfo" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_clearStateInfo_OutputMessage">
+    <wsdl:part name="parameters" element="tns:clearStateInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_getWorkflowInstanceFromRuntime_InputMessage">
+    <wsdl:part name="parameters" element="tns:getWorkflowInstanceFromRuntime" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_getWorkflowInstanceFromRuntime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:getWorkflowInstanceFromRuntimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWFInstanceTransactHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetWFInstanceTransactHistory" />
+  </wsdl:message>
+  <wsdl:message name="IWorkflowService_GetWFInstanceTransactHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetWFInstanceTransactHistoryResponse" />
+  </wsdl:message>
+  <wsdl:portType name="IWorkflowService">
+    <wsdl:operation name="startRuntime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/startRuntime" message="tns:IWorkflowService_startRuntime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/startRuntimeResponse" message="tns:IWorkflowService_startRuntime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="stopRuntime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/stopRuntime" message="tns:IWorkflowService_stopRuntime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/stopRuntimeResponse" message="tns:IWorkflowService_stopRuntime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CreateWorkFlow">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/CreateWorkFlow" message="tns:IWorkflowService_CreateWorkFlow_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/CreateWorkFlowResponse" message="tns:IWorkflowService_CreateWorkFlow_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="BusinessSubmit">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/BusinessSubmit" message="tns:IWorkflowService_BusinessSubmit_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/BusinessSubmitResponse" message="tns:IWorkflowService_BusinessSubmit_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="gotoState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/gotoState" message="tns:IWorkflowService_gotoState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/gotoStateResponse" message="tns:IWorkflowService_gotoState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="addLogicState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/addLogicState" message="tns:IWorkflowService_addLogicState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/addLogicStateResponse" message="tns:IWorkflowService_addLogicState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SetStateNextPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/SetStateNextPerson" message="tns:IWorkflowService_SetStateNextPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/SetStateNextPersonResponse" message="tns:IWorkflowService_SetStateNextPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ProcessFreeze">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/ProcessFreeze" message="tns:IWorkflowService_ProcessFreeze_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/ProcessFreezeResponse" message="tns:IWorkflowService_ProcessFreeze_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="RevokeState">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/RevokeState" message="tns:IWorkflowService_RevokeState_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/RevokeStateResponse" message="tns:IWorkflowService_RevokeState_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransactInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/SaveTransactInfo" message="tns:IWorkflowService_SaveTransactInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/SaveTransactInfoResponse" message="tns:IWorkflowService_SaveTransactInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceInfoByInstanceKeyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetInstanceInfoByInstanceKeyID" message="tns:IWorkflowService_GetInstanceInfoByInstanceKeyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetInstanceInfoByInstanceKeyIDResponse" message="tns:IWorkflowService_GetInstanceInfoByInstanceKeyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceInfoByInstanceID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetInstanceInfoByInstanceID" message="tns:IWorkflowService_GetInstanceInfoByInstanceID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetInstanceInfoByInstanceIDResponse" message="tns:IWorkflowService_GetInstanceInfoByInstanceID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBatchAduitWorkFlowInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetAllBatchAduitWorkFlowInstance" message="tns:IWorkflowService_GetAllBatchAduitWorkFlowInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetAllBatchAduitWorkFlowInstanceResponse" message="tns:IWorkflowService_GetAllBatchAduitWorkFlowInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStateNextPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetStateNextPerson" message="tns:IWorkflowService_GetStateNextPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetStateNextPersonResponse" message="tns:IWorkflowService_GetStateNextPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceStateInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetInstanceStateInfo" message="tns:IWorkflowService_GetInstanceStateInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetInstanceStateInfoResponse" message="tns:IWorkflowService_GetInstanceStateInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetStateInstanceTransact">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetStateInstanceTransact" message="tns:IWorkflowService_GetStateInstanceTransact_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetStateInstanceTransactResponse" message="tns:IWorkflowService_GetStateInstanceTransact_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstanceInfoByInstanceID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/DeleteInstanceInfoByInstanceID" message="tns:IWorkflowService_DeleteInstanceInfoByInstanceID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/DeleteInstanceInfoByInstanceIDResponse" message="tns:IWorkflowService_DeleteInstanceInfoByInstanceID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstanceInfoByInstanceKeyID">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/DeleteInstanceInfoByInstanceKeyID" message="tns:IWorkflowService_DeleteInstanceInfoByInstanceKeyID_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/DeleteInstanceInfoByInstanceKeyIDResponse" message="tns:IWorkflowService_DeleteInstanceInfoByInstanceKeyID_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNextPerson">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/DeleteNextPerson" message="tns:IWorkflowService_DeleteNextPerson_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/DeleteNextPersonResponse" message="tns:IWorkflowService_DeleteNextPerson_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetServerTime" message="tns:IWorkflowService_GetServerTime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetServerTimeResponse" message="tns:IWorkflowService_GetServerTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetServerVersion" message="tns:IWorkflowService_GetServerVersion_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetServerVersionResponse" message="tns:IWorkflowService_GetServerVersion_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetOverTimeInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetOverTimeInstance" message="tns:IWorkflowService_GetOverTimeInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetOverTimeInstanceResponse" message="tns:IWorkflowService_GetOverTimeInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWFInstance">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetAllWFInstance" message="tns:IWorkflowService_GetAllWFInstance_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetAllWFInstanceResponse" message="tns:IWorkflowService_GetAllWFInstance_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="clearStateInfo">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/clearStateInfo" message="tns:IWorkflowService_clearStateInfo_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/clearStateInfoResponse" message="tns:IWorkflowService_clearStateInfo_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="getWorkflowInstanceFromRuntime">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/getWorkflowInstanceFromRuntime" message="tns:IWorkflowService_getWorkflowInstanceFromRuntime_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/getWorkflowInstanceFromRuntimeResponse" message="tns:IWorkflowService_getWorkflowInstanceFromRuntime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetWFInstanceTransactHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/IWorkflowService/GetWFInstanceTransactHistory" message="tns:IWorkflowService_GetWFInstanceTransactHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/IWorkflowService/GetWFInstanceTransactHistoryResponse" message="tns:IWorkflowService_GetWFInstanceTransactHistory_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="WSHttpBinding_IWorkflowService" type="tns:IWorkflowService">
+    <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_policy" />
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="startRuntime">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/startRuntime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="stopRuntime">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/stopRuntime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CreateWorkFlow">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_CreateWorkFlow_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/CreateWorkFlow" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="BusinessSubmit">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_BusinessSubmit_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/BusinessSubmit" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="gotoState">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_gotoState_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/gotoState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="addLogicState">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_addLogicState_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/addLogicState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SetStateNextPerson">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_SetStateNextPerson_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/SetStateNextPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ProcessFreeze">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_ProcessFreeze_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/ProcessFreeze" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RevokeState">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_RevokeState_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/RevokeState" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveTransactInfo">
+      <wsp:PolicyReference URI="#WSHttpBinding_IWorkflowService_SaveTransactInfo_policy" />
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/SaveTransactInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceInfoByInstanceKeyID">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetInstanceInfoByInstanceKeyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceInfoByInstanceID">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetInstanceInfoByInstanceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllBatchAduitWorkFlowInstance">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetAllBatchAduitWorkFlowInstance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateNextPerson">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetStateNextPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetInstanceStateInfo">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetInstanceStateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetStateInstanceTransact">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetStateInstanceTransact" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstanceInfoByInstanceID">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/DeleteInstanceInfoByInstanceID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteInstanceInfoByInstanceKeyID">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/DeleteInstanceInfoByInstanceKeyID" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="DeleteNextPerson">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/DeleteNextPerson" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerTime">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetServerTime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetServerVersion">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetServerVersion" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetOverTimeInstance">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetOverTimeInstance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetAllWFInstance">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetAllWFInstance" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="clearStateInfo">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/clearStateInfo" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="getWorkflowInstanceFromRuntime">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/getWorkflowInstanceFromRuntime" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetWFInstanceTransactHistory">
+      <soap12:operation soapAction="http://tempuri.org/IWorkflowService/GetWFInstanceTransactHistory" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="WorkflowService">
+    <wsdl:port name="WSHttpBinding_IWorkflowService" binding="tns:WSHttpBinding_IWorkflowService">
+      <soap12:address location="http://10.162.197.5:7566/WFServer" />
+      <wsa10:EndpointReference>
+        <wsa10:Address>http://10.162.197.5:7566/WFServer</wsa10:Address>
+      </wsa10:EndpointReference>
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

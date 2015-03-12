@@ -1,0 +1,7 @@
+修改測試申請系統部份：
+1.添加存儲過程
+    1.1CRM_InsertIntoReportDetail(修改為改標誌位)；CRM_GetISallFinished；CRM_UpTestNO ;CRM_InsertReport
+2修改存儲過程
+    TestApplyInfo_Update(更新測試單號)
+修改CRM
+1.修改 存儲過程Quotation_InserToReport 標誌位為2

@@ -1,0 +1,1171 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Framework
+</name>
+</assembly>
+<members>
+<member name="M:Platform.Framework.ReflectionHelper.ReflectionGetPropertyValue(System.Object,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 取得實例類中指定屬性名稱的屬性值
+ </summary>
+	<param name="objClass">實例類</param>
+	<param name="propertyName">類中的屬性名稱</param>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.ReflectionHelper.ReflectionGetProperty(System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 取得指定實例類的所有可讀可寫的屬性列表集
+ </summary>
+	<param name="objClass">實例類</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.ReflectionHelper.ReflectionGetPropertyName(System.Object)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 取得指定實例類的所有可讀寫的屬性名稱列表
+ </summary>
+	<param name="objClass">實例類</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Platform.Framework.ReflectionHelper.GetCurrentCultureName">
+ -----------------------------------------------------------------------------
+ <summary>
+ 取得當前線程的文化屬性名稱
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Platform.Framework.ReflectionHelper.SystemVersion">
+ -----------------------------------------------------------------------------
+ <summary>
+ 取得當前DLL對應的版本編號
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.SecurityManage.SecurityHelper.DESEncrypt(System.String,System.String)">
+	<summary>
+ DES加密字符串數據
+ </summary>
+	<param name="strKey">密鑰</param>
+	<param name="strData">被加密數據</param>
+	<returns>返回加密後的數據</returns>
+	<remarks>
+	</remarks>
+</member><member name="M:Platform.Framework.SecurityManage.SecurityHelper.DESDecrypt(System.String,System.String)">
+	<summary>
+ DES解密字符串數據
+ </summary>
+	<param name="strKey">密鑰</param>
+	<param name="strData">被解密數據</param>
+	<returns>返回解密後的數據</returns>
+	<remarks>
+	</remarks>
+</member><member name="M:Platform.Framework.SecurityManage.SecurityHelper.StringToMD5Hash(System.String)">
+	<summary>
+ StringToMD5Hash
+ </summary>
+	<param name="inputString">明文</param>
+	<returns></returns>
+</member><member name="M:Platform.Framework.SecurityManage.SecurityHelper.MD5Encrypt(System.String)">
+	<summary>
+ MD5加密
+ </summary>
+	<param name="CleanString">要加密的明文</param>
+	<returns></returns>
+</member><member name="M:Platform.Framework.SecurityManage.SecurityHelper.Base64StringEncode(System.String)">
+	<summary>
+ 字符串Base64简单加密
+ </summary>
+	<param name="pToEncrypt">要加密的字串</param>
+</member><member name="M:Platform.Framework.SecurityManage.SecurityHelper.Base64StringDecode(System.String)">
+	<summary>
+ 字符串Base64解密
+ </summary>
+	<param name="pToDeCrypt">要解密的字串</param>
+</member><member name="M:Platform.Framework.UtilHelper.GetRandomString(System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 生成指定長度的隨機字串
+ </summary>
+	<param name="length">要生成隨機字串的長度</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.UtilHelper.FormatDateTime(System.DateTime)">
+	<summary>
+ 格式化日期字串
+ </summary>
+	<param name="mDatetime">要格式化的日期</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ChineseCalendarHelper.ConvertDateToChineseCalendar(System.DateTime)">
+	<summary>
+ 公歷轉農歷信息
+ </summary>
+	<param name="SourceDate">公歷日期</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ChineseCalendarHelper.ConvertDate2ChineseCalendarForNet20(System.DateTime)">
+	<summary> 
+ 展示当前年份信息 
+ </summary>
+	<remarks>
+ GetLeapMonth(int year)方法返回一个1到13之间的数字， 
+ * 比如：1、该年阴历2月有闰月，则返回3 
+ * 如果：2、该年阴历8月有闰月，则返回9 
+ * GetMonth(DateTime dateTime)返回是当前月份，忽略是否闰月 
+ * 比如：1、该年阴历2月有闰月，2月返回2，闰2月返回3 
+ * 如果：2、该年阴历8月有闰月，8月返回8，闰8月返回9 
+</remarks>
+</member><member name="M:Platform.Framework.ChineseCalendarHelper.ShowChineseCalendarYearInfo">
+	<summary> 
+ 展示阴历年份信息 
+ </summary>
+</member><member name="M:Platform.Framework.CollectionOperation.Merge``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0},System.Boolean)">
+	<summary>
+ 合並對象集合
+ </summary>
+	<param name="MergeTO">合並到對象集合</param>
+	<param name="MergeFrom">合並從對象集合</param>
+	<param name="FilterDuplication">是否過濾重復記錄</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.CollectionOperation.Diff``1(System.Collections.Generic.List{``0}@,System.Collections.Generic.List{``0}@)">
+	<summary>
+ 過濾相同的對象，保留不同的對象
+ </summary>
+	<param name="Collection1">比對對象集1</param>
+	<param name="Collection2">比對對象集2</param>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.CollectionOperation.Subtract``1(System.Collections.Generic.List{``0},System.Collections.Generic.List{``0})">
+	<summary>
+ 清減對象集合
+ </summary>
+	<param name="MinuendCollection">被減數對象集合</param>
+	<param name="SubtrahendCollection">減數對象集合</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.CollectionOperation">
+	<summary>
+ 集合類操作
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.SqlHelper">
+	<summary>
+ SQL數據操作類
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.My.Resources.Resources.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:Platform.Framework.My.Resources.Resources.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強型別資源類別的資源查閱。
+</summary>
+</member><member name="T:Platform.Framework.My.Resources.Resources">
+	<summary>
+  用於查詢當地語系化字串等的強型別資源類別
+</summary>
+</member><member name="M:Platform.Framework.SearchHelper.GetSearchString(System.String,System.String,System.String,System.Boolean@,System.Int32)">
+	<summary>
+ 動態構建查詢字串
+ </summary>
+	<param name="columnName">查詢的資料欄位名</param>
+	<param name="keyword1">第一查詢關鍵字</param>
+	<param name="keyword2">第二查詢關鍵字</param>
+	<param name="hasContent">是否有查詢內容</param>
+	<param name="colType">查詢類別(可通過SearchType枚舉項進行設定)</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<example>
+		<code>
+         Dim tmp As Boolean = False
+         Dim key1 As String = "ABC"
+         Dim key2 As String = "CCC"
+         Dim key3 As Integer = 5
+         Dim search As String = ""
+         search += GetSearchString("col1", key1, "", tmp, 2)
+         search += GetSearchString("col2", key2, "", tmp, 3)
+         search += GetSearchString("col3", key3, "", tmp, 1)
+         search += GetSearchString("DateCol", "2006-01-01", "2006-02-01", tmp, 4)
+         Me.TextBox1.Text = search
+ 	</code>
+	</example>
+</member><member name="F:Platform.Framework.SearchHelper.SearchType.NumberType">
+	<summary>
+ 數字查詢類別
+ </summary>
+</member><member name="F:Platform.Framework.SearchHelper.SearchType.StringStrict">
+	<summary>
+ 字串精確查詢類別
+ </summary>
+</member><member name="F:Platform.Framework.SearchHelper.SearchType.StringNoStrict">
+	<summary>
+ 字串模糊查詢類別
+ </summary>
+</member><member name="F:Platform.Framework.SearchHelper.SearchType.DateType">
+	<summary>
+ 指定日期並往後一天的日期查詢類別
+ </summary>
+</member><member name="F:Platform.Framework.SearchHelper.SearchType.NumberBetween">
+	<summary>
+ 間於指定數字范圍的查詢類別
+ </summary>
+</member><member name="F:Platform.Framework.SearchHelper.SearchType.DateTypeNoStrict">
+	<summary>
+ 間於指定日期范圍的查詢類別
+ </summary>
+</member><member name="T:Platform.Framework.SearchHelper.SearchType">
+	<summary>
+ 搜索類別
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:Platform.Framework.SearchHelper">
+	<summary>
+ 查詢表達式類
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.SearchTerm.mField">
+	<summary>
+查詢項目
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.SearchTerm.mValue1">
+	<summary>
+ 查詢值1
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.SearchTerm.mValue2">
+	<summary>
+ 查詢值2
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.SearchTerm.mCondition">
+	<summary>
+ 查詢計算條件
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.SearchTerm.mCompareOperator">
+	<summary>
+ 查詢多條件時的操作關系
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.SearchTerm.Field">
+	<summary>
+ 查詢字段/資料庫欄位名
+ </summary>
+	<value></value>
+	<returns>資料庫欄位名</returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.SearchTerm.Value1">
+	<summary>
+ 查詢值1
+ </summary>
+	<value></value>
+	<returns>查詢值或查詢上下界值中的下界值</returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.SearchTerm.Value2">
+	<summary>
+ 查詢值2
+ </summary>
+	<value></value>
+	<returns>查詢上下界值中的上界值</returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.SearchTerm.CompareOperator">
+	<summary>
+ 查詢條件的計算方式
+ </summary>
+	<value></value>
+	<returns>查詢條件的計算方式,如大於、小於、包含、等於、介於等等</returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.SearchTerm.Condition">
+	<summary>
+ 查詢多條件時的操作關系
+ </summary>
+	<value></value>
+	<returns>查詢多條件時的操作關系, And / OR </returns>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.SearchWhereClause.SearchTerm">
+	<summary>
+ 查詢組成項結構
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.SearchWhereClause.#ctor">
+	<summary>
+ 建構式
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.SearchWhereClause.AddSearchTerm(System.String,Platform.Framework.SearchWhereClause.CompareOperator,System.String,System.String,Platform.Framework.SearchWhereClause.ConditionOperator)">
+	<summary>
+ 添加查詢條件式
+ </summary>
+	<param name="Field">查詢字段</param>
+	<param name="mOperator">查詢條件計算方法</param>
+	<param name="Value1">查詢值1</param>
+	<param name="Value2">查詢值2</param>
+	<param name="mConditionOperator">查詢多條件時的操作關系</param>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.SearchWhereClause.ClearSearchTerm">
+	<summary>
+ 清除查詢條件
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.SearchTerms">
+	<summary>
+ 查詢表達式集合
+ </summary>
+	<value></value>
+	<returns>已設定的查詢表達式集合</returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.WhereClause">
+	<summary>
+ 查詢表達式的SQL拼接字串結果
+ </summary>
+	<value></value>
+	<returns>查詢表達式的SQL拼接字串結果</returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.SearchWhereClause.UserInputWhereClause">
+	<summary>
+ 用戶輸入的直接查詢條件
+ </summary>
+	<value></value>
+	<returns>用戶輸入的直接查詢條件</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.Contains">
+	<summary>
+ 包含文字(子串)
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.Equal">
+	<summary>
+ 數值型等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.EqualString">
+	<summary>
+ 字串型等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.NotEqual">
+	<summary>
+ 數值型不等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.NotEqualString">
+	<summary>
+ 字串型不等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.BetweenNumber">
+	<summary>
+ 介於兩個數值之間
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.GreaterThan">
+	<summary>
+ 大於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.LessThan">
+	<summary>
+ 小於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.HaveValueIn">
+	<summary>
+ 存在值
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.NotHaveValueIn">
+	<summary>
+ 不存在值
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.StartWith">
+	<summary>
+ 文字開始於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.NotStartWith">
+	<summary>
+ 文字不開始於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.BetweenOneDay">
+	<summary>
+ 日期在一天內
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.CompareOperator.BetweenDays">
+	<summary>
+ 日期在一個時間段內
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.SearchWhereClause.CompareOperator">
+	<summary>
+ 查詢條件計算操作方法枚舉
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.ConditionOperator.AndOperator">
+	<summary>
+ And 關系
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.SearchWhereClause.ConditionOperator.OrOperator">
+	<summary>
+ Or 關系
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.SearchWhereClause.ConditionOperator">
+	<summary>
+ 查詢多條件時的操作關系枚舉
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.SearchWhereClause">
+	<summary>
+ 動態條件查詢表達式生成類
+ </summary>
+	<remarks>
+		<example>
+			<code>
+     Dim obj As New SearchHelper.SearchWhereClause
+     obj.AddSearchTerm("FinishedFlag", obj.CompareOperator.BetweenDays, "2008/12/30", "2009/01/31")
+     obj.AddSearchTerm("DeleteFlag", obj.CompareOperator.NotEqual, "1", "")
+     Me.TextBox1.Text = obj.WhereClause
+  </code>
+		</example>
+	</remarks>
+</member><member name="P:Platform.Framework.ExceptionManage.ExceptionHelper.Method">
+	<summary>
+ 當前引發錯誤的方法
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[F2156972]	2007/2/6	Created
+ </history>
+</member><member name="P:Platform.Framework.ExceptionManage.ExceptionHelper.FileColumnNumber">
+	<summary>
+ 異常在源代碼中的列數
+ </summary>
+	<value></value>
+	<remarks>
+ 當前此屬性的值在網頁中未被使用
+ </remarks>
+	<history>
+ 	[F2156972]	2007/2/6	Created
+ </history>
+</member><member name="P:Platform.Framework.ExceptionManage.ExceptionHelper.FileName">
+	<summary>
+ 異常出現的源代碼文件名
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[F2156972]	2007/2/6	Created
+ </history>
+</member><member name="P:Platform.Framework.ExceptionManage.ExceptionHelper.FileLineNumber">
+	<summary>
+ 異常在源代碼中的行數
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+	<history>
+ 	[F2156972]	2007/2/6	Created
+ </history>
+</member><member name="M:Platform.Framework.ExceptionManage.ExceptionHelper.#ctor">
+	<summary>
+ 建構式
+ </summary>
+	<remarks>
+	</remarks>
+	<history>
+ 	[F2156972]	2007/2/6	Created
+ </history>
+</member><member name="M:Platform.Framework.ExceptionManage.ExceptionHelper.GetExceptionHelper(System.Exception)">
+	<summary>
+ 異常信息類
+ </summary>
+	<param name="e">傳入出現的異常</param>
+	<returns>ExceptionHelper類</returns>
+	<remarks>
+		<example>
+			<code>
+   Try
+     Dim a As Integer
+     Dim b As Integer = 5
+     a = b / 0
+   Catch ex As Exception
+     Dim exinfo As ExceptionHelper = ExceptionHelper.GetExceptionHelper(ex)
+     Dim method As String = exinfo.Method
+     Dim FileName As String = exinfo.FileName
+     Dim FileLine As Integer = exinfo.FileLineNumber
+     Dim Filecolumn As Integer = exinfo.FileColumnNumber
+   End Try
+ </code>
+		</example>
+	</remarks>
+	<history>
+ 	[F2156972]	2007/2/6	Created
+ </history>
+</member><member name="T:Platform.Framework.ExceptionManage.ExceptionHelper">
+	<summary>
+ 異常類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ADHelper.GetValidAccountInfoTableFromAD(System.String,System.String,System.String)">
+	<summary>
+ 取得指定LDAP路徑下的所有有效帳戶
+ </summary>
+	<param name="LDAPPath">LDAP路徑</param>
+	<param name="UserName">用戶名</param>
+	<param name="Password">密碼</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ADHelper.RetrieveADInfo(System.String)">
+	<summary>
+ 取得指定登錄帳號的AD精簡數據結構
+ </summary>
+	<param name="loginName">登錄帳號</param>
+	<returns>ADSingleUserInfo</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.SAMAccountName">
+	<summary>
+ 登錄帳號名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.DisplayName">
+	<summary>
+ 顯示帳號名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.CN_CommonName">
+	<summary>
+ 帳號在LDAP協議中的CN值
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.OU_OrganizationalUnit">
+	<summary>
+ 帳號在LDAP協議中的OU值
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.DC_DomainComonent">
+	<summary>
+ 帳號在LDAP協議中的DC值
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.physicaldeliveryofficename">
+	<summary>
+ 人員所在的辦公室名稱
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.memberof">
+	<summary>
+ 人員隸屬群組關系
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.ADHelper.ADSingleUserInfo.userprincipalname">
+	<summary>
+ 帳號AD中的全稱
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.ADHelper.ADSingleUserInfo">
+	<summary>
+ 精簡的AD帳號數據結構
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.ADHelper">
+	<summary>
+ AD操作類
+ </summary>
+	<remarks>
+ ===========================================
+ wwwhomepage------http://zfq308.cnblogs.com
+ distinguishedname------CN=周富強,OU=user,OU=應用系統整合實驗室,OU=HUANAN,DC=cmc,DC=lh,DC=com
+ postalcode------518109
+ l------深圳
+ name------周富強
+ userprincipalname------F2156972@CMC.LH.COM
+ givenname------富強
+ memberof------CN=R&amp;D Lab II,OU=user,OU=應用系統整合實驗室,OU=HUANAN,DC=cmc,DC=lh,DC=com
+ adspath------LDAP://CN=周富強,OU=user,OU=應用系統整合實驗室,OU=HUANAN,DC=cmc,DC=lh,DC=com
+ displayname------周富強
+ physicaldeliveryofficename------應用系統整合實驗室
+ homephone------0755-12345678
+ title------工程師
+ co------中國
+ cn------周富強
+ sn------周
+ postofficebox------106
+ telephonenumber------26738
+ mobile------13630664191
+ company------富士康
+ description------這是我的AD信息
+ st------廣東
+ department------華南檢測中心
+ mail------Fu-qiang_zhou@Foxconn.com
+ initials------Ben
+ samaccountname------F2156972
+ streetaddress------東環二路
+ objectcategory------CN=Person,CN=Schema,CN=Configuration,DC=lh,DC=com
+============================================
+</remarks>
+</member><member name="M:Platform.Framework.ResourceManage.ResourceHelper.#ctor(System.String)">
+	<summary>
+ 類的建構式
+ </summary>
+	<param name="ResourceName">資源的名稱</param>
+	<remarks>
+ ResourceName 的格式為:"命名空間.根資源文件名"
+ </remarks>
+</member><member name="P:Platform.Framework.ResourceManage.ResourceHelper.ResourceName">
+	<summary>
+ ResourceName:其值在類的建構時填充,為"命名空間.根資源文件名"的形式.
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+</member><member name="M:Platform.Framework.ResourceManage.ResourceHelper.GetResString(System.String,System.Globalization.CultureInfo)">
+	<summary>
+ Get string(Resource Value) from resource file by ResourceName
+ </summary>
+	<param name="ResourceNameKey">ResourceNameKey</param>
+	<param name="ci">CultureInfo</param>
+	<returns></returns>
+	<remarks>
+ Dim ci As CultureInfo = Thread.CurrentThread.CurrentCulture
+ </remarks>
+</member><member name="M:Platform.Framework.ResourceManage.ResourceHelper.GeneResxFileByMeteData(System.String)">
+	<summary>
+ 在指定路徑生成Resx類型的資源文件
+ </summary>
+	<param name="ResxFileName">應用程式域下的相對路徑</param>
+	<remarks>
+		<sample>
+			<code>
+    SysModule.GeneResxFile("Resource\Resource1.resx")
+ </code>
+		</sample>
+	</remarks>
+</member><member name="P:Platform.Framework.WorkTimeCalcHelper.SpecDatetime">
+	<summary>
+ 起始時間
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.WorkTimeCalcHelper.WorkTimeList">
+	<summary>
+ 工作時間區段集合。其中元素DictionaryEntry的Key為工作時間區段的開始時間(例如：08:00:00)，Value為工作時間區段的結束時間(例如：12:00:00)。請確保WorkTimeList從小到大,且無交叉排列
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.WorkTimeCalcHelper.ExcludeDayList">
+	<summary>
+ 例外日期集合
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.WorkTimeCalcHelper.CalcWorkTimeByTimeDiff(System.DateTime)">
+	<summary>
+ 計算從開始時間到終止時間內的工作時間分鐘數
+ </summary>
+	<param name="EndTime">終止時間</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.WorkTimeCalcHelper.FormatTimeStr(System.String)">
+	<summary>
+ 將String型工作時間格式化為TimeSpan型,跨天模式會在其TimeSpan中加1天
+ </summary>
+	<param name="TimeSpanStr">工作時間(String型)</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.WorkTimeCalcHelper.GenerationTimeSpanPair(System.Collections.Generic.List{System.Collections.DictionaryEntry})">
+	<summary>
+ 格式化工作時間列表
+ </summary>
+	<param name="WorkTimeList">工作時間列表</param>
+	<returns></returns>
+	<remarks>
+ WorkTimeList中的DictionaryEntry對象其Key值是工作時間的開始TimeSpan(String),其Value值是工作時間的結束TimeSpan(String)。
+ 結束工作時間有兩種格式：正常格式hh:mm:ss和跨天格式[2Day]hh:mm:ss
+ </remarks>
+</member><member name="M:Platform.Framework.WorkTimeCalcHelper.BuilderWorkTimeTable(System.DateTime,System.Int32,System.Collections.Generic.List{System.Collections.DictionaryEntry},System.Collections.Generic.List{System.DateTime})">
+	<summary>
+ 從給定時間開始，排除例外日期后的工作時間列表
+ </summary>
+	<param name="SpecTime">計算起始時間</param>
+	<param name="OffSetDays">從起始時間開始預計要工作的實際天數，此參數可以實際情況設為30(1個月)或60(2個月),可大不可小，但不要太大,最大365（1年）</param>
+	<param name="FormatWorkTimeList">經過GenerationTimeSpanPair方法格式化的起始時間段集合</param>
+	<param name="ExcludeDays">例外日期集合</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.WorkTimeCalcHelper.JudgeSameDay(System.DateTime,System.DateTime)">
+	<summary>
+ 判斷指定的兩天是否為同一天
+ </summary>
+	<param name="datetime1">日期1</param>
+	<param name="datetime2">日期2</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:Platform.Framework.MailSystem._IsHtmlBody">
+ -----------------------------------------------------------------------------
+ <summary>
+ 郵件內文格式
+ </summary>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.MailSystem.SendMail(System.String[],System.String,System.Boolean,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 向SMTP郵件服務器轉發郵件
+ </summary>
+	<param name="TOList">發送列表</param>
+	<param name="Subject">郵件主題</param>
+	<param name="BodyContentType">郵件正文類別</param>
+	<param name="BodyContent">郵件正文</param>
+	<returns>發送是否成功</returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.MailSystem.SendMail(System.String[],System.String,System.Boolean,System.String,System.String[])">
+ -----------------------------------------------------------------------------
+ <summary>
+ 向SMTP郵件服務器轉發郵件
+ </summary>
+	<param name="TOList">發送列表</param>
+	<param name="Subject">郵件主題</param>
+	<param name="BodyContentType">郵件正文類別</param>
+	<param name="BodyContent">郵件正文</param>
+	<param name="AttachmentList">附件列表</param>
+	<returns>發送是否成功</returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.MailSystem.SendMail(System.String[],System.String[],System.String[],System.String,System.Boolean,System.String,System.String[],System.String)">
+	<summary>
+ 向SMTP郵件服務器轉發郵件
+ </summary>
+	<param name="FromNotesId">發件人Notes</param>
+	<param name="TOList">發送列表</param>
+	<param name="CCList">抄送列表</param>
+	<param name="BCCList">暗送列表</param>
+	<param name="Subject">郵件主題</param>
+	<param name="IsBodyHtml">郵件正文類別</param>
+	<param name="BodyContent">郵件正文</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.MailSystem.FormatNotesID(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 郵件格式轉換函數
+ </summary>
+	<param name="sMailTo">要轉換的NotesID</param>
+	<returns>轉換後的郵件格式</returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:Platform.Framework.MailSystem">
+	<summary>
+ SMTP郵件服務之轉發郵件工具類
+ </summary>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.SearchExtHelper.SearchDataWithCustomPaging(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ 採用分頁的方式取回數據集
+ </summary>
+	<param name="TableName">數據集來源的表名</param>
+	<param name="PK">表的主鍵名</param>
+	<param name="SortExpression">排序表達式(eg: "ColumnName DESC")</param>
+	<param name="PageNumber">第幾頁</param>
+	<param name="Filter">查詢的Filter條件，默認為:Nothing</param>
+	<param name="Fields">查詢返回的欄位列表，默認為"*" 全部</param>
+	<param name="Group">查詢的Group條件，默認為:Nothing</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.ResourceManage.SysAttributeHelper.Description">
+ -----------------------------------------------------------------------------
+ <summary>
+ 自定義屬性文本
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Platform.Framework.ResourceManage.SysAttributeHelper.LastModifyTime">
+	<summary>
+ 屬性最後修改時間
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.ResourceManage.SysAttributeHelper.IsNewFlag">
+	<summary>
+ 是否為新定義項目標志
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.Framework.ResourceManage.SysAttributeHelper.Remark">
+	<summary>
+ 補充備注
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ResourceManage.SysAttributeHelper.#ctor">
+	<summary>
+ 默認建構式
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ResourceManage.SysAttributeHelper.#ctor(System.String,System.String,System.String,System.String)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="Description">自定義屬性文本</param>
+	<param name="LastModifyTime">屬性最後修改時間</param>
+	<param name="IsNewFlag">是否為新定義項目標志</param>
+	<param name="Remark">補充備注</param>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ResourceManage.SysAttributeHelper.ToString">
+	<summary>
+ 輸出自定義屬性文本
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.ResourceManage.SysAttributeHelper">
+	<summary>
+ 自定義屬性類
+ </summary>
+	<remarks>
+		<example>
+			<code lang="vbnet">
+ &lt;SysAttributeHelper("This is ResourceValue.", LastModifyTime:="", isNewFlag:="0", Remark:="")&gt; _
+   Public ReadOnly Property Class1Property() As String
+    Get
+        Return "AAA"
+    End Get
+ End Property
+ </code>
+		</example>
+	</remarks>
+</member><member name="M:Platform.Framework.ConfigExtHelper.ReadSetting(System.Collections.Specialized.NameValueCollection,System.String,System.String)">
+	<summary>
+ 讀取Config文件的設定值
+ </summary>
+	<param name="settings">設定值集合</param>
+	<param name="key">設定項目名稱</param>
+	<param name="defaultValue">設定項目默認值</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ConfigExtHelper.ReadSetting(System.Collections.Specialized.NameValueCollection,System.String,System.Boolean)">
+	<summary>
+ 讀取Config文件的設定值
+ </summary>
+	<param name="settings">設定值集合</param>
+	<param name="key">設定項目名稱</param>
+	<param name="defaultValue">設定項目默認值</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ConfigExtHelper.ReadSetting(System.Collections.Specialized.NameValueCollection,System.String,System.Int32)">
+	<summary>
+ 讀取Config文件的設定值
+ </summary>
+	<param name="settings">設定值集合</param>
+	<param name="key">設定項目名稱</param>
+	<param name="defaultValue">設定項目默認值</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ConfigExtHelper.ReadSetting(System.Collections.Specialized.NameValueCollection,System.String,System.DateTime)">
+	<summary>
+ 讀取Config文件的設定值
+ </summary>
+	<param name="settings">設定值集合</param>
+	<param name="key">設定項目名稱</param>
+	<param name="defaultValue">設定項目默認值</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Platform.Framework.ConfigExtHelper">
+	<summary>
+ 讀取Config文件的設定值工具類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.DateTimeHelper.GetWeekOfYear(System.DateTime)">
+	<summary>
+ 求指定日期的周數
+ </summary>
+	<param name="dt">指定的日期</param>
+	<returns>返回日期的yyyy-MM-dd字串</returns>
+</member><member name="M:Platform.Framework.DateTimeHelper.GetWeekFirstDay(System.String)">
+	<summary>
+ 求指定周别的第一天
+ </summary>
+	<param name="weekId">周别，格式如200601</param>
+	<returns>返回日期的yyyy-MM-dd字串</returns>
+</member><member name="M:Platform.Framework.DateTimeHelper.GetWeekLastDay(System.String)">
+	<summary>
+ 求指定周别的最后一天
+ </summary>
+	<param name="weekId">周别，格式如200601</param>
+	<returns>返回日期的yyyy-MM-dd字串</returns>
+</member><member name="M:Platform.Framework.DateTimeHelper.GetWeekRange(System.String)">
+	<summary>
+ 求指定周别的日期范围
+ </summary>
+	<param name="weekId">周别，格式如200601</param>
+	<returns>返回日期的yyyy-MM-dd字串</returns>
+</member><member name="M:Platform.Framework.DateTimeHelper.StringToDate(System.String)">
+	<summary>
+ 將日期字串轉換成日期
+ </summary>
+	<param name="Value">待轉換的字串</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.DateTimeHelper.StringToDate(System.String,System.Boolean)">
+	<summary>
+ 將日期字串轉換成日期
+ </summary>
+	<param name="Value">待轉換的字串</param>
+	<param name="EmptyIsMin">若待轉換的字串為空，是否用日期最小量替換，否則用日期最大量替換</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.DateTimeHelper.ChineseDate(System.DateTime)">
+	<summary> 
+ 日期转中文 
+ </summary>
+	<param name="oldDate">要轉換的日期值</param>
+	<returns></returns>
+</member><member name="M:Platform.Framework.DateTimeHelper.GetRandomTime(System.DateTime,System.DateTime)">
+	<summary> 
+ 获取随机时间 
+ </summary>
+	<param name="time1">隨機時間的上限范圍(大值)</param>
+	<param name="time2">隨機時間的下限范圍(小值)</param>
+	<returns>返回介於兩個上下時間范圍內的隨機時間</returns>
+	<remarks> 
+ 由于Random 以当前系统时间做为种值,所以当快速运行多次该方法所得到的结果可能相同, 
+ 这时,你应该在外部初始化 Random 实例并调用 GetRandomTime(DateTime time1, DateTime time2, Random random) 
+ </remarks>
+</member><member name="M:Platform.Framework.DateTimeHelper.GetRandomTime(System.DateTime,System.DateTime,System.Random)">
+	<summary> 
+ 获取随机时间 
+ </summary>
+	<param name="time1">隨機時間的上限范圍(大值)</param>
+	<param name="time2">隨機時間的下限范圍(小值)</param>
+	<param name="random">隨機發生器</param>
+	<returns></returns>
+</member><member name="M:Platform.Framework.ProviderConfig.GetSetting(System.String,System.String,System.String,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 取得自訂配置節中配置項的值
+ </summary>
+	<param name="SettingGroup">自訂配置節中的群組名</param>
+	<param name="SettingSection">自訂配置節名</param>
+	<param name="KeyString">配置項名</param>
+	<param name="DefaultValue">配置項默認值</param>
+	<returns></returns>
+	<remarks>
+		<sample>
+			<code>
+      Dim SettingItem As String=ProviderConfig.GetSetting("MyGroupSetting", "data", "key_one", "Default")
+ </code>
+		</sample>
+	</remarks>
+	<history>
+ 	[F2156972]	2008/3/31	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.ADONetHelper.Difference(System.Data.DataTable,System.Data.DataTable)">
+	<summary>
+ 比較兩個表的不同，返回含有不同項的DataTable
+ </summary>
+	<param name="First">要比較的第一個表</param>
+	<param name="Second">要比較的第二個表</param>
+	<returns></returns>
+	<remarks>
+		<example>
+			<code lang="vbnet">
+  Dim sT As DataTable = New DataTable
+  Dim c1 As New DataColumn("c1", System.Type.GetType("System.String"))
+  Dim c2 As New DataColumn("c2", System.Type.GetType("System.String"))
+  sT.Columns.AddRange(New DataColumn() {c1, c2})
+  Dim r1 As DataRow = sT.NewRow
+  r1.Item("c1") = "S1"
+  r1.Item("c2") = "S2"
+  sT.Rows.Add(r1)
+  Dim r2 As DataRow = sT.NewRow
+  r2.Item("c1") = "S3"
+  r2.Item("c2") = "S4"
+  sT.Rows.Add(r2)
+  Dim DT As DataTable = New DataTable
+  Dim Dc1 As New DataColumn("c1", System.Type.GetType("System.String"))
+  Dim Dc2 As New DataColumn("c3", System.Type.GetType("System.String"))
+  DT.Columns.AddRange(New DataColumn() {Dc1, Dc2})
+  Dim Dr1 As DataRow = DT.NewRow
+  Dr1.Item("c1") = "D1"
+  Dr1.Item("c3") = "D2"
+  DT.Rows.Add(Dr1)
+  Dim Dr2 As DataRow = DT.NewRow
+  Dr2.Item("c1") = "S3"
+  Dr2.Item("c3") = "S4"
+  DT.Rows.Add(Dr2)
+  Dim DifTable As DataTable = Difference(DT, sT)
+  Me.DataGrid1.DataSource = DifTable
+  Me.DataGrid1.DataBind()
+ </code>
+		</example>
+	</remarks>
+</member><member name="M:Platform.Framework.ADONetHelper.JoinDataTable(System.Data.DataTable,System.Data.DataTable,System.String,System.String)">
+	<summary>
+ 內聯接兩個DataTable,返回聯接後的DataTable
+ </summary>
+	<param name="dtLeft">聯接的左表</param>
+	<param name="dtRight">聯接的右表</param>
+	<param name="columnLeft">左表聯接欄位</param>
+	<param name="columnRight">右表聯接欄位</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ADONetHelper.AddAutoIncrement(System.Data.DataTable)">
+	<summary>
+ 往指定的數據表中加入一個自增1的整型欄位
+ </summary>
+	<param name="ActiveTable">要加入自增1的整型欄位的數據表</param>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ADONetHelper.AddTextColumn(System.Data.DataTable,System.String,System.Boolean,System.String)">
+	<summary>
+ 往指定的數據表中加入一個文本欄位
+ </summary>
+	<param name="ActiveTable">要加入文本欄位的數據表</param>
+	<param name="ColumnName">要加入的欄位名稱</param>
+	<param name="IsFillValue">是否要填入默認的值</param>
+	<param name="RowCellValue">要加入的欄位文本值</param>
+	<remarks></remarks>
+</member><member name="M:Platform.Framework.ADONetHelper.BuildCrossTabDataSet(System.String,System.Data.IDataReader,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ 交叉表
+ </summary>
+	<param name="DataSetName">返回的Dataset數據集名稱</param>
+	<param name="result">數據源，為SqlDataReader類型</param>
+	<param name="FixedColumns">交叉表左邊固定的欄位</param>
+	<param name="VariableColumns"></param>
+	<param name="KeyColumn">源數據集中的主鍵欄位</param>
+	<param name="FieldColumn"></param>
+	<param name="FieldTypeColumn"></param>
+	<param name="StringValueColumn"></param>
+	<param name="NumericValueColumn"></param>
+	<returns></returns>
+	<remarks>
+		<example>
+			<code>
+    Dim dr As SqlDataReader = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings("DBschemeConnStr"), "PRACScheme_SchemeMachine_LoadMachineYields")
+      Dim VarColumnsStr As String
+      Dim AlistVarColumnName As ArrayList = New ArrayList
+      Dim sb As New StringBuilder
+      If Not dr Is Nothing Then
+            While dr.Read
+              Dim ColumnName As String = dr.Item("MachineName").ToString
+              If Not AlistVarColumnName.Contains(ColumnName) Then
+                    If Not Integer.Equals(AlistVarColumnName.Count ,0) Then
+                       sb.Append(",")
+                    End If
+                    sb.Append(ColumnName + "|String")
+                   AlistVarColumnName.Add(ColumnName)
+                End If
+           End While
+           If Not dr.IsClosed Then dr.Close()
+       End If
+
+       dr = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings("DBschemeConnStr"), "PRACScheme_SchemeMachine_LoadMachineYields")
+       Dim ds As DataSet = DataHelper.BuildCrossTabDataSet("dsName", dr, "MaterialTexture|String", sb.ToString,"PKID", "MachineName", String.Empty, "yield", String.Empty)
+       Dim dt As DataTable = ds.Tables(0).Clone
+       Dim PrimaryKey(1) As DataColumn
+       PrimaryKey(0) = dt.Columns(0)
+       dt.PrimaryKey = PrimaryKey
+       Dim i As Integer 'Row Var
+       Dim j As Integer 'Column Var
+       Dim ColumnCount As Integer = ds.Tables(0).Columns.Count
+       Dim RowCount As Integer = ds.Tables(0).Rows.Count
+        For i = 0 To RowCount - 1
+            Dim DataSourceRow As DataRow = ds.Tables(0).Rows(i)
+            Dim OldDataRow As DataRow = dt.Rows.Find(DataSourceRow.Item("MaterialTexture"))
+            If OldDataRow Is Nothing Then
+               Dim NewRow As DataRow = dt.NewRow
+               For j = 0 To ColumnCount - 1
+                    NewRow.Item(j) = DataSourceRow.Item(j)
+                Next
+                dt.Rows.Add(NewRow)
+            Else
+                For j = 0 To ColumnCount - 1
+                    If OldDataRow.Item(j).ToString.Trim = "" Then
+                        OldDataRow.Item(j) = DataSourceRow.Item(j)
+                    End If
+                Next
+            End If
+        Next
+        Me.DataGrid1.DataSource = dt
+        Me.DataGrid1.DataBind()
+        Me.DataGrid2.DataSource = ds.Tables(0)
+        Me.DataGrid2.DataBind()
+        If Not dr.IsClosed Then dr.Close()
+ </code>
+		</example>
+	</remarks>
+</member><member name="M:Platform.Framework.ADONetHelper.ConvertDataReaderToDataTable(System.Data.SqlClient.SqlDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 將指定的DataReader轉換成DataTable
+ </summary>
+	<param name="dataReader">要轉換的DataReader</param>
+	<returns></returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.Framework.ADONetHelper.GetEntitysFromTbl``1(System.Data.DataTable)">
+	<summary> 
+ 根据DataSet构建泛型对象集合 
+ </summary>
+	<typeparam name="T">泛型 </typeparam>
+	<param name="tbl">数据表. </param>
+	<returns>泛型对象集合 </returns>
+</member><member name="T:Platform.Framework.ADONetHelper">
+	<summary>
+ 數據輔助類
+ </summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BA35BB73-7569-4D75-AAB2-1DF57DE23981}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PengeSoft.CMS.BaseDatum</RootNamespace>
+    <AssemblyName>PengeSoft.CMS.BaseDatum</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Castle.Core">
+      <HintPath>..\Lib\ThirdPart\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.DynamicProxy">
+      <HintPath>..\Lib\ThirdPart\Castle.DynamicProxy.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.MicroKernel">
+      <HintPath>..\Lib\ThirdPart\Castle.MicroKernel.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\Lib\ThirdPart\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common">
+      <HintPath>..\Lib\ThirdPart\IBatisNet.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.Common.Logging.Log4Net">
+      <HintPath>..\Lib\ThirdPart\IBatisNet.Common.Logging.Log4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataAccess">
+      <HintPath>..\Lib\ThirdPart\IBatisNet.DataAccess.dll</HintPath>
+    </Reference>
+    <Reference Include="IBatisNet.DataMapper">
+      <HintPath>..\Lib\ThirdPart\IBatisNet.DataMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="PengeSoft.AutherCom, Version=1.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PengeSoft\PengeSoft.AutherCom.dll</HintPath>
+    </Reference>
+    <Reference Include="PengeSoft.Core, Version=1.0.1.3, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PengeSoft\PengeSoft.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="PengeSoft.Enterprise, Version=1.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PengeSoft\PengeSoft.Enterprise.dll</HintPath>
+    </Reference>
+    <Reference Include="PengeSoft.EntEx, Version=1.0.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PengeSoft\PengeSoft.EntEx.dll</HintPath>
+    </Reference>
+    <Reference Include="PengeSoft.IM">
+      <HintPath>..\Lib\PengeSoft\PengeSoft.IM.dll</HintPath>
+    </Reference>
+    <Reference Include="PengeSoft.Service, Version=1.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PengeSoft\PengeSoft.Service.dll</HintPath>
+    </Reference>
+    <Reference Include="PengeSoft.WorkFlow, Version=1.0.1.2, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\PengeSoft\PengeSoft.WorkFlow.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BaseForm\AutoCodes\Dao\IBaseFormDataDao.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseDeptInfo.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseDeptInfoList.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseFormData.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseFormDataList.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseRightsInfo.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseRightsInfoList.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseUserAndRoleInfo.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseUserAndRoleInfoList.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\BaseUserInfo.cs" />
+    <Compile Include="BaseForm\AutoCodes\Domain\UserRightRecs.cs" />
+    <Compile Include="BaseForm\AutoCodes\Service\IBaseFormDataServerSvr.cs" />
+    <Compile Include="BaseForm\AutoCodes\Service\UserBaseInfoManageSvrIntf.cs" />
+    <Compile Include="BaseForm\Service\BaseFormDataServerSvr.cs" />
+    <Compile Include="BaseForm\Service\UserBaseInfoManageSvrImp.cs" />
+    <Compile Include="CommEnum\EansStatus.cs" />
+    <Compile Include="CommEnum\EArchiveIsSecret.cs" />
+    <Compile Include="CommEnum\EArchiveUrgency.cs" />
+    <Compile Include="CommEnum\EFileDept.cs" />
+    <Compile Include="CommEnum\EFormType.cs" />
+    <Compile Include="CommEnum\ENewsIsScroll.cs" />
+    <Compile Include="CommEnum\EPersonType.cs" />
+    <Compile Include="CommEnum\ERiskDeal.cs" />
+    <Compile Include="Common\AutoCodes\Dao\AttachmentDao.cs" />
+    <Compile Include="Common\AutoCodes\Dao\AttachmentFileDao.cs" />
+    <Compile Include="Common\AutoCodes\Dao\PersonalTempletDao.cs" />
+    <Compile Include="Common\AutoCodes\Dao\TempletDao.cs" />
+    <Compile Include="Common\AutoCodes\Domain\Attachment.cs" />
+    <Compile Include="Common\AutoCodes\Domain\AttachmentFile.cs" />
+    <Compile Include="Common\AutoCodes\Domain\AttachmentFileList.cs" />
+    <Compile Include="Common\AutoCodes\Domain\AttachmentList.cs" />
+    <Compile Include="Common\AutoCodes\Domain\AttitudeTemplet.cs" />
+    <Compile Include="Common\AutoCodes\Domain\PersonalTemplet.cs" />
+    <Compile Include="Common\AutoCodes\Domain\PersonalTempletList.cs" />
+    <Compile Include="Common\AutoCodes\Domain\Templet.cs" />
+    <Compile Include="Common\AutoCodes\Domain\TempletList.cs" />
+    <Compile Include="Common\AutoCodes\Service\AttachmentFileServiceSvrIntf.cs" />
+    <Compile Include="Common\AutoCodes\Service\AttachmentServiceAllSvrIntf.cs" />
+    <Compile Include="Common\AutoCodes\Service\AttachmentServiceSvrIntf.cs" />
+    <Compile Include="Common\AutoCodes\Service\TempletServiceSvrIntf.cs" />
+    <Compile Include="Common\Domain\EAttachmentFileIsOCR.cs" />
+    <Compile Include="Common\Domain\ETempleProp.cs" />
+    <Compile Include="Common\Domain\ETempletType.cs" />
+    <Compile Include="Common\Service\AttachmentFileServiceSvrImp.cs" />
+    <Compile Include="Common\Service\AttachmentServiceAllSvrImp.cs" />
+    <Compile Include="Common\Service\AttachmentServiceSvrImp.cs" />
+    <Compile Include="Common\Service\TempletServiceSvrImp.cs" />
+    <Compile Include="Commpage\AutoCodes\Dao\LayoutInfoDao.cs" />
+    <Compile Include="Commpage\AutoCodes\Dao\ModelInfoDao.cs" />
+    <Compile Include="Commpage\AutoCodes\Dao\SkinInfoDao.cs" />
+    <Compile Include="Commpage\AutoCodes\Domain\LayoutInfo.cs" />
+    <Compile Include="Commpage\AutoCodes\Domain\LayoutInfoList.cs" />
+    <Compile Include="Commpage\AutoCodes\Domain\ModelInfo.cs" />
+    <Compile Include="Commpage\AutoCodes\Domain\ModelInfoList.cs" />
+    <Compile Include="Commpage\AutoCodes\Domain\SkinInfo.cs" />
+    <Compile Include="Commpage\AutoCodes\Service\LayoutInfoServerSvrIntf.cs" />
+    <Compile Include="Commpage\AutoCodes\Service\ModelInfoServerSvrIntf.cs" />
+    <Compile Include="Commpage\AutoCodes\Service\SkinServerSvrIntf.cs" />
+    <Compile Include="Commpage\Service\LayoutInfoServerSvrImp.cs" />
+    <Compile Include="Commpage\Service\ModelInfoServerSvrImp.cs" />
+    <Compile Include="Commpage\Service\SkinServerSvrImp.cs" />
+    <Compile Include="ContactUsed\AutoCodes\Dao\IUsedContactsDao.cs" />
+    <Compile Include="ContactUsed\AutoCodes\Domain\QueryContactResult.cs" />
+    <Compile Include="ContactUsed\AutoCodes\Domain\QueryContactResultList.cs" />
+    <Compile Include="ContactUsed\AutoCodes\Domain\UseContactList.cs" />
+    <Compile Include="ContactUsed\AutoCodes\Domain\UsedContacts.cs" />
+    <Compile Include="ContactUsed\AutoCodes\Service\IUsedContactServerSvr.cs" />
+    <Compile Include="ContactUsed\Service\UsedContactServerSvr.cs" />
+    <Compile Include="ConvertJson.cs" />
+    <Compile Include="DoAttitude\AutoCodes\Dao\IDoAttitudeDao.cs" />
+    <Compile Include="DoAttitude\AutoCodes\Domain\DoAttitude.cs" />
+    <Compile Include="DoAttitude\AutoCodes\Domain\DoAttitudeList.cs" />
+    <Compile Include="DoAttitude\AutoCodes\Service\IDoAttitudeServerSvr.cs" />
+    <Compile Include="DoAttitude\Service\DoAttitudeServerSvr.cs" />
+    <Compile Include="MD5.cs" />
+    <Compile Include="Message\AutoCodes\Dao\MessageDao.cs" />
+    <Compile Include="Message\AutoCodes\Domain\Message.cs" />
+    <Compile Include="Message\AutoCodes\Domain\MessageList.cs" />
+    <Compile Include="Message\AutoCodes\Service\MessageServiceSvrIntf.cs" />
+    <Compile Include="Message\Service\MessageServiceSvrImp.cs" />
+    <Compile Include="Notice\AutoCodes\Dao\NoticeDao.cs" />
+    <Compile Include="Notice\AutoCodes\Domain\Notice.cs" />
+    <Compile Include="Notice\AutoCodes\Domain\NoticeList.cs" />
+    <Compile Include="Notice\Service\NoticeServiceSvrImp.cs" />
+    <Compile Include="Notice\AutoCodes\Service\NoticeServiceSvrIntf.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Quickentry\AutoCodes\Dao\QuickentryDao.cs" />
+    <Compile Include="Quickentry\AutoCodes\Dao\QuickUseRecordDao.cs" />
+    <Compile Include="Quickentry\AutoCodes\Domain\Quickentry.cs" />
+    <Compile Include="Quickentry\AutoCodes\Domain\QuickentryList.cs" />
+    <Compile Include="Quickentry\AutoCodes\Domain\QuickUseRecord.cs" />
+    <Compile Include="Quickentry\AutoCodes\Service\QuickentrySSvrIntf.cs" />
+    <Compile Include="Quickentry\AutoCodes\Service\QuickUseRecordSSvrIntf.cs" />
+    <Compile Include="Quickentry\Service\QuickentrySSvrImp.cs" />
+    <Compile Include="Quickentry\Service\QuickUseRecordSSvrImp.cs" />
+    <Compile Include="WorkManage\Proposal.cs" />
+    <Compile Include="WorkManage\SendFile.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="BaseForm\File\AutoFiles\BaseFormData.xml" />
+    <EmbeddedResource Include="BaseForm\File\AutoFiles\BaseFormDataex.xml" />
+    <EmbeddedResource Include="Common\File\AttachmentEx.xml" />
+    <EmbeddedResource Include="Common\File\AttachmentFileEx.xml" />
+    <EmbeddedResource Include="Common\File\AutoFiles\Attachment.xml" />
+    <EmbeddedResource Include="Common\File\AutoFiles\AttachmentFile.xml" />
+    <EmbeddedResource Include="Common\File\AutoFiles\PersonalTemplet.xml" />
+    <EmbeddedResource Include="Common\File\AutoFiles\Templet.xml" />
+    <EmbeddedResource Include="Common\File\TempletEx.xml" />
+    <EmbeddedResource Include="ContactUsed\File\AutoFiles\Contactused.xml" />
+    <EmbeddedResource Include="DoAttitude\File\AutoFiles\DoAttitide.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Commpage\File\AutoFiles\LayoutInfo.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Commpage\File\AutoFiles\ModelInfo.xml" />
+    <EmbeddedResource Include="Commpage\File\AutoFiles\SkinInfo.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="obj\Debug\PengeSoft.CMOA.BaseDatum.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Debug\PengeSoft.CMS.BaseDatum.csprojResolveAssemblyReference.cache" />
+    <None Include="obj\Release\build.force" />
+    <None Include="obj\Release\DesignTimeResolveAssemblyReferencesInput.cache" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Notice\File\AutoFiles\Notice.xml" />
+    <Content Include="bin\Debug\PengeSoft.CMS.BaseDatum.dll" />
+    <Content Include="bin\Debug\PengeSoft.CMS.BaseDatum.pdb" />
+    <EmbeddedResource Include="Message\File\AutoFiles\Message.xml">
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Content Include="obj\Debug\PengeSoft.CMOA.BaseDatum.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\PengeSoft.CMOA.BaseDatum.dll" />
+    <Content Include="obj\Debug\PengeSoft.CMOA.BaseDatum.pdb" />
+    <Content Include="obj\Debug\PengeSoft.CMS.BaseDatum.csproj.FileListAbsolute.txt" />
+    <Content Include="obj\Debug\PengeSoft.CMS.BaseDatum.dll" />
+    <Content Include="obj\Debug\PengeSoft.CMS.BaseDatum.pdb" />
+    <Content Include="obj\Release\PengeSoft.CMS.BaseDatum.csproj.FileListAbsolute.txt" />
+    <EmbeddedResource Include="Quickentry\File\AutoFiles\Quickentry.xml" />
+    <EmbeddedResource Include="Quickentry\File\AutoFiles\QuickUseRecord.xml" />
+    <EmbeddedResource Include="Quickentry\File\AutoFiles\QuickUseRecordex.xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="obj\Debug\TempPE\" />
+    <Folder Include="obj\Release\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

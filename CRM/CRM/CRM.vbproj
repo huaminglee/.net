@@ -1,0 +1,2502 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{23C0FC73-5470-4478-A51B-C7C4FE6E91A4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CRM</RootNamespace>
+    <AssemblyName>CRM</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CRM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CRM.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiproSoftware.CodeHighlighter.Net20, Version=4.0.51.0, Culture=neutral, PublicKeyToken=247639e84cc1f4e4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\ActiproSoftware.CodeHighlighter.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="ActiproSoftware.Shared.Net20, Version=1.0.94.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\ActiproSoftware.Shared.Net20.dll</HintPath>
+    </Reference>
+    <Reference Include="AjaxControlToolkit, Version=3.0.30512.24880, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL" />
+    <Reference Include="Aspose.Words, Version=11.3.0.0, Culture=neutral, PublicKeyToken=47d5d0e1ef9d080b, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\Aspose.Words.dll</HintPath>
+    </Reference>
+    <Reference Include="BusinessFacade, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\BusinessFacade.dll</HintPath>
+    </Reference>
+    <Reference Include="c1.c1excel, Version=1.1.20061.44, Culture=neutral, PublicKeyToken=79882d576c6336da" />
+    <Reference Include="CodeHighlighterTest, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CommonData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\CommonData.dll</HintPath>
+    </Reference>
+    <Reference Include="ComponentArt.Web.UI, Version=2010.1.2381.3, Culture=neutral, PublicKeyToken=d0f87f5936b4c8c8, processorArchitecture=MSIL" />
+    <Reference Include="ConvertToPDXPS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\ConvertToPDXPS.dll</HintPath>
+    </Reference>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Enterprise.Framework, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.Enterprise.InfoStore, Version=12.0.1100.0, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Web, Version=12.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CuteEditor, Version=6.6.0.0, Culture=neutral, PublicKeyToken=3858aa6802b1223a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\f3230063\Local Settings\Application Data\Temporary Projects\CRM\Reference\CuteEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetTextBox, Version=3.5.0.0, Culture=neutral, PublicKeyToken=4577255b0d2d7147, processorArchitecture=MSIL" />
+    <Reference Include="eAuthorize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="eFlowDoc, Version=1.0.0.0, Culture=neutral" />
+    <Reference Include="eFlowWebControl, Version=1.0.3531.25214, Culture=neutral" />
+    <Reference Include="eHR.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="eWorkFlow.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencenew\eWorkFlow.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorkFlow.eFlowConfig, Version=1.0.0.10106, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencenew\eWorkFlow.eFlowConfig.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorkFlow.eFlowDoc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencenew\eWorkFlow.eFlowDoc.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorkFlow.eFlowDoc.resources, Version=1.0.0.0, Culture=zh-TW, processorArchitecture=MSIL" />
+    <Reference Include="eWorkFlow.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencenew\eWorkFlow.Model.dll</HintPath>
+    </Reference>
+    <Reference Include="eWorkFlow.WFActivityInterFace, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ExcelCommon, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="FileManager, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\FileManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Referencenew\Framework.dll</HintPath>
+    </Reference>
+    <Reference Include="GridViewHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\GridViewHelper.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\ICSharpCode.SharpZipLib.DLL</HintPath>
+    </Reference>
+    <Reference Include="Infragistics35.Web.v10.3, Version=10.3.20103.1013, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics35.WebUI.Documents.v10.3, Version=10.3.20103.1013, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics35.WebUI.Excel.v10.3, Version=10.3.20103.1013, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.1.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\Microsoft.ReportViewer.WebForms\9.0.0.0__b03f5f7f11d50a3a\Microsoft.ReportViewer.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="myControl, Version=1.0.2508.19193, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\myControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\WINDOWS\assembly\GAC_MSIL\System.Web.DataVisualization\3.5.0.0__31bf3856ad364e35\System.Web.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="SystemFramework, Version=1.0.0.0, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\SystemFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="SystemMailOperation, Version=1.0.0.2, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\SystemMailOperation.dll</HintPath>
+    </Reference>
+    <Reference Include="Vortex.Web.UI.WebControls, Version=1.0.3454.15158, Culture=neutral">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\Vortex.Web.UI.WebControls.dll</HintPath>
+    </Reference>
+    <Reference Include="Webb.WAVE.Controls.Upload, Version=1.1.0.0, Culture=En, processorArchitecture=MSIL" />
+    <Reference Include="ZebraPrinter, Version=1.0.4479.33018, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>Reference\ZebraPrinter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Images\dot_08.gif" />
+    <Content Include="App_Themes\Default\Images\Footer_bg.png" />
+    <Content Include="App_Themes\Default\Images\gradient_DKGray.jpg" />
+    <Content Include="App_Themes\Default\Images\header_bg.png" />
+    <Content Include="App_Themes\Default\Images\menubj_03.jpg" />
+    <Content Include="App_Themes\Default\Images\R.gif" />
+    <Content Include="App_Themes\Default\Images\tableftB.gif" />
+    <Content Include="App_Themes\Default\Images\tabright2.gif" />
+    <Content Include="App_Themes\Default\Images\tabright4.gif" />
+    <Content Include="App_Themes\LightBlue\Images\adminbj_26.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\anbj_03.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\dhbj_12.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\dot_08.gif" />
+    <Content Include="App_Themes\LightBlue\Images\footbj_05.JPG" />
+    <Content Include="App_Themes\LightBlue\Images\leftfood_50.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lefttoplm_23.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lma_25.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lmbjc_45.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lmb_27.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\titlebj_03.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\topbj_01.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\topbj_05.jpg" />
+    <Content Include="App_Themes\LightBlue\StyleSheet.css" />
+    <Content Include="Component\Common\Data\dataEntLib.txt" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\040911610.gif" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\62.gif" />
+    <Content Include="Images\9520.gif" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\allmanagemenu.png" />
+    <Content Include="Images\back.gif" />
+    <Content Include="Images\back1.gif" />
+    <Content Include="Images\bar_headermenu.gif" />
+    <Content Include="Images\bevel.gif" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\cancel.gif" />
+    <Content Include="Images\circle2.gif" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\closeTabAll.gif" />
+    <Content Include="Images\Delete.gif" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\DeleteFile.gif" />
+    <Content Include="Images\Discard.gif" />
+    <Content Include="Images\dn.gif" />
+    <Content Include="Images\dot_topic_red.gif" />
+    <Content Include="Images\DownLoad.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\EditIcon1.gif" />
+    <Content Include="Images\Excel.gif" />
+    <Content Include="Images\Finish.gif" />
+    <Content Include="Images\forum_newmsg.gif" />
+    <Content Include="Images\Friend.gif" />
+    <Content Include="Images\Get Document.png" />
+    <Content Include="Images\go.gif" />
+    <Content Include="Images\GoTop.gif" />
+    <Content Include="Images\gradient_DKGray.jpg" />
+    <Content Include="Images\header_main.gif" />
+    <Content Include="Images\hotelmanage.png" />
+    <Content Include="Images\icon-floppy.gif" />
+    <Content Include="Images\icon2_090.png" />
+    <Content Include="Images\Login\62.gif" />
+    <Content Include="Images\Login\Audit.gif" />
+    <Content Include="Images\Login\dot_topic_red.gif" />
+    <Content Include="Images\Login\Friend.gif" />
+    <Content Include="Images\Login\title_line.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\menubj_03.jpg" />
+    <Content Include="Images\m_list_34.gif" />
+    <Content Include="Images\navBg.gif" />
+    <Content Include="Images\newmsg.gif" />
+    <Content Include="Images\next.gif" />
+    <Content Include="Images\next1.gif" />
+    <Content Include="Images\openroomiconinfo.gif" />
+    <Content Include="Images\print.gif" />
+    <Content Include="Images\publishicon.png" />
+    <Content Include="Images\refresh.gif" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\restore.gif" />
+    <Content Include="Images\roolrecordicon.png" />
+    <Content Include="Images\roomtypeicon.gif" />
+    <Content Include="Images\Save.gif" />
+    <Content Include="Images\Search.gif" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\SetFirstPage.gif" />
+    <Content Include="Images\settings.gif" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\SplitIcon.gif" />
+    <Content Include="Images\sysmanagemenu.png" />
+    <Content Include="Images\systemSeting.png" />
+    <Content Include="Images\totalicon.png" />
+    <Content Include="Images\TreeView\152.gif" />
+    <Content Include="Images\TreeView\Footer_bg.png" />
+    <Content Include="Images\TreeView\R.gif" />
+    <Content Include="Images\TreeView\topopen.gif" />
+    <Content Include="Images\up.gif" />
+    <Content Include="Images\UploadFile.gif" />
+    <Content Include="Images\UserInfo\AuditMan.gif" />
+    <Content Include="Images\VerifyNoPass.gif" />
+    <Content Include="Images\VerifyPass.gif" />
+    <Content Include="Images\Warning.gif" />
+    <Content Include="Images\xls.gif" />
+    <Content Include="Reference\AspNetPager.dll" />
+    <Content Include="Reference\Aspose.Cells.dll" />
+    <Content Include="Reference\c1.c1excel.dll" />
+    <Content Include="Reference\CuteEditor.dll" />
+    <Content Include="Reference\Infragistics35.Web.v10.3.dll" />
+    <Content Include="Reference\Infragistics35.WebUI.Documents.v10.3.dll" />
+    <Content Include="Reference\Infragistics35.WebUI.Excel.v10.3.dll" />
+    <Content Include="Reference\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="Scripts\dom-drag.js" />
+    <Content Include="Scripts\JSLeft.js" />
+    <Content Include="Scripts\JSMaster.js" />
+    <Content Include="Scripts\JSPageSetting.js" />
+    <Content Include="Scripts\My97DatePicker\calendar.js" />
+    <Content Include="Scripts\My97DatePicker\config.js" />
+    <Content Include="Scripts\My97DatePicker\lang\en.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Scripts\My97DatePicker\ReadMe.txt" />
+    <Content Include="Scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\newInputCalendar.js" />
+    <Content Include="Scripts\UIHelper.js" />
+    <Content Include="Scripts\WinHelper.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="action\AjaxUploadHandler.ashx.vb">
+      <DependentUpon>AjaxUploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="action\JqueryS.ashx.vb">
+      <DependentUpon>JqueryS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="action\WebService.asmx.vb">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Component\BasePape.vb" />
+    <Compile Include="Component\Common\Base\CacheHelper.vb" />
+    <Compile Include="Component\Common\Base\Logger.vb" />
+    <Compile Include="Component\Common\Base\Pagebase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Base\VerifyHelper.vb" />
+    <Compile Include="Component\Common\Data\ADONetHelper.vb" />
+    <Compile Include="Component\Common\Data\DataExcel.vb" />
+    <Compile Include="Component\Common\Data\DataSetToExcel.vb" />
+    <Compile Include="Component\Common\Data\FileCategory.vb" />
+    <Compile Include="Component\Common\Data\IFactory.vb" />
+    <Compile Include="Component\Common\Data\SearchExtHelper.vb" />
+    <Compile Include="Component\Common\Data\SearchHelper.vb" />
+    <Compile Include="Component\Common\Data\SQLHelper.vb" />
+    <Compile Include="Component\ConfigurationInfo.vb" />
+    <Compile Include="Component\DAL\AddFileSharedDAL.vb" />
+    <Compile Include="Component\DAL\AttachFileInfoDAL.vb" />
+    <Compile Include="Component\DAL\BuinessOpportunntitesDAL.vb" />
+    <Compile Include="Component\DAL\CaiGouUserDAL.vb" />
+    <Compile Include="Component\DAL\calendarDAL.vb" />
+    <Compile Include="Component\DAL\ContactDAL.vb" />
+    <Compile Include="Component\DAL\ContactManageDAL.vb" />
+    <Compile Include="Component\DAL\CustomerGradeChangeRecordDAL.vb" />
+    <Compile Include="Component\DAL\CustomersDAL.vb" />
+    <Compile Include="Component\DAL\CustomerVisitsDAL.vb" />
+    <Compile Include="Component\DAL\DiscountDAL.vb" />
+    <Compile Include="Component\DAL\GridViewPage.vb" />
+    <Compile Include="Component\DAL\IndustryDAL.vb" />
+    <Compile Include="Component\DAL\InvalidQuotationDAL.vb" />
+    <Compile Include="Component\DAL\MarketingPlanDAL.vb" />
+    <Compile Include="Component\DAL\MarketMemberDAL.vb" />
+    <Compile Include="Component\DAL\MarkOppContactDAL.vb" />
+    <Compile Include="Component\DAL\QuotationDAL.vb" />
+    <Compile Include="Component\DAL\QuoTestRemarkDAL.vb" />
+    <Compile Include="Component\DAL\ReconcieldDAL.vb" />
+    <Compile Include="Component\DAL\ReportDetailDAL.vb" />
+    <Compile Include="Component\DAL\SampleInfoDAL.vb" />
+    <Compile Include="Component\DAL\SamplesReceivedDAL.vb" />
+    <Compile Include="Component\DAL\SendOutMailLogDAL.vb" />
+    <Compile Include="Component\DAL\TableBMHDAL.vb" />
+    <Compile Include="Component\DAL\TestItemDetailDAL.vb" />
+    <Compile Include="Component\DAL\TestItemManageDAL.vb" />
+    <Compile Include="Component\DAL\UserSetCategoryDAL.vb" />
+    <Compile Include="Component\DAL\VisitsPersonDAL.vb" />
+    <Compile Include="Component\DAL\WF_AttachFileInfoDAL.vb" />
+    <Compile Include="Component\DownLoadZip.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\ExportCSVData.vb" />
+    <Compile Include="Component\ExtendDAl\CGUserInfoExt.vb" />
+    <Compile Include="Component\ExtendDAl\UplodeFileInfoDALExt.vb" />
+    <Compile Include="Component\ExtendDAl\AttachFileInfoDALExt.vb" />
+    <Compile Include="Component\Json.vb" />
+    <Compile Include="Component\Model\AddFileSharedInfo.vb" />
+    <Compile Include="Component\Model\AttachFileInfoInfo.vb" />
+    <Compile Include="Component\Model\AttachFileInfoInfoCollection.vb" />
+    <Compile Include="Component\Model\BuinessOpportunntitesInfo.vb" />
+    <Compile Include="Component\Model\CaiGouUserInfo.vb" />
+    <Compile Include="Component\Model\CaiGouUserInfoCollection.vb" />
+    <Compile Include="Component\Model\calendarInfo.vb" />
+    <Compile Include="Component\Model\ContactInfo.vb" />
+    <Compile Include="Component\Model\ContactManageInfo.vb" />
+    <Compile Include="Component\Model\CustomerGradeChangeRecordInfo.vb" />
+    <Compile Include="Component\Model\CustomersInfo.vb" />
+    <Compile Include="Component\Model\CustomerVisitsInfo.vb" />
+    <Compile Include="Component\Model\DiscountInfo.vb" />
+    <Compile Include="Component\Model\IndustryInfo.vb" />
+    <Compile Include="Component\Model\InvalidQuotationInfo.vb" />
+    <Compile Include="Component\Model\Log.vb" />
+    <Compile Include="Component\Model\MarketingPlanInfo.vb" />
+    <Compile Include="Component\Model\MarketMemberInfo.vb" />
+    <Compile Include="Component\Model\MarkOppContactInfo.vb" />
+    <Compile Include="Component\Model\QuotationInfo.vb" />
+    <Compile Include="Component\Model\QuoTestRemarkInfo.vb" />
+    <Compile Include="Component\Model\ReconcieldInfo.vb" />
+    <Compile Include="Component\Model\ReportDetailInfo.vb" />
+    <Compile Include="Component\Model\SampleInfoInfo.vb" />
+    <Compile Include="Component\Model\SamplesReceivedInfo.vb" />
+    <Compile Include="Component\Model\SendOutMailLogInfo.vb" />
+    <Compile Include="Component\Model\TableBMHInfo.vb" />
+    <Compile Include="Component\Model\TestItemDetailInfo.vb" />
+    <Compile Include="Component\Model\TestItemManageInfo.vb" />
+    <Compile Include="Component\Model\UserSetCategoryInfo.vb" />
+    <Compile Include="Component\Model\VisitsPersonInfo.vb" />
+    <Compile Include="Component\Model\WF_AttachFileInfoInfo.vb" />
+    <Compile Include="Component\Model\WF_ProjectInfo.vb" />
+    <Compile Include="Component\Model\WF_ProjectInfoCollection.vb" />
+    <Compile Include="Component\OtherSendOutMail.vb" />
+    <Compile Include="Component\SendOutMail.vb" />
+    <Compile Include="Component\XmlData.vb" />
+    <Compile Include="ErrorPage.aspx.designer.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddBussOPP.aspx.designer.vb">
+      <DependentUpon>AddBussOPP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddBussOPP.aspx.vb">
+      <DependentUpon>AddBussOPP.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddContact.aspx.designer.vb">
+      <DependentUpon>AddContact.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddContact.aspx.vb">
+      <DependentUpon>AddContact.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddCustomer.aspx.designer.vb">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddCustomer.aspx.vb">
+      <DependentUpon>AddCustomer.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddMarkPlan.aspx.designer.vb">
+      <DependentUpon>AddMarkPlan.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddMarkPlan.aspx.vb">
+      <DependentUpon>AddMarkPlan.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BusOppDetail.aspx.designer.vb">
+      <DependentUpon>BusOppDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BusOppDetail.aspx.vb">
+      <DependentUpon>BusOppDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\BusOppList.aspx.designer.vb">
+      <DependentUpon>BusOppList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\BusOppList.aspx.vb">
+      <DependentUpon>BusOppList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.aspx.designer.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.aspx.vb">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CusCategorySet.aspx.designer.vb">
+      <DependentUpon>CusCategorySet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusCategorySet.aspx.vb">
+      <DependentUpon>CusCategorySet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerVisitDetail.aspx.designer.vb">
+      <DependentUpon>CustomerVisitDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerVisitDetail.aspx.vb">
+      <DependentUpon>CustomerVisitDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CusVisitList.aspx.designer.vb">
+      <DependentUpon>CusVisitList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CusVisitList.aspx.vb">
+      <DependentUpon>CusVisitList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MarketPlanDetail.aspx.designer.vb">
+      <DependentUpon>MarketPlanDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MarketPlanDetail.aspx.vb">
+      <DependentUpon>MarketPlanDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MarketPlanList.aspx.designer.vb">
+      <DependentUpon>MarketPlanList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MarketPlanList.aspx.vb">
+      <DependentUpon>MarketPlanList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\PlanMemberManage.aspx.designer.vb">
+      <DependentUpon>PlanMemberManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\PlanMemberManage.aspx.vb">
+      <DependentUpon>PlanMemberManage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TestHistory.aspx.designer.vb">
+      <DependentUpon>TestHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestHistory.aspx.vb">
+      <DependentUpon>TestHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TestItemManageAdd.aspx.designer.vb">
+      <DependentUpon>TestItemManageAdd.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestItemManageAdd.aspx.vb">
+      <DependentUpon>TestItemManageAdd.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TransactionRecord.aspx.designer.vb">
+      <DependentUpon>TransactionRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TransactionRecord.aspx.vb">
+      <DependentUpon>TransactionRecord.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserLog.aspx.designer.vb">
+      <DependentUpon>UserLog.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserLog.aspx.vb">
+      <DependentUpon>UserLog.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Component\DAL\Sys_NewsDAL.vb" />
+    <Compile Include="Component\Model\Sys_NewsInfo.vb" />
+    <Compile Include="Forms\UseStatistics.aspx.designer.vb">
+      <DependentUpon>UseStatistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UseStatistics.aspx.vb">
+      <DependentUpon>UseStatistics.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gonggao\SysNewsDetail.aspx.designer.vb">
+      <DependentUpon>SysNewsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gonggao\SysNewsDetail.aspx.vb">
+      <DependentUpon>SysNewsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Gonggao\SysNewsList.aspx.designer.vb">
+      <DependentUpon>SysNewsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Gonggao\SysNewsList.aspx.vb">
+      <DependentUpon>SysNewsList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Main.aspx.designer.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Main.aspx.vb">
+      <DependentUpon>Main.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddFileShareDetail.aspx.designer.vb">
+      <DependentUpon>AddFileShareDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddFileShareDetail.aspx.vb">
+      <DependentUpon>AddFileShareDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddFileShareList.aspx.designer.vb">
+      <DependentUpon>AddFileShareList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddFileShareList.aspx.vb">
+      <DependentUpon>AddFileShareList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FileShare.aspx.designer.vb">
+      <DependentUpon>FileShare.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileShare.aspx.vb">
+      <DependentUpon>FileShare.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\AddSampleReceived.aspx.designer.vb">
+      <DependentUpon>AddSampleReceived.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\AddSampleReceived.aspx.vb">
+      <DependentUpon>AddSampleReceived.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\ForReportView.aspx.designer.vb">
+      <DependentUpon>ForReportView.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\ForReportView.aspx.vb">
+      <DependentUpon>ForReportView.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\jinguantongji.aspx.designer.vb">
+      <DependentUpon>jinguantongji.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\jinguantongji.aspx.vb">
+      <DependentUpon>jinguantongji.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\LeaderReport.aspx.designer.vb">
+      <DependentUpon>LeaderReport.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\LeaderReport.aspx.vb">
+      <DependentUpon>LeaderReport.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\QuotationInvoid.aspx.designer.vb">
+      <DependentUpon>QuotationInvoid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\QuotationInvoid.aspx.vb">
+      <DependentUpon>QuotationInvoid.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\ReconcieldDetail.aspx.designer.vb">
+      <DependentUpon>ReconcieldDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\ReconcieldDetail.aspx.vb">
+      <DependentUpon>ReconcieldDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\ReconcieldList.aspx.designer.vb">
+      <DependentUpon>ReconcieldList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\ReconcieldList.aspx.vb">
+      <DependentUpon>ReconcieldList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\SampelReceivedList.aspx.designer.vb">
+      <DependentUpon>SampelReceivedList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\SampelReceivedList.aspx.vb">
+      <DependentUpon>SampelReceivedList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\SendSampleList.aspx.designer.vb">
+      <DependentUpon>SendSampleList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\SendSampleList.aspx.vb">
+      <DependentUpon>SendSampleList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\SendSamples.aspx.designer.vb">
+      <DependentUpon>SendSamples.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\SendSamples.aspx.vb">
+      <DependentUpon>SendSamples.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\Statistics.aspx.designer.vb">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\Statistics.aspx.vb">
+      <DependentUpon>Statistics.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactList.aspx.designer.vb">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ContactList.aspx.vb">
+      <DependentUpon>ContactList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ContactManage.aspx.designer.vb">
+      <DependentUpon>ContactManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ContactManage.aspx.vb">
+      <DependentUpon>ContactManage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerDetail.aspx.designer.vb">
+      <DependentUpon>CustomerDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerDetail.aspx.vb">
+      <DependentUpon>CustomerDetail.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomerLevelChange.aspx.designer.vb">
+      <DependentUpon>CustomerLevelChange.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomerLevelChange.aspx.vb">
+      <DependentUpon>CustomerLevelChange.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\CustomersList.aspx.designer.vb">
+      <DependentUpon>CustomersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\CustomersList.aspx.vb">
+      <DependentUpon>CustomersList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FileUPHandler.ashx.vb">
+      <DependentUpon>FileUPHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GMPCSIList.aspx.designer.vb">
+      <DependentUpon>GMPCSIList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\GMPCSIList.aspx.vb">
+      <DependentUpon>GMPCSIList.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Forms\MyWebFile.aspx.designer.vb">
+      <DependentUpon>MyWebFile.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\MyWebFile.aspx.vb">
+      <DependentUpon>MyWebFile.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\Syssetting.aspx.designer.vb">
+      <DependentUpon>Syssetting.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\Syssetting.aspx.vb">
+      <DependentUpon>Syssetting.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\TestItemManage.aspx.designer.vb">
+      <DependentUpon>TestItemManage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\TestItemManage.aspx.vb">
+      <DependentUpon>TestItemManage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\UserADVInfo.aspx.designer.vb">
+      <DependentUpon>UserADVInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserADVInfo.aspx.vb">
+      <SubType>ASPXCodeBehind</SubType>
+      <DependentUpon>UserADVInfo.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserCenter.aspx.designer.vb">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\UserCenter.aspx.vb">
+      <DependentUpon>UserCenter.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Quotation\QuotationDetail.aspx.designer.vb">
+      <DependentUpon>QuotationDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\QuotationDetail.aspx.vb">
+      <DependentUpon>QuotationDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\QuotationList.aspx.designer.vb">
+      <DependentUpon>QuotationList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\QuotationList.aspx.vb">
+      <DependentUpon>QuotationList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\ReportDetailDetail.aspx.designer.vb">
+      <DependentUpon>ReportDetailDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\ReportDetailDetail.aspx.vb">
+      <DependentUpon>ReportDetailDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\ReportDetailList.aspx.designer.vb">
+      <DependentUpon>ReportDetailList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\ReportDetailList.aspx.vb">
+      <DependentUpon>ReportDetailList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Quotation\TestApplyList.aspx.designer.vb">
+      <DependentUpon>TestApplyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Quotation\TestApplyList.aspx.vb">
+      <DependentUpon>TestApplyList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Report\CrystalReport1.vb">
+      <DependentUpon>CrystalReport1.rpt</DependentUpon>
+      <SubType>Component</SubType>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Report\DataSet1.Designer.vb">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Report\DataSet2.Designer.vb">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+    </Compile>
+    <Compile Include="Service References\WCFService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcFileDetail.ascx.designer.vb">
+      <DependentUpon>UcFileDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcFileDetail.ascx.vb">
+      <DependentUpon>UcFileDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UcLog.ascx.designer.vb">
+      <DependentUpon>UcLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcLog.ascx.vb">
+      <DependentUpon>UcLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlFooter.ascx.designer.vb">
+      <DependentUpon>UCtlFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlFooter.ascx.vb">
+      <DependentUpon>UCtlFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlGrdPage.ascx.designer.vb">
+      <DependentUpon>UCtlGrdPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlGrdPage.ascx.vb">
+      <DependentUpon>UCtlGrdPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlListAction.ascx.designer.vb">
+      <DependentUpon>UCtlListAction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlListAction.ascx.vb">
+      <DependentUpon>UCtlListAction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlLogin.ascx.designer.vb">
+      <DependentUpon>UCtlLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlLogin.ascx.vb">
+      <DependentUpon>UCtlLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlMenu.ascx.designer.vb">
+      <DependentUpon>UCtlMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlMenu.ascx.vb">
+      <DependentUpon>UCtlMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlTreeView.ascx.designer.vb">
+      <DependentUpon>UCtlTreeView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlTreeView.ascx.vb">
+      <DependentUpon>UCtlTreeView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlUserInfo.ascx.designer.vb">
+      <DependentUpon>UCtlUserInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlUserInfo.ascx.vb">
+      <DependentUpon>UCtlUserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UcUserFileManage.ascx.designer.vb">
+      <DependentUpon>UcUserFileManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcUserFileManage.ascx.vb">
+      <DependentUpon>UcUserFileManage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UcWorkWaitFor.ascx.designer.vb">
+      <DependentUpon>UcWorkWaitFor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcWorkWaitFor.ascx.vb">
+      <DependentUpon>UcWorkWaitFor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Web References\com.foxconn.cmc\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\ECMC.Sendoutmail\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+    <Compile Include="Web References\PDFSignservice\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.map</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Report\CrystalReport1.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CrystalReport1.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="action\WebService.asmx" />
+    <Content Include="App_Data\orders.xml" />
+    <Content Include="App_Themes\Default\StyleSheet.css" />
+    <Content Include="App_Themes\LightBlue\LightBlue.skin" />
+    <Content Include="CSS\AddQCFileDetail.css" />
+    <Content Include="CSS\default.css" />
+    <Content Include="CSS\indexstyle.css" />
+    <Content Include="CSS\invalid.css" />
+    <Content Include="CSS\main.css" />
+    <Content Include="CSS\newaction.css" />
+    <Content Include="CSS\reset.css" />
+    <Content Include="CSS\style.css" />
+    <Content Include="CSS\stylenew.css" />
+    <Content Include="CSS\StyleSheet.css" />
+    <Content Include="CSS\WebFileManager.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="EFlowNet\Config\Config.xml" />
+    <Content Include="EFlowNet\Config\ConfigLH.xml" />
+    <Content Include="EFlowNet\Doc\JS\eFlowDoc.zh-cn.js" />
+    <Content Include="EFlowNet\Doc\JS\eFlowDoc.zh-TW.js" />
+    <Content Include="EFlowNet\Doc\JS\flowScript.js" />
+    <Content Include="EFlowNet\Doc\Modules\CtlWFActionList.ascx" />
+    <Content Include="EFlowNet\Doc\Modules\CtlWFButton.ascx" />
+    <Content Include="EFlowNet\Doc\Modules\ctlWFHistory.ascx" />
+    <Content Include="EFlowNet\eFlowReference\AjaxControlToolkit\AjaxControlToolkit.dll" />
+    <Content Include="EFlowNet\eFlowReference\AjaxControlToolkit\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="EFlowNet\eFlowReference\AjaxControlToolkit\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="EFlowNet\eFlowReference\ComponentArt.Web.UI.dll" />
+    <Content Include="EFlowNet\eFlowReference\CuteEditor.dll" />
+    <Content Include="EFlowNet\eFlowReference\eAuthorize.dll" />
+    <Content Include="EFlowNet\eFlowReference\eAuthorize.xml" />
+    <Content Include="EFlowNet\eFlowReference\eFlowDoc.dll" />
+    <Content Include="EFlowNet\eFlowReference\eFlowWebControl.dll" />
+    <Content Include="EFlowNet\eFlowReference\eHR.Core.dll" />
+    <Content Include="EFlowNet\eFlowReference\eHR.Core.xml" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.WFActivityInterFace.dll" />
+    <Content Include="EFlowNet\eFlowReference\Framework.xml" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Forms\AddBussOPP.aspx" />
+    <Content Include="Forms\AddContact.aspx" />
+    <Content Include="Forms\AddCustomer.aspx" />
+    <Content Include="Forms\AddMarkPlan.aspx" />
+    <Content Include="Forms\BusOppDetail.aspx" />
+    <Content Include="Forms\BusOppList.aspx" />
+    <Content Include="Forms\BussOpp.js" />
+    <Content Include="Forms\ChangePassword.aspx" />
+    <Content Include="Forms\ContactList.aspx" />
+    <Content Include="Forms\ContactManage.aspx" />
+    <Content Include="Forms\ContactManage.js" />
+    <Content Include="Forms\CusCategorySet.aspx" />
+    <Content Include="Forms\CustomerDetail.aspx" />
+    <Content Include="Forms\CustomerLevelChange.aspx" />
+    <Content Include="Forms\CustomerLevelChange.js" />
+    <Content Include="Forms\CustomerList.js" />
+    <Content Include="Forms\CustomersList.aspx" />
+    <Content Include="Forms\CustomerVisitDetail.aspx" />
+    <Content Include="Forms\CustomerVisits.js" />
+    <Content Include="Forms\CusVisitList.aspx" />
+    <Content Include="Forms\images\file\paraFold.gif" />
+    <Content Include="Forms\GMPCSIList.aspx" />
+    <Content Include="Forms\Marketplan.js" />
+    <Content Include="Forms\MarketPlanDetail.aspx" />
+    <Content Include="Forms\MarketPlanList.aspx" />
+    <Content Include="Forms\MyWebFile.aspx" />
+    <Content Include="Forms\PlanMemberManage.aspx" />
+    <Content Include="Forms\Syssetting.aspx" />
+    <Content Include="Forms\TestHistory.aspx" />
+    <Content Include="Forms\TestItemManageAdd.aspx" />
+    <Content Include="Forms\TransactionRecord.aspx" />
+    <Content Include="Forms\UserLog.aspx" />
+    <Content Include="Forms\UseStatistics.aspx" />
+    <Content Include="Gonggao\SysNewsDetail.aspx" />
+    <Content Include="Gonggao\SysNewsList.aspx" />
+    <Content Include="Gonggao\system_dntb\Advanced.aspx" />
+    <Content Include="Gonggao\system_dntb\Advanced.config" />
+    <Content Include="Gonggao\system_dntb\calculator.aspx" />
+    <Content Include="Gonggao\system_dntb\calendar.aspx" />
+    <Content Include="Gonggao\system_dntb\collection.aspx" />
+    <Content Include="Gonggao\system_dntb\color.aspx" />
+    <Content Include="Gonggao\system_dntb\en-uk\Resources.xml" />
+    <Content Include="Gonggao\system_dntb\en-us\Resources.xml" />
+    <Content Include="Gonggao\system_dntb\en\Resources.xml" />
+    <Content Include="Gonggao\system_dntb\find.aspx" />
+    <Content Include="Gonggao\system_dntb\flv.swf" />
+    <Content Include="Gonggao\system_dntb\img\aspnet2.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\aac.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ace.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ai.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ain.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\amr.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\app.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\arj.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\asf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\asp.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\aspx.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\av.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\avi.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\bin.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\bmp.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\cab.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\cad.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\cat.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\cdr.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\chm.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\com.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\css.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\cur.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dat.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dll.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dmv.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\doc.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dot.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dps.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dpt.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dwg.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\dxf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\emf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\eps.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\et.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ett.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\exe.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\fla.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\flv.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\folder.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ftp.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\gif.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\hlp.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\htm.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\html.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\icl.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ico.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\img.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\inf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ini.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\iso.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\jpeg.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\jpg.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\js.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\m3u.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\max.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mdb.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mde.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mht.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mid.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\midi.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mov.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mp3.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mp4.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mpeg.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\mpg.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\msi.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\nrg.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ocx.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ogg.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ogm.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\pdf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\png.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\pot.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ppt.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\psd.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\pub.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\qt.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ra.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\ram.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\rar.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\rm.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\rmvb.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\rtf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\swf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\tar.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\tif.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\tiff.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\txt.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\unknown.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\url.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\vbs.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\vsd.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\vss.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\vst.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wav.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wave.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wm.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wma.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wmd.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wmf.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wmv.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wps.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\wpt.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\xls.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\xlt.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\xml.gif" />
+    <Content Include="Gonggao\system_dntb\img\filetype\zip.gif" />
+    <Content Include="Gonggao\system_dntb\img\logo_s.png" />
+    <Content Include="Gonggao\system_dntb\img\selcolor.gif" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.Assembly.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.BatchFile.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.CSharp.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.CSS.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.GrammarProduction.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.HTML.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.INIFile.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.Java.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.JScript.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.Lua.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.MSIL.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.Pascal.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.Perl.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.PHP.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.PowerShell.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.Python.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.SQL.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.VBDotNet.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.VBScript.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.XAML.xml" />
+    <Content Include="Gonggao\system_dntb\Lexers\ActiproSoftware.XML.xml" />
+    <Content Include="Gonggao\system_dntb\link.aspx" />
+    <Content Include="Gonggao\system_dntb\menuconfig\administrator.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\all.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\all_3row.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\custom1.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\custom2.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\Custom3.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\default.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\guest.config" />
+    <Content Include="Gonggao\system_dntb\menuconfig\user.config" />
+    <Content Include="Gonggao\system_dntb\mp3player.swf" />
+    <Content Include="Gonggao\system_dntb\onlinecode.aspx" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\ContractedBlock.gif" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\ContractedSubBlock.gif" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\ExpandedBlockEnd.gif" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\ExpandedBlockStart.gif" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\ExpandedSubBlockEnd.gif" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\ExpandedSubBlockStart.gif" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\InBlock.gif" />
+    <Content Include="Gonggao\system_dntb\OutliningIndicators\None.gif" />
+    <Content Include="Gonggao\system_dntb\PasteCode.aspx" />
+    <Content Include="Gonggao\system_dntb\search.aspx" />
+    <Content Include="Gonggao\system_dntb\skin\default\editor.css" />
+    <Content Include="Gonggao\system_dntb\skin\default\emot.aspx" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\001.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\002.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\003.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\004.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\005.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\006.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\007.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\008.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\009.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\010.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\011.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\012.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\013.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\014.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\015.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\016.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\017.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\018.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\019.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\020.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\021.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\022.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\023.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\024.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\025.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\026.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\027.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\028.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\029.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\030.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\031.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\032.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\033.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\034.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\035.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\036.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\037.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\038.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\039.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\040.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\041.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\042.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\043.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\044.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other1\045.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\001.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\002.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\003.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\004.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\005.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\006.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\007.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\008.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\009.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\010.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\011.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\012.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\013.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\014.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\015.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\016.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\017.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\018.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\019.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\020.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\021.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\022.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\023.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\024.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\025.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\026.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\027.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\028.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\029.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\030.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\031.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\032.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\033.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\034.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\035.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\036.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\037.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\038.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\039.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\040.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\041.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\042.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\043.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\044.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\other2\045.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\001.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\002.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\003.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\004.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\005.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\006.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\007.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\008.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\009.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\010.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\011.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\012.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\013.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\014.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\015.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\016.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\017.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\018.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\019.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\020.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\021.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\022.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\023.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\024.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\025.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\026.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\027.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\028.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\029.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\030.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\031.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\032.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\033.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\034.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\035.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\036.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\037.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\038.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\039.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\040.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\041.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\042.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\043.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\044.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\face\qq\045.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\help.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\about.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\edit.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\face.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\function.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\main.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\menu.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\question.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\skill.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\state.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\help\top.htm" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\aspnet2.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\bgcolor.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\bian.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\bold.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\browser-support.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\Calculator.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\code.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\code2.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\copy.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\createlink.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\cut.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\date.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\date1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\delete.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\edit1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\edit_en-us.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\edit_zh-cn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\edit_zh-tw.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\emot.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\emot1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\excel.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\excel1.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\fieldset.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\font.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\font1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\forecolor.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\getpage.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\getpage1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\help-1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\help.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\help1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\helplogo.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\icq.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\icq1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\indent.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\inserthorizontalrule.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\insertimage.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\insertimage3.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\insertorderedlist.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\insertunorderedlist.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\italic.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\justifycenter.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\justifyleft.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\justifyright.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\logo.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\logo.png" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\logo1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\media.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\media1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\min.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\msn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\msn1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\next.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\outdent.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\palette.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\paste.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\pastetext.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\pasteword.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\plus.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\poweredby_aspnet.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\prev.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\preview1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\preview_en-us.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\preview_zh-cn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\preview_zh-tw.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\print.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\printer.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\printer1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\printpage.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\qq.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\qq1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\quote.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\quote1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\Rar.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\rar1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\redo.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\removeformat.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\save.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\search.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\selectall.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\source1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\source_en-us.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\source_zh-cn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\source_zh-tw.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\sub.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\sup.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\table.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\template.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\textarea.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\time.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\time1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\underline.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\undo.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\upload.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\upload1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\url.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\winclose.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\word.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\img\Zip.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Birthday.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\children1.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\christmas.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Citrus.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Clear.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Fiesta.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Flower.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Gathering.JPG" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Glacier.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\grid.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Hearts.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Ivy.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Maize.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Nature.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\Network.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\paper\tech.gif" />
+    <Content Include="Gonggao\system_dntb\skin\default\toolbar.css" />
+    <Content Include="Gonggao\system_dntb\skin\XP\editor.css" />
+    <Content Include="Gonggao\system_dntb\skin\XP\emot.aspx" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\001.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\002.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\003.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\004.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\005.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\006.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\007.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\008.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\009.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\010.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\011.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\012.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\013.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\014.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\015.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\016.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\017.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\018.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\019.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\020.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\021.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\022.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\023.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\024.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\025.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\026.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\027.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\028.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\029.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\030.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\031.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\032.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\033.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\034.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\035.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\036.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\037.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\038.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\039.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\040.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\041.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\042.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\043.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\044.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other1\045.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\001.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\002.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\003.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\004.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\005.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\006.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\007.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\008.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\009.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\010.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\011.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\012.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\013.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\014.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\015.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\016.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\017.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\018.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\019.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\020.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\021.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\022.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\023.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\024.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\025.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\026.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\027.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\028.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\029.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\030.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\031.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\032.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\033.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\034.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\035.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\036.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\037.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\038.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\039.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\040.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\041.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\042.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\043.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\044.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\other2\045.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\001.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\002.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\003.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\004.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\005.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\006.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\007.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\008.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\009.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\010.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\011.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\012.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\013.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\014.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\015.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\016.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\017.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\018.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\019.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\020.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\021.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\022.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\023.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\024.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\025.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\026.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\027.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\028.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\029.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\030.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\031.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\032.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\033.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\034.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\035.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\036.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\037.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\038.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\039.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\040.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\041.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\042.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\043.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\044.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\face\qq\045.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\about.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\edit.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\face.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\function.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\main.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\menu.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\question.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\skill.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\state.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\help\top.htm" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\aspnet2.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\bgcolor.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\bian.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\bold.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\browser-support.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\Calculator.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\code.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\code2.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\copy.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\createlink.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\cut.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\date.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\delete.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\edit1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\edit_en-us.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\edit_zh-cn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\edit_zh-tw.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\emot.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\excel.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\fieldset.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\font.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\forecolor.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\getpage.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\help-1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\help.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\help1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\icq.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\indent.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\inserthorizontalrule.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\insertimage.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\insertorderedlist.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\insertunorderedlist.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\italic.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\justifycenter.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\justifyleft.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\justifyright.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\logo.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\logo.png" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\logo1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\logo_s.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\media.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\min.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\msn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\next.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\outdent.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\palette.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\paste.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\pastetext.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\pasteword.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\pleasewait.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\plus.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\poweredby_aspnet.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\prev.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\preview1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\preview_en-us.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\preview_zh-cn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\preview_zh-tw.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\printer.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\printpage.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\qq.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\qq1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\quote.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\quote1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\Rar.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\rar1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\redo.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\removeformat.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\save.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\search.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\selectall.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\source1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\source_en-us.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\source_zh-cn.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\source_zh-tw.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\sub.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\sup.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\table.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\template.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\textarea.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\time.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\underline.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\undo.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\upload.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\upload1.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\url.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\winclose.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\word.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\wordpaste.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\img\Zip.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Birthday.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\children1.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\christmas.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Citrus.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Clear.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Fiesta.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Flower.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Gathering.JPG" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Glacier.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\grid.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Hearts.GIF" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Ivy.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Maize.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Nature.jpg" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\Network.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\paper\tech.gif" />
+    <Content Include="Gonggao\system_dntb\skin\XP\toolbar.css" />
+    <Content Include="Gonggao\system_dntb\stylesheet.css" />
+    <Content Include="Gonggao\system_dntb\stylesheet2.css" />
+    <Content Include="Gonggao\system_dntb\stylesheet3.css" />
+    <Content Include="Gonggao\system_dntb\table.aspx" />
+    <Content Include="Gonggao\system_dntb\uploadconfig\administrator.config" />
+    <Content Include="Gonggao\system_dntb\uploadconfig\default.config" />
+    <Content Include="Gonggao\system_dntb\uploadconfig\guest.config" />
+    <Content Include="Gonggao\system_dntb\uploadconfig\user.config" />
+    <Content Include="Gonggao\system_dntb\uploadFile.aspx" />
+    <Content Include="Gonggao\system_dntb\uploadImg.aspx" />
+    <Content Include="Gonggao\system_dntb\uploadMedia.aspx" />
+    <Content Include="Gonggao\system_dntb\uploadTemplate.aspx" />
+    <Content Include="Gonggao\system_dntb\upload\Clip1.jpg" />
+    <Content Include="Gonggao\system_dntb\upload\close.gif" />
+    <Content Include="Gonggao\system_dntb\upload\test.swf" />
+    <Content Include="Gonggao\system_dntb\Web.config" />
+    <Content Include="Gonggao\system_dntb\zh-cn\Resources.xml" />
+    <Content Include="Gonggao\system_dntb\zh-tw\Resources.xml" />
+    <Content Include="Images\bar1.gif" />
+    <Content Include="Images\bg-login-top.gif" />
+    <Content Include="Images\body_background.png" />
+    <Content Include="Images\border_bg.png" />
+    <Content Include="Images\border_end.png" />
+    <Content Include="Images\BoxOver_bd.png" />
+    <Content Include="Images\btu_ok.png" />
+    <Content Include="Images\button_login2.gif" />
+    <Content Include="Images\content_li_top.png" />
+    <Content Include="Images\Folder_bigbtu.png" />
+    <Content Include="Images\ico.gif" />
+    <Content Include="Images\ico\cusvisits.png" />
+    <Content Include="Images\ico\downloadfile.png" />
+    <Content Include="Images\ico\finishcheck.png" />
+    <Content Include="Images\ico\gonggao.png" />
+    <Content Include="Images\ico\hisrecon.png" />
+    <Content Include="Images\ico\testbh.png" />
+    <Content Include="Images\ico\tip.png" />
+    <Content Include="Images\ico\upload.png" />
+    <Content Include="Images\ico\warning.png" />
+    <Content Include="Images\left_tabid_cnt_top.png" />
+    <Content Include="Images\left_tab_Selected.gif" />
+    <Content Include="Images\left_tab_Selectedno.gif" />
+    <Content Include="Images\line_2.gif" />
+    <Content Include="Images\login-welcome.gif" />
+    <Content Include="Images\logomin.gif" />
+    <Content Include="Images\manage_arrow_down.gif" />
+    <Content Include="Images\manage_arrow_left.gif" />
+    <Content Include="Images\manage_arrow_right.gif" />
+    <Content Include="Images\manage_arrow_up.gif" />
+    <Content Include="Images\manage_back.gif" />
+    <Content Include="Images\manage_top_bg.gif" />
+    <Content Include="Images\minus.gif" />
+    <Content Include="Images\nopic.gif" />
+    <Content Include="Images\offline.gif" />
+    <Content Include="Images\oicq.gif" />
+    <Content Include="Images\online.gif" />
+    <Content Include="Images\open.gif" />
+    <Content Include="Images\plus.gif" />
+    <Content Include="Images\progress.jpg" />
+    <Content Include="Images\progress1.jpg" />
+    <Content Include="Images\quote.gif" />
+    <Content Include="Images\re.gif" />
+    <Content Include="Images\selectFile.PNG" />
+    <Content Include="Images\Setting_TabPage2.png" />
+    <Content Include="Images\skinpic.png" />
+    <Content Include="Images\Skin_onmouseout_bg.gif" />
+    <Content Include="Images\Skin_onmouseout_bg.png" />
+    <Content Include="Images\Skin_onmouseover_bg.gif" />
+    <Content Include="Images\Skin_onmouseover_bg.png" />
+    <Content Include="Images\skin_used.png" />
+    <Content Include="Images\sword03.gif" />
+    <Content Include="Images\tab.gif" />
+    <Content Include="Images\Template_bg.png" />
+    <Content Include="Images\used.png" />
+    <Content Include="Images\UserIco_bg.png" />
+    <Content Include="Images\user_btu_left.png" />
+    <Content Include="Images\user_btu_right.png" />
+    <Content Include="Images\user_dleft_tab7.png" />
+    <Content Include="Images\user_err.gif" />
+    <Content Include="Images\user_login_01.gif" />
+    <Content Include="Images\user_login_02.gif" />
+    <Content Include="Images\user_login_03.gif" />
+    <Content Include="Images\user_login_04.gif" />
+    <Content Include="Images\user_login_05.gif" />
+    <Content Include="Images\user_msg.gif" />
+    <Content Include="Images\user_post_input.png" />
+    <Content Include="Images\user_post_inputtxt.png" />
+    <Content Include="Images\user_post_inputtxt1.png" />
+    <Content Include="Images\user_post_title_bg.png" />
+    <Content Include="Images\user_post_top_bg.png" />
+    <Content Include="Images\user_setting_title_tab_bg.png" />
+    <Content Include="Images\user_suc.gif" />
+    <Content Include="Images\user_team_bg.png" />
+    <Content Include="Images\user_team_top.png" />
+    <Content Include="Images\win_top.png" />
+    <Content Include="Images\worldmap.jpg" />
+    <Content Include="Images\X.gif" />
+    <Content Include="js\menu.js" />
+    <Content Include="Main.aspx" />
+    <Content Include="NewScript\themes\Default\easyuinochange.css" />
+    <Content Include="Forms\AddFileShareDetail.aspx" />
+    <Content Include="Forms\AddFileShareList.aspx" />
+    <Content Include="Forms\FileShare.aspx" />
+    <Content Include="Forms\fileshare.js" />
+    <Content Include="Forms\fileshare2.js" />
+    <Content Include="Quotation\AddSampleReceived.aspx" />
+    <Content Include="Quotation\AddSampleRecevied.js" />
+    <Content Include="Quotation\jinguantongji.aspx" />
+    <Content Include="Quotation\QuotationInvoid.aspx" />
+    <Content Include="Quotation\Report.js" />
+    <Content Include="Quotation\SampelReceivedList.aspx" />
+    <Content Include="Quotation\SendSampleList.aspx" />
+    <Content Include="Quotation\SendSamples.aspx" />
+    <Content Include="Quotation\SETUP.CAB" />
+    <Content Include="Quotation\setup.exe" />
+    <Content Include="Quotation\SignGadget.CAB" />
+    <Content Include="Referencenew\eWorkFlow.Core.dll" />
+    <Content Include="Referencenew\eWorkFlow.eFlowConfig.dll" />
+    <Content Include="Referencenew\eWorkFlow.eFlowDoc.dll" />
+    <Content Include="Referencenew\eWorkFlow.Model.dll" />
+    <Content Include="Referencenew\Framework.dll" />
+    <Content Include="Referencenew\zh-cn\eWorkFlow.eFlowDoc.resources.dll" />
+    <Content Include="Referencenew\zh-TW\eWorkFlow.eFlowDoc.resources.dll" />
+    <Content Include="Reference\CodeHighlighterTest.dll" />
+    <Content Include="Reference\DotNetTextBox.dll" />
+    <Content Include="Reference\EnvDTE.dll" />
+    <Content Include="Reference\Webb.WAVE.Controls.Upload.dll" />
+    <Content Include="Report\CMCNew中.png" />
+    <Content Include="Report\logo.JPG" />
+    <Content Include="Report\sign.JPG" />
+    <Content Include="Images\baseinfo.png" />
+    <Content Include="Images\calentix.jpg" />
+    <Content Include="Images\closelabel.gif" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\cusico.png" />
+    <Content Include="Images\DownLoadFile.gif" />
+    <Content Include="Images\Hh.JPG" />
+    <Content Include="Images\history.png" />
+    <Content Include="Images\Icons\7z.gif" />
+    <Content Include="Images\Icons\add.png" />
+    <Content Include="Images\Icons\ashx.gif" />
+    <Content Include="Images\Icons\bullet_black.png" />
+    <Content Include="Images\Icons\clock_48.png" />
+    <Content Include="Images\Icons\comment_48.png" />
+    <Content Include="Images\Icons\cross.png" />
+    <Content Include="Images\Icons\cross_circle.png" />
+    <Content Include="Images\Icons\cross_grey_small.png" />
+    <Content Include="Images\Icons\db.gif" />
+    <Content Include="Images\Icons\docx.gif" />
+    <Content Include="Images\Icons\equip.png" />
+    <Content Include="Images\Icons\equipfile.png" />
+    <Content Include="Images\Icons\exclamation.png" />
+    <Content Include="Images\Icons\folder.gif" />
+    <Content Include="Images\Icons\hammer_screwdriver.png" />
+    <Content Include="Images\Icons\image_add_48.png" />
+    <Content Include="Images\Icons\information.png" />
+    <Content Include="Images\Icons\jpeg.gif" />
+    <Content Include="Images\Icons\jquery.wysiwyg.gif" />
+    <Content Include="Images\Icons\master.gif" />
+    <Content Include="Images\Icons\mp3_32.gif" />
+    <Content Include="Images\Icons\other.gif" />
+    <Content Include="Images\Icons\paper_content_pencil_48.png" />
+    <Content Include="Images\Icons\paraFold.gif" />
+    <Content Include="Images\Icons\pencil.png" />
+    <Content Include="Images\Icons\pencil_48.png" />
+    <Content Include="Images\Icons\php.gif" />
+    <Content Include="Images\Icons\pic.gif" />
+    <Content Include="Images\Icons\png.gif" />
+    <Content Include="Images\Icons\psd.gif" />
+    <Content Include="Images\Icons\resx.gif" />
+    <Content Include="Images\Icons\sitemap.gif" />
+    <Content Include="Images\Icons\sql.gif" />
+    <Content Include="Images\Icons\swf.gif" />
+    <Content Include="Images\Icons\tick_circle.png" />
+    <Content Include="Images\Icons\xlsx.gif" />
+    <Content Include="Images\Icons\xsl.gif" />
+    <Content Include="Images\Icons\zuofei.png" />
+    <Content Include="Images\ico\20130611080337494_easyicon_net_24.png" />
+    <Content Include="Images\ico\applyinfo.png" />
+    <Content Include="Images\ico\baseinfo.png" />
+    <Content Include="Images\ico\birthday.png" />
+    <Content Include="Images\ico\calendar.png" />
+    <Content Include="Images\ico\cog_32x32.png" />
+    <Content Include="Images\ico\get.png" />
+    <Content Include="Images\ico\history.png" />
+    <Content Include="Images\ico\line.png" />
+    <Content Include="Images\ico\line2.png" />
+    <Content Include="Images\ico\new_window.png" />
+    <Content Include="Images\ico\pay.png" />
+    <Content Include="Images\ico\pen.png" />
+    <Content Include="Images\ico\percent.png" />
+    <Content Include="Images\ico\percent2.png" />
+    <Content Include="Images\ico\percent3.png" />
+    <Content Include="Images\ico\personal.png" />
+    <Content Include="Images\ico\pin.png" />
+    <Content Include="Images\ico\plus.png" />
+    <Content Include="Images\ico\precidel.ico" />
+    <Content Include="Images\ico\report.png" />
+    <Content Include="Images\ico\sample.png" />
+    <Content Include="Images\ico\topdf.png" />
+    <Content Include="Images\ico\trash.png" />
+    <Content Include="Images\ico\waitfor.png" />
+    <Content Include="Images\ico\zhexiantu.png" />
+    <Content Include="Images\ico\zhutu.png" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\menu-current-arrow.gif" />
+    <Content Include="Images\pay.png" />
+    <Content Include="Images\personal.png" />
+    <Content Include="Images\report.png" />
+    <Content Include="Images\shortcut-button-bg.gif" />
+    <Content Include="Images\tick.png" />
+    <Content Include="Images\TitleLeft.gif" />
+    <Content Include="Images\TitleLeft1.gif" />
+    <Content Include="Images\tl.png" />
+    <Content Include="Images\topdf.jpg" />
+    <Content Include="Images\tr.png" />
+    <Content Include="Images\view.gif" />
+    <Content Include="Images\www6Lucn0021.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="Quotation\ForReportView.aspx" />
+    <Content Include="Quotation\LeaderReport.aspx" />
+    <Content Include="Quotation\QuotationDetail.aspx" />
+    <Content Include="Quotation\QuotationDetail.js" />
+    <Content Include="Quotation\QuotationList.aspx" />
+    <Content Include="Quotation\ReconcieldDetail.aspx" />
+    <Content Include="Quotation\ReconcieldList.aspx" />
+    <Content Include="Quotation\ReportDetailDetail.aspx" />
+    <Content Include="Quotation\ReportDetailList.aspx" />
+    <Content Include="Quotation\Statistics.aspx" />
+    <Content Include="Quotation\TestApplyList.aspx" />
+    <Content Include="Reference\ExcelCommon.dll" />
+    <Content Include="Scripts\LoginRegister.js" />
+    <Content Include="UCtl\UcLog.ascx" />
+    <Content Include="UCtl\UcWorkWaitFor.ascx" />
+    <Content Include="action\AjaxUploadHandler.ashx" />
+    <None Include="Quotation\SetupReadCard.msi" />
+    <None Include="SignGadget.msi" />
+    <None Include="UploadFiles\報價單.doc" />
+    <None Include="UploadFiles\客戶拜訪交際回饋表.doc" />
+    <None Include="UploadFiles\對帳單.doc" />
+    <None Include="Web References\com.foxconn.cmc\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\com.foxconn.cmc\sendmail.wsdl" />
+    <None Include="Web References\ECMC.Sendoutmail\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\ECMC.Sendoutmail\webservice.disco" />
+    <None Include="Web References\com.foxconn.cmc\sendmail.disco" />
+    <None Include="Web References\PDFSignservice\PdfService.disco" />
+    <Content Include="XMLData\CusLevelRemark.xml" />
+    <Content Include="XMLData\CustomerSorces.xml" />
+    <Content Include="XMLData\ReceivedSampleAddress.xml" />
+    <Content Include="XMLData\SysSetting.xml" />
+    <Content Include="Forms\TestItemManage.aspx" />
+    <Content Include="Forms\UserADV.js" />
+    <Content Include="Forms\UserADVInfo.aspx" />
+    <Content Include="Forms\UserCenter.aspx" />
+    <Content Include="IconsThemes\icon.css" />
+    <Content Include="IconsThemes\icons\actn025.gif" />
+    <Content Include="IconsThemes\icons\actn026.gif" />
+    <Content Include="IconsThemes\icons\Approve.gif" />
+    <Content Include="IconsThemes\icons\back.png" />
+    <Content Include="IconsThemes\icons\blank.gif" />
+    <Content Include="IconsThemes\icons\cancel.png" />
+    <Content Include="IconsThemes\icons\Clip.jpg" />
+    <Content Include="IconsThemes\icons\cut.png" />
+    <Content Include="IconsThemes\icons\edit_add.png" />
+    <Content Include="IconsThemes\icons\edit_remove.png" />
+    <Content Include="IconsThemes\icons\filesave.png" />
+    <Content Include="IconsThemes\icons\Free.gif" />
+    <Content Include="IconsThemes\icons\Freeze.gif" />
+    <Content Include="IconsThemes\icons\help.png" />
+    <Content Include="IconsThemes\icons\InfoTip.jpg" />
+    <Content Include="IconsThemes\icons\mini_add.png" />
+    <Content Include="IconsThemes\icons\mini_edit.png" />
+    <Content Include="IconsThemes\icons\mini_refresh.png" />
+    <Content Include="IconsThemes\icons\no.png" />
+    <Content Include="IconsThemes\icons\ok.png" />
+    <Content Include="IconsThemes\icons\pencil.png" />
+    <Content Include="IconsThemes\icons\print.png" />
+    <Content Include="IconsThemes\icons\redo.png" />
+    <Content Include="IconsThemes\icons\Rejection.gif" />
+    <Content Include="IconsThemes\icons\reload.png" />
+    <Content Include="IconsThemes\icons\Reply.gif" />
+    <Content Include="IconsThemes\icons\search.png" />
+    <Content Include="IconsThemes\icons\seq.gif" />
+    <Content Include="IconsThemes\icons\settings.gif" />
+    <Content Include="IconsThemes\icons\sum.png" />
+    <Content Include="IconsThemes\icons\tip.png" />
+    <Content Include="IconsThemes\icons\undo.png" />
+    <Content Include="IconsThemes\icons\UnFree.gif" />
+    <Content Include="IconsThemes\icons\UnFreeze.gif" />
+    <Content Include="IconsThemes\icons\xls.gif" />
+    <Content Include="Images\12630051960.gif" />
+    <Content Include="Images\b.png" />
+    <Content Include="Images\bg-body.gif" />
+    <Content Include="Images\bg-button-green.gif" />
+    <Content Include="Images\bg-content-box.gif" />
+    <Content Include="Images\bg-form-field.gif" />
+    <Content Include="Images\bg-login-top.png" />
+    <Content Include="Images\bg-login.gif" />
+    <Content Include="Images\bg-menu-item-current.gif" />
+    <Content Include="Images\bg-menu-item-green.gif" />
+    <Content Include="Images\bg-radial-gradient.gif" />
+    <Content Include="Images\bg-sidebar.gif" />
+    <Content Include="Images\bl.png" />
+    <Content Include="Images\br.png" />
+    <Content Include="Images\ch.gif" />
+    <Content Include="Images\checkbox.png" />
+    <Content Include="UCtl\UcUserFileManage.ascx" />
+    <Content Include="UserPhoto\defaultimg.jpg" />
+    <Content Include="Images\icon-delete.gif" />
+    <Content Include="Images\icon-pencil-x.gif" />
+    <Content Include="Images\icon-pencil.gif" />
+    <Content Include="Images\Icons\arj.gif" />
+    <Content Include="Images\Icons\asa.gif" />
+    <Content Include="Images\Icons\asax.gif" />
+    <Content Include="Images\Icons\ascx.gif" />
+    <Content Include="Images\Icons\asmx.gif" />
+    <Content Include="Images\Icons\asp.gif" />
+    <Content Include="Images\Icons\aspx.gif" />
+    <Content Include="Images\Icons\au.gif" />
+    <Content Include="Images\Icons\avi.gif" />
+    <Content Include="Images\Icons\bat.gif" />
+    <Content Include="Images\Icons\bmp.gif" />
+    <Content Include="Images\Icons\cab.gif" />
+    <Content Include="Images\Icons\chm.gif" />
+    <Content Include="Images\Icons\ClosedFolder.gif" />
+    <Content Include="Images\Icons\com.gif" />
+    <Content Include="Images\Icons\config.gif" />
+    <Content Include="Images\Icons\Copy.gif" />
+    <Content Include="Images\Icons\cs.gif" />
+    <Content Include="Images\Icons\css.gif" />
+    <Content Include="Images\Icons\disco.gif" />
+    <Content Include="Images\Icons\dll.gif" />
+    <Content Include="Images\Icons\doc.gif" />
+    <Content Include="Images\Icons\exe.gif" />
+    <Content Include="Images\Icons\file.gif" />
+    <Content Include="Images\Icons\gif.gif" />
+    <Content Include="Images\Icons\hlp.gif" />
+    <Content Include="Images\Icons\htm.gif" />
+    <Content Include="Images\Icons\html.gif" />
+    <Content Include="Images\Icons\inc.gif" />
+    <Content Include="Images\Icons\ini.gif" />
+    <Content Include="Images\Icons\jpg.gif" />
+    <Content Include="Images\Icons\js.gif" />
+    <Content Include="Images\Icons\log.gif" />
+    <Content Include="Images\Icons\mdb.gif" />
+    <Content Include="Images\Icons\mid.gif" />
+    <Content Include="Images\Icons\midi.gif" />
+    <Content Include="Images\Icons\mov.gif" />
+    <Content Include="Images\Icons\Move.gif" />
+    <Content Include="Images\Icons\mp3.gif" />
+    <Content Include="Images\Icons\mpeg.gif" />
+    <Content Include="Images\Icons\mpg.gif" />
+    <Content Include="Images\Icons\pdf.gif" />
+    <Content Include="Images\Icons\ppt.gif" />
+    <Content Include="Images\Icons\rar.gif" />
+    <Content Include="Images\Icons\sys.gif" />
+    <Content Include="Images\Icons\tif.gif" />
+    <Content Include="Images\Icons\txt.gif" />
+    <Content Include="Images\Icons\vb.gif" />
+    <Content Include="Images\Icons\vbs.gif" />
+    <Content Include="Images\Icons\vsdisco.gif" />
+    <Content Include="Images\Icons\wav.gif" />
+    <Content Include="Images\Icons\wri.gif" />
+    <Content Include="Images\Icons\xls.gif" />
+    <Content Include="Images\Icons\xml.gif" />
+    <Content Include="Images\Icons\zip.gif" />
+    <Content Include="EFlowNet\eFLowHandler.ashx" />
+    <Content Include="App_Themes\Default\Default.skin" />
+    <Content Include="action\JqueryS.ashx" />
+    <Content Include="Forms\FileUPHandler.ashx" />
+    <None Include="Gonggao\system_dntb\Lexers\ActiproSoftware.SyntaxEditor.LanguageDefinition.xsd" />
+    <None Include="Gonggao\system_dntb\Lexers\ActiproSoftware.SyntaxEditor.LanguageDefinition.xsx">
+      <DependentUpon>ActiproSoftware.SyntaxEditor.LanguageDefinition.xsd</DependentUpon>
+    </None>
+    <None Include="Gonggao\system_dntb\skin\default\face\Thumbs.db" />
+    <None Include="Gonggao\system_dntb\skin\XP\face\Thumbs.db" />
+    <None Include="Reports\EquipmentInfoReport.xls" />
+    <None Include="Report\DataSet1.xsc">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\DataSet1.xss">
+      <DependentUpon>DataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DataSet2.xsc">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Report\DataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Report\DataSet2.xss">
+      <DependentUpon>DataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="IconsThemes\icons\Thumbs.db" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NewScript\My97DatePicker\skin\default\Thumbs.db" />
+    <None Include="NewScript\My97DatePicker\skin\Thumbs.db" />
+    <None Include="NewScript\My97DatePicker\skin\whyGreen\Thumbs.db" />
+    <Content Include="NewScript\themes\Default\Default.skin" />
+    <None Include="NewScript\themes\Default\Images\Thumbs.db" />
+    <None Include="Scripts\My97DatePicker\skin\default\Thumbs.db" />
+    <None Include="Scripts\My97DatePicker\skin\Thumbs.db" />
+    <None Include="Scripts\My97DatePicker\skin\whyGreen\Thumbs.db" />
+    <None Include="Service References\WCFService\WFServer.disco" />
+    <None Include="Service References\WCFService\configuration91.svcinfo" />
+    <None Include="Service References\WCFService\configuration.svcinfo" />
+    <None Include="Service References\WCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="Images\ico\computer.gif" />
+    <Content Include="Images\ico\computer2.gif" />
+    <Content Include="Images\ico\copy.gif" />
+    <Content Include="Images\ico\cut.gif" />
+    <Content Include="Images\ico\delete.gif" />
+    <Content Include="Images\ico\DownLoadFile.gif" />
+    <Content Include="Images\ico\edit.gif" />
+    <Content Include="Images\ico\file_new.gif" />
+    <Content Include="Images\ico\folder_new.gif" />
+    <Content Include="Images\ico\paste.gif" />
+    <Content Include="Images\ico\refresh.gif" />
+    <Content Include="Images\ico\rename.gif" />
+    <Content Include="Images\ico\up.gif" />
+    <Content Include="Login.aspx" />
+    <Content Include="NewScript\datagrid-detailview.js" />
+    <Content Include="NewScript\datagrid-groupview.js" />
+    <Content Include="NewScript\DateFormat.js" />
+    <Content Include="NewScript\easyloader.js" />
+    <Content Include="NewScript\easyui-lang-zh_TW.js" />
+    <Content Include="NewScript\facebox.js" />
+    <Content Include="NewScript\FileUpload.js" />
+    <Content Include="NewScript\flowScript.js" />
+    <Content Include="NewScript\global.js" />
+    <Content Include="NewScript\Ifream.js" />
+    <Content Include="NewScript\imagepreview.js" />
+    <Content Include="NewScript\jqModal.js" />
+    <Content Include="NewScript\jquery-1.7.2.min.js" />
+    <Content Include="NewScript\jquery.easyui.min.js" />
+    <Content Include="NewScript\jquery.jqChart.min.js" />
+    <Content Include="NewScript\jquery.jqRangeSlider.min.js" />
+    <Content Include="NewScript\jquery.js" />
+    <Content Include="NewScript\jquery.wresize.js" />
+    <Content Include="NewScript\jquery.wysiwyg.js" />
+    <Content Include="NewScript\js-preview-728x90.js" />
+    <Content Include="NewScript\locale\easyui-lang-af.js" />
+    <Content Include="NewScript\locale\easyui-lang-bg.js" />
+    <Content Include="NewScript\locale\easyui-lang-ca.js" />
+    <Content Include="NewScript\locale\easyui-lang-cs.js" />
+    <Content Include="NewScript\locale\easyui-lang-cz.js" />
+    <Content Include="NewScript\locale\easyui-lang-da.js" />
+    <Content Include="NewScript\locale\easyui-lang-de.js" />
+    <Content Include="NewScript\locale\easyui-lang-en.js" />
+    <Content Include="NewScript\locale\easyui-lang-es.js" />
+    <Content Include="NewScript\locale\easyui-lang-fr.js" />
+    <Content Include="NewScript\locale\easyui-lang-nl.js" />
+    <Content Include="NewScript\locale\easyui-lang-pt_BR.js" />
+    <Content Include="NewScript\locale\easyui-lang-ru.js" />
+    <Content Include="NewScript\locale\easyui-lang-tr.js" />
+    <Content Include="NewScript\locale\easyui-lang-zh_CN.js" />
+    <Content Include="NewScript\locale\easyui-lang-zh_TW.js" />
+    <Content Include="NewScript\lrtk.js" />
+    <Content Include="NewScript\modal.js" />
+    <Content Include="NewScript\My97DatePicker\calendar.js" />
+    <Content Include="NewScript\My97DatePicker\config.js" />
+    <Content Include="NewScript\My97DatePicker\lang\en.js" />
+    <Content Include="NewScript\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="NewScript\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="NewScript\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="NewScript\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="NewScript\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="NewScript\My97DatePicker\skin\default\img.gif" />
+    <Content Include="NewScript\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="NewScript\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="NewScript\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="NewScript\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="NewScript\My97DatePicker\WdatePicker-vsdoc.js" />
+    <Content Include="NewScript\My97DatePicker\WdatePicker.js" />
+    <Content Include="NewScript\plugins\jquery.bgiframe.js" />
+    <Content Include="NewScript\plugins\jquery.toggleLoading.js" />
+    <Content Include="NewScript\show_ads.js" />
+    <Content Include="NewScript\simpla.jquery.configuration.js" />
+    <Content Include="NewScript\style.css" />
+    <Content Include="NewScript\themes\Default\accordion.css" />
+    <Content Include="NewScript\themes\Default\calendar.css" />
+    <Content Include="NewScript\themes\Default\combo.css" />
+    <Content Include="NewScript\themes\Default\combobox.css" />
+    <Content Include="NewScript\themes\Default\ContentStype.css" />
+    <Content Include="NewScript\themes\Default\CSS.css" />
+    <Content Include="NewScript\themes\Default\datagrid.css" />
+    <Content Include="NewScript\themes\Default\datebox.css" />
+    <Content Include="NewScript\themes\Default\Default.css" />
+    <Content Include="NewScript\themes\Default\dialog.css" />
+    <Content Include="NewScript\themes\Default\easyui.css" />
+    <Content Include="NewScript\themes\Default\Images\accordion_collapse.png" />
+    <Content Include="NewScript\themes\Default\Images\accordion_expand.png" />
+    <Content Include="NewScript\themes\Default\Images\blank.gif" />
+    <Content Include="NewScript\themes\Default\Images\button_a_bg.gif" />
+    <Content Include="NewScript\themes\Default\Images\button_plain_hover.png" />
+    <Content Include="NewScript\themes\Default\Images\button_span_bg.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_nextmonth.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_nextyear.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_prevmonth.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_prevyear.gif" />
+    <Content Include="NewScript\themes\Default\Images\checked.gif" />
+    <Content Include="NewScript\themes\Default\Images\combo_arrow.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_header_bg.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_row_collapse.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_row_expand.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_sort_asc.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_sort_desc.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_title_bg.png" />
+    <Content Include="NewScript\themes\Default\Images\datebox_arrow.png" />
+    <Content Include="NewScript\themes\Default\Images\dot_08.gif" />
+    <Content Include="NewScript\themes\Default\Images\Footer_bg.png" />
+    <Content Include="NewScript\themes\Default\Images\gradient_DKGray.jpg" />
+    <Content Include="NewScript\themes\Default\Images\header_bg.png" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_down.gif" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_left.gif" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_right.gif" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_up.gif" />
+    <Content Include="NewScript\themes\Default\Images\left01.gif" />
+    <Content Include="NewScript\themes\Default\Images\left02.gif" />
+    <Content Include="NewScript\themes\Default\Images\loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\menu.gif" />
+    <Content Include="NewScript\themes\Default\Images\menubj_03.jpg" />
+    <Content Include="NewScript\themes\Default\Images\menu_downarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\menu_rightarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\menu_sep.png" />
+    <Content Include="NewScript\themes\Default\Images\menu_split_downarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\messager_error.gif" />
+    <Content Include="NewScript\themes\Default\Images\messager_info.gif" />
+    <Content Include="NewScript\themes\Default\Images\messager_question.gif" />
+    <Content Include="NewScript\themes\Default\Images\messager_warning.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_first.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_last.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_load.png" />
+    <Content Include="NewScript\themes\Default\Images\pagination_loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_next.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_prev.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_title.png" />
+    <Content Include="NewScript\themes\Default\Images\panel_tools.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_tool_collapse.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_tool_expand.gif" />
+    <Content Include="NewScript\themes\Default\Images\R.gif" />
+    <Content Include="NewScript\themes\Default\Images\searchbox_button.png" />
+    <Content Include="NewScript\themes\Default\Images\slider_handle.png" />
+    <Content Include="NewScript\themes\Default\Images\spinner_arrow_down.gif" />
+    <Content Include="NewScript\themes\Default\Images\spinner_arrow_up.gif" />
+    <Content Include="NewScript\themes\Default\Images\tableftB.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabright2.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabright4.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabs_active.png" />
+    <Content Include="NewScript\themes\Default\Images\tabs_close.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabs_enabled.png" />
+    <Content Include="NewScript\themes\Default\Images\tabs_leftarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\tabs_rightarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\topbg.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_arrows.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_checkbox_0.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_checkbox_1.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_checkbox_2.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_dnd_no.png" />
+    <Content Include="NewScript\themes\Default\Images\tree_dnd_yes.png" />
+    <Content Include="NewScript\themes\Default\Images\tree_elbow.png" />
+    <Content Include="NewScript\themes\Default\Images\tree_file.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_folder.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_folder_open.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\unchecked.gif" />
+    <Content Include="NewScript\themes\Default\Images\validatebox_pointer.gif" />
+    <Content Include="NewScript\themes\Default\Images\validatebox_warning.png" />
+    <Content Include="NewScript\themes\Default\layout.css" />
+    <Content Include="NewScript\themes\Default\linkbutton.css" />
+    <Content Include="NewScript\themes\Default\menu.css" />
+    <Content Include="NewScript\themes\Default\menubutton.css" />
+    <Content Include="NewScript\themes\Default\messager.css" />
+    <Content Include="NewScript\themes\Default\PageStyle.css" />
+    <Content Include="NewScript\themes\Default\pagination.css" />
+    <Content Include="NewScript\themes\Default\panel.css" />
+    <Content Include="NewScript\themes\Default\progressbar.css" />
+    <Content Include="NewScript\themes\Default\propertygrid.css" />
+    <Content Include="NewScript\themes\Default\searchbox.css" />
+    <Content Include="NewScript\themes\Default\SearchPage.css" />
+    <Content Include="NewScript\themes\Default\slider.css" />
+    <Content Include="NewScript\themes\Default\spinner.css" />
+    <Content Include="NewScript\themes\Default\splitbutton.css" />
+    <Content Include="NewScript\themes\Default\StyleSheet.css" />
+    <Content Include="NewScript\themes\Default\tabs.css" />
+    <Content Include="NewScript\themes\Default\tree.css" />
+    <Content Include="NewScript\themes\Default\validatebox.css" />
+    <Content Include="NewScript\themes\Default\window.css" />
+    <Content Include="NewScript\UIHelper.js" />
+    <Content Include="NewScript\uploadScript\jquery.uploadify.min.js" />
+    <Content Include="NewScript\uploadScript\swflash.cab" />
+    <Content Include="NewScript\uploadScript\swfobject.js" />
+    <Content Include="NewScript\uploadScript\uploadify.swf" />
+    <Content Include="NewScript\UserDialog.js" />
+    <Content Include="Reference\ActiproSoftware.CodeHighlighter.Net20.dll" />
+    <Content Include="Reference\ActiproSoftware.Shared.Net20.dll" />
+    <Content Include="Reference\Aspose.Cells.xml" />
+    <Content Include="Reference\Aspose.Words.dll" />
+    <Content Include="Reference\Aspose.Words.xml" />
+    <Content Include="Reference\BusinessFacade.dll" />
+    <Content Include="Reference\CommonData.dll" />
+    <Content Include="Reference\ConvertToPDXPS.dll" />
+    <Content Include="Reference\FileManager.dll" />
+    <Content Include="Reference\GridViewHelper.dll" />
+    <Content Include="Reference\ICSharpCode.SharpZipLib.DLL" />
+    <Content Include="Reference\itextsharp.dll" />
+    <Content Include="Reference\myControl.dll" />
+    <Content Include="Reference\SystemFramework.dll" />
+    <Content Include="Reference\SystemMailOperation.dll" />
+    <Content Include="Reference\Vortex.Web.UI.WebControls.dll" />
+    <Content Include="Reference\ZebraPrinter.dll" />
+    <Content Include="Reference\ZebraPrinter.xml" />
+    <Content Include="SiteConfigFile\ConnectionForLH.config" />
+    <Content Include="SiteConfigFile\ParameterForLH.config" />
+    <Content Include="UCtl\UcFileDetail.ascx" />
+    <Content Include="UCtl\UCtlFooter.ascx" />
+    <Content Include="UCtl\UCtlGrdPage.ascx" />
+    <Content Include="UCtl\UCtlListAction.ascx" />
+    <Content Include="UCtl\UCtlLogin.ascx" />
+    <Content Include="UCtl\UCtlMenu.ascx" />
+    <Content Include="UCtl\UCtlTreeView.ascx" />
+    <Content Include="UCtl\UCtlUserInfo.ascx" />
+    <Content Include="UCtl\UploadFile.txt" />
+    <None Include="Service References\WCFService\WFServer.xsd" />
+    <None Include="Service References\WCFService\WFServer2.xsd" />
+    <None Include="Service References\WCFService\WFServer3.xsd" />
+    <None Include="Service References\WCFService\WFServer4.xsd" />
+    <None Include="Service References\WCFService\WFServer5.xsd" />
+    <None Include="Service References\WCFService\WorkflowService.wsdl" />
+    <None Include="TempUploadFiles\匯入測試項目模板.xls" />
+    <None Include="Web References\ECMC.Sendoutmail\webservice.wsdl" />
+    <None Include="Web References\PDFSignservice\PdfService.wsdl" />
+    <None Include="Web References\PDFSignservice\PDFTemplateInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+    <None Include="Web References\PDFSignservice\Reference.map">
+      <Generator>MSDiscoCodeGenerator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <None Include="Web References\PDFSignservice\SignPDFInfo.datasource">
+      <DependentUpon>Reference.map</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3924545A-F8E2-475A-B1A4-05175BC41E50}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferences Include="Web References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WebReferenceUrl Include="http://10.162.197.5/crm/action/webservice.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\ECMC.Sendoutmail\</RelPath>
+      <UpdateFromURL>http://10.162.197.5/crm/action/webservice.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CRM_ECMC_Sendoutmail_WebService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://10.162.197.5/PDFmanage/PdfService.asmx">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\PDFSignservice\</RelPath>
+      <UpdateFromURL>http://10.162.197.5/PDFmanage/PdfService.asmx</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CRM_PDFSignservice_PDFService</CachedSettingsPropName>
+    </WebReferenceUrl>
+    <WebReferenceUrl Include="http://cmc.foxconn.com/crm/action/sendmail.asmx%3fop=MailSendToList">
+      <UrlBehavior>Dynamic</UrlBehavior>
+      <RelPath>Web References\com.foxconn.cmc\</RelPath>
+      <UpdateFromURL>http://cmc.foxconn.com/crm/action/sendmail.asmx%3fop=MailSendToList</UpdateFromURL>
+      <ServiceLocationURL>
+      </ServiceLocationURL>
+      <CachedDynamicPropName>
+      </CachedDynamicPropName>
+      <CachedAppSettingsObjectName>MySettings</CachedAppSettingsObjectName>
+      <CachedSettingsPropName>CRM_com_foxconn_cmc_SendMail</CachedSettingsPropName>
+    </WebReferenceUrl>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ConfigurationFiles\" />
+    <Folder Include="CusReconcield\" />
+    <Folder Include="DataBaseScripts\" />
+    <Folder Include="EFlowNet\FlowDefineFile\" />
+    <Folder Include="ErrorLog\" />
+    <Folder Include="PDFquotation\" />
+    <Folder Include="Styles\" />
+    <Folder Include="TempImageFiles\" />
+    <Folder Include="TempImages\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1460</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CRM</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

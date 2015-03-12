@@ -1,0 +1,2249 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+CMCFileManage
+</name>
+</assembly>
+<members>
+<member name="M:CMCFileManage.CacheHelper.AddCache(System.String,System.Object,System.DateTime)">
+	<summary> 
+ 添加缓存 
+ </summary>
+	<param name="key"></param>
+	<param name="value"></param>
+	<param name="absoluteExpiration"></param>
+</member><member name="M:CMCFileManage.CacheHelper.RemoveCache(System.String)">
+	<summary> 
+ 移除缓存 
+ </summary>
+	<param name="key"></param>
+</member><member name="M:CMCFileManage.CacheHelper.ClearCache">
+	<summary> 
+ 清空使用的缓存 
+ </summary>
+</member><member name="T:CMCFileManage.CacheHelper">
+	<summary> 
+ 缓存控制类 
+ </summary>
+</member><member name="F:CMCFileManage.Login.UCtlLogin1">
+	<summary>
+UCtlLogin1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UcFileDetail.BrowseButton">
+	<summary>
+BrowseButton 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UcFileDetail.Img1">
+	<summary>
+Img1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UcFileDetail.UploadAttachments1">
+	<summary>
+UploadAttachments1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UcFileDetail.GridView1">
+	<summary>
+GridView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UcFileDetail.Panel1">
+	<summary>
+Panel1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UcFileDetail.Label1">
+	<summary>
+Label1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.ParentID">
+	<summary>
+ 附件主表PKID
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.ParentCategory">
+	<summary>
+ 附件父類別
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.FileGuidList">
+	<summary>
+ 上傳文件集合(需要修改这些FileGuid對應的ParentID)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.ParentSubCategory">
+	<summary>
+ 附件子類別
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.CanUpload">
+	<summary>
+  是否可上傳數據
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.CanDownLoad">
+	<summary>
+  是否可下載附件
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.CanRemove">
+	<summary>
+     是否可刪除附件
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.CanEdit">
+	<summary>
+  是否可編輯
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.FileUplode">
+	<summary>
+  可以上传的文件类型
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UcFileDetail.FileSize">
+	<summary>
+  可以上传的文件大小
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.ErrorPage.Label2">
+	<summary>
+Label2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ErrorPage.LblErrorMessage">
+	<summary>
+LblErrorMessage 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ErrorPage.Label3">
+	<summary>
+Label3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ErrorPage.HyperLink1">
+	<summary>
+HyperLink1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ErrorPage.HyperLink2">
+	<summary>
+HyperLink2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:CMCFileManage.VerifyHelper.VerifyStringLength(System.String,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 校驗輸入的字串長度，若有超過截斷超過長度的部分
+ </summary>
+	<param name="VerifyString"></param>
+	<param name="Length"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.VerifyHelper.ParseIsNum(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為數字類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.VerifyHelper.ParseIsPositiveNum(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為正數數字類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.VerifyHelper.ParseIsPositiveInteger(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為正整型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.VerifyHelper.ParseIsNegativeInteger(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為負整型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.VerifyHelper.ParseNonNegativeInteger(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為非負整數類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.ParsePositiveNumber(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為正數類型
+ </summary>
+	<param name="SourceParseString">解析字串</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.ParseFloatNumber(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為浮點數類型
+ </summary>
+	<param name="SourceParseString">解析字串</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidOnllyChar(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証隻有字母
+ </summary>
+	<param name="InString">待驗証的字串</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidOnlyNumber(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証隻有數字
+ </summary>
+	<param name="strln">待驗証的字串</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidOnlyNumberAndChar(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証隻有數字和字母
+ </summary>
+	<param name="strln">待驗証的字串</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidOnllyChinese(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証隻有中文
+ </summary>
+	<param name="InString">待驗証的字串</param>
+	<returns></returns>
+	<remarks>
+	</remarks>&gt;
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidNumder(System.String,System.Int32)">
+	<summary>
+ 只能是數字
+ </summary>
+	<param name="InString">要驗證的字串</param>
+	<param name="maxDigitalBit">最長的小數位</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.VerifyHelper.ParseIsDate(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為日期時間類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidDate(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為日期時間類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidEmail(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証Email
+ </summary>
+	<param name="InString">待驗証的Email</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidFax(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証傳真號碼
+ </summary>
+	<param name="InString">傳入的傳真號碼</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.IsValidMobil(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証是否為移動電話
+ </summary>
+	<param name="InString"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.VerifyHelper.isValidPassWord(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 驗証是否為強密碼長度
+ </summary>
+	<param name="strln">待驗証的字串</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:CMCFileManage.VerifyHelper">
+ -----------------------------------------------------------------------------
+ Project	 : MPTTimeTrack
+ Class	 : VerifyHelper
+ 
+ -----------------------------------------------------------------------------
+ <summary>
+ 系統校驗類
+ </summary>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.DataAssist.Encrypt(System.String)">
+	<summary>
+ 將明文通過MD5方式加密
+ </summary>
+	<param name="CleanString">要加密的文本</param>
+	<returns>返回MD5加密後的密文</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.AddAutoIncrement(System.Data.DataTable)">
+	<summary>
+ 往指定的數據表中加入一個自增1的整型欄位
+ </summary>
+	<param name="ActiveTable">要加入自增1的整型欄位的數據表</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.AddTextColumn(System.Data.DataTable,System.String,System.String)">
+	<summary>
+ 往指定的數據表中加入一個文本欄位
+ </summary>
+	<param name="ActiveTable">要加入文本欄位的數據表</param>
+	<param name="ColumnName">要加入的欄位名稱</param>
+	<param name="RowCellValue">要加入的欄位文本值</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.VerifyStringLength(System.String,System.Int32)">
+	<summary>
+ 校驗輸入的字串長度，若有超過截斷超過長度的部分
+ </summary>
+	<param name="VerifyString"></param>
+	<param name="Length"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.ParseIsPositiveNum(System.String)">
+	<summary>
+ 判斷指定的字符串是否可以解析為正數數字類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.ParseIsPositiveInteger(System.String)">
+	<summary>
+ 判斷指定的字符串是否可以解析為正整型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.ParseIsNum(System.String)">
+	<summary>
+ 判斷指定的字符串是否可以解析為數字類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.ParseNonNegativeInteger(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為非負整數類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<history>
+ 	[F2156972]	2007/6/15	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.DataAssist.ParseIsDate(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 判斷指定的字符串是否可以解析為日期時間類型
+ </summary>
+	<param name="SourceParseString"></param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.DataAssist.GetSearchString(System.String,System.String,System.String,System.Boolean@,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 動態構建查詢字串
+ </summary>
+	<param name="columnName"></param>
+	<param name="keyword1"></param>
+	<param name="keyword2"></param>
+	<param name="hasContent"></param>
+	<param name="colType"></param>
+	<returns></returns>
+	<remarks>
+         Dim tmp As Boolean = False
+         Dim key1 As String = "ABC"
+         Dim key2 As String = "CCC"
+         Dim key3 As Integer = 5
+         Dim search As String = ""
+         search += GetSearchString("col1", key1, "", tmp, 2)
+         search += GetSearchString("col2", key2, "", tmp, 3)
+         search += GetSearchString("col3", key3, "", tmp, 1)
+         search += GetSearchString("DateCol", "2006-01-01", "2006-02-01", tmp, 4)
+         Me.TextBox1.Text = search
+ </remarks>
+	<history>
+ 	[F2156972]	2006/10/9	Created
+ </history>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.DataAssist.DDL_BDWithXML(System.Web.UI.WebControls.DropDownList@)">
+	<summary>
+ 傳入參數下拉菜單，與XML數據綁定
+ </summary>
+	<param name="DDL"></param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataAssist.GetInfoFromXML(System.String,System.String,System.String)">
+	<summary>
+ 根據傳參，從XML表中取得另外一個數值（text或者value）
+ </summary>
+	<param name="TableName"></param>
+	<param name="key"></param>
+	<param name="value"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlGrdPage.GrdID">
+	<summary>
+ gridview的ID,默認GridView1
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlGrdPage.PageIndex">
+ -----------------------------------------------------------------------------
+ <summary>
+ 當前頁的索引
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:CMCFileManage.UCtlGrdPage.PageSize">
+ -----------------------------------------------------------------------------
+ <summary>
+ 當前頁的行
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:CMCFileManage.UCtlGrdPage.DataSource">
+	<summary>
+ 數據源，如果Grd為默認ID，則只需要設定數據源
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.My.MyWebExtension.Computer">
+	<summary>
+ 傳回主機電腦的相關資訊。
+ </summary>
+</member><member name="P:CMCFileManage.My.MyWebExtension.User">
+	<summary>
+ 傳回目前 Web 使用者的資訊。
+ </summary>
+</member><member name="P:CMCFileManage.My.MyWebExtension.Request">
+	<summary>
+ 傳回 Request 物件。
+ </summary>
+</member><member name="P:CMCFileManage.My.MyWebExtension.Response">
+	<summary>
+ 傳回 Response 物件。
+ </summary>
+</member><member name="P:CMCFileManage.My.MyWebExtension.Log">
+	<summary>
+ 傳回 Asp 記錄物件。
+ </summary>
+</member><member name="T:CMCFileManage.My.MyWebExtension">
+	<summary>
+ 用來定義可用於 Web 專案 My 命名空間中之屬性的模組。
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.img3">
+	<summary>
+img3 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.Label1">
+	<summary>
+Label1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.UserNameLabel">
+	<summary>
+UserNameLabel 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.UserName">
+	<summary>
+UserName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.UserNameRequired">
+	<summary>
+UserNameRequired 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.PasswordLabel">
+	<summary>
+PasswordLabel 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.Password">
+	<summary>
+Password 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.PasswordRequired">
+	<summary>
+PasswordRequired 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.RememberMe">
+	<summary>
+RememberMe 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.LoginButton">
+	<summary>
+LoginButton 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlLogin.FailureText">
+	<summary>
+FailureText 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="T:CMCFileManage.IFactory">
+	<summary>
+ 調用listaction的UCtrl時需繼承此接口
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.Factory.Delete(System.Int32)">
+	<summary>
+ 刪除
+ </summary>
+	<param name="PKID">需要刪除數據的PKID</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.Factory.GetInfoByPKID(System.Int32)">
+	<summary>
+ 通過PKID查詢一條數據
+ </summary>
+	<param name="PKID">需要要搜尋的PKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.Factory.GetInfosBySearchCondition(System.String)">
+	<summary>
+ 根據條件查詢
+ </summary>
+	<param name="SearchString">查詢條件</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.MasterPager.head">
+	<summary>
+head 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.MasterPager.form1">
+	<summary>
+form1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.MasterPager.ScriptManager1">
+	<summary>
+ScriptManager1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.MasterPager.UCtlMenu1">
+	<summary>
+UCtlMenu1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.MasterPager.UCtlUserInfo1">
+	<summary>
+UCtlUserInfo1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.MasterPager.LabMainTitle">
+	<summary>
+LabMainTitle 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.MasterPager.ContentPlaceHolder1">
+	<summary>
+ContentPlaceHolder1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.MasterPager.UCtlFooter1">
+	<summary>
+UCtlFooter1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:CMCFileManage.MasterPager.Contrl_BD">
+	<summary>
+ 根據權限綁定TreeView
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.UCtlGrdPage.PagerControl1">
+	<summary>
+PagerControl1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.LnkAdd">
+	<summary>
+LnkAdd 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.LnkDelete">
+	<summary>
+LnkDelete 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.tdSearch">
+	<summary>
+tdSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.DDLSearchType">
+	<summary>
+DDLSearchType 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.DDLSearchValue">
+	<summary>
+DDLSearchValue 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.TxtSearch1">
+	<summary>
+TxtSearch1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.tdTime2">
+	<summary>
+tdTime2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.TxtSearch2">
+	<summary>
+TxtSearch2 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.BtnSearch">
+	<summary>
+BtnSearch 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.BtnReset">
+	<summary>
+BtnReset 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.ListAction.ImageButton1">
+	<summary>
+ImageButton1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:CMCFileManage.ADONetHelper.Difference(System.Data.DataTable,System.Data.DataTable)">
+	<summary>
+ 比較兩個表的不同，返回含有不同項的DataTable
+ </summary>
+	<param name="First">要比較的第一個表</param>
+	<param name="Second">要比較的第二個表</param>
+	<returns></returns>
+	<remarks>
+		<example>
+			<code lang="vbnet">
+  Dim sT As DataTable = New DataTable
+  Dim c1 As New DataColumn("c1", System.Type.GetType("System.String"))
+  Dim c2 As New DataColumn("c2", System.Type.GetType("System.String"))
+  sT.Columns.AddRange(New DataColumn() {c1, c2})
+  Dim r1 As DataRow = sT.NewRow
+  r1.Item("c1") = "S1"
+  r1.Item("c2") = "S2"
+  sT.Rows.Add(r1)
+  Dim r2 As DataRow = sT.NewRow
+  r2.Item("c1") = "S3"
+  r2.Item("c2") = "S4"
+  sT.Rows.Add(r2)
+  Dim DT As DataTable = New DataTable
+  Dim Dc1 As New DataColumn("c1", System.Type.GetType("System.String"))
+  Dim Dc2 As New DataColumn("c3", System.Type.GetType("System.String"))
+  DT.Columns.AddRange(New DataColumn() {Dc1, Dc2})
+  Dim Dr1 As DataRow = DT.NewRow
+  Dr1.Item("c1") = "D1"
+  Dr1.Item("c3") = "D2"
+  DT.Rows.Add(Dr1)
+  Dim Dr2 As DataRow = DT.NewRow
+  Dr2.Item("c1") = "S3"
+  Dr2.Item("c3") = "S4"
+  DT.Rows.Add(Dr2)
+  Dim DifTable As DataTable = Difference(DT, sT)
+  Me.DataGrid1.DataSource = DifTable
+  Me.DataGrid1.DataBind()
+ </code>
+		</example>
+	</remarks>
+</member><member name="M:CMCFileManage.ADONetHelper.JoinDataTable(System.Data.DataTable,System.Data.DataTable,System.String,System.String)">
+	<summary>
+ 內聯接兩個DataTable,返回聯接後的DataTable
+ </summary>
+	<param name="dtLeft">聯接的左表</param>
+	<param name="dtRight">聯接的右表</param>
+	<param name="columnLeft">左表聯接欄位</param>
+	<param name="columnRight">右表聯接欄位</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.ADONetHelper.AddAutoIncrement(System.Data.DataTable)">
+	<summary>
+ 往指定的數據表中加入一個自增1的整型欄位
+ </summary>
+	<param name="ActiveTable">要加入自增1的整型欄位的數據表</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.ADONetHelper.AddTextColumn(System.Data.DataTable,System.String,System.Boolean,System.String)">
+	<summary>
+ 往指定的數據表中加入一個文本欄位
+ </summary>
+	<param name="ActiveTable">要加入文本欄位的數據表</param>
+	<param name="ColumnName">要加入的欄位名稱</param>
+	<param name="IsFillValue">是否要填入默認的值</param>
+	<param name="RowCellValue">要加入的欄位文本值</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.ADONetHelper.BuildCrossTabDataSet(System.String,System.Data.IDataReader,System.String,System.String,System.String,System.String,System.String,System.String,System.String)">
+	<summary>
+ 交叉表
+ </summary>
+	<param name="DataSetName">返回的Dataset數據集名稱</param>
+	<param name="result">數據源，為SqlDataReader類型</param>
+	<param name="FixedColumns">交叉表左邊固定的欄位</param>
+	<param name="VariableColumns"></param>
+	<param name="KeyColumn">源數據集中的主鍵欄位</param>
+	<param name="FieldColumn"></param>
+	<param name="FieldTypeColumn"></param>
+	<param name="StringValueColumn"></param>
+	<param name="NumericValueColumn"></param>
+	<returns></returns>
+	<remarks>
+		<example>
+			<code>
+    Dim dr As SqlDataReader = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings("DBschemeConnStr"), "PRACScheme_SchemeMachine_LoadMachineYields")
+      Dim VarColumnsStr As String
+      Dim AlistVarColumnName As ArrayList = New ArrayList
+      Dim sb As New StringBuilder
+      If Not dr Is Nothing Then
+            While dr.Read
+              Dim ColumnName As String = dr.Item("MachineName").ToString
+              If Not AlistVarColumnName.Contains(ColumnName) Then
+                    If Not Integer.Equals(AlistVarColumnName.Count ,0) Then
+                       sb.Append(",")
+                    End If
+                    sb.Append(ColumnName + "|String")
+                   AlistVarColumnName.Add(ColumnName)
+                End If
+           End While
+           If Not dr.IsClosed Then dr.Close()
+       End If
+
+       dr = SqlHelper.ExecuteReader(ConfigurationSettings.AppSettings("DBschemeConnStr"), "PRACScheme_SchemeMachine_LoadMachineYields")
+       Dim ds As DataSet = DataHelper.BuildCrossTabDataSet("dsName", dr, "MaterialTexture|String", sb.ToString,"PKID", "MachineName", String.Empty, "yield", String.Empty)
+       Dim dt As DataTable = ds.Tables(0).Clone
+       Dim PrimaryKey(1) As DataColumn
+       PrimaryKey(0) = dt.Columns(0)
+       dt.PrimaryKey = PrimaryKey
+       Dim i As Integer 'Row Var
+       Dim j As Integer 'Column Var
+       Dim ColumnCount As Integer = ds.Tables(0).Columns.Count
+       Dim RowCount As Integer = ds.Tables(0).Rows.Count
+        For i = 0 To RowCount - 1
+            Dim DataSourceRow As DataRow = ds.Tables(0).Rows(i)
+            Dim OldDataRow As DataRow = dt.Rows.Find(DataSourceRow.Item("MaterialTexture"))
+            If OldDataRow Is Nothing Then
+               Dim NewRow As DataRow = dt.NewRow
+               For j = 0 To ColumnCount - 1
+                    NewRow.Item(j) = DataSourceRow.Item(j)
+                Next
+                dt.Rows.Add(NewRow)
+            Else
+                For j = 0 To ColumnCount - 1
+                    If OldDataRow.Item(j).ToString.Trim = "" Then
+                        OldDataRow.Item(j) = DataSourceRow.Item(j)
+                    End If
+                Next
+            End If
+        Next
+        Me.DataGrid1.DataSource = dt
+        Me.DataGrid1.DataBind()
+        Me.DataGrid2.DataSource = ds.Tables(0)
+        Me.DataGrid2.DataBind()
+        If Not dr.IsClosed Then dr.Close()
+ </code>
+		</example>
+	</remarks>
+</member><member name="M:CMCFileManage.ADONetHelper.ConvertDataReaderToDataTable(System.Data.SqlClient.SqlDataReader)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 將指定的DataReader轉換成DataTable
+ </summary>
+	<param name="dataReader">要轉換的DataReader</param>
+	<returns></returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.ADONetHelper.GetEntitysFromTbl``1(System.Data.DataTable)">
+	<summary> 
+ 根据DataSet构建泛型对象集合 
+ </summary>
+	<typeparam name="T">泛型 </typeparam>
+	<param name="tbl">数据表. </param>
+	<returns>泛型对象集合 </returns>
+</member><member name="T:CMCFileManage.ADONetHelper">
+	<summary>
+ 數據輔助類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.#ctor(CMCFileManage.CaiGouUserInfo)">
+	<summary>
+ 要進行數據控制的CaiGouUserInfo實例
+ </summary>
+	<param name="CaiGouUserInstance">要操作的CaiGouUserInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserDAL.CaiGouUserInstance">
+	<summary>
+ CaiGouUserInfo實例
+ </summary>
+	<value></value>
+	<returns>CaiGouUserInfo</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="HumanPKID">作業人員PKID編號</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.Delete(CMCFileManage.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForCaiGouUserInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.LoadCaiGouUserInfoByHumanPKID(System.Int32)">
+	<summary>載入指定主鍵對應的CaiGouUserInfo對象</summary>
+	<param name="HumanPKID">HumanPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.LoadAllDataForCaiGouUserInfo">
+	<summary>載入全部的CaiGouUserInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.LoadAllCaiGouUserInfoCountBySearchCondition(CMCFileManage.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForCaiGouUserInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.LoadAllCaiGouUserInfoCollectionBySearchCondition(CMCFileManage.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForCaiGouUserInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>CaiGouUserInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserDAL.EntityList2Datatable(System.Collections.Generic.List{CMCFileManage.CaiGouUserInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.CaiGouUserDAL">
+	<summary>
+ 採購人員信息實例類
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="F:CMCFileManage.UCtlMenu.Menu1">
+	<summary>
+Menu1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlMenu.LabName">
+	<summary>
+LabName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlMenu.Lnk">
+	<summary>
+Lnk 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlMenu.LnkLogIO">
+	<summary>
+LnkLogIO 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlTreeView.imgTitle">
+	<summary>
+imgTitle 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlTreeView.TreeView1">
+	<summary>
+TreeView1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:CMCFileManage.BasePage.CancelFormControlEnterKey(System.Web.UI.ControlCollection)">
+	<summary>
+ 在这里我们给Form中的服务器控件添加客户端onkeydown脚步事件，防止服务器控件按下enter键直接回发
+ </summary>
+	<param name="controls"></param>
+</member><member name="M:CMCFileManage.BasePage.RegisterUndoEnterKeyScript">
+	<summary>
+ 向页面注册forbidInputKeyDown脚本
+ </summary>
+</member><member name="M:CMCFileManage.BasePage.OnError(System.EventArgs)">
+	<summary>
+ 出错处理:写日志,导航到公共出错页面
+ </summary>
+	<param name="e"></param>
+</member><member name="M:CMCFileManage.BasePage.DealException(System.Exception)">
+	<summary>
+ 处理异常，用来将主要异常信息写入文本日志
+ </summary>
+	<param name="ex"></param>
+	<returns></returns>
+</member><member name="M:CMCFileManage.BasePage.DisableSubmitButton(System.Web.UI.Control,System.String)">
+	<summary>
+ 禁止重複提交按鈕
+ </summary>
+	<param name="SubmitControl"></param>
+	<param name="AlertText"></param>
+	<returns></returns>
+	<remarks>
+ 在Page_Load事件中加入下面的代碼
+ <code>
+ Protected Sub Page_Load(ByVal sender As Object, ByVal e As System.EventArgs) Handles Me.Load
+    ClientScript.GetPostBackEventReference(Me.Button1, "")  '保证 __doPostBack(eventTarget, eventArgument) 正确注册
+    If Not IsPostBack Then
+        Button1.Attributes.Add("onclick", DisableSubmitButton(Me.Button1, ""))
+    End If
+ End Sub
+ </code>
+	</remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfoCollection.AttachFileInfoInfoList">
+	<summary>
+ 集合類
+ </summary>
+	<value></value>
+	<returns>List(Of AttachFileInfoInfo)</returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.AttachFileInfoInfoCollection">
+	<summary>
+ 集合類
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.UCtlImgList.DataList1">
+	<summary>
+DataList1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlImgList.TDDown">
+	<summary>
+TDDown 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlImgList.FileUpload1">
+	<summary>
+FileUpload1 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlImgList.BtnAddImg">
+	<summary>
+BtnAddImg 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlImgList.BtnClear">
+	<summary>
+BtnClear 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="T:CMCFileManage.ListAction.SearchTypeValue">
+	<summary>
+ DDLSearchType的搜索類型
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.ExcelDt">
+	<summary>
+ Excel匯出數據源
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.GrdID">
+	<summary>
+ gridview的ID,默認GridView1
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.BLLClass">
+	<summary>
+ 操作類(必填)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.UrlAdd">
+	<summary>
+ 新增跳轉頁面(必填)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.SearchKey">
+	<summary>
+ 搜索資料庫中的欄位名稱,SearchVisible必須為True才有效
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.SearchVisible">
+	<summary>
+ 是否顯示搜索功能
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.DeleteVisible">
+	<summary>
+ 是否顯示刪除
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.AddVisible">
+	<summary>
+ 是否顯示新增
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.ValueType">
+	<summary>
+ 搜索值類型,默認值SearchTypeValue.TxtValue(如果為SearchTypeValue.DDLValue則需設置二級聯動DDL)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ListAction.SearchValue">
+	<summary>
+ 搜索值
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.ListAction.ControlVisible">
+	<summary>
+ 根據搜索類型顯示control
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlMenu.DataSource">
+	<summary>
+ Treeview的數據源
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.CaiGouUserInfoCollection.Convert2EntityList(CMCFileManage.CaiGouUserInfoCollection)">
+	<summary>
+ 將實體對象集合轉換為實體泛型集合
+ </summary>
+	<param name="Collection">實體對象集合</param>
+	<returns>實體泛型集合</returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.CaiGouUserInfoCollection">
+	<summary>
+ 採購人員信息集合類
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.DataExcel.SheetName">
+	<summary>
+ 表單名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.DataExcel.ChartSource">
+	<summary>
+		<para>匯出帶有圖表的Excel</para>
+		<para>dt圖表數據源（一行多列）</para>
+		<para>Title圖表名稱</para>
+		<para>XTitle圖表X軸名稱</para>
+		<para>YTitle圖表Y軸名稱</para>
+		<para>Color不同含義圖表不同邊框顏色</para>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DataExcel.ToExcel(System.Data.DataTable,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 匯出Excel
+ </summary>
+	<param name="dt"></param>
+	<param name="saveFileName"></param>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:CMCFileManage.DataExcel.DataExcelReport(CMCFileManage.DataExcel.ChartSource[])">
+	<summary>
+ 匯出帶有圖表的Excel
+ </summary>
+	<param name="ChartSource"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.DataExcel">
+	<summary>
+ Excel匯出
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.HumanPKID">
+	<summary>作業人員PKID編號</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.HumanID">
+	<summary>採購人員的工號</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.HumanName">
+	<summary>採購人員的姓名</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.HumanTel">
+	<summary>採購人員的電話</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.HumanEmail">
+	<summary>採購人員的郵件</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.HumanDataSource">
+	<summary>此採購人員在eFlow帳號表中的PKID</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.SkillDegree">
+	<summary>採購人員的作業熟練程度</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.Extend1">
+	<summary>預留擴展</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.Extend2">
+	<summary>預留擴展</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.Extend3">
+	<summary>預留擴展</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.Extend4">
+	<summary>預留擴展</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.Extend5">
+	<summary>預留擴展</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.LastModifyTime">
+	<summary>最後更新時間（用於排程同步）</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.RecordDeleted">
+	<summary>刪除標志</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.RecordCreated">
+	<summary>創建時間</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.CaiGouUserInfo.RecordVersion">
+	<summary>版本</summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_HumanPKID">
+	<summary>HumanPKID[作業人員PKID編號]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_HumanID">
+	<summary>HumanID[採購人員的工號]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_HumanName">
+	<summary>HumanName[採購人員的姓名]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_HumanTel">
+	<summary>HumanTel[採購人員的電話]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_HumanEmail">
+	<summary>HumanEmail[採購人員的郵件]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_HumanDataSource">
+	<summary>HumanDataSource[此採購人員在eFlow帳號表中的PKID]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_SkillDegree">
+	<summary>SkillDegree[採購人員的作業熟練程度]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_Extend1">
+	<summary>Extend1[預留擴展]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_Extend2">
+	<summary>Extend2[預留擴展]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_Extend3">
+	<summary>Extend3[預留擴展]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_Extend4">
+	<summary>Extend4[預留擴展]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_Extend5">
+	<summary>Extend5[預留擴展]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_LastModifyTime">
+	<summary>LastModifyTime[最後更新時間（用於排程同步）]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_RecordDeleted">
+	<summary>RecordDeleted[刪除標志]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_RecordCreated">
+	<summary>RecordCreated[創建時間]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.Text_RecordVersion">
+	<summary>RecordVersion[版本]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForHumanID">
+	<summary>[採購人員的工號]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForHumanName">
+	<summary>[採購人員的姓名]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForHumanTel">
+	<summary>[採購人員的電話]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForHumanEmail">
+	<summary>[採購人員的郵件]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForSkillDegree">
+	<summary>[採購人員的作業熟練程度]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForExtend1">
+	<summary>[預留擴展]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForExtend2">
+	<summary>[預留擴展]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForExtend3">
+	<summary>[預留擴展]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForExtend4">
+	<summary>[預留擴展]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForExtend5">
+	<summary>[預留擴展]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.CaiGouUserInfo.ColumnLengthForRecordVersion">
+	<summary>[版本]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="T:CMCFileManage.CaiGouUserInfo">
+	<summary>
+ 採購人員信息實例類
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.PKID">
+	<summary>
+ 主鍵ID
+ </summary>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.DocUniqueID">
+	<summary>
+ 流程實例ID
+ </summary>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.ProjectType">
+	<summary>
+ 專案類型
+ </summary>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.RequestNum">
+	<summary>
+ 需求數量
+ </summary>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.AddUser">
+	<summary>
+ 申請人工號
+ </summary>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.IsFinish">
+	<summary>
+ 是否結案
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.Remark">
+	<summary>
+ 備注
+ </summary>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.RecordCreated">
+	<summary>
+ 創建時間
+ </summary>
+</member><member name="P:CMCFileManage.WF_ProjectInfo.RecordVersion">
+	<summary>
+ 記錄版本
+ </summary>
+</member><member name="M:CMCFileManage.WF_ProjectInfo.LoadInstanceCollectionByCustomPaging(System.String,System.String,System.String,System.Int32)">
+	<summary>
+ 分頁取得數據集
+ </summary>
+	<param name="Filter">條件過濾表達式</param>
+	<param name="SortExpression">排序表達式</param>
+	<param name="PageNumber">第幾頁</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.WF_ProjectInfo">
+	<summary>
+  WF_ProjectInfo
+ </summary>
+</member><member name="P:CMCFileManage.UCtlTreeView.DataSource">
+	<summary>
+ Treeview的數據源
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.UCtlTreeView.GetUrlPath(System.String)">
+	<summary>
+ 通過對比當前url與Treeview中的url確定被選中節點
+ </summary>
+	<param name="url"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.SimpleLogger.WriteFileLog(System.String,System.String)">
+	<summary>
+ 写入异常日志
+ </summary>
+	<param name="exMsg"></param>
+	<param name="path"></param>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.SimpleLogger">
+	<summary>
+ 日志类(常用的都是用log4net，这里简陋地实现一个写入文本日志类)
+ </summary>
+</member><member name="P:CMCFileManage.UCtlImgList.ImgList">
+	<summary>
+ 取得或設定圖片地址陣列
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlImgList.Folder">
+	<summary>
+ 存放圖片文件夾(在Upload下的資料夾) 
+ 如果上傳圖片需要分類請設定Folder為Upload文件夾下的子文件夾，默認為直接在Upload中
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlImgList.DownLoadOnly">
+	<summary>
+ 是否只可下載
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlImgList.ImgHeight">
+	<summary>
+ 圖片預覽高度
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlImgList.ImgWidth">
+	<summary>
+ 圖片預覽寬度
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlImgList.TxtWidth">
+	<summary>
+ 流覽Txt寬度
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.UCtlImgList.AlwaysDownLoad">
+	<summary>
+ 保持圖片總可以下載（針對在流程中下載被層遮擋住后不可下載附近進行設置，默認為被層遮擋后可下載）
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.UCtlImgList">
+	<summary>
+ 上傳傳下載圖片(一般默認情況下只需要設定ImgList或者得到ImgList)
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.UCtlFooter.LblVersionInfo">
+	<summary>
+LblVersionInfo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlFooter.HlSystemInfo">
+	<summary>
+HlSystemInfo 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlFooter.HLAccount">
+	<summary>
+HLAccount 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="M:CMCFileManage.SearchExtHelper.SearchDataWithCustomPaging(System.String,System.String,System.String,System.String,System.Int32,System.Int32,System.String,System.String,System.String)">
+	<summary>
+ 採用分頁的方式取回數據集
+ </summary>
+	<param name="TableName">數據集來源的表名</param>
+	<param name="PK">表的主鍵名</param>
+	<param name="SortExpression">排序表達式(eg: "ColumnName DESC")</param>
+	<param name="PageNumber">第幾頁</param>
+	<param name="Filter">查詢的Filter條件，默認為:Nothing</param>
+	<param name="Fields">查詢返回的欄位列表，默認為"*" 全部</param>
+	<param name="Group">查詢的Group條件，默認為:Nothing</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.DeleteByFileGuid(System.String)">
+	<summary>依文件GuID刪除記錄</summary>
+	<param name="FileGuid">附件FileGuid</param>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.UCtlUserInfo.imgTitle">
+	<summary>
+imgTitle 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlUserInfo.imgT">
+	<summary>
+imgT 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlUserInfo.LabName">
+	<summary>
+LabName 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlUserInfo.Lnk">
+	<summary>
+Lnk 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="F:CMCFileManage.UCtlUserInfo.LnkLogIO">
+	<summary>
+LnkLogIO 控制項。
+</summary>
+	<remarks>
+自動產生的欄位。
+將移動欄位宣告從設計檔案修改為程式碼後置檔案。
+</remarks>
+</member><member name="T:CMCFileManage.SqlHelper">
+	<summary>
+ SQL數據操作類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.#ctor(CMCFileManage.AttachFileInfoInfo)">
+	<summary>
+ 要進行數據控制的AttachFileInfoInfo實例
+ </summary>
+	<param name="AttachFileInfoInstance">要操作的AttachFileInfoInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.DAL.AttachFileInfoDAL.AttachFileInfoInstance">
+	<summary>
+ AttachFileInfoInfo實例
+ </summary>
+	<value></value>
+	<returns>AttachFileInfoInfo</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="FileID">附件PKID</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.Delete(CMCFileManage.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForAttachFileInfoInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.LoadAttachFileInfoInfoByFileID(System.Int32)">
+	<summary>載入指定主鍵對應的AttachFileInfoInfo對象</summary>
+	<param name="FileID">FileID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.LoadAllAttachFileInfoInfoCountBySearchCondition(CMCFileManage.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForAttachFileInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.LoadAllAttachFileInfoInfoCollectionBySearchCondition(CMCFileManage.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForAttachFileInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>AttachFileInfoInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.LoadInstanceCollectionByCustomPaging(System.String,System.String,System.Int32)">
+	<summary>
+ 分頁取得數據集
+ </summary>
+	<param name="Filter">條件過濾表達式</param>
+	<param name="SortExpression">排序表達式</param>
+	<param name="PageNumber">第幾頁</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.EntityList2Datatable(System.Collections.Generic.List{CMCFileManage.AttachFileInfoInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.Merge(System.Collections.Generic.List{CMCFileManage.AttachFileInfoInfo},System.Collections.Generic.List{CMCFileManage.AttachFileInfoInfo},System.Boolean)">
+	<summary>
+ 合並對象集合
+ </summary>
+	<param name="MergeTO">合並到對象集合</param>
+	<param name="MergeFrom">合並從對象集合</param>
+	<param name="FilterDuplication">是否過濾重復記錄</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.Diff(System.Collections.Generic.List{CMCFileManage.AttachFileInfoInfo}@,System.Collections.Generic.List{CMCFileManage.AttachFileInfoInfo}@)">
+	<summary>
+ 過濾相同的對象，保留不同的對象
+ </summary>
+	<param name="Collection1">比對對象集1</param>
+	<param name="Collection2">比對對象集2</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.DAL.AttachFileInfoDAL.Subtract(System.Collections.Generic.List{CMCFileManage.AttachFileInfoInfo},System.Collections.Generic.List{CMCFileManage.AttachFileInfoInfo})">
+	<summary>
+ 清減對象集合
+ </summary>
+	<param name="MinuendCollection">被減數對象集合</param>
+	<param name="SubtrahendCollection">減數對象集合</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.DAL.AttachFileInfoDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:CMCFileManage.SearchHelper.GetSearchString(System.String,System.String,System.String,System.Boolean@,System.Int32)">
+	<summary>
+ 動態構建查詢字串
+ </summary>
+	<param name="columnName">查詢的資料欄位名</param>
+	<param name="keyword1">第一查詢關鍵字</param>
+	<param name="keyword2">第二查詢關鍵字</param>
+	<param name="hasContent">是否有查詢內容</param>
+	<param name="colType">查詢類別(可通過SearchType枚舉項進行設定)</param>
+	<returns></returns>
+	<remarks>
+	</remarks>
+	<example>
+		<code>
+         Dim tmp As Boolean = False
+         Dim key1 As String = "ABC"
+         Dim key2 As String = "CCC"
+         Dim key3 As Integer = 5
+         Dim search As String = ""
+         search += GetSearchString("col1", key1, "", tmp, 2)
+         search += GetSearchString("col2", key2, "", tmp, 3)
+         search += GetSearchString("col3", key3, "", tmp, 1)
+         search += GetSearchString("DateCol", "2006-01-01", "2006-02-01", tmp, 4)
+         Me.TextBox1.Text = search
+ 	</code>
+	</example>
+</member><member name="F:CMCFileManage.SearchHelper.SearchType.NumberType">
+	<summary>
+ 數字查詢類別
+ </summary>
+</member><member name="F:CMCFileManage.SearchHelper.SearchType.StringStrict">
+	<summary>
+ 字串精確查詢類別
+ </summary>
+</member><member name="F:CMCFileManage.SearchHelper.SearchType.StringNoStrict">
+	<summary>
+ 字串模糊查詢類別
+ </summary>
+</member><member name="F:CMCFileManage.SearchHelper.SearchType.DateType">
+	<summary>
+ 指定日期並往後一天的日期查詢類別
+ </summary>
+</member><member name="F:CMCFileManage.SearchHelper.SearchType.NumberBetween">
+	<summary>
+ 間於指定數字范圍的查詢類別
+ </summary>
+</member><member name="F:CMCFileManage.SearchHelper.SearchType.DateTypeNoStrict">
+	<summary>
+ 間於指定日期范圍的查詢類別
+ </summary>
+</member><member name="T:CMCFileManage.SearchHelper.SearchType">
+	<summary>
+ 搜索類別
+ </summary>
+	<remarks>
+	</remarks>
+</member><member name="T:CMCFileManage.SearchHelper">
+	<summary>
+ 查詢表達式類
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.SearchTerm.mField">
+	<summary>
+查詢項目
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.SearchTerm.mValue1">
+	<summary>
+ 查詢值1
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.SearchTerm.mValue2">
+	<summary>
+ 查詢值2
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.SearchTerm.mCondition">
+	<summary>
+ 查詢計算條件
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.SearchTerm.mCompareOperator">
+	<summary>
+ 查詢多條件時的操作關系
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.SearchTerm.Field">
+	<summary>
+ 查詢字段/資料庫欄位名
+ </summary>
+	<value></value>
+	<returns>資料庫欄位名</returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.SearchTerm.Value1">
+	<summary>
+ 查詢值1
+ </summary>
+	<value></value>
+	<returns>查詢值或查詢上下界值中的下界值</returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.SearchTerm.Value2">
+	<summary>
+ 查詢值2
+ </summary>
+	<value></value>
+	<returns>查詢上下界值中的上界值</returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.SearchTerm.CompareOperator">
+	<summary>
+ 查詢條件的計算方式
+ </summary>
+	<value></value>
+	<returns>查詢條件的計算方式,如大於、小於、包含、等於、介於等等</returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.SearchTerm.Condition">
+	<summary>
+ 查詢多條件時的操作關系
+ </summary>
+	<value></value>
+	<returns>查詢多條件時的操作關系, And / OR </returns>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.SearchWhereClause.SearchTerm">
+	<summary>
+ 查詢組成項結構
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.SearchWhereClause.#ctor">
+	<summary>
+ 建構式
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.SearchWhereClause.AddSearchTerm(System.String,CMCFileManage.SearchWhereClause.CompareOperator,System.String,System.String,CMCFileManage.SearchWhereClause.ConditionOperator)">
+	<summary>
+ 添加查詢條件式
+ </summary>
+	<param name="Field">查詢字段</param>
+	<param name="mOperator">查詢條件計算方法</param>
+	<param name="Value1">查詢值1</param>
+	<param name="Value2">查詢值2</param>
+	<param name="mConditionOperator">查詢多條件時的操作關系</param>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.SearchWhereClause.ClearSearchTerm">
+	<summary>
+ 清除查詢條件
+ </summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.SearchTerms">
+	<summary>
+ 查詢表達式集合
+ </summary>
+	<value></value>
+	<returns>已設定的查詢表達式集合</returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.WhereClause">
+	<summary>
+ 查詢表達式的SQL拼接字串結果
+ </summary>
+	<value></value>
+	<returns>查詢表達式的SQL拼接字串結果</returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.SearchWhereClause.UserInputWhereClause">
+	<summary>
+ 用戶輸入的直接查詢條件
+ </summary>
+	<value></value>
+	<returns>用戶輸入的直接查詢條件</returns>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.Contains">
+	<summary>
+ 包含文字(子串)
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.Equal">
+	<summary>
+ 數值型等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.EqualString">
+	<summary>
+ 字串型等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.NotEqual">
+	<summary>
+ 數值型不等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.NotEqualString">
+	<summary>
+ 字串型不等於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.BetweenNumber">
+	<summary>
+ 介於兩個數值之間
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.GreaterThan">
+	<summary>
+ 大於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.LessThan">
+	<summary>
+ 小於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.HaveValueIn">
+	<summary>
+ 存在值
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.NotHaveValueIn">
+	<summary>
+ 不存在值
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.StartWith">
+	<summary>
+ 文字開始於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.NotStartWith">
+	<summary>
+ 文字不開始於
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.BetweenOneDay">
+	<summary>
+ 日期在一天內
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.CompareOperator.BetweenDays">
+	<summary>
+ 日期在一個時間段內
+ </summary>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.SearchWhereClause.CompareOperator">
+	<summary>
+ 查詢條件計算操作方法枚舉
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.ConditionOperator.AndOperator">
+	<summary>
+ And 關系
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.SearchWhereClause.ConditionOperator.OrOperator">
+	<summary>
+ Or 關系
+ </summary>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.SearchWhereClause.ConditionOperator">
+	<summary>
+ 查詢多條件時的操作關系枚舉
+ </summary>
+	<remarks></remarks>
+</member><member name="T:CMCFileManage.SearchWhereClause">
+	<summary>
+ 動態條件查詢表達式生成類
+ </summary>
+	<remarks>
+		<example>
+			<code>
+     Dim obj As New SearchHelper.SearchWhereClause
+     obj.AddSearchTerm("FinishedFlag", obj.CompareOperator.BetweenDays, "2008/12/30", "2009/01/31")
+     obj.AddSearchTerm("DeleteFlag", obj.CompareOperator.NotEqual, "1", "")
+     Me.TextBox1.Text = obj.WhereClause
+  </code>
+		</example>
+	</remarks>
+</member><member name="P:CMCFileManage.ConfigurationInfo.ConnectionString">
+	<summary>
+ 數據庫連接字串
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.ConfigurationInfo.GetConfigValue(System.String)">
+	<summary>
+ 取得配置項的值
+ </summary>
+	<param name="ConfigName">配置項名稱</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ConfigurationInfo.GetCurrentCultureName">
+	<summary>
+ 取得當前線程的文化屬性名稱
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+</member><member name="P:CMCFileManage.ConfigurationInfo.RecordVersion">
+	<summary>
+ 取得當前DLL對應的版本編號
+ </summary>
+	<value></value>
+	<remarks>
+	</remarks>
+</member><member name="P:CMCFileManage.ConfigurationInfo.UrlBase">
+	<summary>
+ 取得專案URL目錄地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.ConfigurationInfo.RemoteUserIP">
+	<summary>
+ 取得遠端訪問用戶的IP地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.ConfigurationInfo.GetStateListByNameAndVersion(System.String,System.Int32)">
+	<summary>
+ 獲取指流程名稱，版本的流程狀態
+ </summary>
+	<param name="TemplateName">ConfigurationManager.AppSettings("TemplateName")</param>
+	<param name="TemplateVersion">ConfigurationManager.AppSettings("TemplateVersion")</param>
+	<returns></returns>
+	<remarks>
+ 不同流程可以在配置檔中進行配置
+ </remarks>
+</member><member name="T:CMCFileManage.ConfigurationInfo">
+	<summary>
+ 配置項功能類及常用方法
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.CGUserInfo.MPTBuyer">
+	<summary>
+ 採購人員
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.CGUserInfo.MPTLeader">
+	<summary>
+ 採購主管
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.CGUserInfo.MPTManager">
+	<summary>
+ 採購經理
+ </summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.CGUserInfo.SYSTEMMANAGER">
+	<summary>
+ 設備採購系統管理員
+ </summary>
+	<remarks></remarks>
+</member><member name="M:CMCFileManage.UplodeFileInfoDAL.DeleteByFileGuid(System.String)">
+	<summary>依文件GuID刪除記錄</summary>
+	<param name="FileGuid">附件FileGuid</param>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.FileID">
+	<summary>附件PKID</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.ParentID">
+	<summary>附件主表PKID</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.ParentCategory">
+	<summary>附件類別(不同模組附件的區分)</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.ParentSubCategory">
+	<summary>附件子類別(同一模組不同類別附件的區分)</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.FileGuID">
+	<summary>附件GuID</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.FileName">
+	<summary>附件名稱</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.FileExtension">
+	<summary>附件類型</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.FileSize">
+	<summary>附件大小</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.FileClientName">
+	<summary>附件客戶端名稱</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.Extend1">
+	<summary>擴展欄位1</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.Extend2">
+	<summary>擴展欄位2</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.Extend3">
+	<summary>擴展欄位3</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.Extend4">
+	<summary>擴展欄位4</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.Extend5">
+	<summary>擴展欄位5</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.RecordVersion">
+	<summary>記錄版本</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.RecordCreateTime">
+	<summary>記錄創建時間</summary>
+	<remarks></remarks>
+</member><member name="P:CMCFileManage.AttachFileInfoInfo.RecordDeleted">
+	<summary>記錄刪除標記(0:未刪除,1:已刪除)</summary>
+	<remarks></remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_FileID">
+	<summary>FileID[附件PKID]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_ParentID">
+	<summary>ParentID[附件主表PKID]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_ParentCategory">
+	<summary>ParentCategory[附件類別(不同模組附件的區分)]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_ParentSubCategory">
+	<summary>ParentSubCategory[附件子類別(同一模組不同類別附件的區分)]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_FileGuID">
+	<summary>FileGuID[附件GuID]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_FileName">
+	<summary>FileName[附件名稱]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_FileExtension">
+	<summary>FileExtension[附件類型]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_FileSize">
+	<summary>FileSize[附件大小]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_FileClientName">
+	<summary>FileClientName[附件客戶端名稱]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_Extend1">
+	<summary>Extend1[擴展欄位1]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_Extend2">
+	<summary>Extend2[擴展欄位2]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_Extend3">
+	<summary>Extend3[擴展欄位3]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_Extend4">
+	<summary>Extend4[擴展欄位4]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_Extend5">
+	<summary>Extend5[擴展欄位5]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_RecordVersion">
+	<summary>RecordVersion[記錄版本]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_RecordCreateTime">
+	<summary>RecordCreateTime[記錄創建時間]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.Text_RecordDeleted">
+	<summary>RecordDeleted[記錄刪除標記(0:未刪除,1:已刪除)]對應在資料庫中的欄位名稱</summary>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForFileName">
+	<summary>[附件名稱]的欄位長度</summary>
+	<remarks>默認長度為200</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForFileExtension">
+	<summary>[附件類型]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForFileClientName">
+	<summary>[附件客戶端名稱]的欄位長度</summary>
+	<remarks>默認長度為500</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForExtend1">
+	<summary>[擴展欄位1]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForExtend2">
+	<summary>[擴展欄位2]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForExtend3">
+	<summary>[擴展欄位3]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForExtend4">
+	<summary>[擴展欄位4]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForExtend5">
+	<summary>[擴展欄位5]的欄位長度</summary>
+	<remarks>默認長度為100</remarks>
+</member><member name="F:CMCFileManage.AttachFileInfoInfo.ColumnLengthForRecordVersion">
+	<summary>[記錄版本]的欄位長度</summary>
+	<remarks>默認長度為50</remarks>
+</member><member name="T:CMCFileManage.AttachFileInfoInfo">
+	<summary>實例類</summary>
+	<remarks></remarks>
+</member>
+</members>
+</doc>

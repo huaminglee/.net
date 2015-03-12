@@ -1,0 +1,80 @@
+﻿.Print_Main
+{
+	margin-left:5px;
+} 
+.microTitle
+{
+	font-family: 宋体;
+	text-align: center;
+	font-size: 20px;
+	font-weight: bold;
+	color: #093562;
+}
+.main_tabList {
+	width:640px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-left:1px solid #d2d8dc;
+	border-top: 1px solid #d2d8dc;
+}
+.main_tabList th {
+	height:35px;
+	line-height:35px;
+	white-space: nowrap;
+	overflow: visible;
+	background-color:#e9eff2;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	font-size:14px;
+	padding-left:16px;
+	text-align:left;
+}
+.main_tabList td {
+	border-bottom:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc solid;
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height:26px;
+	overflow:hidden;
+	text-align:left;
+	padding-left:16px;
+	white-space:nowrap;
+}
+.btn_back{background: url('../images/btn_back.png');cursor: pointer; width:106px;height:32px; border:none;color:white; letter-spacing:3px; padding-left:25px;}
+.btn_Print{background: url('../images/Print_b.png');cursor: pointer;width:105px;height:31px;border:none;color:white;letter-spacing:3px; padding-left:25px;}
+main_tabPrint
+{
+	width:505px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	margin-top:10px;
+}
+.main_tabPrint td {
+	padding-top:3px;
+	border-bottom:none;
+	border-right:none;
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height:26px;
+	overflow:hidden;
+	text-align:left;
+	padding-left:16px;
+	white-space:nowrap;
+}
+@media print
+{
+
+	.noprint
+	{
+		display: none;
+	}
+	.PrintStyle
+	{
+		background-color: White;
+	}
+}

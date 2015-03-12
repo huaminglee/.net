@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="AttachmentFile" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.AttachmentFile, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="AttachmentFileResultBase" class="AttachmentFile">
+      <result property="FileId" column="FileId" />
+      <result property="OCRContent" column="OCRContent" />
+      <result property="FileType" column="FileType" />
+      <result property="IsOCRed" column="IsOCRed" />
+      <result property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+    </resultMap>
+
+    <resultMap id="AttachmentFileResult" extends="AttachmentFileResultBase" class="AttachmentFile">
+      <result property="FileContent" column="FileContent" dbType="image"/>
+    </resultMap>
+
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="AttachmentFileParams" class="AttachmentFile">
+      <parameter property="FileId" column="FileId" />
+      <parameter property="FileContent" column="FileContent" dbType="image"/>
+      <parameter property="OCRContent" column="OCRContent" />
+      <parameter property="FileType" column="FileType" />
+      <parameter property="IsOCRed" column="IsOCRed" />
+      <parameter property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+    </parameterMap>
+
+    <parameterMap id="UpdateAttachmentFileParams" extends="AttachmentFileParams" class="AttachmentFile">
+      <parameter property="FileId" column="FileId" />
+    </parameterMap>
+
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetAttachmentFileCount"  resultClass="int">
+      SELECT count(*)
+      FROM OA_AttachmentFile
+    </select>
+
+    <select id="GetAttachmentFile"  parameterClass="AttachmentFile" resultMap="AttachmentFileResult">
+      SELECT *
+      FROM OA_AttachmentFile
+      WHERE (FileId = #FileId#)
+    </select>
+
+    <select id="GetAttachmentFileBase" extends="GetAttachmentFile" resultMap="AttachmentFileResultBase">
+    </select>
+
+    <select id="GetAttachmentFileList" parameterClass="string" resultMap="AttachmentFileResult" listClass="NorDataList">
+      SELECT *
+      FROM OA_AttachmentFile
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="FileId">
+          FileId
+        </isEqual>
+        <isEqual compareValue="FileId_D">
+          FileId desc
+        </isEqual>
+        <isEqual compareValue="FileContent">
+          FileContent
+        </isEqual>
+        <isEqual compareValue="FileContent_D">
+          FileContent desc
+        </isEqual>
+        <isEqual compareValue="OCRContent">
+          OCRContent
+        </isEqual>
+        <isEqual compareValue="OCRContent_D">
+          OCRContent desc
+        </isEqual>
+        <isEqual compareValue="FileType">
+          FileType
+        </isEqual>
+        <isEqual compareValue="FileType_D">
+          FileType desc
+        </isEqual>
+        <isEqual compareValue="IsOCRed">
+          IsOCRed
+        </isEqual>
+        <isEqual compareValue="IsOCRed_D">
+          IsOCRed desc
+        </isEqual>
+        <isEqual compareValue="CreateTime">
+          CreateTime
+        </isEqual>
+        <isEqual compareValue="CreateTime_D">
+          CreateTime desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="GetAttachmentFileListBase" extends="GetAttachmentFileList" resultMap="AttachmentFileResultBase" listClass="NorDataList">
+    </select>
+
+    <select id="QueryAttachmentFileCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM OA_AttachmentFile
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FileId" >
+          FileId like #FileId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileContent" >
+          FileContent = #FileContent#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="OCRContent" >
+          OCRContent like #OCRContent#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileType" >
+          FileType like #FileType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsOCRed" >
+          IsOCRed = #IsOCRed#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime" >
+          (Datediff(day,[CreateTime],#CreateTime#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime_S" >
+          <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryAttachmentFileList" parameterClass="Hashtable" resultMap="AttachmentFileResult" listClass="NorDataList">
+      SELECT *
+      FROM OA_AttachmentFile
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FileId" >
+          FileId like #FileId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileContent" >
+          FileContent = #FileContent#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="OCRContent" >
+          OCRContent like #OCRContent#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileType" >
+          FileType like #FileType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsOCRed" >
+          IsOCRed = #IsOCRed#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime" >
+          (Datediff(day,[CreateTime],#CreateTime#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime_S" >
+          <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="FileId" property="_OrderBy">
+          FileId
+        </isEqual>
+        <isEqual compareValue="FileId_D" property="_OrderBy">
+          FileId desc
+        </isEqual>
+        <isEqual compareValue="FileContent" property="_OrderBy">
+          FileContent
+        </isEqual>
+        <isEqual compareValue="FileContent_D" property="_OrderBy">
+          FileContent desc
+        </isEqual>
+        <isEqual compareValue="OCRContent" property="_OrderBy">
+          OCRContent
+        </isEqual>
+        <isEqual compareValue="OCRContent_D" property="_OrderBy">
+          OCRContent desc
+        </isEqual>
+        <isEqual compareValue="FileType" property="_OrderBy">
+          FileType
+        </isEqual>
+        <isEqual compareValue="FileType_D" property="_OrderBy">
+          FileType desc
+        </isEqual>
+        <isEqual compareValue="IsOCRed" property="_OrderBy">
+          IsOCRed
+        </isEqual>
+        <isEqual compareValue="IsOCRed_D" property="_OrderBy">
+          IsOCRed desc
+        </isEqual>
+        <isEqual compareValue="CreateTime" property="_OrderBy">
+          CreateTime
+        </isEqual>
+        <isEqual compareValue="CreateTime_D" property="_OrderBy">
+          CreateTime desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryAttachmentFileListBase" extends="QueryAttachmentFileList" resultMap="AttachmentFileResultBase" listClass="NorDataList">
+    </select>
+
+    <insert id="InsertAttachmentFile" parameterMap="AttachmentFileParams">
+      <generate table="OA_AttachmentFile" />
+    </insert>
+
+    <delete id="DeleteAttachmentFile" parameterClass="AttachmentFile">
+      DELETE FROM OA_AttachmentFile
+      WHERE (FileId = #FileId#)
+    </delete>
+
+    <update id="UpdateAttachmentFile" parameterMap="UpdateAttachmentFileParams">
+      UPDATE OA_AttachmentFile SET
+      FileId = ?,
+      FileContent = ?,
+      OCRContent = ?,
+      FileType = ?,
+      IsOCRed = ?,
+      CreateTime = ?
+      WHERE FileId = ?
+    </update>
+
+  </statements>
+
+</sqlMap>

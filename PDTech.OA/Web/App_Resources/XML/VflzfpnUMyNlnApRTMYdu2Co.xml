@@ -1,0 +1,119 @@
+<?xml version="1.0"?>
+<TestOnline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestName>10</TestName>
+  <TestCount>10</TestCount>
+  <TestScore>10</TestScore>
+  <QuestionCollection>
+    <Question>
+      <QuestionID>953e59f7-6201-43b1-973f-f93f078a1e68</QuestionID>
+      <Title>邓小平理论阐明了（  ）的基本问题。</Title>
+      <OptionA>共同富裕</OptionA>
+      <OptionB>解放和发展社会生产力</OptionB>
+      <OptionC>在中国建设社会主义、巩固和发展社会主义</OptionC>
+      <OptionD>社会主义初级阶段理论</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>952249c2-b7b9-45cb-a674-9ce8bc640716</QuestionID>
+      <Title>下列国家中实行部内制的是（）。 </Title>
+      <OptionA>英国                 </OptionA>
+      <OptionB>美国 </OptionB>
+      <OptionC>日本                  </OptionC>
+      <OptionD>法国</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>954f13bb-7f67-4fb5-b5c8-4787f38750e8</QuestionID>
+      <Title>行政诉讼的标的是（  ）。</Title>
+      <OptionA>抽象行政行为</OptionA>
+      <OptionB>具体行政行为</OptionB>
+      <OptionC>单一行政行为</OptionC>
+      <OptionD>多项行政行为</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>94cc92b2-6f6b-4515-9331-96dbe56404d9</QuestionID>
+      <Title>党的十八大报告指出，全面建成小康社会，实现中华民族伟大复兴，必须推动社会主义文化大发展大繁荣，兴起社会主义文化建设新高潮，提高国家文化（  ）。</Title>
+      <OptionA>控制力</OptionA>
+      <OptionB>影响力</OptionB>
+      <OptionC>软实力</OptionC>
+      <OptionD>渗透力</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>94a916a8-70ad-4038-87c6-aef2d21034cd</QuestionID>
+      <Title>下列行为属于挥霍浪费公共财产，须给予处分的是（  ）。</Title>
+      <OptionA>公款外出学习</OptionA>
+      <OptionB>公款出国考察兼旅游</OptionB>
+      <OptionC>更换办公室内的装饰</OptionC>
+      <OptionD>单位发放劳保用品</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>96054985-b76f-4bae-a2e2-22e425e62d79</QuestionID>
+      <Title>以下哪种情况不能录用为公务员：（  ）。</Title>
+      <OptionA>曾被行政撤职处分的</OptionA>
+      <OptionB>受过行政拘留的</OptionB>
+      <OptionC>曾被开除公职的</OptionC>
+      <OptionD>大专学历</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>941516d2-26b2-426a-ace9-b74208b1ae4f</QuestionID>
+      <Title>《中国共产党纪律处分条例》适用于（  ）。</Title>
+      <OptionA>所有党员</OptionA>
+      <OptionB>所有党组织</OptionB>
+      <OptionC>所有党员和党组织</OptionC>
+      <OptionD>违犯党纪应当受到党纪追究的党组织和党员</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>964b54dc-e293-493c-b1b5-5d4dc2ca1391</QuestionID>
+      <Title>十八届中央纪委第二次全会公报指出，党的十八大对当前和今后一个时期党风廉政建设和反腐败工作作出新的部署，十八届一中全会以来习近平同志一系列重要讲话对加强（  ）提出明确要求。</Title>
+      <OptionA>政治建设</OptionA>
+      <OptionB>作风建设</OptionB>
+      <OptionC>反腐倡廉</OptionC>
+      <OptionD>制度建设</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9349e36b-918b-422d-a02a-d6a7b6c4f679</QuestionID>
+      <Title>县级以上地方人民政府水行政主管部门和流域管理机构应当对水功能区的水 质状况进行监测，发现重点污染物排放总量超过控制指标的，或者水功能区的水质未达到（  ）对水质的要求的，应当及时报告有关人民政府采取治理措施， 并向环境保护行政主管部门通报。</Title>
+      <OptionA>水源使用功能  </OptionA>
+      <OptionB>水域使用功能 </OptionB>
+      <OptionC>水量使用功能  </OptionC>
+      <OptionD>水功能区划</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9673c9c4-229c-4c7b-94dd-b6afcc8c688b</QuestionID>
+      <Title>《十八届中央政治局关于改进工作作风、密切联系群众的八项规定》中规定要精简（  ）。</Title>
+      <OptionA>财政开支</OptionA>
+      <OptionB>会议活动</OptionB>
+      <OptionC>公职人员数量</OptionC>
+      <OptionD>机构设置</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>1</QuestionValue>
+      <Score>0</Score>
+    </Question>
+  </QuestionCollection>
+  <ReplyTime xsi:nil="true" />
+</TestOnline>

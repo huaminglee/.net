@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <update id="UpdateAttachmentFileOCRContent" parameterClass="AttachmentFile">
+      UPDATE OA_AttachmentFile SET
+      OCRContent = #OCRContent#,
+      IsOCRed = #IsOCRed#
+      WHERE FileId = #FileId#
+    </update>
+    <select id="HasAttachment" resultClass="int" parameterClass="Hashtable">
+      select count(1) from dual where exists(select 1 from oa_attachment where refid = #value#)
+    </select>
+  </statements>
+</sqlMap>

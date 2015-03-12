@@ -1,0 +1,1 @@
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeFile="upload_pro.aspx.cs" Inherits="Admin_upload_pro" %>

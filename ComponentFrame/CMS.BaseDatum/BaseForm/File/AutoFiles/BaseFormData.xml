@@ -1,0 +1,764 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="BaseFormData" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.BaseFormData, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="BaseFormDataResult" class="BaseFormData">
+      <result property="FormID" column="FormID" />
+      <result property="Creator" column="Creator" />
+      <result property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+      <result property="FinishDate" column="FinishDate" nullValue="01/01/0001 00:00:00"/>
+      <result property="Status" column="Status" />
+      <result property="TaskID" column="TaskID" />
+      <result property="WorkID" column="WorkID" />
+      <result property="SType" column="SType" />
+      <result property="Uurgency" column="Uurgency" />
+      <result property="IsSecret" column="IsSecret" />
+      <result property="SecretLevel" column="SecretLevel" />
+      <result property="FileNo" column="FileNo" />
+      <result property="Title" column="Title" />
+      <result property="SLevel" column="SLevel" />
+      <result property="RequestFinishDate" column="RequestFinishDate" nullValue="01/01/0001 00:00:00"/>
+      <result property="ReceiveDate" column="ReceiveDate" nullValue="01/01/0001 00:00:00"/>
+      <result property="IsSpecial" column="IsSpecial" />
+      <result property="SendUnit" column="SendUnit" />
+      <result property="DocType" column="DocType" />
+      <result property="Remark" column="Remark" />
+      <result property="CurStep" column="CurStep" />
+      <result property="CurRunner" column="CurRunner" />
+      <result property="ExpanField" column="ExpanField" />
+    </resultMap>
+
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="BaseFormDataParams" class="BaseFormData">
+      <parameter property="FormID" column="FormID" />
+      <parameter property="Creator" column="Creator" />
+      <parameter property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+      <parameter property="FinishDate" column="FinishDate" nullValue="01/01/0001 00:00:00"/>
+      <parameter property="Status" column="Status" />
+      <parameter property="TaskID" column="TaskID" />
+      <parameter property="WorkID" column="WorkID" />
+      <parameter property="SType" column="SType" />
+      <parameter property="Uurgency" column="Uurgency" />
+      <parameter property="IsSecret" column="IsSecret" />
+      <parameter property="SecretLevel" column="SecretLevel" />
+      <parameter property="FileNo" column="FileNo" />
+      <parameter property="Title" column="Title" />
+      <parameter property="SLevel" column="SLevel" />
+      <parameter property="RequestFinishDate" column="RequestFinishDate" nullValue="01/01/0001 00:00:00"/>
+      <parameter property="ReceiveDate" column="ReceiveDate" nullValue="01/01/0001 00:00:00"/>
+      <parameter property="IsSpecial" column="IsSpecial" />
+      <parameter property="SendUnit" column="SendUnit" />
+      <parameter property="DocType" column="DocType" />
+      <parameter property="Remark" column="Remark" />
+      <parameter property="CurStep" column="CurStep" />
+      <parameter property="CurRunner" column="CurRunner" />
+      <parameter property="ExpanField" column="ExpanField" />
+    </parameterMap>
+
+    <parameterMap id="UpdateBaseFormDataParams" extends="BaseFormDataParams" class="BaseFormData">
+      <parameter property="FormID" column="FormID" />
+    </parameterMap>
+
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetBaseFormDataCount"  resultClass="int">
+      SELECT count(*)
+      FROM [BaseForm];
+    </select>
+
+    <select id="GetBaseFormData"  parameterClass="BaseFormData" resultMap="BaseFormDataResult">
+      SELECT *
+      FROM [BaseForm]
+      WHERE ([FormID] = #FormID#) ;
+    </select>
+
+    <select id="GetBaseFormDataByPara"  parameterClass="Hashtable" resultMap="BaseFormDataResult">
+      SELECT *
+      FROM [BaseForm]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Creator" >
+          [Creator] like #Creator#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate" >
+          (Datediff(day,[CreateDate],#CreateDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate_S" >
+          <![CDATA[ (Datediff(day, #CreateDate_S#, [CreateDate]) >= 0) and (Datediff(day, #CreateDate_E#, [CreateDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate" >
+          (Datediff(day,[FinishDate],#FinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate_S" >
+          <![CDATA[ (Datediff(day, #FinishDate_S#, [FinishDate]) >= 0) and (Datediff(day, #FinishDate_E#, [FinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status" >
+          Status = #Status#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status_IN" >
+          (Status in ($Status_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskID" >
+          [TaskID] like #TaskID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="WorkID" >
+          [WorkID] like #WorkID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType" >
+          SType = #SType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType_IN" >
+          (SType in ($SType_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency" >
+          Uurgency = #Uurgency#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency_IN" >
+          (Uurgency in ($Uurgency_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret" >
+          IsSecret = #IsSecret#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret_IN" >
+          (IsSecret in ($IsSecret_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SecretLevel" >
+          [SecretLevel] like #SecretLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileNo" >
+          [FileNo] like #FileNo#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Title" >
+          [Title] like #Title#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SLevel" >
+          [SLevel] like #SLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate" >
+          (Datediff(day,[RequestFinishDate],#RequestFinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate_S" >
+          <![CDATA[ (Datediff(day, #RequestFinishDate_S#, [RequestFinishDate]) >= 0) and (Datediff(day, #RequestFinishDate_E#, [RequestFinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate" >
+          (Datediff(day,[ReceiveDate],#ReceiveDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate_S" >
+          <![CDATA[ (Datediff(day, #ReceiveDate_S#, [ReceiveDate]) >= 0) and (Datediff(day, #ReceiveDate_E#, [ReceiveDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial" >
+          IsSpecial = #IsSpecial#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial_IN" >
+          (IsSpecial in ($IsSpecial_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SendUnit" >
+          [SendUnit] like #SendUnit#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="DocType" >
+          [DocType] like #DocType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Remark" >
+          [Remark] like #Remark#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurStep" >
+          [CurStep] like #CurStep#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurRunner" >
+          [CurRunner] like #CurRunner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExpanField" >
+          [ExpanField] like #ExpanField#
+        </isNotEmpty>
+      </dynamic>
+
+    </select>
+
+    <select id="GetBaseFormDataList" parameterClass="string" resultMap="BaseFormDataResult" listClass="NorDataList">
+      SELECT *
+      FROM [BaseForm]
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="Creator">
+          [Creator]
+        </isEqual>
+        <isEqual compareValue="Creator_D">
+          [Creator] desc
+        </isEqual>
+        <isEqual compareValue="CreateDate">
+          [CreateDate]
+        </isEqual>
+        <isEqual compareValue="CreateDate_D">
+          [CreateDate] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryBaseFormDataCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM [BaseForm]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Creator" >
+          [Creator] like #Creator#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate" >
+          (Datediff(day,[CreateDate],#CreateDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate_S" >
+          <![CDATA[ (Datediff(day, #CreateDate_S#, [CreateDate]) >= 0) and (Datediff(day, #CreateDate_E#, [CreateDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate" >
+          (Datediff(day,[FinishDate],#FinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate_S" >
+          <![CDATA[ (Datediff(day, #FinishDate_S#, [FinishDate]) >= 0) and (Datediff(day, #FinishDate_E#, [FinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status" >
+          Status = #Status#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status_IN" >
+          (Status in ($Status_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskID" >
+          [TaskID] like #TaskID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="WorkID" >
+          [WorkID] like #WorkID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType" >
+          SType = #SType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType_IN" >
+          (SType in ($SType_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency" >
+          Uurgency = #Uurgency#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency_IN" >
+          (Uurgency in ($Uurgency_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret" >
+          IsSecret = #IsSecret#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret_IN" >
+          (IsSecret in ($IsSecret_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SecretLevel" >
+          [SecretLevel] like #SecretLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileNo" >
+          [FileNo] like #FileNo#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Title" >
+          [Title] like #Title#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SLevel" >
+          [SLevel] like #SLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate" >
+          (Datediff(day,[RequestFinishDate],#RequestFinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate_S" >
+          <![CDATA[ (Datediff(day, #RequestFinishDate_S#, [RequestFinishDate]) >= 0) and (Datediff(day, #RequestFinishDate_E#, [RequestFinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate" >
+          (Datediff(day,[ReceiveDate],#ReceiveDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate_S" >
+          <![CDATA[ (Datediff(day, #ReceiveDate_S#, [ReceiveDate]) >= 0) and (Datediff(day, #ReceiveDate_E#, [ReceiveDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial" >
+          IsSpecial = #IsSpecial#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial_IN" >
+          (IsSpecial in ($IsSpecial_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SendUnit" >
+          [SendUnit] like #SendUnit#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="DocType" >
+          [DocType] like #DocType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Remark" >
+          [Remark] like #Remark#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurStep" >
+          [CurStep] like #CurStep#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurRunner" >
+          [CurRunner] like #CurRunner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExpanField" >
+          [ExpanField] like #ExpanField#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryBaseFormDataList" parameterClass="Hashtable" resultMap="BaseFormDataResult" listClass="NorDataList">
+      SELECT *
+      FROM [BaseForm]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Creator" >
+          [Creator] like #Creator#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate" >
+          (Datediff(day,[CreateDate],#CreateDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate_S" >
+          <![CDATA[ (Datediff(day, #CreateDate_S#, [CreateDate]) >= 0) and (Datediff(day, #CreateDate_E#, [CreateDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate" >
+          (Datediff(day,[FinishDate],#FinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate_S" >
+          <![CDATA[ (Datediff(day, #FinishDate_S#, [FinishDate]) >= 0) and (Datediff(day, #FinishDate_E#, [FinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status" >
+          Status = #Status#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status_IN" >
+          (Status in ($Status_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskID" >
+          [TaskID] like #TaskID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="WorkID" >
+          [WorkID] like #WorkID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType" >
+          SType = #SType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType_IN" >
+          (SType in ($SType_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency" >
+          Uurgency = #Uurgency#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency_IN" >
+          (Uurgency in ($Uurgency_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret" >
+          IsSecret = #IsSecret#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret_IN" >
+          (IsSecret in ($IsSecret_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SecretLevel" >
+          [SecretLevel] like #SecretLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileNo" >
+          [FileNo] like #FileNo#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Title" >
+          [Title] like #Title#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SLevel" >
+          [SLevel] like #SLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate" >
+          (Datediff(day,[RequestFinishDate],#RequestFinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate_S" >
+          <![CDATA[ (Datediff(day, #RequestFinishDate_S#, [RequestFinishDate]) >= 0) and (Datediff(day, #RequestFinishDate_E#, [RequestFinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate" >
+          (Datediff(day,[ReceiveDate],#ReceiveDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate_S" >
+          <![CDATA[ (Datediff(day, #ReceiveDate_S#, [ReceiveDate]) >= 0) and (Datediff(day, #ReceiveDate_E#, [ReceiveDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial" >
+          IsSpecial = #IsSpecial#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial_IN" >
+          (IsSpecial in ($IsSpecial_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SendUnit" >
+          [SendUnit] like #SendUnit#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="DocType" >
+          [DocType] like #DocType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Remark" >
+          [Remark] like #Remark#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurStep" >
+          [CurStep] like #CurStep#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurRunner" >
+          [CurRunner] like #CurRunner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExpanField" >
+          [ExpanField] like #ExpanField#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="Creator" property="_OrderBy">
+          [Creator]
+        </isEqual>
+        <isEqual compareValue="Creator_D" property="_OrderBy">
+          [Creator] desc
+        </isEqual>
+        <isEqual compareValue="CreateDate" property="_OrderBy">
+          [CreateDate]
+        </isEqual>
+        <isEqual compareValue="CreateDate_D" property="_OrderBy">
+          [CreateDate] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <insert id="InsertBaseFormData" parameterMap="BaseFormDataParams">
+      <generate table="BaseForm" />
+    </insert>
+
+    <delete id="DeleteBaseFormData" parameterClass="BaseFormData">
+      DELETE FROM [BaseForm] WHERE ([FormID] = #FormID#) ;
+    </delete>
+
+    <select id="DeleteBaseFormDataByPara" parameterClass="Hashtable">
+      DELETE FROM [BaseForm]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="FormID" >
+          [FormID] like #FormID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Creator" >
+          [Creator] like #Creator#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate" >
+          (Datediff(day,[CreateDate],#CreateDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateDate_S" >
+          <![CDATA[ (Datediff(day, #CreateDate_S#, [CreateDate]) >= 0) and (Datediff(day, #CreateDate_E#, [CreateDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate" >
+          (Datediff(day,[FinishDate],#FinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FinishDate_S" >
+          <![CDATA[ (Datediff(day, #FinishDate_S#, [FinishDate]) >= 0) and (Datediff(day, #FinishDate_E#, [FinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status" >
+          Status = #Status#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Status_IN" >
+          (Status in ($Status_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskID" >
+          [TaskID] like #TaskID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="WorkID" >
+          [WorkID] like #WorkID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType" >
+          SType = #SType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SType_IN" >
+          (SType in ($SType_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency" >
+          Uurgency = #Uurgency#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Uurgency_IN" >
+          (Uurgency in ($Uurgency_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret" >
+          IsSecret = #IsSecret#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSecret_IN" >
+          (IsSecret in ($IsSecret_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SecretLevel" >
+          [SecretLevel] like #SecretLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileNo" >
+          [FileNo] like #FileNo#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Title" >
+          [Title] like #Title#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SLevel" >
+          [SLevel] like #SLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate" >
+          (Datediff(day,[RequestFinishDate],#RequestFinishDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RequestFinishDate_S" >
+          <![CDATA[ (Datediff(day, #RequestFinishDate_S#, [RequestFinishDate]) >= 0) and (Datediff(day, #RequestFinishDate_E#, [RequestFinishDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate" >
+          (Datediff(day,[ReceiveDate],#ReceiveDate#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ReceiveDate_S" >
+          <![CDATA[ (Datediff(day, #ReceiveDate_S#, [ReceiveDate]) >= 0) and (Datediff(day, #ReceiveDate_E#, [ReceiveDate]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial" >
+          IsSpecial = #IsSpecial#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="IsSpecial_IN" >
+          (IsSpecial in ($IsSpecial_IN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="SendUnit" >
+          [SendUnit] like #SendUnit#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="DocType" >
+          [DocType] like #DocType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Remark" >
+          [Remark] like #Remark#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurStep" >
+          [CurStep] like #CurStep#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CurRunner" >
+          [CurRunner] like #CurRunner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExpanField" >
+          [ExpanField] like #ExpanField#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <update id="UpdateBaseFormData" parameterMap="UpdateBaseFormDataParams">
+      UPDATE [BaseForm] SET
+      [FormID] = ?,
+      [Creator] = ?,
+      [CreateDate] = ?,
+      [FinishDate] = ?,
+      [Status] = ?,
+      [TaskID] = ?,
+      [WorkID] = ?,
+      [SType] = ?,
+      [Uurgency] = ?,
+      [IsSecret] = ?,
+      [SecretLevel] = ?,
+      [FileNo] = ?,
+      [Title] = ?,
+      [SLevel] = ?,
+      [RequestFinishDate] = ?,
+      [ReceiveDate] = ?,
+      [IsSpecial] = ?,
+      [SendUnit] = ?,
+      [DocType] = ?,
+      [Remark] = ?,
+      [CurStep] = ?,
+      [CurRunner] = ?,
+      [ExpanField] = ?
+      WHERE FormID = ?;
+    </update>
+
+    <select id="UpdateBaseFormDataByPara" parameterClass="Hashtable">
+      UPDATE [BaseForm]
+      <dynamic prepend="Set" >
+
+        <isNotEmpty prepend="," property="FormID" >
+          [FormID] = #FormID#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Creator" >
+          [Creator] = #Creator#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="CreateDate" >
+          [CreateDate] = #CreateDate#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="FinishDate" >
+          [FinishDate] = #FinishDate#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Status" >
+          [Status] = #Status#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="TaskID" >
+          [TaskID] = #TaskID#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="WorkID" >
+          [WorkID] = #WorkID#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="SType" >
+          [SType] = #SType#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Uurgency" >
+          [Uurgency] = #Uurgency#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="IsSecret" >
+          [IsSecret] = #IsSecret#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="SecretLevel" >
+          [SecretLevel] = #SecretLevel#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="FileNo" >
+          [FileNo] = #FileNo#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Title" >
+          [Title] = #Title#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="SLevel" >
+          [SLevel] = #SLevel#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="RequestFinishDate" >
+          [RequestFinishDate] = #RequestFinishDate#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ReceiveDate" >
+          [ReceiveDate] = #ReceiveDate#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="IsSpecial" >
+          [IsSpecial] = #IsSpecial#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="SendUnit" >
+          [SendUnit] = #SendUnit#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="DocType" >
+          [DocType] = #DocType#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Remark" >
+          [Remark] = #Remark#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="CurStep" >
+          [CurStep] = #CurStep#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="CurRunner" >
+          [CurRunner] = #CurRunner#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ExpanField" >
+          [ExpanField] = #ExpanField#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Where" >
+
+        <isNotEmpty prepend="AND" property="FormID_W" >
+          [FormID] = #FormID_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Creator_W" >
+          [Creator] = #Creator_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="CreateDate_W" >
+          [CreateDate] = #CreateDate_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="FinishDate_W" >
+          [FinishDate] = #FinishDate_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Status_W" >
+          [Status] = #Status_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="TaskID_W" >
+          [TaskID] = #TaskID_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="WorkID_W" >
+          [WorkID] = #WorkID_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="SType_W" >
+          [SType] = #SType_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Uurgency_W" >
+          [Uurgency] = #Uurgency_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="IsSecret_W" >
+          [IsSecret] = #IsSecret_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="SecretLevel_W" >
+          [SecretLevel] = #SecretLevel_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="FileNo_W" >
+          [FileNo] = #FileNo_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Title_W" >
+          [Title] = #Title_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="SLevel_W" >
+          [SLevel] = #SLevel_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="RequestFinishDate_W" >
+          [RequestFinishDate] = #RequestFinishDate_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ReceiveDate_W" >
+          [ReceiveDate] = #ReceiveDate_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="IsSpecial_W" >
+          [IsSpecial] = #IsSpecial_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="SendUnit_W" >
+          [SendUnit] = #SendUnit_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="DocType_W" >
+          [DocType] = #DocType_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Remark_W" >
+          [Remark] = #Remark_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="CurStep_W" >
+          [CurStep] = #CurStep_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="CurRunner_W" >
+          [CurRunner] = #CurRunner_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ExpanField_W" >
+          [ExpanField] = #ExpanField_W#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+  </statements>
+
+</sqlMap>

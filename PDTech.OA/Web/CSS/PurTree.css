@@ -1,0 +1,215 @@
+﻿Body
+{
+}
+
+.PurTree
+{
+	width: 519px;
+	height: 410px;
+}
+
+.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+
+.TreeUl
+{
+	width: 150px;
+	height: 410px;
+	position: absolute;
+	overflow: auto;
+	background-color: #e9eff2;
+	text-align: center;
+}
+
+.Form_View
+{
+	width: 360px;
+	height: 410px;
+}
+
+.Form_ViewInfo
+{
+	width: 360px;
+	margin-left: 20px;
+}
+
+.Form_Main
+{
+	width: 350px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: 1px #d2d8dc solid;
+	border-left: 1px #d2d8dc solid;
+	margin-top: 18px;
+}
+
+	.Form_Main th
+	{
+		height: 35px;
+		line-height: 35px;
+		white-space: nowrap;
+		overflow: visible;
+		background-color: #e9eff2;
+		border-bottom: 1px #d2d8dc solid;
+		border-top: 1px #d2d8dc solid;
+		border-right: 1px #d2d8dc dashed;
+		font-size: 14px;
+		padding-left: 16px;
+		text-align: left;
+	}
+
+	.Form_Main td
+	{
+		border-bottom: 1px #d2d8dc solid;
+		border-right: 1px #d2d8dc dashed;
+		white-space: normal;
+		word-break: break-all;
+		border-top: none;
+		height: 36px;
+		line-height: 36px;
+		text-align: left;
+		padding-left: 16px;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		white-space: nowrap;
+	}
+
+.Form_Main_Btnpanel
+{
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	white-space: nowrap;
+}
+
+
+.input
+{
+	border: 1px solid;
+	border-color: #999999 #e1e1e1 #e1e1e1 #999999;
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+}
+
+	.input:focus
+	{
+		border: 1px solid;
+		border-color: #555 #aaa #aaa #555;
+		background: #fffbde;
+	}
+
+.inputb
+{
+	width: 125px;
+}
+
+.inpute
+{
+	width: 205px;
+}
+
+.inputf
+{
+	width: 795px;
+}
+
+.ImpTips
+{
+	color: red;
+	padding-right: 16px;
+}
+
+.subBtn
+{
+	width: 68px;
+	height: 27px;
+	background-image: url(/images/Pop-submit.png);
+	background-repeat: no-repeat;
+	border: none;
+	font-size: 12px;
+	line-height: 26px;
+	cursor: pointer;
+	text-align: center;
+	letter-spacing: 10px;
+	padding-left: 10px;
+}
+
+	.subBtn:focus
+	{
+		outline: none;
+	}
+
+.purTree_r
+{
+	height: 280px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+.purTree_role
+{
+	height: 126px;
+	overflow-x: hidden;
+	overflow-y: scroll;
+}
+
+
+.Form_Main_CSS
+{
+	width: 350px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: 1px #d2d8dc solid;
+	border-left: 1px #d2d8dc solid;
+	margin-top: 18px;
+	margin-left: 18px;
+}
+
+.Form_Main_td
+{
+	border-bottom: 1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	text-align: left;
+	padding-left: 16px;
+	padding-top: 2px;
+	padding-bottom: 2px;
+	white-space: nowrap;
+}
+
+.Form_Main_user
+{
+	width: 92px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	margin-top: 3px;
+}
+
+	.Form_Main_user td
+	{
+		width:86px;
+		word-break: break-all;
+		border-top: none;
+		height:20px;
+		line-height:20px;
+		text-align: left;
+		padding-top: 2px;
+		padding-bottom: 2px;
+		white-space: nowrap;
+	}

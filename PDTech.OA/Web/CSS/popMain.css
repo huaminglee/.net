@@ -1,0 +1,116 @@
+﻿.left
+{
+	float: left;
+}
+
+.right
+{
+	float: right;
+}
+
+.TheProcess
+{
+	width: 550px;
+	height: 430px;
+	border: 1px solid #d2d8dc;
+	background-color: #f9fafa;
+	margin-top: 12px;
+	margin-left: 12px;
+}
+
+.MainQuery
+{
+	width: 550px;
+	height:35px;
+	line-height:35px;
+	border-bottom: 1px solid #d2d8dc;
+}
+
+.inputx
+{
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+	height: 18px;
+	margin-left: 12px;
+}
+
+	.inputx:focus
+	{
+		border: 1px solid;
+		border-color: #555 #aaa #aaa #555;
+		background: #fffbde;
+	}
+
+.inputd
+{
+	width: 118px;
+}
+.subBtn {
+	width:68px;
+	height:27px;
+	background-image:url(/images/Pop-submit.png);
+	background-repeat:no-repeat;
+	border:none;
+	font-size:12px;
+	line-height:26px;
+	cursor:pointer;
+	text-align:center;
+	letter-spacing:10px;
+	padding-left:16px;
+}
+.subBtn:focus{
+    outline:none;
+}
+.con_c
+{
+	width: 550px;
+	height: 355px;
+	border-bottom: 1px solid #d2d8dc;
+}
+.main_tabList {
+	width:550px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: none;
+}
+.main_tabList th {
+	height:35px;
+	line-height:35px;
+	white-space: nowrap;
+	overflow: visible;
+	background-color:#e9eff2;
+	border-bottom:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	font-size:14px;
+	padding-left:16px;
+	text-align:left;
+}
+.main_tabList td {
+	border-bottom:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height:26px;
+	overflow:hidden;
+	text-align:left;
+	padding-left:16px;
+	white-space:nowrap;
+	cursor:pointer;
+}
+	.main_tabList tr
+	{
+		cursor:pointer;
+	}
+/*淘宝风格*/
+.paginator { font: 12px Arial, Helvetica, sans-serif;padding:5px 10px 5px 0;margin-left:8px;}
+.paginator a {border:solid 1px #ccc;color:#0063dc;cursor:pointer;text-decoration:none;}
+.paginator a:visited {padding: 1px 6px; border: solid 1px #ddd; background: #fff; text-decoration: none;}
+.paginator .cpb {border:1px solid #F50;color:#F50;background-color:#ffeee5;}
+.paginator a:hover {border:solid 1px #F50;color:#f60;text-decoration:none;}
+.paginator a,.paginator a:visited,.paginator .cpb,.paginator a:hover  
+{height:16px;line-height:16px;min-width:10px;_width:10px;margin-right:5px;text-align:center;
+ white-space:nowrap;font-size:12px;font-family:Arial,SimSun;padding:0 3px;}

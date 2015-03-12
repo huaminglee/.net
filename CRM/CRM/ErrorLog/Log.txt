@@ -1,0 +1,1397 @@
+﻿錯誤發生的時間：2013/8/9 上午 09:12:21
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 CRM.ReconcieldList.LinkGetPre_Click(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReconcieldList.aspx.vb: 行 140
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：LinkGetPre_Click
+出錯的類為：CRM.ReconcieldList
+URL:/CRMWH/Quotation/ReconcieldList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/9 上午 09:16:36
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 CRM.ReconcieldList.LinkGetPre_Click(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReconcieldList.aspx.vb: 行 140
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：LinkGetPre_Click
+出錯的類為：CRM.ReconcieldList
+URL:/CRMWH/Quotation/ReconcieldList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/9 上午 09:22:40
+錯誤信息為：無法存取已處置的物件。
+物件名稱: 'Transaction'。
+錯誤的堆棧信息為：   於 System.Transactions.Transaction.Rollback()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.BtnAduit_Click(Object sender, EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Rollback
+出錯的類為：System.Transactions.Transaction
+URL:/CRMwh/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/9 上午 09:33:20
+錯誤信息為：無法存取已處置的物件。
+物件名稱: 'Transaction'。
+錯誤的堆棧信息為：   於 System.Transactions.Transaction.Rollback()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.BtnAduit_Click(Object sender, EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Rollback
+出錯的類為：System.Transactions.Transaction
+URL:/CRMWH/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/9 上午 09:35:05
+錯誤信息為：建立連接至 SQL Server 時，發生網路相關或執行個體特定的錯誤。找不到或無法存取伺服器。確認執行個名稱是否正確，以及 SQL Server 是否設定為允許遠端連線。 (provider: 具名的管線提供者, error: 40 - 無法開啟至 SQL Server 的連接)
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   於 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   於 System.Data.SqlClient.SqlConnection.Open()
+   於 CRM.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1541
+   於 CRM.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1659
+   於 CRM.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1618
+   於 CRM.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1608
+   於 CRM.SqlHelper.ExecuteScalar(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 696
+   於 CRM.Log.Insert() 於 D:\progressing\CRM\CRM\Component\Model\Log.vb: 行 237
+   於 CRM.Log..ctor(Int32 Type, String Operater, String Operated, DateTime Time, String IP, String Action, String Extend01, String Extend02, String Extend03, String Extend04, String Extend05, String Extend06, String Extend07, String Extend08, String Extend09, String Extend10, Int32 RecordDeleted) 於 D:\progressing\CRM\CRM\Component\Model\Log.vb: 行 51
+   於 CRM.Login.Button1_Click(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Login.aspx.vb: 行 51
+   於 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlInternalConnection
+URL:/CRMWH/Login.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/9 上午 09:49:13
+錯誤信息為：無法存取已處置的物件。
+物件名稱: 'Transaction'。
+錯誤的堆棧信息為：   於 System.Transactions.Transaction.Rollback()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.BtnAduit_Click(Object sender, EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Rollback
+出錯的類為：System.Transactions.Transaction
+URL:/CRMWH/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/15 下午 03:17:33
+錯誤信息為：資料行 'FileContent' 不屬於資料表 Table。
+錯誤的堆棧信息為：   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 CRM.WF_AttachFileInfoDAL.TransformDr(DataRow dr) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 101
+   於 CRM.WF_AttachFileInfoDAL.GetInfoBySearchCondtion(String SearchString) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 182
+   於 CRM.UcFileDetail.BindDataGrid() 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 302
+   於 CRM.UcFileDetail.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 253
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetDataColumn
+出錯的類為：System.Data.DataRow
+URL:/CRMWH/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/15 下午 03:17:40
+錯誤信息為：資料行 'FileContent' 不屬於資料表 Table。
+錯誤的堆棧信息為：   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 CRM.WF_AttachFileInfoDAL.TransformDr(DataRow dr) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 101
+   於 CRM.WF_AttachFileInfoDAL.GetInfoBySearchCondtion(String SearchString) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 182
+   於 CRM.UcFileDetail.BindDataGrid() 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 302
+   於 CRM.UcFileDetail.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 253
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetDataColumn
+出錯的類為：System.Data.DataRow
+URL:/CRMWH/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/15 下午 03:19:34
+錯誤信息為：資料行 'FileContent' 不屬於資料表 Table。
+錯誤的堆棧信息為：   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 CRM.WF_AttachFileInfoDAL.TransformDr(DataRow dr) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 101
+   於 CRM.WF_AttachFileInfoDAL.GetInfoBySearchCondtion(String SearchString) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 182
+   於 CRM.UcFileDetail.BindDataGrid() 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 302
+   於 CRM.UcFileDetail.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 253
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetDataColumn
+出錯的類為：System.Data.DataRow
+URL:/CRMWH/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/15 下午 03:32:55
+錯誤信息為：無法將型別 'System.DBNull' 的物件轉換為型別 'System.Byte[]'。
+錯誤的堆棧信息為：   於 CRM.WF_AttachFileInfoDAL.TransformDr(DataRow dr) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 101
+   於 CRM.WF_AttachFileInfoDAL.GetInfoBySearchCondtion(String SearchString) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 182
+   於 CRM.UcFileDetail.BindDataGrid() 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 302
+   於 CRM.UcFileDetail.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 253
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：TransformDr
+出錯的類為：CRM.WF_AttachFileInfoDAL
+URL:/CRMWH/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/16 下午 01:39:26
+錯誤信息為：物件不可以從 DBNull 轉換成其他型別。
+錯誤的堆棧信息為：   於 System.DBNull.System.IConvertible.ToInt32(IFormatProvider provider)
+   於 System.Convert.ToInt32(Object value)
+   於 CRM.ContactDAL.TransformDr(DataRow dr) 於 D:\progressing\CRM\CRM\Component\DAL\ContactDAL.vb: 行 120
+   於 CRM.ContactDAL.GetInfoByUserSID(String usersid) 於 D:\progressing\CRM\CRM\Component\DAL\ContactDAL.vb: 行 254
+   於 CRM.Index.BindControlData() 於 D:\progressing\CRM\CRM\Index.aspx.vb: 行 19
+   於 CRM.Index.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Index.aspx.vb: 行 12
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：System.IConvertible.ToInt32
+出錯的類為：System.DBNull
+URL:/Crmwh/Index.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/20 上午 08:59:17
+錯誤信息為：無法存取已處置的物件。
+物件名稱: 'Transaction'。
+錯誤的堆棧信息為：   於 System.Transactions.Transaction.Rollback()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.BtnAduit_Click(Object sender, EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Rollback
+出錯的類為：System.Transactions.Transaction
+URL:/CRMWH/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/20 下午 03:33:42
+錯誤信息為：Invalid object name 'Flownet.dbo.WF_WorkFlowInstance'.
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.UcWorkWaitFor.BindDatalist() 於 D:\progressing\CRM\CRM\UCtl\UcWorkWaitFor.ascx.vb: 行 16
+   於 CRM.UcWorkWaitFor.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\UCtl\UcWorkWaitFor.ascx.vb: 行 9
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Index.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/20 下午 03:36:13
+錯誤信息為：發現除以零的錯誤。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.TestItemDetailDAL.GetInfoSamplePKID(Int32 SamplePKID) 於 D:\progressing\CRM\CRM\Component\DAL\TestItemDetailDAL.vb: 行 212
+   於 CRM.JqueryS.GetTestItemBySamplePKID() 於 D:\progressing\CRM\CRM\action\JqueryS.ashx.vb: 行 119
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/action/JqueryS.ashx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/20 下午 03:39:31
+錯誤信息為：發現除以零的錯誤。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.TestItemDetailDAL.GetInfoSamplePKID(Int32 SamplePKID) 於 D:\progressing\CRM\CRM\Component\DAL\TestItemDetailDAL.vb: 行 212
+   於 CRM.JqueryS.GetTestItemBySamplePKID() 於 D:\progressing\CRM\CRM\action\JqueryS.ashx.vb: 行 119
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/action/JqueryS.ashx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/20 下午 03:40:36
+錯誤信息為：發現除以零的錯誤。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.TestItemDetailDAL.GetInfoSamplePKID(Int32 SamplePKID) 於 D:\progressing\CRM\CRM\Component\DAL\TestItemDetailDAL.vb: 行 212
+   於 CRM.JqueryS.GetTestItemBySamplePKID() 於 D:\progressing\CRM\CRM\action\JqueryS.ashx.vb: 行 119
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/action/JqueryS.ashx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/20 下午 05:06:04
+錯誤信息為：無法存取已處置的物件。
+物件名稱: 'Transaction'。
+錯誤的堆棧信息為：   於 System.Transactions.Transaction.Rollback()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.BtnAduit_Click(Object sender, EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Rollback
+出錯的類為：System.Transactions.Transaction
+URL:/CRMWH/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 上午 08:38:04
+錯誤信息為：建立連接至 SQL Server 時，發生網路相關或執行個體特定的錯誤。找不到或無法存取伺服器。確認執行個名稱是否正確，以及 SQL Server 是否設定為允許遠端連線。 (provider: TCP 提供者, error: 0 - 無法識別這台主機。)
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   於 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   於 System.Data.SqlClient.SqlConnection.Open()
+   於 Platform.Framework.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   於 Platform.Framework.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   於 Platform.Framework.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   於 Platform.Framework.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues)
+   於 Platform.eHR.Core.AccountDAL.LoadAllAccountInfoCollectionBySearchCondition(String SearchCondition)
+   於 Platform.eHR.Core.AccountDAL.LoadAllAccountInfoCollectionBySearchCondition(SearchWhereClause SearchWhereClauseForAccountInfo, Boolean IsUserInputSearchClause)
+   於 Platform.eHR.Core.AccountManage.LoadAccountInfoByUserSID(String UserSID)
+   於 Platform.eHR.Core.AccountManage.Login(String UserID, String password, String ChangQU)
+   於 CRM.Login.Button1_Click(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Login.aspx.vb: 行 52
+   於 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlInternalConnection
+URL:/CRMWH/Login.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 上午 08:40:12
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 CRM.QuotationDetail.BindDiscountInfo() 於 D:\progressing\CRM\CRM\Quotation\QuotationDetail.aspx.vb: 行 382
+   於 CRM.QuotationDetail.BindControlData() 於 D:\progressing\CRM\CRM\Quotation\QuotationDetail.aspx.vb: 行 218
+   於 CRM.QuotationDetail.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\QuotationDetail.aspx.vb: 行 175
+   於 System.EventHandler.Invoke(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：BindDiscountInfo
+出錯的類為：CRM.QuotationDetail
+URL:/CRMWH/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 12:15:53
+錯誤信息為：無法存取已處置的物件。
+物件名稱: 'Transaction'。
+錯誤的堆棧信息為：   於 System.Transactions.Transaction.Rollback()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.BtnAduit_Click(Object sender, EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Rollback
+出錯的類為：System.Transactions.Transaction
+URL:/CRMWH/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 02:38:48
+錯誤信息為：在應用程式或全域主題字典中找不到主題 'Default'。 (D:\progressing\CRM\CRM\web.config line 79)
+錯誤的堆棧信息為：   於 System.Web.Configuration.PagesSection.get_StyleSheetThemeInternal()
+   於 System.Web.UI.PageParser.ProcessConfigSettings()
+   於 System.Web.UI.TemplateParser.PrepareParse()
+   於 System.Web.UI.TemplateParser.Parse()
+   於 System.Web.UI.TemplateParser.Parse(ICollection referencedAssemblies, VirtualPath virtualPath)
+   於 System.Web.Compilation.BaseTemplateBuildProvider.get_CodeCompilerType()
+   於 System.Web.Compilation.BuildProvider.GetCompilerTypeFromBuildProvider(BuildProvider buildProvider)
+   於 System.Web.Compilation.BuildProvidersCompiler.ProcessBuildProviders()
+   於 System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   於 System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   於 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   於 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   於 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   於 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+出錯的方法為：get_StyleSheetThemeInternal
+出錯的類為：System.Web.Configuration.PagesSection
+URL:/CRMWH/Login.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:32:01
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:32:19
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:32:21
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:33:41
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:33:43
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:35:50
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:37:03
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 03:39:33
+錯誤信息為：接近 'F26740' 之處的語法不正確。
+接近關鍵字 'as' 之處的語法不正確。
+ ReportRecordDeleted=0  and IsFinished=1 and Invociedo='9999-12-31 23:59:59.997' and(( TypeofPay=2 and DuizhangTime!='9999-12-31 23:59:59.997') or (TypeofPay =1 and TestCategory=1 and DuizhangTime!='9999-12-31 23:59:59.997')  or (TypeofPay =1 and  TestCategory=0) and Extend03='F26740' 
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.GridViewPage.GetPageInfoBySearchCondition(String TableName, String SearchCondition, String Fields, String OrderField, Int32 PageSize, Int32 pageIndex, Int32 TotalRecord) 於 D:\progressing\CRM\CRM\Component\DAL\GridViewPage.vb: 行 6
+   於 CRM.ReportDetailList.BindGrid(String SearchCondition) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 216
+   於 CRM.ReportDetailList.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReportDetailList.aspx.vb: 行 206
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMWH/Quotation/ReportDetailList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 04:05:21
+錯誤信息為：資料行 'FileContent' 不屬於資料表 Table。
+錯誤的堆棧信息為：   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 CRM.WF_AttachFileInfoDAL.TransformDr(DataRow dr) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 103
+   於 CRM.WF_AttachFileInfoDAL.GetInfoBySearchCondtionQuotation(String SearchString) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 203
+   於 CRM.UcFileDetail.BindDataGridQuotation() 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 296
+   於 CRM.UcFileDetail.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 255
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetDataColumn
+出錯的類為：System.Data.DataRow
+URL:/CRMWH/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/8/21 下午 04:07:53
+錯誤信息為：資料行 'FileContent' 不屬於資料表 Table。
+錯誤的堆棧信息為：   於 System.Data.DataRow.GetDataColumn(String columnName)
+   於 System.Data.DataRow.get_Item(String columnName)
+   於 CRM.WF_AttachFileInfoDAL.TransformDr(DataRow dr) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 103
+   於 CRM.WF_AttachFileInfoDAL.GetInfoBySearchCondtionQuotation(String SearchString) 於 D:\progressing\CRM\CRM\Component\DAL\WF_AttachFileInfoDAL.vb: 行 203
+   於 CRM.UcFileDetail.BindDataGridQuotation() 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 296
+   於 CRM.UcFileDetail.Page_Load(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\UCtl\UcFileDetail.ascx.vb: 行 255
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetDataColumn
+出錯的類為：System.Data.DataRow
+URL:/CRMWH/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/11/20 上午 08:53:59
+錯誤信息為：Cute Editor contains an uploader control which needs a temp folder to store temp files. Your temp folder (D:\progressing\CRMCD\CRM\CRM\UploadFiles) is set. However you did not grant ASPNET account (or Network Service account) read/wrtie permissions to this folder!
+錯誤的堆棧信息為：   於 CuteEditor.CEF.GetEditorTempPath()
+   於 CuteEditor.UploaderBase.g()
+   於 CuteEditor.UploaderBase.f()
+   於 CuteEditor.UploaderBase.b(HtmlTextWriter A_0)
+   於 CuteEditor.UploaderBase.Render(HtmlTextWriter writer)
+   於 CuteEditor.Uploader.Render(HtmlTextWriter writer)
+   於 CuteEditor.UploadAttachments.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.Control.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.UpdatePanel.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.Control.Render(HtmlTextWriter writer)
+   於 System.Web.UI.UpdatePanel.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.Control.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlContainerControl.Render(HtmlTextWriter writer)
+   於 System.Web.UI.HtmlControls.HtmlForm.Render(HtmlTextWriter output)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.HtmlControls.HtmlForm.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderChildrenInternal(HtmlTextWriter writer, ICollection children)
+   於 System.Web.UI.Control.RenderChildren(HtmlTextWriter writer)
+   於 System.Web.UI.Page.Render(HtmlTextWriter writer)
+   於 System.Web.UI.Control.RenderControlInternal(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer, ControlAdapter adapter)
+   於 System.Web.UI.Control.RenderControl(HtmlTextWriter writer)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetEditorTempPath
+出錯的類為：CuteEditor.CEF
+URL:/CRMCD/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2013/11/20 上午 09:01:50
+錯誤信息為：檔案 '/CRMCD/Forms/AddFileShareDetail.aspx' 不存在。
+錯誤的堆棧信息為：   於 System.Web.UI.Util.CheckVirtualFileExists(VirtualPath virtualPath)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   於 System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile)
+   於 System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   於 System.Web.Compilation.BuildManager.CreateInstanceFromVirtualPath(VirtualPath virtualPath, Type requiredBaseType, HttpContext context, Boolean allowCrossApp, Boolean noAssert)
+   於 System.Web.UI.PageHandlerFactory.GetHandlerHelper(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.UI.PageHandlerFactory.System.Web.IHttpHandlerFactory2.GetHandler(HttpContext context, String requestType, VirtualPath virtualPath, String physicalPath)
+   於 System.Web.HttpApplication.MapHttpHandler(HttpContext context, String requestType, VirtualPath path, String pathTranslated, Boolean useAppConfig)
+   於 System.Web.HttpApplication.MapHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   於 System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+出錯的方法為：CheckVirtualFileExists
+出錯的類為：System.Web.UI.Util
+URL:/CRMCD/Forms/AddFileShareDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/2/19 上午 10:55:12
+錯誤信息為：預存程序 'View_Reconcield_GetInfoBySearchcondition' 不存在。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlCommand.DeriveParameters()
+   於 System.Data.SqlClient.SqlCommandBuilder.DeriveParameters(SqlCommand command)
+   於 CRM.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1542
+   於 CRM.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1659
+   於 CRM.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1618
+   於 CRM.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 1608
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 335
+   於 CRM.ReconcieldList.LinkGetPre_Click(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReconcieldList.aspx.vb: 行 139
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：DeriveParameters
+出錯的類為：System.Data.SqlClient.SqlCommand
+URL:/CRMwh/Quotation/ReconcieldList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/2/19 上午 10:56:51
+錯誤信息為：無效的資料行名稱 'TestStandard'。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.ReconcieldList.LinkGetPre_Click(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReconcieldList.aspx.vb: 行 139
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMwh/Quotation/ReconcieldList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/2/19 上午 10:59:38
+錯誤信息為：無效的資料行名稱 'TestItemName'。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.ConsumeMetaData()
+   於 System.Data.SqlClient.SqlDataReader.get_MetaData()
+   於 System.Data.SqlClient.SqlCommand.FinishExecuteReader(SqlDataReader ds, RunBehavior runBehavior, String resetOptionsString)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReaderTds(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, Boolean async)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method, DbAsyncResult result)
+   於 System.Data.SqlClient.SqlCommand.RunExecuteReader(CommandBehavior cmdBehavior, RunBehavior runBehavior, Boolean returnStream, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteReader(CommandBehavior behavior, String method)
+   於 System.Data.SqlClient.SqlCommand.ExecuteDbDataReader(CommandBehavior behavior)
+   於 System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader(CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\progressing\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.ReconcieldList.LinkGetPre_Click(Object sender, EventArgs e) 於 D:\progressing\CRM\CRM\Quotation\ReconcieldList.aspx.vb: 行 139
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRMwh/Quotation/ReconcieldList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/5 上午 08:41:06
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 CRM.QuotationDetail.GetPDFquo() 於 D:\Project\CRMwithTAM\CRM\CRM\Quotation\QuotationDetail.aspx.vb: 行 931
+   於 CRM.QuotationDetail.LinkGetPDF_Click(Object sender, EventArgs e) 於 D:\Project\CRMwithTAM\CRM\CRM\Quotation\QuotationDetail.aspx.vb: 行 920
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetPDFquo
+出錯的類為：CRM.QuotationDetail
+URL:/CRMwithTAM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/7 下午 02:25:28
+錯誤信息為：無法載入檔案或組件 'App_GlobalResources' 或其相依性的其中之一。 系統找不到指定的檔案。
+錯誤的堆棧信息為：   於 System.Reflection.Assembly._nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   於 System.Reflection.Assembly.nLoad(AssemblyName fileName, String codeBase, Evidence assemblySecurity, Assembly locationHint, StackCrawlMark& stackMark, Boolean throwOnFileNotFound, Boolean forIntrospection)
+   於 System.Reflection.Assembly.InternalLoad(AssemblyName assemblyRef, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   於 System.Reflection.Assembly.InternalLoad(String assemblyString, Evidence assemblySecurity, StackCrawlMark& stackMark, Boolean forIntrospection)
+   於 System.Reflection.Assembly.Load(String assemblyString)
+   於 eWorkFlow.eFlowDoc.Resource.get_ResourceManager()
+   於 eWorkFlow.eFlowDoc.Resource.get_ChkProrityTop()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.MulitiLanagePage()
+   於 eWorkFlow.eFlowDoc.CtlWFActionList.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：_nLoad
+出錯的類為：System.Reflection.Assembly
+URL:/CRMwithTAM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/7 下午 02:30:24
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory_RowDataBound(Object sender, GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.GridDataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：dgFlowHistory_RowDataBound
+出錯的類為：eWorkFlow.eFlowDoc.ctlWFHistory
+URL:/CRMwithTAM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/7 下午 02:31:17
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory_RowDataBound(Object sender, GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.GridDataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：dgFlowHistory_RowDataBound
+出錯的類為：eWorkFlow.eFlowDoc.ctlWFHistory
+URL:/CRMwithTAM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/10 下午 04:31:05
+錯誤信息為：建立連接至 SQL Server 時，發生網路相關或執行個體特定的錯誤。找不到或無法存取伺服器。確認執行個名稱是否正確，以及 SQL Server 是否設定為允許遠端連線。 (provider: TCP 提供者, error: 0 - 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失敗，因為連線的主機無法回應。)
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   於 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   於 System.Data.SqlClient.SqlConnection.Open()
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMwithTAM\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 315
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText) 於 D:\Project\CRMwithTAM\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 301
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\Project\CRMwithTAM\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 343
+   於 CRM.TestItemManage.BindTreeView() 於 D:\Project\CRMwithTAM\CRM\CRM\Forms\TestItemManage.aspx.vb: 行 64
+   於 CRM.TestItemManage.DPLcq_SelectedIndexChanged(Object sender, EventArgs e) 於 D:\Project\CRMwithTAM\CRM\CRM\Forms\TestItemManage.aspx.vb: 行 452
+   於 System.Web.UI.WebControls.ListControl.OnSelectedIndexChanged(EventArgs e)
+   於 System.Web.UI.WebControls.DropDownList.RaisePostDataChangedEvent()
+   於 System.Web.UI.WebControls.DropDownList.System.Web.UI.IPostBackDataHandler.RaisePostDataChangedEvent()
+   於 System.Web.UI.Page.RaiseChangedEvents()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlInternalConnection
+URL:/CRMwithTAM/Forms/TestItemManage.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/11 上午 11:18:28
+錯誤信息為：索引 (以零為起始) 必須大於或等於零，並且小於引數清單的大小。
+錯誤的堆棧信息為：   於 System.Text.StringBuilder.AppendFormat(IFormatProvider provider, String format, Object[] args)
+   於 System.String.Format(IFormatProvider provider, String format, Object[] args)
+   於 System.String.Format(String format, Object[] args)
+   於 CRM.CusVisitList.get_InitSearch() 於 D:\Project\CRMAll\CRM\CRM\Forms\CusVisitList.aspx.vb: 行 46
+   於 CRM.CusVisitList.Page_Load(Object sender, EventArgs e) 於 D:\Project\CRMAll\CRM\CRM\Forms\CusVisitList.aspx.vb: 行 121
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：AppendFormat
+出錯的類為：System.Text.StringBuilder
+URL:/CRM/Forms/CusVisitList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/15 上午 09:16:46
+錯誤信息為：型別 'System.Web.UI.WebControls.BoundField' 沒有名為 'BoundField' 的公用屬性。
+錯誤的堆棧信息為：   於 System.Web.UI.ControlBuilder.GetChildPropertyBuilder(String tagName, IDictionary attribs, Type& childType, TemplateParser templateParser, Boolean defaultProperty)
+   於 System.Web.UI.ControlBuilder.CreateChildBuilder(String filter, String tagName, IDictionary attribs, TemplateParser parser, ControlBuilder parentBuilder, String id, Int32 line, VirtualPath virtualPath, Type& childType, Boolean defaultProperty)
+   於 System.Web.UI.TemplateParser.ProcessBeginTag(Match match, String inputText)
+   於 System.Web.UI.TemplateParser.ParseStringInternal(String text, Encoding fileEncoding)
+出錯的方法為：GetChildPropertyBuilder
+出錯的類為：System.Web.UI.ControlBuilder
+URL:/CRM/Quotation/SendSampleList.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/15 上午 10:59:54
+錯誤信息為：Conversion failed when converting date and/or time from character string.
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.jinguantongji.BindGrid(String Searchcondition) 於 D:\Project\CRMAll\CRM\CRM\Quotation\jinguantongji.aspx.vb: 行 91
+   於 CRM.jinguantongji.BtnSearch_Click(Object sender, EventArgs e) 於 D:\Project\CRMAll\CRM\CRM\Quotation\jinguantongji.aspx.vb: 行 123
+   於 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRM/Quotation/jinguantongji.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/15 上午 11:20:24
+錯誤信息為：Conversion failed when converting date and/or time from character string.
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.jinguantongji.BindGrid(String Searchcondition) 於 D:\Project\CRMAll\CRM\CRM\Quotation\jinguantongji.aspx.vb: 行 91
+   於 CRM.jinguantongji.BtnSearch_Click(Object sender, EventArgs e) 於 D:\Project\CRMAll\CRM\CRM\Quotation\jinguantongji.aspx.vb: 行 123
+   於 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRM/Quotation/jinguantongji.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/17 上午 11:40:14
+錯誤信息為：將資料類型從 nvarchar 轉換到 float 時發生錯誤。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.TestItemDetailDAL.GetInfoSamplePKID(Int32 SamplePKID) 於 D:\Project\CRMAll\CRM\CRM\Component\DAL\TestItemDetailDAL.vb: 行 212
+   於 CRM.JqueryS.GetTestItemBySamplePKID() 於 D:\Project\CRMAll\CRM\CRM\action\JqueryS.ashx.vb: 行 119
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRM/action/JqueryS.ashx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/17 上午 11:42:56
+錯誤信息為：將資料類型從 nvarchar 轉換到 float 時發生錯誤。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.TestItemDetailDAL.GetInfoSamplePKID(Int32 SamplePKID) 於 D:\Project\CRMAll\CRM\CRM\Component\DAL\TestItemDetailDAL.vb: 行 212
+   於 CRM.JqueryS.GetTestItemBySamplePKID() 於 D:\Project\CRMAll\CRM\CRM\action\JqueryS.ashx.vb: 行 119
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRM/action/JqueryS.ashx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/17 上午 11:48:30
+錯誤信息為：將資料類型從 nvarchar 轉換到 float 時發生錯誤。
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Run(RunBehavior runBehavior, SqlCommand cmdHandler, SqlDataReader dataStream, BulkCopySimpleResultSet bulkCopyHandler, TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.SqlDataReader.HasMoreRows()
+   於 System.Data.SqlClient.SqlDataReader.ReadInternal(Boolean setTimeout)
+   於 System.Data.SqlClient.SqlDataReader.Read()
+   於 System.Data.Common.DataAdapter.FillLoadDataRow(SchemaMapping mapping)
+   於 System.Data.Common.DataAdapter.FillFromReader(DataSet dataset, DataTable datatable, String srcTable, DataReaderContainer dataReader, Int32 startRecord, Int32 maxRecords, DataColumn parentChapterColumn, Object parentChapterValue)
+   於 System.Data.Common.DataAdapter.Fill(DataSet dataSet, String srcTable, IDataReader dataReader, Int32 startRecord, Int32 maxRecords)
+   於 System.Data.Common.DbDataAdapter.FillInternal(DataSet dataset, DataTable[] datatables, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet, Int32 startRecord, Int32 maxRecords, String srcTable, IDbCommand command, CommandBehavior behavior)
+   於 System.Data.Common.DbDataAdapter.Fill(DataSet dataSet)
+   於 CRM.SqlHelper.ExecuteDataset(SqlConnection connection, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 373
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, CommandType commandType, String commandText, SqlParameter[] commandParameters) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 318
+   於 CRM.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues) 於 D:\Project\CRMAll\CRM\CRM\Component\Common\Data\SQLHelper.vb: 行 341
+   於 CRM.TestItemDetailDAL.GetInfoSamplePKID(Int32 SamplePKID) 於 D:\Project\CRMAll\CRM\CRM\Component\DAL\TestItemDetailDAL.vb: 行 212
+   於 CRM.JqueryS.GetTestItemBySamplePKID() 於 D:\Project\CRMAll\CRM\CRM\action\JqueryS.ashx.vb: 行 119
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlConnection
+URL:/CRM/action/JqueryS.ashx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/18 下午 03:01:56
+錯誤信息為：找不到資料表 0。
+錯誤的堆棧信息為：   於 System.Data.DataTableCollection.get_Item(Int32 index)
+   於 CRM.jinguantongji.BindGrid(String Searchcondition) 於 D:\Project\CRMAll\CRM\CRM\Quotation\jinguantongji.aspx.vb: 行 109
+   於 CRM.jinguantongji.BtnSearch_Click(Object sender, EventArgs e) 於 D:\Project\CRMAll\CRM\CRM\Quotation\jinguantongji.aspx.vb: 行 123
+   於 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：get_Item
+出錯的類為：System.Data.DataTableCollection
+URL:/CRM/Quotation/jinguantongji.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/19 下午 04:39:43
+錯誤信息為：無法存取已處置的物件。
+物件名稱: 'Transaction'。
+錯誤的堆棧信息為：   於 System.Transactions.Transaction.Rollback()
+   於 CRM.QuotationDetail.LinkapproveQuoinvalid_Click(Object sender, EventArgs e) 於 D:\Project\CRMAll\CRM\CRM\Quotation\QuotationDetail.aspx.vb: 行 1133
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Rollback
+出錯的類為：System.Transactions.Transaction
+URL:/CRM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/20 上午 11:03:20
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 CRM.QuotationDetail.Linkbohui_Click(Object sender, EventArgs e) 於 D:\Project\CRMAll\CRM\CRM\Quotation\QuotationDetail.aspx.vb: 行 1140
+   於 System.Web.UI.WebControls.LinkButton.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.LinkButton.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.LinkButton.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：Linkbohui_Click
+出錯的類為：CRM.QuotationDetail
+URL:/CRM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/24 下午 01:52:17
+錯誤信息為：建立連接至 SQL Server 時，發生網路相關或執行個體特定的錯誤。找不到或無法存取伺服器。確認執行個名稱是否正確，以及 SQL Server 是否設定為允許遠端連線。 (provider: TCP 提供者, error: 0 - 連線嘗試失敗，因為連線對象有一段時間並未正確回應，或是連線建立失敗，因為連線的主機無法回應。)
+錯誤的堆棧信息為：   於 System.Data.SqlClient.SqlInternalConnection.OnError(SqlException exception, Boolean breakConnection)
+   於 System.Data.SqlClient.TdsParser.ThrowExceptionAndWarning(TdsParserStateObject stateObj)
+   於 System.Data.SqlClient.TdsParser.Connect(ServerInfo serverInfo, SqlInternalConnectionTds connHandler, Boolean ignoreSniOpenTimeout, Int64 timerExpire, Boolean encrypt, Boolean trustServerCert, Boolean integratedSecurity, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.AttemptOneLogin(ServerInfo serverInfo, String newPassword, Boolean ignoreSniOpenTimeout, Int64 timerExpire, SqlConnection owningObject)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.LoginNoFailover(String host, String newPassword, Boolean redirectedUserInstance, SqlConnection owningObject, SqlConnectionString connectionOptions, Int64 timerStart)
+   於 System.Data.SqlClient.SqlInternalConnectionTds.OpenLoginEnlist(SqlConnection owningObject, SqlConnectionString connectionOptions, String newPassword, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlInternalConnectionTds..ctor(DbConnectionPoolIdentity identity, SqlConnectionString connectionOptions, Object providerInfo, String newPassword, SqlConnection owningObject, Boolean redirectedUserInstance)
+   於 System.Data.SqlClient.SqlConnectionFactory.CreateConnection(DbConnectionOptions options, Object poolGroupProviderInfo, DbConnectionPool pool, DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionFactory.CreatePooledConnection(DbConnection owningConnection, DbConnectionPool pool, DbConnectionOptions options)
+   於 System.Data.ProviderBase.DbConnectionPool.CreateObject(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.UserCreateRequest(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionPool.GetConnection(DbConnection owningObject)
+   於 System.Data.ProviderBase.DbConnectionFactory.GetConnection(DbConnection owningConnection)
+   於 System.Data.ProviderBase.DbConnectionClosed.OpenConnection(DbConnection outerConnection, DbConnectionFactory connectionFactory)
+   於 System.Data.SqlClient.SqlConnection.Open()
+   於 Platform.Framework.SqlHelperParameterCache.DiscoverSpParameterSet(SqlConnection connection, String spName, Boolean includeReturnValueParameter, Object[] parameterValues)
+   於 Platform.Framework.SqlHelperParameterCache.GetSpParameterSetInternal(SqlConnection connection, String spName, Boolean includeReturnValueParameter)
+   於 Platform.Framework.SqlHelperParameterCache.GetSpParameterSet(String connectionString, String spName, Boolean includeReturnValueParameter)
+   於 Platform.Framework.SqlHelper.ExecuteDataset(String connectionString, String spName, Object[] parameterValues)
+   於 Platform.eHR.Core.AccountDAL.LoadAllAccountInfoCollectionBySearchCondition(String SearchCondition)
+   於 Platform.eHR.Core.AccountDAL.LoadAllAccountInfoCollectionBySearchCondition(SearchWhereClause SearchWhereClauseForAccountInfo, Boolean IsUserInputSearchClause)
+   於 Platform.eHR.Core.AccountManage.LoadAccountInfoByUserSID(String UserSID)
+   於 Platform.eHR.Core.AccountManage.Login(String UserID, String password, String ChangQU)
+   於 CRM.Login.Button1_Click(Object sender, EventArgs e) 於 D:\Project\CRMAll\CRM\CRM\Login.aspx.vb: 行 70
+   於 System.Web.UI.WebControls.Button.OnClick(EventArgs e)
+   於 System.Web.UI.WebControls.Button.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.WebControls.Button.System.Web.UI.IPostBackEventHandler.RaisePostBackEvent(String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(IPostBackEventHandler sourceControl, String eventArgument)
+   於 System.Web.UI.Page.RaisePostBackEvent(NameValueCollection postData)
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：OnError
+出錯的類為：System.Data.SqlClient.SqlInternalConnection
+URL:/CRM/Login.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/25 下午 01:30:50
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 eWorkFlow.eFlowDoc.ctlWFHistory.GetShowUserInfo(Int32 TemplateStateID, String StateName, Int32 IsCountSign)
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory_RowDataBound(Object sender, GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.GridDataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetShowUserInfo
+出錯的類為：eWorkFlow.eFlowDoc.ctlWFHistory
+URL:/CRM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/25 下午 01:32:06
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 eWorkFlow.eFlowDoc.ctlWFHistory.GetShowUserInfo(Int32 TemplateStateID, String StateName, Int32 IsCountSign)
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory_RowDataBound(Object sender, GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.GridDataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetShowUserInfo
+出錯的類為：eWorkFlow.eFlowDoc.ctlWFHistory
+URL:/CRM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/25 下午 01:33:26
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 eWorkFlow.eFlowDoc.ctlWFHistory.GetShowUserInfo(Int32 TemplateStateID, String StateName, Int32 IsCountSign)
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory_RowDataBound(Object sender, GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.GridDataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetShowUserInfo
+出錯的類為：eWorkFlow.eFlowDoc.ctlWFHistory
+URL:/CRM/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/25 下午 01:33:35
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 eWorkFlow.eFlowDoc.ctlWFHistory.GetShowUserInfo(Int32 TemplateStateID, String StateName, Int32 IsCountSign)
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory_RowDataBound(Object sender, GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.GridDataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetShowUserInfo
+出錯的類為：eWorkFlow.eFlowDoc.ctlWFHistory
+URL:/CRM/Quotation/ReportDetailDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================
+錯誤發生的時間：2014/3/25 下午 01:34:27
+錯誤信息為：並未將物件參考設定為物件的執行個體
+錯誤的堆棧信息為：   於 eWorkFlow.eFlowDoc.ctlWFHistory.GetShowUserInfo(Int32 TemplateStateID, String StateName, Int32 IsCountSign)
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.dgFlowHistory_RowDataBound(Object sender, GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.OnRowDataBound(GridViewRowEventArgs e)
+   於 System.Web.UI.WebControls.GridView.CreateRow(Int32 rowIndex, Int32 dataSourceIndex, DataControlRowType rowType, DataControlRowState rowState, Boolean dataBind, Object dataItem, DataControlField[] fields, TableRowCollection rows, PagedDataSource pagedDataSource)
+   於 System.Web.UI.WebControls.GridView.CreateChildControls(IEnumerable dataSource, Boolean dataBinding)
+   於 System.Web.UI.WebControls.CompositeDataBoundControl.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.GridView.PerformDataBinding(IEnumerable data)
+   於 System.Web.UI.WebControls.DataBoundControl.OnDataSourceViewSelectCallback(IEnumerable data)
+   於 System.Web.UI.DataSourceView.Select(DataSourceSelectArguments arguments, DataSourceViewSelectCallback callback)
+   於 System.Web.UI.WebControls.DataBoundControl.PerformSelect()
+   於 System.Web.UI.WebControls.BaseDataBoundControl.DataBind()
+   於 System.Web.UI.WebControls.GridView.DataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.GridDataBind()
+   於 eWorkFlow.eFlowDoc.ctlWFHistory.Page_Load(Object sender, EventArgs e)
+   於 System.Web.UI.Control.OnLoad(EventArgs e)
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Control.LoadRecursive()
+   於 System.Web.UI.Page.ProcessRequestMain(Boolean includeStagesBeforeAsyncPoint, Boolean includeStagesAfterAsyncPoint)
+出錯的方法為：GetShowUserInfo
+出錯的類為：eWorkFlow.eFlowDoc.ctlWFHistory
+URL:/CRM/Quotation/QuotationDetail.aspx
+主機地址:127.0.0.1
+===================================================================================================

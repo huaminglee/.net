@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="d81dc92e-99d4-4c8f-a3bf-f763373cc3f2" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://10.162.197.5:7566/WFServer" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="WFServer.disco" MetadataType="Disco" ID="9a1e4982-5815-4a72-807e-c48da1b712de" SourceId="1" SourceUrl="http://10.162.197.5:7566/WFServer?disco" />
+    <MetadataFile FileName="WorkflowService.wsdl" MetadataType="Wsdl" ID="510d407f-9955-4162-9478-c4452469b9cb" SourceId="1" SourceUrl="http://10.162.197.5:7566/WFServer?wsdl" />
+    <MetadataFile FileName="WFServer3.xsd" MetadataType="Schema" ID="d6e5268f-7c60-41b5-aef6-c4985d4ed780" SourceId="1" SourceUrl="http://10.162.197.5:7566/WFServer?xsd=xsd2" />
+    <MetadataFile FileName="WFServer4.xsd" MetadataType="Schema" ID="cbb061f5-ec59-4ea4-a793-738abb50195d" SourceId="1" SourceUrl="http://10.162.197.5:7566/WFServer?xsd=xsd1" />
+    <MetadataFile FileName="WFServer5.xsd" MetadataType="Schema" ID="15fb565c-0b2e-4dc0-8341-cf8801a7c1b5" SourceId="1" SourceUrl="http://10.162.197.5:7566/WFServer?xsd=xsd4" />
+    <MetadataFile FileName="WFServer2.xsd" MetadataType="Schema" ID="f9438117-0beb-4b05-8047-e10ac6fabe4d" SourceId="1" SourceUrl="http://10.162.197.5:7566/WFServer?xsd=xsd0" />
+    <MetadataFile FileName="WFServer.xsd" MetadataType="Schema" ID="1d63e382-ca9c-447f-8661-b2c45a9599aa" SourceId="1" SourceUrl="http://10.162.197.5:7566/WFServer?xsd=xsd3" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,18 @@
+truncate table log
+truncate table testitemdetail
+truncate table sampleinfo 
+truncate table quotation
+truncate table reportdetail
+truncate table wf_attachfileinfo
+truncate table InvalidQuotation
+truncate table Reconcield
+truncate table TableBMH
+truncate table BuinessOpportunntites
+truncate table MarketingPlan
+truncate table MarketActivity
+truncate table MarketMember
+truncate table MarkOppContact
+
+update  [FlowNet].[dbo].[WF_WorkFlowInstance]
+  set recorddeleted=1
+   where TemplateName='CRM報價單到申請單流程' or TemplateName='CRM報告處理流程'

@@ -1,0 +1,296 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="Attachment" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.Attachment, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="AttachmentResultBase" class="Attachment">
+      <result property="AttachmentId" column="AttachmentId" />
+      <result property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+      <result property="Creator" column="Creator" />
+      <result property="FileName" column="FileName" />
+      <result property="FileSize" column="FileSize" />
+      <result property="RefID" column="RefID" />
+      <result property="RefType" column="RefType" />
+    </resultMap>
+
+    <resultMap id="AttachmentResult" extends="AttachmentResultBase" class="Attachment">
+      <result property="FileContent" column="FileContent" dbType="image"/>
+    </resultMap>
+
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="AttachmentParams" class="Attachment">
+      <parameter property="AttachmentId" column="AttachmentId" />
+      <parameter property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+      <parameter property="Creator" column="Creator" />
+      <parameter property="FileContent" column="FileContent" dbType="image"/>
+      <parameter property="FileName" column="FileName" />
+      <parameter property="FileSize" column="FileSize" />
+      <parameter property="RefID" column="RefID" />
+      <parameter property="RefType" column="RefType" />
+    </parameterMap>
+
+    <parameterMap id="UpdateAttachmentParams" extends="AttachmentParams" class="Attachment">
+      <parameter property="AttachmentId" column="AttachmentId" />
+    </parameterMap>
+
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetAttachmentCount"  resultClass="int">
+      SELECT count(*)
+      FROM OA_Attachment
+    </select>
+
+    <select id="GetAttachment"  parameterClass="Attachment" resultMap="AttachmentResult">
+      SELECT *
+      FROM OA_Attachment
+      WHERE (AttachmentId = #AttachmentId#)
+    </select>
+
+    <select id="GetAttachmentBase" extends="GetAttachment" resultMap="AttachmentResultBase">
+    </select>
+
+    <select id="GetAttachmentList" parameterClass="string" resultMap="AttachmentResult" listClass="NorDataList">
+      SELECT *
+      FROM OA_Attachment
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="CreateTime">
+          CreateTime
+        </isEqual>
+        <isEqual compareValue="CreateTime_D">
+          CreateTime desc
+        </isEqual>
+        <isEqual compareValue="Creator">
+          Creator
+        </isEqual>
+        <isEqual compareValue="Creator_D">
+          Creator desc
+        </isEqual>
+        <isEqual compareValue="FileContent">
+          FileContent
+        </isEqual>
+        <isEqual compareValue="FileContent_D">
+          FileContent desc
+        </isEqual>
+        <isEqual compareValue="FileName">
+          FileName
+        </isEqual>
+        <isEqual compareValue="FileName_D">
+          FileName desc
+        </isEqual>
+        <isEqual compareValue="FileSize">
+          FileSize
+        </isEqual>
+        <isEqual compareValue="FileSize_D">
+          FileSize desc
+        </isEqual>
+        <isEqual compareValue="RefID">
+          RefID
+        </isEqual>
+        <isEqual compareValue="RefID_D">
+          RefID desc
+        </isEqual>
+        <isEqual compareValue="RefType">
+          RefType
+        </isEqual>
+        <isEqual compareValue="RefType_D">
+          RefType desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="GetAttachmentListBase" parameterClass="string" listClass="NorDataList" resultMap="AttachmentResultBase" >
+      SELECT AttachmentID,CreateTime,Creator,FileName,FileSize,RefID,RefType
+      FROM OA_Attachment
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="CreateTime">
+          CreateTime
+        </isEqual>
+        <isEqual compareValue="CreateTime_D">
+          CreateTime desc
+        </isEqual>
+        <isEqual compareValue="Creator">
+          Creator
+        </isEqual>
+        <isEqual compareValue="Creator_D">
+          Creator desc
+        </isEqual>
+        <isEqual compareValue="FileContent">
+          FileContent
+        </isEqual>
+        <isEqual compareValue="FileContent_D">
+          FileContent desc
+        </isEqual>
+        <isEqual compareValue="FileName">
+          FileName
+        </isEqual>
+        <isEqual compareValue="FileName_D">
+          FileName desc
+        </isEqual>
+        <isEqual compareValue="FileSize">
+          FileSize
+        </isEqual>
+        <isEqual compareValue="FileSize_D">
+          FileSize desc
+        </isEqual>
+        <isEqual compareValue="RefID">
+          RefID
+        </isEqual>
+        <isEqual compareValue="RefID_D">
+          RefID desc
+        </isEqual>
+        <isEqual compareValue="RefType">
+          RefType
+        </isEqual>
+        <isEqual compareValue="RefType_D">
+          RefType desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryAttachmentCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM OA_Attachment
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="AttachmentId" >
+          AttachmentId like #AttachmentId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime" >
+          (Datediff(day,[CreateTime],#CreateTime#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime_S" >
+          <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Creator" >
+          Creator like #Creator#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileContent" >
+          FileContent = #FileContent#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileName" >
+          FileName like #FileName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileSize" >
+          FileSize = #FileSize#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RefID" >
+          RefID like #RefID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RefType" >
+          RefType like #RefType#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryAttachmentList" parameterClass="Hashtable" resultMap="AttachmentResult" listClass="NorDataList">
+      SELECT *
+      FROM OA_Attachment
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="AttachmentId" >
+          AttachmentId like #AttachmentId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime" >
+          (Datediff(day,[CreateTime],#CreateTime#) = 0)
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="CreateTime_S" >
+          <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Creator" >
+          Creator like #Creator#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileContent" >
+          FileContent = #FileContent#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileName" >
+          FileName like #FileName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="FileSize" >
+          FileSize = #FileSize#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RefID" >
+          RefID like #RefID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RefType" >
+          RefType like #RefType#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="CreateTime" property="_OrderBy">
+          CreateTime
+        </isEqual>
+        <isEqual compareValue="CreateTime_D" property="_OrderBy">
+          CreateTime desc
+        </isEqual>
+        <isEqual compareValue="Creator" property="_OrderBy">
+          Creator
+        </isEqual>
+        <isEqual compareValue="Creator_D" property="_OrderBy">
+          Creator desc
+        </isEqual>
+        <isEqual compareValue="FileContent" property="_OrderBy">
+          FileContent
+        </isEqual>
+        <isEqual compareValue="FileContent_D" property="_OrderBy">
+          FileContent desc
+        </isEqual>
+        <isEqual compareValue="FileName" property="_OrderBy">
+          FileName
+        </isEqual>
+        <isEqual compareValue="FileName_D" property="_OrderBy">
+          FileName desc
+        </isEqual>
+        <isEqual compareValue="FileSize" property="_OrderBy">
+          FileSize
+        </isEqual>
+        <isEqual compareValue="FileSize_D" property="_OrderBy">
+          FileSize desc
+        </isEqual>
+        <isEqual compareValue="RefID" property="_OrderBy">
+          RefID
+        </isEqual>
+        <isEqual compareValue="RefID_D" property="_OrderBy">
+          RefID desc
+        </isEqual>
+        <isEqual compareValue="RefType" property="_OrderBy">
+          RefType
+        </isEqual>
+        <isEqual compareValue="RefType_D" property="_OrderBy">
+          RefType desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryAttachmentListBase" extends="QueryAttachmentList" resultMap="AttachmentResultBase" listClass="NorDataList">
+    </select>
+
+    <insert id="InsertAttachment" parameterMap="AttachmentParams">
+      <generate table="OA_Attachment" />
+    </insert>
+
+    <delete id="DeleteAttachment" parameterClass="Attachment">
+      DELETE FROM OA_Attachment
+      WHERE (AttachmentId = #AttachmentId#)
+    </delete>
+
+    <update id="UpdateAttachment" parameterClass="Attachment">
+      UPDATE OA_Attachment SET
+      RefID = #RefID#,
+      RefType = #RefType#
+      WHERE AttachmentId = #AttachmentId#
+    </update>
+
+  </statements>
+
+</sqlMap>

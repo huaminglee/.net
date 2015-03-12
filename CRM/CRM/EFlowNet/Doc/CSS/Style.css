@@ -1,0 +1,25 @@
+﻿body 
+{
+    
+}
+.Mask_ControlArea
+{
+    border-right: green 0px solid;
+    border-top: green 0px solid;
+    z-index: 102;
+    filter: alpha(opacity: 25);
+    left: 0px;
+    background-color: #C0C0C0;
+    border-left: green 0px solid;
+    width: 1px;
+    border-bottom: green 0px solid;
+    position: absolute;
+    top: 0px;
+    height: 1px;
+}
+td
+{
+    word-break: keep-all;
+    overflow: hidden;
+    font-size: 12px;
+}

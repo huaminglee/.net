@@ -1,0 +1,190 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="Templet" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.Templet, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="TempletResultBase" class="Templet">
+      <result property="TempletId" column="TempletId" />
+      <result property="Owner" column="Owner" />
+      <result property="TempletName" column="TempletName" />
+      <result property="TempletProp" column="TempletProp" />
+      <result property="TempletType" column="TempletType" />
+    </resultMap>
+
+    <resultMap id="TempletResult" extends="TempletResultBase" class="Templet">
+      <result property="TempletContent" column="TempletContent" />
+    </resultMap>
+
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="TempletParams" class="Templet">
+      <parameter property="TempletId" column="TempletId" />
+      <parameter property="TempletContent" column="TempletContent" />
+      <parameter property="Owner" column="Owner" />
+      <parameter property="TempletName" column="TempletName" />
+      <parameter property="TempletProp" column="TempletProp" />
+      <parameter property="TempletType" column="TempletType" />
+    </parameterMap>
+
+    <parameterMap id="UpdateTempletParams" extends="TempletParams" class="Templet">
+      <parameter property="TempletId" column="TempletId" />
+    </parameterMap>
+
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetTempletCount"  resultClass="int">
+      SELECT count(*)
+      FROM OA_Templet
+    </select>
+
+    <select id="GetTemplet"  parameterClass="Templet" resultMap="TempletResult">
+      SELECT *
+      FROM OA_Templet
+      WHERE (TempletId = #TempletId#)
+    </select>
+
+    <select id="GetTempletBase" extends="GetTemplet" resultMap="TempletResultBase">
+    </select>
+
+    <select id="GetTempletList" parameterClass="string" resultMap="TempletResult" listClass="NorDataList">
+      SELECT *
+      FROM OA_Templet
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="Owner">
+          Owner
+        </isEqual>
+        <isEqual compareValue="Owner_D">
+          Owner desc
+        </isEqual>
+        <isEqual compareValue="TempletName">
+          TempletName
+        </isEqual>
+        <isEqual compareValue="TempletName_D">
+          TempletName desc
+        </isEqual>
+        <isEqual compareValue="TempletProp">
+          TempletProp
+        </isEqual>
+        <isEqual compareValue="TempletProp_D">
+          TempletProp desc
+        </isEqual>
+        <isEqual compareValue="TempletType">
+          TempletType
+        </isEqual>
+        <isEqual compareValue="TempletType_D">
+          TempletType desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="GetTempletListBase" extends="GetTempletList" resultMap="TempletResultBase" listClass="NorDataList">
+    </select>
+
+    <select id="QueryTempletCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM OA_Templet
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="TempletId" >
+          TempletId like #TempletId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Owner" >
+          Owner like #Owner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TempletName" >
+          TempletName like #TempletName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TempletProp" >
+          TempletProp = #TempletProp#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TempletType" >
+          TempletType = #TempletType#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryTempletList" parameterClass="Hashtable" resultMap="TempletResult" listClass="NorDataList">
+      SELECT *
+      FROM OA_Templet
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="TempletId" >
+          TempletId like #TempletId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="Owner" >
+          Owner like #Owner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TempletName" >
+          TempletName like #TempletName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TempletProp" >
+          TempletProp = #TempletProp#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TempletType" >
+          TempletType = #TempletType#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="Owner" property="_OrderBy">
+          Owner
+        </isEqual>
+        <isEqual compareValue="Owner_D" property="_OrderBy">
+          Owner desc
+        </isEqual>
+        <isEqual compareValue="TempletName" property="_OrderBy">
+          TempletName
+        </isEqual>
+        <isEqual compareValue="TempletName_D" property="_OrderBy">
+          TempletName desc
+        </isEqual>
+        <isEqual compareValue="TempletProp" property="_OrderBy">
+          TempletProp
+        </isEqual>
+        <isEqual compareValue="TempletProp_D" property="_OrderBy">
+          TempletProp desc
+        </isEqual>
+        <isEqual compareValue="TempletType" property="_OrderBy">
+          TempletType
+        </isEqual>
+        <isEqual compareValue="TempletType_D" property="_OrderBy">
+          TempletType desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryTempletListBase" extends="QueryTempletList" resultMap="TempletResultBase" listClass="NorDataList">
+    </select>
+
+    <insert id="InsertTemplet" parameterMap="TempletParams">
+      <generate table="OA_Templet" />
+    </insert>
+
+    <delete id="DeleteTemplet" parameterClass="Templet">
+      DELETE FROM OA_Templet
+      WHERE (TempletId = #TempletId#)
+    </delete>
+
+    <update id="UpdateTemplet" parameterMap="UpdateTempletParams">
+      UPDATE OA_Templet SET
+      TempletId = ?,
+      TempletContent = ?,
+      Owner = ?,
+      TempletName = ?,
+      TempletProp = ?,
+      TempletType = ?
+      WHERE TempletId = ?
+    </update>
+
+  </statements>
+
+</sqlMap>

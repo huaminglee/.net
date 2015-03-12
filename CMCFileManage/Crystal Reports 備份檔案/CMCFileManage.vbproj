@@ -1,0 +1,1561 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{88EDCE1E-BA16-4C70-BC18-2F2C0D9C2EA4}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <RootNamespace>CMCFileManage</RootNamespace>
+    <AssemblyName>CMCFileManage</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MyType>Custom</MyType>
+    <OptionExplicit>On</OptionExplicit>
+    <OptionCompare>Binary</OptionCompare>
+    <OptionStrict>Off</OptionStrict>
+    <OptionInfer>On</OptionInfer>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CMCFileManage.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DocumentationFile>CMCFileManage.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ActiproSoftware.CodeHighlighter.Net20, Version=4.0.51.0, Culture=neutral, PublicKeyToken=247639e84cc1f4e4, processorArchitecture=MSIL" />
+    <Reference Include="ActiproSoftware.Shared.Net20, Version=1.0.94.0, Culture=neutral, PublicKeyToken=36ff2196ab5654b9, processorArchitecture=MSIL" />
+    <Reference Include="AjaxControlToolkit, Version=3.0.30512.24880, Culture=neutral, PublicKeyToken=28f01b0e84b6d53e, processorArchitecture=MSIL" />
+    <Reference Include="AspNetPager, Version=7.3.2.0, Culture=neutral, PublicKeyToken=fb0a0fe055d40fd4, processorArchitecture=MSIL" />
+    <Reference Include="Aspose.Cells, Version=4.7.1.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Aspose.Words, Version=11.3.0.0, Culture=neutral, PublicKeyToken=47d5d0e1ef9d080b, processorArchitecture=MSIL" />
+    <Reference Include="BusinessFacade, Version=1.0.0.0, Culture=neutral" />
+    <Reference Include="c1.c1excel, Version=1.1.20061.44, Culture=neutral, PublicKeyToken=79882d576c6336da" />
+    <Reference Include="CodeHighlighterTest, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CommonData, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ComponentArt.Web.UI, Version=2010.1.2381.3, Culture=neutral, PublicKeyToken=d0f87f5936b4c8c8, processorArchitecture=MSIL" />
+    <Reference Include="ConvertToPDXPS, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="CuteEditor, Version=6.6.0.0, Culture=neutral, PublicKeyToken=3858aa6802b1223a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>C:\Documents and Settings\f3230063\Local Settings\Application Data\Temporary Projects\CMCFileManage\Reference\CuteEditor.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetTextBox, Version=3.5.0.0, Culture=neutral, PublicKeyToken=4577255b0d2d7147, processorArchitecture=MSIL" />
+    <Reference Include="eAuthorize, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="eFlowDoc, Version=1.0.0.0, Culture=neutral" />
+    <Reference Include="eFlowWebControl, Version=1.0.3531.25214, Culture=neutral" />
+    <Reference Include="eHR.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="eWorkFlow.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="eWorkFlow.eFlowConfig, Version=1.0.0.10106, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="eWorkFlow.eFlowDoc, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="eWorkFlow.Model, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="FileManager, Version=1.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="Framework, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="FtpServer1, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="GridViewHelper, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="ICSharpCode.SharpZipLib, Version=0.85.4.369, Culture=neutral, PublicKeyToken=1b03e6acf1164f73" />
+    <Reference Include="Infragistics35.Web.v10.3, Version=10.3.20103.1013, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics35.WebUI.Documents.v10.3, Version=10.3.20103.1013, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Infragistics35.WebUI.Excel.v10.3, Version=10.3.20103.1013, Culture=neutral, PublicKeyToken=7dd5c3163f2cd0cb, processorArchitecture=MSIL" />
+    <Reference Include="Interop.Microsoft.Office.Core, Version=2.2.0.0, Culture=neutral, processorArchitecture=MSIL" />
+    <Reference Include="itextsharp, Version=5.1.3.0, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=11.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c" />
+    <Reference Include="myControl, Version=1.0.2508.19193, Culture=neutral" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.ServiceModel">
+      <RequiredTargetFramework>3.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+    <Reference Include="SystemFramework, Version=1.0.0.0, Culture=neutral" />
+    <Reference Include="SystemMailOperation, Version=1.0.0.2, Culture=neutral" />
+    <Reference Include="Vortex.Web.UI.WebControls, Version=1.0.3454.15158, Culture=neutral" />
+    <Reference Include="ZebraPrinter, Version=1.0.4479.33018, Culture=neutral, processorArchitecture=MSIL" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Collections.Specialized" />
+    <Import Include="System.Configuration" />
+    <Import Include="System.Text" />
+    <Import Include="System.Text.RegularExpressions" />
+    <Import Include="System.Web" />
+    <Import Include="System.Web.Caching" />
+    <Import Include="System.Web.SessionState" />
+    <Import Include="System.Web.Security" />
+    <Import Include="System.Web.Profile" />
+    <Import Include="System.Web.UI" />
+    <Import Include="System.Web.UI.WebControls" />
+    <Import Include="System.Web.UI.WebControls.WebParts" />
+    <Import Include="System.Web.UI.HtmlControls" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Themes\Default\Images\dot_08.gif" />
+    <Content Include="App_Themes\Default\Images\Footer_bg.png" />
+    <Content Include="App_Themes\Default\Images\gradient_DKGray.jpg" />
+    <Content Include="App_Themes\Default\Images\header_bg.png" />
+    <Content Include="App_Themes\Default\Images\menubj_03.jpg" />
+    <Content Include="App_Themes\Default\Images\R.gif" />
+    <Content Include="App_Themes\Default\Images\tableftB.gif" />
+    <Content Include="App_Themes\Default\Images\tabright2.gif" />
+    <Content Include="App_Themes\Default\Images\tabright4.gif" />
+    <Content Include="App_Themes\LightBlue\Images\adminbj_26.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\anbj_03.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\dhbj_12.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\dot_08.gif" />
+    <Content Include="App_Themes\LightBlue\Images\footbj_05.JPG" />
+    <Content Include="App_Themes\LightBlue\Images\leftfood_50.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lefttoplm_23.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lma_25.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lmbjc_45.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\lmb_27.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\titlebj_03.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\topbj_01.jpg" />
+    <Content Include="App_Themes\LightBlue\Images\topbj_05.jpg" />
+    <Content Include="App_Themes\LightBlue\StyleSheet.css" />
+    <Content Include="Component\Common\Data\dataEntLib.txt" />
+    <Content Include="ConfigurationFiles\DDLResource.xml" />
+    <Content Include="DataBaseScripts\AttachFile ProcedureFor2000.sql" />
+    <Content Include="DataBaseScripts\AttachFile ProcedureFor2005.sql" />
+    <Content Include="DataBaseScripts\CreateAttachFileFor2000.sql" />
+    <Content Include="DataBaseScripts\CreateAttachFileFor2005.sql" />
+    <Content Include="DataBaseScripts\OperationTree.sql" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\040911610.gif" />
+    <Content Include="Images\5.png" />
+    <Content Include="Images\62.gif" />
+    <Content Include="Images\9520.gif" />
+    <Content Include="Images\add.png" />
+    <Content Include="Images\allmanagemenu.png" />
+    <Content Include="Images\back.gif" />
+    <Content Include="Images\back1.gif" />
+    <Content Include="Images\bar_headermenu.gif" />
+    <Content Include="Images\bevel.gif" />
+    <Content Include="Images\calendar.png" />
+    <Content Include="Images\cancel.gif" />
+    <Content Include="Images\circle2.gif" />
+    <Content Include="Images\close.gif" />
+    <Content Include="Images\closeTabAll.gif" />
+    <Content Include="Images\Delete.gif" />
+    <Content Include="Images\delete.png" />
+    <Content Include="Images\DeleteFile.gif" />
+    <Content Include="Images\Discard.gif" />
+    <Content Include="Images\dn.gif" />
+    <Content Include="Images\dot_topic_red.gif" />
+    <Content Include="Images\DownLoad.gif" />
+    <Content Include="Images\edit.gif" />
+    <Content Include="Images\EditIcon1.gif" />
+    <Content Include="Images\Excel.gif" />
+    <Content Include="Images\Finish.gif" />
+    <Content Include="Images\forum_newmsg.gif" />
+    <Content Include="Images\Friend.gif" />
+    <Content Include="Images\Get Document.png" />
+    <Content Include="Images\go.gif" />
+    <Content Include="Images\GoTop.gif" />
+    <Content Include="Images\gradient_DKGray.jpg" />
+    <Content Include="Images\header_main.gif" />
+    <Content Include="Images\hotelmanage.png" />
+    <Content Include="Images\icon-floppy.gif" />
+    <Content Include="Images\icon2_090.png" />
+    <Content Include="Images\Login\62.gif" />
+    <Content Include="Images\Login\Audit.gif" />
+    <Content Include="Images\Login\dot_topic_red.gif" />
+    <Content Include="Images\Login\Friend.gif" />
+    <Content Include="Images\Login\title_line.gif" />
+    <Content Include="Images\logo.gif" />
+    <Content Include="Images\menubj_03.jpg" />
+    <Content Include="Images\m_list_34.gif" />
+    <Content Include="Images\navBg.gif" />
+    <Content Include="Images\newmsg.gif" />
+    <Content Include="Images\next.gif" />
+    <Content Include="Images\next1.gif" />
+    <Content Include="Images\openroomiconinfo.gif" />
+    <Content Include="Images\print.gif" />
+    <Content Include="Images\publishicon.png" />
+    <Content Include="Images\refresh.gif" />
+    <Content Include="Images\refresh.png" />
+    <Content Include="Images\restore.gif" />
+    <Content Include="Images\roolrecordicon.png" />
+    <Content Include="Images\roomtypeicon.gif" />
+    <Content Include="Images\Save.gif" />
+    <Content Include="Images\Search.gif" />
+    <Content Include="Images\search.png" />
+    <Content Include="Images\SetFirstPage.gif" />
+    <Content Include="Images\settings.gif" />
+    <Content Include="Images\spacer.gif" />
+    <Content Include="Images\SplitIcon.gif" />
+    <Content Include="Images\sysmanagemenu.png" />
+    <Content Include="Images\systemSeting.png" />
+    <Content Include="Images\totalicon.png" />
+    <Content Include="Images\TreeView\152.gif" />
+    <Content Include="Images\TreeView\Footer_bg.png" />
+    <Content Include="Images\TreeView\R.gif" />
+    <Content Include="Images\TreeView\topopen.gif" />
+    <Content Include="Images\up.gif" />
+    <Content Include="Images\UploadFile.gif" />
+    <Content Include="Images\UserInfo\AuditMan.gif" />
+    <Content Include="Images\VerifyNoPass.gif" />
+    <Content Include="Images\VerifyPass.gif" />
+    <Content Include="Images\Warning.gif" />
+    <Content Include="Images\xls.gif" />
+    <Content Include="Reference\AspNetPager.dll" />
+    <Content Include="Reference\Aspose.Cells.dll" />
+    <Content Include="Reference\c1.c1excel.dll" />
+    <Content Include="Reference\CuteEditor.dll" />
+    <Content Include="Reference\eFlowWebControl.dll" />
+    <Content Include="Reference\Infragistics35.Web.v10.3.dll" />
+    <Content Include="Reference\Infragistics35.WebUI.Documents.v10.3.dll" />
+    <Content Include="Reference\Infragistics35.WebUI.Excel.v10.3.dll" />
+    <Content Include="Reference\Interop.Microsoft.Office.Core.dll" />
+    <Content Include="Scripts\dom-drag.js" />
+    <Content Include="Scripts\JSLeft.js" />
+    <Content Include="Scripts\JSMaster.js" />
+    <Content Include="Scripts\JSPageSetting.js" />
+    <Content Include="Scripts\My97DatePicker\calendar.js" />
+    <Content Include="Scripts\My97DatePicker\config.js" />
+    <Content Include="Scripts\My97DatePicker\lang\en.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="Scripts\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="Scripts\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="Scripts\My97DatePicker\ReadMe.txt" />
+    <Content Include="Scripts\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\default\img.gif" />
+    <Content Include="Scripts\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="Scripts\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="Scripts\My97DatePicker\WdatePicker.js" />
+    <Content Include="Scripts\newInputCalendar.js" />
+    <Content Include="Scripts\UIHelper.js" />
+    <Content Include="Scripts\WinHelper.js" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="action\AjaxUploadHandler.ashx.vb">
+      <DependentUpon>AjaxUploadHandler.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="action\JqueryS.ashx.vb">
+      <DependentUpon>JqueryS.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="action\JqueryService.ashx.vb">
+      <DependentUpon>JqueryService.ashx</DependentUpon>
+    </Compile>
+    <Compile Include="Component\BasePape.vb" />
+    <Compile Include="Component\Common\Base\CacheHelper.vb" />
+    <Compile Include="Component\Common\Base\Logger.vb" />
+    <Compile Include="Component\Common\Base\Pagebase.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\Common\Base\VerifyHelper.vb" />
+    <Compile Include="Component\Common\Data\ADONetHelper.vb" />
+    <Compile Include="Component\Common\Data\DataAssist.vb" />
+    <Compile Include="Component\Common\Data\DataExcel.vb" />
+    <Compile Include="Component\Common\Data\DataSetToExcel.vb" />
+    <Compile Include="Component\Common\Data\FileCategory.vb" />
+    <Compile Include="Component\Common\Data\IFactory.vb" />
+    <Compile Include="Component\Common\Data\SearchExtHelper.vb" />
+    <Compile Include="Component\Common\Data\SQLHelper.vb" />
+    <Compile Include="Component\ConfigurationInfo.vb" />
+    <Compile Include="Component\DAL\CheckRecordDAL.vb" />
+    <Compile Include="Component\DAL\ComplaintsDAL.vb" />
+    <Compile Include="Component\DAL\EquipFileDAL.vb" />
+    <Compile Include="Component\DAL\EquipManageDAL.vb" />
+    <Compile Include="Component\DAL\ErrorReportDAL.vb" />
+    <Compile Include="Component\DAL\FileReadManageDAL.vb" />
+    <Compile Include="Component\DAL\GEPCSI_NGItemReasonDAL.vb" />
+    <Compile Include="Component\DAL\ImportantGoodsDAL.vb" />
+    <Compile Include="Component\DAL\InternalAuditPlanandReportDAL.vb" />
+    <Compile Include="Component\DAL\OutFileManageDAL.vb" />
+    <Compile Include="Component\DAL\QC_AttachFileInfoDAL.vb" />
+    <Compile Include="Component\DAL\QC_FileDeleteInfoDAL.vb" />
+    <Compile Include="Component\DAL\QC_FileInfoDAL.vb" />
+    <Compile Include="Component\DAL\QC_UserParameterDAL.vb" />
+    <Compile Include="Component\DAL\ReadFileInfoDAL.vb" />
+    <Compile Include="Component\DAL\Record_ChangeHistoryDAL.vb" />
+    <Compile Include="Component\DAL\StandardFileManageDAL.vb" />
+    <Compile Include="Component\DAL\StandardSearchManageDAL.vb" />
+    <Compile Include="Component\DAL\SupplierDAL.vb" />
+    <Compile Include="Component\DAL\TableBMHDAL.vb" />
+    <Compile Include="Component\DownLoadZip.vb">
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Component\ExtendDAl\CGUserInfoExt.vb" />
+    <Compile Include="Component\ExtendDAl\UplodeFileInfoDALExt.vb" />
+    <Compile Include="Component\ExtendDAl\AttachFileInfoDALExt.vb" />
+    <Compile Include="Component\Json.vb" />
+    <Compile Include="Component\Model\CaiGouUserInfo.vb" />
+    <Compile Include="Component\Model\CaiGouUserInfoCollection.vb" />
+    <Compile Include="Component\Model\CheckRecordInfo.vb" />
+    <Compile Include="Component\Model\ComplaintsInfo.vb" />
+    <Compile Include="Component\Model\EquipFileInfo.vb" />
+    <Compile Include="Component\Model\EquipManageInfo.vb" />
+    <Compile Include="Component\Model\ErrorReportInfo.vb" />
+    <Compile Include="Component\Model\FileReadManageInfo.vb" />
+    <Compile Include="Component\Model\GEPCSI_Dept.vb" />
+    <Compile Include="Component\Model\GEPCSI_DeptCollection.vb" />
+    <Compile Include="Component\Model\GEPCSI_DeptItem.vb" />
+    <Compile Include="Component\Model\GEPCSI_DeptItemCollection.vb" />
+    <Compile Include="Component\Model\GEPCSI_DetailResult.vb" />
+    <Compile Include="Component\Model\GEPCSI_DetailResultCollection.vb" />
+    <Compile Include="Component\Model\GEPCSI_NGItemReasonInfo.vb" />
+    <Compile Include="Component\Model\GEPCSI_Period.vb" />
+    <Compile Include="Component\Model\GEPCSI_PeriodCollection.vb" />
+    <Compile Include="Component\Model\GEPCSI_Result.vb" />
+    <Compile Include="Component\Model\GEPCSI_ResultCollection.vb" />
+    <Compile Include="Component\Model\ImportantGoodsInfo.vb" />
+    <Compile Include="Component\Model\InternalAuditPlanandReportInfo.vb" />
+    <Compile Include="Component\Model\Log.vb" />
+    <Compile Include="Component\Model\OutFileManageInfo.vb" />
+    <Compile Include="Component\Model\QC_AttachFileInfoInfo.vb" />
+    <Compile Include="Component\Model\QC_FileDeleteInfoInfo.vb" />
+    <Compile Include="Component\Model\QC_FileInfoInfo.vb" />
+    <Compile Include="Component\Model\QC_UserParameterInfo.vb" />
+    <Compile Include="Component\Model\ReadFileInfoInfo.vb" />
+    <Compile Include="Component\Model\Record_ChangeHistoryInfo.vb" />
+    <Compile Include="Component\Model\StandardFileManageInfo.vb" />
+    <Compile Include="Component\Model\StandardSearchManageInfo.vb" />
+    <Compile Include="Component\Model\SupplierInfo.vb" />
+    <Compile Include="Component\Model\TableBMHInfo.vb" />
+    <Compile Include="Component\Model\WF_ProjectInfo.vb" />
+    <Compile Include="Component\Model\WF_ProjectInfoCollection.vb" />
+    <Compile Include="Default.aspx.designer.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.vb">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.vb">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddQCFileDetail.aspx.designer.vb">
+      <DependentUpon>AddQCFileDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddQCFileDetail.aspx.vb">
+      <DependentUpon>AddQCFileDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\AddQCFileList.aspx.designer.vb">
+      <DependentUpon>AddQCFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\AddQCFileList.aspx.vb">
+      <DependentUpon>AddQCFileList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\changechangqu.aspx.designer.vb">
+      <DependentUpon>changechangqu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\changechangqu.aspx.vb">
+      <DependentUpon>changechangqu.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ComplaintsDetail.aspx.designer.vb">
+      <DependentUpon>ComplaintsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ComplaintsDetail.aspx.vb">
+      <DependentUpon>ComplaintsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ComplaintsList.aspx.designer.vb">
+      <DependentUpon>ComplaintsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ComplaintsList.aspx.vb">
+      <DependentUpon>ComplaintsList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EquipFileDetail.aspx.designer.vb">
+      <DependentUpon>EquipFileDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EquipFileDetail.aspx.vb">
+      <DependentUpon>EquipFileDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EquipFileList.aspx.designer.vb">
+      <DependentUpon>EquipFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EquipFileList.aspx.vb">
+      <DependentUpon>EquipFileList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EquipManageDetail.aspx.designer.vb">
+      <DependentUpon>EquipManageDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EquipManageDetail.aspx.vb">
+      <DependentUpon>EquipManageDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\EquipManageList.aspx.designer.vb">
+      <DependentUpon>EquipManageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\EquipManageList.aspx.vb">
+      <DependentUpon>EquipManageList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorReportDetail.aspx.designer.vb">
+      <DependentUpon>ErrorReportDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorReportDetail.aspx.vb">
+      <DependentUpon>ErrorReportDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\ErrorReportList.aspx.designer.vb">
+      <DependentUpon>ErrorReportList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\ErrorReportList.aspx.vb">
+      <DependentUpon>ErrorReportList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FileDeleteApplyDetail.aspx.designer.vb">
+      <DependentUpon>FileDeleteApplyDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileDeleteApplyDetail.aspx.vb">
+      <DependentUpon>FileDeleteApplyDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FileDeleteApplyList.aspx.designer.vb">
+      <DependentUpon>FileDeleteApplyList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileDeleteApplyList.aspx.vb">
+      <DependentUpon>FileDeleteApplyList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FileReadManageDetail.aspx.designer.vb">
+      <DependentUpon>FileReadManageDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileReadManageDetail.aspx.vb">
+      <DependentUpon>FileReadManageDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\FileReadManageList.aspx.designer.vb">
+      <DependentUpon>FileReadManageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FileReadManageList.aspx.vb">
+      <DependentUpon>FileReadManageList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\InternalAuditDetail.aspx.designer.vb">
+      <DependentUpon>InternalAuditDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InternalAuditDetail.aspx.vb">
+      <DependentUpon>InternalAuditDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\InternalAuditList.aspx.designer.vb">
+      <DependentUpon>InternalAuditList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\InternalAuditList.aspx.vb">
+      <DependentUpon>InternalAuditList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\OtherFileDetail.aspx.designer.vb">
+      <DependentUpon>OtherFileDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherFileDetail.aspx.vb">
+      <DependentUpon>OtherFileDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\OtherFileList.aspx.designer.vb">
+      <DependentUpon>OtherFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OtherFileList.aspx.vb">
+      <DependentUpon>OtherFileList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\OutFileDetail.aspx.designer.vb">
+      <DependentUpon>OutFileDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OutFileDetail.aspx.vb">
+      <DependentUpon>OutFileDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\OutFileList.aspx.designer.vb">
+      <DependentUpon>OutFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\OutFileList.aspx.vb">
+      <DependentUpon>OutFileList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QCFileDetail.aspx.designer.vb">
+      <DependentUpon>QCFileDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QCFileDetail.aspx.vb">
+      <DependentUpon>QCFileDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\QCFileList.aspx.designer.vb">
+      <DependentUpon>QCFileList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\QCFileList.aspx.vb">
+      <DependentUpon>QCFileList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\StandardSearchManageDetail.aspx.designer.vb">
+      <DependentUpon>StandardSearchManageDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StandardSearchManageDetail.aspx.vb">
+      <DependentUpon>StandardSearchManageDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Forms\StandardSearchManageList.aspx.designer.vb">
+      <DependentUpon>StandardSearchManageList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\StandardSearchManageList.aspx.vb">
+      <DependentUpon>StandardSearchManageList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.vb">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\AddnewItem.aspx.designer.vb">
+      <DependentUpon>AddnewItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\AddnewItem.aspx.vb">
+      <DependentUpon>AddnewItem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\AddNewNGItem.aspx.designer.vb">
+      <DependentUpon>AddNewNGItem.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\AddNewNGItem.aspx.vb">
+      <DependentUpon>AddNewNGItem.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\DeptItemList.aspx.designer.vb">
+      <DependentUpon>DeptItemList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\DeptItemList.aspx.vb">
+      <DependentUpon>DeptItemList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSIItemReports.aspx.designer.vb">
+      <DependentUpon>GMPCSIItemReports.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSIItemReports.aspx.vb">
+      <DependentUpon>GMPCSIItemReports.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSIMoudle.aspx.designer.vb">
+      <DependentUpon>GMPCSIMoudle.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSIMoudle.aspx.vb">
+      <DependentUpon>GMPCSIMoudle.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSIResult.aspx.designer.vb">
+      <DependentUpon>GMPCSIResult.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSIResult.aspx.vb">
+      <DependentUpon>GMPCSIResult.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSISet.aspx.designer.vb">
+      <DependentUpon>GMPCSISet.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\GMPCSISet.aspx.vb">
+      <DependentUpon>GMPCSISet.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\NGItemReason.aspx.designer.vb">
+      <DependentUpon>NGItemReason.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\NGItemReason.aspx.vb">
+      <DependentUpon>NGItemReason.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="GMPCSI\SelectDept.aspx.designer.vb">
+      <DependentUpon>SelectDept.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="GMPCSI\SelectDept.aspx.vb">
+      <DependentUpon>SelectDept.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Index.aspx.designer.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Index.aspx.vb">
+      <DependentUpon>Index.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="leftc.aspx.designer.vb">
+      <DependentUpon>leftc.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leftc.aspx.vb">
+      <DependentUpon>leftc.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="lefti.aspx.designer.vb">
+      <DependentUpon>lefti.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lefti.aspx.vb">
+      <DependentUpon>lefti.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="leftn.aspx.designer.vb">
+      <DependentUpon>leftn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leftn.aspx.vb">
+      <DependentUpon>leftn.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="leftq.aspx.designer.vb">
+      <DependentUpon>leftq.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="leftq.aspx.vb">
+      <DependentUpon>leftq.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="lefts.aspx.designer.vb">
+      <DependentUpon>lefts.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="lefts.aspx.vb">
+      <DependentUpon>lefts.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Login.aspx.vb">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="MasterPager.Master.designer.vb">
+      <DependentUpon>MasterPager.Master</DependentUpon>
+    </Compile>
+    <Compile Include="MasterPager.Master.vb">
+      <DependentUpon>MasterPager.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\MyExtensions\MyWebExtension.vb">
+      <VBMyExtensionTemplateID>Microsoft.VisualBasic.Web.MyExtension</VBMyExtensionTemplateID>
+      <VBMyExtensionTemplateVersion>1.0.0.0</VBMyExtensionTemplateVersion>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="right.aspx.designer.vb">
+      <DependentUpon>right.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="right.aspx.vb">
+      <DependentUpon>right.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Service References\WCFService\Reference.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers\AddCheckRecord.aspx.designer.vb">
+      <DependentUpon>AddCheckRecord.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers\AddCheckRecord.aspx.vb">
+      <DependentUpon>AddCheckRecord.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Suppliers\ImportantGoodsDetail.aspx.designer.vb">
+      <DependentUpon>ImportantGoodsDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers\ImportantGoodsDetail.aspx.vb">
+      <DependentUpon>ImportantGoodsDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Suppliers\ImportantGoodsList.aspx.designer.vb">
+      <DependentUpon>ImportantGoodsList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers\ImportantGoodsList.aspx.vb">
+      <DependentUpon>ImportantGoodsList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Suppliers\SuppliersDetail.aspx.designer.vb">
+      <DependentUpon>SuppliersDetail.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers\SuppliersDetail.aspx.vb">
+      <DependentUpon>SuppliersDetail.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Suppliers\SuppliersList.aspx.designer.vb">
+      <DependentUpon>SuppliersList.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Suppliers\SuppliersList.aspx.vb">
+      <DependentUpon>SuppliersList.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="Top.aspx.designer.vb">
+      <DependentUpon>Top.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Top.aspx.vb">
+      <DependentUpon>Top.aspx</DependentUpon>
+      <SubType>ASPXCodebehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\CtlFooter.ascx.vb">
+      <DependentUpon>CtlFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\CTLGEPNGReason.ascx.vb">
+      <DependentUpon>CTLGEPNGReason.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\CtlGMPCSIItemReports.ascx.vb">
+      <DependentUpon>CtlGMPCSIItemReports.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\CtlGMPCSIMoudle.ascx.vb">
+      <DependentUpon>CtlGMPCSIMoudle.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\CtlGMPCSIResult.ascx.vb">
+      <DependentUpon>CtlGMPCSIResult.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\CtlGMPCSISet.ascx.vb">
+      <DependentUpon>CtlGMPCSISet.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\CtlGMPNGReasonReport.ascx.vb">
+      <DependentUpon>CtlGMPNGReasonReport.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UcFileDetail.ascx.designer.vb">
+      <DependentUpon>UcFileDetail.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcFileDetail.ascx.vb">
+      <DependentUpon>UcFileDetail.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UcLog.ascx.designer.vb">
+      <DependentUpon>UcLog.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcLog.ascx.vb">
+      <DependentUpon>UcLog.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlFooter.ascx.designer.vb">
+      <DependentUpon>UCtlFooter.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlFooter.ascx.vb">
+      <DependentUpon>UCtlFooter.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlGrdPage.ascx.designer.vb">
+      <DependentUpon>UCtlGrdPage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlGrdPage.ascx.vb">
+      <DependentUpon>UCtlGrdPage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlImgList.ascx.designer.vb">
+      <DependentUpon>UCtlImgList.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlImgList.ascx.vb">
+      <DependentUpon>UCtlImgList.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlListAction.ascx.designer.vb">
+      <DependentUpon>UCtlListAction.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlListAction.ascx.vb">
+      <DependentUpon>UCtlListAction.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlLogin.ascx.designer.vb">
+      <DependentUpon>UCtlLogin.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlLogin.ascx.vb">
+      <DependentUpon>UCtlLogin.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlMenu.ascx.designer.vb">
+      <DependentUpon>UCtlMenu.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlMenu.ascx.vb">
+      <DependentUpon>UCtlMenu.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlTreeView.ascx.designer.vb">
+      <DependentUpon>UCtlTreeView.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlTreeView.ascx.vb">
+      <DependentUpon>UCtlTreeView.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UCtlUserInfo.ascx.designer.vb">
+      <DependentUpon>UCtlUserInfo.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UCtlUserInfo.ascx.vb">
+      <DependentUpon>UCtlUserInfo.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UcUserFileManage.ascx.designer.vb">
+      <DependentUpon>UcUserFileManage.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcUserFileManage.ascx.vb">
+      <DependentUpon>UcUserFileManage.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UCtl\UcWorkWaitFor.ascx.designer.vb">
+      <DependentUpon>UcWorkWaitFor.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UCtl\UcWorkWaitFor.ascx.vb">
+      <DependentUpon>UcWorkWaitFor.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtl\CtlFooter.ascx.resx">
+      <DependentUpon>CtlFooter.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtl\CTLGEPNGReason.ascx.resx">
+      <DependentUpon>CTLGEPNGReason.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtl\CtlGMPCSIItemReports.ascx.resx">
+      <DependentUpon>CtlGMPCSIItemReports.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtl\CtlGMPCSIMoudle.ascx.resx">
+      <DependentUpon>CtlGMPCSIMoudle.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtl\CtlGMPCSIResult.ascx.resx">
+      <DependentUpon>CtlGMPCSIResult.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtl\CtlGMPCSISet.ascx.resx">
+      <DependentUpon>CtlGMPCSISet.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UCtl\CtlGMPNGReasonReport.ascx.resx">
+      <DependentUpon>CtlGMPNGReasonReport.ascx.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin_index.html" />
+    <Content Include="App_Data\orders.xml" />
+    <Content Include="App_Themes\Default\Default.skin" />
+    <Content Include="App_Themes\Default\login.css" />
+    <Content Include="App_Themes\Default\StyleSheet.css" />
+    <Content Include="App_Themes\LightBlue\LightBlue.skin" />
+    <Content Include="CSS\AddQCFileDetail.css" />
+    <Content Include="CSS\newaction.css" />
+    <Content Include="CSS\WebFileManager.css" />
+    <Content Include="Default.aspx" />
+    <Content Include="EFlowNet\Config\Config.xml" />
+    <Content Include="EFlowNet\Config\ConfigCD.xml" />
+    <Content Include="EFlowNet\Config\ConfigCQ.xml" />
+    <Content Include="EFlowNet\Config\ConfigGL.xml" />
+    <Content Include="EFlowNet\Config\ConfigLH.xml" />
+    <Content Include="EFlowNet\Config\ConfigWH.xml" />
+    <Content Include="EFlowNet\Config\ConfigWSJ.xml" />
+    <Content Include="EFlowNet\Config\ConfigYT.xml" />
+    <Content Include="EFlowNet\Config\ConfigZZ.xml" />
+    <Content Include="EFlowNet\Doc\CSS\FlowButton.css" />
+    <Content Include="EFlowNet\Doc\CSS\FlowStyle.css" />
+    <Content Include="EFlowNet\Doc\CSS\GridViewLock.css" />
+    <Content Include="EFlowNet\Doc\CSS\multiPage.css" />
+    <Content Include="EFlowNet\Doc\CSS\Style.css" />
+    <Content Include="EFlowNet\Doc\CSS\tabStyle.css" />
+    <Content Include="EFlowNet\Doc\eFlowLog.txt" />
+    <Content Include="EFlowNet\Doc\Images\add.gif" />
+    <Content Include="EFlowNet\Doc\Images\Approve.gif" />
+    <Content Include="EFlowNet\Doc\Images\Audit.gif" />
+    <Content Include="EFlowNet\Doc\Images\delete.gif" />
+    <Content Include="EFlowNet\Doc\Images\Discard.gif" />
+    <Content Include="EFlowNet\Doc\Images\DownLoadFile.gif" />
+    <Content Include="EFlowNet\Doc\Images\Edit.png" />
+    <Content Include="EFlowNet\Doc\Images\Exit.gif" />
+    <Content Include="EFlowNet\Doc\Images\Finish.gif" />
+    <Content Include="EFlowNet\Doc\Images\FormCorner_small.gif" />
+    <Content Include="EFlowNet\Doc\Images\Freeze.gif" />
+    <Content Include="EFlowNet\Doc\Images\hover_tab_bg.gif" />
+    <Content Include="EFlowNet\Doc\Images\leave.gif" />
+    <Content Include="EFlowNet\Doc\Images\lock.gif" />
+    <Content Include="EFlowNet\Doc\Images\Rejection.gif" />
+    <Content Include="EFlowNet\Doc\Images\Reply.gif" />
+    <Content Include="EFlowNet\Doc\Images\Reset.gif" />
+    <Content Include="EFlowNet\Doc\Images\Revoke.gif" />
+    <Content Include="EFlowNet\Doc\Images\save.gif" />
+    <Content Include="EFlowNet\Doc\Images\selected_tab_bg.gif" />
+    <Content Include="EFlowNet\Doc\Images\selected_tab_left_icon.gif" />
+    <Content Include="EFlowNet\Doc\Images\selected_tab_right_icon.gif" />
+    <Content Include="EFlowNet\Doc\Images\SelfAction.gif" />
+    <Content Include="EFlowNet\Doc\Images\settings.gif" />
+    <Content Include="EFlowNet\Doc\Images\spacer.gif" />
+    <Content Include="EFlowNet\Doc\Images\tab_bg.gif" />
+    <Content Include="EFlowNet\Doc\Images\tab_left_icon.gif" />
+    <Content Include="EFlowNet\Doc\Images\tab_right_icon.gif" />
+    <Content Include="EFlowNet\Doc\Images\UnFreeze.gif" />
+    <Content Include="EFlowNet\Doc\Images\UploadFile.gif" />
+    <Content Include="EFlowNet\Doc\Images\view.gif" />
+    <Content Include="EFlowNet\Doc\JS\flowScript.js" />
+    <Content Include="EFlowNet\Doc\Modules\CtlWFActionList.ascx" />
+    <Content Include="EFlowNet\Doc\Modules\CtlWFButton.ascx" />
+    <Content Include="EFlowNet\Doc\Modules\ctlWFHistory.ascx" />
+    <Content Include="EFlowNet\eFlowReference\AjaxControlToolkit\AjaxControlToolkit.dll" />
+    <Content Include="EFlowNet\eFlowReference\AjaxControlToolkit\zh-CHS\AjaxControlToolkit.resources.dll" />
+    <Content Include="EFlowNet\eFlowReference\AjaxControlToolkit\zh-CHT\AjaxControlToolkit.resources.dll" />
+    <Content Include="EFlowNet\eFlowReference\ComponentArt.Web.UI.dll" />
+    <Content Include="EFlowNet\eFlowReference\CuteEditor.dll" />
+    <Content Include="EFlowNet\eFlowReference\eAuthorize.dll" />
+    <Content Include="EFlowNet\eFlowReference\eAuthorize.xml" />
+    <Content Include="EFlowNet\eFlowReference\eFlowDoc.dll" />
+    <Content Include="EFlowNet\eFlowReference\eHR.Core.dll" />
+    <Content Include="EFlowNet\eFlowReference\eHR.Core.xml" />
+    <Content Include="EFlowNet\eFlowReference\eScheduler.Library.dll" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.Core.dll" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.Core.xml" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.eFlowConfig.dll" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.eFlowConfig.xml" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.eFlowDoc.dll" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.eFlowDoc.xml" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.Model.dll" />
+    <Content Include="EFlowNet\eFlowReference\eWorkFlow.Model.xml" />
+    <Content Include="EFlowNet\eFlowReference\Framework.dll" />
+    <Content Include="EFlowNet\eFlowReference\Framework.xml" />
+    <Content Include="ErrorPage.aspx" />
+    <Content Include="favicon.ico" />
+    <Content Include="Forms\AddQCFileDetail.aspx" />
+    <Content Include="Forms\AddQCFileList.aspx" />
+    <Content Include="Forms\AddQCfileShow.js" />
+    <Content Include="Forms\changechangqu.aspx" />
+    <Content Include="Forms\ComplaintsDetail.aspx" />
+    <Content Include="Forms\ComplaintsList.aspx" />
+    <Content Include="Forms\EquipFileDetail.aspx" />
+    <Content Include="Forms\EquipFileList.aspx" />
+    <Content Include="Forms\EquipManageDetail.aspx" />
+    <Content Include="Forms\EquipManageList.aspx" />
+    <Content Include="Forms\ErrorReport.js" />
+    <Content Include="Forms\ErrorReportDetail.aspx" />
+    <Content Include="Forms\ErrorReportList.aspx" />
+    <Content Include="Forms\FileDeleteApplyDetail.aspx" />
+    <Content Include="Forms\FileDeleteApplyList.aspx" />
+    <Content Include="Forms\FileReadManage.js" />
+    <Content Include="Forms\FileReadManageDetail.aspx" />
+    <Content Include="Forms\FileReadManageList.aspx" />
+    <Content Include="Forms\gobacktotop.js" />
+    <Content Include="Forms\InternalAuditDetail.aspx" />
+    <Content Include="Forms\InternalAuditList.aspx" />
+    <Content Include="Forms\OtherFileDetail.aspx" />
+    <Content Include="Forms\OtherFileList.aspx" />
+    <Content Include="Forms\OutFileDetail.aspx" />
+    <Content Include="Forms\OutFileList.aspx" />
+    <Content Include="Forms\QCFileDetail.aspx" />
+    <Content Include="Forms\QCFileList.aspx" />
+    <Content Include="Forms\StandardSearchManageDetail.aspx" />
+    <Content Include="Forms\StandardSearchManageList.aspx" />
+    <Content Include="GMPCSI\AddnewItem.aspx" />
+    <Content Include="GMPCSI\AddNewNGItem.aspx" />
+    <Content Include="GMPCSI\DeptItem.js" />
+    <Content Include="GMPCSI\DeptItemList.aspx" />
+    <Content Include="GMPCSI\GMPCSIItemReports.aspx" />
+    <Content Include="GMPCSI\GMPCSIMoudle.aspx" />
+    <Content Include="GMPCSI\GMPCSIResult.aspx" />
+    <Content Include="GMPCSI\GMPCSISet.aspx" />
+    <Content Include="GMPCSI\NGItem.js" />
+    <Content Include="GMPCSI\NGItemReason.aspx" />
+    <Content Include="GMPCSI\Scripts\CSIScript.js" />
+    <Content Include="GMPCSI\Scripts\NewCalendar.js" />
+    <Content Include="GMPCSI\SelectDept.aspx" />
+    <Content Include="GMPCSI\Styles\CSIStyles.css" />
+    <Content Include="GMPCSI\Styles\ScrollTable.htc" />
+    <Content Include="IconsThemes\icon.css" />
+    <Content Include="IconsThemes\icons\actn025.gif" />
+    <Content Include="IconsThemes\icons\actn026.gif" />
+    <Content Include="IconsThemes\icons\Approve.gif" />
+    <Content Include="IconsThemes\icons\back.png" />
+    <Content Include="IconsThemes\icons\blank.gif" />
+    <Content Include="IconsThemes\icons\cancel.png" />
+    <Content Include="IconsThemes\icons\Clip.jpg" />
+    <Content Include="IconsThemes\icons\cut.png" />
+    <Content Include="IconsThemes\icons\edit_add.png" />
+    <Content Include="IconsThemes\icons\edit_remove.png" />
+    <Content Include="IconsThemes\icons\filesave.png" />
+    <Content Include="IconsThemes\icons\Free.gif" />
+    <Content Include="IconsThemes\icons\Freeze.gif" />
+    <Content Include="IconsThemes\icons\help.png" />
+    <Content Include="IconsThemes\icons\InfoTip.jpg" />
+    <Content Include="IconsThemes\icons\mini_add.png" />
+    <Content Include="IconsThemes\icons\mini_edit.png" />
+    <Content Include="IconsThemes\icons\mini_refresh.png" />
+    <Content Include="IconsThemes\icons\no.png" />
+    <Content Include="IconsThemes\icons\ok.png" />
+    <Content Include="IconsThemes\icons\pencil.png" />
+    <Content Include="IconsThemes\icons\print.png" />
+    <Content Include="IconsThemes\icons\redo.png" />
+    <Content Include="IconsThemes\icons\Rejection.gif" />
+    <Content Include="IconsThemes\icons\reload.png" />
+    <Content Include="IconsThemes\icons\Reply.gif" />
+    <Content Include="IconsThemes\icons\search.png" />
+    <Content Include="IconsThemes\icons\seq.gif" />
+    <Content Include="IconsThemes\icons\settings.gif" />
+    <Content Include="IconsThemes\icons\sum.png" />
+    <Content Include="IconsThemes\icons\tip.png" />
+    <Content Include="IconsThemes\icons\undo.png" />
+    <Content Include="IconsThemes\icons\UnFree.gif" />
+    <Content Include="IconsThemes\icons\UnFreeze.gif" />
+    <Content Include="IconsThemes\icons\xls.gif" />
+    <Content Include="Images\12630051960.gif" />
+    <Content Include="Images\b.png" />
+    <Content Include="Images\bg-body.gif" />
+    <Content Include="Images\bg-button-green.gif" />
+    <Content Include="Images\bg-content-box.gif" />
+    <Content Include="Images\bg-form-field.gif" />
+    <Content Include="Images\bg-login-top.png" />
+    <Content Include="Images\bg-login.gif" />
+    <Content Include="Images\bg-menu-item-current.gif" />
+    <Content Include="Images\bg-menu-item-green.gif" />
+    <Content Include="Images\bg-radial-gradient.gif" />
+    <Content Include="Images\bg-sidebar.gif" />
+    <Content Include="Images\bl.png" />
+    <Content Include="Images\br.png" />
+    <Content Include="Images\ch.gif" />
+    <Content Include="Images\checkbox.png" />
+    <Content Include="Images\cross.png" />
+    <Content Include="Images\DownLoadFile.gif" />
+    <Content Include="Images\icon-delete.gif" />
+    <Content Include="Images\icon-pencil-x.gif" />
+    <Content Include="Images\icon-pencil.gif" />
+    <Content Include="Images\Icons\add.png" />
+    <Content Include="Images\Icons\arj.gif" />
+    <Content Include="Images\Icons\asa.gif" />
+    <Content Include="Images\Icons\asax.gif" />
+    <Content Include="Images\Icons\ascx.gif" />
+    <Content Include="Images\Icons\asmx.gif" />
+    <Content Include="Images\Icons\asp.gif" />
+    <Content Include="Images\Icons\aspx.gif" />
+    <Content Include="Images\Icons\au.gif" />
+    <Content Include="Images\Icons\avi.gif" />
+    <Content Include="Images\Icons\bat.gif" />
+    <Content Include="Images\Icons\bmp.gif" />
+    <Content Include="Images\Icons\bullet_black.png" />
+    <Content Include="Images\Icons\cab.gif" />
+    <Content Include="Images\Icons\chm.gif" />
+    <Content Include="Images\Icons\clock_48.png" />
+    <Content Include="Images\Icons\ClosedFolder.gif" />
+    <Content Include="Images\Icons\com.gif" />
+    <Content Include="Images\Icons\comment_48.png" />
+    <Content Include="Images\Icons\config.gif" />
+    <Content Include="Images\Icons\Copy.gif" />
+    <Content Include="Images\Icons\cross.png" />
+    <Content Include="Images\Icons\cross_circle.png" />
+    <Content Include="Images\Icons\cross_grey_small.png" />
+    <Content Include="Images\Icons\cs.gif" />
+    <Content Include="Images\Icons\css.gif" />
+    <Content Include="Images\Icons\disco.gif" />
+    <Content Include="Images\Icons\dll.gif" />
+    <Content Include="Images\Icons\doc.gif" />
+    <Content Include="Images\Icons\equip.png" />
+    <Content Include="Images\Icons\equipfile.png" />
+    <Content Include="Images\Icons\exclamation.png" />
+    <Content Include="Images\Icons\exe.gif" />
+    <Content Include="Images\Icons\file.gif" />
+    <Content Include="Images\Icons\gif.gif" />
+    <Content Include="Images\Icons\hammer_screwdriver.png" />
+    <Content Include="Images\Icons\hlp.gif" />
+    <Content Include="Images\Icons\htm.gif" />
+    <Content Include="Images\Icons\html.gif" />
+    <Content Include="Images\Icons\image_add_48.png" />
+    <Content Include="Images\Icons\inc.gif" />
+    <Content Include="Images\Icons\information.png" />
+    <Content Include="Images\Icons\ini.gif" />
+    <Content Include="Images\Icons\jpg.gif" />
+    <Content Include="Images\Icons\jquery.wysiwyg.gif" />
+    <Content Include="Images\Icons\js.gif" />
+    <Content Include="Images\Icons\log.gif" />
+    <Content Include="Images\Icons\mdb.gif" />
+    <Content Include="Images\Icons\mid.gif" />
+    <Content Include="Images\Icons\midi.gif" />
+    <Content Include="Images\Icons\mov.gif" />
+    <Content Include="Images\Icons\Move.gif" />
+    <Content Include="Images\Icons\mp3.gif" />
+    <Content Include="Images\Icons\mpeg.gif" />
+    <Content Include="Images\Icons\mpg.gif" />
+    <Content Include="Images\Icons\paper_content_pencil_48.png" />
+    <Content Include="Images\Icons\pdf.gif" />
+    <Content Include="Images\Icons\pencil.png" />
+    <Content Include="Images\Icons\pencil_48.png" />
+    <Content Include="Images\Icons\ppt.gif" />
+    <Content Include="Images\Icons\rar.gif" />
+    <Content Include="Images\Icons\sys.gif" />
+    <Content Include="Images\Icons\tick_circle.png" />
+    <Content Include="Images\Icons\tif.gif" />
+    <Content Include="Images\Icons\txt.gif" />
+    <Content Include="Images\Icons\vb.gif" />
+    <Content Include="Images\Icons\vbs.gif" />
+    <Content Include="Images\Icons\vsdisco.gif" />
+    <Content Include="Images\Icons\wav.gif" />
+    <Content Include="Images\Icons\wri.gif" />
+    <Content Include="Images\Icons\xls.gif" />
+    <Content Include="Images\Icons\xml.gif" />
+    <Content Include="Images\Icons\zip.gif" />
+    <Content Include="Images\Icons\zuofei.png" />
+    <Content Include="Images\ico\add.png" />
+    <Content Include="Images\ico\applyinfo.png" />
+    <Content Include="Images\ico\baseinfo.png" />
+    <Content Include="Images\ico\computer.gif" />
+    <Content Include="Images\ico\computer2.gif" />
+    <Content Include="Images\ico\copy.gif" />
+    <Content Include="Images\ico\cut.gif" />
+    <Content Include="Images\ico\delete.gif" />
+    <Content Include="Images\ico\DownLoadFile.gif" />
+    <Content Include="Images\ico\edit.gif" />
+    <Content Include="Images\ico\file_new.gif" />
+    <Content Include="Images\ico\folder_new.gif" />
+    <Content Include="Images\ico\history.png" />
+    <Content Include="Images\ico\paste.gif" />
+    <Content Include="Images\ico\personal.png" />
+    <Content Include="Images\ico\refresh.gif" />
+    <Content Include="Images\ico\rename.gif" />
+    <Content Include="Images\ico\sample.png" />
+    <Content Include="Images\ico\topdf.png" />
+    <Content Include="Images\ico\trash.png" />
+    <Content Include="Images\ico\up.gif" />
+    <Content Include="Images\loading.gif" />
+    <Content Include="Images\logo.png" />
+    <Content Include="Images\logomax.gif" />
+    <Content Include="Images\menu-current-arrow.gif" />
+    <Content Include="Images\pen.png" />
+    <Content Include="Images\shortcut-button-bg.gif" />
+    <Content Include="Images\tick.png" />
+    <Content Include="Images\TitleLeft.gif" />
+    <Content Include="Images\TitleLeft1.gif" />
+    <Content Include="Images\tl.png" />
+    <Content Include="Images\tr.png" />
+    <Content Include="Images\trash.png" />
+    <Content Include="Images\TreeView\add.png" />
+    <Content Include="Images\TreeView\addequip.png" />
+    <Content Include="Images\TreeView\addequipfile.png" />
+    <Content Include="Images\TreeView\addqc.png" />
+    <Content Include="Images\TreeView\changeqc.png" />
+    <Content Include="Images\TreeView\zuofeiqc.png" />
+    <Content Include="Images\view.gif" />
+    <Content Include="Images\www6Lucn0021.gif" />
+    <Content Include="Index.aspx" />
+    <Content Include="JScript1.js" />
+    <Content Include="leftc.aspx" />
+    <Content Include="lefti.aspx" />
+    <Content Include="leftn.aspx" />
+    <Content Include="leftq.aspx" />
+    <Content Include="lefts.aspx" />
+    <Content Include="Login.aspx" />
+    <Content Include="MasterPager.Master" />
+    <Content Include="EFlowNet\eFLowHandler.ashx" />
+    <Content Include="action\AjaxUploadHandler.ashx" />
+    <Content Include="action\JqueryService.ashx" />
+    <Content Include="action\JqueryS.ashx" />
+    <None Include="EFlowNet\Doc\Images\Thumbs.db" />
+    <None Include="IconsThemes\icons\Thumbs.db" />
+    <None Include="ModuleForExcel\匯入調查人員信息模板.xls" />
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="NewScript\My97DatePicker\skin\default\Thumbs.db" />
+    <None Include="NewScript\My97DatePicker\skin\Thumbs.db" />
+    <None Include="NewScript\My97DatePicker\skin\whyGreen\Thumbs.db" />
+    <Content Include="NewScript\FileUpload.js" />
+    <Content Include="NewScript\flowScript.js" />
+    <Content Include="NewScript\global.js" />
+    <Content Include="NewScript\Ifream.js" />
+    <Content Include="NewScript\imagepreview.js" />
+    <Content Include="NewScript\jqModal.js" />
+    <Content Include="NewScript\jquery.js" />
+    <Content Include="NewScript\js-preview-728x90.js" />
+    <Content Include="NewScript\modal.js" />
+    <Content Include="NewScript\plugins\jquery.accordion.js" />
+    <Content Include="NewScript\plugins\jquery.calendar.js" />
+    <Content Include="NewScript\plugins\jquery.combo.js" />
+    <Content Include="NewScript\plugins\jquery.combobox.js" />
+    <Content Include="NewScript\plugins\jquery.combogrid.js" />
+    <Content Include="NewScript\plugins\jquery.combotree.js" />
+    <Content Include="NewScript\plugins\jquery.datagrid.js" />
+    <Content Include="NewScript\plugins\jquery.datebox.js" />
+    <Content Include="NewScript\plugins\jquery.datetimebox.js" />
+    <Content Include="NewScript\plugins\jquery.dialog.js" />
+    <Content Include="NewScript\plugins\jquery.draggable.js" />
+    <Content Include="NewScript\plugins\jquery.droppable.js" />
+    <Content Include="NewScript\plugins\jquery.form.js" />
+    <Content Include="NewScript\plugins\jquery.layout.js" />
+    <Content Include="NewScript\plugins\jquery.linkbutton.js" />
+    <Content Include="NewScript\plugins\jquery.menu.js" />
+    <Content Include="NewScript\plugins\jquery.menubutton.js" />
+    <Content Include="NewScript\plugins\jquery.messager.js" />
+    <Content Include="NewScript\plugins\jquery.numberbox.js" />
+    <Content Include="NewScript\plugins\jquery.numberspinner.js" />
+    <Content Include="NewScript\plugins\jquery.pagination.js" />
+    <Content Include="NewScript\plugins\jquery.panel.js" />
+    <Content Include="NewScript\plugins\jquery.parser.js" />
+    <Content Include="NewScript\plugins\jquery.progressbar.js" />
+    <Content Include="NewScript\plugins\jquery.propertygrid.js" />
+    <Content Include="NewScript\plugins\jquery.resizable.js" />
+    <Content Include="NewScript\plugins\jquery.searchbox.js" />
+    <Content Include="NewScript\plugins\jquery.slider.js" />
+    <Content Include="NewScript\plugins\jquery.spinner.js" />
+    <Content Include="NewScript\plugins\jquery.splitbutton.js" />
+    <Content Include="NewScript\plugins\jquery.tabs.js" />
+    <Content Include="NewScript\plugins\jquery.timespinner.js" />
+    <Content Include="NewScript\plugins\jquery.tree.js" />
+    <Content Include="NewScript\plugins\jquery.treegrid.js" />
+    <Content Include="NewScript\plugins\jquery.validatebox.js" />
+    <Content Include="NewScript\plugins\jquery.window.js" />
+    <Content Include="NewScript\show_ads.js" />
+    <Content Include="NewScript\style.css" />
+    <Content Include="NewScript\themes\Default\Default.skin" />
+    <None Include="NewScript\themes\Default\Images\Thumbs.db" />
+    <None Include="Scripts\My97DatePicker\skin\default\Thumbs.db" />
+    <None Include="Scripts\My97DatePicker\skin\Thumbs.db" />
+    <None Include="Scripts\My97DatePicker\skin\whyGreen\Thumbs.db" />
+    <None Include="Service References\WCFService\WFServer.disco" />
+    <None Include="Service References\WCFService\configuration91.svcinfo" />
+    <None Include="Service References\WCFService\configuration.svcinfo" />
+    <None Include="Service References\WCFService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.vb</LastGenOutput>
+    </None>
+    <Content Include="NewScript\datagrid-detailview.js" />
+    <Content Include="NewScript\datagrid-groupview.js" />
+    <Content Include="NewScript\DateFormat.js" />
+    <Content Include="NewScript\easyloader.js" />
+    <Content Include="NewScript\easyui-lang-zh_TW.js" />
+    <Content Include="NewScript\facebox.js" />
+    <Content Include="NewScript\jquery-1.7.2.min.js" />
+    <Content Include="NewScript\jquery.easyui.min.js" />
+    <Content Include="NewScript\jquery.wresize.js" />
+    <Content Include="NewScript\jquery.wysiwyg.js" />
+    <Content Include="NewScript\My97DatePicker\calendar.js" />
+    <Content Include="NewScript\My97DatePicker\config.js" />
+    <Content Include="NewScript\My97DatePicker\lang\en.js" />
+    <Content Include="NewScript\My97DatePicker\lang\zh-cn.js" />
+    <Content Include="NewScript\My97DatePicker\lang\zh-tw.js" />
+    <Content Include="NewScript\My97DatePicker\My97DatePicker.htm" />
+    <Content Include="NewScript\My97DatePicker\skin\datePicker.gif" />
+    <Content Include="NewScript\My97DatePicker\skin\default\datepicker.css" />
+    <Content Include="NewScript\My97DatePicker\skin\default\img.gif" />
+    <Content Include="NewScript\My97DatePicker\skin\WdatePicker.css" />
+    <Content Include="NewScript\My97DatePicker\skin\whyGreen\bg.jpg" />
+    <Content Include="NewScript\My97DatePicker\skin\whyGreen\datepicker.css" />
+    <Content Include="NewScript\My97DatePicker\skin\whyGreen\img.gif" />
+    <Content Include="NewScript\My97DatePicker\WdatePicker-vsdoc.js" />
+    <Content Include="NewScript\My97DatePicker\WdatePicker.js" />
+    <Content Include="NewScript\plugins\jquery.bgiframe.js" />
+    <Content Include="NewScript\plugins\jquery.toggleLoading.js" />
+    <Content Include="NewScript\simpla.jquery.configuration.js" />
+    <Content Include="NewScript\themes\Default\accordion.css" />
+    <Content Include="NewScript\themes\Default\calendar.css" />
+    <Content Include="NewScript\themes\Default\combo.css" />
+    <Content Include="NewScript\themes\Default\combobox.css" />
+    <Content Include="NewScript\themes\Default\ContentStype.css" />
+    <Content Include="NewScript\themes\Default\CSS.css" />
+    <Content Include="NewScript\themes\Default\datagrid.css" />
+    <Content Include="NewScript\themes\Default\datebox.css" />
+    <Content Include="NewScript\themes\Default\Default.css" />
+    <Content Include="NewScript\themes\Default\dialog.css" />
+    <Content Include="NewScript\themes\Default\easyui.css" />
+    <Content Include="NewScript\themes\Default\Images\accordion_collapse.png" />
+    <Content Include="NewScript\themes\Default\Images\accordion_expand.png" />
+    <Content Include="NewScript\themes\Default\Images\blank.gif" />
+    <Content Include="NewScript\themes\Default\Images\button_a_bg.gif" />
+    <Content Include="NewScript\themes\Default\Images\button_plain_hover.png" />
+    <Content Include="NewScript\themes\Default\Images\button_span_bg.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_nextmonth.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_nextyear.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_prevmonth.gif" />
+    <Content Include="NewScript\themes\Default\Images\calendar_prevyear.gif" />
+    <Content Include="NewScript\themes\Default\Images\checked.gif" />
+    <Content Include="NewScript\themes\Default\Images\combo_arrow.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_header_bg.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_row_collapse.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_row_expand.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_sort_asc.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_sort_desc.gif" />
+    <Content Include="NewScript\themes\Default\Images\datagrid_title_bg.png" />
+    <Content Include="NewScript\themes\Default\Images\datebox_arrow.png" />
+    <Content Include="NewScript\themes\Default\Images\dot_08.gif" />
+    <Content Include="NewScript\themes\Default\Images\Footer_bg.png" />
+    <Content Include="NewScript\themes\Default\Images\gradient_DKGray.jpg" />
+    <Content Include="NewScript\themes\Default\Images\header_bg.png" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_down.gif" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_left.gif" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_right.gif" />
+    <Content Include="NewScript\themes\Default\Images\layout_button_up.gif" />
+    <Content Include="NewScript\themes\Default\Images\left01.gif" />
+    <Content Include="NewScript\themes\Default\Images\left02.gif" />
+    <Content Include="NewScript\themes\Default\Images\loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\menu.gif" />
+    <Content Include="NewScript\themes\Default\Images\menubj_03.jpg" />
+    <Content Include="NewScript\themes\Default\Images\menu_downarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\menu_rightarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\menu_sep.png" />
+    <Content Include="NewScript\themes\Default\Images\menu_split_downarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\messager_error.gif" />
+    <Content Include="NewScript\themes\Default\Images\messager_info.gif" />
+    <Content Include="NewScript\themes\Default\Images\messager_question.gif" />
+    <Content Include="NewScript\themes\Default\Images\messager_warning.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_first.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_last.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_load.png" />
+    <Content Include="NewScript\themes\Default\Images\pagination_loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_next.gif" />
+    <Content Include="NewScript\themes\Default\Images\pagination_prev.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_title.png" />
+    <Content Include="NewScript\themes\Default\Images\panel_tools.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_tool_collapse.gif" />
+    <Content Include="NewScript\themes\Default\Images\panel_tool_expand.gif" />
+    <Content Include="NewScript\themes\Default\Images\R.gif" />
+    <Content Include="NewScript\themes\Default\Images\searchbox_button.png" />
+    <Content Include="NewScript\themes\Default\Images\slider_handle.png" />
+    <Content Include="NewScript\themes\Default\Images\spinner_arrow_down.gif" />
+    <Content Include="NewScript\themes\Default\Images\spinner_arrow_up.gif" />
+    <Content Include="NewScript\themes\Default\Images\tableftB.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabright2.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabright4.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabs_active.png" />
+    <Content Include="NewScript\themes\Default\Images\tabs_close.gif" />
+    <Content Include="NewScript\themes\Default\Images\tabs_enabled.png" />
+    <Content Include="NewScript\themes\Default\Images\tabs_leftarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\tabs_rightarrow.png" />
+    <Content Include="NewScript\themes\Default\Images\topbg.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_arrows.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_checkbox_0.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_checkbox_1.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_checkbox_2.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_dnd_no.png" />
+    <Content Include="NewScript\themes\Default\Images\tree_dnd_yes.png" />
+    <Content Include="NewScript\themes\Default\Images\tree_elbow.png" />
+    <Content Include="NewScript\themes\Default\Images\tree_file.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_folder.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_folder_open.gif" />
+    <Content Include="NewScript\themes\Default\Images\tree_loading.gif" />
+    <Content Include="NewScript\themes\Default\Images\unchecked.gif" />
+    <Content Include="NewScript\themes\Default\Images\validatebox_pointer.gif" />
+    <Content Include="NewScript\themes\Default\Images\validatebox_warning.png" />
+    <Content Include="NewScript\themes\Default\layout.css" />
+    <Content Include="NewScript\themes\Default\linkbutton.css" />
+    <Content Include="NewScript\themes\Default\menu.css" />
+    <Content Include="NewScript\themes\Default\menubutton.css" />
+    <Content Include="NewScript\themes\Default\messager.css" />
+    <Content Include="NewScript\themes\Default\PageStyle.css" />
+    <Content Include="NewScript\themes\Default\pagination.css" />
+    <Content Include="NewScript\themes\Default\panel.css" />
+    <Content Include="NewScript\themes\Default\progressbar.css" />
+    <Content Include="NewScript\themes\Default\propertygrid.css" />
+    <Content Include="NewScript\themes\Default\searchbox.css" />
+    <Content Include="NewScript\themes\Default\SearchPage.css" />
+    <Content Include="NewScript\themes\Default\slider.css" />
+    <Content Include="NewScript\themes\Default\spinner.css" />
+    <Content Include="NewScript\themes\Default\splitbutton.css" />
+    <Content Include="NewScript\themes\Default\StyleSheet.css" />
+    <Content Include="NewScript\themes\Default\tabs.css" />
+    <Content Include="NewScript\themes\Default\tree.css" />
+    <Content Include="NewScript\themes\Default\validatebox.css" />
+    <Content Include="NewScript\themes\Default\window.css" />
+    <Content Include="NewScript\UIHelper.js" />
+    <Content Include="NewScript\uploadScript\jquery.uploadify.min.js" />
+    <Content Include="NewScript\uploadScript\swflash.cab" />
+    <Content Include="NewScript\uploadScript\swfobject.js" />
+    <Content Include="NewScript\uploadScript\uploadify.swf" />
+    <Content Include="NewScript\UserDialog.js" />
+    <Content Include="Newstyle\+.gif" />
+    <Content Include="Newstyle\-.gif" />
+    <Content Include="Newstyle\act_btn.gif" />
+    <Content Include="Newstyle\bar9.gif" />
+    <Content Include="Newstyle\calendar.gif" />
+    <Content Include="Newstyle\closed.gif" />
+    <Content Include="Newstyle\css\css.css" />
+    <Content Include="Newstyle\css\css1.css" />
+    <Content Include="Newstyle\css\left_css.css" />
+    <Content Include="Newstyle\css\right_css.css" />
+    <Content Include="Newstyle\css\top_css.css" />
+    <Content Include="Newstyle\home.gif" />
+    <Content Include="Newstyle\L.gif" />
+    <Content Include="Newstyle\left_tt.gif" />
+    <Content Include="Newstyle\login_1.gif" />
+    <Content Include="Newstyle\login_2.gif" />
+    <Content Include="Newstyle\login_3.gif" />
+    <Content Include="Newstyle\login_4.gif" />
+    <Content Include="Newstyle\login_5.gif" />
+    <Content Include="Newstyle\login_6.gif" />
+    <Content Include="Newstyle\logo.gif" />
+    <Content Include="Newstyle\on-of.gif" />
+    <Content Include="Newstyle\Rect.gif" />
+    <Content Include="Newstyle\RectNoColor.gif" />
+    <Content Include="Newstyle\tableline.jpg" />
+    <Content Include="Newstyle\tableline_bottom.jpg" />
+    <Content Include="Newstyle\tableline_top.jpg" />
+    <Content Include="Newstyle\tablemde.jpg" />
+    <Content Include="Newstyle\tdbj.gif" />
+    <Content Include="Newstyle\tip.gif" />
+    <Content Include="Newstyle\top.jpg" />
+    <Content Include="Newstyle\top_bg.jpg" />
+    <Content Include="Newstyle\top_logo.jpg" />
+    <Content Include="Newstyle\top_tt_bg.gif" />
+    <Content Include="Reference\ActiproSoftware.CodeHighlighter.Net20.dll" />
+    <Content Include="Reference\ActiproSoftware.Shared.Net20.dll" />
+    <Content Include="Reference\Aspose.Cells.xml" />
+    <Content Include="Reference\Aspose.Words.dll" />
+    <Content Include="Reference\Aspose.Words.xml" />
+    <Content Include="Reference\BusinessFacade.dll" />
+    <Content Include="Reference\CodeHighlighterTest.dll" />
+    <Content Include="Reference\CommonData.dll" />
+    <Content Include="Reference\ConvertToPDXPS.dll" />
+    <Content Include="Reference\DotNetTextBox.dll" />
+    <Content Include="Reference\eFlowDoc.dll" />
+    <Content Include="Reference\EnvDTE.dll" />
+    <Content Include="Reference\FileManager.dll" />
+    <Content Include="Reference\FtpServer1.dll" />
+    <Content Include="Reference\GridViewHelper.dll" />
+    <Content Include="Reference\ICSharpCode.SharpZipLib.DLL" />
+    <Content Include="Reference\itextsharp.dll" />
+    <Content Include="Reference\myControl.dll" />
+    <Content Include="Reference\SystemFramework.dll" />
+    <Content Include="Reference\SystemMailOperation.dll" />
+    <Content Include="Reference\Vortex.Web.UI.WebControls.dll" />
+    <Content Include="Reference\ZebraPrinter.dll" />
+    <Content Include="Reference\ZebraPrinter.xml" />
+    <Content Include="right.aspx" />
+    <Content Include="SignImg\肖桂喜.GIF" />
+    <Content Include="SiteConfigFile\ConnectionForLH.config" />
+    <Content Include="SiteConfigFile\ParameterForLH.config" />
+    <Content Include="Suppliers\AddCheckRecord.aspx" />
+    <Content Include="Suppliers\ImportantGoodsDetail.aspx" />
+    <Content Include="Suppliers\ImportantGoodsList.aspx" />
+    <Content Include="Suppliers\SuppliersDetail.aspx" />
+    <Content Include="Suppliers\SuppliersList.aspx" />
+    <Content Include="Suppliers\Supplisers.js" />
+    <Content Include="Top.aspx" />
+    <Content Include="UCtl\CtlFooter.ascx" />
+    <Content Include="UCtl\CTLGEPNGReason.ascx" />
+    <Content Include="UCtl\CtlGMPCSIItemReports.ascx" />
+    <Content Include="UCtl\CtlGMPCSIMoudle.ascx" />
+    <Content Include="UCtl\CtlGMPCSIResult.ascx" />
+    <Content Include="UCtl\CtlGMPCSISet.ascx" />
+    <Content Include="UCtl\CtlGMPNGReasonReport.ascx" />
+    <Content Include="UCtl\UcFileDetail.ascx" />
+    <Content Include="UCtl\UcLog.ascx" />
+    <Content Include="UCtl\UCtlFooter.ascx" />
+    <Content Include="UCtl\UCtlGrdPage.ascx" />
+    <Content Include="UCtl\UCtlImgList.ascx" />
+    <Content Include="UCtl\UCtlListAction.ascx" />
+    <Content Include="UCtl\UCtlLogin.ascx" />
+    <Content Include="UCtl\UCtlMenu.ascx" />
+    <Content Include="UCtl\UCtlTreeView.ascx" />
+    <Content Include="UCtl\UCtlUserInfo.ascx" />
+    <Content Include="UCtl\UcUserFileManage.ascx" />
+    <Content Include="UCtl\UcWorkWaitFor.ascx" />
+    <None Include="Service References\WCFService\WFServer.xsd" />
+    <None Include="Service References\WCFService\WFServer2.xsd" />
+    <None Include="Service References\WCFService\WFServer3.xsd" />
+    <None Include="Service References\WCFService\WFServer4.xsd" />
+    <None Include="Service References\WCFService\WFServer5.xsd" />
+    <None Include="Service References\WCFService\WorkflowService.wsdl" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\WCFService\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="EFlowNet\FlowDefineFile\" />
+    <Folder Include="ErrorLog\" />
+    <Folder Include="Reports\" />
+    <Folder Include="Styles\" />
+    <Folder Include="UploadFiles\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\VisualStudio\v9.0\WebApplications\Microsoft.WebApplication.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>1460</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost/CMCFileManage</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

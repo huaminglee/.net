@@ -1,0 +1,11 @@
+﻿
+<asp:GridView  runat="server"    BorderColor="White">
+<HeaderStyle  CssClass="GridHead"  />
+     <AlternatingRowStyle  CssClass="GridAlterItem"  />
+     <RowStyle  CssClass="GridItem"  />
+</asp:GridView>
+
+<asp:HyperLink runat="server" onmouseover="window.status='';return true;" ></asp:HyperLink>
+<asp:Image runat="server" CssClass="ImgBtn"/>
+
+

@@ -1,0 +1,656 @@
+﻿.Main_Body
+{
+	width: 760px;
+	height: 533px;
+	border-color: #d2d8dc;
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 100px;
+	margin-top: 12px;
+}
+
+.Main_Body_u
+{
+	width: 530px;
+	height: 533px;
+	border-color: #d2d8dc;
+	border-style: solid;
+	border-width: 1px;
+	margin-left: 100px;
+	margin-top: 12px;
+}
+
+.con_h
+{
+	width: 759px;
+	height: 28px;
+	background-color: #f0f5f8;
+	border-bottom: 1px solid #d2d8dc;
+	border-right: 1px solid #d2d8dc;
+}
+
+.con_h_u
+{
+	width: 529px;
+	height: 28px;
+	background-color: #f0f5f8;
+	border-bottom: 1px solid #d2d8dc;
+	border-right: 1px solid #d2d8dc;
+}
+
+.con_p
+{
+	width: 230px;
+	border-right: 1px solid #d2d8dc;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	float: left;
+}
+
+.con_h span
+{
+	margin-left: 12px;
+}
+
+.con_r
+{
+	width: 258px;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	float: left;
+	border-right: 1px solid #d2d8dc;
+}
+
+.con_s
+{
+	width: 498px;
+	height: 39px;
+	line-height: 39px;
+	float: left;
+}
+
+.con_Option
+{
+	width: 260px;
+	height: 28px;
+	line-height: 28px;
+	float: left;
+}
+
+.con_Query
+{
+	width: 230px;
+	border-right: 1px solid #d2d8dc;
+	height: 39px;
+	line-height: 39px;
+	font-size: 12px;
+	float: left;
+	border-bottom: 1px solid #d2d8dc;
+}
+
+.con_temp
+{
+	width: 258px;
+	height: 39px;
+	line-height: 39px;
+	font-size: 12px;
+	float: left;
+	border-bottom: 1px solid #d2d8dc;
+	border-right: 1px solid #d2d8dc;
+}
+
+
+.con_otemp
+{
+	width: 258px;
+	height: 38px;
+	line-height: 38px;
+	font-size: 12px;
+	float: left;
+	border-bottom: 1px solid #d2d8dc;
+	border-right: 1px solid #d2d8dc;
+	margin-top: -13px;
+}
+
+
+.input
+{
+	border: 1px solid;
+	border-color: #999999 #e1e1e1 #e1e1e1 #999999;
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+	height: 26px;
+	margin-left: 12px;
+}
+.input120
+{
+	width:120px;
+}
+
+	.input:focus
+	{
+		border: 1px solid;
+		border-color: #555 #aaa #aaa #555;
+		background: #fffbde;
+	}
+
+.inpute
+{
+	width: 122px;
+}
+
+.btn
+{
+	width: 80px;
+	height: 27px;
+	line-height: 27px;
+	background-image: url(/images/Pop-stn.png);
+	background-repeat: no-repeat;
+	border: none;
+	text-align: center;
+	font-size: 14px;
+	cursor: pointer;
+	letter-spacing: 1px;
+}
+
+.btn_four
+{
+	padding-left: 10px;
+	padding-top: 2px;
+}
+
+.btn_five
+{
+	padding-left: 3px;
+	padding-top: 1px;
+}
+
+.con_s span
+{
+	margin-left: 12px;
+}
+
+.con_c
+{
+	width: 760px;
+	height: 420px;
+	border-bottom: 1px solid #d2d8dc;
+	float: left;
+}
+
+.con_c_u
+{
+	width: 530px;
+	height: 420px;
+	border-bottom: 1px solid #d2d8dc;
+	float: left;
+}
+
+.con_c .con_tree
+{
+	width: 230px;
+	height: 418px;
+	border-right: 1px solid #d2d8dc;
+	float: left;
+}
+
+.con_c .con_say
+{
+	width: 258px;
+	height: 418px;
+	float: left;
+	border-right: 1px solid #d2d8dc;
+}
+
+.con_person
+{
+	width: 258px;
+	height: 218px;
+	border-bottom: 1px solid #d2d8dc;
+	padding-top: 3px;
+	overflow: auto;
+}
+
+.con_Optionw
+{
+	width: 270px;
+	height: 397px;
+	margin-top: -12px;
+	float: left;
+}
+
+.con_idea
+{
+	width: 258px;
+	height: 143px;
+}
+
+.con_idea_u
+{
+	width: 258px;
+	height: 420px;
+	border-right: 1px solid #d2d8dc;
+	float: left;
+}
+
+.con_idea textarea
+{
+	margin-top: 8px;
+}
+
+.con_idea_u textarea
+{
+	margin-top: 8px;
+}
+
+fieldset
+{
+	width: 244px;
+	margin: 0px;
+}
+
+legend
+{
+	display: block;
+	width: 258px;
+	padding-left: 12px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: inherit;
+	color: #333333;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.btn-default
+{
+	width: 220px;
+	height: 22px;
+	line-height: 22px;
+	background: #f0f5f8;
+	text-align: center;
+	border: 1px solid #d2d8dc;
+	margin-left: 10px;
+	text-decoration: none;
+}
+
+.close
+{
+	float: right;
+	font-size: 18px;
+	font-weight: bold;
+	line-height: 1;
+	color: #000000;
+	text-shadow: 0 1px 0 #ffffff;
+	opacity: 0.2;
+	filter: alpha(opacity=20);
+}
+
+a
+{
+	cursor: pointer;
+}
+
+.con_btn
+{
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	float: left;
+	text-align: center;
+}
+
+.con_oper_btn
+{
+	display: inline-block;
+	width: 107px;
+	height: 33px;
+	color: #fff;
+	padding: 2px 0 0 26px;
+	letter-spacing: 3px;
+	font-size: 14px;
+	border: none;
+	cursor: pointer;
+}
+
+.btn_submit
+{
+	background: url('../images/btn_submit.png');
+	cursor: pointer;
+	letter-spacing: 9px;
+}
+
+.btn_back
+{
+	background: url('../images/btn_back.png');
+	cursor: pointer;
+	letter-spacing: 9px;
+}
+
+.con_gray
+{
+	color: gray;
+	font-size: 12px;
+}
+
+.txtArea
+{
+	width: 234px;
+	height: 124px;
+	margin-left: 12px;
+}
+
+	.txtArea:focus
+	{
+		border: 1px solid;
+		border-color: #555 #aaa #aaa #555;
+		background: #fffbde;
+	}
+
+.con_option_box
+{
+	height: 230px;
+	width: 270px;
+	border-bottom: 1px solid #d2d8dc;
+	padding-left: 18px;
+}
+
+.con_Optionw fieldset
+{
+	width: 270px;
+	margin: 0px;
+}
+
+.con_Optionw legend
+{
+	display: block;
+	width: 270px;
+	padding-left: 12px;
+	margin-bottom: 10px;
+	font-size: 14px;
+	line-height: inherit;
+	color: #333333;
+	border: 0;
+	border-bottom: 1px solid #e5e5e5;
+}
+
+.txtOptionArea
+{
+	width: 244px;
+	height: 124px;
+	margin-left: 12px;
+}
+
+	.txtOptionArea:focus
+	{
+		border: 1px solid;
+		border-color: #555 #aaa #aaa #555;
+		background: #fffbde;
+	}
+
+.Chg_remind_tible
+{
+	width: 244px;
+	height: 24px;
+	line-height: 24px;
+}
+
+.inputcheckbox
+{
+	vertical-align: middle;
+}
+
+.inputx
+{
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+	height: 20px;
+	margin-left: 12px;
+}
+
+	.inputx:focus
+	{
+		border: 1px solid;
+		border-color: #555 #aaa #aaa #555;
+		background: #fffbde;
+	}
+
+.inputd
+{
+	width: 58px;
+}
+.input152
+{
+	width: 152px;
+}
+
+.RemindDate
+{
+	margin-left: 6px;
+}
+
+.t35
+{
+	margin-top: 25px;
+}
+
+.chgDate
+{
+	height: 24px;
+	line-height: 24px;
+	color: #999999;
+	padding-left: 0px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding-top: 15px;
+}
+
+.RemindObject
+{
+	line-height: 39px;
+	color: #999999;
+	padding-left: 0px;
+	font-size: 12px;
+	letter-spacing: 1px;
+	padding-top: 15px;
+}
+
+.IsRemind
+{
+	height: 15px;
+	line-height: 14px;
+	text-align: center;
+	font-size: 14px;
+	vertical-align: middle;
+}
+
+.con_t
+{
+	width: 100%;
+	height: 110px;
+	float: left;
+	border-bottom: 1px solid #d2d8dc;
+}
+
+.con_h_s
+{
+	width: 100%;
+	height: 28px;
+	background-color: #f0f5f8;
+	border-bottom: 1px solid #d2d8dc;
+	border-right: 1px solid #d2d8dc;
+	float: left;
+}
+
+.con_r_s
+{
+	width: 50%;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	float: left;
+	border-right: 1px solid #d2d8dc;
+}
+
+	.con_r_s span
+	{
+		margin-left: 21px;
+		font-weight: bold;
+	}
+
+.con_r_r
+{
+	width: 49%;
+	height: 28px;
+	line-height: 28px;
+	font-size: 12px;
+	float: left;
+}
+
+	.con_r_r span
+	{
+		margin-left: 21px;
+		font-weight: bold;
+	}
+
+.con_c_s
+{
+	width: 100%;
+	height: 350px;
+	border-bottom: 1px solid #d2d8dc;
+	float: left;
+}
+
+.con_c_tree
+{
+	width: 50%;
+	font-size: 12px;
+	float: left;
+	border-right: 1px solid #d2d8dc;
+	height: 100%;
+}
+
+.con_c_selected
+{
+	width: 49%;
+	height: 100%;
+	float: left;
+}
+
+.con_person_s
+{
+	width: 258px;
+	height: 45%;
+	padding-top: 3px;
+	overflow: auto;
+}
+
+.con_sel
+{
+	width: 100%;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #d2d8dc;
+}
+
+	.con_sel span
+	{
+		margin-left: 12px;
+		line-height: 35px;
+	}
+
+.item_r
+{
+	text-align: right;
+}
+
+.con_btn_b
+{
+	width: 100%;
+	height: 38px;
+	line-height: 38px;
+	text-align: center;
+}
+
+.con_tips_t
+{
+	width: 100%;
+	height: 26px;
+	line-height: 26px;
+	text-align: center;
+}
+
+.con_r_b
+{
+	width: 265px;
+	height: 35px;
+	line-height: 35px;
+	border-bottom: 1px solid #d2d8dc;
+	border-top: 1px solid #d2d8dc;
+	margin-right: -3px;
+}
+
+	.con_r_b span
+	{
+		margin-left: 12px;
+	}
+
+.con_remark
+{
+	width: 100%;
+	height: 155px;
+}
+
+	.con_remark span
+	{
+		margin-left: 13px;
+	}
+
+	.con_remark textarea
+	{
+		margin-top: 16px;
+	}
+
+.main_List
+{
+	width: 90%;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: none;
+}
+
+	.main_List td
+	{
+		white-space: normal;
+		word-break: break-all;
+		border-top: none;
+		height: 26px;
+		line-height: 26px;
+		text-align: left;
+		padding-left: 2px;
+		white-space: nowrap;
+	}
+.ddlinput
+{
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+	height: 30px;
+}
+.inputArea240_130
+{
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+	height:130px;
+	width: 240px;
+	resize: none;
+}

@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <statements>
+    <select id="AddUseTimes"  parameterClass="Hashtable">
+      declare @n int
+      select @n=COUNT(1) from QuickUseRecord where Uid=#Uid# and Qid=#Qid#
+      if(@n>0)
+      begin
+      update QuickUseRecord set UseTimes=UseTimes+1 where Uid=#Uid# and Qid=#Qid#
+      end
+      else
+      begin
+      insert QuickUseRecord values(#Uid#,#Qid#,1,#Qtype#)
+      end
+    </select>
+  <select id="DelUseTimes"  parameterClass="Hashtable">
+       delete from QuickUseRecord where Qid=#Qid# and Uid=#Uid#
+    </select>
+ 
+  <select id="MyQueryQuickUseRecordList" parameterClass="Hashtable" resultMap="QuickentryResult" listClass="NorDataList">
+    declare @Qidsort nvarchar(200)
+    select @Qidsort=(select ','+ CONVERT(varchar(10), Qid) from QuickUseRecord where Uid=#Uid# and Qtype=#Qtype# order by UseTimes desc
+    for XML Path(''))+','
+    select    * from Quickentry where QId in(select QId from QuickUseRecord where Uid=#Uid# and Qtype=#Qtype#)
+    order by CHARINDEX(','+CONVERT(varchar(10), Qid) +',',@Qidsort )   
+		</select>
+  </statements>
+</sqlMap>

@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="UsedContacts" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.UsedContacts, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="UsedContactsResult" class="UsedContacts">
+      <result property="COwner" column="COwner" />
+      <result property="ContactUserID" column="ContactUserID" />
+      <result property="ContactUserXM" column="ContactUserXM" />
+      <result property="TaskName" column="TaskName" />
+      <result property="StepName" column="StepName" />
+      <result property="UseTimes" column="UseTimes" />
+      <result property="CType" column="CType" />
+    </resultMap>
+
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="UsedContactsParams" class="UsedContacts">
+      <parameter property="COwner" column="COwner" />
+      <parameter property="ContactUserID" column="ContactUserID" />
+      <parameter property="ContactUserXM" column="ContactUserXM" />
+      <parameter property="TaskName" column="TaskName" />
+      <parameter property="StepName" column="StepName" />
+      <parameter property="UseTimes" column="UseTimes" />
+      <parameter property="CType" column="CType" />
+    </parameterMap>
+
+  
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetUsedContactsCount"  resultClass="int">
+      SELECT count(*)
+      FROM [UsedContacts];
+    </select>
+
+  
+
+    <select id="GetUsedContactsByPara"  parameterClass="Hashtable" resultMap="UsedContactsResult">
+      SELECT *
+      FROM [UsedContacts]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="COwner" >
+          [COwner] like #COwner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserID" >
+          [ContactUserID] like #ContactUserID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserXM" >
+          [ContactUserXM] like #ContactUserXM#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskName" >
+          [TaskName] like #TaskName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="StepName" >
+          [StepName] like #StepName#
+        </isNotEmpty>
+      <isNotEmpty prepend="AND" property="CType" >
+				  CType = #CType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CType_IN" >
+				  (CType in ($CType_IN$))
+				</isNotEmpty>
+      </dynamic>
+
+    </select>
+
+    <select id="GetUsedContactsList" parameterClass="string" resultMap="UsedContactsResult" listClass="NorDataList">
+      SELECT *
+      FROM [UsedContacts]
+      <dynamic prepend="Order By" >
+      </dynamic>
+    </select>
+
+    <select id="QueryUsedContactsCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM [UsedContacts]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="COwner" >
+          [COwner] like #COwner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserID" >
+          [ContactUserID] like #ContactUserID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserXM" >
+          [ContactUserXM] like #ContactUserXM#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskName" >
+          [TaskName] like #TaskName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="StepName" >
+          [StepName] like #StepName#
+        </isNotEmpty>
+      	<isNotEmpty prepend="AND" property="CType" >
+				  CType = #CType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CType_IN" >
+				  (CType in ($CType_IN$))
+				</isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryUsedContactsList" parameterClass="Hashtable" resultMap="UsedContactsResult" listClass="NorDataList">
+      SELECT *
+      FROM [UsedContacts]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="COwner" >
+          [COwner] like #COwner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserID" >
+          [ContactUserID] like #ContactUserID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserXM" >
+          [ContactUserXM] like #ContactUserXM#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskName" >
+          [TaskName] like #TaskName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="StepName" >
+          [StepName] like #StepName#
+        </isNotEmpty>
+      	<isNotEmpty prepend="AND" property="CType" >
+				  CType = #CType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CType_IN" >
+				  (CType in ($CType_IN$))
+				</isNotEmpty>
+      </dynamic>
+     	<dynamic prepend="Order By" >
+				<isEqual compareValue="UseTimes" property="_OrderBy">
+				  [UseTimes] 
+				</isEqual>
+				<isEqual compareValue="UseTimes_D" property="_OrderBy">
+				  [UseTimes] desc
+				</isEqual>
+			</dynamic>
+    </select>
+
+    <insert id="InsertUsedContacts" parameterMap="UsedContactsParams">
+      <generate table="UsedContacts" />
+    </insert>
+
+    <delete id="DeleteUsedContacts" parameterClass="UsedContacts">
+      DELETE FROM [UsedContacts] WHERE COwner=#COwner#;
+    </delete>
+
+    <select id="DeleteUsedContactsByPara" parameterClass="Hashtable">
+      DELETE FROM [UsedContacts]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="COwner" >
+          [COwner] like #COwner#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserID" >
+          [ContactUserID] like #ContactUserID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ContactUserXM" >
+          [ContactUserXM] like #ContactUserXM#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="TaskName" >
+          [TaskName] like #TaskName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="StepName" >
+          [StepName] like #StepName#
+        </isNotEmpty>
+      <isNotEmpty prepend="AND" property="CType" >
+				  CType = #CType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CType_IN" >
+				  (CType in ($CType_IN$))
+				</isNotEmpty>
+      </dynamic>
+    </select>
+
+  
+    
+    <select id="AddTimes"  parameterClass="UsedContacts" >
+      update [UsedContacts]
+      set [UseTimes]=[UseTimes]+1
+      WHERE [COwner] =#COwner# and ContactUserID=#ContactUserID# and TaskName=#TaskName# and StepName=#StepName#;
+    </select>
+    
+
+
+    <select id="UpdateUsedContactsByPara" parameterClass="Hashtable">
+      UPDATE [UsedContacts]
+      <dynamic prepend="Set" >
+
+        <isNotEmpty prepend="," property="COwner" >
+          [COwner] = #COwner#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ContactUserID" >
+          [ContactUserID] = #ContactUserID#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ContactUserXM" >
+          [ContactUserXM] = #ContactUserXM#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="TaskName" >
+          [TaskName] = #TaskName#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="StepName" >
+          [StepName] = #StepName#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="UseTimes" >
+          [UseTimes] = #UseTimes#
+        </isNotEmpty>
+      <isNotEmpty prepend="," property="CType" >
+			      [CType] = #CType#
+			  </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Where" >
+
+        <isNotEmpty prepend="AND" property="COwner_W" >
+          [COwner] = #COwner_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ContactUserID_W" >
+          [ContactUserID] = #ContactUserID_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ContactUserXM_W" >
+          [ContactUserXM] = #ContactUserXM_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="TaskName_W" >
+          [TaskName] = #TaskName_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="StepName_W" >
+          [StepName] = #StepName_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="UseTimes_W" >
+          [UseTimes] = #UseTimes_W#
+        </isNotEmpty>
+       <isNotEmpty prepend="AND" property="CType_W" >
+			      [CType] = #CType_W#
+			  </isNotEmpty>
+      </dynamic>
+    </select>
+
+  </statements>
+
+</sqlMap>

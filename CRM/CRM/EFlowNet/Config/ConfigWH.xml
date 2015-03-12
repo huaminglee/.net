@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<root>
+  <CMCNetSiteSetting>
+    <add key="SiteSetting" value="CMCHRForLongHua" />
+  </CMCNetSiteSetting>
+  <CMCHRForLongHua>
+    <add key="CustomPageSize" description ="自定分頁默認記錄數" value="15" />
+    <add key="RegisterName" description="eFlow組件註冊名" value="CMC" />
+    <add key="RegisterKeycode" description="eFlow組件註冊密碼" value="KeyCode" />
+    <add key="EncrytionOption" description="數據庫連接字串是否加密" value="false" />
+    <add key="EncrytionSaltValue" description="加密密碼" value="aaaa" />
+    <add key="SwitchWFTrackingFlag" description="WF工作流追蹤標誌" value="false" />
+    <add key="SwitchWFPersistenceFlag" description="WF工作流持久化標誌" value="true" />
+    <add key="DBConnString" description="數據庫連接字串" value="server=10.204.48.64\MSSQL2008,3000;User ID=rd2;Password=password;database=FlowNet;Connection Reset=FALSE;Application Name=CMCNetFlowFramework" />
+    <add key="WFTrackingDBConnStr"  description="WF追蹤數據庫連接字串" value="server=10.204.48.64\MSSQL2008,3000;User ID=rd2;Password=password;database=WorkflowTracking;Connection Reset=FALSE;Application Name=CMCNetFlowFramework" />
+    <add key="WFPersistenceDBConnStr" description="WF持久化數據庫連接字串" value="server=10.204.48.64\MSSQL2008,3000;User ID=rd2;Password=password;database=SqlPersistenceService;Connection Reset=FALSE;Application Name=CMCNetFlowFramework" />
+    <add key="SMTPHost" description="SMTP服務器主機地址" value="10.162.197.5" />
+    <add key="FromEmail" description="SMTP服務器From郵件地址" value="CRM@foxconn.com" />
+    <add key="SMTPPort" description="SMTP服務器主機連接埠" value="25" />
+    <add key="LDAPPath" description="LDAP地址" value="" />
+    <add key="SelectUserApPath" description="流程選擇人員信息的eFlowNet配置地址" value="10.204.48.66/eFlowNet"></add>
+  </CMCHRForLongHua>
+</root>

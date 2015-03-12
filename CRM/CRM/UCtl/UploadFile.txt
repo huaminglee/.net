@@ -1,0 +1,6 @@
+﻿在Web.config中
+  在  <appSettings>節中配置上傳文件地址：
+   <add key="CuteWebUI.AjaxUploader.TempDirectory" value="~/UploadFiles"/>
+ 在   <httpModules>中加入即可：
+        <add   name= "UploadModule "   type= "CuteEditor.UploadModule,CuteEditor "   />
+  

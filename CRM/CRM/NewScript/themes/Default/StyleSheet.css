@@ -1,0 +1,321 @@
+﻿body
+{
+	color: Black;
+	margin-top: 3px;
+	font-family: Geneva,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	padding: 0px;
+	min-width: 960px;
+	width:100%;
+}
+.ContentMain
+{
+	overflow: auto;
+}
+.Clear
+{
+	border-style: none;
+	border-width: 0px;
+	width: 0px;
+	height: 0px;
+	margin: 0px;
+	padding: 0px;
+}
+.mb12
+{
+    margin-bottom: 12px;
+}
+
+ .bc0
+{
+    padding: 2px 2px 2px 2px;
+    margin: 0 3px 0;
+    background: #FFF;
+    height:100%;
+}
+ .rg_1, .rg_2, .rg_3, .rg_4, .rg_5
+{
+    background: #DBF1D4;
+}
+ .rg_1,.cp_1
+{
+    margin: 0 3px;
+}
+ .rg_5, .rg_2, .cp_5, .cp_2
+{
+    border-left-width: 2px;
+    border-right-width: 2px;
+}
+ .rg_4, .rg_3, .cp_4, .cp_3
+{
+    border-left-width: 1px;
+    border-right-width: 1px;
+}
+ 
+.cp_1,.cp_2, .cp_3, cp_4, .cp_5
+{
+    background: #F0F5de;
+}
+
+.ico
+{
+    margin-top: 4px;
+    width: 16px;
+    float: left;
+   
+}
+.t1
+{
+    padding-left: 10px;
+    height: 24px;
+    line-height: 24px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+
+}
+.rg
+{
+    border-left: 1px solid #A5DA94;
+    border-right: 1px solid #A5DA94;
+    zoom: 1;
+    padding-bottom: 1px;
+    background: #DBF1D4;
+}
+.cp
+{
+    border-left: 1px solid #F0F5de;
+    border-right: 1px solid #F0F5de;
+    zoom: 1;
+    padding-bottom: 1px;
+    background: #F0F5de;
+}
+.cle{display:inline-block;}
+.Txt
+{
+	border-color: Silver;
+	border-style: solid;
+	border-width: 1px;
+	background-color: #EEEEEE;
+}
+.GridAlterItem
+{
+	color: #4A3C8C;
+	background-color: #F7F7F7;
+	font-size:10pt;
+}
+.GridAlterItem td
+{
+	white-space: nowrap;
+}
+.GridItem
+{
+	color: #4A3C8C;
+	background-color: #E7E7FF;
+	font-size:10pt;
+}
+.GridItem td
+{
+	white-space: nowrap;
+}
+.GridHead
+{
+    font-weight: bold;
+    color: #000000;
+    background-color: #CCCCCC;
+}
+.GridHead th
+{
+}
+.GridFooter
+{
+	color: #4A3C8C;
+	background-color: #B5C7DE;
+}
+.GridRowSelect
+{
+	white-space: nowrap;
+	color: #4A3C8C;
+	background-color: #d0d0d0;
+}
+.GridRowSelect td
+{
+	white-space: nowrap;
+}
+.Btn
+{
+	border: #7b9ebd 1px solid;
+	padding-right: 2px;
+	padding-left: 2px;
+	font-size: 12px;
+	cursor: pointer;
+	color: black;
+	padding-top: 2px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#cecfde);
+}
+.Display
+{
+	display: none;
+}
+.tab
+{
+	float: right;
+}
+.ImgBtn
+{
+	cursor: pointer;
+}
+
+.TitleBg
+{
+    
+    height:28px;
+     background: #FF9900;
+}
+
+.TableBorder
+{
+    border: 1px solid #CCCCCC;
+}
+.SysTitle
+{
+    font-size: large;
+    font-family: 新細明體;
+    font-weight: bold;
+    font-style: inherit;
+    font-variant: normal;
+    text-transform: capitalize;
+    color: #000000;
+    text-align: center;
+}
+
+.TxtNoneLine
+{
+    background-color: transparent;
+    border-bottom: #000000 1px solid;
+    border-left: #ffffff 1px solid;
+    border-right: #ffffff 1px solid;
+    border-top: #ffffff 1px solid;
+    border-color: #C0C0C0;
+    font-size: 9pt;
+    width: 96%;
+}
+.TxtNoneLine1
+{
+    background-color: transparent;
+    border-bottom: #000000 1px solid;
+    border-left: #ffffff 1px solid;
+    border-right: #ffffff 1px solid;
+    border-top: #ffffff 1px solid;
+    border-color: #C0C0C0;
+    font-size: 9pt;
+    width: 96%;
+    overflow:auto;
+}
+.SpaceLi
+{
+    width:20px;
+    }
+.s_tiannet_body
+{
+    z-index: 99;
+    position: absolute;
+    border-left: 1 solid #CCCCCC;
+    border-top: 1 solid #CCCCCC;
+    border-right: 1 solid #999999;
+    border-bottom: 1 solid #999999;
+    display: none;
+    visibility: hidden;
+    left: 300px;
+    top:200px;
+    background-color: #C0C0C0;
+}
+
+#LoginMenu {
+	FLOAT: right
+}
+#MainMenu {
+	FLOAT: right
+}
+#MainMenuList, #LoginMenuList {
+	MARGIN-RIGHT: 18px; LIST-STYLE-TYPE: none
+}
+#MainMenuList LI {
+	FLOAT: left; FONT-WEIGHT: bold; FONT-SIZE: 12pt; color:black; cursor:default
+}
+#LoginMenuList LI {
+	FLOAT: left; PADDING-TOP: 4px;
+}
+#MainMenuList LI A
+{
+    color: black;
+    text-decoration: none;
+}
+#LoginMenuList LI A {
+	FONT-WEIGHT: bold; FONT-SIZE: 12pt; COLOR: black; TEXT-DECORATION: none
+}
+#MainMenuList LI A:hover {
+	COLOR: red
+}
+#LoginMenuList LI A:hover {
+	COLOR: red
+}
+
+#MainMenuList li
+{
+	font-size:11pt;
+	color:black;
+	text-decoration:none;
+	cursor:hand
+}
+label.error
+{
+	background:url("images/unchecked.gif") no-repeat 0px 0px;
+	padding-left: 16px;
+	padding-bottom: 2px;
+	font-weight: bold;
+	color: #EA5200;
+}
+
+label.checked
+{
+	background:url("images/checked.gif") no-repeat 0px 0px;
+}
+
+#MainContent #NewToolBar a
+{
+	color:blue;
+}
+
+#MainContent #NewToolBar a:hover
+{
+	color:Red;
+	text-decoration: underline;
+}
+
+.formbutton
+{
+    color: Blue;
+    border: 0;
+    margin: 0;
+    cursor: hand;
+    text-decoration: underline;
+    background-color: #FFFFFF;
+}
+.FlowToolBar
+{
+    float: left; cursor: hand;
+}
+#tooBar a
+{
+    color:blue;
+}
+#tooBar  a:hover
+{
+    color: Red;
+    text-decoration: underline;
+}
+.sdds
+{
+  background-repeat:no-repeat;float:right;
+    }

@@ -1,0 +1,9 @@
+﻿body, button, input, select, textarea, fieldset, label {font: 12px/1.5 "Lucida Grande",tahoma,arial,微软雅黑;color: #1e1e1e;}
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, legend, input, textarea,select, button, p, blockquote, th, td,span {margin: 0px;padding: 0px;}
+table, th, tr, td{border:none;}
+body{ text-align:left;}
+ul,li{ list-style:none;}
+a{ text-decoration:none;color: #000; cursor:pointer;}
+input, select,textarea{border:1px solid #cecccd;vertical-align:middle;}
+select{ width:98px; height:26px; }
+.fl{ float:left;}

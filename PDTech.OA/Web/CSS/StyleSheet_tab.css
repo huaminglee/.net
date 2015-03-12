@@ -1,0 +1,41 @@
+﻿.main_tabList {
+	width:999px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-left: 1px solid #d2d8dc;
+	border-right: 1px solid #d2d8dc;
+	border-top: none;
+}
+.tBody {
+	width:999px;
+	height:35px;
+	background-color:#f2f4f5;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+}
+.main_tabList th {
+	height:35px;
+	line-height:35px;
+	white-space: nowrap;
+	overflow: visible;
+	background-color:#f2f4f5;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	font-size:14px;
+	padding-left:16px;
+	white-space:nowrap;
+}
+.main_tabList td
+{
+	border-bottom:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height:26px;
+	text-align:left;
+	padding-left:16px;
+	white-space:nowrap;
+}

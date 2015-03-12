@@ -1,0 +1,278 @@
+﻿body 
+{
+	color:Black;
+	background-color:#DCE9F0;
+	text-align:center;
+	margin-top:3px;
+	font-family:Geneva,Arial,Helvetica,sans-serif;
+	font-size:12px;
+	padding:0px;
+}
+/*----background-color:White;----*/
+#Page
+{
+	background-color:White;
+	width:1000px;
+	border-color:#B2BDC3;
+	border-style:solid;
+	border-width:1px;
+	margin-left:auto;
+	margin-right:auto;
+}
+/*------------------------Page包含的3个模块（Top,Content,Footer）-------------------------------*/
+#Top
+{
+	height:100px;
+	border-bottom-color:#B2BDC3;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	margin:0px;		
+	width:100%;
+	padding:0px;
+	background-image:url(Images/topbj_05.jpg);
+	background-repeat:repeat-x;
+	background-color:#1483CA;
+}
+#Top #TLeft
+{
+	display:none;
+	}
+#Top #TRight
+{
+	display:none;
+		}
+/*--------------------------------------------------------------------------*/
+#Content
+{
+
+	margin:0px;
+	padding:0px;
+	width:100%;
+}
+/*-----------Content包含的3个模块（Left,Main,Right）-----------------*/
+/*-左模块-*/
+#Left
+{
+	width:19%;
+	float:left;
+	border-width:0px;
+	border-right-color:#B2BDC3;
+	border-right-width:1px;
+	border-right-style:solid;
+	overflow-x:hidden;
+	padding:0px;
+	margin:0px;
+	text-align:left;
+	background-color:#FFFFFF;
+	background-image:url(Images/leftfood_50.jpg);
+	background-repeat:no-repeat;
+	background-position:bottom;
+}
+/*------*/
+#Left #LTop
+{
+	background-image:url(Images/adminbj_26.jpg);
+	background-repeat:repeat-x;
+	background-color:White;
+	padding:0px;	
+	margin: 0 1px 0 0;
+	border-bottom-color:#B2BDC3;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	}
+#Left #LCenter
+{
+	padding:0px;	
+	margin: 0 1px 0 0;
+	border-bottom-color:#B2BDC3;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	}
+#Left #LBottom
+{
+	visibility:hidden;
+	padding:0px;	
+	margin: 0 1px 0 0;
+	border-bottom-color:#B2BDC3;
+	border-bottom-style:solid;
+	border-bottom-width:1px;
+	}
+/*----*/
+#Dot
+{
+	float:left;
+	width:0.4%;
+	text-align:center;
+	background-image:url(Images/dot_08.gif);
+	background-position:center;
+	background-repeat:no-repeat;
+	background-color:#B2BDC3;
+	cursor:pointer;
+	}
+/*-中间模块（页面主内容）-*/
+#Main
+{
+	background-color:#FFFFFF;
+	background-image:url(Images/adminbj_26.jpg);
+	background-repeat:repeat-x;
+	background-position:0px 31px;
+	text-align:left;
+	width:80%;
+	border-color:#B2BDC3;
+	border-width:1px;
+	border-style:solid;
+	overflow-x:auto;
+	margin:1px;
+	padding:0px;
+	float:left;
+
+}
+/*-右模块-*/
+#Right
+{
+	display:none;/*--右模块，默认情况为没有，如需添加右模块注释掉本句，并使（#Left，#Main，#Right）的width值的和为99%--*/
+	/*width:20%;*/
+	border-left-color:#B2BDC3;
+	border-left-width:1px;
+	border-left-style:solid;
+	overflow-x:auto;
+	margin:0px;
+	padding:0px;
+	float:left;
+	text-align:left;
+	}
+/*---------------------------------------------------------------------------*/
+#Footer
+{
+	height:100px;
+	clear:both;
+	margin:0px;
+	border-top-color:#B2BDC3;
+	border-top-style:solid;
+	border-top-width:1px;
+	width:100%;
+	padding:0px;
+	background-image:url(Images/footbj_05.JPG);
+	background-repeat:repeat-x;
+	background-color:#1483CA;
+	background-position:bottom;
+}
+#MainTop
+{
+	border-right-color:#B2BDC3;
+	border-right-style:solid;
+	border-right-width:1px;
+	background-image:url(Images/lmb_27.jpg);
+	background-repeat:repeat-x;
+	height:31px;
+	width:100%;
+	}
+
+.ContentMain
+{
+	overflow:auto;
+}
+.Clear
+{
+	border-style:none;
+	border-width:0px;
+	width:0px;
+	height:0px;
+	margin:0px;
+	padding:0px;
+	}
+.Txt
+{
+border:solid 1px #9FB3BD;
+	}
+a
+{
+	color:#34546B;
+	
+}
+a:hover
+{
+	color:#BC0000;
+	text-decoration:none;
+}
+.GridAlterItem
+{
+	border-left:solid 1px #BABABA;
+	background:#FFFFFF;
+	
+	color:#547384;
+	}
+.GridAlterItem td
+{
+	white-space:nowrap;
+	border-bottom:solid 1px #BABABA;
+	border-right:solid 1px #BABABA;
+	
+	font-size:12px;
+	padding-left:4px;
+	}
+.GridItem
+{
+border-left:solid 1px #BABABA;
+background:#FFFFFF;
+
+color:#547384;
+	}
+.GridItem td
+{
+	white-space:nowrap;
+	border-bottom:solid 1px #BABABA;
+	border-right:solid 1px #BABABA;
+
+	font-size:12px;
+	padding-left:4px;
+	}
+.GridHead
+{
+	border-top:solid 1px #BABABA;
+	border-left:solid 1px #BABABA;
+	background:url(Images/titlebj_03.jpg);
+	line-height:22px;
+	
+	}
+.GridHead th
+{
+	border-bottom:solid 1px #BABABA;
+	border-right:solid 1px #BABABA;
+	text-align:center;
+	font-size:13px;
+	font-weight:bold;
+	color:#3A6176;
+	}
+.GridFooter
+{
+	color:#4A3C8C;
+	background-color:#B5C7DE;
+	}
+.GridRowSelect
+{
+	border-left:solid 1px #BABABA;
+	white-space:nowrap;
+	background-color:#F4FBFF;
+    color:#0066FF;
+	}
+.GridRowSelect td
+{
+	border-bottom:solid 1px #BABABA;
+	border-right:solid 1px #BABABA;
+	white-space:nowrap;
+	padding-left:4px;
+	}
+.Btn 
+{
+	background:url(Images/anbj_03.jpg);
+	padding:2px 4px 0px 4px;
+	border:solid 1px #9FB3BD;
+	height:20px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#cecfde);
+}
+.Display
+{
+	display:block;
+	display:none;
+	}

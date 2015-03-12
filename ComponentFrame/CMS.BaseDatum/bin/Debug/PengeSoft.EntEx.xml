@@ -1,0 +1,3521 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>PengeSoft.EntEx</name>
+    </assembly>
+    <members>
+        <member name="T:PengeSoft.Print.Cell">
+            <summary>
+            Cell 表格单元的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.Cell.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.Cell.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.Cell.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.Cell.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.Cell.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.Express">
+            <summary>
+            表达式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.DataSource">
+            <summary>
+            数据源 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.Value">
+            <summary>
+            值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.Format">
+            <summary>
+            格式 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.CellType">
+            <summary>
+            单元类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.CellTypes">
+            <summary>
+            单元类型位集 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.Style">
+            <summary>
+            单元风格 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.FontName">
+            <summary>
+            字体名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.FontColor">
+            <summary>
+            字体颜色 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.FontSize">
+            <summary>
+            字体大小 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.FontStyle">
+            <summary>
+            字体风格 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.Cell.Color">
+            <summary>
+            单元颜色 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.CellRow">
+            <summary>
+            CellRow 表格行的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.CellRow.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.CellRow.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.CellRow.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.CellRow.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.CellRow.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.CellRow.Cells">
+            <summary>
+            行单元 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellRow.Height">
+            <summary>
+            行高 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellRow.PageType">
+            <summary>
+            页面类型 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.CellStyle">
+            <summary>
+            CellStyle 表格单元风格的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.CellStyle.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.CellStyle.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.CellStyle.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.CellStyle.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.BLeft">
+            <summary>
+            左边框 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.BTop">
+            <summary>
+            上边框 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.BRight">
+            <summary>
+            右边框 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.BBottom">
+            <summary>
+            下边框 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.BLTRB">
+            <summary>
+            左上到右下 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.BLBRT">
+            <summary>
+            左下到右上 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.Vert">
+            <summary>
+            垂直对齐 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.Horz">
+            <summary>
+            水平对齐 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.OftTop">
+            <summary>
+            Top偏量 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.OftLeft">
+            <summary>
+            Left偏量 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.ExtRows">
+            <summary>
+            扩展行数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.CellStyle.ExtCols">
+            <summary>
+            扩展列数 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.DataBindDef">
+            <summary>
+            DataBindDef 数据绑定定义的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.DataBindDef.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.DataBindDef.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.DataBindDef.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.DataBindDef.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.DataBindDef.PropPath">
+            <summary>
+            属性路径 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.DataBindDef.Source">
+            <summary>
+            来源 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.DataBindDef.Validity">
+            <summary>
+            有效性 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.DataBindDef.Right">
+            <summary>
+            权限 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.FontEx">
+            <summary>
+            FontEx 字体的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.FontEx.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.FontEx.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.FontEx.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.FontEx.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.FontEx.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.FontEx.Name">
+            <summary>
+            字体名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.FontEx.Size">
+            <summary>
+            字体尺寸 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.FontEx.Color">
+            <summary>
+            字体颜色 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.FontEx.Style">
+            <summary>
+            字体风格 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.PageHeadFootBase">
+            <summary>
+            PageHeadFootBase 页眉页脚信息的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PageHeadFootBase.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PageHeadFootBase.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PageHeadFootBase.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PageHeadFootBase.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PageHeadFootBase.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.Enabled">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.Pos">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.LineType">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.Left">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.Mid">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.Right">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.FontLeftEx">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.FontMidEx">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.FontRightEx">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.ImageFileLeft">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.ImageFileMid">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageHeadFootBase.ImageFileRight">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.PageInfoBase">
+            <summary>
+            PageInfoBase 打印页面信息的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PageInfoBase.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PageInfoBase.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PageInfoBase.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PageInfoBase.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PageInfoBase.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.Top">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.Left">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.Bottom">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.Right">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.Rate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.IsPortrait">
+            <summary>
+            纸张纵向 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.Bgmy">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.PaperNum">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.PaperWidth">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.PaperHeight">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.VPaperWidth">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.VPaperHeight">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.RowCnt">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.ColCnt">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.MergePage">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.MergeUserDef">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.MergeWidth">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.EnUserPaper">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.PageHead">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.PageFoot">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.StartPageNum">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.LineHeight">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.TitleFontName">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.TitleFontRate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.FontName">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.FontRate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.HeadFontName">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.HeadFontRate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.ExcelXRate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.ExcelYRate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PageInfoBase.ExcelPageRate">
+            <summary>
+             
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.PrnCmd">
+            <summary>
+            PrnCmd 页面命令的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnCmd.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnCmd.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PrnCmd.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PrnCmd.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.PrnCmd.Cmd">
+            <summary>
+            命令 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnCmd.Para">
+            <summary>
+            参数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnCmd.Option">
+            <summary>
+            选项 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.PrnCmdList">
+            <summary>
+            PrnCmdList 页面命令表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnCmdList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnCmdList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.Print.PrnPage">
+            <summary>
+            PrnPage 打印表格的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPage.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPage.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPage.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPage.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPage.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPage.Title">
+            <summary>
+            页标题 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPage.PageType">
+            <summary>
+            页面类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPage.RowCount">
+            <summary>
+            行数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPage.ColCount">
+            <summary>
+            列数 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPage.ColWidths">
+            <summary>
+            列宽表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPage.Rows">
+            <summary>
+            表格行 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Print.PrnPages">
+            <summary>
+            PrnPages 打印表数据的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPages.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPages.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPages.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPages.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPages.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Print.PrnPages.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPages.BaseFontSize">
+            <summary>
+            基准字体尺寸 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Print.PrnPages.PageInfo">
+            <summary>
+            页面定义 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ICensusData.Key">
+            <summary>
+            唯一标识符 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ICensusData.ContentType">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ICensusData.Value">
+            <summary>
+            值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ICensusData.LastModify">
+            <summary>
+            最后修改日期 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ICensusData.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.CensusData">
+            <summary>
+            CensusData 统计数据的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusData.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusData.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusData.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusData.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusData.WriteXMLValue(System.Xml.XmlNode,System.String,PengeSoft.EntEx.ICensusData)">
+            <summary>
+            写值到Xml子节点, PengeSoft.Data.DataPacket对象, 缺省值为null。
+            </summary>
+            <param name="node">Xml节点</param>
+            <param name="mc">子节点名称</param>
+            <param name="Value"></param>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusData.ReadXMLValue(System.Xml.XmlNode,System.String,PengeSoft.EntEx.ICensusData)">
+            <summary>
+            从Xml子节点读出子节点字符串
+            </summary>
+            <param name="node">Xml节点</param>
+            <param name="mc">子节点名称</param>
+            <param name="Value"></param>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusData.Key">
+            <summary>
+            唯一标识符 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusData.ContentType">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusData.Value">
+            <summary>
+            值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusData.LastModify">
+            <summary>
+            最后修改日期 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusData.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.CensusDataList`1">
+            <summary>
+            CensusDataList 统计数据表。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.NorDataList`1">
+            <summary>
+            支持泛型的 NorDataList 数据类。
+            </summary>
+            <typeparam name="T">数据类型，只能从 DataPacket <seealso cref="T:PengeSoft.Data.DataPacket"/> 派生</typeparam>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList`1.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList`1.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.Data.NorDataList`1.GetEnumerator">
+            <summary>
+            取枚举器
+            </summary>
+            <returns>返回当前集合的枚举器</returns>
+        </member>
+        <member name="P:PengeSoft.Data.NorDataList`1.Item(System.Int32)">
+            <summary>
+             获取或设置指定索引处的元素。
+            </summary>
+            <param name="index">要获得或设置的元素从零开始的索引。</param>
+            <returns>指定索引处的元素。</returns>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusDataList`1.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusDataList`1.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusDataList`1.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.CensusDataList`1.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusDataList`1.Key">
+            <summary>
+            唯一标识符 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusDataList`1.ContentType">
+            <summary>
+            类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusDataList`1.Value">
+            <summary>
+            值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusDataList`1.LastModify">
+            <summary>
+            最后修改日期 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.CensusDataList`1.Description">
+            <summary>
+            描述 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.IRunTaskDao">
+            <summary>
+            IRunTaskDao接口定主义。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IRunTaskDao.RemoveWork(System.String)">
+            <summary>
+            删除工作
+            </summary>
+            <param name="workId">工作实例Id</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IRunTaskDao.UpdateTaskStatus(System.Guid,System.Int32,System.Int32)">
+            <summary>
+            更新任务
+            </summary>状态
+            <param name="workId">工作实例Id</param>
+            <param name="souStatus">任务旧状态</param>
+            <param name="tagStatus">任务新状态</param>
+            <returns>更新任务数</returns>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.RunTaskDao">
+            <summary>
+            RunTaskDao实现, 从BaseSqlMapDao继承。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.GetParaHashTable(PengeSoft.WorkFlow.RunTask,System.String)">
+            <summary>
+            根据条件对象取得条件 Hashtable
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Order">排序字段</param>
+            <returns>条件Hashtable</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.QueryCount(System.Collections.Hashtable)">
+            <summary>
+            查询记录数,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.QueryCount(System.String,System.Collections.Hashtable)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.QueryList(System.String,System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="queryPara">查询条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.GetCount">
+            <summary>
+            取记录数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.GetList(System.Int32,System.Int32,System.String)">
+            <summary>
+            取列表
+            </summary>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.QueryCount(PengeSoft.Data.DataPacket)">
+            <summary>
+            查询记录数
+            </summary>
+            <param name="Data">条件对象</param>
+            <returns>记录数</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.QueryList(PengeSoft.Data.DataPacket,System.Int32,System.Int32,System.String)">
+            <summary>
+            查询列表
+            </summary>
+            <param name="Data">条件对象</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <returns>列表</returns>
+            <param name="OrderByField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.QueryList(System.Collections.Hashtable,System.Int32,System.Int32,System.Boolean)">
+            <summary>
+            查询列表,条件表参见 <see cref="T:PengeSoft.db.IDataProvider"/>
+            </summary>
+            <param name="queryPar">条件表</param>
+            <param name="Start">起始记录</param>
+            <param name="PageSize">页长度</param>
+            <param name="detail">取明细数据</param>
+            <returns>列表</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Insert(PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Insert(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            添加新记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>返回对象</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Update(PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Update(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录
+            </summary>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>无</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Update(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Update(System.String,PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            更新记录, 指定 sqlMap 映射语句
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">数据对象</param>
+            <param name="detail">更新明细数据</param>
+            <returns>更新记录数</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.GetDetail(PengeSoft.Data.DataPacket)">
+            <summary>
+            取详细数据
+            </summary>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.GetDetail(PengeSoft.Data.DataPacket,System.Boolean)">
+            <summary>
+            取数据
+            </summary>
+            <param name="data">条件对象</param>
+            <param name="detail">取明细数据</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.GetDetail(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            取数据
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="data">条件对象</param>
+            <returns>数据对象</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Delete(PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskDao.Delete(System.String,PengeSoft.Data.DataPacket)">
+            <summary>
+            删除记录
+            </summary>
+            <param name="statementName">sqlMap 映射语句</param>
+            <param name="Data">条件对象</param>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.RunTaskQueryPara">
+            <summary>
+            RunTask 查询参数
+            </summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByTaskName">
+            <summary>按TaskName排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByTaskName_desc">
+            <summary>按TaskName排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByWorkName">
+            <summary>按WorkName排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByWorkName_desc">
+            <summary>按WorkName排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByStartTime">
+            <summary>按StartTime排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByStartTime_desc">
+            <summary>按StartTime排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByEndTime">
+            <summary>按EndTime排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByEndTime_desc">
+            <summary>按EndTime排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByRunner">
+            <summary>按Runner排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByRunner_desc">
+            <summary>按Runner排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByStep">
+            <summary>按Step排序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.OrderByStep_desc">
+            <summary>按Step排序,降序</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_TaskID">
+            <summary>查询 TaskID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_WorkID">
+            <summary>查询 WorkID 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_TaskName">
+            <summary>查询 TaskName 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_WorkName">
+            <summary>查询 WorkName 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_Operators">
+            <summary>查询 Operators 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_OpLevel">
+            <summary>查询 OpLevel 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_Memo">
+            <summary>查询 Memo 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_StartTime">
+            <summary>查询 StartTime 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_StartTime_S">
+            <summary>查询 StartTime 条件起始日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_StartTime_E">
+            <summary>查询 StartTime 条件结束日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_EndTime">
+            <summary>查询 EndTime 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_EndTime_S">
+            <summary>查询 EndTime 条件起始日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_EndTime_E">
+            <summary>查询 EndTime 条件结束日期键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_Runner">
+            <summary>查询 Runner 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_TaskStatus">
+            <summary>查询 TaskStatus 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_WorkStatus">
+            <summary>查询 WorkStatus 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_Step">
+            <summary>查询 Step 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_NextOperators">
+            <summary>查询 NextOperators 条件键名称</summary>
+        </member>
+        <member name="F:PengeSoft.WorkFlow.RunTaskQueryPara.QueryKey_RightMask">
+            <summary>查询 RightMask 条件键名称</summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.#ctor(PengeSoft.WorkFlow.RunTask,System.String)">
+            <summary>
+            构造函数,指定参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetQueryPara(PengeSoft.WorkFlow.RunTask,System.String)">
+            <summary>
+            指定查询参数对象及排序字段
+            </summary>
+            <param name="data">查询参数对象</param>
+            <param name="order">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetTaskID(System.Guid)">
+            <summary>
+            设 任务Guid 条件
+            </summary>
+            <param name="TaskID">任务Guid</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetWorkID(System.Guid)">
+            <summary>
+            设 工作实例Guid 条件
+            </summary>
+            <param name="WorkID">工作实例Guid</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetTaskName(System.String)">
+            <summary>
+            设 任务名称 条件
+            </summary>
+            <param name="TaskName">任务名称</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetWorkName(System.String)">
+            <summary>
+            设 工作名称 条件
+            </summary>
+            <param name="WorkName">工作名称</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetOperators(System.String)">
+            <summary>
+            设 操作者 条件
+            </summary>
+            <param name="Operators">操作者</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetOpLevel(System.Int32)">
+            <summary>
+            设 权限级别 非零值条件
+            </summary>
+            <param name="OpLevel">权限级别</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetMemo(System.String)">
+            <summary>
+            设 说明 条件
+            </summary>
+            <param name="Memo">说明</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetStartTime(System.DateTime)">
+            <summary>
+            设 开始时间 条件
+            </summary>
+            <param name="StartTime">开始时间</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetStartTime(System.DateTime,System.DateTime)">
+            <summary>
+            设 开始时间 范围条件
+            </summary>
+            <param name="StartDate">起始日期</param>
+            <param name="EndDate">结束日期</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetEndTime(System.DateTime)">
+            <summary>
+            设 结束时间 条件
+            </summary>
+            <param name="EndTime">结束时间</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetEndTime(System.DateTime,System.DateTime)">
+            <summary>
+            设 结束时间 范围条件
+            </summary>
+            <param name="StartDate">起始日期</param>
+            <param name="EndDate">结束日期</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetRunner(System.String)">
+            <summary>
+            设 执行人 条件
+            </summary>
+            <param name="Runner">执行人</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetTaskStatus(System.Int32)">
+            <summary>
+            设 任务状态 非零值条件
+            </summary>
+            <param name="TaskStatus">任务状态</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetWorkStatus(System.Int32)">
+            <summary>
+            设 工作状态 非零值条件
+            </summary>
+            <param name="WorkStatus">工作状态</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetStep(System.Int32)">
+            <summary>
+            设 步骤 非零值条件
+            </summary>
+            <param name="Step">步骤</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetNextOperators(System.String)">
+            <summary>
+            设 下阶段操作者 条件
+            </summary>
+            <param name="NextOperators">下阶段操作者</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetRightMask(System.Int32)">
+            <summary>
+            设 允许权限 非零值条件
+            </summary>
+            <param name="RightMask">允许权限</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQueryPara.SetOrderByField(System.String)">
+            <summary>
+            设排序字段
+            </summary>
+            <param name="Order">排序字段</param>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.ComparerRunTask">
+            <summary>
+            RunTask 排序比较器
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ComparerRunTask.#ctor(System.String)">
+            <summary>
+            创建实例,并初始化排序字段
+            </summary>
+            <param name="sortField">排序字段</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.ComparerRunTask.Compare(System.Object,System.Object)">
+            <summary>
+            比较两个 <see cref="!:Zjjhxmmx"/> 对象并返回一个值，指示一个对象是小于、等于还是大于另一个对象。
+            </summary>
+            <param name="x">要比较的第一个对象。</param>
+            <param name="y">要比较的第二个对象。</param>
+            <returns>值 条件 小于零 x 小于 y。 零 x 等于 y。 大于零 x 大于 y。</returns>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.ComparerRunTask.SortField">
+            <summary>
+            排序字段
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.ParameterTable">
+            <summary>
+            参数表
+            </summary>
+        </member>
+        <member name="F:PengeSoft.Data.ParameterTable.PS_DATANODE_ID">
+            <summary>
+            DataPacket序列化时的节点名称
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.ParameterTable.XmlEncode(System.Xml.XmlNode)">
+            <summary>
+            将对象写入Xml节点, 表中每项以Key做为节点名，以子元素写入到节点中。
+            </summary>
+            <remarks>
+            节点元素类型只能是 string, int, long, double, decimal, DateTime, bool 等简单类型。 
+            </remarks>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="M:PengeSoft.Data.ParameterTable.XmlDecode(System.Xml.XmlNode)">
+            <summary>
+            从Xml节点中读出对象
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="M:PengeSoft.Data.ParameterTable.SelectChildNode(System.Xml.XmlNode,System.String)">
+            <summary>
+            返回子节点
+            </summary>
+            <param name="node"></param>
+            <param name="mc"></param>
+            <returns></returns>
+        </member>
+        <member name="P:PengeSoft.Data.ParameterTable.XmlText">
+            <summary>
+            设置或获取对象的Xml序列。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.ITotalValueItem.XmlDecode(System.Xml.XmlNode)">
+            <summary>
+            从Xml节点中读出对象
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="M:PengeSoft.Data.ITotalValueItem.XmlEncode(System.Xml.XmlNode)">
+            <summary>
+            将对象写入Xml节点
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="P:PengeSoft.Data.ITotalValueItem.Value">
+            <summary>
+            值 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.TotalValue`1">
+            <summary>
+            汇总数据，数据为浮点数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.#ctor(System.String,`0)">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.AddValue(System.String,`0)">
+            <summary>
+            累计值
+            </summary>
+            <param name="name">值的名称</param>
+            <param name="value">数值</param>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue`1.AddValue(System.String,System.Double)">
+            <summary>
+            累计值
+            </summary>
+            <param name="name">值的名称</param>
+            <param name="value">数值</param>
+        </member>
+        <member name="P:PengeSoft.Data.TotalValue`1.Value">
+            <summary>
+            值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.TotalValue`1.ElmName">
+            <summary>
+            动态项节点名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.TotalValue`1.List">
+            <summary>
+            明细 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue.#ctor(System.String,System.String,System.Double)">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue.#ctor(System.String,System.Double)">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValue.AddValue(System.String,System.String,System.Double)">
+            <summary>
+            累计值
+            </summary>
+            <param name="name">值的名称</param>
+            <param name="key">索引Key</param>
+            <param name="value">数值</param>
+        </member>
+        <member name="T:PengeSoft.Data.TotalValueDouble">
+            <summary>
+            汇总数据，数据为浮点数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValueDouble.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValueDouble.#ctor(System.String,System.Double)">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValueDouble.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValueDouble.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValueDouble.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValueDouble.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.Data.TotalValueDouble.AddValue(System.String,System.Double)">
+            <summary>
+            累计值
+            </summary>
+            <param name="name">值的名称</param>
+            <param name="value">数值</param>
+        </member>
+        <member name="P:PengeSoft.Data.TotalValueDouble.Value">
+            <summary>
+            值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.TotalValueDouble.List">
+            <summary>
+            明细 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Service.Auther.LoginResult">
+            <summary>
+            LoginResult 登录返回信息的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginResult.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginResult.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginResult.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginResult.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginResult.Utag">
+            <summary>
+            用户登录标识 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginResult.Code">
+            <summary>
+            出错码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginResult.Msg">
+            <summary>
+            出错信息 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginResult.LoginId">
+            <summary>
+            登录名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginResult.FullName">
+            <summary>
+            全名 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Service.Auther.LoginKeyResult">
+            <summary>
+            LoginKeyResult 登录返回信息的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginKeyResult.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginKeyResult.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginKeyResult.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.LoginKeyResult.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginKeyResult.KeySN">
+            <summary>
+            用户登录SN 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginKeyResult.KeyId">
+            <summary>
+            用户登录Key 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginKeyResult.Code">
+            <summary>
+            出错码 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Service.Auther.LoginKeyResult.Msg">
+            <summary>
+            出错信息 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.RunTask">
+            <summary>
+            RunTask 运行任务的摘要说明。
+            </summary>
+            <remarks>
+            工作流运行时任务实例对象。 
+            </remarks>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTask.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTask.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTask.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTask.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTask.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.Step">
+            <summary>
+            步骤 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.TimeLimite">
+            <summary>
+            工期 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.FinishedState">
+            <summary>
+            完成状态 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.NextOperators">
+            <summary>
+            下阶段操作者 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.NextTimeLimite">
+            <summary>
+            下阶段工期 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.NextTaskName">
+            <summary>
+            下阶段任务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.NextCC">
+            <summary>
+            下阶段抄送 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.RightMask">
+            <summary>
+            允许权限 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.WorkFlow.RunTask.NodeType">
+            <summary>
+            任务类型 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.RunTaskList">
+            <summary>
+            RunTaskList 运行任务表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.Data.DynDataPacketItem">
+            <summary>
+            GenDataPacketItem 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacketItem.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacketItem.AssignFrom(PengeSoft.Data.DynDataPacketItem)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacketItem.XmlDecodeAttrib(System.Xml.XmlNode)">
+            <summary>
+            写扩展属性，只能用 WriteXmlAttribStr()
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacketItem.XmlEncodeAttrib(System.Xml.XmlNode)">
+            <summary>
+            读扩展属性，只能用 ReadXmlAttribStr()
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="P:PengeSoft.Data.DynDataPacketItem.Name">
+            <summary>
+            名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DynDataPacketItem.TypeName">
+            <summary>
+            类型 
+            string,double,int等标准类型, 其他数据类型别名 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DynDataPacketItem.Value">
+            <summary>
+            属性值 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.Data.DynDataPacketItem.ObjValue">
+            <summary>
+            值对象
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Data.DynDataPacket">
+            <summary>
+            DynDataPacket 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacket.CreateNewItem">
+            <summary>
+            根据ItemType创建一个新 DataPacket 元素
+            </summary>
+            <returns>新 DynDataPacketItem 元素, 如果 ItemType 为 null 则返回 null。</returns>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacket.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacket.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacket.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynDataPacket.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.Data.DynDataPacket._TypeId">
+            <summary>
+            类型标识 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DynNorDataList.#ctor">
+            <summary>
+            初始化 PengeSoft.Data.NorDataList 类的新实例，该实例为空并且具有默认初始容量。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Data.DynNorDataList.#ctor(System.Int32)">
+            <summary>
+            初始化 System.Collections.ArrayList 类的新实例，该实例为空并且具有指定的初始容量。
+            </summary>
+            <param name="capacity">新列表最初可以存储的元素数。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynNorDataList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化 PengeSoft.Data.NorDataList 类的新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c">System.Collections.ICollection，它的元素被复制到新列表中。该表中元素必须是 DataPacket 的派生类。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynNorDataList.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynNorDataList.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynNorDataList.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.Data.DynNorDataList.CreateNewItem">
+            <summary>
+            根据ItemType创建一个新 DataPacket 元素
+            </summary>
+            <returns>新 DataPacket 元素, 如果 ItemType 为 null 则返回 null。</returns>
+        </member>
+        <member name="P:PengeSoft.Data.DynNorDataList.TypeId">
+            <summary>
+            Item类型标识 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Service.Auther.IUserAuther">
+            <summary>
+            用户认证接口
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.Login(System.String,System.String,System.String)">
+            <summary>
+            用户登录, 带自定义验证信息
+            </summary>
+            <param name="loginId">用户登录</param>
+            <param name="password">口令, 使用Hash值(Hex/base64), 参考 <see cref="M:PengeSoft.Common.SysUtils.GetPasswordHash(System.String)"/> </param>
+            <param name="userDefTag">用户写定义验证标识, 不使用标识时传入空</param>
+            <returns>成功返回用户登录标识(utag不为空), 失败返回 ErrCode和ErrMessage. <see cref="T:PengeSoft.Service.Auther.LoginResult"/></returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.WebLogin(System.String,System.String,System.String)">
+            <summary>
+            用户登录, 带自定义验证信息
+            </summary>
+            <param name="loginId">用户登录</param>
+            <param name="password">口令, 使用Hash值(Hex/base64), 参考 <see cref="M:PengeSoft.Common.SysUtils.GetPasswordHash(System.String)"/> </param>
+            <param name="userDefTag">用户写定义验证标识, 不使用标识时传入空</param>
+            <returns>成功返回用户登录标识(utag不为空), 失败返回 ErrCode和ErrMessage. <see cref="T:PengeSoft.Service.Auther.LoginResult"/></returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.Logout(System.String)">
+            <summary>
+            注销用户登录
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.ChangePass(System.String,System.String,System.String)">
+            <summary>
+            修改口令,需原有口令
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <param name="oldPwd">原口令</param>
+            <param name="newPwd">新口令</param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.CheckRight(System.String,System.String)">
+            <summary>
+            检查用户权限
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <param name="actionName">操作名称</param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.ValidUser(System.String,System.String)">
+            <summary>
+            验证用户的有效性
+            </summary>
+            <param name="loginId">用户登录</param>
+            <param name="password">口令, 使用Hash值(Hex/base64), 参考 <see cref="M:PengeSoft.Common.SysUtils.GetPasswordHash(System.String)"/> </param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.GenUserKey(System.String,System.Int32)">
+            <summary>
+            生成一次性登录标识
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <param name="expire">标识有效时间，单位分钟， 设0时采用缺省值. </param>
+            <returns>成功返回KeySN,KeyId, 否则返回出信息<see cref="T:PengeSoft.Service.Auther.LoginKeyResult"/></returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.IUserAuther.SimpleCheck(System.Int32,System.String)">
+            <summary>
+            根据一次性标识登录, 并取得用户名称。
+            </summary>
+            <param name="KeySN">标识序号</param>
+            <param name="id">用于验证的标识</param>
+            <returns>操作成功返回指定用户的登录名，否则返回空串。</returns>
+        </member>
+        <member name="T:PengeSoft.FP.IFigureService">
+            <summary>
+            IFigureServiceSvr 接口定义。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.Regist(System.String,System.Int32,System.String)">
+            <summary>
+            注册指纹  返回已注册指纹 
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="figureId">手指标志1-10, 从左到有代表1：左小指；2：左无明指；3：左食指；4：左中指；5：左大拇指；6：右大拇指7：右中指；8：右食指；9：右无名指；10：右小指</param>
+            <param name="template">指纹模板</param>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.ClearRegist(System.String)">
+            <summary>
+            清除注册   
+            </summary>
+            <param name="utag">用户标记</param>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.GetRegIds(System.String)">
+            <summary>
+            取注册状态   
+            </summary>
+            <param name="utag">用户标记</param>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.RegistUser(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            注册用户指纹  返回已注册指纹 
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="loginId">用户登录Id</param>
+            <param name="figureId">手指标志1-10, 从左到有代表1：左小指；2：左无明指；3：左食指；4：左中指；5：左大拇指；6：右大拇指7：右中指；8：右食指；9：右无名指；10：右小指</param>
+            <param name="template">指纹模板</param>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.ClearUserRegist(System.String,System.String)">
+            <summary>
+            清除用户注册   
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="loginId">用户登录Id</param>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.GetUserRegIds(System.String,System.String)">
+            <summary>
+            取用户注册状态   
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="loginId">用户登录Id</param>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.FpLogin(System.String)">
+            <summary>
+            登录   
+            </summary>
+            <param name="template">指纹模板</param>
+        </member>
+        <member name="M:PengeSoft.FP.IFigureService.WebFpLogin(System.String)">
+            <summary>
+            服务端登录   
+            </summary>
+            <param name="template">指纹模板</param>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.IWorkFlowEngineOA">
+            <summary>
+            IWorkFlowEngineOASvr 接口定义。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.Start">
+            <summary>
+            启动引擎, 为兼容保留
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.ShutDown">
+            <summary>
+            关闭引擎, 为兼容保留
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.WaitForAll(System.Int32)">
+            <summary>
+            等待所工作处理完成，引擎处于空闲, 为兼容保留。
+            </summary>
+            <param name="MaxWaitTime">等待的毫秒数，(-1)表示无限期等待。</param>
+            <returns>返回false表示超时</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.AddNewWork(PengeSoft.WorkFlow.WorkInstance,System.String,System.String)">
+            <summary>
+            添加新工作   
+            </summary>
+            <param name="template">工作模板</param>
+            <param name="workName">工作名称</param>
+            <param name="owner">创建人</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.AddNewWork(System.String,System.String,System.String)">
+            <summary>
+            按文件添加新工作   
+            </summary>
+            <param name="templateFile">工作模板文件</param>
+            <param name="workName">工作名称</param>
+            <param name="owner">创建人</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.RemoveWork(System.String)">
+            <summary>
+            删除工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.StartWork(System.String,PengeSoft.WorkFlow.NamedValue)">
+            <summary>
+            启动工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+            <param name="para">启动参数</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.StartWork(System.String,PengeSoft.WorkFlow.NamedValue,System.String,System.Double)">
+            <summary>
+            启动工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+            <param name="para">启动参数</param>
+            <param name="operators">操作者</param>
+            <param name="timeLimite">工期</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.StopWork(System.String)">
+            <summary>
+            中止工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.PauseWork(System.String)">
+            <summary>
+            暂停工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.ContinueWork(System.String)">
+            <summary>
+            继续被暂停工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.TaskFinished(System.String,System.String,System.String,System.String,System.Double,System.String,System.String)">
+            <summary>
+            任务已完成通知, 任务输出参数或主参数的改变由任务执行程序处理   
+            </summary>
+            <param name="taskId">任务Guid</param>
+            <param name="runner">执行人</param>
+            <param name="retValue">任务返回值</param>
+            <param name="nextOperators">下阶段操作者</param>
+            <param name="nextTimeLimite">下阶段工期</param>
+            <param name="nextTaskName">下阶段任务名称</param>
+            <param name="nextCC">下阶段抄送</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.TaskFinished(System.String,System.String,System.Int32,System.Object,System.String)">
+            <summary>
+            (兼容接口)任务已完成通知, 任务输出参数或主参数的改变由任务执行程序处理
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="taskState">任务完成状态
+               TaskInstance.State_Done   正常完成
+               TaskInstance.State_Idle   并行任务结束
+            </param>
+            <param name="retValue">任务返回值</param>
+            <param name="runner">执行人</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.TaskFinished(System.String,System.String,System.Object,System.String,System.String,System.Double,System.String,System.String)">
+            <summary>
+            任务已完成通知, 任务输出参数或主参数的改变由任务执行程序处理
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="retValue">任务返回值</param>
+            <param name="runner">执行人</param>
+            <param name="nextOperators">下阶段操作者</param>
+            <param name="nextTimeLimite">下阶段工期</param>
+            <param name="nextTaskName">下阶段任务名称</param>
+            <param name="nextCC">下阶段抄送</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetNextTasks(System.String,System.Int32)">
+            <summary>
+            获取下阶段任务名称表   
+            </summary>
+            <param name="taskId">任务Guid</param>
+            <param name="option">选项 0: 有效后继，1:  全部任务</param>
+            <returns>下阶段任务定义, option = 0 时, 任务(TaskInstance.Memo) 保存转入该任务需要的状态. </returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetTaskInfo(System.String)">
+            <summary>
+            取任务数据   
+            </summary>
+            <param name="taskId">任务Guid</param>
+            <returns>运行任务</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetTaskInfo(System.String,System.String,System.String)">
+            <summary>
+            根据工作标识、任务名称、操作人取任务数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="op">操作人</param>
+            <returns>运行任务</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetCurrentTask(System.String)">
+            <summary>
+            取当前任务数据   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetTaskList(System.String,System.Int32,System.Int32)">
+            <summary>
+            取任务列表   
+            </summary>
+            <param name="operators">操作者</param>
+            <param name="opLevel">操作级别</param>
+            <param name="state">状态</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetWorkInstance(System.String)">
+            <summary>
+            根据工作标识取工作实例数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <returns>工作实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetWorkInstanceByName(System.String)">
+            <summary>
+            根据工作名称取工作实例数据
+            </summary>
+            <param name="workName"></param>
+            <returns>工作实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.QueryWorkStatus(System.String)">
+            <summary>
+            返回工作状态
+            </summary>
+            <param name="workId">工作标识</param>
+            <returns>工作状态:
+            WorkStatus_Ready, WorkStatus_Running, WorkStatus_Waitting, WorkStatus_Pause,
+            WorkStatus_Stop, WorkStatus_Error, WorkStatus_Finish 等.
+            </returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetTaskInstance(System.String,System.String)">
+            <summary>
+            根据工作标识和任务名称取任务实例数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <returns>任务实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.GetTaskInstance(System.String,System.String,System.String@,System.String@,System.String@)">
+            <summary>
+            根据工作标识和任务名称取任务实例数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="templateId">返回模板标识</param>
+            <param name="workName">返回工作名称</param>
+            <param name="workOwner">返回工作所有者</param>
+            <returns>任务实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.IWorkFlowEngineOA.QueryTaskStatus(System.String,System.String)">
+            <summary>
+            返回任务状态
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <returns>任务状态 Idle, Running, Done 等.</returns>
+        </member>
+        <member name="T:PengeSoft.GPS.LLTransform">
+            <summary>
+            经纬度转换，支持NEMA到WGS84, WGS84（GPS）到GCJ02（火星,google,搜搜地图等），WGS84到BD09（百度）
+            及GCJ02与BD09的互相转换
+            </summary>
+        </member>
+        <member name="M:PengeSoft.GPS.LLTransform.NEMA_To_WGS84(System.Double,System.Double,System.Double@,System.Double@)">
+            <summary>
+            NEMA转WGS84
+            </summary>
+            <param name="neLat"></param>
+            <param name="neLon"></param>
+            <param name="wgLat"></param>
+            <param name="wgLon"></param>
+        </member>
+        <member name="M:PengeSoft.GPS.LLTransform.WGS84_To_GCJ02(System.Double,System.Double,System.Double@,System.Double@)">
+            <summary>
+            WGS84转火星坐标 
+            </summary>
+            <param name="wgLat"></param>
+            <param name="wgLon"></param>
+            <param name="mgLat"></param>
+            <param name="mgLon"></param>
+        </member>
+        <member name="M:PengeSoft.GPS.LLTransform.GCJ02_To_BD09(System.Double,System.Double,System.Double@,System.Double@)">
+            <summary>
+            火星坐标到百度坐标
+            </summary>
+            <param name="gg_lat"></param>
+            <param name="gg_lon"></param>
+            <param name="bd_lat"></param>
+            <param name="bd_lon"></param>
+        </member>
+        <member name="M:PengeSoft.GPS.LLTransform.BD09_To_GCJ02(System.Double,System.Double,System.Double@,System.Double@)">
+            <summary>
+            百度坐标到火星坐标
+            </summary>
+            <param name="bd_lat"></param>
+            <param name="bd_lon"></param>
+            <param name="gg_lat"></param>
+            <param name="gg_lon"></param>
+        </member>
+        <member name="M:PengeSoft.GPS.LLTransform.WGS84_To_BD09(System.Double,System.Double,System.Double@,System.Double@)">
+            <summary>
+            WGS84转百度坐标
+            </summary>
+            <param name="wgLat"></param>
+            <param name="wgLon"></param>
+            <param name="bdLat"></param>
+            <param name="bdLon"></param>
+        </member>
+        <member name="T:PengeSoft.EntEx.Express">
+            <summary>
+            宏表达式计算器 Expres, 支持基本数值函数及字符串函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.DynDataItemKey.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.DynDataItemKey.AssignFrom(PengeSoft.Data.DynDataPacketItem)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.DynDataItemKey.XmlDecodeAttrib(System.Xml.XmlNode)">
+            <summary>
+            写扩展属性，只能用 WriteXmlAttribStr()
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.DynDataItemKey.XmlEncodeAttrib(System.Xml.XmlNode)">
+            <summary>
+            读扩展属性，只能用 ReadXmlAttribStr()
+            </summary>
+            <param name="node">Xml节点</param>
+        </member>
+        <member name="P:PengeSoft.EntEx.DynDataItemKey.Key">
+            <summary>
+            Key值 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.StatisticsItem">
+            <summary>
+            统计数据记录
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsItem.CreateNewItem">
+            <summary>
+            根据ItemType创建一个新 DataPacket 元素
+            </summary>
+            <returns>新 DynDataPacketItem 元素, 如果 ItemType 为 null 则返回 null。</returns>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsItem.GetPropertyKey(System.String)">
+            <summary>
+            取属性的 Key, 如果不是动态属性，返回空。
+            </summary>
+            <param name="pName">属性名称</param>
+            <returns>属性的Key</returns>
+        </member>
+        <member name="T:PengeSoft.EntEx.StatisticsList">
+            <summary>
+            StatisticsList 统计数据记录表的摘要说明。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.StatisticsFieldDef">
+            <summary>
+            StatisticsFieldDef 统计字段定义的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDef.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDef.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDef.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDef.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDef.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.OpType">
+            <summary>
+            操作类型 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.Field">
+            <summary>
+            字段名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.DetailField">
+            <summary>
+            明细分类字段 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.AnsName">
+            <summary>
+            结果字段名称/前缀 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.NameTransTbl">
+            <summary>
+            名称映射表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.NameTransTblTag">
+            <summary>
+            名称映射表目标 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.Distinct">
+            <summary>
+            计数唯一 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.StatisticsFieldDef.DetailKey">
+            <summary>
+            明细分类Key前缀 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.StatisticsFieldDefs">
+            <summary>
+            StatisticsFieldDefs 统计字段定义表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddSum(System.String,System.String)">
+            <summary>
+            字段求和
+            </summary>
+            <param name="field">求和的字段名称, 求和字段不能出现在KeyFields</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddSum(System.String,System.String,System.String)">
+            <summary>
+            字段求和
+            </summary>
+            <param name="field">求和的字段名称, 求和字段不能出现在KeyFields</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+            <param name="detailKey">生成明细列表Key的前缀</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddSums(System.String)">
+            <summary>
+            多字段求和
+            </summary>
+            <param name="fields">求和的字段名称组，用','分隔, 求和字段不能出现在KeyFields</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddSumDetail(System.String,System.String,System.String)">
+            <summary>
+            求和并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+            </summary>
+            <param name="field">求和的字段名称, 求和字段不能出现在KeyFields</param>
+            <param name="detailField">分类字段, 该字段不能出现在KeyFields</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddSumDetail(System.String,System.String,System.String,System.String)">
+            <summary>
+            求和并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+            </summary>
+            <param name="field">求和的字段名称, 求和字段不能出现在KeyFields</param>
+            <param name="detailField">分类字段, 该字段不能出现在KeyFields</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+            <param name="fieldMaps">字段名称映射，格式'分类名称=字段名称'， 多个用','分开 </param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddSumDetail(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            求和并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+            </summary>
+            <param name="field">求和的字段名称, 求和字段不能出现在KeyFields</param>
+            <param name="detailField">分类字段, 该字段不能出现在KeyFields</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+            <param name="fieldMaps">字段名称映射，格式'分类名称=字段名称'， 多个用','分开 </param>
+            <param name="detailKey">生成明细列表Key的前缀</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddCount(System.String,System.String,System.Boolean)">
+            <summary>
+            字段计数
+            </summary>
+            <param name="field">计数的字段名称, 求和字段不能出现在KeyFields，不指定表示对记录计数</param>
+            <param name="newField">计数的字段的新字段名称，为空表示不变</param>
+            <param name="distinct">只对唯一计数字段计数</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddCount(System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            字段计数
+            </summary>
+            <param name="field">计数的字段名称, 求和字段不能出现在KeyFields，不指定表示对记录计数</param>
+            <param name="newField">计数的字段的新字段名称，为空表示不变</param>
+            <param name="distinct">只对唯一计数字段计数</param>
+            <param name="detailKey">生成明细列表Key的前缀</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddCounts(System.String,System.Boolean)">
+            <summary>
+            多字段计数
+            </summary>
+            <param name="fields">计数的字段名称组，用','分隔, 计数字段不能出现在KeyFields</param>
+            <param name="distinct">只对唯一计数字段计数</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddCountDetail(System.String,System.String,System.String,System.Boolean)">
+            <summary>
+            计数并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+            </summary>
+            <param name="field">计数的字段名称, 求和字段不能出现在KeyFields，不指定表示对记录计数</param>
+            <param name="detailField">分类字段, 该字段不能出现在KeyFields, 不指定表示同field</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+            <param name="distinct">只对唯一计数字段计数</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddCountDetail(System.String,System.String,System.String,System.Boolean,System.String)">
+            <summary>
+            计数并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+            </summary>
+            <param name="field">计数的字段名称, 求和字段不能出现在KeyFields，不指定表示对记录计数</param>
+            <param name="detailField">分类字段, 该字段不能出现在KeyFields, 不指定表示同field</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+            <param name="distinct">只对唯一计数字段计数</param>
+            <param name="fieldMaps">字段名称映射，格式'分类名称=字段名称'， 多个用','分开 </param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddCountDetail(System.String,System.String,System.String,System.Boolean,System.String,System.String)">
+            <summary>
+            计数并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+            </summary>
+            <param name="field">计数的字段名称, 求和字段不能出现在KeyFields，不指定表示对记录计数</param>
+            <param name="detailField">分类字段, 该字段不能出现在KeyFields, 不指定表示同field</param>
+            <param name="newField">求和的字段的新字段名称，为空表示不变</param>
+            <param name="distinct">只对唯一计数字段计数</param>
+            <param name="fieldMaps">字段名称映射，格式'分类名称=字段名称'， 多个用','分开 </param>
+            <param name="detailKey">生成明细列表Key的前缀</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddExtractCount(System.String,System.String,System.Boolean,System.String,System.String,System.String)">
+            <summary>
+            展开分类字段并对指定字段计数
+            </summary>
+            <param name="field">计数字段，不指定表示对记录计数</param>
+            <param name="detailField">分类字段，用该字段内容生成新的字段</param>
+            <param name="distinct">只对唯一计数字段计数</param>
+            <param name="fieldPrefix">新生成字段的前(后)缀, '-'开头表示后缀</param>
+            <param name="fieldMaps">字段名称映射，格式'分类名称=字段名称'， 多个用','分开 </param>
+            <param name="detailKey">生成明细列表Key的前缀</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddExtractSum(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            展开分类字段并对求和字段求和
+            </summary>
+            <param name="field">求和字段</param>
+            <param name="detailField">分类字段，用该字段内容生成新的字段</param>
+            <param name="fieldPrefix">新生成字段的前(后)缀, '-'开头表示后缀</param>
+            <param name="fieldMaps">字段名称映射，格式'分类名称=字段名称'， 多个用','分开 </param>
+            <param name="detailKey">生成明细列表Key的前缀</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddKey(System.String,System.String)">
+            <summary>
+            添加不汇总关键字段
+            </summary>
+            <param name="field">字段名称</param>  
+            <param name="fieldMaps">字段名称映射，格式'分类名称=字段名称'， 多个用','分开 </param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.AddKeys(System.String)">
+            <summary>
+            添加不汇总关键字段组
+            </summary>
+            <param name="fields">关键字段名称组，用','分隔</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.StatisticsFieldDefs.CheckValid">
+            <summary>
+            检查汇总定义有效性
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.SortFieldDefs">
+            <summary>
+            SortFieldDefs 排序字段定义的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.SortFieldDefs.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.SortFieldDefs.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.SortFieldDefs.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.SortFieldDefs.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.SortFieldDefs.SetSortField(System.String,System.String,System.Boolean)">
+            <summary>
+            设置排序字段
+            </summary>
+            <param name="fields">排序字段表, 用','分隔</param>
+            <param name="translator">排序转换服务名称</param>
+            <param name="desc">降序排序</param>
+        </member>
+        <member name="P:PengeSoft.EntEx.SortFieldDefs.Fields">
+            <summary>
+            排序字段表 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.SortFieldDefs.Translator">
+            <summary>
+            排序转换服务名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.SortFieldDefs.Desc">
+            <summary>
+            降序 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.GenStatistics">
+            <summary>
+            通用统计类
+               汇总字段类型
+                   Sum(Field)            求和
+                   SumDetail(Field, DetailField)      求和并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+                   Count(Field)          计数
+                   CountDetail(Field, DetailField)    计数并生成明细 TotalValue <seealso cref="!:PengeSoft.EntEx.TotalValue"/>
+                   Keys()      指定不合并的关键字段
+                   ExtractCount()        展开选项并计数 
+                   过滤条件
+                   排序字段
+                   排序函数(字段)
+               Boolean 缺省字段按照'是/否'处理数据，可以指定替代值
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.#ctor(System.String)">
+            <summary>
+            用定义语句初始化新实例 
+            </summary>
+            <param name="def">汇总定义</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.SetSortField(System.String,System.String,System.Boolean)">
+            <summary>
+            设置排序字段
+            </summary>
+            <param name="fields">排序字段表, 用','分隔</param>
+            <param name="translator">排序转换服务名称</param>
+            <param name="desc">降序排序</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.Total(PengeSoft.EntEx.IStatisticsList,System.Collections.IEnumerable)">
+            <summary>
+            汇总数据
+            </summary>
+            <param name="tag">结果保存列表</param>
+            <param name="sou">源数据列表</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.Total(PengeSoft.EntEx.IStatisticsList,System.Collections.IEnumerable,PengeSoft.EntEx.TotalDeatilList)">
+            <summary>
+            汇总数据
+            </summary>
+            <param name="tag">结果保存列表</param>
+            <param name="sou">源数据列表</param>
+            <param name="_detailList">合计明细输出列表</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.SetExrpess(System.String)">
+            <summary>
+            设置汇总表达式
+            </summary>
+            <param name="def">汇总表达式</param>
+            <example>
+               Field1, Field2, Sum(Field3), Count(*, true), ExtarctSum(Field5) orderby Field1, Field2 desc TransSvr
+            </example>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.TotalEx(System.String,PengeSoft.EntEx.IStatisticsList,System.Collections.IEnumerable)">
+            <summary>
+            根据汇总函数汇总数据
+            </summary>
+            <param name="def">汇总表达式</param>
+            <param name="tag">结果保存列表</param>
+            <param name="sou">源数据列表</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.Total(System.String,System.Collections.IEnumerable)">
+            <summary>
+            根生成总函数汇总数据
+            </summary>
+            <param name="def">汇总表达式</param>
+            <param name="tag">结果保存列表</param>
+            <param name="sou">源数据列表</param>
+            <returns>返回汇总结果</returns>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.TotalEx(System.String,PengeSoft.EntEx.IStatisticsList,System.Collections.IEnumerable,PengeSoft.EntEx.TotalDeatilList)">
+            <summary>
+            根据汇总函数汇总数据
+            </summary>
+            <param name="def">汇总表达式</param>
+            <param name="tag">结果保存列表</param>
+            <param name="sou">源数据列表</param>
+            <param name="_detailList">合计明细输出列表</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.Total(System.String,System.Collections.IEnumerable,PengeSoft.EntEx.TotalDeatilList)">
+            <summary>
+            根生成总函数汇总数据
+            </summary>
+            <param name="def">汇总表达式</param>
+            <param name="tag">结果保存列表</param>
+            <param name="sou">源数据列表</param>
+            <returns>返回汇总结果</returns>
+            <param name="_detailList">合计明细输出列表</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.GenStatistics.AddCount(PengeSoft.EntEx.TotalItem,System.Object,PengeSoft.EntEx.StatisticsFieldDef)">
+            <summary>
+            
+            </summary>
+            <param name="tag"></param>
+            <param name="sou"></param>
+            <param name="field"></param>
+        </member>
+        <member name="P:PengeSoft.EntEx.GenStatistics.StatisFields">
+            <summary>
+            统计字段定义 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.GenStatistics.SortFields">
+            <summary>
+            排序字段定义 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.ITransSortValue">
+            <summary>
+            转换排序值接口定义
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.IMsgService">
+            <summary>
+            消息服务接口。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.IMsgService.SendSmsMsgToMobs(System.String,System.String)">
+            <summary>
+            发短信到一组手机
+            </summary>
+            <param name="mobs">手机号码，多个手机号码用‘,’分开</param>
+            <param name="msg">手机消息，对不支持长消息的设备，超过70个汉字的消息会被自动分成多条短信</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.IMsgService.SendMailTo(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            发邮件
+            </summary>
+            <param name="from">发件人地址</param>
+            <param name="to">收件人地址</param>
+            <param name="cc">抄送地址</param>
+            <param name="subject">主题</param>
+            <param name="msg">信息</param>
+        </member>
+        <member name="T:PengeSoft.EntEx.IWorkZoneMsgService">
+            <summary>
+            WorkZone消息服务接口。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.IWorkZoneMsgService.SendMsgToCenter(PengeSoft.WorkZoneData.ProgMessage)">
+            <summary>
+            发送程序消息。
+            </summary>
+            <param name="msg">消息体</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.IWorkZoneMsgService.SynSendMsgTo(PengeSoft.WorkZoneData.ProgMessage,System.Int32)">
+            <summary>
+            发送消息并接收返回消息   
+            </summary>
+            <param name="msg">消息体</param>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.IWorkZoneMsgService.MsgProcessed(System.String,PengeSoft.WorkZoneData.ProgMessage)">
+            <summary>
+            同步发送消息Callback   
+            </summary>
+            <param name="msgId">消息Id</param>
+            <param name="msg">返回消息</param>
+        </member>
+        <member name="T:PengeSoft.EntEx.ApplicationAtuthBase">
+            <summary>
+            带权限管理的应用服务实现的基础类。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.Initial">
+            <summary>
+            初始化服务, 除始化权限服务，如没有配置权限服务，NotAuther 返回 True .
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.CheckAuther">
+            <summary>
+            检查服务权限状态
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.CheckAuther(System.String,System.String@,System.String@)">
+            <summary>
+            检查用户登录状态，并返回用户名称和加密Key。
+            </summary>
+            <param name="utag">用户安全标识</param>
+            <param name="uName">返回的用户名称</param>
+            <param name="uKey">返回的加密Key</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.CheckRight(System.String)">
+            <summary>
+            使用服务的ActName检查权限，未指定ActName时不检查权限。
+            </summary>
+            <param name="utag">用户安全标识</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.CheckRight(System.String,System.String)">
+            <summary>
+            使用参数中的actName检查权限，actName为空时不检查权限。
+            </summary>
+            <param name="utag">用户安全标识</param>
+            <param name="actName">操作权限名称</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.CheckRight(System.String,System.String@,System.String@)">
+            <summary>
+            检查用户登录状态和服务操作权限(ActName属性)，并返回用户名称和加密Key。
+            </summary>
+            <param name="utag">用户安全标识</param>
+            <param name="uName"></param>
+            <param name="uKey"></param>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.CheckRight(System.String,System.String,System.String@,System.String@)">
+            <summary>
+            检查用户登录状态和指定操作权限(actName)，并返回用户名称和加密Key。
+            </summary>
+            <param name="utag">用户安全标识</param>
+            <param name="actName">操作权限名称</param>
+            <param name="uName"></param>
+            <param name="uKey"></param>
+        </member>
+        <member name="M:PengeSoft.EntEx.ApplicationAtuthBase.#ctor">
+            <summary>
+            构造函数, 调用 Initial() 过程.
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ApplicationAtuthBase.ActName">
+            <summary>
+            操作权限名称，不指定表示不检查权限
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ApplicationAtuthBase.NotAuther">
+            <summary>
+            只读属性，返回服务是否取得了权限服务
+            </summary>
+        </member>
+        <member name="T:PengeSoft.FP.FigureItem">
+            <summary>
+            FigureItem 用户指纹数据的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.FigureItem.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.FigureItem.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureItem.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureItem.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.FP.FigureItem.FigureId">
+            <summary>
+            手指标志 
+            0-9 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.FP.FigureItem.Template">
+            <summary>
+            指纹模板 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.FP.UserFigure">
+            <summary>
+            UserFigure 用户指纹数据的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigure.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigure.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigure.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigure.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigure.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigure.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.FP.UserFigure.LoginId">
+            <summary>
+            用户登录名称 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.FP.UserFigure.NickName">
+            <summary>
+            昵称 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.FP.UserFigureList">
+            <summary>
+            UserFigureList 用户指纹数据列表的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigureList.#ctor">
+            <summary>
+            初始化新实例 
+            </summary>
+        </member>
+        <member name="M:PengeSoft.FP.UserFigureList.#ctor(System.Collections.ICollection)">
+            <summary>
+            初始化新实例，该实例包含从指定集合复制的元素并且具有与所复制的元素数相同的初始容量。
+            </summary>
+            <param name="c"></param>
+        </member>
+        <member name="T:PengeSoft.FP.FigureService">
+            <summary>
+            FigureService实现。
+              在用户附件属性中用 "FigurePrints" 属性存储指纹信息，权限 "指纹管理" 授予管理其他人指纹的权限。
+            </summary>
+        </member>
+        <member name="T:PengeSoft.Service.Auther.UserAutherImp">
+            <summary>
+            用户认证服务，实现 IUserAuther .
+            该服务使用 "PsAuther.DefaultRightCheck"， 在为指定 "PsAuther.DefaultRightCheck" 时，服务不检查认证，均返回成功。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.Login(System.String,System.String,System.String)">
+            <summary>
+            用户登录, 带自定义验证信息
+            </summary>
+            <param name="loginId">用户登录</param>
+            <param name="password">口令, 使用Hash值(Hex/base64), 参考 <see cref="M:PengeSoft.Common.SysUtils.GetPasswordHash(System.String)"/> </param>
+            <param name="userDefTag">用户写定义验证标识, 不使用标识时传入空</param>
+            <returns>成功返回用户登录标识(utag不为空), 失败返回 ErrCode和ErrMessage. <see cref="T:PengeSoft.Service.Auther.LoginResult"/></returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.WebLogin(System.String,System.String,System.String)">
+            <summary>
+            用户登录, 带自定义验证信息
+            </summary>
+            <param name="loginId">用户登录</param>
+            <param name="password">口令, 使用Hash值(Hex/base64), 参考 <see cref="M:PengeSoft.Common.SysUtils.GetPasswordHash(System.String)"/> </param>
+            <param name="userDefTag">用户写定义验证标识, 不使用标识时传入空</param>
+            <returns>成功返回用户登录标识(utag不为空), 失败返回 ErrCode和ErrMessage. <see cref="T:PengeSoft.Service.Auther.LoginResult"/></returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.Logout(System.String)">
+            <summary>
+            注销用户登录
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.ChangePass(System.String,System.String,System.String)">
+            <summary>
+            修改口令,需原有口令
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <param name="oldPwd">原口令</param>
+            <param name="newPwd">新口令</param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.CheckRight(System.String,System.String)">
+            <summary>
+            检查用户权限
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <param name="actionName">操作名称</param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.CheckRight(System.String,System.String,System.String@,System.String@)">
+            <summary>
+            检查用户登录状态和指定操作权限(actName)，并返回用户名称和加密Key。
+            </summary>
+            <param name="utag">用户安全标识</param>
+            <param name="actionName">操作权限名称</param>
+            <param name="uName"></param>
+            <param name="uKey"></param>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.ValidUser(System.String,System.String)">
+            <summary>
+            验证用户的有效性
+            </summary>
+            <param name="loginId">用户登录</param>
+            <param name="password">口令, 使用Hash值(Hex/base64), 参考 <see cref="M:PengeSoft.Common.SysUtils.GetPasswordHash(System.String)"/> </param>
+            <returns><see cref="T:PengeSoft.Auther.RightCheck.AutherCheckResult"/>成功返回PengeSoft.Auther.RightCheck.OP_SUCESS,否则返回出错码</returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.GenUserKey(System.String,System.Int32)">
+            <summary>
+            生成一次性登录标识
+            </summary>
+            <param name="utag">用户登录标识，Login 时返回</param>
+            <param name="expire">标识有效时间，单位分钟， 设0时采用缺省值. </param>
+            <returns>成功返回KeySN,KeyId, 否则返回出信息<see cref="T:PengeSoft.Service.Auther.LoginKeyResult"/></returns>
+        </member>
+        <member name="M:PengeSoft.Service.Auther.UserAutherImp.SimpleCheck(System.Int32,System.String)">
+            <summary>
+            根据一次性标识登录, 并取得用户名称。
+            </summary>
+            <param name="keySN">标识序号</param>
+            <param name="keyId">用于验证的标识</param>
+            <returns>操作成功返回指定用户的登录名，否则返回空串。</returns>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.Regist(System.String,System.Int32,System.String)">
+            <summary>
+            注册指纹  返回已注册指纹 
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="figureId">手指标志1-10, 从左到有代表1：左小指；2：左无明指；3：左食指；4：左中指；5：左大拇指；6：右大拇指7：右中指；8：右食指；9：右无名指；10：右小指</param>
+            <param name="template">指纹模板</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.ClearRegist(System.String)">
+            <summary>
+            清除注册   
+            </summary>
+            <param name="utag">用户标记</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.GetRegIds(System.String)">
+            <summary>
+            取注册状态   
+            </summary>
+            <param name="utag">用户标记</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.RegistUser(System.String,System.String,System.Int32,System.String)">
+            <summary>
+            注册用户指纹  返回已注册指纹 
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="loginId">用户登录Id</param>
+            <param name="figureId">手指标志1-10, 从左到有代表1：左小指；2：左无明指；3：左食指；4：左中指；5：左大拇指；6：右大拇指7：右中指；8：右食指；9：右无名指；10：右小指</param>
+            <param name="template">指纹模板</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.ClearUserRegist(System.String,System.String)">
+            <summary>
+            清除用户注册   
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="loginId">用户登录Id</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.GetUserRegIds(System.String,System.String)">
+            <summary>
+            取用户注册状态   
+            </summary>
+            <param name="utag">用户标记</param>
+            <param name="loginId">用户登录Id</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.FpLogin(System.String)">
+            <summary>
+            登录   
+            </summary>
+            <param name="template">指纹模板</param>
+        </member>
+        <member name="M:PengeSoft.FP.FigureService.WebFpLogin(System.String)">
+            <summary>
+            服务端登录   
+            </summary>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.WorkFlowEngineOA">
+            <summary>
+            WorkFlowEngineOA实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetByID(System.String,System.Boolean)">
+            <summary>
+            根据工作Id取工作数据
+            </summary>
+            <param name="workId"></param>
+            <param name="detail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetByName(System.String,System.Boolean)">
+            <summary>
+            根据工作名称取工作数据
+            </summary>
+            <param name="taskName"></param>
+            <param name="detail"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.Start">
+            <summary>
+            启动引擎, 为兼容保留
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.ShutDown">
+            <summary>
+            关闭引擎, 为兼容保留
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.WaitForAll(System.Int32)">
+            <summary>
+            等待所工作处理完成，引擎处于空闲, 为兼容保留。
+            </summary>
+            <param name="MaxWaitTime">等待的毫秒数，(-1)表示无限期等待。</param>
+            <returns>返回false表示超时</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.AddNewWork(PengeSoft.WorkFlow.WorkInstance,System.String,System.String)">
+            <summary>
+            添加新工作   
+            </summary>
+            <param name="template">工作模板</param>
+            <param name="workName">工作名称</param>
+            <param name="owner">创建人</param>
+            <returns>新工作实例Guid</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.AddNewWork(System.String,System.String,System.String)">
+            <summary>
+            从模板文件中添加新工作
+            </summary>
+            <param name="templateFile">模板文件名称</param>
+            <param name="workName">工作名称</param>
+            <param name="owner">创建人</param>
+            <returns>新工作实例Guid</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.RemoveWork(System.String)">
+            <summary>
+            删除工作   
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.StartWork(System.String,PengeSoft.WorkFlow.NamedValue)">
+            <summary>
+            启动工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+            <param name="para">启动参数</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.StartWork(System.String,PengeSoft.WorkFlow.NamedValue,System.String,System.Double)">
+            <summary>
+            启动工作   
+            </summary>
+            <param name="workId">工作实例Guid</param>
+            <param name="para">启动参数</param>
+            <param name="operators">操作者</param>
+            <param name="timeLimite">工期</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.StopWork(System.String)">
+            <summary>
+            中止工作   
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.PauseWork(System.String)">
+            <summary>
+            暂停工作   
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.ContinueWork(System.String)">
+            <summary>
+            继续被暂停工作   
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.TaskFinished(System.String,System.String,System.Int32,System.Object,System.String)">
+            <summary>
+            (兼容接口)任务已完成通知, 任务输出参数或主参数的改变由任务执行程序处理
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="taskState">任务完成状态
+               TaskInstance.State_Done   正常完成
+               TaskInstance.State_Idle   并行任务结束
+            </param>
+            <param name="retValue">任务返回值</param>
+            <param name="runner">执行人</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.TaskFinished(System.String,System.String,System.Object,System.String,System.String,System.Double,System.String,System.String)">
+            <summary>
+            任务已完成通知, 任务输出参数或主参数的改变由任务执行程序处理
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="retValue">任务返回值</param>
+            <param name="runner">执行人</param>
+            <param name="nextOperators">下阶段操作者</param>
+            <param name="nextTimeLimite">下阶段工期</param>
+            <param name="nextTaskName">下阶段任务名称</param>
+            <param name="nextCC">下阶段抄送</param>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.TaskFinished(System.String,System.String,System.String,System.String,System.Double,System.String,System.String)">
+            <summary>
+            任务已完成通知, 任务输出参数或主参数的改变由任务执行程序处理   
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetNextTasks(System.String,System.Int32)">
+            <summary>
+            获取下阶段任务名称表   
+            </summary>
+            <param name="taskId">任务Guid</param>
+            <param name="option">选项 0: 有效后继，1:  全部任务</param>
+            <returns>下阶段任务定义, option = 0 时, 任务(TaskInstance.Memo) 保存转入该任务需要的状态. </returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetTaskInfo(System.String)">
+            <summary>
+            取任务数据   
+            </summary>
+            <param name="taskName">任务标识</param>
+            <returns>运行任务</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetTaskInfo(System.String,System.String,System.String)">
+            <summary>
+            根据工作标识、任务名称、操作人取任务数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="op">操作人</param>
+            <returns>运行任务</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetCurrentTask(System.String)">
+            <summary>
+            取当前任务数据   
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetTaskList(System.String,System.Int32,System.Int32)">
+            <summary>
+            取任务列表   
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetWorkInstance(System.String)">
+            <summary>
+            根据工作标识取工作实例数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <returns>工作实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetWorkInstanceByName(System.String)">
+            <summary>
+            根据工作名称取工作实例数据
+            </summary>
+            <param name="workName">工作名称</param>
+            <returns>工作实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.QueryWorkStatus(System.String)">
+            <summary>
+            返回工作状态
+            </summary>
+            <param name="workId">工作标识</param>
+            <returns>工作状态:
+            WorkStatus_Ready, WorkStatus_Running, WorkStatus_Waitting, WorkStatus_Pause,
+            WorkStatus_Stop, WorkStatus_Error, WorkStatus_Finish 等.
+            </returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetTaskInstance(System.String,System.String)">
+            <summary>
+            根据工作标识和任务名称取任务实例数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <returns>任务实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.GetTaskInstance(System.String,System.String,System.String@,System.String@,System.String@)">
+            <summary>
+            根据工作标识和任务名称取任务实例数据
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <param name="templateId">返回模板标识</param>
+            <param name="workName">返回工作名称</param>
+            <param name="workOwner">返回工作所有者</param>
+            <returns>任务实例</returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.WorkFlowEngineOA.QueryTaskStatus(System.String,System.String)">
+            <summary>
+            返回任务状态
+            </summary>
+            <param name="workId">工作标识</param>
+            <param name="taskName">任务名称</param>
+            <returns>任务状态 Idle, Running, Done 等.</returns>
+        </member>
+        <member name="T:PengeSoft.WorkFlow.RunTaskQuerySvr">
+            <summary>
+            RunTaskQuerySvr 实现。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQuerySvr.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQuerySvr.QueryCount(System.Collections.Hashtable)">
+            <summary>
+            根据数据查询条件取记录总数, 查询条件用 <see cref="T:PengeSoft.WorkFlow.TaskInstanceQueryPara"/>
+            </summary>
+            <param name="queryPara">查询条件对象</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQuerySvr.QueryList(System.Collections.Hashtable,System.Int32,System.Int32)">
+            <summary>
+            根据数据查询条件取记录列表, 查询条件用 <see cref="T:PengeSoft.WorkFlow.TaskInstanceQueryPara"/>
+            </summary>
+            <param name="queryPara">查询条件对象</param>
+            <param name="Start">起始记录号</param>
+            <param name="PageSize">页面长度</param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQuerySvr.GetTaskInfo(System.String)">
+            <summary>
+            取任务数据
+            </summary>
+            <param name="TaskId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQuerySvr.GetTaskList(System.String,System.Int32,System.Int32)">
+            <summary>
+            取任务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQuerySvr.GetTaskListEx(System.String,System.Int32,System.Int32)">
+            <summary>
+            取 Operators 未运行过的任务列表
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:PengeSoft.WorkFlow.RunTaskQuerySvr.GetWorkId(System.Collections.Hashtable)">
+            <summary>
+            取工作标识
+            </summary>
+            <param name="queryPara">查询条件</param>
+            <returns></returns>
+        </member>
+        <member name="T:PengeSoft.EntEx.WorkZoneMsgService">
+            <summary>
+            WorkZone消息服务。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.WorkZoneMsgService.SendMsgToCenter(PengeSoft.WorkZoneData.ProgMessage)">
+            <summary>
+            发送程序消息。
+            </summary>
+            <param name="msg">消息体</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.WorkZoneMsgService.SynSendMsgTo(PengeSoft.WorkZoneData.ProgMessage,System.Int32)">
+            <summary>
+            发送消息并接收返回消息   
+            </summary>
+            <param name="msg">消息体</param>
+            <param name="timeout">超时时间</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.WorkZoneMsgService.MsgProcessed(System.String,PengeSoft.WorkZoneData.ProgMessage)">
+            <summary>
+            同步发送消息Callback   
+            </summary>
+            <param name="msgId">消息Id</param>
+            <param name="msg">返回消息</param>
+        </member>
+        <member name="P:PengeSoft.EntEx.WorkZoneMsgService.Url">
+            <summary>
+            服务的Url, 指向本服务, 用于 SynSendMsgTo 的回调。没定义该地址不能使用 SynSendMsgTo()
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.MsgServiceWorkZone">
+            <summary>
+            消息服务。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.MsgServiceWorkZone.SendSmsMsgToMobs(System.String,System.String)">
+            <summary>
+            发短信到一组手机
+            </summary>
+            <param name="mobs">手机号码，多个手机号码用‘,’分开</param>
+            <param name="msg">手机消息，对不支持长消息的设备，超过70个汉字的消息会被自动分成多条短信</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.MsgServiceWorkZone.SendMailTo(System.String,System.String,System.String,System.String,System.String)">
+            <summary>
+            发邮件
+            </summary>
+            <param name="from">发件人地址</param>
+            <param name="to">收件人地址</param>
+            <param name="cc">抄送地址</param>
+            <param name="subject">主题</param>
+            <param name="msg">信息</param>
+        </member>
+        <member name="T:PengeSoft.EntEx.ShortUrl">
+            <summary>
+            PsShortUrl 的摘要说明。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.ShortUrl.Clear">
+            <summary>
+            清除所有数据。
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.ShortUrl.XMLEncode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点序列化整个数据对象。
+            </summary>
+            <param name="node">用于序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.ShortUrl.XMLDecode(System.Xml.XmlNode)">
+            <summary>
+            用指定节点反序列化整个数据对象。
+            </summary>
+            <param name="node">用于反序列化的 XmlNode 节点。</param>
+        </member>
+        <member name="M:PengeSoft.EntEx.ShortUrl.AssignFrom(PengeSoft.Data.DataPacket)">
+            <summary>
+            复制数据对象
+            </summary>
+            <param name="sou">源对象,需从DataPacket继承</param>
+        </member>
+        <member name="P:PengeSoft.EntEx.ShortUrl.ShortURL">
+            <summary>
+            短网址 
+            </summary>
+        </member>
+        <member name="P:PengeSoft.EntEx.ShortUrl.LongURL">
+            <summary>
+            长网址 
+            </summary>
+        </member>
+        <member name="T:PengeSoft.EntEx.IShortUrlServer">
+            <summary>
+            IShortUrlServerSvr 接口定义。    
+            </summary>
+        </member>
+        <member name="M:PengeSoft.EntEx.IShortUrlServer.GetShortUrl(System.String,System.Int32)">
+            <summary>
+            获取短网址   
+            </summary>
+            <param name="url_long">长网址</param>
+            <param name="timeoutdays">有效天数</param>
+        </member>
+    </members>
+</doc>

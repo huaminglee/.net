@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+
+/* ==========================================================================
+   HTML5显示定义                                                                                 
+   ========================================================================== */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
+audio:not([controls]) { display: none; }
+[hidden] { display: none; }
+* { outline: none;}
+
+/* ==========================================================================
+   基础                                                                             
+   ========================================================================== */
+html { font-size:100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: 'Microsoft YaHei','Glyphicons Halflings'; color: #222; background-color: #f7f9f9; }
+body { margin: 0; font-size: 0.9em; line-height: 1em; font-family:'Microsoft YaHei','Glyphicons Halflings'; }
+
+/* 激活BootStrap提供的Glyphicons Halflings字体图标 */
+@font-face {
+  font-family: 'Glyphicons Halflings';
+  src: url('/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.eot');
+  src: url('/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.eot?#iefix') format('embedded-opentype'),
+		url('/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.woff') format('woff'),
+		url('/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.ttf') format('truetype'),
+		url('/bootstrap/3.2.0/fonts/glyphicons-halflings-regular.svg#glyphicons-halflingsregular') format('svg');
+}
+
+/* ==========================================================================
+   链接                                                                             
+   ========================================================================== */
+a {
+	color: #339fd6;
+	transition: color .5s ease-in-out;
+    text-decoration: none;
+	-moz-transition: color .5s ease-in-out; /* Firefox 4 */
+	-webkit-transition: color .5s ease-in-out; /* Safari and Chrome */
+	-o-transition: color .5s ease-in-out; /* Opera */
+}
+a:hover { text-decoration: none; cursor:pointer;}
+a:focus { }
+
+/* header（头部） */
+header.master { width: 100%; background-image: url(/images/Main_Top.png); background-size:100% 80%;  }
+
+/* section（内容） */
+section.container { width: 100%; padding-top: 10px; background-color: #f7f9f9; }
+section fieldset,legend { line-height: 1.3em;}
+/*表格内的单元格自适应宽度，且自动截取字符过长部分*/
+/*section table { table-layout: fixed;}*/
+/*section table tr td { text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }*/
+
+/* footer（内容） */
+footer.master { }
+
+/* 白色字体 */
+.text-white { color: #fff; font-family: 'Microsoft YaHei','Glyphicons Halflings'; font-size: 1.1em; }
+/* 鼠标手势 */
+.cursor { cursor: pointer; }
+/* 清除浮动 */
+.clear { clear: both; }
+/* 顶部提醒红色图标 */
+#tip_bggl, #tip_xzqlyx, #tip_fxcz { padding: 1px 3px; font-weight: lighter; }
+/* 首页--岗位风险--更多--表格固定平均分配 */
+#dutyRisk table { table-layout: fixed; }
+	#dutyRisk table tr td { overflow: hidden; word-wrap:break-word; }

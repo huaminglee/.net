@@ -1,0 +1,398 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap 
+	namespace="PengeSoft.CMS.BaseDatum" 
+	xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<alias>
+		<typeAlias alias="LayoutInfo" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.LayoutInfo, PengeSoft.CMS.BaseDatum" />
+	</alias>
+
+	<resultMaps>  
+                                  
+		<resultMap id="LayoutInfoResult" class="LayoutInfo">
+			<result property="LID" column="LID" />
+			<result property="LName" column="LName" />
+			<result property="LModelList" column="LModelList" />
+			<result property="LayType" column="LayType" />
+			<result property="TempType" column="TempType" />
+			<result property="Owner" column="Owner" />
+			<result property="BelongPage" column="BelongPage" />
+      <result property="Isusing" column="Isusing" />
+			<result property="Remark" column="Remark" />
+			<result property="ExtendFields1" column="ExtendFields1" />
+			<result property="ExtendFields2" column="ExtendFields2" />
+			<result property="ExtendFields3" column="ExtendFields3" />
+			<result property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+		</resultMap>
+
+	</resultMaps>
+	
+	<parameterMaps>  
+                                  
+		<parameterMap id="LayoutInfoParams" class="LayoutInfo">
+			<parameter property="LName" column="LName" />
+			<parameter property="LModelList" column="LModelList" />
+			<parameter property="LayType" column="LayType" />
+			<parameter property="TempType" column="TempType" />
+			<parameter property="Owner" column="Owner" />
+			<parameter property="BelongPage" column="BelongPage" />
+			<parameter property="Remark" column="Remark" />
+			<parameter property="ExtendFields1" column="ExtendFields1" />
+			<parameter property="ExtendFields2" column="ExtendFields2" />
+			<parameter property="ExtendFields3" column="ExtendFields3" />
+			<parameter property="CreateTime" column="CreateTime" nullValue="01/01/0001 00:00:00"/>
+		</parameterMap>
+    <parameterMap id="LayoutInfoParams2" class="LayoutInfo">
+      <parameter property="LName" column="LName" />
+      <parameter property="LModelList" column="LModelList" />
+      <parameter property="LayType" column="LayType" />
+      <parameter property="TempType" column="TempType" />
+      <parameter property="Owner" column="Owner" />
+      <parameter property="BelongPage" column="BelongPage" />
+      <parameter property="Isusing" column="Isusing" />
+      <parameter property="Remark" column="Remark" />
+      <parameter property="ExtendFields1" column="ExtendFields1" />
+      <parameter property="ExtendFields2" column="ExtendFields2" />
+      <parameter property="ExtendFields3" column="ExtendFields3" />
+      
+    </parameterMap>
+
+		<parameterMap id="UpdateLayoutInfoParams" extends="LayoutInfoParams" class="LayoutInfo">
+			<parameter property="LID" column="LID" />
+		</parameterMap>
+    <parameterMap id="MyUpdateLayoutInfoParams" extends="LayoutInfoParams2" class="LayoutInfo">
+      <parameter property="Owner" column="Owner" />
+      <parameter property="BelongPage" column="BelongPage" />
+    </parameterMap>
+    <parameterMap id="myupoldinfoparams" class="LayoutInfo">
+      <parameter property="Owner" column="Owner" />
+      <parameter property="BelongPage" column="BelongPage" />
+    </parameterMap>
+    
+
+  </parameterMaps>
+	
+	<statements>
+
+		<select id="GetLayoutInfoCount"  resultClass="int">
+		  SELECT count(*)
+		  FROM [LayoutInfo];
+		</select>
+	
+		<select id="GetLayoutInfo"  parameterClass="LayoutInfo" resultMap="LayoutInfoResult">
+			SELECT *
+			FROM [LayoutInfo]			
+			WHERE ([LID] = #LID#) ;
+		</select>
+		
+		<select id="GetLayoutInfoByPara"  parameterClass="Hashtable" resultMap="LayoutInfoResult">
+			SELECT *
+			FROM [LayoutInfo]
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="LName" >
+				  [LName] like #LName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="LayType" >
+				  [LayType] like #LayType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="TempType" >
+				  [TempType] like #TempType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Owner" >
+				  [Owner] like #Owner#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="BelongPage" >
+				  [BelongPage] like #BelongPage#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+			</dynamic>
+
+		</select>
+
+		<select id="GetLayoutInfoList" parameterClass="string" resultMap="LayoutInfoResult" listClass="NorDataList">
+			SELECT *
+			FROM [LayoutInfo]			
+			<dynamic prepend="Order By" >
+			</dynamic>
+		</select>
+		
+		<select id="QueryLayoutInfoCount" parameterClass="Hashtable" resultClass="int">
+			SELECT count(*)
+			FROM [LayoutInfo]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="LName" >
+				  [LName] like #LName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="LayType" >
+				  [LayType] like #LayType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="TempType" >
+				  [TempType] like #TempType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Owner" >
+          ([Owner] like #Owner# or [Owner]='everyone' or [Owner]='')
+        </isNotEmpty>
+				<isNotEmpty prepend="AND" property="BelongPage" >
+				  [BelongPage] like #BelongPage#
+				</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Isusing" >
+          Isusing = #Isusing#
+        </isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<select id="QueryLayoutInfoList" parameterClass="Hashtable" resultMap="LayoutInfoResult" listClass="NorDataList">
+			SELECT *
+			FROM [LayoutInfo]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="LName" >
+				  [LName] like #LName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="LayType" >
+				  [LayType] like #LayType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="TempType" >
+				  [TempType] like #TempType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Owner" >
+          ([Owner] like #Owner# or [Owner]='everyone' or [Owner]='')
+        </isNotEmpty>
+				<isNotEmpty prepend="AND" property="BelongPage" >
+				  [BelongPage] like #BelongPage#
+				</isNotEmpty>
+        <isNotEmpty prepend="AND" property="Isusing" >
+          Isusing = #Isusing#
+        </isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+			</dynamic>
+			<dynamic prepend="Order By" >
+			</dynamic>
+		</select>
+    
+		<insert id="InsertLayoutInfo" parameterMap="LayoutInfoParams2">
+			<generate table="LayoutInfo" />
+			<selectKey resultClass="int" type="post" property="LID" >
+				select @@IDENTITY as value
+			</selectKey>
+		</insert>
+
+		<delete id="DeleteLayoutInfo" parameterClass="LayoutInfo">
+			DELETE FROM [LayoutInfo] WHERE ([LID] = #LID#) ;
+		</delete>
+		
+		<select id="DeleteLayoutInfoByPara" parameterClass="Hashtable">
+			DELETE FROM [LayoutInfo]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="LName" >
+				  [LName] like #LName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="LayType" >
+				  [LayType] like #LayType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="TempType" >
+				  [TempType] like #TempType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Owner" >
+				  [Owner] like #Owner#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="BelongPage" >
+				  [BelongPage] like #BelongPage#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields1" >
+				  [ExtendFields1] like #ExtendFields1#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields2" >
+				  [ExtendFields2] like #ExtendFields2#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="ExtendFields3" >
+				  [ExtendFields3] like #ExtendFields3#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime" >
+				  (Datediff(day,[CreateTime],#CreateTime#) = 0)
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="CreateTime_S" >
+				  <![CDATA[ (Datediff(day, #CreateTime_S#, [CreateTime]) >= 0) and (Datediff(day, #CreateTime_E#, [CreateTime]) <= 0) ]]>
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<update id="UpdateLayoutInfo" parameterMap="UpdateLayoutInfoParams">
+			UPDATE [LayoutInfo] SET
+			[LName] = ?,
+			[LModelList] = ?,
+			[LayType] = ?,
+			[TempType] = ?,
+			[Owner] = ?,
+			[BelongPage] = ?,
+			[Remark] = ?,
+			[ExtendFields1] = ?,
+			[ExtendFields2] = ?,
+			[ExtendFields3] = ?,
+			[CreateTime] = ?
+			WHERE LID = ?;
+		</update>
+    <update id="upoldinfo" parameterMap="myupoldinfoparams">
+      UPDATE [LayoutInfo] SET
+      [Isusing]=0
+      WHERE Owner = ? And BelongPage=?
+    </update>
+    <update id="MyUpdate" parameterMap="MyUpdateLayoutInfoParams">
+      UPDATE [LayoutInfo] SET
+      [LName] = ?,
+      [LModelList] = ?,
+      [LayType] = ?,
+      [TempType] = ?,
+      [Owner] = ?,
+      [BelongPage] = ?,
+      [Isusing]=?,
+      [Remark] = ?,
+      [ExtendFields1] = ?,
+      [ExtendFields2] = ?,
+      [ExtendFields3] = ?
+      WHERE Owner = ? And BelongPage=?
+    </update>
+                <select id="UpdateLayoutInfoByPara" parameterClass="Hashtable">
+			UPDATE [LayoutInfo]			
+			<dynamic prepend="Set" >
+
+                          <isNotEmpty prepend="," property="LName" >
+			      [LName] = #LName#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="LModelList" >
+			      [LModelList] = #LModelList#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="LayType" >
+			      [LayType] = #LayType#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="TempType" >
+			      [TempType] = #TempType#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="Owner" >
+			      [Owner] = #Owner#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="BelongPage" >
+			      [BelongPage] = #BelongPage#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="Remark" >
+			      [Remark] = #Remark#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="ExtendFields1" >
+			      [ExtendFields1] = #ExtendFields1#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="ExtendFields2" >
+			      [ExtendFields2] = #ExtendFields2#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="ExtendFields3" >
+			      [ExtendFields3] = #ExtendFields3#
+			  </isNotEmpty>
+
+                        <isNotEmpty prepend="," property="CreateTime" >
+			      [CreateTime] = #CreateTime#
+			  </isNotEmpty>
+                        </dynamic>
+			<dynamic prepend="Where" >
+			
+                          <isNotEmpty prepend="AND" property="LName_W" >
+			      [LName] = #LName_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="LModelList_W" >
+			      [LModelList] = #LModelList_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="LayType_W" >
+			      [LayType] = #LayType_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="TempType_W" >
+			      [TempType] = #TempType_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Owner_W" >
+			      [Owner] = #Owner_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="BelongPage_W" >
+			      [BelongPage] = #BelongPage_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Remark_W" >
+			      [Remark] = #Remark_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="ExtendFields1_W" >
+			      [ExtendFields1] = #ExtendFields1_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="ExtendFields2_W" >
+			      [ExtendFields2] = #ExtendFields2_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="ExtendFields3_W" >
+			      [ExtendFields3] = #ExtendFields3_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="CreateTime_W" >
+			      [CreateTime] = #CreateTime_W#
+			  </isNotEmpty>
+                        </dynamic>
+		</select>
+
+	
+</statements>
+	
+</sqlMap>

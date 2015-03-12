@@ -1,0 +1,260 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{9FE00521-3A8B-42B1-814E-585E99407B2E}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ApplicationIcon>
+    </ApplicationIcon>
+    <AssemblyKeyContainerName>
+    </AssemblyKeyContainerName>
+    <AssemblyName>PDTech.OA.DAL</AssemblyName>
+    <AssemblyOriginatorKeyFile>
+    </AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>PDTech.OA.DAL</RootNamespace>
+    <RunPostBuildEvent>OnBuildSuccess</RunPostBuildEvent>
+    <StartupObject>
+    </StartupObject>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <IsWebBootstrapper>true</IsWebBootstrapper>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <PublishUrl>http://localhost/Maticsoft.DAL/</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Web</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>bin\Debug\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>true</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>false</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>full</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>bin\Release\</OutputPath>
+    <AllowUnsafeBlocks>false</AllowUnsafeBlocks>
+    <BaseAddress>285212672</BaseAddress>
+    <CheckForOverflowUnderflow>false</CheckForOverflowUnderflow>
+    <ConfigurationOverrideFile>
+    </ConfigurationOverrideFile>
+    <DefineConstants>TRACE</DefineConstants>
+    <DocumentationFile>
+    </DocumentationFile>
+    <DebugSymbols>false</DebugSymbols>
+    <FileAlignment>4096</FileAlignment>
+    <NoStdLib>false</NoStdLib>
+    <NoWarn>
+    </NoWarn>
+    <Optimize>true</Optimize>
+    <RegisterForComInterop>false</RegisterForComInterop>
+    <RemoveIntegerChecks>false</RemoveIntegerChecks>
+    <TreatWarningsAsErrors>false</TreatWarningsAsErrors>
+    <WarningLevel>4</WarningLevel>
+    <DebugType>none</DebugType>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <PlatformTarget>x86</PlatformTarget>
+    <OutputPath>bin\x86\Release\</OutputPath>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Web\bin\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="MySql.Data, Version=5.1.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Lib\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Web.Services">
+      <Name>System.Web.Services</Name>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Name>System.XML</Name>
+    </Reference>
+    <ProjectReference Include="..\Common\Common.csproj">
+      <Project>{E3D8759A-C5EB-402D-9F10-F5C6029A8D1A}</Project>
+      <Name>Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBUtility\DBUtility.csproj">
+      <Project>{0988C62E-247F-471F-A183-DB509C7A3839}</Project>
+      <Name>DBUtility</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Name>Model</Name>
+      <Project>{53995DBB-9836-4647-AD22-865884FDEB9E}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="API_MESSAGES.cs" />
+    <Compile Include="ARCHIVE_PROJECT_MAP.cs" />
+    <Compile Include="ConvertHelper.cs" />
+    <Compile Include="DAL_Enum.cs" />
+    <Compile Include="DAL_Helper.cs" />
+    <Compile Include="DEPARTMENT_DEFAULT_USER.cs" />
+    <Compile Include="DUTY_RESPONSIBILITY.cs" />
+    <Compile Include="DUTY_RISK_INFO.cs" />
+    <Compile Include="FUNDS_INFO.cs" />
+    <Compile Include="MEETING_ROOM_INFO.cs" />
+    <Compile Include="MyString.cs" />
+    <Compile Include="OA_ARCHIVE.cs" />
+    <Compile Include="OA_ARCHIVE_TASK.cs" />
+    <Compile Include="OA_ARCHIVE_TYPE.cs" />
+    <Compile Include="OA_ATTACHMENT_FILE.cs" />
+    <Compile Include="OA_EDAYQUESTION.cs" />
+    <Compile Include="OA_EDUQUESTION.cs" />
+    <Compile Include="OA_EDUTEST.cs" />
+    <Compile Include="OA_FAVORITE.cs" />
+    <Compile Include="OA_MEETING.cs" />
+    <Compile Include="OA_MEETING_RECEIVER.cs" />
+    <Compile Include="OA_MESSAGE.cs" />
+    <Compile Include="OA_MESSAGE_RECEIVER.cs" />
+    <Compile Include="OA_QUESTION_TEST_MAP.cs" />
+    <Compile Include="OA_RISKEDUCATION.cs" />
+    <Compile Include="OA_RISKEDURECEIVER.cs" />
+    <Compile Include="OA_TEST_ANSWER.cs" />
+    <Compile Include="PageDescribe.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="RISK_HANDLE_MAP.cs" />
+    <Compile Include="RISK_POINT_INFO.cs" />
+    <Compile Include="RISK_TYPE_INFO.cs" />
+    <Compile Include="ROLL_NEWS.cs" />
+    <Compile Include="SW_PROJECT_INFO.cs" />
+    <Compile Include="SW_PROJECT_STEP.cs" />
+    <Compile Include="SysManage.cs" />
+    <Compile Include="SYS_BASE_INFO.cs" />
+    <Compile Include="TEMPLATE_INFO.cs" />
+    <Compile Include="TestAnswer.cs" />
+    <Compile Include="TestOnline.cs" />
+    <Compile Include="USERS_DEPT_OWNER_MAP.cs" />
+    <Compile Include="USER_DUTY_RESPONSIBILITY_MAP.cs" />
+    <Compile Include="USER_RISK_MAP.cs" />
+    <Compile Include="USER_ROLE_MAP.cs" />
+    <Compile Include="USER_RIGHT_MAP.cs" />
+    <Compile Include="USER_INFO.cs" />
+    <Compile Include="ROLE_RIGHT_MAP.cs" />
+    <Compile Include="ROLE_INFO.cs" />
+    <Compile Include="RIGHT_INFO.cs" />
+    <Compile Include="OPERATION_LOG.cs" />
+    <Compile Include="DEPARTMENT.cs" />
+    <Compile Include="ATTRIBUTES.cs" />
+    <Compile Include="VIEW_ARCHIVETASK_STEP.cs" />
+    <Compile Include="VIEW_ARCHIVE_FILE_TASK.cs" />
+    <Compile Include="VIEW_ARCHIVE_STEMP.cs" />
+    <Compile Include="VIEW_ARCHIVE_TYPE_STEP.cs" />
+    <Compile Include="VIEW_OUTMESSAGE.cs" />
+    <Compile Include="VIEW_PRINT_STEPDETAIL.cs" />
+    <Compile Include="VIEW_PROJECT_STEP_USER.cs" />
+    <Compile Include="VIEW_PROJECT_USER.cs" />
+    <Compile Include="VIEW_PRO_STEP_TYPE.cs" />
+    <Compile Include="VIEW_RISK_ATT.cs" />
+    <Compile Include="VIEW_RISK_COUNT.cs" />
+    <Compile Include="VIEW_RISK_ORCHIVE_PROJECT.cs" />
+    <Compile Include="VIEW_USER_MSGINFO.cs" />
+    <Compile Include="VIEW_USER_RIGHT.cs" />
+    <Compile Include="VIEW_WORKFLOW_STEP_NEXT_INFO.cs" />
+    <Compile Include="WORKFLOW_STEP.cs" />
+    <Compile Include="WORKFLOW_TEMPLATE.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.2.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 2.0 %28x86%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.0">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.0 %28x86%29</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>

@@ -1,0 +1,308 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/Platform.eWorkFlow.Model" xmlns:ser="http://schemas.microsoft.com/2003/10/Serialization/" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/Platform.eWorkFlow.Model" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://10.162.197.5:7566/WFServer?xsd=xsd3" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://10.162.197.5:7566/WFServer?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+  <xs:complexType name="WorkflowStartParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="InstanceStartType" type="xs:int" />
+      <xs:element minOccurs="0" name="SubmitResult" nillable="true" type="tns:SubmitResult" />
+      <xs:element minOccurs="0" name="businessParameter" nillable="true" type="tns:BusinessParameter" />
+      <xs:element minOccurs="0" name="childWorkflowParameter" nillable="true" type="tns:ChildWorkFlowParameter" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkflowStartParameter" nillable="true" type="tns:WorkflowStartParameter" />
+  <xs:complexType name="SubmitResult">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CurDistributeUser" nillable="true" type="tns:ArrayOfWFUserInfo" />
+      <xs:element minOccurs="0" name="CurRealUrl" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentStateInstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="EmailLogNotes" nillable="true" type="xs:anyType" />
+      <xs:element xmlns:q1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="EmailResourceList" nillable="true" type="q1:ArrayOfKeyValueOfstringstring" />
+      <xs:element minOccurs="0" name="FileList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FromEmailNotes" nillable="true" type="xs:anyType" />
+      <xs:element minOccurs="0" name="InstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="IsAgent" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsEmailLog" type="xs:boolean" />
+      <xs:element minOccurs="0" name="IsMailSupport" type="xs:boolean" />
+      <xs:element minOccurs="0" name="NextStateInfo" nillable="true" type="tns:TemplateStateInfo" />
+      <xs:element minOccurs="0" name="PreviousStateInstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="PreviousStateInstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="Proprity" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="SubmitUserTransact" nillable="true" type="tns:InstanceStateTransactInfo" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateStateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactActionID" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactActionKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactOption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactPKID" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactSubmitResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="instanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="nextStateUserInfo" nillable="true" type="tns:ArrayOfWFUserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SubmitResult" nillable="true" type="tns:SubmitResult" />
+  <xs:complexType name="ArrayOfWFUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WFUserInfo" nillable="true" type="tns:WFUserInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWFUserInfo" nillable="true" type="tns:ArrayOfWFUserInfo" />
+  <xs:complexType name="WFUserInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AuthorizeID" type="xs:int" />
+      <xs:element minOccurs="0" name="AuthorizeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="AuthorizeType" type="tns:Enm_AuthorizeSet_AuthorizeType" />
+      <xs:element minOccurs="0" name="GenerationType" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WFUserInfo" nillable="true" type="tns:WFUserInfo" />
+  <xs:simpleType name="Enm_AuthorizeSet_AuthorizeType">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="SpeciHuman">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">1</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SpeciDept">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">2</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SpeciRole">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">3</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SpeciGroup">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">4</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="DirectLeader">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">5</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SpeciAdmin">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">6</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+      <xs:enumeration value="SpeciStateMan">
+        <xs:annotation>
+          <xs:appinfo>
+            <EnumerationValue xmlns="http://schemas.microsoft.com/2003/10/Serialization/">7</EnumerationValue>
+          </xs:appinfo>
+        </xs:annotation>
+      </xs:enumeration>
+    </xs:restriction>
+  </xs:simpleType>
+  <xs:element name="Enm_AuthorizeSet_AuthorizeType" nillable="true" type="tns:Enm_AuthorizeSet_AuthorizeType" />
+  <xs:complexType name="TemplateStateInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="CountersignatureNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="EditAreaSetList" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsBatchAuditFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="OverTimeAction1" type="xs:int" />
+      <xs:element minOccurs="0" name="OverTimeAction2" type="xs:int" />
+      <xs:element minOccurs="0" name="OverTimeAction3" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordCreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RecordDeleted" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RunTimeActionCategory" type="xs:int" />
+      <xs:element minOccurs="0" name="StateOrder" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateStateDescription" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateStateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateStateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateStateType" type="xs:int" />
+      <xs:element minOccurs="0" name="TimeLimit" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactSubmitExitType" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactSubmitExitValue" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="TemplateStateInfo" nillable="true" type="tns:TemplateStateInfo" />
+  <xs:complexType name="InstanceStateTransactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="AduitPDFFileID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentStateInstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="DigitalSignContent" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordCreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RecordDeleted" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateInstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactPKID" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactRemark" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactUserID" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactUserName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactUserPKID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstanceStateTransactInfo" nillable="true" type="tns:InstanceStateTransactInfo" />
+  <xs:complexType name="BusinessParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceStartMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="businessID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="BusinessParameter" nillable="true" type="tns:BusinessParameter" />
+  <xs:complexType name="ChildWorkFlowParameter">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="IsRegress" type="xs:int" />
+      <xs:element minOccurs="0" name="MasterInstanceID" type="ser:guid" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ChildWorkFlowParameter" nillable="true" type="tns:ChildWorkFlowParameter" />
+  <xs:complexType name="WorkFlowInstanceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="BusinessID" type="ser:guid" />
+      <xs:element minOccurs="0" name="BusinessName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="BussinessURL" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentStateInstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="Extend10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="FinishedTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="InstanceFinishedFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="InstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="InstanceStartMan" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceStartType" type="xs:int" />
+      <xs:element minOccurs="0" name="InstanceStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="IsBatchAuditFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="IsRegressFlag" type="xs:int" />
+      <xs:element minOccurs="0" name="MasterInstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Proprity" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordCreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RecordDeleted" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateOrder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateStatusID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="WorkFlowInstanceInfo" nillable="true" type="tns:WorkFlowInstanceInfo" />
+  <xs:complexType name="ArrayOfWorkFlowInstanceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="WorkFlowInstanceInfo" nillable="true" type="tns:WorkFlowInstanceInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfWorkFlowInstanceInfo" nillable="true" type="tns:ArrayOfWorkFlowInstanceInfo" />
+  <xs:complexType name="ArrayOfInstanceStateNextPersonInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstanceStateNextPersonInfo" nillable="true" type="tns:InstanceStateNextPersonInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstanceStateNextPersonInfo" nillable="true" type="tns:ArrayOfInstanceStateNextPersonInfo" />
+  <xs:complexType name="InstanceStateNextPersonInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Extend1" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend2" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="GenerationType" type="xs:int" />
+      <xs:element minOccurs="0" name="InstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="PKID" type="xs:int" />
+      <xs:element minOccurs="0" name="ParticipantID" type="xs:int" />
+      <xs:element minOccurs="0" name="ParticipantIDName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ParticipantType" type="xs:int" />
+      <xs:element minOccurs="0" name="ParticipantTypeName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="RecordCreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RecordDeleted" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="InstanceStateNextPersonInfo" nillable="true" type="tns:InstanceStateNextPersonInfo" />
+  <xs:complexType name="ArrayOfStateInstanceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="StateInstanceInfo" nillable="true" type="tns:StateInstanceInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfStateInstanceInfo" nillable="true" type="tns:ArrayOfStateInstanceInfo" />
+  <xs:complexType name="StateInstanceInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="ActionKey" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="CurrentStateInstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="Extend10" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend3" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend4" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend5" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend6" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend7" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend8" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Extend9" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="InstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="InstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="PreviousStateInstanceID" type="ser:guid" />
+      <xs:element minOccurs="0" name="RecordCreateTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="RecordDeleted" type="xs:int" />
+      <xs:element minOccurs="0" name="RecordVersion" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateFinishTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StateInstanceKeyID" type="xs:int" />
+      <xs:element minOccurs="0" name="StateInstanceStatus" type="xs:int" />
+      <xs:element minOccurs="0" name="StateName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateOrder" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StateStartTime" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TemplateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TemplateStateID" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactOption" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactSubmitExitType" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactSubmitExitValue" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactSubmitNumber" type="xs:int" />
+      <xs:element minOccurs="0" name="TransactSubmitResult" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="TransactTimelimit" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="StateInstanceInfo" nillable="true" type="tns:StateInstanceInfo" />
+  <xs:complexType name="ArrayOfInstanceStateTransactInfo">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="InstanceStateTransactInfo" nillable="true" type="tns:InstanceStateTransactInfo" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfInstanceStateTransactInfo" nillable="true" type="tns:ArrayOfInstanceStateTransactInfo" />
+</xs:schema>

@@ -1,0 +1,337 @@
+﻿body
+{
+	padding-right: 0px;
+	padding-left: 0px;
+	font-size: 10pt;
+	padding-bottom: 0px;
+	margin: 4px;
+	cursor: default;
+	padding-top: 0px;
+	background-color: #c0def8;
+	background-position-y: top;
+	background-image: url(../Images/win_01.jpg);
+	background-repeat: repeat-x;
+}
+td
+{
+	font-size: 10pt;
+	cursor: default;
+}
+.WinButtonLine
+{
+	height: 35px;
+	text-align: right;
+}
+.WinButton
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/win_04.jpg);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: repeat-x;
+	text-align: center;
+}
+.TextAreaCSS
+{
+	border-right: #ffffff 1px solid;
+	border-top: darkgray 1px solid;
+	border-left: darkgray 1px solid;
+	border-bottom: white 1px solid;
+	height: 20px;
+}
+.TextAreaORCSS
+{
+	border-right: #ffffff 1px solid;
+	border-top: darkgray 1px solid;
+	border-left: darkgray 1px solid;
+	border-bottom: white 1px solid;
+	background-color: gainsboro;
+}
+.TabArea
+{
+	border-right: #7bb1e0 1px solid;
+	border-top: #7bb1e0 0px solid;
+	border-left: #7bb1e0 1px solid;
+	border-bottom: #7bb1e0 1px solid;
+	padding-right: 4px;
+	padding-left: 4px;
+	padding-bottom: 4px;
+	padding-top: 4px;
+	background-color: #e0f2fe;
+}
+.TabItemSelected
+{
+	font-weight: bold;
+	font-size: 10pt;
+	background-image: url(../Images/win_02.gif);
+	width: 86px;
+	cursor: default;
+	height: 23px;
+	text-align: center;
+	padding-top: 5px;
+}
+.TabItem
+{
+	font-size: 10pt;
+	background-image: url(../Images/win_03.gif);
+	width: 86px;
+	cursor: hand;
+	height: 23px;
+	text-align: center;
+	padding-top: 5px;
+}
+.TabNull
+{
+	font-size: 10pt;
+	cursor: default;
+	border-bottom: #7bb1e0 1px solid;
+}
+
+
+.NotifyTitleCSS
+{
+	font-weight: bold;
+	font-size: 14pt;
+	vertical-align: middle;
+	cursor: default;
+	color: #000000;
+	font-family: 隶书;
+	height: 30px;
+	text-align: center;
+	text-decoration: underline;
+}
+.NotifyFieldCSS
+{
+	border-top: #ffffff 1px solid;
+	border-left: #ffffff 1px solid;
+	cursor: default;
+	background-color: #f4f4f4;
+	padding-right: 5px;
+	text-align: right;
+	white-space:nowrap; 
+}
+.NotifyAreaCSS
+{
+	background-color: #ffffff;
+}
+.NotifyTextBoxCSS
+{
+	width: 100%;
+	height: 100%;
+	border-right: #ffffff 1px solid;
+	border-top: #ffffff 1px solid;
+	border-left: #ffffff 1px solid;
+	border-bottom: #ffffff 1px solid;
+}
+.NotifyTextBoxROCSS
+{
+	height: 100%;
+	border-right: #ffffff 1px solid;
+	border-top: #ffffff 1px solid;
+	border-left: #ffffff 1px solid;
+	border-bottom: #ffffff 1px solid;
+	background-color: gainsboro;
+}
+.NotifyTextBoxSelectedCSS
+{
+	height: 100%;
+	border-right: #ffffff 1px solid;
+	border-top: #ffffff 1px solid;
+	border-left: #ffffff 1px solid;
+	border-bottom: #ffffff 1px solid;
+	background-color: paleturquoise;
+}
+.NotifyHead0CSS
+{
+	font-weight: bold;
+	font-size: 10pt;
+	height: 20px;
+}
+.NotifyHead1CSS
+{
+	font-weight: bold;
+	font-size: 10pt;
+	color: #ff0000;
+	height: 20px;
+}
+.BlankTitleCSS
+{font-weight: bold;
+	font-size: 10pt;
+	height: 20px;
+	padding-bottom: 2px;
+	vertical-align: bottom;}
+
+.CensonTitleCSS
+{
+	font-weight: bold;
+	font-size: 10pt;
+	height: 30px;
+	padding-bottom: 3px;
+	vertical-align: bottom;
+}
+.DivBoxCSS
+{
+	border-right: #ffffff 1px solid;
+	border-top: lightgrey 1px solid;
+	z-index: 1;
+	overflow-y: scroll;
+	border-left: lightgrey 1px solid;
+	border-bottom: #ffffff 1px solid;
+	position: absolute;
+	overflow-x: hidden;
+	background-color: #ffffff;
+	width:100%;
+	height:100%;
+}
+.DivBoxCSSOne
+{
+	border-right: #ffffff 1px solid;
+	border-top: lightgrey 1px solid;
+	z-index: 1;
+	border-left: lightgrey 1px solid;
+	border-bottom: #ffffff 1px solid;
+	position: absolute;
+	overflow-x: hidden;
+	background-color: #ffffff;
+	width:100%;
+	height:100%;
+}
+.SCDivBoxCSS
+{
+	border-right: #ffffff 1px solid;
+	border-top: lightgrey 1px solid;
+	z-index: 1;
+	overflow-y: scroll;
+	border-left: lightgrey 1px solid;
+	border-bottom: #ffffff 1px solid;
+	position: absolute;
+	overflow-x: scroll;
+	background-color: #ffffff;
+	width:100%;
+	height:100%;
+}
+.ListCSS
+{
+	border-collapse: collapse;
+}
+.ListHead
+{
+	font-size: 10pt;
+	background-image: url(../Images/listPage_07.jpg);
+	color: black;
+	background-repeat: repeat-x;
+	height: 23px;
+	cursor: default;
+	text-align: left;
+}
+.ListDHBtnCSS
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/win_04.jpg);
+	border-left: #8abeed 1px solid;
+	height: 18px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: repeat-x;
+	text-align: center;
+	color: #023f82;
+	width: 55px;
+}
+.ListDHText
+{
+	color: #023f82;
+	font-size: 10pt;
+	cursor: default;
+	height: 26px;
+	width: 200px;
+}
+.RowCSS
+{
+	cursor: default;
+	color: darkslategray;
+	height:23px;
+}
+.SelectedRowCSS
+{
+	cursor: default;
+	color: darkslategray;
+	background-color: lightcyan;
+	height:23px;
+}
+.ListButtonCSS0
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/win_05.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+.ListButtonCSS1
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/win_06.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+.ListButtonCSS2
+{
+	border-right: #8abeed 1px solid;
+	border-top: #8abeed 1px solid;
+	font-size: 10pt;
+	background-position-y: center;
+	background-image: url(../Images/win_07.gif);
+	border-left: #8abeed 1px solid;
+	height: 20px;
+	border-bottom: #8abeed 1px solid;
+	background-repeat: no-repeat;
+	text-align: left;
+	padding-left: 24px;
+}
+.SelectButtonCSS
+{
+	border-right: gainsboro 1px solid;
+	border-top: gainsboro 1px solid;
+	border-left: gainsboro 1px solid;
+	border-bottom: gainsboro 1px solid;
+	background-color: whitesmoke;
+}
+.LeftLineCSS
+{
+	border-left: #d8d8d8 1px solid;
+	text-align: center;
+}
+.CensorBox
+{
+	border-right: mediumblue 1px solid;
+	border-top: mediumblue 1px solid;
+	border-left: mediumblue 1px solid;
+	border-bottom: mediumblue 1px solid;
+	height: 130px;
+}
+.DisplayBlock
+{
+	display:block;
+}
+.DisplayNone
+{
+	display:none;
+}

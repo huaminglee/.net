@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap 
+	namespace="PengeSoft.CMS.BaseDatum" 
+	xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<alias>
+		<typeAlias alias="QuickUseRecord" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.QuickUseRecord, PengeSoft.CMS.BaseDatum" />
+	</alias>
+
+	<resultMaps>  
+                                  
+		<resultMap id="QuickUseRecordResult" class="QuickUseRecord">
+			<result property="Uid" column="Uid" />
+			<result property="Qid" column="Qid" />
+			<result property="UseTimes" column="UseTimes" />
+			<result property="Qtype" column="Qtype" />
+		</resultMap>
+
+	</resultMaps>
+	
+	<parameterMaps>  
+                                  
+		<parameterMap id="QuickUseRecordParams" class="QuickUseRecord">
+			<parameter property="Uid" column="Uid" />
+			<parameter property="Qid" column="Qid" />
+			<parameter property="UseTimes" column="UseTimes" />
+			<parameter property="Qtype" column="Qtype" />
+		</parameterMap>
+
+	
+	</parameterMaps>
+	
+	<statements>
+
+		<select id="GetQuickUseRecordCount"  resultClass="int">
+		  SELECT count(*)
+		  FROM [QuickUseRecord];
+		</select>
+
+		<select id="GetQuickUseRecordByPara"  parameterClass="Hashtable" resultMap="QuickUseRecordResult">
+			SELECT *
+			FROM [QuickUseRecord]
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid" >
+				  Qid = #Qid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid_IN" >
+				  (Qid in ($Qid_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes" >
+				  UseTimes = #UseTimes#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes_IN" >
+				  (UseTimes in ($UseTimes_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qtype" >
+				  [Qtype] like #Qtype#
+				</isNotEmpty>
+			</dynamic>
+
+		</select>
+
+		<select id="GetQuickUseRecordList" parameterClass="string" resultMap="QuickUseRecordResult" listClass="NorDataList">
+			SELECT *
+			FROM [QuickUseRecord]			
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="UseTimes">
+				  [UseTimes]
+				</isEqual>
+				<isEqual compareValue="UseTimes_D">
+				  [UseTimes] desc
+				</isEqual>
+			</dynamic>
+		</select>
+		
+		<select id="QueryQuickUseRecordCount" parameterClass="Hashtable" resultClass="int">
+			SELECT count(*)
+			FROM [QuickUseRecord]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid" >
+				  Qid = #Qid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid_IN" >
+				  (Qid in ($Qid_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes" >
+				  UseTimes = #UseTimes#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes_IN" >
+				  (UseTimes in ($UseTimes_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qtype" >
+				  [Qtype] like #Qtype#
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<select id="QueryQuickUseRecordList" parameterClass="Hashtable" resultMap="QuickUseRecordResult" listClass="NorDataList">
+			SELECT *
+			FROM [QuickUseRecord]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid" >
+				  Qid = #Qid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid_IN" >
+				  (Qid in ($Qid_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes" >
+				  UseTimes = #UseTimes#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes_IN" >
+				  (UseTimes in ($UseTimes_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qtype" >
+				  [Qtype] like #Qtype#
+				</isNotEmpty>
+			</dynamic>
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="UseTimes" property="_OrderBy">
+				  [UseTimes]
+				</isEqual>
+				<isEqual compareValue="UseTimes_D" property="_OrderBy">
+				  [UseTimes] desc
+				</isEqual>
+			</dynamic>
+		</select>
+    
+		<insert id="InsertQuickUseRecord" parameterMap="QuickUseRecordParams">
+			<generate table="QuickUseRecord" />
+		</insert>
+
+		<delete id="DeleteQuickUseRecord" parameterClass="QuickUseRecord">
+			DELETE FROM [QuickUseRecord] WHERE ;
+		</delete>
+		
+		<select id="DeleteQuickUseRecordByPara" parameterClass="Hashtable">
+			DELETE FROM [QuickUseRecord]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Uid" >
+				  [Uid] like #Uid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid" >
+				  Qid = #Qid#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qid_IN" >
+				  (Qid in ($Qid_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes" >
+				  UseTimes = #UseTimes#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="UseTimes_IN" >
+				  (UseTimes in ($UseTimes_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="Qtype" >
+				  [Qtype] like #Qtype#
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		
+		
+                <select id="UpdateQuickUseRecordByPara" parameterClass="Hashtable">
+			UPDATE [QuickUseRecord]			
+			<dynamic prepend="Set" >
+
+                          <isNotEmpty prepend="," property="Uid" >
+			      [Uid] = #Uid#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="Qid" >
+			      [Qid] = #Qid#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="UseTimes" >
+			      [UseTimes] = #UseTimes#
+			  </isNotEmpty>
+
+                        <isNotEmpty prepend="," property="Qtype" >
+			      [Qtype] = #Qtype#
+			  </isNotEmpty>
+                        </dynamic>
+			<dynamic prepend="Where" >
+			
+                          <isNotEmpty prepend="AND" property="Uid_W" >
+			      [Uid] = #Uid_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Qid_W" >
+			      [Qid] = #Qid_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="UseTimes_W" >
+			      [UseTimes] = #UseTimes_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Qtype_W" >
+			      [Qtype] = #Qtype_W#
+			  </isNotEmpty>
+                        </dynamic>
+		</select>
+
+	</statements>
+	
+</sqlMap>

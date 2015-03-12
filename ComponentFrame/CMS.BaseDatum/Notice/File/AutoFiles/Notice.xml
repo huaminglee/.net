@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap 
+	namespace="PengeSoft.CMS.BaseDatum" 
+	xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<alias>
+		<typeAlias alias="Notice" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.Notice, PengeSoft.CMS.BaseDatum" />
+	</alias>
+
+	<resultMaps>  
+                                  
+		<resultMap id="NoticeResult" class="Notice">
+			<result property="Guid" column="Guid" />
+			<result property="Title" column="Title" />
+			<result property="Content" column="Content" />
+			<result property="Author" column="Author" />
+			<result property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+		</resultMap>
+
+	</resultMaps>
+	
+	<parameterMaps>  
+                                  
+		<parameterMap id="NoticeParams" class="Notice">
+			<parameter property="Title" column="Title" />
+			<parameter property="Content" column="Content" />
+			<parameter property="Author" column="Author" />
+			<parameter property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+		</parameterMap>
+
+		<parameterMap id="UpdateNoticeParams" extends="NoticeParams" class="Notice">
+			<parameter property="Guid" column="Guid" />
+		</parameterMap>
+
+	</parameterMaps>
+	
+	<statements>
+
+		<select id="GetNoticeCount"  resultClass="int">
+		  SELECT count(*)
+		  FROM [SysNotice];
+		</select>
+	
+		<select id="GetNotice"  parameterClass="Notice" resultMap="NoticeResult">
+			SELECT *
+			FROM [SysNotice]			
+			WHERE ([Guid] = #Guid#) ;
+		</select>
+		
+		<select id="GetNoticeByPara"  parameterClass="Hashtable" resultMap="NoticeResult">
+			SELECT *
+			FROM [SysNotice]
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Title" >
+				  [Title] like #Title#
+				</isNotEmpty>
+			</dynamic>
+
+		</select>
+
+		<select id="GetNoticeList" parameterClass="string" resultMap="NoticeResult" listClass="NorDataList">
+			SELECT *
+			FROM [SysNotice]			
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="CreateDate">
+				  [CreateDate]
+				</isEqual>
+				<isEqual compareValue="CreateDate_D">
+				  [CreateDate] desc
+				</isEqual>
+			</dynamic>
+		</select>
+    
+    <select id="QueryNoticeCountByTitle" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM [SysNotice]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="Title" >
+          [Title] = #Title#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+    
+		<select id="QueryNoticeCount" parameterClass="Hashtable" resultClass="int">
+			SELECT count(*)
+			FROM [SysNotice]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Title" >
+				  [Title] like #Title#
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<select id="QueryNoticeList" parameterClass="Hashtable" resultMap="NoticeResult" listClass="NorDataList">
+			SELECT *
+			FROM [SysNotice]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Title" >
+				  [Title] like #Title#
+				</isNotEmpty>
+			</dynamic>
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="CreateDate" property="_OrderBy">
+				  [CreateDate]
+				</isEqual>
+				<isEqual compareValue="CreateDate_D" property="_OrderBy">
+				  [CreateDate] desc
+				</isEqual>
+			</dynamic>
+		</select>
+    
+		<insert id="InsertNotice" parameterMap="NoticeParams">
+			<generate table="SysNotice" />
+			<selectKey resultClass="int" type="post" property="Guid" >
+				select @@IDENTITY as value
+			</selectKey>
+		</insert>
+
+		<delete id="DeleteNotice" parameterClass="Notice">
+			DELETE FROM [SysNotice] WHERE ([Guid] = #Guid#) ;
+		</delete>
+		
+		<select id="DeleteNoticeByPara" parameterClass="Hashtable">
+			DELETE FROM [SysNotice]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="Title" >
+				  [Title] like #Title#
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<update id="UpdateNotice" parameterMap="UpdateNoticeParams">
+			UPDATE [SysNotice] SET
+			[Title] = ?,
+			[Content] = ?,
+			[Author] = ?,
+			[CreateDate] = ?
+			WHERE Guid = ?;
+		</update>
+		
+                <select id="UpdateNoticeByPara" parameterClass="Hashtable">
+			UPDATE [SysNotice]			
+			<dynamic prepend="Set" >
+
+                          <isNotEmpty prepend="," property="Title" >
+			      [Title] = #Title#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="Content" >
+			      [Content] = #Content#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="Author" >
+			      [Author] = #Author#
+			  </isNotEmpty>
+
+                        <isNotEmpty prepend="," property="CreateDate" >
+			      [CreateDate] = #CreateDate#
+			  </isNotEmpty>
+                        </dynamic>
+			<dynamic prepend="Where" >
+			
+                          <isNotEmpty prepend="AND" property="Title_W" >
+			      [Title] = #Title_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Content_W" >
+			      [Content] = #Content_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="Author_W" >
+			      [Author] = #Author_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="CreateDate_W" >
+			      [CreateDate] = #CreateDate_W#
+			  </isNotEmpty>
+                        </dynamic>
+		</select>
+
+	</statements>
+	
+</sqlMap>

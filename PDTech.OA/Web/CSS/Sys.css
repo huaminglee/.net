@@ -1,0 +1,628 @@
+﻿@charset "utf-8";
+.left{
+float:left;
+}
+.right{
+float:right;
+}
+.InfoMaintain
+{
+min-width:1430px;
+width:100%;
+}
+.HomePage_Tips {
+	min-width:1337px;
+	width:100%;
+	height:35px;
+	line-height:35px;
+	background-color:#f4fbff;
+	border-bottom:1px #dae0e4 solid;
+	padding-left:93px;
+	font-size:12px;
+	color:#999999;
+}
+.MainContent
+{
+width:100%;
+background-color:#f7f9f9;
+}
+.BasicManageList
+{
+width:160px;
+height:606px;
+background-color:#e9eff2;
+border-right:1px #dae0e4 solid;
+padding-top:22px;
+}
+li{
+padding-left:12px;
+padding-top:6px;
+font-size:12px;
+}
+.BasicManege_Center
+{
+width:100%;
+margin:0 auto;
+/*background-color:black;*/
+/*height:742px;*/
+/*background-color:#f7f9f9;*/
+}
+.Delimiter {
+	min-width:1177px;
+	width:100%;
+	background-image:url(../images/Delimiter.gif);
+}
+.Delimiter15 {
+	height:15px;
+}
+.Main_tips {
+	width:1144px;
+	height:61px;
+	padding-left:35px;
+}
+.Tips_left {
+	width:7px;
+	height:46px;
+	background-image:url(../images/Doc_tips_left.png);
+	background-repeat:no-repeat;
+}
+.tips_center {
+	width:1124px;
+	height:43px;
+	line-height:43px;
+	background-color:#086fb4;
+	border-bottom:1px solid #0e649c;
+	border-top:1px solid #0e649c;
+	margin-top:1px;
+}
+.Tips_right {
+	width:7px;
+	height:46px;
+	background-image:url(../images/Doc_tips_right.png);
+	background-repeat:no-repeat;
+}
+.Speaker {
+	text-align:center;
+	width:120px;
+	height:46px;
+	line-height:46px;
+	font-size:14px;
+	color:#FFFFFF;
+}
+.Vertical {
+	width:3px;
+	height:43px;
+	background-image:url(../images/Vertical.png);
+	background-repeat:no-repeat;
+	margin-top:0px;
+}
+.ScrollTips {
+	width:856px;
+	height:46px;
+	line-height:46px;
+	font-size:12px;
+	color:#FFFFFF;
+	text-align:right;
+	position:relative;
+	white-space:nowrap;
+	overflow:hidden;
+}
+.noticeList {
+	position:absolute;
+}
+.Manage_Center_title
+{
+height:45px;
+line-height:45px;
+font-size:1.1em;
+padding-left:38px;
+color:#1d1e1e;
+}
+.Manage_MainList
+{
+/*width:1229px;
+height:570px;
+padding-left:36px;*/
+}
+.Manage_MainList_top
+{
+width:1229px;
+height:10px;
+}
+.Manage_MainListNew_top
+{
+width:1227px;
+height:10px;
+}
+.Fillet_lt_m
+{
+width:10px;
+height:10px;
+background-image:url(../images/Fillet_lt_m.jpg);
+background-repeat:no-repeat;
+}
+.MainList_top_c
+{
+width:1109px;
+height:9px;
+border-top:1px solid #d2d8dc;
+}
+.MainListNew_top_c
+{
+width:1209px;
+height:9px;
+border-top:1px solid #d2d8dc;
+}
+.Fillet_rt_m
+{
+width:10px;
+height:10px;
+background-image:url(../images/Fillet_rt_m.jpg);
+background-repeat:no-repeat;
+}
+.Manage_MainList_down
+{
+width:1229px;
+height:10px;
+}
+.Fillet_ld_m
+{
+width:10px;
+height:10px;
+background-image:url(../images/Fillet_ld_m.png);
+background-repeat:no-repeat;
+}
+.MainList_down_c
+{
+width:1109px;
+height:9px;
+border-bottom:1px solid #d2d8dc;
+}
+.MainListNew_down_c
+{
+width:1209px;
+height:9px;
+border-bottom:1px solid #d2d8dc;
+}
+.PagerArea
+{
+width:1209px;
+height:9px;
+border-bottom:1px solid #d2d8dc;
+}
+.Fillet_rd_m
+{
+width:10px;
+height:10px;
+background-image:url(../images/Fillet_rd_m.jpg);
+background-repeat:no-repeat;
+}
+.MainList_Query
+{
+width:1127px;
+height:36px;
+line-height:36px;
+border-left:1px solid #d2d8dc;
+border-right:1px solid #d2d8dc;
+}
+.MainListNew_Query
+{
+width:1227px;
+height:30px;
+line-height:30px;
+border-left:1px solid #d2d8dc;
+border-right:1px solid #d2d8dc;
+border-bottom:1px solid #d2d8dc;
+}
+.td_t {
+	padding-left:15px;
+	font-size:14px;
+	text-align:right;
+	line-height:35px;
+	color:#333333;
+}
+.td_sel {
+	padding-left:3px;
+	font-size:12px;
+	text-align:left;
+	line-height:35px;
+}
+.tdl {
+	width:130px;
+	height:22px;
+	line-height:22px;
+	text-align:left;
+	font-size:14px;
+}
+.input {
+	border:1px solid;
+	border-color: #999999 #e1e1e1 #e1e1e1 #999999;
+	padding:2px 3px;
+	background:#fff;
+	font-size:1em;
+	color:#000;
+}
+.input:focus {
+	border:1px solid;
+	border-color:#555 #aaa #aaa #555;
+	background:#fffbde;
+}
+.inputb {
+	width:125px;
+}
+.inpute {
+	width:280px;
+}
+.inputf {
+	width:795px;
+}
+.searchBtn {
+	width:68px;
+	height:27px;
+	background-image:url(../images/Pop-submit.png);
+	background-repeat:no-repeat;
+	border:none;
+	padding-left:15px;
+	font-size:14px;
+	line-height:26px;
+	cursor:pointer;
+	text-align:center;
+	letter-spacing:10px;
+}
+.searchBtn:focus{
+    outline:none;
+}
+.pageBtn {
+	width:68px;
+	height:27px;
+	background-image:url(../images/Pop-submit.png);
+	background-repeat:no-repeat;
+	border:none;
+	padding-left:10px;
+	font-size:14px;
+	line-height:26px;
+	cursor:pointer;
+	text-align:center;
+	letter-spacing:5px;
+}
+.pageBtn:focus{
+    outline:none;
+}
+.rollBtn {
+	width:68px;
+	height:27px;
+	background-image:url(../images/Pop-submit.png);
+	background-repeat:no-repeat;
+	border:none;
+	padding-left:4px;
+	font-size:14px;
+	line-height:26px;
+	cursor:pointer;
+	text-align:center;
+	letter-spacing:2px;
+}
+.rollBtn:focus{
+    outline:none;
+}
+.MainList_box {
+	width:1127px;
+	height:460px;
+	border-right:1px solid #d2d8dc;
+	border-left:1px solid #d2d8dc;
+}
+.MainListNew_box {
+	width:1227px;
+	height:490px;
+	border-right:1px solid #d2d8dc;
+	border-left:1px solid #d2d8dc;
+}
+.MainListNew2_box {
+	width:1227px;
+	height:450px;
+	border-right:1px solid #d2d8dc;
+	border-left:1px solid #d2d8dc;
+}
+.PagerArea {
+	width:1227px;
+	height:45px;
+	border-top:1px #d2d8dc solid;
+	border-right:1px solid #d2d8dc;
+	border-left:1px solid #d2d8dc;
+}
+.PagerAreaNew2 {
+	width:1227px;
+	height:50px;
+	border-top:1px #d2d8dc solid;
+	border-right:1px solid #d2d8dc;
+	border-left:1px solid #d2d8dc;
+}
+.main_tabList {
+	width:1127px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: none;
+}
+
+.tBody {
+	width:999px;
+	height:35px;
+	background-color:#f2f4f5;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+}
+.main_tabList th {
+	height:35px;
+	line-height:35px;
+	white-space: nowrap;
+	overflow: visible;
+	background-color:#e9eff2;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	font-size:14px;
+	padding-left:16px;
+	text-align:left;
+}
+.main_tabList td {
+	border-bottom:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height:26px;
+	overflow:hidden;
+	text-align:left;
+	padding-left:16px;
+	white-space:nowrap;
+}
+	.main_tabList td img
+	{
+		margin-top:6px;
+	}
+
+    .main_newtabList {
+	width:1227px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: none;
+}
+.main_newtabList th {
+	height:35px;
+	line-height:35px;
+	white-space: nowrap;
+	overflow: visible;
+	background-color:#e9eff2;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	font-size:14px;
+	padding-left:16px;
+	text-align:left;
+}
+.main_newtabList td {
+	/*border-bottom:1px #d2d8dc dashed;*/
+	/*border-right: 1px #d2d8dc dashed;*/
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height:26px;
+	overflow:hidden;
+	text-align:left;
+	padding-left:16px;
+	white-space:nowrap;
+}
+	.main_newtabList td img
+	{
+		margin-top:6px;
+	}
+
+.td_title {
+	width:188px;
+}
+.PagerAreaNew {
+	width:1227px;
+	height:30px;
+	border-top:1px #d2d8dc solid;
+	border-right:1px solid #d2d8dc;
+	border-left:1px solid #d2d8dc;
+}
+.minus{
+width:100%;
+height:22px;
+background-color:#dae0e4;
+font-weight:normal;
+}
+dl{
+margin-top:-12px;
+}
+dt{
+height:22px;
+line-height:22px;
+overflow:hidden;
+padding-left:20px;
+font-weight:bold;
+}
+dd{
+margin-top:-16px;
+}
+.Menu_t{
+text-decoration:none;
+cursor:pointer;
+color:#000000;
+font-size:14px;
+letter-spacing:1px;
+
+}
+Menu_t:hover{
+color:#FF9933;
+}
+ul li
+{
+list-style-type:none;
+margin-left:-50px;
+text-decoration:none;
+}
+a
+{
+	text-decoration:none;
+	cursor:pointer;
+}
+.selected
+{
+	color:red;
+}
+.main_tabLists {
+	width:1127px;
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: none;
+}
+.tBody {
+	width:999px;
+	height:35px;
+	background-color:#f2f4f5;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+}
+.main_tabLists th {
+	height:35px;
+	line-height:35px;
+	white-space: nowrap;
+	overflow: visible;
+	background-color:#e9eff2;
+	border-bottom:1px #d2d8dc solid;
+	border-top:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	font-size:14px;
+	padding-left:16px;
+	text-align:left;
+}
+.main_tabLists td {
+	border-bottom:1px #d2d8dc solid;
+	border-right: 1px #d2d8dc dashed;
+	white-space: normal;
+	word-break: break-all;
+	border-top: none;
+	height: 26px;
+	line-height:26px;
+	overflow:hidden;
+	text-align:left;
+	padding-left:16px;
+	white-space:nowrap;
+	width:120px;
+}
+
+.notice_emal
+{
+	width: 16px;
+	height: 10px;
+	overflow: hidden;
+	background: url(../images/topsem_tag.png) no-repeat -82px -234px;
+	margin: 0 auto;
+}
+
+.notice_emal_unread
+{
+	background-position: -82px -246px;
+}
+.notice_unread td
+{
+	font-weight: bold;
+}
+    .btnIsRead
+    {
+        width: 120px;
+        height: 27px;
+        background-color: #f7ae1e;
+        border-radius: 3px;
+        padding-left: 10px;
+        font-size: 14px;
+        line-height: 26px;
+        cursor: pointer;
+        text-align: center;
+        letter-spacing: 3px;
+        border:none;
+    }
+.MainList_Query_s
+{
+width:1127px;
+height:72px;
+border-left:1px solid #d2d8dc;
+border-right:1px solid #d2d8dc;
+}
+.MainList_box_s {
+	width:1127px;
+	height:404px;
+	border-right:1px solid #d2d8dc;
+	border-left:1px solid #d2d8dc;
+}
+
+.main_List
+{
+	font: 12px "微软雅黑";
+	border-collapse: collapse;
+	border-top: none;
+}
+
+	.main_List td
+	{
+		white-space: normal;
+		word-break: break-all;
+		border-top: none;
+		height: 28px;
+		line-height: 28px;
+		text-align: left;
+		padding-left: 2px;
+		white-space: nowrap;
+	}
+
+.inpute {
+	border:1px solid;
+	border-color: #999999 #e1e1e1 #e1e1e1 #999999;
+	padding:1px 1px;
+	background:#fff;
+	font-size:1em;
+	color:#000;
+}
+.inpute:focus {
+	border:1px solid;
+	border-color:#555 #aaa #aaa #555;
+	background:#fffbde;
+}
+.input152px
+{
+	width:152px;
+	font-size:12px;
+	height:22px;
+}
+.ddlinput
+{
+	padding: 2px 3px;
+	background: #fff;
+	font-size: 1em;
+	color: #000;
+	height:26px;
+}
+.inputz {
+	border:1px solid;
+	border-color: #999999 #e1e1e1 #e1e1e1 #999999;
+	background:#fff;
+	font-size:1em;
+	color:#000;
+	height:22px;
+}
+.inputz:focus {
+	border:1px solid;
+	border-color:#555 #aaa #aaa #555;
+	background:#fffbde;
+}
+.input130
+{
+	width:130px;
+}
+.input128
+{
+	width:128px;
+}

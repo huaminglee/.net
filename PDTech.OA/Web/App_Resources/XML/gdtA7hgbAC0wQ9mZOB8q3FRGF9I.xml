@@ -1,0 +1,336 @@
+<?xml version="1.0"?>
+<TestOnline xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <TestName>asdasd</TestName>
+  <TestCount>30</TestCount>
+  <TestScore>30</TestScore>
+  <QuestionCollection>
+    <Question>
+      <QuestionID>3ebb7a89-4072-4863-8287-2df0fbcc8b9e</QuestionID>
+      <Title>单位之间个人之间单位与个人之间发生的水事纠纷，应当协商解决；当事人不愿协商或者协商不成的，可以申请县级以上地方人民政府或者(  )调解，也可以直接向人民法院提起民事诉讼。</Title>
+      <OptionA>有关部门    </OptionA>
+      <OptionB>其授权的部门    </OptionB>
+      <OptionC>水行政主管部门 </OptionC>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9d22a556-5752-437d-937a-844fb327475e</QuestionID>
+      <Title>邓小平理论阐明了（  ）的基本问题。</Title>
+      <OptionA>共同富裕</OptionA>
+      <OptionB>解放和发展社会生产力</OptionB>
+      <OptionC>在中国建设社会主义、巩固和发展社会主义</OptionC>
+      <OptionD>社会主义初级阶段理论</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9cf2452e-1005-463b-b057-aca02fd6c293</QuestionID>
+      <Title>习近平同志在十八届中央纪委第二次全会上的讲话中指出，要善于用法治思维和法治方式反对腐败，加强反腐败国家立法，加强反腐倡廉党内（  ）建设，让法律制度刚性运行。</Title>
+      <OptionA>干部作风</OptionA>
+      <OptionB>法规制度</OptionB>
+      <OptionC>评估机制</OptionC>
+      <OptionD>惩处制度</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9d4f85af-a1ab-4225-9279-06863b1492a9</QuestionID>
+      <Title>党的十八大报告指出，推进（  ）战略性调整，是加快转变经济发展方式的主攻方向。</Title>
+      <OptionA>经济结构</OptionA>
+      <OptionB>产业布局</OptionB>
+      <OptionC>经济体制</OptionC>
+      <OptionD>文化体制</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9c820dac-380f-44a4-ace5-b9bdb7348972</QuestionID>
+      <Title>《党章》规定，对党员的纪律处分，必须经过支部大会讨论决定，报（  ）批准。</Title>
+      <OptionA>党的基层委员会</OptionA>
+      <OptionB>总支部委员会</OptionB>
+      <OptionC>支部委员会</OptionC>
+      <OptionD>纪律检查委员会</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9d671ad0-4fc3-42d4-9c34-ec61d9a881d0</QuestionID>
+      <Title>中央纪委向党的十八大工作报告中指出，必须着眼于保持党的先进性和纯洁性，加强对各级党组织和广大党员干部特别是领导干部的（  ）、管理和监督，始终保持惩治腐败高压态势，坚持党纪国法面前人人平等，不管涉及什么人，不论权力大小、职位高低，只要触犯党纪国法，都要依纪依法严肃惩处。</Title>
+      <OptionA>引导</OptionA>
+      <OptionB>指导</OptionB>
+      <OptionC>约束</OptionC>
+      <OptionD>教育</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9c522b7d-e603-48dd-9add-5d4dd960eb68</QuestionID>
+      <Title>公务员的职务应当对应相应的级别。公务员职务与级别的对应关系，由（  ）规定。</Title>
+      <OptionA>全国人大</OptionA>
+      <OptionB>国务院</OptionB>
+      <OptionC>省级政府</OptionC>
+      <OptionD>地方人大</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9baf8300-3572-4574-99e2-20507b1f15a7</QuestionID>
+      <Title>《关于实行党风廉政建设责任制的规定》中明确，下列哪个机关（部门）是实施党风廉政建设责任制责任追究的主体？（  ）</Title>
+      <OptionA>纪检监察机关和组织人事部门</OptionA>
+      <OptionB>党委组织部和党委宣传部</OptionB>
+      <OptionC>人民检察院和人民法院</OptionC>
+      <OptionD>公安机关和国家安全机关</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9dab27bd-84cc-46d4-b46d-019fc9d243e0</QuestionID>
+      <Title>党的团结的组织基础是（ ）。</Title>
+      <OptionA>马克思主义    </OptionA>
+      <OptionB>民主集中制   </OptionB>
+      <OptionC>党的纲领路线</OptionC>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9a931e53-8fb0-4a13-a6db-5efd318bf37a</QuestionID>
+      <Title>中国共产党历史上第一个关于党中央组织结构和工作制度的法规性文件是？（  ）</Title>
+      <OptionA>《中国共产党中央和地方执行委员会组织法》</OptionA>
+      <OptionB>《中国共产党中央执行委员会组织法》</OptionB>
+      <OptionC>《中国共产党第一次修正章程》</OptionC>
+      <OptionD>《工农检察部组织条例》</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9dd64e35-919a-48b2-959d-0a56f5afd7bb</QuestionID>
+      <Title>县级以上人民政府应当加强水文、水资源（ ）建设。</Title>
+      <OptionA>信息化</OptionA>
+      <OptionB>信息平台 </OptionB>
+      <OptionC>信息系统 </OptionC>
+      <OptionD>网络</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9a09f040-acd1-4912-bf10-516046841039</QuestionID>
+      <Title>《关于实行党风廉政建设责任制的规定》中明确，下列哪个机关（部门）承担对下级党委（党组）、政府实施责任追究情况的监督检查职责？（  ）</Title>
+      <OptionA>上级党委</OptionA>
+      <OptionB>上级组织人事部门</OptionB>
+      <OptionC>上级纪检监察机关</OptionC>
+      <OptionD>上级人民政府</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9e427fcd-b695-49ce-b380-60ec643b999f</QuestionID>
+      <Title>国家保护水资源，采取有效措施，保护植被，植树种草，涵养水源，防治 （ ）和水体污染，改善生态环境。</Title>
+      <OptionA>大气污染   </OptionA>
+      <OptionB>水土流失</OptionB>
+      <OptionC>水土破坏   </OptionC>
+      <OptionD>环境破坏</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>99d58b75-c1c8-4a9f-8368-9d70a399fe04</QuestionID>
+      <Title>党组织对于不负责地揭发、检举、控告以及提出处分和罢免、撤换要求的，给予（  ）。</Title>
+      <OptionA>行政处罚</OptionA>
+      <OptionB>处分</OptionB>
+      <OptionC>批评教育</OptionC>
+      <OptionD>组织处理</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9984233b-8f0f-45cb-872c-997507cee525</QuestionID>
+      <Title>国有企业领导人员不得利用职权为（  ）从事营利性经营活动提供各种便利条件。</Title>
+      <OptionA>配偶、子女和其他亲属</OptionA>
+      <OptionB>配偶、子女和其他工作人员</OptionB>
+      <OptionC>配偶、子女及其他特定关系人</OptionC>
+      <OptionD>配偶、子女</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9e978887-df63-4021-b16f-9570c110a1c7</QuestionID>
+      <Title>禁止围湖造地。已经围垦的，应当按照国家规定的防洪标准有计划地（  ）。</Title>
+      <OptionA>退垦还湖   </OptionA>
+      <OptionB>恢复原貌   </OptionB>
+      <OptionC>退地还湖   </OptionC>
+      <OptionD>退围还湖</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>996a33be-36fe-4d4e-9c8a-0bdbf9beca57</QuestionID>
+      <Title>党的中央和省、自治区、直辖市委员会实行巡视制度，建立专门巡视机构对（  ）进行巡视监督。</Title>
+      <OptionA>下级党组织领导班子及其成员</OptionA>
+      <OptionB>各级领导干部</OptionB>
+      <OptionC>下级党委、政府</OptionC>
+      <OptionD>同级党组织领导班子及其成员</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9e9acb21-9bbb-4713-8e6f-85651cb76826</QuestionID>
+      <Title>党的全国代表大会的职权是：（一）听取和审查中央委员会的报告；（二）听取和审查中央纪律检查委员会的报告；（三）（ ）；（四）修改党的章程；（五）选举中央委员会；（六）选举中央纪律检查委员会。</Title>
+      <OptionA>选举中央政治局常委         </OptionA>
+      <OptionB>选举中央政治局  </OptionB>
+      <OptionC>讨论并决定党的重大问题</OptionC>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9964c25b-baca-4fbc-94fb-c774932f0b11</QuestionID>
+      <Title>公务员在不同职位之间转任应当具备拟任职位所要求的资格条件，在规定的（  ）内进行。</Title>
+      <OptionA>职位</OptionA>
+      <OptionB>人数范围</OptionB>
+      <OptionC>编制限额和职数</OptionC>
+      <OptionD>编制</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9950fb59-b19b-4ba8-81ea-c4b51a95f7e1</QuestionID>
+      <Title>公务员法对领导成员职务的任免实行的是（  ）。</Title>
+      <OptionA>委任制</OptionA>
+      <OptionB>选任制</OptionB>
+      <OptionC>聘任制</OptionC>
+      <OptionD>任期制</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9ed517b3-2f98-42ca-b2e6-bf0ab5abc2ab</QuestionID>
+      <Title>坚决惩治腐败是我们党（  ）的重要体现。</Title>
+      <OptionA>执政能力</OptionA>
+      <OptionB>执政水平</OptionB>
+      <OptionC>执政地位</OptionC>
+      <OptionD>执政基础</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9949b761-f982-4a83-96df-755cf1b75e59</QuestionID>
+      <Title>下列选项不属于《十八届中央政治局关于改进工作作风、密切联系群众的八项规定》中精简文件简报方面规定内容的是？（  ）</Title>
+      <OptionA>切实改进文风</OptionA>
+      <OptionB>没有实质内容、可发可不发的文件简报，一律不发</OptionB>
+      <OptionC>要精简文件简报</OptionC>
+      <OptionD>文件简报的内容要措辞合理、言简意赅</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9efa6f71-9a07-493a-8486-ccb6a145cb35</QuestionID>
+      <Title>《中共中央纪委关于严格禁止利用职务上的便利谋取不正当利益的若干规定》中规定：收受请托人财物后及时退还或者上交的，（  ）。</Title>
+      <OptionA>不算违纪</OptionA>
+      <OptionB>可定性为违纪行为</OptionB>
+      <OptionC>可从轻问责</OptionC>
+      <OptionD>不是违纪</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>99307d62-72b0-4b4b-94ba-d7c3f47d6844</QuestionID>
+      <Title>在江河、湖泊新建、改建或者扩大排污口，应当经过有管辖权的（ ）部门或者流域管理机构同意，由环境保护行政主管部门负责对该建设项目的环境 影响报告书进行审批。</Title>
+      <OptionA>行政主管  </OptionA>
+      <OptionB>水行政主管</OptionB>
+      <OptionC>有关主管  </OptionC>
+      <OptionD>发展与改革</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9812f409-5e16-4ac3-b189-be7d2ab969a5</QuestionID>
+      <Title>王某为某出版社（全额拨款事业单位）社长，2005年底，王某经与出版社其他负责人商议，决定采用虚列成本的方法，将虚增的费用以奖金名义发放给该社职工。后由财务人员做出财务凭证，经王某审批后，按照一定比例以奖金名义发放给全体职工，共计12万元。请问对王某的行为该如何认定？（  ）</Title>
+      <OptionA>该单位效益好，给职工发放奖金是可以的，只是采用虚列成本的方法不正确，违反了财经纪律</OptionA>
+      <OptionB>该单位的行为构成了集体私分国有资产错误，王某作为社长，应付主要领导责任</OptionB>
+      <OptionC>该单位犯了乱发奖金、津贴错误</OptionC>
+      <OptionD>王某未经主管部门同意，擅自决定采用虚列成本的方法，给全体职工发奖金，违反了组织纪律</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9f324e8c-030a-44bd-b483-a402d5748029</QuestionID>
+      <Title>党的十八大报告指出，解决好农业农村农民问题是全党工作的重中之重，（  ）是解决“三农”问题的根本途径。</Title>
+      <OptionA>城乡发展一体化</OptionA>
+      <OptionB>提高人民生活水平</OptionB>
+      <OptionC>全面建成小康社会</OptionC>
+      <OptionD>加大专项资金投入</OptionD>
+      <CorrectResult>A</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>980b5939-0fc7-434d-b7f0-279fc1de07a0</QuestionID>
+      <Title>行政机关公务员非法出境,情节严重的，给予（  ）的处分。</Title>
+      <OptionA>记大过</OptionA>
+      <OptionB>降级</OptionB>
+      <OptionC>撤职</OptionC>
+      <OptionD>开除</OptionD>
+      <CorrectResult>D</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9f4097be-f2eb-45fd-bc88-3b6cfb436753</QuestionID>
+      <Title>姜某为某高校主管行政后勤工作的副校长，2005年4月，姜某受某建筑工程公司经理陈某所托，要求该校行政处处长杨某帮忙，在本校工程招标过程中对陈某予以“照顾”，后杨某将标底透露给陈某使其中标。2006年初，陈某以拜年为名送给姜某人民币3万元。请问姜某的行为应如何认定？（  ）</Title>
+      <OptionA>姜某要求该校行政处长对陈某予以照顾，并收受陈某所送钱财，违反了廉洁自律规定</OptionA>
+      <OptionB>姜某的行为构成斡旋受贿错误</OptionB>
+      <OptionC>陈某以拜年为名送给姜某钱财，姜某的行为构成收受礼金错误</OptionC>
+      <OptionD>姜某要求杨某对陈某的公司予以照顾，在姜的授意下，杨某将标底透露给陈某，使其公司中标。姜某的行为泄露了工作秘密，构成泄密错误</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>97a8292d-b723-48bc-baee-48bb8a6fd0c2</QuestionID>
+      <Title>下列哪个部门不是负责对国有企业领导人员进行经常性教育和监督，促进其廉洁从业的部门：（  ）。</Title>
+      <OptionA>纪检监察机关</OptionA>
+      <OptionB>组织人事部门</OptionB>
+      <OptionC>司法机关</OptionC>
+      <OptionD>履行国有资产出资人职责的机构</OptionD>
+      <CorrectResult>C</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+    <Question>
+      <QuestionID>9f7d79cb-886d-47f7-9181-f47f901fdd5b</QuestionID>
+      <Title>党员郑某因不明真相被裹挟参加民族分裂游行活动，经组织批评教育后也确实有悔改表现的。据此，对郑某如何处理（  ）。</Title>
+      <OptionA>应当给予其党内警告处分</OptionA>
+      <OptionB>可以免予处分或不予处分</OptionB>
+      <OptionC>应当给予处分</OptionC>
+      <OptionD>应当免予处分</OptionD>
+      <CorrectResult>B</CorrectResult>
+      <QuestionValue>2</QuestionValue>
+      <Score>0</Score>
+    </Question>
+  </QuestionCollection>
+  <ReplyTime xsi:nil="true" />
+</TestOnline>

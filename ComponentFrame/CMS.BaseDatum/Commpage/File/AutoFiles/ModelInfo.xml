@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="ModelInfo" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.ModelInfo, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="ModelInfoResult" class="ModelInfo">
+      <result property="MId" column="MId" />
+      <result property="MName" column="MName" />
+      <result property="DRow" column="DRow" />
+      <result property="DCol" column="DCol" />
+      <result property="Sizex" column="Sizex" />
+      <result property="Sizey" column="Sizey" />
+      <result property="MinSizex" column="MinSizex" />
+      <result property="MinSizey" column="MinSizey" />
+      <result property="MaxSizex" column="MaxSizex" />
+      <result property="MaxSizey" column="MaxSizey" />
+      <result property="RightLevel" column="RightLevel" />
+      <result property="Pico" column="Pico" />
+      <result property="BelongPage" column="BelongPage" />
+      <result property="MContent" column="MContent" />
+      <result property="Remark" column="Remark" />
+      <result property="ExtendFields1" column="ExtendFields1" />
+      <result property="ExtendFields2" column="ExtendFields2" />
+      <result property="ExtendFields3" column="ExtendFields3" />
+    </resultMap>
+
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="ModelInfoParams" class="ModelInfo">
+      <parameter property="MName" column="MName" />
+      <parameter property="DRow" column="DRow" />
+      <parameter property="DCol" column="DCol" />
+      <parameter property="Sizex" column="Sizex" />
+      <parameter property="Sizey" column="Sizey" />
+      <parameter property="MinSizex" column="MinSizex" />
+      <parameter property="MinSizey" column="MinSizey" />
+      <parameter property="MaxSizex" column="MaxSizex" />
+      <parameter property="MaxSizey" column="MaxSizey" />
+      <parameter property="RightLevel" column="RightLevel" />
+      <parameter property="Pico" column="Pico" />
+      <parameter property="BelongPage" column="BelongPage" />
+      <parameter property="MContent" column="MContent" />
+      <parameter property="Remark" column="Remark" />
+      <parameter property="ExtendFields1" column="ExtendFields1" />
+      <parameter property="ExtendFields2" column="ExtendFields2" />
+      <parameter property="ExtendFields3" column="ExtendFields3" />
+    </parameterMap>
+
+    <parameterMap id="UpdateModelInfoParams" extends="ModelInfoParams" class="ModelInfo">
+      <parameter property="MId" column="MId" />
+    </parameterMap>
+
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetModelInfoCount"  resultClass="int">
+      SELECT count(*)
+      FROM [ModelInfo];
+    </select>
+
+    <select id="GetModelInfo"  parameterClass="ModelInfo" resultMap="ModelInfoResult">
+      SELECT *
+      FROM [ModelInfo]
+      WHERE ([MId] = #MId#) ;
+    </select>
+
+    <select id="GetModelInfoByPara"  parameterClass="Hashtable" resultMap="ModelInfoResult">
+      SELECT *
+      FROM [ModelInfo]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="MName" >
+          [MName] like #MName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RightLevel" >
+          [RightLevel] like #RightLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="BelongPage" >
+          [BelongPage] like #BelongPage#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields1" >
+          [ExtendFields1] like #ExtendFields1#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields2" >
+          [ExtendFields2] like #ExtendFields2#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields3" >
+          [ExtendFields3] like #ExtendFields3#
+        </isNotEmpty>
+      </dynamic>
+
+    </select>
+
+    <select id="GetModelInfoList" parameterClass="string" resultMap="ModelInfoResult" listClass="NorDataList">
+      SELECT *
+      FROM [ModelInfo]
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="MId">
+          [MId]
+        </isEqual>
+        <isEqual compareValue="MId_D">
+          [MId] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryModelInfoCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM [ModelInfo]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="MName" >
+          [MName] like #MName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RightLevel" >
+          [RightLevel] like #RightLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="BelongPage" >
+          [BelongPage] like #BelongPage#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields1" >
+          [ExtendFields1] like #ExtendFields1#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields2" >
+          [ExtendFields2] like #ExtendFields2#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields3" >
+          [ExtendFields3] like #ExtendFields3#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryModelInfoList" parameterClass="Hashtable" resultMap="ModelInfoResult" listClass="NorDataList">
+      SELECT *
+      FROM [ModelInfo]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="MName" >
+          [MName] like #MName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RightLevel" >
+          [RightLevel] like #RightLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="BelongPage" >
+          [BelongPage] like #BelongPage#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields1" >
+          [ExtendFields1] like #ExtendFields1#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields2" >
+          [ExtendFields2] like #ExtendFields2#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields3" >
+          [ExtendFields3] like #ExtendFields3#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="MId" property="_OrderBy">
+          [MId]
+        </isEqual>
+        <isEqual compareValue="MId_D" property="_OrderBy">
+          [MId] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <insert id="InsertModelInfo" parameterMap="ModelInfoParams">
+      <generate table="ModelInfo" />
+      <selectKey resultClass="int" type="post" property="MId" >
+        select @@IDENTITY as value
+      </selectKey>
+    </insert>
+
+    <delete id="DeleteModelInfo" parameterClass="ModelInfo">
+      DELETE FROM [ModelInfo] WHERE ([MId] = #MId#) ;
+    </delete>
+
+    <select id="DeleteModelInfoByPara" parameterClass="Hashtable">
+      DELETE FROM [ModelInfo]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="MName" >
+          [MName] like #MName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RightLevel" >
+          [RightLevel] like #RightLevel#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="BelongPage" >
+          [BelongPage] like #BelongPage#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields1" >
+          [ExtendFields1] like #ExtendFields1#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields2" >
+          [ExtendFields2] like #ExtendFields2#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ExtendFields3" >
+          [ExtendFields3] like #ExtendFields3#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <update id="UpdateModelInfo" parameterMap="UpdateModelInfoParams">
+      UPDATE [ModelInfo] SET
+      [MName] = ?,
+      [DRow] = ?,
+      [DCol] = ?,
+      [Sizex] = ?,
+      [Sizey] = ?,
+      [MinSizex] = ?,
+      [MinSizey] = ?,
+      [MaxSizex] = ?,
+      [MaxSizey] = ?,
+      [RightLevel] = ?,
+      [Pico] = ?,
+      [BelongPage] = ?,
+      [MContent] = ?,
+      [Remark] = ?,
+      [ExtendFields1] = ?,
+      [ExtendFields2] = ?,
+      [ExtendFields3] = ?
+      WHERE MId = ?;
+    </update>
+
+    <select id="UpdateModelInfoByPara" parameterClass="Hashtable">
+      UPDATE [ModelInfo]
+      <dynamic prepend="Set" >
+
+        <isNotEmpty prepend="," property="MName" >
+          [MName] = #MName#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="DRow" >
+          [DRow] = #DRow#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="DCol" >
+          [DCol] = #DCol#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Sizex" >
+          [Sizex] = #Sizex#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Sizey" >
+          [Sizey] = #Sizey#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="MinSizex" >
+          [MinSizex] = #MinSizex#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="MinSizey" >
+          [MinSizey] = #MinSizey#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="MaxSizex" >
+          [MaxSizex] = #MaxSizex#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="MaxSizey" >
+          [MaxSizey] = #MaxSizey#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="RightLevel" >
+          [RightLevel] = #RightLevel#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Pico" >
+          [Pico] = #Pico#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="BelongPage" >
+          [BelongPage] = #BelongPage#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="MContent" >
+          [MContent] = #MContent#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="Remark" >
+          [Remark] = #Remark#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ExtendFields1" >
+          [ExtendFields1] = #ExtendFields1#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ExtendFields2" >
+          [ExtendFields2] = #ExtendFields2#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="ExtendFields3" >
+          [ExtendFields3] = #ExtendFields3#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Where" >
+
+        <isNotEmpty prepend="AND" property="MName_W" >
+          [MName] = #MName_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="DRow_W" >
+          [DRow] = #DRow_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="DCol_W" >
+          [DCol] = #DCol_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Sizex_W" >
+          [Sizex] = #Sizex_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Sizey_W" >
+          [Sizey] = #Sizey_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="MinSizex_W" >
+          [MinSizex] = #MinSizex_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="MinSizey_W" >
+          [MinSizey] = #MinSizey_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="MaxSizex_W" >
+          [MaxSizex] = #MaxSizex_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="MaxSizey_W" >
+          [MaxSizey] = #MaxSizey_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="RightLevel_W" >
+          [RightLevel] = #RightLevel_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Pico_W" >
+          [Pico] = #Pico_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="BelongPage_W" >
+          [BelongPage] = #BelongPage_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="MContent_W" >
+          [MContent] = #MContent_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="Remark_W" >
+          [Remark] = #Remark_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ExtendFields1_W" >
+          [ExtendFields1] = #ExtendFields1_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ExtendFields2_W" >
+          [ExtendFields2] = #ExtendFields2_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="ExtendFields3_W" >
+          [ExtendFields3] = #ExtendFields3_W#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+  </statements>
+
+</sqlMap>

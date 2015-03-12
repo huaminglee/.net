@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap
+	namespace="PengeSoft.CMS.BaseDatum"
+	xmlns="http://ibatis.apache.org/mapping"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+  <alias>
+    <typeAlias alias="Message" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.Message, PengeSoft.CMS.BaseDatum" />
+  </alias>
+
+  <resultMaps>
+
+    <resultMap id="MessageResult" class="Message">
+      <result property="Guid" column="Guid" />
+      <result property="Sender" column="Sender" />
+      <result property="MessageContent" column="MessageContent" />
+      <result property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+      <result property="State" column="State" nullVaue="0"/>
+    </resultMap>
+   
+  <resultMap id="MessageMap" class="Message">
+      <result property="Guid" column="Guid" />
+      <result property="Sender" column="Sender" />
+      <result property="MessageContent" column="MessageContent" />
+      <result property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+    </resultMap>
+  </resultMaps>
+
+  <parameterMaps>
+
+    <parameterMap id="MessageParams" class="Message">
+      <parameter property="Sender" column="Sender" />
+      <parameter property="MessageContent" column="MessageContent" />
+      <parameter property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+    </parameterMap>
+
+    <parameterMap id="UpdateMessageParams" extends="MessageParams" class="Message">
+      <parameter property="Guid" column="Guid" />
+    </parameterMap>
+
+    <parameterMap id="InsertMessageParams" class="Hashtable">
+      <parameter property="Recipients" column="Recipients" />
+      <parameter property="Sender" column="Sender" />
+      <parameter property="Message" column="Message" />
+      <parameter property="CreateDate" column="CreateDate" nullValue="01/01/0001 00:00:00"/>
+    </parameterMap>
+  </parameterMaps>
+
+  <statements>
+
+    <select id="GetMessageCount"  resultClass="int">
+      SELECT count(*)
+      FROM [SysMessage];
+    </select>
+
+    <select id="GetMessage"  parameterClass="Message" resultMap="MessageMap">
+      SELECT *
+      FROM [SysMessage]
+      WHERE ([Guid] = #Guid#) ;
+    </select>
+
+    <select id="GetMessageByPara"  parameterClass="Hashtable" resultMap="MessageMap">
+      SELECT *
+      FROM [SysMessage]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="Sender" >
+          [Sender] = #Sender#
+        </isNotEmpty>
+      </dynamic>
+
+    </select>
+
+    <select id="GetMessageList" parameterClass="string" resultMap="MessageResult" listClass="NorDataList">
+      SELECT *
+      FROM [SysMessage]
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="CreateDate">
+          [CreateDate]
+        </isEqual>
+        <isEqual compareValue="CreateDate_D">
+          [CreateDate] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <select id="QueryMessageCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM [SysMessage]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="Sender" >
+          [Sender] = #Sender#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryMessageList" parameterClass="Hashtable" resultMap="MessageResult" listClass="NorDataList">
+      SELECT *
+      FROM [SysMessage]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="Sender" >
+          [Sender] = #Sender#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="CreateDate" property="_OrderBy">
+          [CreateDate]
+        </isEqual>
+        <isEqual compareValue="CreateDate_D" property="_OrderBy">
+          [CreateDate] desc
+        </isEqual>
+      </dynamic>
+    </select>
+
+    <insert id="InsertMessage" parameterMap="MessageParams">
+      <generate table="SysMessage" />
+      <selectKey resultClass="int" type="post" property="Guid" >
+        select @@IDENTITY as value
+      </selectKey>
+    </insert>
+
+    <delete id="DeleteMessage" parameterClass="Message">
+      DELETE FROM [SysMessage] WHERE ([Guid] = #Guid#) ;
+    </delete>
+
+    <delete id="DeleteMyMessage" parameterClass="Hashtable">
+      DELETE FROM [MessageReceived]
+      WHERE Guid = #Guid# AND UID = #UID#;
+    </delete>
+    
+    <select id="DeleteMessageByPara" parameterClass="Hashtable">
+      DELETE FROM [SysMessage]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="Sender" >
+          [Sender] = #Sender#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <update id="UpdateMessage" parameterMap="UpdateMessageParams">
+      UPDATE [SysMessage] SET
+      [Sender] = ?,
+      [MessageContent] = ?,
+      [CreateDate] = ?
+      WHERE Guid = ?;
+    </update>
+
+    <update id="UpdateMyMessage" parameterClass="Hashtable">
+      UPDATE [MessageReceived] SET
+      [State] = #State#
+      WHERE Guid = #Guid# AND UID = #UID#;
+    </update>
+    
+    <select id="UpdateMessageByPara" parameterClass="Hashtable">
+      UPDATE [SysMessage]
+      <dynamic prepend="Set" >
+
+        <isNotEmpty prepend="," property="Sender" >
+          [Sender] = #Sender#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="MessageContent" >
+          [MessageContent] = #MessageContent#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="," property="CreateDate" >
+          [CreateDate] = #CreateDate#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Where" >
+
+        <isNotEmpty prepend="AND" property="Sender_W" >
+          [Sender] = #Sender_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="MessageContent_W" >
+          [MessageContent] = #MessageContent_W#
+        </isNotEmpty>
+
+        <isNotEmpty prepend="AND" property="CreateDate_W" >
+          [CreateDate] = #CreateDate_W#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <!--调用插入类型的存储过程-->
+    <procedure id="InsertMessages" parameterMap="InsertMessageParams"  resultClass="int">
+      InsertSysMessage
+    </procedure>
+    
+    <!--根据状态查询消息数-->
+    <select id="QueryMessagesCount" parameterClass="Hashtable"  resultClass="int">
+      SELECT count(*)
+      FROM [MessageReceived]
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="UID" >
+          [UID] = #UID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="State" >
+          [State] = #State#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+    <!--分页查询消息-->
+    <select id="QueryMessagesList" parameterClass="Hashtable" resultMap="MessageResult" listClass="NorDataList">
+      SELECT M.Guid,M.Sender,M.MessageContent,M.CreateDate,R.State
+      FROM [SysMessage] as M,[MessageReceived] as R 
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="UID" >
+          R.[UID] = #UID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="State" >
+          R.[State] = #State#
+        </isNotEmpty>
+          and R.[Guid] = M.[Guid]
+      </dynamic>
+      order by R.State desc,M.CreateDate desc
+    </select>
+  </statements>
+
+</sqlMap>

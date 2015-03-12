@@ -1,0 +1,2666 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+eWorkFlow.Core
+</name>
+</assembly>
+<members>
+<member name="M:Platform.eWorkFlow.Core.VerifyInstanceStateTransact.#ctor(Platform.eWorkFlow.Model.InstanceStateTransactInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mWFInstanceStateTransact">要校驗的流程狀態簽核實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyInstanceStateTransact.CheckDataVerify">
+	<summary>
+ 驗證數據是否符合要求
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyInstanceStateTransact.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyInstanceStateTransact.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyInstanceStateTransact.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyInstanceStateTransact.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyInstanceStateTransact">
+	<summary>
+ 流程狀態簽核實例的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.#ctor(Platform.eWorkFlow.Model.StateInstanceInfo)">
+	<summary>
+ 要進行數據控制的StateInstanceInfo實例
+ </summary>
+	<param name="StateInstanceInstance">要操作的StateInstanceInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.StateInstanceInstance">
+	<summary>
+ StateInstanceInfo實例
+ </summary>
+	<value></value>
+	<returns>StateInstanceInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.DeleteByInstanceKeyID(System.Int32)">
+	<summary>依據外鍵[InstanceKeyID]工作流實例主鍵ID刪除記錄</summary>
+	<param name="InstanceKeyID">工作流實例主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="StateInstanceKeyID">狀態實例主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForStateInstanceInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.LoadStateInstanceInfoByStateInstanceKeyID(System.Int32)">
+	<summary>載入指定主鍵對應的StateInstanceInfo對象</summary>
+	<param name="StateInstanceKeyID">StateInstanceKeyID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.LoadAllDataForStateInstanceInfo">
+	<summary>載入全部的StateInstanceInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.LoadAllStateInstanceInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForStateInstanceInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.LoadAllStateInstanceInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForStateInstanceInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>StateInstanceInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.StateInstanceInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.StateInstanceDAL">
+ ---------------------------------------------
+ <summary>工作流狀態實例表實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="P:Platform.eWorkFlow.Core.DAL.AuthorizeSetForDirectLeader.AuthorizeID">
+	<summary>
+ 直接主管作業授權對象為0
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetForDirectLeader.#ctor(System.String,System.String,Platform.eWorkFlow.Model.Enm_AuthorizeSet_AuthorizeCategory)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="mBasicHuman">當前人員的SID（帳號）</param>
+	<param name="mAuthorizeType"></param>
+	<param name="mAuthorizeCategory"></param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetForDirectLeader.ConvertUserAuthorize">
+	<summary>
+ 取得當前人員的主管清單
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.DeleteBySourceTypeAndSourceID(Platform.eWorkFlow.Model.Enm_MailSendSet_SourceTypeCategory,System.Int32)">
+	<summary>
+ 刪除來自指定數據源類型和ID編號的郵件設定記錄
+ </summary>
+	<param name="SourceType">數據源類型</param>
+	<param name="SourceID">ID編號</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.LoadMailSendInfoBySourceTypeAndSourceID(Platform.eWorkFlow.Model.Enm_MailSendSet_SourceTypeCategory,System.Int32)">
+	<summary>
+ 載入指定數據源類型和ID編號的郵件設定記錄
+ </summary>
+	<param name="SourceType">數據源類型</param>
+	<param name="SourceID">ID編號</param>
+	<returns>相應郵件實例的集合</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.SysManage_ClearUnUseMailSendSet">
+	<summary>
+ 清理未使用的郵件設定信息
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.SysManage_ClearUnUseOverTimeStrategy">
+	<summary>
+ 清理未使用的超時策略
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyMailSendSet.#ctor(Platform.eWorkFlow.Model.MailSendSetInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mMailSendSetInfo">要校驗的流程審核附加郵件實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyMailSendSet.Verify(Platform.eWorkFlow.Core.VerifyMailSendSet.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyMailSendSet.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyMailSendSet.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyMailSendSet.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyMailSendSet.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyMailSendSet">
+	<summary>
+ 流程郵件通知的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyRecourceInfo.#ctor(Platform.eWorkFlow.Model.ResourceInfoInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mResourceInfoInfo">要校驗的流程資源實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyRecourceInfo.Verify(Platform.eWorkFlow.Core.VerifyRecourceInfo.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyRecourceInfo.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyRecourceInfo.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyRecourceInfo.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyRecourceInfo.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyRecourceInfo">
+	<summary>
+ 流程資源的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyStateInstance.#ctor(Platform.eWorkFlow.Model.StateInstanceInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mWFStateInstance">要校驗的流程狀態實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyStateInstance.CheckDataVerify">
+	<summary>
+ 驗證數據是否符合要求
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyStateInstance.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyStateInstance.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyStateInstance.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyStateInstance.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyStateInstance">
+	<summary>
+ 流程狀態實例的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.#ctor(Platform.eWorkFlow.Model.TemplateRouteInfo)">
+	<summary>
+ 要進行數據控制的TemplateRouteInfo實例
+ </summary>
+	<param name="TemplateRouteInstance">要操作的TemplateRouteInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.TemplateRouteInstance">
+	<summary>
+ TemplateRouteInfo實例
+ </summary>
+	<value></value>
+	<returns>TemplateRouteInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.DeleteByTemplateStateID(System.Int32)">
+	<summary>依據外鍵[TemplateStateID]流程狀態KeyID刪除記錄</summary>
+	<param name="TemplateStateID">流程狀態KeyID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="TemplateRouteID">流程狀態路由主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForTemplateRouteInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.LoadTemplateRouteInfoByTemplateRouteID(System.Int32)">
+	<summary>載入指定主鍵對應的TemplateRouteInfo對象</summary>
+	<param name="TemplateRouteID">TemplateRouteID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.LoadAllDataForTemplateRouteInfo">
+	<summary>載入全部的TemplateRouteInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.LoadAllTemplateRouteInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForTemplateRouteInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.LoadAllTemplateRouteInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForTemplateRouteInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>TemplateRouteInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.TemplateRouteInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.FlowCopy.CopyTemplateConfigToNewTemplate(System.Int32,System.Int32)">
+	<summary>
+ 同步新流程的配置數據
+ </summary>
+	<param name="OldTemplateID">舊流程的TemplateID</param>
+	<param name="NewTemplateID">新流程的TemplateID</param>
+	<returns>
+		<list type="table">
+			<item><term></term><description></description></item>
+			<item><term>4001</term><description>新舊兩個流程中至少有一個流程為空</description></item>
+			<item><term>4002</term><description>新舊兩個流程不為同族流程或流程版本不合要求</description></item>
+		</list>
+	</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.LoadInstanceDistributePersonInfoByStateInstacneKeyID(System.Int32)">
+	<summary>載入指定狀態ID對應的InstanceDistributePersonInfo對象集合</summary>
+	<param name="StateInstacneKeyID">StateInstacneKeyID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.LoadInstanceDistributePersonInfoByInstacneKeyID(System.Int32)">
+	<summary>載入指定實例主鍵ID對應的InstanceDistributePersonInfo對象集合</summary>
+	<param name="InstacneKeyID">InstacneKeyID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson.#ctor(Platform.eWorkFlow.Model.InstanceStateNextPersonInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mWFInstanceNextPerson">要校驗的流程狀態辦理人員實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson.CheckDataVerify">
+	<summary>
+ 驗證數據是否符合要求
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson.VerifyCategory.Delete">
+	<summary>
+ 刪除時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyInstanceStateNextPerson">
+	<summary>
+ 流程狀態辦理人員實例的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.#ctor(Platform.eWorkFlow.Model.ResourceInfoInfo)">
+	<summary>
+ 要進行數據控制的ResourceInfoInfo實例
+ </summary>
+	<param name="ResourceInfoInstance">要操作的ResourceInfoInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.ResourceInfoInstance">
+	<summary>
+ ResourceInfoInfo實例
+ </summary>
+	<value></value>
+	<returns>ResourceInfoInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.DeleteByTemplateID(System.Int32)">
+	<summary>依據外鍵[TemplateID]流程ID刪除記錄</summary>
+	<param name="TemplateID">流程ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="ResourceKeyID">流程資源KeyID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForResourceInfoInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.LoadResourceInfoInfoByResourceKeyID(System.Int32)">
+	<summary>載入指定主鍵對應的ResourceInfoInfo對象</summary>
+	<param name="ResourceKeyID">ResourceKeyID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.LoadAllDataForResourceInfoInfo">
+	<summary>載入全部的ResourceInfoInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.LoadAllResourceInfoInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForResourceInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.LoadAllResourceInfoInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForResourceInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>ResourceInfoInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.ResourceInfoInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.DeleteByFileGuid(System.String)">
+	<summary>依文件GuID刪除記錄</summary>
+	<param name="FileGuid">附件FileGuid</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail.OverTimeActionIndex">
+	<summary>
+ 流程模板State的超時策略的動作索引,分別對應<see>TemplateStateInfo</see>類的OverTimeAction1~3欄位
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail.TemplateStateID">
+	<summary>
+ 流程模板State的ID編號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail.StrategyActionCategory">
+	<summary>
+ 超時策略類型:為發郵件
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail.#ctor(System.Int32,System.Int32,System.Collections.Generic.List{Platform.eWorkFlow.Model.MailSendSetInfo})">
+	<summary>
+ 建構式
+ </summary>
+	<param name="TemplateStateID">流程模板State的ID編號</param>
+	<param name="OverTimeActionIndex">流程模板State的超時策略的動作索引,分別對應<see>TemplateStateInfo</see>類的OverTimeAction1~3欄位</param>
+	<param name="MailSetList">郵件發送設定實例的集合,此集合應在本建構式執行前進行設定並填充數據</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail.#ctor(System.Int32,System.Int32)">
+	<summary>
+ 建構式,此建構式為RollBackStrategyWhenFailture方法而建
+ </summary>
+	<param name="TemplateStateID">流程模板State的ID編號</param>
+	<param name="OverTimeActionIndex">流程模板State的超時策略的動作索引,分別對應<see>TemplateStateInfo</see>類的OverTimeAction1~3欄位</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail.SaveStrategy">
+	<summary>
+ 保存超時策略項目
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>保存超時策略成功</description></item>
+			<item><term>False</term><description>保存超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks>注意：本方法無事務處理機制</remarks>
+	<exception cref="T:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForSave">對象保存時發生異常,用戶應使用RollBackStrategyWhenFailture方法回退數據</exception>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail.RollBackStrategyWhenFailture">
+	<summary>
+ 當SaceStrategy方法失敗後進行數據回退
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>回退超時策略成功</description></item>
+			<item><term>False</term><description>回退超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMail">
+	<summary>
+ 設定超時策略為發送郵件類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.#ctor(Platform.eWorkFlow.Model.ParameterInfo)">
+	<summary>
+ 要進行數據控制的ParameterInfo實例
+ </summary>
+	<param name="ParameterInstance">要操作的ParameterInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.ParameterDAL.ParameterInstance">
+	<summary>
+ ParameterInfo實例
+ </summary>
+	<value></value>
+	<returns>ParameterInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="ParameterPKID">參數PKID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForParameterInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.LoadParameterInfoByParameterPKID(System.Int32)">
+	<summary>載入指定主鍵對應的ParameterInfo對象</summary>
+	<param name="ParameterPKID">ParameterPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.LoadAllDataForParameterInfo">
+	<summary>載入全部的ParameterInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.LoadAllParameterInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForParameterInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.LoadAllParameterInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForParameterInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>ParameterInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.ParameterDAL.LoadParameterInfoCollectionByOwnerModule(System.String)">
+	<summary>
+ 依參數所屬模組載入參數實例集合
+ </summary>
+	<param name="ParameterOwnerModule">參數所屬模組</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.ParameterDAL">
+	<summary>系統參數表實例類</summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.GetAuthorizeTypeList">
+	<summary>
+ 取得授權對象類別
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.GetDicLeaderTypeList">
+	<summary>
+ 取得設定直接主管的類別
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.GetAuthorizeSetByTemplateStateID(System.Int32,System.Boolean,Platform.eWorkFlow.Model.Enm_AuthorizeSet_AuthorizeCategory)">
+	<summary>
+ 載入指定狀態ID對應的AuthorizeSetInfo對象集合
+ </summary>
+	<param name="TemplateStateID">流程狀態ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.DeleteAuthorizeSetByTemplateStateID(System.Int32)">
+	<summary>
+ 刪除指定狀態ID的權限
+ </summary>
+	<param name="TemplateStateID">TemplateStateID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyOverTimeStrategy.#ctor(Platform.eWorkFlow.Model.OverTimeStrategyInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mOverTimeStrategyInfo">要校驗的超時策略實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyOverTimeStrategy.Verify(Platform.eWorkFlow.Core.VerifyOverTimeStrategy.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyOverTimeStrategy.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyOverTimeStrategy.VerifyCategory.Update">
+更新時校驗
+
+</member><member name="T:Platform.eWorkFlow.Core.VerifyOverTimeStrategy.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.#ctor(Platform.eWorkFlow.Model.InstanceDistributeResultInfo)">
+	<summary>
+ 要進行數據控制的InstanceDistributeResultInfo實例
+ </summary>
+	<param name="InstanceDistributeResultInstance">要操作的InstanceDistributeResultInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.InstanceDistributeResultInstance">
+	<summary>
+ InstanceDistributeResultInfo實例
+ </summary>
+	<value></value>
+	<returns>InstanceDistributeResultInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.DeleteByDistributePKID(System.Int32)">
+	<summary>依據外鍵[DistributePKID]分發PKID刪除記錄</summary>
+	<param name="DistributePKID">分發PKID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="DistributeResultPKID">分發人員簽核ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForInstanceDistributeResultInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.LoadInstanceDistributeResultInfoByDistributeResultPKID(System.Int32)">
+	<summary>載入指定主鍵對應的InstanceDistributeResultInfo對象</summary>
+	<param name="DistributeResultPKID">DistributeResultPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.LoadAllDataForInstanceDistributeResultInfo">
+	<summary>載入全部的InstanceDistributeResultInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.LoadAllInstanceDistributeResultInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForInstanceDistributeResultInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.LoadAllInstanceDistributeResultInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForInstanceDistributeResultInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>InstanceDistributeResultInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.LoadInstanceCollectionByCustomPaging(System.String,System.String,System.Int32)">
+	<summary>
+ 分頁取得數據集
+ </summary>
+	<param name="Filter">條件過濾表達式</param>
+	<param name="SortExpression">排序表達式</param>
+	<param name="PageNumber">第幾頁</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.InstanceDistributeResultInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.InstanceDistributeResultDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadInstanceStateTransactInfoByStateInstanceKeyID(System.Int32)">
+	<summary>
+ 載入指定狀態審核實例主鍵對應的InstanceStateTransactInfo對象
+ </summary>
+	<param name="StateInstanceKeyID">狀態審核實例主鍵ID</param>
+	<returns>
+ 返回指定狀態的簽核人員集合(只有為會簽時會存在多筆簽核人員記錄,否則都為一筆)
+ <see cref="T:Platform.eWorkFlow.Model.InstanceStateTransactInfoCollection">InstanceStateTransactInfoCollection</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadInstanceTransactionHistory(System.Guid,System.Int32)">
+	<summary>
+ 取得流程控制組件的簽核履歷
+ </summary>
+	<param name="InstanceID">流程實例GUID編號</param>
+	<param name="TemplateID">流程實例所屬的流程定義編號</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadInstanceStateTransactForStateOrder(System.Int32,System.Int32)">
+	<summary>
+ 取得指定流程站別的簽核履歷清單
+ </summary>
+	<param name="InstanceKeyID">流程實例主鍵</param>
+	<param name="StateOrder">站別順序</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadInstanceStateTransactByInstanceKeyIDAndStateID(System.Int32,System.Int32)">
+	<summary>
+ 取得指定流程站別的簽核履歷清單
+ </summary>
+	<param name="InstanceKeyID">流程實例主鍵</param>
+	<param name="StateID">特定狀態ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadRejectTransactByInstanceKeyIDAndStateID(System.Guid,System.Int32,System.Boolean)">
+	<summary>
+ 取得指定流程站別的簽核履歷清單
+ </summary>
+	<param name="InstanceID">流程實例ID</param>
+	<param name="StateID">特定狀態ID</param>
+	<param name="IsPreState">是否获取指定站之前的所有签核人员</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.CreateWorkFlowCategory(System.String,Platform.eWorkFlow.Model.SystemConst.WorkFlowCategory,System.Int32)">
+	<summary>
+ 添加流程分類
+ </summary>
+	<param name="CategoryParameterName">流程分類名稱</param>
+	<param name="WorkFlowCategoryLevel">流程分類級別</param>
+	<param name="MainCategoryPKID">若添加的流程分類為[子分類]，則指定其隸屬的[主分類]的參數編號</param>
+	<returns></returns>
+	<remarks></remarks>
+	<exception cref="T:System.ArgumentException">[主分類]的參數編號錯誤</exception>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadWorkFlowMainCategoryList">
+	<summary>
+ 取得流程主分類的清單,並返回關於DictionaryEntry對象的集合
+ </summary>
+	<returns></returns>
+	<remarks>DictionaryEntry的Key是主分類的名稱,Value是主分類對應的PKID值(參數PKID)</remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadWorkFlowSubCategoryList(System.Int32)">
+	<summary>
+ 取得指定流程主分類的所有子分類清單,並返回關於DictionaryEntry對象的集合
+ </summary>
+	<param name="MainCategoryPKID">主分類對應的PKID值(參數PKID)</param>
+	<returns></returns>
+	<remarks>DictionaryEntry的Key是子分類的名稱,Value是子分類對應的PKID值(參數PKID)</remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.DeleteWorkFlowCategory(System.Int32,System.Boolean)">
+	<summary>
+ 刪除指定的流程分類
+ </summary>
+	<param name="CategoryPKID">流程分類編號,對應參數表中的ParameterPKID欄位</param>
+	<remarks>先檢查流程分類項是否在參數表中存在，若不存在直接退出，若存在，先檢查其是否有子分類，若無可刪除，若有則不能刪除</remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadTemplateCategoryTree">
+	<summary>
+ 載入流程分類樹
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadTemplateInfoCollectionByCategory(System.Int32,System.Int32)">
+	<summary>
+ 取得指定流程主分類及子分類的流程實例
+ </summary>
+	<param name="MainCategory">流程主分類</param>
+	<param name="SubCategory">流程子分類</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadFlowCategoryNameByPKID(System.Int32)">
+	<summary>
+ 取得流程類別ID對應的類別名稱
+ </summary>
+	<param name="FlowCategoryPKID">流程類別ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.CheckTemplateInfo(System.Int32,System.String@)">
+	<summary>
+ 驗證流程配置信息是否完整
+ </summary>
+	<param name="TemplateID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.ActivateTemplateInfo(System.Int32,System.String@)">
+	<summary>
+ 激活指定流程
+ </summary>
+	<param name="TemplateID">流程ID</param>
+	<list><term>True</term>成功</list>
+	<list><term>False</term>失敗</list>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadNewestTemplateInfoList">
+	<summary>
+ 取得當前有效的全部流程定義集合
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadTemplateInfoByName(System.String)">
+	<summary>查找指定流程名稱對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.deleteClassAttributeOfXoml(Platform.eWorkFlow.Model.TemplateInfoInfo)">
+	<summary>
+  刪除工作流XOML的Class信息
+ </summary>
+	<param name="template"></param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.SaveActivityStatus(System.Object,Platform.eWorkFlow.Model.TemplateInfoInfo)">
+	<summary>
+ 保存工作流狀態(內部方法：供SaveWFTemplate()方法調用)
+ </summary>
+	<param name="activity"></param>
+	<param name="template"></param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.SaveActionInfo(System.Object,Platform.eWorkFlow.Model.TemplateStateInfo)">
+	<summary>
+ 保存狀態的動作和路由信息
+ </summary>
+	<param name="StateInfo">狀態活動</param>
+	<param name="TemplateStateInfo">當前狀態主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.CheckActioinDefition(System.Int32)">
+	<summary>
+ 檢查特定狀態動作是配置OK
+ </summary>
+	<param name="TemplateStateID">流程狀態ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.CheckTemplateRoute(System.Int32)">
+	<summary>
+ 檢查特定狀態路由條件是否配置OK
+ </summary>
+	<param name="TemplateStateID">流程狀態ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.CheckRosourceInfo(System.Int32,System.String)">
+	<summary>
+ 檢查流程狀態設定的編輯區塊是否設置正確
+ </summary>
+	<param name="TemplateID">流程ID</param>
+	<param name="EditAreaSetList">編輯權限區塊列表</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.CheckOverTimeStrategy(System.Int32)">
+	<summary>
+ 根據超時策略ID驗證信息是否配置OK
+ </summary>
+	<param name="StrategyPKID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByCode.OverTimeActionIndex">
+	<summary>
+ 流程模板State的超時策略的動作索引,分別對應<see>TemplateStateInfo</see>類的OverTimeAction1~3欄位
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByCode.TemplateStateID">
+	<summary>
+ 流程模板State的ID編號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByCode.CodeType">
+	<summary>
+ 代碼類型
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByCode.CodeContent">
+	<summary>
+ 代碼內容
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByCode.RollBackStrategyWhenFailture">
+	<summary>
+ 當SaceStrategy方法失敗後進行數據回退
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>回退超時策略成功</description></item>
+			<item><term>False</term><description>回退超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByCode.SaveStrategy">
+	<summary>
+ 保存超時策略項目
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>保存超時策略成功</description></item>
+			<item><term>False</term><description>保存超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks>注意：本方法無事務處理機制</remarks>
+	<exception cref="T:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForSave">對象保存時發生異常,用戶應使用RollBackStrategyWhenFailture方法回退數據</exception>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateRoute.#ctor(Platform.eWorkFlow.Model.TemplateRouteInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mTemplateRouteInfo">要校驗的模板流程路由實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateRoute.Verify(Platform.eWorkFlow.Core.VerifyTemplateRoute.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateRoute.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateRoute.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateRoute.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateRoute.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateRoute">
+	<summary>
+ 模板流程路由的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.#ctor(Platform.eWorkFlow.Model.AuthorizeSetInfo)">
+	<summary>
+ 要進行數據控制的AuthorizeSetInfo實例
+ </summary>
+	<param name="AuthorizeSetInstance">要操作的AuthorizeSetInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.AuthorizeSetInstance">
+	<summary>
+ AuthorizeSetInfo實例
+ </summary>
+	<value></value>
+	<returns>AuthorizeSetInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="AuthorizeSetID">執行對象權限設定ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForAuthorizeSetInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.LoadAuthorizeSetInfoByAuthorizeSetID(System.Int32)">
+	<summary>載入指定主鍵對應的AuthorizeSetInfo對象</summary>
+	<param name="AuthorizeSetID">AuthorizeSetID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.LoadAllDataForAuthorizeSetInfo">
+	<summary>載入全部的AuthorizeSetInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.LoadAllAuthorizeSetInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForAuthorizeSetInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.LoadAllAuthorizeSetInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForAuthorizeSetInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>AuthorizeSetInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.AuthorizeSetInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.AuthorizeSetDAL">
+	<summary>
+ 權限設定操作類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.#ctor(Platform.eWorkFlow.Model.InstanceStateNextPersonInfo)">
+	<summary>
+ 要進行數據控制的InstanceStateNextPersonInfo實例
+ </summary>
+	<param name="InstanceStateNextPersonInstance">要操作的InstanceStateNextPersonInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.InstanceStateNextPersonInstance">
+	<summary>
+ InstanceStateNextPersonInfo實例
+ </summary>
+	<value></value>
+	<returns>InstanceStateNextPersonInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.DeleteByInstanceKeyID(System.Int32)">
+	<summary>依據外鍵[InstanceKeyID]工作流實例主鍵ID刪除記錄</summary>
+	<param name="InstanceKeyID">工作流實例主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="PKID">參與者ID編號</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForInstanceStateNextPersonInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.LoadInstanceStateNextPersonInfoByPKID(System.Int32)">
+	<summary>載入指定主鍵對應的InstanceStateNextPersonInfo對象</summary>
+	<param name="PKID">PKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.LoadAllDataForInstanceStateNextPersonInfo">
+	<summary>載入全部的InstanceStateNextPersonInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.LoadAllInstanceStateNextPersonInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForInstanceStateNextPersonInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.LoadAllInstanceStateNextPersonInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForInstanceStateNextPersonInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>InstanceStateNextPersonInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.InstanceStateNextPersonInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL">
+ ---------------------------------------------
+ <summary>流程狀態參與者表實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.#ctor(Platform.eWorkFlow.Model.OverTimeStrategyInfo)">
+	<summary>
+ 要進行數據控制的OverTimeStrategyInfo實例
+ </summary>
+	<param name="OverTimeStrategyInstance">要操作的OverTimeStrategyInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.OverTimeStrategyInstance">
+	<summary>
+ OverTimeStrategyInfo實例
+ </summary>
+	<value></value>
+	<returns>OverTimeStrategyInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="StrategyPKID">超時策略編號</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForOverTimeStrategyInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.LoadOverTimeStrategyInfoByStrategyPKID(System.Int32)">
+	<summary>載入指定主鍵對應的OverTimeStrategyInfo對象</summary>
+	<param name="StrategyPKID">StrategyPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.LoadAllDataForOverTimeStrategyInfo">
+	<summary>載入全部的OverTimeStrategyInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.LoadAllOverTimeStrategyInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForOverTimeStrategyInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.LoadAllOverTimeStrategyInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForOverTimeStrategyInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>OverTimeStrategyInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.OverTimeStrategyInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.OverTimeStrategyDAL">
+ ---------------------------------------------
+ <summary>超時策略表實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMobile.OverTimeActionIndex">
+	<summary>
+ 流程模板State的超時策略的動作索引,分別對應<see>TemplateStateInfo</see>類的OverTimeAction1~3欄位
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMobile.TemplateStateID">
+	<summary>
+ 流程模板State的ID編號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMobile.MobileMessage">
+	<summary>
+ 短信內容
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMobile.MobileNumber">
+	<summary>
+ 手機號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMobile.RollBackStrategyWhenFailture">
+	<summary>
+ 當SaceStrategy方法失敗後進行數據回退
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>回退超時策略成功</description></item>
+			<item><term>False</term><description>回退超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByMobile.SaveStrategy">
+	<summary>
+ 保存超時策略項目
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>保存超時策略成功</description></item>
+			<item><term>False</term><description>保存超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks>注意：本方法無事務處理機制</remarks>
+	<exception cref="T:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForSave">對象保存時發生異常,用戶應使用RollBackStrategyWhenFailture方法回退數據</exception>
+</member><member name="M:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForVerify.#ctor(System.String)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="Message">異常消息</param>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForVerify">
+	<summary>
+ 對象校驗時出現異常
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForSave.#ctor(System.String)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="Message">異常消息</param>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForSave">
+	<summary>
+ 對象保存時出現異常
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForTransaction.#ctor(System.String)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="message">異常消息</param>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForTransaction">
+	<summary>
+ 對象事務處理時出現異常
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyWFInstance.#ctor(Platform.eWorkFlow.Model.WorkFlowInstanceInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mWFInstance">要校驗的流程實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyWFInstance.CheckDataVerify">
+	<summary>
+ 驗證數據是否符合要求
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyWFInstance.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyWFInstance.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyWFInstance.VerifyCategory.Delete">
+	<summary>
+ 刪除時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyWFInstance.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyWFInstance.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyWFInstance">
+	<summary>
+ 流程實例的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.AuthorizeSetForHRSystem.AuthorizeID">
+	<summary>
+ 人力資料庫授權對象ID,特指對象的值大於0,全部對象的值等於-1
+ </summary>
+	<value></value>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AuthorizeSetForHRSystem.#ctor(System.Int32,System.String,Platform.eWorkFlow.Model.Enm_AuthorizeSet_AuthorizeCategory)">
+	<summary>
+ 建構式
+ </summary>
+	<param name="mAuthorizeID"></param>
+	<param name="mAuthorizeType"></param>
+	<param name="mAuthorizeCategory"></param>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.AuthorizeSetForHRSystem">
+	<summary>
+	</summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.LoadRescourceInfoByTemplateID(System.Int32)">
+	<summary>依據外鍵[TemplateID]流程ID載入對應ResourceInfoInfo對象集合</summary>
+	<param name="TemplateID">流程ID</param>
+	<returns>ResourceInfoInfo對象集合</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ResourceInfoDAL.LoadResourceListByTemplateIDAndCategory(System.Int32,System.Int32)">
+	<summary>
+ 獲取制定類別的資源信息
+ </summary>
+	<param name="TemplateID">流程ID</param>
+	<param name="ResourceCategory">資源類別</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyAuthorizeSet.#ctor(Platform.eWorkFlow.Model.AuthorizeSetInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mAuthorizeSetInfo">要校驗的流程站別的權限設定實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyAuthorizeSet.Verify(Platform.eWorkFlow.Core.VerifyAuthorizeSet.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyAuthorizeSet.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyAuthorizeSet.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyAuthorizeSet.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyAuthorizeSet.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyAuthorizeSet">
+	<summary>
+ 流程站別的權限設定校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.#ctor(Platform.eWorkFlow.Model.AttachFileInfoInfo)">
+	<summary>
+ 要進行數據控制的AttachFileInfoInfo實例
+ </summary>
+	<param name="AttachFileInfoInstance">要操作的AttachFileInfoInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.AttachFileInfoInstance">
+	<summary>
+ AttachFileInfoInfo實例
+ </summary>
+	<value></value>
+	<returns>AttachFileInfoInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="FileID">附件PKID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForAttachFileInfoInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.LoadAttachFileInfoInfoByFileID(System.Int32)">
+	<summary>載入指定主鍵對應的AttachFileInfoInfo對象</summary>
+	<param name="FileID">FileID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.LoadAllAttachFileInfoInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForAttachFileInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.LoadAllAttachFileInfoInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForAttachFileInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>AttachFileInfoInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.LoadInstanceCollectionByCustomPaging(System.String,System.String,System.Int32)">
+	<summary>
+ 分頁取得數據集
+ </summary>
+	<param name="Filter">條件過濾表達式</param>
+	<param name="SortExpression">排序表達式</param>
+	<param name="PageNumber">第幾頁</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.AttachFileInfoInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.Merge(System.Collections.Generic.List{Platform.eWorkFlow.Model.AttachFileInfoInfo},System.Collections.Generic.List{Platform.eWorkFlow.Model.AttachFileInfoInfo},System.Boolean)">
+	<summary>
+ 合並對象集合
+ </summary>
+	<param name="MergeTO">合並到對象集合</param>
+	<param name="MergeFrom">合並從對象集合</param>
+	<param name="FilterDuplication">是否過濾重復記錄</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.Diff(System.Collections.Generic.List{Platform.eWorkFlow.Model.AttachFileInfoInfo}@,System.Collections.Generic.List{Platform.eWorkFlow.Model.AttachFileInfoInfo}@)">
+	<summary>
+ 過濾相同的對象，保留不同的對象
+ </summary>
+	<param name="Collection1">比對對象集1</param>
+	<param name="Collection2">比對對象集2</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL.Subtract(System.Collections.Generic.List{Platform.eWorkFlow.Model.AttachFileInfoInfo},System.Collections.Generic.List{Platform.eWorkFlow.Model.AttachFileInfoInfo})">
+	<summary>
+ 清減對象集合
+ </summary>
+	<param name="MinuendCollection">被減數對象集合</param>
+	<param name="SubtrahendCollection">減數對象集合</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.AttachFileInfoDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.#ctor(Platform.eWorkFlow.Model.MailSendSetInfo)">
+	<summary>
+ 要進行數據控制的MailSendSetInfo實例
+ </summary>
+	<param name="MailSendSetInstance">要操作的MailSendSetInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.MailSendSetInstance">
+	<summary>
+ MailSendSetInfo實例
+ </summary>
+	<value></value>
+	<returns>MailSendSetInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="SendMailPKID">發送郵件設定PKID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForMailSendSetInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.LoadMailSendSetInfoBySendMailPKID(System.Int32)">
+	<summary>載入指定主鍵對應的MailSendSetInfo對象</summary>
+	<param name="SendMailPKID">SendMailPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.LoadAllDataForMailSendSetInfo">
+	<summary>載入全部的MailSendSetInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.LoadAllMailSendSetInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForMailSendSetInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.LoadAllMailSendSetInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForMailSendSetInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>MailSendSetInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSendSetDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.MailSendSetInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.MailSendSetDAL">
+ ---------------------------------------------
+ <summary>發送郵件設定表實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateState.#ctor(Platform.eWorkFlow.Model.TemplateStateInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mTemplateStateInfo">要校驗的模板流程站別實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateState.Verify(Platform.eWorkFlow.Core.VerifyTemplateState.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateState.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateState.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateState.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateState.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateState">
+	<summary>
+ 模板流程站別的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.#ctor(Platform.eWorkFlow.Model.TemplateConfigInfo)">
+	<summary>
+ 要進行數據控制的TemplateConfigInfo實例
+ </summary>
+	<param name="TemplateConfigInstance">要操作的TemplateConfigInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.TemplateConfigInstance">
+	<summary>
+ TemplateConfigInfo實例
+ </summary>
+	<value></value>
+	<returns>TemplateConfigInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.DeleteByTemplateID(System.Int32)">
+	<summary>依據外鍵[TemplateID]流程ID刪除記錄</summary>
+	<param name="TemplateID">流程ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="TemplateConfigPKID">流程配置編號</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForTemplateConfigInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.LoadTemplateConfigInfoByTemplateConfigPKID(System.Int32)">
+	<summary>載入指定主鍵對應的TemplateConfigInfo對象</summary>
+	<param name="TemplateConfigPKID">TemplateConfigPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.LoadAllDataForTemplateConfigInfo">
+	<summary>載入全部的TemplateConfigInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.LoadAllTemplateConfigInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForTemplateConfigInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.LoadAllTemplateConfigInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForTemplateConfigInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>TemplateConfigInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.TemplateConfigInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="F:Platform.eWorkFlow.Core.DAL.MailSystem._IsHtmlBody">
+ -----------------------------------------------------------------------------
+ <summary>
+ 郵件內文格式
+ </summary>
+	<remarks>
+	</remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.IsSentDelay">
+	<summary>
+ 郵件是否立即發動(默認為True)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.BusniessUrl">
+	<summary>
+ 當前郵件的業務鏈接地址(當不是立即發送時需要)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.ParentID">
+	<summary>
+ 哪一状态发送的邮件(当该站签核时查找邮件表并删除该邮件信息)
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks>
+ 审核完后在排程时就不发送邮件
+ </remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.BusniessName">
+	<summary>
+ 發送郵件的業務系統名稱
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.StateName">
+	<summary>
+ 發送郵件時該文件所處狀態
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.IsEmailLog">
+	<summary>
+ 是否需要記錄郵件日誌
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.EmailLogNotes">
+	<summary>
+ 記錄郵件日誌時需要發送到的郵箱地址
+ </summary>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.MailSystem.FromEmailNotes">
+	<summary>
+ 發件人郵件的Notes地址
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSystem.SendMail(System.String[],System.String,System.Boolean,System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 向SMTP郵件服務器轉發郵件
+ </summary>
+	<param name="TOList">發送列表</param>
+	<param name="Subject">郵件主題</param>
+	<param name="BodyContentType">郵件正文類別</param>
+	<param name="BodyContent">郵件正文</param>
+	<returns>發送是否成功</returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSystem.SendMail(System.String[],System.String,System.Boolean,System.String,System.String[])">
+ -----------------------------------------------------------------------------
+ <summary>
+ 向SMTP郵件服務器轉發郵件
+ </summary>
+	<param name="TOList">發送列表</param>
+	<param name="Subject">郵件主題</param>
+	<param name="BodyContentType">郵件正文類別</param>
+	<param name="BodyContent">郵件正文</param>
+	<param name="AttachmentList">附件列表</param>
+	<returns>發送是否成功</returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSystem.SendMail(System.String[],System.String[],System.String[],System.String,System.String,System.Boolean,System.String[],System.String)">
+	<summary>
+ 向SMTP郵件服務器轉發郵件
+ </summary>
+	<param name="FromNotesId">發件人Notes</param>
+	<param name="TOList">發送列表</param>
+	<param name="CCList">抄送列表</param>
+	<param name="BCCList">暗送列表</param>
+	<param name="Subject">郵件主題</param>
+	<param name="IsBodyHtml">郵件正文類別</param>
+	<param name="BodyContent">郵件正文</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.MailSystem.FormatNotesID(System.String)">
+ -----------------------------------------------------------------------------
+ <summary>
+ 郵件格式轉換函數
+ </summary>
+	<param name="sMailTo">要轉換的NotesID</param>
+	<returns>轉換後的郵件格式</returns>
+	<remarks></remarks>
+ -----------------------------------------------------------------------------
+
+</member><member name="T:Platform.eWorkFlow.Core.DAL.MailSystem">
+	<summary>
+ SMTP郵件服務之轉發郵件工具類
+ </summary>
+	<remarks></remarks>
+ ----------------------------------------------------------------------------- 
+
+</member><member name="P:Platform.eWorkFlow.Core.My.Resources.ResMain.ResourceManager">
+	<summary>
+  傳回這個類別使用的快取的 ResourceManager 執行個體。
+</summary>
+</member><member name="P:Platform.eWorkFlow.Core.My.Resources.ResMain.Culture">
+	<summary>
+  覆寫目前執行緒的 CurrentUICulture 屬性，對象是所有
+  使用這個強型別資源類別的資源查閱。
+</summary>
+</member><member name="T:Platform.eWorkFlow.Core.My.Resources.ResMain">
+	<summary>
+  用於查詢當地語系化字串等的強型別資源類別
+</summary>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateConfigDAL.LoadTemplateConfigInfoByTemplatePKID(System.Int32)">
+	<summary>載入指定流程對應的TemplateConfigInfo對象</summary>
+	<param name="TemplateID">模板ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.#ctor(Platform.eWorkFlow.Model.ActionDefitionInfo)">
+	<summary>
+ 要進行數據控制的ActionDefitionInfo實例
+ </summary>
+	<param name="ActionDefitionInstance">要操作的ActionDefitionInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.ActionDefitionInstance">
+	<summary>
+ ActionDefitionInfo實例
+ </summary>
+	<value></value>
+	<returns>ActionDefitionInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.DeleteByTemplateStateID(System.Int32)">
+	<summary>依據外鍵[TemplateStateID]流程狀態ID刪除記錄</summary>
+	<param name="TemplateStateID">流程狀態ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="TemplateActionID">動作主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForActionDefitionInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.LoadActionDefitionInfoByTemplateActionID(System.Int32)">
+	<summary>載入指定主鍵對應的ActionDefitionInfo對象</summary>
+	<param name="TemplateActionID">TemplateActionID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.LoadAllDataForActionDefitionInfo">
+	<summary>載入全部的ActionDefitionInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.LoadAllActionDefitionInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForActionDefitionInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.LoadAllActionDefitionInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForActionDefitionInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>ActionDefitionInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.ActionDefitionInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.LogInfoDAL.#ctor(Platform.eWorkFlow.Model.LogInfo)">
+	<summary>
+ 要進行日志的LogInfo實例
+ </summary>
+	<param name="LogInfoInstance">要操作的LogInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.LogInfoDAL.LogInfoInstance">
+	<summary>
+ ActionDefitionInfo實例
+ </summary>
+	<value></value>
+	<returns>ActionDefitionInfo</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.LogInfoDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.LoadInstanceStateNextPersonByInstanceKeyID(System.Int32)">
+	<summary>
+ 載入指定狀態審核實例主鍵對應的可辦理人員InstanceStateNextPersonInfoCollection集合
+ </summary>
+	<param name="InstanceKeyID">狀態審核實例主鍵ID</param>
+	<returns><see cref="T:Platform.eWorkFlow.Model.InstanceStateNextPersonInfoCollection">InstanceStateNextPersonInfoCollection</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.LoadInstanceStateNextPersonForRejection(System.Guid,System.String)">
+	<summary>
+ 當流程駁回時，取回簽核對象清單
+ </summary>
+	<param name="InstanceID">流程實例ID</param>
+	<param name="stateName">流程站別名稱</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateNextPersonDAL.DeleteByInstanceIDAndStateName(System.Guid,System.String)">
+	<summary>
+ 依據狀態ID和狀態名稱刪除辦理人員 (為硬刪因為有駁回和取回履歷)
+ </summary>
+	<param name="InstanceID">實例IDInstanceID</param>
+	<param name="StateName">狀態名稱StateName</param>
+	<remarks>
+ 在駁回和取回時調用
+ </remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadWorkFlowInstanceInfoByInstanceID(System.Guid)">
+	<summary>
+ 載入指定實例ID對應的WorkFlowInstanceInfo對象</summary>
+	<param name="InstanceID">工作流實例ID</param>
+	<returns>工作流實例對象<see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfo">WorkFlowInstanceInfo</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllRunWorkFlowInstance">
+	<summary>
+ 載入所有正在運行的工作流實例：InstanceFInishFlag=0 AND InstanceStatus=0
+ </summary>
+	<returns><see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfoCollection">WorkFlowInstanceInfoCollection</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadWorkFlowInstanceByTemplateID(System.Int32,System.Int32)">
+	<summary>
+ 載入指定流程定義模板ID的對應流程實例集合
+ </summary>
+	<param name="TemplateID">流程定義ID</param>
+	<param name="SelectFilter">流程實例是否結案篩選開關</param>
+	<returns><see cref="T:System.Collections.Generic.List`1">WorkFlowInstanceInfo的集合</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadWorkFlowInstanceByTemplateName(System.String,System.Int32)">
+	<summary>
+ 載入指定流程定義模板名稱對應流程實例集合
+ </summary>
+	<param name="TemplateName">流程定義名稱</param>
+	<param name="SelectFilter">流程實例是否結案篩選開關</param>
+	<returns><see cref="T:System.Collections.Generic.List`1">WorkFlowInstanceInfo的集合</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllBatchAduitWorkFlowInstance">
+	<summary>
+ 載入所有可以批量審核的工作流實例:InstanceFinishFlag=0 AND IsBatchAduitFlag=1 AND InstanceStatus=0
+ </summary>
+	<returns><see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfoCollection">WorkFlowInstanceInfoCollection</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.DeleteByInstanceID(System.Guid)">
+	<summary>
+ 刪除指定InstanceID的工作流實例
+ </summary>
+	<param name="InstanceID">工作流實例ID</param>
+	<remarks>
+ 級聯刪除相應的實例ID對應的簽核信息和狀態辦理人員
+ </remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllSameStateInstanceInfoCollectionBySearchCondition(System.Int32,System.Int32)">
+	<summary>
+ 依查詢取得指定人員可辦理的相同類的流程實例
+ </summary>
+	<param name="TemplateID"></param>
+	<param name="ParticipantID"></param>
+	<returns>
+ 狀態實例集合<see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfoCollection">WorkFlowInstanceInfoCollection</see>
+	</returns>
+	<remarks>
+ 該存儲過程需要與InstanceStateNextPerson實例類相關聯獲取當前辦理人員可處理的類似案件實例
+ </remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllOverTimeWorkFlowInstance">
+NOTE:時間以小時為單位
+ <summary>
+  取得所有超時的流程實例(用於系統跟催)
+ </summary>
+	<returns>
+ 狀態實例集合<see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfoCollection">WorkFlowInstanceInfoCollection</see>
+	</returns>
+	<remarks>
+	</remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadNextStatePersonDetail(System.Int32)">
+	<summary>
+ 取得指定流程實例的下一站辦理人員清單
+ </summary>
+	<param name="WorkFlowInstanceKeyID">流程實例ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllAllowGetBackFlowInstance(System.String)">
+	<summary>
+ 取得指定用戶可以取回操作的流程實例集合
+ </summary>
+	<param name="UserSID">用戶帳號SID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadWorkFlowInstanceByIDAndNextStateHuman(System.Guid,System.String)">
+	<summary>
+ 取得與指定流程實例同狀態的流程實例的下一站處理人員是指定人員的流程實例清單
+ </summary>
+	<param name="InstanceID">流程實例編號</param>
+	<param name="UserSID">要搜索的下一站處理人員</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllHisToryWorkFlowInstance(System.Int32,System.String)">
+	<summary>
+ 获取所有我签核的案件
+ </summary>
+	<param name="UserID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllAllowGetBackFlowInstanceSourceTable">
+	<summary>
+ 允許取回流程實例數據源表
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadNextStatePersonSourceTable">
+	<summary>
+ 下一站處理人員數據源表
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadSameStatusWorkFlowInstanceByInstanceID(System.Guid)">
+	<summary>
+ 取得指定流程
+ </summary>
+	<param name="InstanceID"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByBackToState.OverTimeActionIndex">
+	<summary>
+ 流程模板State的超時策略的動作索引,分別對應<see>TemplateStateInfo</see>類的OverTimeAction1~3欄位
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByBackToState.TemplateStateID">
+	<summary>
+ 流程模板State的ID編號
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByBackToState.BackToState">
+	<summary>
+ 回退站別
+ </summary>
+	<value></value>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByBackToState.RollBackStrategyWhenFailture">
+	<summary>
+ 當SaceStrategy方法失敗後進行數據回退
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>回退超時策略成功</description></item>
+			<item><term>False</term><description>回退超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.OverTimeStrategyByBackToState.SaveStrategy">
+	<summary>
+ 保存超時策略項目
+ </summary>
+	<returns>
+		<list>
+			<item><term>True</term><description>保存超時策略成功</description></item>
+			<item><term>False</term><description>保存超時策略失敗,其原因參數不合校驗要求</description></item>
+		</list>
+	</returns>
+	<remarks>注意：本方法無事務處理機制</remarks>
+	<exception cref="T:Platform.eWorkFlow.Core.eWorkFlowException.ExceptionForSave">對象保存時發生異常,用戶應使用RollBackStrategyWhenFailture方法回退數據</exception>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyActionDefinition.#ctor(Platform.eWorkFlow.Model.ActionDefitionInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mActionDefitionInfo">要校驗的站別動作實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyActionDefinition.Verify(Platform.eWorkFlow.Core.VerifyActionDefinition.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyActionDefinition.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyActionDefinition.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyActionDefinition.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyActionDefinition.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyActionDefinition">
+	<summary>
+ 站別動作的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateConfig.#ctor(Platform.eWorkFlow.Model.TemplateConfigInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mTemplateConfigInfo">要校驗的模板流程配置實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateConfig.Verify(Platform.eWorkFlow.Core.VerifyTemplateConfig.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateConfig.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateConfig.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateConfig.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateConfig.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateConfig">
+	<summary>
+ 模板流程配置類的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.LoadActionDefinitionList(System.Int32)">
+	<summary>
+ 取得指定流程State上的所有動作
+ </summary>
+	<param name="TemplateStateID">流程State的ID編號</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.LoadActionDefinitionList(System.Int32,System.String)">
+	<summary>
+ 取得指定人員在指定流程State上所擁有的動作
+ </summary>
+	<param name="TemplateStateID"></param>
+	<param name="UserAccount"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.ActionDefitionDAL.GetActionInfoList">
+	<summary>
+ 0:為流程動作
+ 1:自定義辦理動作
+ 2:自定義管理動作
+ 3：用戶自定義動作
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.LoadStateInstanceByInstanceID(System.Guid)">
+	<summary>
+ ToDo:wqy存儲過程
+ 載入指定工作流實例ID的所有審核記錄
+ </summary>
+	<param name="InstanceID">工作流實例ID</param>
+	<returns><see cref="T:Platform.eWorkFlow.Model.StateInstanceInfoCollection"></see>StateInstanceInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.StateInstanceDAL.LoadStateInstanceByInstanceKeyID(System.Int32)">
+	<summary>
+ ToDo:wqy存儲過程
+ 載入指定工作流實例主鍵ID的所有審核記錄
+ </summary>
+	<param name="InstanceKeyID">工作流實例主鍵ID</param>
+	<returns><see cref="T:Platform.eWorkFlow.Model.StateInstanceInfoCollection"></see>StateInstanceInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadTemplateStateListByTemplateID(System.Int32,System.Boolean,Platform.eWorkFlow.Model.Enm_TemplateState_TemplateStateType)">
+	<summary>
+ 載入對應流程模板所擁有的State集合
+ </summary>
+	<param name="TemplateID">指定流程模板的編號</param>
+	<param name="FilterStateType">是否獲取指定類型的State</param>
+	<param name="StateType">指定類型</param>
+	<returns>
+ 只有當FilterStateType為Ture時才獲取指定類別的狀態集合,否則為該流程的所有狀態集合
+ </returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadNextStateInfoByRouteCondition(System.Int32,System.String)">
+	<summary>
+ 根據當前站別信息和當前執行路由條件決定下一站信息
+ </summary>
+	<param name="CurrentStateID">當前站別定義</param>
+	<param name="RouteResult">路由條件返回值</param>
+	<returns>下一站別信息</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadTemplateStateListByInstanceID(System.Guid)">
+	<summary>
+ 載入指定流程實例ID對應的流程定義所包含的站別定義集合
+ </summary>
+	<param name="InstanceID">流程實例ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadTemplateStateByTemplateName(System.String,System.Int32)">
+	<summary>
+ 獲取當前流程名稱，版本對應的狀態信息
+ </summary>
+	<param name="TemplateName"></param>
+	<param name="TemplateVersion">
+ TemplateVersion默認為0,則獲取最新版本的流程狀態信息
+ </param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.EmailLogInfoDAL.EmialInfoInstance">
+	<summary>
+ EmaiLogInfo實例
+ </summary>
+	<value></value>
+	<returns>EmaiLogInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.EmailLogInfoDAL.#ctor(Platform.eWorkFlow.Model.EmaiLogInfo)">
+	<summary>
+ 要進行數據控制的EmaiLogInfo實例
+ </summary>
+	<param name="EmailInfoInstance">要操作的EmaiLogInfo實例類</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.EmailLogInfoDAL.GetAllEmailInfo">
+	<summary>
+ 得到RecordDeleted=1 and IsFinish=0 的所有信息
+ </summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.EmailLogInfoDAL.GetAllEmailInfoByBusniessName(System.String)">
+	<summary>
+ 得到RecordDeleted=1 and IsFinish=0 and BusniessName=参数 的所有信息
+ </summary>
+	<param name="BUsniessName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.EmailLogInfoDAL.updateEmailInfoFinish(System.String)">
+	<summary>
+ 傳入當前發送郵件的資料PKID集合,用","連接。修改這些信息的IsFinish=1 即已發送
+ </summary>
+	<param name="Condition"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.#ctor(Platform.eWorkFlow.Model.InstanceDistributePersonInfo)">
+	<summary>
+ 要進行數據控制的InstanceDistributePersonInfo實例
+ </summary>
+	<param name="InstanceDistributePersonInstance">要操作的InstanceDistributePersonInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.InstanceDistributePersonInstance">
+	<summary>
+ InstanceDistributePersonInfo實例
+ </summary>
+	<value></value>
+	<returns>InstanceDistributePersonInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.DeleteByStateInstanceKeyID(System.Int32)">
+	<summary>依據外鍵[StateInstanceKeyID]State實例主鍵ID刪除記錄</summary>
+	<param name="StateInstanceKeyID">State實例主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="DistributePKID">分發PKID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForInstanceDistributePersonInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.LoadInstanceDistributePersonInfoByDistributePKID(System.Int32)">
+	<summary>載入指定主鍵對應的InstanceDistributePersonInfo對象</summary>
+	<param name="DistributePKID">DistributePKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.LoadAllDataForInstanceDistributePersonInfo">
+	<summary>載入全部的InstanceDistributePersonInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.LoadAllInstanceDistributePersonInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForInstanceDistributePersonInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>InstanceDistributePersonInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.InstanceDistributePersonInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.InstanceDistributePersonDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.#ctor(Platform.eWorkFlow.Model.InstanceStateTransactInfo)">
+	<summary>
+ 要進行數據控制的InstanceStateTransactInfo實例
+ </summary>
+	<param name="InstanceStateTransactInstance">要操作的InstanceStateTransactInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.InstanceStateTransactInstance">
+	<summary>
+ InstanceStateTransactInfo實例
+ </summary>
+	<value></value>
+	<returns>InstanceStateTransactInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.DeleteByStateInstanceKeyID(System.Int32)">
+	<summary>依據外鍵[StateInstanceKeyID]State實例主鍵ID刪除記錄</summary>
+	<param name="StateInstanceKeyID">State實例主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="TransactPKID">處理實例結果PKID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForInstanceStateTransactInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadInstanceStateTransactInfoByTransactPKID(System.Int32)">
+	<summary>載入指定主鍵對應的InstanceStateTransactInfo對象</summary>
+	<param name="TransactPKID">TransactPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadAllDataForInstanceStateTransactInfo">
+	<summary>載入全部的InstanceStateTransactInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadAllInstanceStateTransactInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForInstanceStateTransactInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.LoadAllInstanceStateTransactInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForInstanceStateTransactInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>InstanceStateTransactInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.InstanceStateTransactInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.InstanceStateTransactDAL">
+ ---------------------------------------------
+ <summary>實例簽核表實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.#ctor(Platform.eWorkFlow.Model.TemplateStateInfo)">
+	<summary>
+ 要進行數據控制的TemplateStateInfo實例
+ </summary>
+	<param name="TemplateStateInstance">要操作的TemplateStateInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.TemplateStateInstance">
+	<summary>
+ TemplateStateInfo實例
+ </summary>
+	<value></value>
+	<returns>TemplateStateInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.DeleteByTemplateID(System.Int32)">
+	<summary>依據外鍵[TemplateID]流程ID刪除記錄</summary>
+	<param name="TemplateID">流程ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="TemplateStateID">流程狀態ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForTemplateStateInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadTemplateStateInfoByTemplateStateID(System.Int32)">
+	<summary>載入指定主鍵對應的TemplateStateInfo對象</summary>
+	<param name="TemplateStateID">TemplateStateID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadAllDataForTemplateStateInfo">
+	<summary>載入全部的TemplateStateInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadAllTemplateStateInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForTemplateStateInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.LoadAllTemplateStateInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForTemplateStateInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>TemplateStateInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateStateDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.TemplateStateInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.TemplateStateDAL">
+ ---------------------------------------------
+ <summary>工作流模板狀態定義表實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.LoadTemplateRouteInfoByTemplateStateID(System.Int32)">
+	<summary>載入指定狀態的TemplateRouteInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.LoadTemplateRouteInfoByTemplateID(System.Int32)">
+	<summary>
+ 載入指定的流程ID對應的路由集合
+ </summary>
+	<param name="TemplateID">流程ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateRouteDAL.ChangeRouteNextStateID(System.Int32)">
+	<summary>
+ 根據流程ID修改當前流程對應的路由狀態
+ </summary>
+	<param name="TemplateID">流程ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateInfo.#ctor(Platform.eWorkFlow.Model.TemplateInfoInfo)">
+	<summary>
+ 默認建構式
+ </summary>
+	<param name="mTemplateInfoInfo">要校驗的模板流程實例</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.VerifyTemplateInfo.Verify(Platform.eWorkFlow.Core.VerifyTemplateInfo.VerifyCategory)">
+	<summary>
+ 校驗
+ </summary>
+	<param name="mVerifyCategory">校驗類別</param>
+	<returns>校驗結果</returns>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateInfo.VerifyCategory.Create">
+	<summary>
+ 創建時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="F:Platform.eWorkFlow.Core.VerifyTemplateInfo.VerifyCategory.Update">
+	<summary>
+ 更新時校驗
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateInfo.VerifyCategory">
+	<summary>
+ 校驗類別
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateInfo.VerifyResult">
+	<summary>
+ 校驗結果
+ </summary>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.VerifyTemplateInfo">
+	<summary>
+ 模板流程站別的校驗類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.#ctor(Platform.eWorkFlow.Model.HumanCollectionInfo)">
+	<summary>
+ 要進行數據控制的HumanCollectionInfo實例
+ </summary>
+	<param name="HumanCollectionInstance">要操作的HumanCollectionInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.HumanCollectionInstance">
+	<summary>
+ HumanCollectionInfo實例
+ </summary>
+	<value></value>
+	<returns>HumanCollectionInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="CollectionPKID"></param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForHumanCollectionInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.LoadHumanCollectionInfoByCollectionPKID(System.Int32)">
+	<summary>載入指定主鍵對應的HumanCollectionInfo對象</summary>
+	<param name="CollectionPKID">CollectionPKID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.LoadAllDataForHumanCollectionInfo">
+	<summary>載入全部的HumanCollectionInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.LoadAllHumanCollectionInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForHumanCollectionInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.LoadAllHumanCollectionInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForHumanCollectionInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>HumanCollectionInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.HumanCollectionInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.HumanCollectionDAL">
+ ---------------------------------------------
+ <summary>實例類</summary>
+	<remarks></remarks>
+ ---------------------------------------------
+
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.#ctor(Platform.eWorkFlow.Model.TemplateInfoInfo)">
+	<summary>
+ 要進行數據控制的TemplateInfoInfo實例
+ </summary>
+	<param name="TemplateInfoInstance">要操作的TemplateInfoInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.TemplateInfoInstance">
+	<summary>
+ TemplateInfoInfo實例
+ </summary>
+	<value></value>
+	<returns>TemplateInfoInfo</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.Delete(System.Int32)">
+	<summary>依主鍵刪除記錄</summary>
+	<param name="TemplateID">流程ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForTemplateInfoInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadTemplateInfoInfoByTemplateID(System.Int32)">
+	<summary>載入指定主鍵對應的TemplateInfoInfo對象</summary>
+	<param name="TemplateID">TemplateID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadAllDataForTemplateInfoInfo">
+	<summary>載入全部的TemplateInfoInfo對象集合</summary>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadAllTemplateInfoInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForTemplateInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadAllTemplateInfoInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForTemplateInfoInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>TemplateInfoInfoCollection</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.LoadTemplateInfoHistoryBySameTemplate(System.Int32)">
+	<summary>
+ 取的指定流程下的同族流程（流程的歷史版本）
+ </summary>
+	<param name="TemplateID">流程ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.TemplateInfoInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.TemplateInfoDAL">
+	<summary>
+ 工作流模板操作類
+ </summary>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.#ctor(Platform.eWorkFlow.Model.WorkFlowInstanceInfo)">
+	<summary>
+ 要進行數據控制的WorkFlowInstanceInfo實例
+ </summary>
+	<param name="WorkFlowInstanceInstance">要操作的WorkFlowInstanceInfo實例類</param>
+	<remarks></remarks>
+</member><member name="P:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.WorkFlowInstanceInstance">
+	<summary>
+ WorkFlowInstanceInfo實例
+ </summary>
+	<value></value>
+	<returns><see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfo">WorkFlowInstanceInfo</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.Save">
+	<summary>保存數據</summary>
+	<returns>True/False</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.Delete(System.Int32)">
+	<summary>依工作流實例主鍵ID刪除記錄</summary>
+	<param name="InstanceKeyID">工作流實例主鍵ID</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.Delete(Platform.Framework.SearchWhereClause)">
+	<summary>刪除記錄</summary>
+	<param name="DeleteWhereClauseForWorkFlowInstanceInfo">刪除條件表達式</param>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadWorkFlowInstanceInfoByInstanceKeyID(System.Int32)">
+	<summary>載入指定主鍵對應的WorkFlowInstanceInfo對象</summary>
+	<param name="InstanceKeyID">工作流實例主鍵ID</param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllDataForWorkFlowInstanceInfo">
+	<summary>載入全部的WorkFlowInstanceInfo對象集合</summary>
+	<returns><see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfoCollection">WorkFlowInstanceInfoCollection</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllWorkFlowInstanceInfoCountBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例個數
+ </summary>
+	<param name="SearchWhereClauseForWorkFlowInstanceInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns>實例個數</returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.LoadAllWorkFlowInstanceInfoCollectionBySearchCondition(Platform.Framework.SearchWhereClause,System.Boolean)">
+	<summary>
+ 依查詢取得指定的實例
+ </summary>
+	<param name="SearchWhereClauseForWorkFlowInstanceInfo">查詢表達式類</param>
+	<param name="IsUserInputSearchClause">查詢表達式是否通過用戶輸入創建</param>
+	<returns><see cref="T:Platform.eWorkFlow.Model.WorkFlowInstanceInfoCollection">WorkFlowInstanceInfoCollection</see></returns>
+	<remarks></remarks>
+</member><member name="M:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL.EntityList2Datatable(System.Collections.Generic.List{Platform.eWorkFlow.Model.WorkFlowInstanceInfo})">
+	<summary>
+ 將實體的泛型集合轉換成Datatable
+ </summary>
+	<param name="EntityList">實體的泛型集合</param>
+	<returns>Datatable</returns>
+	<remarks></remarks>
+</member><member name="T:Platform.eWorkFlow.Core.DAL.WorkFlowInstanceDAL">
+	<summary>
+ 工作流實例表實例類
+ </summary>
+	<remarks>
+		<para>用於管理工作流實例</para>
+	</remarks>
+</member>
+</members>
+</doc>

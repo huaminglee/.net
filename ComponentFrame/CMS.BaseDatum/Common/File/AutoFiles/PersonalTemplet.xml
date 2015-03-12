@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap 
+	namespace="PengeSoft.CMS.BaseDatum" 
+	xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<alias>
+		<typeAlias alias="PersonalTemplet" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.PersonalTemplet, PengeSoft.CMS.BaseDatum" />
+	</alias>
+
+	<resultMaps>  
+                                  
+		<resultMap id="PersonalTempletResult" class="PersonalTemplet">
+			<result property="PersonalId" column="PersonalId" />
+			<result property="PersonalName" column="PersonalName" />
+			<result property="PersonType" column="PersonType" />
+			<result property="ID" column="ID" />
+			<result property="RefID" column="RefID" />
+  	</resultMap>
+
+	</resultMaps>
+	
+	<parameterMaps>  
+                                  
+		<parameterMap id="PersonalTempletParams" class="PersonalTemplet">
+			<parameter property="PersonalId" column="PersonalId" />
+			<parameter property="PersonalName" column="PersonalName" />
+			<parameter property="PersonType" column="PersonType" />
+			<parameter property="ID" column="ID" />
+			<parameter property="RefID" column="RefID" />
+  	</parameterMap>
+
+		<parameterMap id="UpdatePersonalTempletParams" extends="PersonalTempletParams" class="PersonalTemplet">
+			<parameter property="ID" column="ID" />
+		</parameterMap>
+
+	</parameterMaps>
+	
+	<statements>
+
+		<select id="GetPersonalTempletCount"  resultClass="int">
+		  SELECT count(*)
+		  FROM  OA_PersonalTemplet
+		</select>
+	
+		<select id="GetPersonalTemplet"  parameterClass="PersonalTemplet" resultMap="PersonalTempletResult">
+      SELECT *
+      FROM OA_PersonalTemplet
+      WHERE (ID = #ID#)
+    </select>
+		
+		<select id="GetPersonalTempletList" parameterClass="string" resultMap="PersonalTempletResult" listClass="NorDataList">
+      SELECT *
+      FROM  OA_PersonalTemplet
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="PersonalId">
+          PersonalId 
+        </isEqual>
+        <isEqual compareValue="PersonalId_D">
+          PersonalId desc
+        </isEqual>
+        <isEqual compareValue="PersonalName">
+          PersonalName 
+        </isEqual>
+        <isEqual compareValue="PersonalName_D">
+          PersonalName desc
+        </isEqual>
+        <isEqual compareValue="PersonType">
+          PersonType 
+        </isEqual>
+        <isEqual compareValue="PersonType_D">
+          PersonType desc
+        </isEqual>
+        <isEqual compareValue="ID">
+          ID 
+        </isEqual>
+        <isEqual compareValue="ID_D">
+          ID desc
+        </isEqual>
+        <isEqual compareValue="RefID">
+          RefID 
+        </isEqual>
+        <isEqual compareValue="RefID_D">
+          RefID desc
+        </isEqual>
+      </dynamic>
+		</select>
+		
+    <select id="QueryPersonalTempletCount" parameterClass="Hashtable" resultClass="int">
+      SELECT count(*)
+      FROM  OA_PersonalTemplet
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="PersonalId" >
+          PersonalId like #PersonalId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="PersonalName" >
+          PersonalName like #PersonalName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="PersonType" >
+          PersonType = #PersonType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ID" >
+          ID like #ID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RefID" >
+          RefID like #RefID#
+        </isNotEmpty>
+      </dynamic>
+    </select>
+
+    <select id="QueryPersonalTempletList" parameterClass="Hashtable" resultMap="PersonalTempletResult" listClass="NorDataList">
+      SELECT *
+      FROM  OA_PersonalTemplet
+      <dynamic prepend="WHERE" >
+        <isNotEmpty prepend="AND" property="PersonalId" >
+          PersonalId like #PersonalId#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="PersonalName" >
+          PersonalName like #PersonalName#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="PersonType" >
+          PersonType = #PersonType#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="ID" >
+          ID like #ID#
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="RefID" >
+          RefID like #RefID#
+        </isNotEmpty>
+      </dynamic>
+      <dynamic prepend="Order By" >
+        <isEqual compareValue="PersonalId" property="_OrderBy">
+          PersonalId 
+        </isEqual>
+        <isEqual compareValue="PersonalId_D" property="_OrderBy">
+          PersonalId desc
+        </isEqual>
+        <isEqual compareValue="PersonalName" property="_OrderBy">
+          PersonalName 
+        </isEqual>
+        <isEqual compareValue="PersonalName_D" property="_OrderBy">
+          PersonalName desc
+        </isEqual>
+        <isEqual compareValue="PersonType" property="_OrderBy">
+          PersonType 
+        </isEqual>
+        <isEqual compareValue="PersonType_D" property="_OrderBy">
+          PersonType desc
+        </isEqual>
+        <isEqual compareValue="ID" property="_OrderBy">
+          ID 
+        </isEqual>
+        <isEqual compareValue="ID_D" property="_OrderBy">
+          ID desc
+        </isEqual>
+        <isEqual compareValue="RefID" property="_OrderBy">
+          RefID 
+        </isEqual>
+        <isEqual compareValue="RefID_D" property="_OrderBy">
+          RefID desc
+        </isEqual>
+      </dynamic>
+    </select>
+    
+		<insert id="InsertPersonalTemplet" parameterMap="PersonalTempletParams">
+      <generate table="OA_PersonalTemplet" />
+		</insert>
+
+		<delete id="DeletePersonalTemplet" parameterClass="PersonalTemplet">
+      DELETE FROM  OA_PersonalTemplet
+      WHERE (ID = #ID#)
+    </delete>
+
+		<update id="UpdatePersonalTemplet" parameterMap="UpdatePersonalTempletParams">
+      UPDATE OA_PersonalTemplet SET
+      PersonalId = ?,
+      PersonalName = ?,
+      PersonType = ?,
+      ID = ?,
+      RefID = ?
+      WHERE ID = ?
+    </update>
+
+	</statements>
+	
+</sqlMap>

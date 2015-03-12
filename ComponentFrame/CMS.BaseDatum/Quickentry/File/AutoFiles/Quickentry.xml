@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<sqlMap 
+	namespace="PengeSoft.CMS.BaseDatum" 
+	xmlns="http://ibatis.apache.org/mapping" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+
+	<alias>
+		<typeAlias alias="Quickentry" assembly="PengeSoft.CMS.BaseDatum.dll" type="PengeSoft.CMS.BaseDatum.Quickentry, PengeSoft.CMS.BaseDatum" />
+	</alias>
+
+	<resultMaps>  
+                                  
+		<resultMap id="QuickentryResult" class="Quickentry">
+			<result property="QId" column="QId" />
+			<result property="QName" column="QName" />
+			<result property="QRemark" column="QRemark" />
+			<result property="QPico" column="QPico" />
+			<result property="QTarget" column="QTarget" />
+			<result property="DefaultSort" column="DefaultSort" />
+			<result property="QType" column="QType" />
+		</resultMap>
+
+	</resultMaps>
+	
+	<parameterMaps>  
+                                  
+		<parameterMap id="QuickentryParams" class="Quickentry">
+			<parameter property="QName" column="QName" />
+			<parameter property="QRemark" column="QRemark" />
+			<parameter property="QPico" column="QPico" />
+			<parameter property="QTarget" column="QTarget" />
+			<parameter property="DefaultSort" column="DefaultSort" />
+			<parameter property="QType" column="QType" />
+		</parameterMap>
+
+		<parameterMap id="UpdateQuickentryParams" extends="QuickentryParams" class="Quickentry">
+			<parameter property="QId" column="QId" />
+		</parameterMap>
+
+	</parameterMaps>
+	
+	<statements>
+
+		<select id="GetQuickentryCount"  resultClass="int">
+		  SELECT count(*)
+		  FROM [Quickentry];
+		</select>
+	
+		<select id="GetQuickentry"  parameterClass="Quickentry" resultMap="QuickentryResult">
+			SELECT *
+			FROM [Quickentry]			
+			WHERE ([QId] = #QId#) ;
+		</select>
+		
+		<select id="GetQuickentryByPara"  parameterClass="Hashtable" resultMap="QuickentryResult">
+			SELECT *
+			FROM [Quickentry]
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="QId" >
+				  QId = #QId#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QId_IN" >
+				  (QId in ($QId_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QName" >
+				  [QName] like #QName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType" >
+				  QType = #QType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType_IN" >
+				  (QType in ($QType_IN$))
+				</isNotEmpty>
+			</dynamic>
+
+		</select>
+
+		<select id="GetQuickentryList" parameterClass="string" resultMap="QuickentryResult" listClass="NorDataList">
+			SELECT *
+			FROM [Quickentry]			
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="DefaultSort">
+				  [DefaultSort]
+				</isEqual>
+				<isEqual compareValue="DefaultSort_D">
+				  [DefaultSort] desc
+				</isEqual>
+			</dynamic>
+		</select>
+		
+		<select id="QueryQuickentryCount" parameterClass="Hashtable" resultClass="int">
+			SELECT count(*)
+			FROM [Quickentry]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="QId" >
+				  QId = #QId#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QId_IN" >
+				  (QId in ($QId_IN$))
+				</isNotEmpty>
+        <isNotEmpty prepend="AND" property="QId_NotIN" >
+          (QId not in ($QId_NotIN$))
+        </isNotEmpty>        
+        <isNotEmpty prepend="AND" property="QName" >
+				  [QName] like #QName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType" >
+				  QType = #QType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType_IN" >
+				  (QType in ($QType_IN$))
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<select id="QueryQuickentryList" parameterClass="Hashtable" resultMap="QuickentryResult" listClass="NorDataList">
+			SELECT *
+			FROM [Quickentry]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="QId" >
+				  QId = #QId#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QId_IN" >
+				  (QId in ($QId_IN$))
+				</isNotEmpty>
+        <isNotEmpty prepend="AND" property="QId_NotIN" >
+          (QId not in ($QId_NotIN$))
+        </isNotEmpty>
+        <isNotEmpty prepend="AND" property="QName" >
+				  [QName] like #QName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType" >
+				  QType = #QType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType_IN" >
+				  (QType in ($QType_IN$))
+				</isNotEmpty>
+			</dynamic>
+			<dynamic prepend="Order By" >
+				<isEqual compareValue="DefaultSort" property="_OrderBy">
+				  [DefaultSort]
+				</isEqual>
+				<isEqual compareValue="DefaultSort_D" property="_OrderBy">
+				  [DefaultSort] desc
+				</isEqual>
+			</dynamic>
+		</select>
+    
+		<insert id="InsertQuickentry" parameterMap="QuickentryParams">
+			<generate table="Quickentry" />
+			<selectKey resultClass="int" type="post" property="QId" >
+				select @@IDENTITY as value
+			</selectKey>
+		</insert>
+
+		<delete id="DeleteQuickentry" parameterClass="Quickentry">
+			DELETE FROM [Quickentry] WHERE ([QId] = #QId#) ;
+		</delete>
+		
+		<select id="DeleteQuickentryByPara" parameterClass="Hashtable">
+			DELETE FROM [Quickentry]			
+			<dynamic prepend="WHERE" >
+				<isNotEmpty prepend="AND" property="QId" >
+				  QId = #QId#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QId_IN" >
+				  (QId in ($QId_IN$))
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QName" >
+				  [QName] like #QName#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType" >
+				  QType = #QType#
+				</isNotEmpty>
+				<isNotEmpty prepend="AND" property="QType_IN" >
+				  (QType in ($QType_IN$))
+				</isNotEmpty>
+			</dynamic>
+		</select>
+
+		<update id="UpdateQuickentry" parameterMap="UpdateQuickentryParams">
+			UPDATE [Quickentry] SET
+			[QName] = ?,
+			[QRemark] = ?,
+			[QPico] = ?,
+			[QTarget] = ?,
+			[DefaultSort] = ?,
+			[QType] = ?
+			WHERE QId = ?;
+		</update>
+		
+                <select id="UpdateQuickentryByPara" parameterClass="Hashtable">
+			UPDATE [Quickentry]			
+			<dynamic prepend="Set" >
+
+                          <isNotEmpty prepend="," property="QName" >
+			      [QName] = #QName#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="QRemark" >
+			      [QRemark] = #QRemark#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="QPico" >
+			      [QPico] = #QPico#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="QTarget" >
+			      [QTarget] = #QTarget#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="," property="DefaultSort" >
+			      [DefaultSort] = #DefaultSort#
+			  </isNotEmpty>
+
+                        <isNotEmpty prepend="," property="QType" >
+			      [QType] = #QType#
+			  </isNotEmpty>
+                        </dynamic>
+			<dynamic prepend="Where" >
+			
+                          <isNotEmpty prepend="AND" property="QName_W" >
+			      [QName] = #QName_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="QRemark_W" >
+			      [QRemark] = #QRemark_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="QPico_W" >
+			      [QPico] = #QPico_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="QTarget_W" >
+			      [QTarget] = #QTarget_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="DefaultSort_W" >
+			      [DefaultSort] = #DefaultSort_W#
+			  </isNotEmpty>
+
+                          <isNotEmpty prepend="AND" property="QType_W" >
+			      [QType] = #QType_W#
+			  </isNotEmpty>
+                        </dynamic>
+		</select>
+
+	</statements>
+	
+</sqlMap>

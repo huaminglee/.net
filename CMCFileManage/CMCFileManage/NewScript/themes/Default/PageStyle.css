@@ -1,0 +1,20 @@
+﻿#PageContainer
+{
+    margin:0px;
+	padding:0px;
+	width:100%;
+} 
+#PageLeft
+{
+    float: left;
+    display: block;
+    width:16%;
+    padding:0px;
+	margin:0px;
+	text-align:center;
+}
+#PageContent
+{
+    width:84%;
+    float:right;
+}
